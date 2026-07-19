@@ -83,7 +83,7 @@
   .ig-link:hover{transform:translateY(-1px);box-shadow:0 0 22px rgba(255,95,184,0.32);}
   .ig-link svg{width:16px;height:16px;flex-shrink:0;}
   
-  /* NEON YEŞİL GOETHE YAZISI */
+  /* YENİ EKLENEN NEON YEŞİL GOETHE YAZISI */
   .goethe-note{
     margin-top:26px;
     font-size:10.5px;
@@ -320,9 +320,6 @@
   <div class="credit">İsim hakları <b>M HAMZA</b>'ya aittir</div>
 </div>
 
-<!-- HARİCİ KELİME DOSYASI BAĞLANTISI BURADA YER ALIR -->
-<script src="words.js"></script>
-
 <script>
 /* ======================= VOCAB DATA ======================= */
 const COLORS = ["#3dffa0","#4fe8ff","#ff5fb8","#c9ff3e","#9b7bff","#ffd23b"];
@@ -337,10 +334,10 @@ function add(lang, level, cat, w, tr, pos, ex, exTr){
 
 /* 
 ================================================================
-   GERMAN — KELİME HAVUZU (A1, A2, B1, B2)
+   GERMAN — DEVASA KELİME HAVUZU (A1, A2, B1, B2)
 ================================================================ 
 */
-/* A1 Seviyesi */
+/* A1 Seviyesi (Goethe kelimeleri türlerine göre dağıtıldı) */
 add("de","A1","Selamlaşma","Hallo","Merhaba","ünlem","Hallo, wie geht's?","Merhaba, nasılsın?");
 add("de","A1","Selamlaşma","Guten Morgen","Günaydın","ünlem","Guten Morgen, hast du gut geschlafen?","Günaydın, iyi uyudun mu?");
 add("de","A1","Selamlaşma","Danke","Teşekkürler","ünlem","Danke für die Hilfe.","Yardım için teşekkürler.");
@@ -422,7 +419,7 @@ add("de","A2","Ev ve Yaşam","der Schlüssel","anahtar","isim","Ich finde meinen
 add("de","A2","Ev ve Yaşam","die Heizung","kalorifer / ısıtıcı","isim","Die Heizung ist kaputt.","Isıtıcı bozuk.");
 add("de","A2","Ev ve Yaşam","aufräumen","toplamak","fiil","Ich muss mein Zimmer aufräumen.","Odamı toplamam gerek.");
 
-/* B1 Seviyesi */
+/* B1 Seviyesi (Özellikle Eğitim, Bilişim, Yurt Dışı temalı) */
 add("de","B1","Eğitim","die Wirtschaftsinformatik","bilişim işletme","isim","Ich studiere Wirtschaftsinformatik in Österreich.","Avusturya'da bilişim işletme okuyorum.");
 add("de","B1","Eğitim","die Vorbereitung","hazırlık","isim","Die Sprachvorbereitung in Wien ist sehr wichtig.","Viyana'daki dil hazırlığı çok önemlidir.");
 add("de","B1","Eğitim","das Studentenwohnheim","öğrenci yurdu","isim","Mein Studentenwohnheim in Hagenberg ist schön.","Hagenberg'deki öğrenci yurdum güzel.");
@@ -438,7 +435,7 @@ add("de","B1","Sosyal Yaşam","teilnehmen","katılmak","fiil","Ich möchte an de
 add("de","B1","Sosyal Yaşam","die Entscheidung","karar","isim","Das war eine gute Entscheidung.","Bu iyi bir karardı.");
 add("de","B1","Sosyal Yaşam","erfolgreich","başarılı","sıfat","Das Projekt war sehr erfolgreich.","Proje çok başarılıydı.");
 
-/* B2 Seviyesi */
+/* B2 Seviyesi (Akademik, İleri Seviye İşletme/Bilişim) */
 add("de","B2","Eğitim & Kariyer","die Zulassungsprüfung","kabul sınavı","isim","Ich habe die Zulassungsprüfung erfolgreich bestanden.","Kabul sınavını başarıyla geçtim.");
 add("de","B2","Eğitim & Kariyer","die Anforderung","gereksinim / talep","isim","Die Anforderungen an der Universität sind hoch.","Üniversitedeki gereksinimler yüksektir.");
 add("de","B2","Eğitim & Kariyer","die Kompetenz","yetkinlik","isim","Soziale Kompetenz ist im Beruf wichtig.","Sosyal yetkinlik meslekte önemlidir.");
@@ -452,7 +449,7 @@ add("de","B2","Soyut Kavramlar","komplex","karmaşık","sıfat","Dieses Thema is
 
 /* 
 ================================================================
-   ENGLISH — KELİME HAVUZU (A1, A2, B1, B2)
+   ENGLISH — DEVASA KELİME HAVUZU (A1, A2, B1, B2)
 ================================================================ 
 */
 add("en","A1","Selamlaşma","Hello","Merhaba","exclamation","Hello, how are you?","Merhaba, nasılsın?");
@@ -499,7 +496,7 @@ add("en","B2","Soyut Kavramlar","resilience","dayanıklılık","noun","Her resil
 
 /* 
 ================================================================
-   ARABIC — KELİME HAVUZU (A1, A2, B1, B2)
+   ARABIC — DEVASA KELİME HAVUZU (A1, A2, B1, B2)
 ================================================================ 
 */
 add("ar","A1","Selamlaşma","مرحبا","Merhaba","ünlem","مرحبا، كيف حالك؟","Merhaba, nasılsın?");
@@ -636,6 +633,7 @@ function renderLangPair(){
 
 function rebuildLevelBox(){
   const L = LANGS[activeLang];
+  // 1. KURAL EKLENDİ: TÜMÜ seçeneği en başa eklendi.
   const allLevels = ["TÜMÜ", ...L.levels];
   if(!allLevels.includes(activeLevel)) activeLevel = "TÜMÜ";
   const box = document.getElementById('levelBox');
@@ -650,6 +648,7 @@ function rebuildLevelBox(){
 }
 
 function poolForLevel(){
+  // "TÜMÜ" seçildiyse seviye filtresini atla, o dilin tüm kelimelerini getir
   if(activeLevel === "TÜMÜ") return VOCAB.filter(v => v.lang===activeLang);
   return VOCAB.filter(v => v.lang===activeLang && v.level===activeLevel);
 }
@@ -673,7 +672,7 @@ document.querySelectorAll('.lang-opt').forEach(opt=>{
   opt.onclick = () => {
     activeLang = opt.dataset.lang;
     document.querySelectorAll('.lang-opt').forEach(o=>o.classList.toggle('active', o===opt));
-    activeLevel = "TÜMÜ"; 
+    activeLevel = "TÜMÜ"; // Dil değişince otomatik TÜMÜ olsun
     activeCat = 'Tümü';
     renderLangPair();
     rebuildLevelBox();
@@ -756,7 +755,7 @@ document.getElementById('shuffleBtn').onclick = () => {
 /* ======================= QUIZ ======================= */
 function buildQuizDeck(){
   quizDeck = [...deck];
-  mistakes = []; 
+  mistakes = []; // Yeni quiz başladığında hataları sıfırla
   for(let i=quizDeck.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [quizDeck[i],quizDeck[j]]=[quizDeck[j],quizDeck[i]]; }
   qIdx = 0; score = 0; answered = false;
   const quizTabActive = document.getElementById('tabQuiz').classList.contains('active');
@@ -774,6 +773,7 @@ function renderQuiz(){
       document.getElementById('quizView').style.display = 'none';
       document.getElementById('doneView').style.display = 'block';
       
+      // Hatalarını Gör butonu kontrolü
       const mistakeBtn = document.getElementById('showMistakesBtn');
       if(mistakes.length > 0) {
         mistakeBtn.style.display = 'block';
@@ -829,6 +829,7 @@ function selectAnswer(chosen, correct, btnEl){
   if(chosen===correct) {
     score++;
   } else {
+    // Hatalı cevapları Mistakes array'ine ekle
     mistakes.push({ word: v.w, correct: correct, given: chosen });
   }
   
@@ -861,6 +862,7 @@ document.getElementById('backToDoneBtn').onclick = () => {
     document.getElementById('doneView').style.display = 'block';
 };
 
+
 /* ======================= TABS ======================= */
 document.getElementById('tabCards').onclick = () => {
   document.getElementById('tabCards').classList.add('active');
@@ -881,14 +883,6 @@ document.getElementById('tabQuiz').onclick = () => {
 renderLangPair();
 rebuildLevelBox();
 rebuildChips();
-
-// words.js İÇİNDEKİ HARİCİ KELİMELERİ SİSTEME DAHİL ET
-if (typeof EXTRA_VOCAB !== 'undefined' && EXTRA_VOCAB.length > 0) {
-  EXTRA_VOCAB.forEach(item => {
-    add(item.lang, item.level, item.cat, item.w, item.tr, item.pos, item.ex, item.exTr);
-  });
-}
-
 applyFilter();
 
 /* ======================= SNOW / CRYSTAL EFFECT ======================= */
