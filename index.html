@@ -3,28 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M HAMZA | Almanca ⇄ Türkçe Kartlar</title>
+<title>M HAMZA | Dil Kartları</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #05070d;
-    --panel: #0d1220;
-    --panel-2: #121a2e;
-    --neon: #4fd8ff;
-    --neon-soft: #7ce8ff;
-    --violet: #8b7bff;
-    --pink: #ff5fa8;
+    --bg: #04060d;
+    --panel: #0c1224;
+    --panel-2: #121a34;
+    --neon: #35c8ff;
+    --neon-soft: #8fe8ff;
+    --violet: #9d6bff;
+    --pink: #ff4fc3;
+    --yellow: #ffe14f;
+    --green: #45ffb0;
+    --orange: #ff9f4f;
     --text: #eaf2ff;
-    --muted: #7c8aa8;
+    --muted: #8593b8;
     --good: #45e8b0;
     --bad: #ff5f7a;
+    --nightblue: #1e6dff;
   }
   *{box-sizing:border-box;}
   html, body{ margin:0; overflow-x:hidden; }
   body{
     background:
-      radial-gradient(circle at 12% -5%, rgba(79,216,255,0.12), transparent 40%),
-      radial-gradient(circle at 100% 10%, rgba(139,123,255,0.10), transparent 45%),
-      radial-gradient(circle at 50% 100%, rgba(255,95,168,0.06), transparent 50%),
+      radial-gradient(circle at 12% -5%, rgba(53,200,255,0.16), transparent 42%),
+      radial-gradient(circle at 100% 10%, rgba(157,107,255,0.14), transparent 48%),
+      radial-gradient(circle at 50% 100%, rgba(255,79,195,0.08), transparent 55%),
       var(--bg);
     color:var(--text);
     font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
@@ -41,88 +47,129 @@
   }
   .app.revealed{ opacity:1; transform:none; pointer-events:auto; }
 
-  /* Splash / giriş ekranı */
+  /* ================= SPLASH ================= */
   #splash{
     position:fixed; inset:0;
     z-index:999;
-    background:
-      radial-gradient(circle at 50% 45%, rgba(79,216,255,0.16), transparent 60%),
-      linear-gradient(180deg, #04060b, #060a14 55%, #070b16);
+    overflow:hidden;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     cursor:pointer;
-    transition: opacity .8s ease, visibility .8s;
+    background:#020308;
+    transition: opacity .9s ease, visibility .9s;
   }
   #splash.hidden{ opacity:0; visibility:hidden; }
-  #snowCanvas{ position:absolute; inset:0; width:100%; height:100%; }
+
+  /* Layer 1: video */
+  #bgVideo{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    z-index:0;
+    opacity:.85;
+  }
+  #bgVideo.hide{ display:none; }
+  #splash.novideo{
+    background:
+      radial-gradient(circle at 50% 30%, rgba(30,109,255,0.28), transparent 55%),
+      radial-gradient(circle at 20% 90%, rgba(157,107,255,0.18), transparent 50%),
+      linear-gradient(180deg, #020308, #05081a 55%, #030512);
+  }
+
+  /* Layer 2: dark veil */
+  #veil{
+    position:absolute; inset:0;
+    background: rgba(2,4,10,0.55);
+    z-index:1;
+  }
+
+  /* Layer 3: crystal snow */
+  #snowCanvas{ position:absolute; inset:0; width:100%; height:100%; z-index:2; }
+
+  /* Layer 4: text */
   .splash-content{
     position:relative;
-    z-index:2;
+    z-index:3;
     text-align:center;
     padding:0 24px;
   }
-  .splash-eyebrow{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    letter-spacing:.32em;
-    text-transform:uppercase;
-    font-size:11px;
-    color:var(--neon-soft);
-    margin-bottom:18px;
-    opacity:.7;
-    text-shadow: 0 0 12px rgba(79,216,255,0.6);
+  .flash-layer{
+    position:fixed; inset:0; z-index:4;
+    pointer-events:none;
+    background: radial-gradient(circle at 50% 45%, rgba(220,240,255,0.95), rgba(53,200,255,0.5) 35%, transparent 70%);
+    mix-blend-mode: screen;
+    opacity:0;
+    animation: lightningFlash .7s ease-out forwards;
+    animation-delay:.05s;
   }
+  @keyframes lightningFlash{
+    0%{opacity:0;}
+    6%{opacity:1;}
+    12%{opacity:.15;}
+    18%{opacity:.95;}
+    26%{opacity:0;}
+    100%{opacity:0;}
+  }
+
   .splash-name{
-    font-size:52px;
-    font-weight:700;
-    letter-spacing:.08em;
+    font-family:'Orbitron', 'Segoe UI', sans-serif;
+    font-size:54px;
+    font-weight:900;
+    letter-spacing:.1em;
     margin:0;
-    color: rgba(234,242,255,0.28);
-    -webkit-text-stroke: 1px rgba(124,232,255,0.55);
-    text-shadow:
-      0 0 8px rgba(79,216,255,0.55),
-      0 0 26px rgba(79,216,255,0.45),
-      0 0 60px rgba(79,216,255,0.35),
-      0 0 100px rgba(139,123,255,0.25);
-    animation: neonBreathe 3.4s ease-in-out infinite;
+    color:#eaf6ff;
+    opacity:0;
+    transform:scale(1.25);
+    filter:brightness(3);
+    animation:
+      nameAppear .45s cubic-bezier(.2,.9,.25,1) forwards,
+      nameFlicker 3.2s ease-in-out infinite;
+    animation-delay: .32s, .82s;
   }
-  @keyframes neonBreathe{
+  @keyframes nameAppear{
+    0%{ opacity:0; transform:scale(1.3); filter:brightness(4) blur(2px); }
+    55%{ opacity:1; transform:scale(0.96); filter:brightness(1.6) blur(0); }
+    100%{ opacity:1; transform:scale(1); filter:brightness(1); }
+  }
+  @keyframes nameFlicker{
     0%,100%{ text-shadow:
-      0 0 8px rgba(79,216,255,0.5),
-      0 0 24px rgba(79,216,255,0.4),
-      0 0 56px rgba(79,216,255,0.3),
-      0 0 90px rgba(139,123,255,0.2); }
-    50%{ text-shadow:
-      0 0 12px rgba(79,216,255,0.75),
-      0 0 34px rgba(79,216,255,0.6),
-      0 0 74px rgba(79,216,255,0.45),
-      0 0 130px rgba(139,123,255,0.32); }
+      0 0 10px rgba(53,200,255,0.9),
+      0 0 26px rgba(53,200,255,0.7),
+      0 0 60px rgba(30,109,255,0.55),
+      0 0 110px rgba(157,107,255,0.35); }
+    8%{ text-shadow: 0 0 4px rgba(53,200,255,0.4), 0 0 10px rgba(30,109,255,0.3); }
+    9%{ text-shadow:
+      0 0 14px rgba(53,200,255,1),
+      0 0 34px rgba(53,200,255,0.85),
+      0 0 80px rgba(30,109,255,0.6); }
+    45%{ text-shadow:
+      0 0 12px rgba(53,200,255,0.85),
+      0 0 30px rgba(53,200,255,0.65),
+      0 0 70px rgba(30,109,255,0.45); }
+    52%{ text-shadow: 0 0 5px rgba(53,200,255,0.35); }
+    53%{ text-shadow:
+      0 0 16px rgba(53,200,255,1),
+      0 0 40px rgba(53,200,255,0.9),
+      0 0 90px rgba(30,109,255,0.6); }
   }
   .splash-sub{
-    margin-top:26px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size:12.5px;
-    letter-spacing:.14em;
+    margin-top:24px;
+    font-family:'Rajdhani', 'Segoe UI', sans-serif;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.28em;
     text-transform:uppercase;
-    color:var(--neon-soft);
-    text-shadow: 0 0 10px rgba(79,216,255,0.5);
-    animation: pulse 2.2s ease-in-out infinite;
+    color:#9fe0ff;
+    text-shadow: 0 0 12px rgba(53,200,255,0.7), 0 0 26px rgba(30,109,255,0.4);
+    opacity:0;
+    animation: subFadeIn 3.4s ease-in forwards, subPulse 2.4s ease-in-out infinite;
+    animation-delay: 1.1s, 4.6s;
   }
-  @keyframes pulse{
-    0%,100%{ opacity:.5; }
-    50%{ opacity:1; }
-  }
-  .credit{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    text-align:center;
-    font-size:11px;
-    color:var(--muted);
-    margin-top:26px;
-    letter-spacing:.08em;
-    opacity:.7;
-  }
-  .credit b{ color:var(--neon-soft); font-weight:700; text-shadow:0 0 8px rgba(79,216,255,0.5); }
+  @keyframes subFadeIn{ 0%{opacity:0; letter-spacing:.5em;} 100%{opacity:1; letter-spacing:.28em;} }
+  @keyframes subPulse{ 0%,100%{opacity:.6;} 50%{opacity:1;} }
+
   .eyebrow{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     letter-spacing:.14em;
@@ -130,13 +177,9 @@
     font-size:11px;
     color:var(--neon-soft);
     margin-bottom:4px;
-    text-shadow:0 0 10px rgba(79,216,255,0.4);
+    text-shadow:0 0 10px rgba(53,200,255,0.4);
   }
-  h1{
-    font-size:28px;
-    margin:0 0 4px;
-    font-weight:600;
-  }
+  h1{ font-size:28px; margin:0 0 4px; font-weight:600; font-family:'Rajdhani', Georgia, serif; }
   .sub{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color:var(--muted);
@@ -144,276 +187,206 @@
     margin-bottom:16px;
   }
 
-  /* Seviye kutucuğu (A1 / A2 / Tümü) */
-  .level-box{
-    display:flex;
-    gap:6px;
-    background: rgba(255,255,255,0.03);
-    border:1px solid rgba(79,216,255,0.18);
-    border-radius:12px;
-    padding:5px;
-    margin-bottom:14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Language selector - flag themed */
+  .lang-box{
+    display:flex; gap:6px;
+    margin-bottom:12px;
   }
-  .level-opt{
+  .lang-opt{
     flex:1;
     text-align:center;
-    padding:8px 0;
-    border-radius:8px;
-    font-size:12.5px;
+    padding:10px 4px;
+    border-radius:12px;
+    font-family:'Rajdhani', sans-serif;
+    font-size:13.5px;
     font-weight:700;
-    letter-spacing:.04em;
+    letter-spacing:.03em;
     color:var(--muted);
     cursor:pointer;
+    border:1px solid rgba(255,255,255,0.08);
+    background:var(--panel);
     transition: all .2s ease;
   }
-  .level-opt.active{
-    background: linear-gradient(135deg, rgba(79,216,255,0.22), rgba(139,123,255,0.18));
-    color: var(--neon-soft);
-    box-shadow: 0 0 16px rgba(79,216,255,0.25), inset 0 0 0 1px rgba(79,216,255,0.4);
-    text-shadow: 0 0 8px rgba(79,216,255,0.4);
+  .lang-opt.active[data-lang="de"]{
+    background: linear-gradient(135deg, #1a1a1a 0%, #dd0000 50%, #ffce00 100%);
+    color:#fff; border-color:transparent;
+    box-shadow: 0 0 18px rgba(221,0,0,0.35);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  }
+  .lang-opt.active[data-lang="en"]{
+    background: linear-gradient(135deg, #0a1a4d 0%, #c8102e 55%, #ffffff 100%);
+    color:#fff; border-color:transparent;
+    box-shadow: 0 0 18px rgba(200,16,46,0.35);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  }
+  .lang-opt.active[data-lang="ar"]{
+    background: linear-gradient(135deg, #007a3d 0%, #ffffff 45%, #000000 75%, #ce1126 100%);
+    color:#fff; border-color:transparent;
+    box-shadow: 0 0 18px rgba(0,122,61,0.35);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.8);
   }
 
-  .tabs{
-    display:flex;
-    gap:8px;
-    margin-bottom:16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
+  .tabs{ display:flex; gap:8px; margin-bottom:16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   .tab{
-    flex:1;
-    padding:10px 0;
-    text-align:center;
-    border-radius:10px;
-    border:1px solid rgba(79,216,255,0.14);
-    background:var(--panel);
-    color:var(--muted);
-    font-size:13px;
-    cursor:pointer;
+    flex:1; padding:10px 0; text-align:center; border-radius:10px;
+    border:1px solid rgba(53,200,255,0.16);
+    background:var(--panel); color:var(--muted); font-size:13px; cursor:pointer;
     transition: all .15s ease;
   }
   .tab.active{
-    background: linear-gradient(135deg, rgba(79,216,255,0.9), rgba(139,123,255,0.85));
-    color:#04121a;
-    border-color:transparent;
-    font-weight:700;
-    box-shadow: 0 0 18px rgba(79,216,255,0.35);
+    background: linear-gradient(135deg, rgba(53,200,255,0.95), rgba(157,107,255,0.9));
+    color:#04121a; border-color:transparent; font-weight:700;
+    box-shadow: 0 0 20px rgba(53,200,255,0.45);
   }
 
-  .chips{
-    display:flex;
-    gap:6px;
-    flex-wrap:wrap;
-    margin-bottom:18px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
+  .chips{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:18px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   .chip{
-    padding:5px 11px;
-    border-radius:999px;
-    font-size:11.5px;
-    background:var(--panel);
-    color:var(--muted);
-    border:1px solid rgba(79,216,255,0.12);
-    cursor:pointer;
+    padding:5px 11px; border-radius:999px; font-size:11.5px;
+    background:var(--panel); color:var(--muted);
+    border:1px solid rgba(53,200,255,0.14); cursor:pointer;
   }
   .chip.active{
-    background:rgba(79,216,255,0.14);
-    color:var(--neon-soft);
-    border-color:rgba(79,216,255,0.55);
-    box-shadow: 0 0 10px rgba(79,216,255,0.2);
+    background:rgba(53,200,255,0.18); color:var(--neon-soft);
+    border-color:rgba(53,200,255,0.65); box-shadow: 0 0 12px rgba(53,200,255,0.3);
   }
 
   .progress-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display:flex; justify-content:space-between; align-items:center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size:12px;
-    color:var(--muted);
-    margin-bottom:10px;
+    font-size:12px; color:var(--muted); margin-bottom:10px;
   }
-  .bar{
-    height:3px;
-    background:rgba(255,255,255,0.06);
-    border-radius:2px;
-    margin-bottom:20px;
-    overflow:hidden;
-  }
+  .bar{ height:3px; background:rgba(255,255,255,0.06); border-radius:2px; margin-bottom:20px; overflow:hidden; }
   .bar-fill{
-    height:100%;
-    background:linear-gradient(90deg, var(--neon), var(--violet));
-    box-shadow: 0 0 8px rgba(79,216,255,0.6);
-    transition: width .25s ease;
+    height:100%; background:linear-gradient(90deg, var(--neon), var(--violet), var(--pink));
+    box-shadow: 0 0 10px rgba(53,200,255,0.7); transition: width .25s ease;
   }
 
   /* Flashcard */
   .stage{ perspective:1400px; margin-bottom:18px; }
   .card{
-    position:relative;
-    height:230px;
-    border-radius:20px;
-    cursor:pointer;
-    transform-style:preserve-3d;
-    transition: transform .5s cubic-bezier(.2,.8,.2,1);
+    position:relative; height:270px; border-radius:20px; cursor:pointer;
+    transform-style:preserve-3d; transition: transform .5s cubic-bezier(.2,.8,.2,1);
   }
   .card.flipped{ transform: rotateY(180deg); }
   .face{
-    position:absolute; inset:0;
-    border-radius:20px;
-    backface-visibility:hidden;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:24px;
-    text-align:center;
+    position:absolute; inset:0; border-radius:20px; backface-visibility:hidden;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    padding:22px; text-align:center;
   }
   .face-front{
     background: linear-gradient(160deg, var(--panel-2), var(--panel));
-    border:1px solid rgba(79,216,255,0.3);
-    box-shadow: 0 0 22px rgba(79,216,255,0.10), inset 0 0 30px rgba(79,216,255,0.03);
+    border:1px solid rgba(53,200,255,0.4);
+    box-shadow: 0 0 30px rgba(53,200,255,0.16), inset 0 0 30px rgba(53,200,255,0.05);
   }
   .face-back{
-    background: linear-gradient(160deg, #1c1030, var(--panel));
-    border:1px solid rgba(255,95,168,0.32);
-    box-shadow: 0 0 22px rgba(255,95,168,0.10);
+    background: linear-gradient(160deg, #24123f, var(--panel));
+    border:1px solid rgba(255,79,195,0.4);
+    box-shadow: 0 0 30px rgba(255,79,195,0.16);
     transform: rotateY(180deg);
   }
   .tag{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size:10.5px;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--neon-soft);
-    text-shadow:0 0 8px rgba(79,216,255,0.4);
-    margin-bottom:10px;
+    font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--neon-soft); text-shadow:0 0 8px rgba(53,200,255,0.5); margin-bottom:10px;
   }
-  .face-back .tag{ color:var(--pink); text-shadow:0 0 8px rgba(255,95,168,0.4); }
-  .level-badge{
-    position:absolute;
-    top:14px; right:16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size:10px;
-    font-weight:800;
-    letter-spacing:.05em;
-    padding:3px 8px;
-    border-radius:999px;
-    background:rgba(79,216,255,0.14);
-    color:var(--neon-soft);
-    border:1px solid rgba(79,216,255,0.4);
+  .face-back .tag{ color:var(--pink); text-shadow:0 0 8px rgba(255,79,195,0.5); }
+  .speak-badge{
+    position:absolute; top:14px; left:16px;
+    width:26px; height:26px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(53,200,255,0.14); border:1px solid rgba(53,200,255,0.4);
+    font-size:12px; color:var(--neon-soft);
   }
-  .word{ font-size:30px; font-weight:600; line-height:1.2; }
-  .pos{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size:12px;
-    color:var(--muted);
-    margin-top:8px;
-  }
+  .word{ font-size:28px; font-weight:600; line-height:1.25; }
+  .word.rtl{ direction:rtl; font-family:'Segoe UI', Tahoma, sans-serif; }
+  .pos{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size:12px; color:var(--muted); margin-top:6px; }
   .example{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size:12.5px;
-    color:var(--muted);
-    margin-top:12px;
-    font-style:italic;
+    font-size:13px; margin-top:14px; font-style:italic; line-height:1.5;
   }
-  .hint{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size:11px;
-    color:var(--muted);
-    text-align:center;
-    margin-bottom:16px;
-  }
+  .example.rtl{ direction:rtl; font-family:'Segoe UI', Tahoma, sans-serif; font-style:normal; }
+  .seg-0{ color:var(--green); text-shadow:0 0 8px rgba(69,255,176,0.5); }
+  .seg-1{ color:var(--neon-soft); text-shadow:0 0 8px rgba(53,200,255,0.5); }
+  .seg-2{ color:var(--pink); text-shadow:0 0 8px rgba(255,79,195,0.5); }
+  .seg-3{ color:var(--yellow); text-shadow:0 0 8px rgba(255,225,79,0.5); }
+  .seg-4{ color:var(--violet); text-shadow:0 0 8px rgba(157,107,255,0.5); }
+  .seg-5{ color:var(--orange); text-shadow:0 0 8px rgba(255,159,79,0.5); }
+  .seg-comma{ color:var(--muted); }
+  .hint{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size:11px; color:var(--muted); text-align:center; margin-bottom:16px; }
 
   .controls{ display:flex; gap:8px; }
   button.ctrl{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    flex:1;
-    padding:12px 0;
-    border-radius:12px;
-    border:1px solid rgba(79,216,255,0.16);
-    background:var(--panel);
-    color:var(--text);
-    font-size:13.5px;
-    cursor:pointer;
+    flex:1; padding:12px 0; border-radius:12px;
+    border:1px solid rgba(53,200,255,0.2); background:var(--panel); color:var(--text);
+    font-size:13.5px; cursor:pointer;
   }
   button.ctrl.primary{
     background: linear-gradient(135deg, var(--neon), var(--violet));
-    border-color:transparent;
-    color:#04121a;
-    font-weight:700;
-    box-shadow: 0 0 16px rgba(79,216,255,0.3);
+    border-color:transparent; color:#04121a; font-weight:700;
+    box-shadow: 0 0 18px rgba(53,200,255,0.4);
   }
 
-  /* Quiz mode */
+  /* Quiz */
   .quiz-card{
     background: linear-gradient(160deg, var(--panel-2), var(--panel));
-    border:1px solid rgba(79,216,255,0.2);
-    box-shadow: 0 0 24px rgba(79,216,255,0.08);
-    border-radius:20px;
-    padding:28px 22px;
-    text-align:center;
-    margin-bottom:18px;
+    border:1px solid rgba(53,200,255,0.3);
+    box-shadow: 0 0 26px rgba(53,200,255,0.12);
+    border-radius:20px; padding:28px 22px; text-align:center; margin-bottom:18px;
   }
-  .quiz-word{ font-size:30px; font-weight:600; margin-bottom:6px; }
-  .quiz-sub{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size:12px; color:var(--muted);
-  }
+  .quiz-word{ font-size:28px; font-weight:600; margin-bottom:6px; }
+  .quiz-sub{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size:12px; color:var(--muted); }
   .options{ display:flex; flex-direction:column; gap:10px; }
   .opt{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    padding:13px 16px;
-    border-radius:12px;
-    border:1px solid rgba(79,216,255,0.14);
-    background:var(--panel);
-    color:var(--text);
-    font-size:14.5px;
-    text-align:left;
-    cursor:pointer;
+    padding:13px 16px; border-radius:12px; border:1px solid rgba(53,200,255,0.16);
+    background:var(--panel); color:var(--text); font-size:14.5px; text-align:left; cursor:pointer;
   }
-  .opt.correct{ background:rgba(69,232,176,0.14); border-color:var(--good); color:var(--good); box-shadow:0 0 12px rgba(69,232,176,0.25); }
-  .opt.wrong{ background:rgba(255,95,122,0.14); border-color:var(--bad); color:var(--bad); box-shadow:0 0 12px rgba(255,95,122,0.25); }
+  .opt.correct{ background:rgba(69,232,176,0.16); border-color:var(--good); color:var(--good); box-shadow:0 0 14px rgba(69,232,176,0.3); }
+  .opt.wrong{ background:rgba(255,95,122,0.16); border-color:var(--bad); color:var(--bad); box-shadow:0 0 14px rgba(255,95,122,0.3); }
   .opt[disabled]{ cursor:default; }
 
   .score-pill{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    display:inline-block;
-    font-size:12px;
-    color:var(--neon-soft);
-    background:rgba(79,216,255,0.12);
-    padding:5px 12px;
-    border-radius:999px;
-    margin-bottom:14px;
-    text-shadow:0 0 8px rgba(79,216,255,0.3);
+    display:inline-block; font-size:12px; color:var(--neon-soft);
+    background:rgba(53,200,255,0.14); padding:5px 12px; border-radius:999px;
+    margin-bottom:14px; text-shadow:0 0 8px rgba(53,200,255,0.4);
   }
-
-  .done{
-    text-align:center;
-    padding:40px 20px;
+  .done{ text-align:center; padding:40px 20px; }
+  .done .word{ font-size:34px; margin-bottom:6px; }
+  .credit{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    text-align:center; font-size:11px; color:var(--muted); margin-top:26px;
+    letter-spacing:.08em; opacity:.7;
   }
-  .done .word{ font-size:36px; margin-bottom:6px; }
+  .credit b{ color:var(--neon-soft); font-weight:700; text-shadow:0 0 8px rgba(53,200,255,0.5); }
 </style>
 </head>
 <body>
 
 <div id="splash">
+  <video id="bgVideo" autoplay muted loop playsinline>
+    <!-- Kendi arka plan videonuzu buraya ekleyin, örn: <source src="background.mp4" type="video/mp4"> -->
+    <source src="background.mp4" type="video/mp4">
+  </video>
+  <div id="veil"></div>
   <canvas id="snowCanvas"></canvas>
+  <div class="flash-layer"></div>
   <div class="splash-content">
-    <div class="splash-eyebrow">Almanca ⇄ Türkçe Kartlar</div>
     <h1 class="splash-name">M HAMZA</h1>
-    <div class="splash-sub">GİRİŞ İÇİN EKRANA TIKLAYIN</div>
+    <div class="splash-sub">Giriş İçin Ekrana Tıklayın</div>
   </div>
 </div>
 
 <div class="app" id="mainApp">
   <div class="eyebrow">Kelime Kartları</div>
-  <h1>Almanca ⇄ Türkçe</h1>
-  <div class="sub">Goethe A1-A2 kelime hazinesi · seviye ve kategori seç</div>
+  <h1>Dil ⇄ Türkçe</h1>
+  <div class="sub">Dil ve kategori seç, kartlara dokun</div>
 
-  <div class="level-box" id="levelBox">
-    <div class="level-opt active" data-level="ALL">Tümü</div>
-    <div class="level-opt" data-level="A1">A1</div>
-    <div class="level-opt" data-level="A2">A2</div>
+  <div class="lang-box" id="langBox">
+    <div class="lang-opt active" data-lang="de">Deutsch</div>
+    <div class="lang-opt" data-lang="en">English</div>
+    <div class="lang-opt" data-lang="ar">العربية</div>
   </div>
 
   <div class="tabs">
@@ -434,20 +407,21 @@
     <div class="stage">
       <div class="card" id="card">
         <div class="face face-front">
-          <div class="level-badge" id="levelBadgeFront">A1</div>
-          <div class="tag">Deutsch</div>
-          <div class="word" id="deWord">Hallo</div>
-          <div class="pos" id="dePos">ünlem</div>
+          <div class="speak-badge">🔊</div>
+          <div class="tag" id="tagFront">Deutsch</div>
+          <div class="word" id="frontWord">Hallo</div>
+          <div class="pos" id="frontPos">ünlem</div>
+          <div class="example" id="frontExample"></div>
         </div>
         <div class="face face-back">
-          <div class="level-badge" id="levelBadgeBack">A1</div>
+          <div class="speak-badge">🔊</div>
           <div class="tag">Türkçe</div>
           <div class="word" id="trWord">Merhaba</div>
-          <div class="example" id="trExample">Hallo, wie geht's?</div>
+          <div class="example" id="trExample"></div>
         </div>
       </div>
     </div>
-    <div class="hint">Çevirmek için karta dokun</div>
+    <div class="hint">Çevirmek için karta dokun · her kart otomatik seslendirilir</div>
 
     <div class="controls">
       <button class="ctrl" id="prevBtn">Önceki</button>
@@ -485,582 +459,156 @@
 </div>
 
 <script>
+// ============ VOCAB DATA (DE / EN / AR -> TR) ============
 const vocab = [
-  // Selamlaşma / Günlük İfadeler
-  {de:"Hallo", tr:"Merhaba", pos:"ünlem", ex:"Hallo, wie geht's?", cat:"Selamlaşma"},
-  {de:"Guten Morgen", tr:"Günaydın", pos:"ünlem", ex:"Guten Morgen, hast du gut geschlafen?", cat:"Selamlaşma"},
-  {de:"Guten Tag", tr:"İyi günler", pos:"ünlem", ex:"Guten Tag, ich möchte einen Kaffee.", cat:"Selamlaşma"},
-  {de:"Guten Abend", tr:"İyi akşamlar", pos:"ünlem", ex:"Guten Abend, herzlich willkommen.", cat:"Selamlaşma"},
-  {de:"Gute Nacht", tr:"İyi geceler", pos:"ünlem", ex:"Gute Nacht, schlaf gut!", cat:"Selamlaşma"},
-  {de:"Auf Wiedersehen", tr:"Hoşça kal", pos:"ünlem", ex:"Auf Wiedersehen, bis morgen!", cat:"Selamlaşma"},
-  {de:"Tschüss", tr:"Görüşürüz", pos:"ünlem", ex:"Tschüss, bis später!", cat:"Selamlaşma"},
-  {de:"Bitte", tr:"Lütfen", pos:"ünlem", ex:"Ein Kaffee, bitte.", cat:"Selamlaşma"},
-  {de:"Bitte schön", tr:"Rica ederim", pos:"kalıp", ex:"Bitte schön, gern geschehen.", cat:"Selamlaşma"},
-  {de:"Danke", tr:"Teşekkürler", pos:"ünlem", ex:"Danke schön für die Hilfe.", cat:"Selamlaşma"},
-  {de:"Entschuldigung", tr:"Özür dilerim / Affedersiniz", pos:"ünlem", ex:"Entschuldigung, wo ist der Bahnhof?", cat:"Selamlaşma"},
-  {de:"Es tut mir leid", tr:"Üzgünüm", pos:"kalıp", ex:"Es tut mir leid, das war mein Fehler.", cat:"Selamlaşma"},
-  {de:"Kein Problem", tr:"Sorun değil", pos:"kalıp", ex:"Kein Problem, das mache ich gern.", cat:"Selamlaşma"},
-  {de:"Ja", tr:"Evet", pos:"zarf", ex:"Ja, das stimmt.", cat:"Selamlaşma"},
-  {de:"Nein", tr:"Hayır", pos:"zarf", ex:"Nein, danke.", cat:"Selamlaşma"},
-  {de:"Wie geht's?", tr:"Nasılsın?", pos:"kalıp", ex:"Hallo, wie geht's dir heute?", cat:"Selamlaşma"},
-  {de:"Mir geht es gut", tr:"İyiyim", pos:"kalıp", ex:"Danke, mir geht es gut.", cat:"Selamlaşma"},
-  {de:"Wie heißt du?", tr:"Adın ne?", pos:"kalıp", ex:"Wie heißt du und woher kommst du?", cat:"Selamlaşma"},
-  {de:"Ich heiße...", tr:"Benim adım...", pos:"kalıp", ex:"Ich heiße Ayşe, und du?", cat:"Selamlaşma"},
+// ---- Selamlaşma ----
+{tr:"Merhaba", pos:"ünlem", cat:"Selamlaşma",
+ de:{word:"Hallo", ex:"Hallo, wie geht's?"}, en:{word:"Hello", ex:"Hello, how are you?"}, ar:{word:"مرحباً", ex:"مرحباً، كيف حالك؟"},
+ exTr:"Merhaba, nasılsın?"},
+{tr:"Günaydın", pos:"ünlem", cat:"Selamlaşma",
+ de:{word:"Guten Morgen", ex:"Guten Morgen, hast du gut geschlafen?"}, en:{word:"Good morning", ex:"Good morning, did you sleep well?"}, ar:{word:"صباح الخير", ex:"صباح الخير، هل نمت جيداً؟"},
+ exTr:"Günaydın, iyi uyudun mu?"},
+{tr:"İyi günler", pos:"ünlem", cat:"Selamlaşma",
+ de:{word:"Guten Tag", ex:"Guten Tag, ich möchte einen Kaffee."}, en:{word:"Good day", ex:"Good day, I would like a coffee."}, ar:{word:"نهارك سعيد", ex:"نهارك سعيد، أريد قهوة من فضلك."},
+ exTr:"İyi günler, bir kahve istiyorum."},
+{tr:"İyi akşamlar", pos:"ünlem", cat:"Selamlaşma",
+ de:{word:"Guten Abend", ex:"Guten Abend, herzlich willkommen."}, en:{word:"Good evening", ex:"Good evening, welcome."}, ar:{word:"مساء الخير", ex:"مساء الخير، أهلاً وسهلاً."},
+ exTr:"İyi akşamlar, hoş geldiniz."},
+{tr:"İyi geceler", pos:"ünlem", cat:"Selamlaşma",
+ de:{word:"Gute Nacht", ex:"Gute Nacht, schlaf gut!"}, en:{word:"Good night", ex:"Good night, sleep well!"}, ar:{word:"تصبح على خير", ex:"تصبح على خير، نوماً هنيئاً!"},
+ exTr:"İyi geceler, iyi uyu!"},
+{tr:"Hoşça kal", pos:"ünlem", cat:"Selamlaşma",
+ de:{word:"Auf Wiedersehen", ex:"Auf Wiedersehen, bis morgen!"}, en:{word:"Goodbye", ex:"Goodbye, see you tomorrow!"}, ar:{word:"إلى اللقاء", ex:"إلى اللقاء، أراك غداً!"},
+ exTr:"Hoşça kal, yarın görüşürüz!"},
+{tr:"Teşekkürler", pos:"ünlem", cat:"Selamlaşma",
+ de:{word:"Danke", ex:"Danke schön für die Hilfe."}, en:{word:"Thank you", ex:"Thank you so much for the help."}, ar:{word:"شكراً", ex:"شكراً جزيلاً على المساعدة."},
+ exTr:"Yardımın için çok teşekkürler."},
+{tr:"Özür dilerim", pos:"ünlem", cat:"Selamlaşma",
+ de:{word:"Entschuldigung", ex:"Entschuldigung, wo ist der Bahnhof?"}, en:{word:"Excuse me", ex:"Excuse me, where is the train station?"}, ar:{word:"آسف", ex:"آسف، أين محطة القطار؟"},
+ exTr:"Özür dilerim, tren istasyonu nerede?"},
+{tr:"Evet", pos:"zarf", cat:"Selamlaşma",
+ de:{word:"Ja", ex:"Ja, das stimmt."}, en:{word:"Yes", ex:"Yes, that's right."}, ar:{word:"نعم", ex:"نعم، هذا صحيح."},
+ exTr:"Evet, bu doğru."},
+{tr:"Hayır", pos:"zarf", cat:"Selamlaşma",
+ de:{word:"Nein", ex:"Nein, danke."}, en:{word:"No", ex:"No, thank you."}, ar:{word:"لا", ex:"لا، شكراً."},
+ exTr:"Hayır, teşekkürler."},
 
-  // Zamirler
-  {de:"ich", tr:"ben", pos:"zamir", ex:"Ich spreche Deutsch.", cat:"Zamirler"},
-  {de:"du", tr:"sen", pos:"zamir", ex:"Sprichst du Türkisch?", cat:"Zamirler"},
-  {de:"er", tr:"o (erkek)", pos:"zamir", ex:"Er wohnt in Berlin.", cat:"Zamirler"},
-  {de:"sie", tr:"o (kadın)", pos:"zamir", ex:"Sie arbeitet in München.", cat:"Zamirler"},
-  {de:"es", tr:"o (nötr)", pos:"zamir", ex:"Es ist kalt heute.", cat:"Zamirler"},
-  {de:"wir", tr:"biz", pos:"zamir", ex:"Wir lernen Deutsch.", cat:"Zamirler"},
-  {de:"ihr", tr:"siz (samimi çoğul)", pos:"zamir", ex:"Ihr seid meine Freunde.", cat:"Zamirler"},
-  {de:"sie (Plural)", tr:"onlar", pos:"zamir", ex:"Sie kommen aus Istanbul.", cat:"Zamirler"},
-  {de:"Sie", tr:"siz (resmi)", pos:"zamir", ex:"Woher kommen Sie?", cat:"Zamirler"},
+// ---- Sayılar ----
+{tr:"bir", pos:"sayı", cat:"Sayılar", de:{word:"eins", ex:"Ich habe eins."}, en:{word:"one", ex:"I have one."}, ar:{word:"واحد", ex:"لدي واحد."}, exTr:"Benim bir tane var."},
+{tr:"iki", pos:"sayı", cat:"Sayılar", de:{word:"zwei", ex:"Zwei Kaffee, bitte."}, en:{word:"two", ex:"Two coffees, please."}, ar:{word:"اثنان", ex:"قهوتان من فضلك."}, exTr:"İki kahve, lütfen."},
+{tr:"üç", pos:"sayı", cat:"Sayılar", de:{word:"drei", ex:"Drei Kinder spielen."}, en:{word:"three", ex:"Three children are playing."}, ar:{word:"ثلاثة", ex:"ثلاثة أطفال يلعبون."}, exTr:"Üç çocuk oynuyor."},
+{tr:"dört", pos:"sayı", cat:"Sayılar", de:{word:"vier", ex:"Vier Stühle stehen hier."}, en:{word:"four", ex:"Four chairs are here."}, ar:{word:"أربعة", ex:"توجد أربعة كراسي هنا."}, exTr:"Burada dört sandalye var."},
+{tr:"beş", pos:"sayı", cat:"Sayılar", de:{word:"fünf", ex:"Fünf Minuten warten."}, en:{word:"five", ex:"Wait five minutes."}, ar:{word:"خمسة", ex:"انتظر خمس دقائق."}, exTr:"Beş dakika bekle."},
+{tr:"altı", pos:"sayı", cat:"Sayılar", de:{word:"sechs", ex:"Sechs Uhr morgens."}, en:{word:"six", ex:"Six o'clock in the morning."}, ar:{word:"ستة", ex:"الساعة السادسة صباحاً."}, exTr:"Sabah saat altı."},
+{tr:"yedi", pos:"sayı", cat:"Sayılar", de:{word:"sieben", ex:"Sieben Tage in der Woche."}, en:{word:"seven", ex:"Seven days in a week."}, ar:{word:"سبعة", ex:"سبعة أيام في الأسبوع."}, exTr:"Haftada yedi gün var."},
+{tr:"sekiz", pos:"sayı", cat:"Sayılar", de:{word:"acht", ex:"Acht Stunden schlafen."}, en:{word:"eight", ex:"Sleep eight hours."}, ar:{word:"ثمانية", ex:"النوم ثماني ساعات."}, exTr:"Sekiz saat uyumak."},
+{tr:"dokuz", pos:"sayı", cat:"Sayılar", de:{word:"neun", ex:"Neun Monate warten."}, en:{word:"nine", ex:"Wait nine months."}, ar:{word:"تسعة", ex:"الانتظار تسعة أشهر."}, exTr:"Dokuz ay beklemek."},
+{tr:"on", pos:"sayı", cat:"Sayılar", de:{word:"zehn", ex:"Zehn Euro, bitte."}, en:{word:"ten", ex:"Ten euros, please."}, ar:{word:"عشرة", ex:"عشرة يورو من فضلك."}, exTr:"On avro, lütfen."},
 
-  // Soru Kelimeleri
-  {de:"wer", tr:"kim", pos:"soru", ex:"Wer bist du?", cat:"Soru Kelimeleri"},
-  {de:"was", tr:"ne", pos:"soru", ex:"Was machst du gerade?", cat:"Soru Kelimeleri"},
-  {de:"wo", tr:"nerede", pos:"soru", ex:"Wo wohnst du?", cat:"Soru Kelimeleri"},
-  {de:"wann", tr:"ne zaman", pos:"soru", ex:"Wann kommst du an?", cat:"Soru Kelimeleri"},
-  {de:"warum", tr:"neden", pos:"soru", ex:"Warum lernst du Deutsch?", cat:"Soru Kelimeleri"},
-  {de:"wie", tr:"nasıl", pos:"soru", ex:"Wie geht es dir?", cat:"Soru Kelimeleri"},
-  {de:"wie viel", tr:"ne kadar", pos:"soru", ex:"Wie viel kostet das?", cat:"Soru Kelimeleri"},
-  {de:"welche", tr:"hangi", pos:"soru", ex:"Welche Farbe magst du?", cat:"Soru Kelimeleri"},
-  {de:"wohin", tr:"nereye", pos:"soru", ex:"Wohin fährst du?", cat:"Soru Kelimeleri"},
-  {de:"woher", tr:"nereden", pos:"soru", ex:"Woher kommst du?", cat:"Soru Kelimeleri"},
+// ---- Aile ----
+{tr:"aile", pos:"isim", cat:"Aile", de:{word:"Familie", ex:"Meine Familie ist groß."}, en:{word:"family", ex:"My family is big."}, ar:{word:"عائلة", ex:"عائلتي كبيرة."}, exTr:"Ailem kalabalık."},
+{tr:"anne", pos:"isim", cat:"Aile", de:{word:"Mutter", ex:"Meine Mutter kocht gern."}, en:{word:"mother", ex:"My mother likes to cook."}, ar:{word:"أم", ex:"أمي تحب الطبخ."}, exTr:"Annem yemek yapmayı sever."},
+{tr:"baba", pos:"isim", cat:"Aile", de:{word:"Vater", ex:"Mein Vater arbeitet viel."}, en:{word:"father", ex:"My father works a lot."}, ar:{word:"أب", ex:"أبي يعمل كثيراً."}, exTr:"Babam çok çalışır."},
+{tr:"kız kardeş", pos:"isim", cat:"Aile", de:{word:"Schwester", ex:"Ich habe eine Schwester."}, en:{word:"sister", ex:"I have a sister."}, ar:{word:"أخت", ex:"لدي أخت."}, exTr:"Benim bir kız kardeşim var."},
+{tr:"erkek kardeş", pos:"isim", cat:"Aile", de:{word:"Bruder", ex:"Mein Bruder ist älter."}, en:{word:"brother", ex:"My brother is older."}, ar:{word:"أخ", ex:"أخي أكبر مني."}, exTr:"Erkek kardeşim benden büyük."},
+{tr:"çocuk", pos:"isim", cat:"Aile", de:{word:"Kind", ex:"Das Kind spielt draußen."}, en:{word:"child", ex:"The child is playing outside."}, ar:{word:"طفل", ex:"الطفل يلعب في الخارج."}, exTr:"Çocuk dışarıda oynuyor."},
+{tr:"büyükanne", pos:"isim", cat:"Aile", de:{word:"Großmutter", ex:"Meine Großmutter erzählt gern Geschichten."}, en:{word:"grandmother", ex:"My grandmother likes to tell stories."}, ar:{word:"جدة", ex:"جدتي تحب رواية القصص."}, exTr:"Büyükannem hikaye anlatmayı sever."},
+{tr:"büyükbaba", pos:"isim", cat:"Aile", de:{word:"Großvater", ex:"Mein Großvater liest Zeitung."}, en:{word:"grandfather", ex:"My grandfather reads the newspaper."}, ar:{word:"جد", ex:"جدي يقرأ الجريدة."}, exTr:"Büyükbabam gazete okur."},
 
-  // Sayılar
-  {de:"null", tr:"sıfır", pos:"sayı", ex:"Die Nummer beginnt mit null.", cat:"Sayılar"},
-  {de:"eins", tr:"bir", pos:"sayı", ex:"Ich habe eins.", cat:"Sayılar"},
-  {de:"zwei", tr:"iki", pos:"sayı", ex:"Zwei Kaffee, bitte.", cat:"Sayılar"},
-  {de:"drei", tr:"üç", pos:"sayı", ex:"Drei Kinder spielen.", cat:"Sayılar"},
-  {de:"vier", tr:"dört", pos:"sayı", ex:"Vier Stühle stehen hier.", cat:"Sayılar"},
-  {de:"fünf", tr:"beş", pos:"sayı", ex:"Fünf Minuten warten.", cat:"Sayılar"},
-  {de:"sechs", tr:"altı", pos:"sayı", ex:"Sechs Uhr morgens.", cat:"Sayılar"},
-  {de:"sieben", tr:"yedi", pos:"sayı", ex:"Sieben Tage in der Woche.", cat:"Sayılar"},
-  {de:"acht", tr:"sekiz", pos:"sayı", ex:"Acht Stunden schlafen.", cat:"Sayılar"},
-  {de:"neun", tr:"dokuz", pos:"sayı", ex:"Neun Monate warten.", cat:"Sayılar"},
-  {de:"zehn", tr:"on", pos:"sayı", ex:"Zehn Euro, bitte.", cat:"Sayılar"},
-  {de:"elf", tr:"on bir", pos:"sayı", ex:"Elf Spieler im Team.", cat:"Sayılar"},
-  {de:"zwölf", tr:"on iki", pos:"sayı", ex:"Zwölf Monate im Jahr.", cat:"Sayılar"},
-  {de:"dreizehn", tr:"on üç", pos:"sayı", ex:"Dreizehn Jahre alt.", cat:"Sayılar"},
-  {de:"vierzehn", tr:"on dört", pos:"sayı", ex:"Vierzehn Tage Urlaub.", cat:"Sayılar"},
-  {de:"fünfzehn", tr:"on beş", pos:"sayı", ex:"Fünfzehn Minuten Pause.", cat:"Sayılar"},
-  {de:"zwanzig", tr:"yirmi", pos:"sayı", ex:"Zwanzig Euro kosten.", cat:"Sayılar"},
-  {de:"dreißig", tr:"otuz", pos:"sayı", ex:"Dreißig Tage im Monat.", cat:"Sayılar"},
-  {de:"vierzig", tr:"kırk", pos:"sayı", ex:"Vierzig Stunden arbeiten.", cat:"Sayılar"},
-  {de:"fünfzig", tr:"elli", pos:"sayı", ex:"Fünfzig Prozent Rabatt.", cat:"Sayılar"},
-  {de:"sechzig", tr:"altmış", pos:"sayı", ex:"Sechzig Minuten sind eine Stunde.", cat:"Sayılar"},
-  {de:"siebzig", tr:"yetmiş", pos:"sayı", ex:"Siebzig Kilometer entfernt.", cat:"Sayılar"},
-  {de:"achtzig", tr:"seksen", pos:"sayı", ex:"Achtzig Jahre alt.", cat:"Sayılar"},
-  {de:"neunzig", tr:"doksan", pos:"sayı", ex:"Neunzig Euro bezahlen.", cat:"Sayılar"},
-  {de:"hundert", tr:"yüz", pos:"sayı", ex:"Hundert Meter entfernt.", cat:"Sayılar"},
-  {de:"tausend", tr:"bin", pos:"sayı", ex:"Tausend Dank!", cat:"Sayılar"},
+// ---- Yiyecek-İçecek ----
+{tr:"ekmek", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Brot", ex:"Ich kaufe frisches Brot."}, en:{word:"bread", ex:"I buy fresh bread."}, ar:{word:"خبز", ex:"أشتري خبزاً طازجاً."}, exTr:"Taze ekmek alıyorum."},
+{tr:"su", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Wasser", ex:"Ein Glas Wasser, bitte."}, en:{word:"water", ex:"A glass of water, please."}, ar:{word:"ماء", ex:"كوب ماء من فضلك."}, exTr:"Bir bardak su, lütfen."},
+{tr:"kahve", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Kaffee", ex:"Der Kaffee ist heiß."}, en:{word:"coffee", ex:"The coffee is hot."}, ar:{word:"قهوة", ex:"القهوة ساخنة."}, exTr:"Kahve sıcak."},
+{tr:"çay", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Tee", ex:"Ich trinke gern Tee."}, en:{word:"tea", ex:"I like to drink tea."}, ar:{word:"شاي", ex:"أحب شرب الشاي."}, exTr:"Çay içmeyi severim."},
+{tr:"elma", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Apfel", ex:"Der Apfel ist süß."}, en:{word:"apple", ex:"The apple is sweet."}, ar:{word:"تفاحة", ex:"التفاحة حلوة."}, exTr:"Elma tatlı."},
+{tr:"peynir", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Käse", ex:"Der Käse schmeckt gut."}, en:{word:"cheese", ex:"The cheese tastes good."}, ar:{word:"جبن", ex:"الجبن طعمه لذيذ."}, exTr:"Peynirin tadı güzel."},
+{tr:"süt", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Milch", ex:"Trinkst du Milch zum Frühstück?"}, en:{word:"milk", ex:"Do you drink milk for breakfast?"}, ar:{word:"حليب", ex:"هل تشرب الحليب في الفطور؟"}, exTr:"Kahvaltıda süt içer misin?"},
+{tr:"yumurta", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Ei", ex:"Ich esse jeden Morgen ein Ei."}, en:{word:"egg", ex:"I eat an egg every morning."}, ar:{word:"بيضة", ex:"آكل بيضة كل صباح."}, exTr:"Her sabah bir yumurta yerim."},
+{tr:"sebze", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Gemüse", ex:"Gemüse ist gesund."}, en:{word:"vegetable", ex:"Vegetables are healthy."}, ar:{word:"خضار", ex:"الخضار مفيد للصحة."}, exTr:"Sebze sağlıklıdır."},
+{tr:"meyve", pos:"isim", cat:"Yiyecek-İçecek", de:{word:"Obst", ex:"Ich esse gern frisches Obst."}, en:{word:"fruit", ex:"I like eating fresh fruit."}, ar:{word:"فاكهة", ex:"أحب أكل الفاكهة الطازجة."}, exTr:"Taze meyve yemeyi severim."},
 
-  // Aile
-  {de:"die Familie", tr:"aile", pos:"isim", ex:"Meine Familie ist groß.", cat:"Aile"},
-  {de:"die Mutter", tr:"anne", pos:"isim", ex:"Meine Mutter kocht gern.", cat:"Aile"},
-  {de:"der Vater", tr:"baba", pos:"isim", ex:"Mein Vater arbeitet viel.", cat:"Aile"},
-  {de:"die Eltern", tr:"ebeveynler", pos:"isim", ex:"Meine Eltern wohnen in Izmir.", cat:"Aile"},
-  {de:"die Schwester", tr:"kız kardeş", pos:"isim", ex:"Ich habe eine Schwester.", cat:"Aile"},
-  {de:"der Bruder", tr:"erkek kardeş", pos:"isim", ex:"Mein Bruder ist älter.", cat:"Aile"},
-  {de:"die Geschwister", tr:"kardeşler", pos:"isim", ex:"Ich habe zwei Geschwister.", cat:"Aile"},
-  {de:"das Kind", tr:"çocuk", pos:"isim", ex:"Das Kind spielt draußen.", cat:"Aile"},
-  {de:"die Großmutter", tr:"büyükanne", pos:"isim", ex:"Meine Großmutter erzählt gern Geschichten.", cat:"Aile"},
-  {de:"der Großvater", tr:"büyükbaba", pos:"isim", ex:"Mein Großvater liest Zeitung.", cat:"Aile"},
-  {de:"der Sohn", tr:"oğul", pos:"isim", ex:"Ihr Sohn geht zur Schule.", cat:"Aile"},
-  {de:"die Tochter", tr:"kız evlat", pos:"isim", ex:"Seine Tochter lernt Deutsch.", cat:"Aile"},
-  {de:"der Onkel", tr:"amca/dayı", pos:"isim", ex:"Mein Onkel wohnt in Hamburg.", cat:"Aile"},
-  {de:"die Tante", tr:"teyze/hala", pos:"isim", ex:"Meine Tante besucht uns oft.", cat:"Aile"},
-  {de:"der Cousin", tr:"kuzen (erkek)", pos:"isim", ex:"Mein Cousin spielt Fußball.", cat:"Aile"},
-  {de:"die Cousine", tr:"kuzen (kadın)", pos:"isim", ex:"Meine Cousine studiert Medizin.", cat:"Aile"},
-  {de:"der Ehemann", tr:"eş (erkek)", pos:"isim", ex:"Ihr Ehemann arbeitet im Büro.", cat:"Aile"},
-  {de:"die Ehefrau", tr:"eş (kadın)", pos:"isim", ex:"Seine Ehefrau ist Lehrerin.", cat:"Aile"},
-  {de:"das Baby", tr:"bebek", pos:"isim", ex:"Das Baby schläft ruhig.", cat:"Aile"},
+// ---- Renkler ----
+{tr:"kırmızı", pos:"sıfat", cat:"Renkler", de:{word:"rot", ex:"Das Auto ist rot."}, en:{word:"red", ex:"The car is red."}, ar:{word:"أحمر", ex:"السيارة حمراء."}, exTr:"Araba kırmızı."},
+{tr:"mavi", pos:"sıfat", cat:"Renkler", de:{word:"blau", ex:"Der Himmel ist blau."}, en:{word:"blue", ex:"The sky is blue."}, ar:{word:"أزرق", ex:"السماء زرقاء."}, exTr:"Gökyüzü mavi."},
+{tr:"yeşil", pos:"sıfat", cat:"Renkler", de:{word:"grün", ex:"Das Gras ist grün."}, en:{word:"green", ex:"The grass is green."}, ar:{word:"أخضر", ex:"العشب أخضر."}, exTr:"Çim yeşil."},
+{tr:"sarı", pos:"sıfat", cat:"Renkler", de:{word:"gelb", ex:"Die Banane ist gelb."}, en:{word:"yellow", ex:"The banana is yellow."}, ar:{word:"أصفر", ex:"الموزة صفراء."}, exTr:"Muz sarı."},
+{tr:"siyah", pos:"sıfat", cat:"Renkler", de:{word:"schwarz", ex:"Die Katze ist schwarz."}, en:{word:"black", ex:"The cat is black."}, ar:{word:"أسود", ex:"القطة سوداء."}, exTr:"Kedi siyah."},
+{tr:"beyaz", pos:"sıfat", cat:"Renkler", de:{word:"weiß", ex:"Der Schnee ist weiß."}, en:{word:"white", ex:"The snow is white."}, ar:{word:"أبيض", ex:"الثلج أبيض."}, exTr:"Kar beyaz."},
+{tr:"kahverengi", pos:"sıfat", cat:"Renkler", de:{word:"braun", ex:"Seine Augen sind braun."}, en:{word:"brown", ex:"His eyes are brown."}, ar:{word:"بني", ex:"عيناه بنيتان."}, exTr:"Onun gözleri kahverengi."},
+{tr:"turuncu", pos:"sıfat", cat:"Renkler", de:{word:"orange", ex:"Die Orange ist orange."}, en:{word:"orange", ex:"The orange is orange."}, ar:{word:"برتقالي", ex:"البرتقالة برتقالية."}, exTr:"Portakal turuncu."},
+{tr:"gri", pos:"sıfat", cat:"Renkler", de:{word:"grau", ex:"Der Himmel ist heute grau."}, en:{word:"gray", ex:"The sky is gray today."}, ar:{word:"رمادي", ex:"السماء رمادية اليوم."}, exTr:"Bugün gökyüzü gri."},
 
-  // Vücut
-  {de:"der Kopf", tr:"kafa", pos:"isim", ex:"Mein Kopf tut weh.", cat:"Vücut"},
-  {de:"das Auge", tr:"göz", pos:"isim", ex:"Sie hat blaue Augen.", cat:"Vücut"},
-  {de:"das Ohr", tr:"kulak", pos:"isim", ex:"Mein Ohr tut weh.", cat:"Vücut"},
-  {de:"die Nase", tr:"burun", pos:"isim", ex:"Meine Nase ist kalt.", cat:"Vücut"},
-  {de:"der Mund", tr:"ağız", pos:"isim", ex:"Öffne bitte den Mund.", cat:"Vücut"},
-  {de:"die Hand", tr:"el", pos:"isim", ex:"Gib mir deine Hand.", cat:"Vücut"},
-  {de:"der Fuß", tr:"ayak", pos:"isim", ex:"Mein Fuß tut weh.", cat:"Vücut"},
-  {de:"der Arm", tr:"kol", pos:"isim", ex:"Er hat einen starken Arm.", cat:"Vücut"},
-  {de:"das Bein", tr:"bacak", pos:"isim", ex:"Ihr Bein ist gebrochen.", cat:"Vücut"},
-  {de:"der Bauch", tr:"karın", pos:"isim", ex:"Mein Bauch tut weh.", cat:"Vücut"},
-  {de:"der Rücken", tr:"sırt", pos:"isim", ex:"Sein Rücken tut weh.", cat:"Vücut"},
-  {de:"das Haar", tr:"saç", pos:"isim", ex:"Sie hat lange Haare.", cat:"Vücut"},
-  {de:"der Finger", tr:"parmak", pos:"isim", ex:"Ich habe zehn Finger.", cat:"Vücut"},
-  {de:"der Zahn", tr:"diş", pos:"isim", ex:"Der Zahn tut weh.", cat:"Vücut"},
-  {de:"das Herz", tr:"kalp", pos:"isim", ex:"Mein Herz schlägt schnell.", cat:"Vücut"},
+// ---- Zaman ----
+{tr:"bugün", pos:"zarf", cat:"Zaman", de:{word:"heute", ex:"Heute ist Montag."}, en:{word:"today", ex:"Today is Monday."}, ar:{word:"اليوم", ex:"اليوم هو الإثنين."}, exTr:"Bugün Pazartesi."},
+{tr:"yarın", pos:"zarf", cat:"Zaman", de:{word:"morgen", ex:"Morgen fahre ich nach Berlin."}, en:{word:"tomorrow", ex:"Tomorrow I am going to Berlin."}, ar:{word:"غداً", ex:"غداً سأذهب إلى برلين."}, exTr:"Yarın Berlin'e gidiyorum."},
+{tr:"dün", pos:"zarf", cat:"Zaman", de:{word:"gestern", ex:"Gestern war es kalt."}, en:{word:"yesterday", ex:"Yesterday it was cold."}, ar:{word:"أمس", ex:"كان الجو بارداً أمس."}, exTr:"Dün hava soğuktu."},
+{tr:"hafta", pos:"isim", cat:"Zaman", de:{word:"Woche", ex:"Nächste Woche fahre ich weg."}, en:{word:"week", ex:"Next week I am going away."}, ar:{word:"أسبوع", ex:"الأسبوع القادم سأسافر."}, exTr:"Önümüzdeki hafta gidiyorum."},
+{tr:"ay", pos:"isim", cat:"Zaman", de:{word:"Monat", ex:"Dieser Monat ist sehr voll."}, en:{word:"month", ex:"This month is very busy."}, ar:{word:"شهر", ex:"هذا الشهر مزدحم جداً."}, exTr:"Bu ay çok yoğun."},
+{tr:"yıl", pos:"isim", cat:"Zaman", de:{word:"Jahr", ex:"Dieses Jahr war schön."}, en:{word:"year", ex:"This year was nice."}, ar:{word:"سنة", ex:"كانت هذه السنة جميلة."}, exTr:"Bu yıl güzeldi."},
+{tr:"saat", pos:"isim", cat:"Zaman", de:{word:"Uhr", ex:"Wie viel Uhr ist es?"}, en:{word:"clock", ex:"What time is it?"}, ar:{word:"ساعة", ex:"كم الساعة؟"}, exTr:"Saat kaç?"},
+{tr:"dakika", pos:"isim", cat:"Zaman", de:{word:"Minute", ex:"Warte fünf Minuten, bitte."}, en:{word:"minute", ex:"Wait five minutes, please."}, ar:{word:"دقيقة", ex:"انتظر خمس دقائق من فضلك."}, exTr:"Beş dakika bekle, lütfen."},
 
-  // Sağlık
-  {de:"krank", tr:"hasta", pos:"sıfat", ex:"Ich bin heute krank.", cat:"Sağlık"},
-  {de:"gesund", tr:"sağlıklı", pos:"sıfat", ex:"Obst ist gesund.", cat:"Sağlık"},
-  {de:"der Arzt", tr:"doktor", pos:"isim", ex:"Ich gehe zum Arzt.", cat:"Sağlık"},
-  {de:"die Ärztin", tr:"doktor (kadın)", pos:"isim", ex:"Die Ärztin untersucht mich.", cat:"Sağlık"},
-  {de:"die Apotheke", tr:"eczane", pos:"isim", ex:"Die Apotheke ist gleich um die Ecke.", cat:"Sağlık"},
-  {de:"die Schmerzen", tr:"ağrı", pos:"isim", ex:"Ich habe Kopfschmerzen.", cat:"Sağlık"},
-  {de:"das Fieber", tr:"ateş (hastalık)", pos:"isim", ex:"Das Kind hat Fieber.", cat:"Sağlık"},
-  {de:"die Erkältung", tr:"soğuk algınlığı", pos:"isim", ex:"Ich habe eine Erkältung.", cat:"Sağlık"},
-  {de:"die Tablette", tr:"hap", pos:"isim", ex:"Nimm eine Tablette gegen Schmerzen.", cat:"Sağlık"},
-  {de:"das Krankenhaus", tr:"hastane", pos:"isim", ex:"Er liegt im Krankenhaus.", cat:"Sağlık"},
-  {de:"der Termin", tr:"randevu", pos:"isim", ex:"Ich habe einen Termin beim Arzt.", cat:"Sağlık"},
+// ---- Fiiller ----
+{tr:"olmak", pos:"fiil", cat:"Fiiller", de:{word:"sein", ex:"Ich bin müde."}, en:{word:"to be", ex:"I am tired."}, ar:{word:"يكون", ex:"أنا متعب."}, exTr:"Ben yorgunum."},
+{tr:"sahip olmak", pos:"fiil", cat:"Fiiller", de:{word:"haben", ex:"Ich habe einen Bruder."}, en:{word:"to have", ex:"I have a brother."}, ar:{word:"يملك", ex:"لدي أخ."}, exTr:"Benim bir erkek kardeşim var."},
+{tr:"gitmek", pos:"fiil", cat:"Fiiller", de:{word:"gehen", ex:"Ich gehe nach Hause."}, en:{word:"to go", ex:"I am going home."}, ar:{word:"يذهب", ex:"أنا ذاهب إلى المنزل."}, exTr:"Eve gidiyorum."},
+{tr:"gelmek", pos:"fiil", cat:"Fiiller", de:{word:"kommen", ex:"Kommst du morgen?"}, en:{word:"to come", ex:"Are you coming tomorrow?"}, ar:{word:"يأتي", ex:"هل ستأتي غداً؟"}, exTr:"Yarın gelecek misin?"},
+{tr:"görmek", pos:"fiil", cat:"Fiiller", de:{word:"sehen", ex:"Ich sehe einen Vogel."}, en:{word:"to see", ex:"I see a bird."}, ar:{word:"يرى", ex:"أرى طائراً."}, exTr:"Bir kuş görüyorum."},
+{tr:"yemek yemek", pos:"fiil", cat:"Fiiller", de:{word:"essen", ex:"Wir essen zusammen."}, en:{word:"to eat", ex:"We eat together."}, ar:{word:"يأكل", ex:"نأكل معاً."}, exTr:"Birlikte yemek yiyoruz."},
+{tr:"içmek", pos:"fiil", cat:"Fiiller", de:{word:"trinken", ex:"Ich trinke Wasser."}, en:{word:"to drink", ex:"I drink water."}, ar:{word:"يشرب", ex:"أشرب الماء."}, exTr:"Su içiyorum."},
+{tr:"uyumak", pos:"fiil", cat:"Fiiller", de:{word:"schlafen", ex:"Das Baby schläft schon."}, en:{word:"to sleep", ex:"The baby is already sleeping."}, ar:{word:"ينام", ex:"الطفل نائم بالفعل."}, exTr:"Bebek zaten uyuyor."},
+{tr:"çalışmak", pos:"fiil", cat:"Fiiller", de:{word:"arbeiten", ex:"Sie arbeitet im Büro."}, en:{word:"to work", ex:"She works in the office."}, ar:{word:"يعمل", ex:"هي تعمل في المكتب."}, exTr:"O ofiste çalışıyor."},
+{tr:"öğrenmek", pos:"fiil", cat:"Fiiller", de:{word:"lernen", ex:"Ich lerne Deutsch."}, en:{word:"to learn", ex:"I am learning German."}, ar:{word:"يتعلم", ex:"أنا أتعلم الألمانية."}, exTr:"Almanca öğreniyorum."},
 
-  // Ev
-  {de:"das Haus", tr:"ev", pos:"isim", ex:"Das Haus ist sehr groß.", cat:"Ev"},
-  {de:"die Wohnung", tr:"daire", pos:"isim", ex:"Meine Wohnung ist klein.", cat:"Ev"},
-  {de:"das Zimmer", tr:"oda", pos:"isim", ex:"Das Zimmer ist hell.", cat:"Ev"},
-  {de:"die Küche", tr:"mutfak", pos:"isim", ex:"Die Küche ist sauber.", cat:"Ev"},
-  {de:"das Bad", tr:"banyo", pos:"isim", ex:"Das Bad ist neu renoviert.", cat:"Ev"},
-  {de:"das Schlafzimmer", tr:"yatak odası", pos:"isim", ex:"Mein Schlafzimmer ist ruhig.", cat:"Ev"},
-  {de:"das Wohnzimmer", tr:"oturma odası", pos:"isim", ex:"Wir sitzen im Wohnzimmer.", cat:"Ev"},
-  {de:"die Tür", tr:"kapı", pos:"isim", ex:"Bitte mach die Tür zu.", cat:"Ev"},
-  {de:"das Fenster", tr:"pencere", pos:"isim", ex:"Öffne bitte das Fenster.", cat:"Ev"},
-  {de:"der Tisch", tr:"masa", pos:"isim", ex:"Das Buch liegt auf dem Tisch.", cat:"Ev"},
-  {de:"der Stuhl", tr:"sandalye", pos:"isim", ex:"Setz dich auf den Stuhl.", cat:"Ev"},
-  {de:"das Bett", tr:"yatak", pos:"isim", ex:"Ich gehe ins Bett.", cat:"Ev"},
-  {de:"der Schrank", tr:"dolap", pos:"isim", ex:"Die Kleidung ist im Schrank.", cat:"Ev"},
-  {de:"die Lampe", tr:"lamba", pos:"isim", ex:"Mach bitte die Lampe an.", cat:"Ev"},
-  {de:"der Balkon", tr:"balkon", pos:"isim", ex:"Wir frühstücken auf dem Balkon.", cat:"Ev"},
-  {de:"der Garten", tr:"bahçe", pos:"isim", ex:"Die Kinder spielen im Garten.", cat:"Ev"},
-
-  // Giyim
-  {de:"die Kleidung", tr:"giysi", pos:"isim", ex:"Ihre Kleidung ist modern.", cat:"Giyim"},
-  {de:"das Hemd", tr:"gömlek", pos:"isim", ex:"Er trägt ein weißes Hemd.", cat:"Giyim"},
-  {de:"die Hose", tr:"pantolon", pos:"isim", ex:"Die Hose ist zu lang.", cat:"Giyim"},
-  {de:"das Kleid", tr:"elbise", pos:"isim", ex:"Das Kleid ist sehr schön.", cat:"Giyim"},
-  {de:"der Rock", tr:"etek", pos:"isim", ex:"Sie trägt einen roten Rock.", cat:"Giyim"},
-  {de:"die Jacke", tr:"ceket", pos:"isim", ex:"Zieh deine Jacke an, es ist kalt.", cat:"Giyim"},
-  {de:"die Schuhe", tr:"ayakkabılar", pos:"isim", ex:"Meine Schuhe sind neu.", cat:"Giyim"},
-  {de:"die Mütze", tr:"bere/şapka", pos:"isim", ex:"Trag eine Mütze im Winter.", cat:"Giyim"},
-  {de:"der Mantel", tr:"palto", pos:"isim", ex:"Der Mantel ist sehr warm.", cat:"Giyim"},
-  {de:"die Socken", tr:"çoraplar", pos:"isim", ex:"Ich brauche neue Socken.", cat:"Giyim"},
-  {de:"der Anzug", tr:"takım elbise", pos:"isim", ex:"Er trägt einen dunklen Anzug.", cat:"Giyim"},
-  {de:"die Brille", tr:"gözlük", pos:"isim", ex:"Ich brauche meine Brille zum Lesen.", cat:"Giyim"},
-  {de:"die Tasche", tr:"çanta", pos:"isim", ex:"Meine Tasche ist sehr schwer.", cat:"Giyim"},
-
-  // Yiyecek-İçecek
-  {de:"das Brot", tr:"ekmek", pos:"isim", ex:"Ich kaufe frisches Brot.", cat:"Yiyecek-İçecek"},
-  {de:"das Wasser", tr:"su", pos:"isim", ex:"Ein Glas Wasser, bitte.", cat:"Yiyecek-İçecek"},
-  {de:"der Kaffee", tr:"kahve", pos:"isim", ex:"Der Kaffee ist heiß.", cat:"Yiyecek-İçecek"},
-  {de:"der Tee", tr:"çay", pos:"isim", ex:"Ich trinke gern Tee.", cat:"Yiyecek-İçecek"},
-  {de:"der Apfel", tr:"elma", pos:"isim", ex:"Der Apfel ist süß.", cat:"Yiyecek-İçecek"},
-  {de:"das Fleisch", tr:"et", pos:"isim", ex:"Ich esse kein Fleisch.", cat:"Yiyecek-İçecek"},
-  {de:"der Käse", tr:"peynir", pos:"isim", ex:"Der Käse schmeckt gut.", cat:"Yiyecek-İçecek"},
-  {de:"die Milch", tr:"süt", pos:"isim", ex:"Trinkst du Milch zum Frühstück?", cat:"Yiyecek-İçecek"},
-  {de:"der Zucker", tr:"şeker", pos:"isim", ex:"Ich nehme keinen Zucker.", cat:"Yiyecek-İçecek"},
-  {de:"das Salz", tr:"tuz", pos:"isim", ex:"Gib mir bitte das Salz.", cat:"Yiyecek-İçecek"},
-  {de:"das Ei", tr:"yumurta", pos:"isim", ex:"Ich esse jeden Morgen ein Ei.", cat:"Yiyecek-İçecek"},
-  {de:"das Gemüse", tr:"sebze", pos:"isim", ex:"Gemüse ist gesund.", cat:"Yiyecek-İçecek"},
-  {de:"das Obst", tr:"meyve", pos:"isim", ex:"Ich esse gern frisches Obst.", cat:"Yiyecek-İçecek"},
-  {de:"die Suppe", tr:"çorba", pos:"isim", ex:"Die Suppe ist sehr lecker.", cat:"Yiyecek-İçecek"},
-  {de:"der Reis", tr:"pirinç", pos:"isim", ex:"Wir essen Reis mit Gemüse.", cat:"Yiyecek-İçecek"},
-  {de:"die Kartoffel", tr:"patates", pos:"isim", ex:"Die Kartoffeln sind gekocht.", cat:"Yiyecek-İçecek"},
-  {de:"der Fisch", tr:"balık", pos:"isim", ex:"Der Fisch ist frisch.", cat:"Yiyecek-İçecek"},
-  {de:"das Huhn", tr:"tavuk", pos:"isim", ex:"Wir grillen heute Huhn.", cat:"Yiyecek-İçecek"},
-  {de:"der Saft", tr:"meyve suyu", pos:"isim", ex:"Ein Glas Orangensaft, bitte.", cat:"Yiyecek-İçecek"},
-  {de:"das Bier", tr:"bira", pos:"isim", ex:"Er trinkt gern Bier.", cat:"Yiyecek-İçecek"},
-  {de:"der Wein", tr:"şarap", pos:"isim", ex:"Ein Glas Rotwein, bitte.", cat:"Yiyecek-İçecek"},
-  {de:"der Kuchen", tr:"pasta/kek", pos:"isim", ex:"Der Kuchen schmeckt köstlich.", cat:"Yiyecek-İçecek"},
-  {de:"die Butter", tr:"tereyağı", pos:"isim", ex:"Brot mit Butter, bitte.", cat:"Yiyecek-İçecek"},
-  {de:"das Frühstück", tr:"kahvaltı", pos:"isim", ex:"Das Frühstück ist fertig.", cat:"Yiyecek-İçecek"},
-  {de:"das Mittagessen", tr:"öğle yemeği", pos:"isim", ex:"Was gibt es zum Mittagessen?", cat:"Yiyecek-İçecek"},
-  {de:"das Abendessen", tr:"akşam yemeği", pos:"isim", ex:"Das Abendessen ist um sieben Uhr.", cat:"Yiyecek-İçecek"},
-
-  // Alışveriş
-  {de:"das Geld", tr:"para", pos:"isim", ex:"Ich habe kein Geld dabei.", cat:"Alışveriş"},
-  {de:"der Euro", tr:"euro", pos:"isim", ex:"Das kostet zehn Euro.", cat:"Alışveriş"},
-  {de:"kaufen", tr:"satın almak", pos:"fiil", ex:"Ich möchte ein Buch kaufen.", cat:"Alışveriş"},
-  {de:"verkaufen", tr:"satmak", pos:"fiil", ex:"Er verkauft sein Auto.", cat:"Alışveriş"},
-  {de:"bezahlen", tr:"ödemek", pos:"fiil", ex:"Kann ich mit Karte bezahlen?", cat:"Alışveriş"},
-  {de:"der Preis", tr:"fiyat", pos:"isim", ex:"Der Preis ist zu hoch.", cat:"Alışveriş"},
-  {de:"teuer", tr:"pahalı", pos:"sıfat", ex:"Dieses Hotel ist sehr teuer.", cat:"Alışveriş"},
-  {de:"billig", tr:"ucuz", pos:"sıfat", ex:"Der Markt ist billiger.", cat:"Alışveriş"},
-  {de:"der Supermarkt", tr:"süpermarket", pos:"isim", ex:"Ich gehe zum Supermarkt.", cat:"Alışveriş"},
-  {de:"das Geschäft", tr:"dükkan", pos:"isim", ex:"Das Geschäft schließt um acht.", cat:"Alışveriş"},
-  {de:"die Rechnung", tr:"fatura/hesap", pos:"isim", ex:"Die Rechnung, bitte.", cat:"Alışveriş"},
-  {de:"die Kasse", tr:"kasa", pos:"isim", ex:"Bitte gehen Sie zur Kasse.", cat:"Alışveriş"},
-
-  // Renkler
-  {de:"rot", tr:"kırmızı", pos:"sıfat", ex:"Das Auto ist rot.", cat:"Renkler"},
-  {de:"blau", tr:"mavi", pos:"sıfat", ex:"Der Himmel ist blau.", cat:"Renkler"},
-  {de:"grün", tr:"yeşil", pos:"sıfat", ex:"Das Gras ist grün.", cat:"Renkler"},
-  {de:"gelb", tr:"sarı", pos:"sıfat", ex:"Die Banane ist gelb.", cat:"Renkler"},
-  {de:"schwarz", tr:"siyah", pos:"sıfat", ex:"Die Katze ist schwarz.", cat:"Renkler"},
-  {de:"weiß", tr:"beyaz", pos:"sıfat", ex:"Der Schnee ist weiß.", cat:"Renkler"},
-  {de:"braun", tr:"kahverengi", pos:"sıfat", ex:"Seine Augen sind braun.", cat:"Renkler"},
-  {de:"orange", tr:"turuncu", pos:"sıfat", ex:"Die Orange ist orange.", cat:"Renkler"},
-  {de:"rosa", tr:"pembe", pos:"sıfat", ex:"Sie mag die Farbe rosa.", cat:"Renkler"},
-  {de:"grau", tr:"gri", pos:"sıfat", ex:"Der Himmel ist heute grau.", cat:"Renkler"},
-  {de:"lila", tr:"mor", pos:"sıfat", ex:"Die Blume ist lila.", cat:"Renkler"},
-
-  // Zaman
-  {de:"heute", tr:"bugün", pos:"zarf", ex:"Heute ist Montag.", cat:"Zaman"},
-  {de:"morgen", tr:"yarın", pos:"zarf", ex:"Morgen fahre ich nach Berlin.", cat:"Zaman"},
-  {de:"gestern", tr:"dün", pos:"zarf", ex:"Gestern war es kalt.", cat:"Zaman"},
-  {de:"der Montag", tr:"Pazartesi", pos:"isim", ex:"Am Montag arbeite ich.", cat:"Zaman"},
-  {de:"der Dienstag", tr:"Salı", pos:"isim", ex:"Der Dienstag ist mein freier Tag.", cat:"Zaman"},
-  {de:"der Mittwoch", tr:"Çarşamba", pos:"isim", ex:"Am Mittwoch habe ich einen Termin.", cat:"Zaman"},
-  {de:"der Donnerstag", tr:"Perşembe", pos:"isim", ex:"Donnerstag ist ein langer Tag.", cat:"Zaman"},
-  {de:"der Freitag", tr:"Cuma", pos:"isim", ex:"Am Freitag gehen wir aus.", cat:"Zaman"},
-  {de:"der Samstag", tr:"Cumartesi", pos:"isim", ex:"Samstag schlafe ich lange.", cat:"Zaman"},
-  {de:"der Sonntag", tr:"Pazar", pos:"isim", ex:"Am Sonntag besuchen wir die Familie.", cat:"Zaman"},
-  {de:"der Januar", tr:"Ocak", pos:"isim", ex:"Im Januar ist es kalt.", cat:"Zaman"},
-  {de:"der Februar", tr:"Şubat", pos:"isim", ex:"Der Februar ist kurz.", cat:"Zaman"},
-  {de:"der März", tr:"Mart", pos:"isim", ex:"Im März beginnt der Frühling.", cat:"Zaman"},
-  {de:"der April", tr:"Nisan", pos:"isim", ex:"Im April regnet es viel.", cat:"Zaman"},
-  {de:"der Mai", tr:"Mayıs", pos:"isim", ex:"Der Mai ist sehr warm.", cat:"Zaman"},
-  {de:"der Juni", tr:"Haziran", pos:"isim", ex:"Im Juni beginnt der Sommer.", cat:"Zaman"},
-  {de:"der Juli", tr:"Temmuz", pos:"isim", ex:"Im Juli fahren wir in Urlaub.", cat:"Zaman"},
-  {de:"der August", tr:"Ağustos", pos:"isim", ex:"Der August ist sehr heiß.", cat:"Zaman"},
-  {de:"der September", tr:"Eylül", pos:"isim", ex:"Im September beginnt die Schule.", cat:"Zaman"},
-  {de:"der Oktober", tr:"Ekim", pos:"isim", ex:"Im Oktober werden die Blätter bunt.", cat:"Zaman"},
-  {de:"der November", tr:"Kasım", pos:"isim", ex:"Der November ist grau und kalt.", cat:"Zaman"},
-  {de:"der Dezember", tr:"Aralık", pos:"isim", ex:"Im Dezember feiern wir Weihnachten.", cat:"Zaman"},
-  {de:"der Frühling", tr:"ilkbahar", pos:"isim", ex:"Im Frühling blühen die Blumen.", cat:"Zaman"},
-  {de:"der Sommer", tr:"yaz", pos:"isim", ex:"Der Sommer ist sehr heiß.", cat:"Zaman"},
-  {de:"der Herbst", tr:"sonbahar", pos:"isim", ex:"Im Herbst fallen die Blätter.", cat:"Zaman"},
-  {de:"der Winter", tr:"kış", pos:"isim", ex:"Im Winter schneit es oft.", cat:"Zaman"},
-  {de:"die Uhr", tr:"saat (nesne)", pos:"isim", ex:"Wie viel Uhr ist es?", cat:"Zaman"},
-  {de:"die Stunde", tr:"saat (süre)", pos:"isim", ex:"Ich warte seit einer Stunde.", cat:"Zaman"},
-  {de:"die Minute", tr:"dakika", pos:"isim", ex:"Warte fünf Minuten, bitte.", cat:"Zaman"},
-  {de:"die Woche", tr:"hafta", pos:"isim", ex:"Nächste Woche fahre ich weg.", cat:"Zaman"},
-  {de:"der Monat", tr:"ay", pos:"isim", ex:"Dieser Monat ist sehr voll.", cat:"Zaman"},
-  {de:"das Jahr", tr:"yıl", pos:"isim", ex:"Dieses Jahr war schön.", cat:"Zaman"},
-
-  // Hava Durumu
-  {de:"die Sonne", tr:"güneş", pos:"isim", ex:"Die Sonne scheint heute.", cat:"Hava Durumu"},
-  {de:"der Regen", tr:"yağmur", pos:"isim", ex:"Der Regen fällt stark.", cat:"Hava Durumu"},
-  {de:"der Schnee", tr:"kar", pos:"isim", ex:"Der Schnee ist weiß und kalt.", cat:"Hava Durumu"},
-  {de:"der Wind", tr:"rüzgar", pos:"isim", ex:"Der Wind weht stark.", cat:"Hava Durumu"},
-  {de:"warm", tr:"sıcak (hava)", pos:"sıfat", ex:"Heute ist es warm.", cat:"Hava Durumu"},
-  {de:"kalt", tr:"soğuk", pos:"sıfat", ex:"Im Winter ist es kalt.", cat:"Hava Durumu"},
-  {de:"die Wolke", tr:"bulut", pos:"isim", ex:"Der Himmel ist voller Wolken.", cat:"Hava Durumu"},
-  {de:"Es regnet", tr:"Yağmur yağıyor", pos:"kalıp", ex:"Es regnet den ganzen Tag.", cat:"Hava Durumu"},
-
-  // Ulaşım
-  {de:"das Auto", tr:"araba", pos:"isim", ex:"Mein Auto ist neu.", cat:"Ulaşım"},
-  {de:"der Bus", tr:"otobüs", pos:"isim", ex:"Der Bus kommt in fünf Minuten.", cat:"Ulaşım"},
-  {de:"der Zug", tr:"tren", pos:"isim", ex:"Der Zug fährt pünktlich ab.", cat:"Ulaşım"},
-  {de:"das Flugzeug", tr:"uçak", pos:"isim", ex:"Das Flugzeug landet um zehn Uhr.", cat:"Ulaşım"},
-  {de:"das Fahrrad", tr:"bisiklet", pos:"isim", ex:"Ich fahre gern Fahrrad.", cat:"Ulaşım"},
-  {de:"zu Fuß", tr:"yürüyerek", pos:"zarf", ex:"Ich gehe zu Fuß zur Arbeit.", cat:"Ulaşım"},
-  {de:"der Bahnhof", tr:"tren istasyonu", pos:"isim", ex:"Der Bahnhof ist weit weg.", cat:"Ulaşım"},
-  {de:"das Ticket", tr:"bilet", pos:"isim", ex:"Ich brauche ein Ticket nach Berlin.", cat:"Ulaşım"},
-  {de:"fahren", tr:"gitmek (araçla)", pos:"fiil", ex:"Wir fahren morgen nach Köln.", cat:"Ulaşım"},
-  {de:"fliegen", tr:"uçmak", pos:"fiil", ex:"Wir fliegen nach Istanbul.", cat:"Ulaşım"},
-  {de:"das Taxi", tr:"taksi", pos:"isim", ex:"Ich nehme ein Taxi zum Flughafen.", cat:"Ulaşım"},
-  {de:"die U-Bahn", tr:"metro", pos:"isim", ex:"Die U-Bahn ist sehr schnell.", cat:"Ulaşım"},
-
-  // Yerler
-  {de:"die Stadt", tr:"şehir", pos:"isim", ex:"Die Stadt ist sehr lebendig.", cat:"Yerler"},
-  {de:"das Land", tr:"ülke", pos:"isim", ex:"Welches Land besuchst du?", cat:"Yerler"},
-  {de:"die Straße", tr:"cadde/sokak", pos:"isim", ex:"Die Straße ist sehr laut.", cat:"Yerler"},
-  {de:"der Park", tr:"park", pos:"isim", ex:"Wir gehen im Park spazieren.", cat:"Yerler"},
-  {de:"die Schule", tr:"okul", pos:"isim", ex:"Die Schule beginnt um acht Uhr.", cat:"Yerler"},
-  {de:"die Universität", tr:"üniversite", pos:"isim", ex:"Er studiert an der Universität.", cat:"Yerler"},
-  {de:"das Restaurant", tr:"restoran", pos:"isim", ex:"Wir essen im Restaurant.", cat:"Yerler"},
-  {de:"das Hotel", tr:"otel", pos:"isim", ex:"Das Hotel ist sehr komfortabel.", cat:"Yerler"},
-  {de:"die Kirche", tr:"kilise", pos:"isim", ex:"Die Kirche ist sehr alt.", cat:"Yerler"},
-  {de:"der Flughafen", tr:"havaalanı", pos:"isim", ex:"Der Flughafen ist weit von hier.", cat:"Yerler"},
-  {de:"der Markt", tr:"pazar", pos:"isim", ex:"Am Samstag gehen wir zum Markt.", cat:"Yerler"},
-  {de:"die Bibliothek", tr:"kütüphane", pos:"isim", ex:"Ich lerne in der Bibliothek.", cat:"Yerler"},
-  {de:"die Bank", tr:"banka", pos:"isim", ex:"Ich gehe zur Bank Geld holen.", cat:"Yerler"},
-
-  // Meslekler
-  {de:"der Lehrer", tr:"öğretmen (erkek)", pos:"isim", ex:"Der Lehrer erklärt die Grammatik.", cat:"Meslekler"},
-  {de:"die Lehrerin", tr:"öğretmen (kadın)", pos:"isim", ex:"Die Lehrerin ist sehr geduldig.", cat:"Meslekler"},
-  {de:"der Student", tr:"öğrenci (erkek)", pos:"isim", ex:"Der Student lernt für die Prüfung.", cat:"Meslekler"},
-  {de:"die Studentin", tr:"öğrenci (kadın)", pos:"isim", ex:"Die Studentin liest ein Buch.", cat:"Meslekler"},
-  {de:"der Kellner", tr:"garson (erkek)", pos:"isim", ex:"Der Kellner bringt die Speisekarte.", cat:"Meslekler"},
-  {de:"die Kellnerin", tr:"garson (kadın)", pos:"isim", ex:"Die Kellnerin ist sehr freundlich.", cat:"Meslekler"},
-  {de:"der Verkäufer", tr:"satıcı", pos:"isim", ex:"Der Verkäufer hilft mir gern.", cat:"Meslekler"},
-  {de:"der Ingenieur", tr:"mühendis", pos:"isim", ex:"Der Ingenieur baut Brücken.", cat:"Meslekler"},
-  {de:"der Koch", tr:"aşçı", pos:"isim", ex:"Der Koch kocht sehr gut.", cat:"Meslekler"},
-  {de:"der Polizist", tr:"polis", pos:"isim", ex:"Der Polizist hilft den Menschen.", cat:"Meslekler"},
-
-  // Hayvanlar
-  {de:"der Hund", tr:"köpek", pos:"isim", ex:"Der Hund spielt im Garten.", cat:"Hayvanlar"},
-  {de:"die Katze", tr:"kedi", pos:"isim", ex:"Die Katze schläft auf dem Sofa.", cat:"Hayvanlar"},
-  {de:"der Vogel", tr:"kuş", pos:"isim", ex:"Der Vogel singt am Morgen.", cat:"Hayvanlar"},
-  {de:"das Pferd", tr:"at", pos:"isim", ex:"Das Pferd läuft schnell.", cat:"Hayvanlar"},
-  {de:"die Kuh", tr:"inek", pos:"isim", ex:"Die Kuh gibt Milch.", cat:"Hayvanlar"},
-  {de:"das Schwein", tr:"domuz", pos:"isim", ex:"Das Schwein lebt auf dem Bauernhof.", cat:"Hayvanlar"},
-  {de:"die Maus", tr:"fare", pos:"isim", ex:"Die Maus versteckt sich schnell.", cat:"Hayvanlar"},
-  {de:"der Löwe", tr:"aslan", pos:"isim", ex:"Der Löwe lebt in Afrika.", cat:"Hayvanlar"},
-  {de:"der Elefant", tr:"fil", pos:"isim", ex:"Der Elefant ist sehr groß.", cat:"Hayvanlar"},
-
-  // Fiiller
-  {de:"sein", tr:"olmak", pos:"fiil", ex:"Ich bin müde.", cat:"Fiiller"},
-  {de:"haben", tr:"sahip olmak", pos:"fiil", ex:"Ich habe einen Bruder.", cat:"Fiiller"},
-  {de:"machen", tr:"yapmak", pos:"fiil", ex:"Was machst du heute?", cat:"Fiiller"},
-  {de:"gehen", tr:"gitmek (yürüyerek)", pos:"fiil", ex:"Ich gehe nach Hause.", cat:"Fiiller"},
-  {de:"kommen", tr:"gelmek", pos:"fiil", ex:"Kommst du morgen?", cat:"Fiiller"},
-  {de:"sehen", tr:"görmek", pos:"fiil", ex:"Ich sehe einen Vogel.", cat:"Fiiller"},
-  {de:"essen", tr:"yemek yemek", pos:"fiil", ex:"Wir essen zusammen.", cat:"Fiiller"},
-  {de:"trinken", tr:"içmek", pos:"fiil", ex:"Ich trinke Wasser.", cat:"Fiiller"},
-  {de:"schlafen", tr:"uyumak", pos:"fiil", ex:"Das Baby schläft schon.", cat:"Fiiller"},
-  {de:"arbeiten", tr:"çalışmak", pos:"fiil", ex:"Sie arbeitet im Büro.", cat:"Fiiller"},
-  {de:"spielen", tr:"oynamak", pos:"fiil", ex:"Die Kinder spielen im Park.", cat:"Fiiller"},
-  {de:"lernen", tr:"öğrenmek", pos:"fiil", ex:"Ich lerne Deutsch.", cat:"Fiiller"},
-  {de:"sprechen", tr:"konuşmak", pos:"fiil", ex:"Sprichst du Englisch?", cat:"Fiiller"},
-  {de:"lesen", tr:"okumak", pos:"fiil", ex:"Er liest ein Buch.", cat:"Fiiller"},
-  {de:"schreiben", tr:"yazmak", pos:"fiil", ex:"Ich schreibe eine E-Mail.", cat:"Fiiller"},
-  {de:"wohnen", tr:"oturmak (ikamet)", pos:"fiil", ex:"Wo wohnst du?", cat:"Fiiller"},
-  {de:"lieben", tr:"sevmek", pos:"fiil", ex:"Ich liebe meine Familie.", cat:"Fiiller"},
-  {de:"brauchen", tr:"ihtiyaç duymak", pos:"fiil", ex:"Ich brauche Hilfe.", cat:"Fiiller"},
-  {de:"finden", tr:"bulmak", pos:"fiil", ex:"Ich finde meine Schlüssel nicht.", cat:"Fiiller"},
-  {de:"geben", tr:"vermek", pos:"fiil", ex:"Gib mir bitte das Buch.", cat:"Fiiller"},
-  {de:"nehmen", tr:"almak", pos:"fiil", ex:"Ich nehme den Bus.", cat:"Fiiller"},
-  {de:"sagen", tr:"söylemek", pos:"fiil", ex:"Was sagst du?", cat:"Fiiller"},
-  {de:"fragen", tr:"sormak", pos:"fiil", ex:"Darf ich etwas fragen?", cat:"Fiiller"},
-  {de:"antworten", tr:"cevap vermek", pos:"fiil", ex:"Bitte antworte schnell.", cat:"Fiiller"},
-  {de:"helfen", tr:"yardım etmek", pos:"fiil", ex:"Kannst du mir helfen?", cat:"Fiiller"},
-  {de:"öffnen", tr:"açmak", pos:"fiil", ex:"Öffne bitte die Tür.", cat:"Fiiller"},
-  {de:"schließen", tr:"kapatmak", pos:"fiil", ex:"Schließ bitte das Fenster.", cat:"Fiiller"},
-  {de:"warten", tr:"beklemek", pos:"fiil", ex:"Ich warte auf dich.", cat:"Fiiller"},
-  {de:"verstehen", tr:"anlamak", pos:"fiil", ex:"Ich verstehe das nicht.", cat:"Fiiller"},
-  {de:"kennen", tr:"tanımak", pos:"fiil", ex:"Ich kenne ihn gut.", cat:"Fiiller"},
-  {de:"wissen", tr:"bilmek", pos:"fiil", ex:"Ich weiß es nicht.", cat:"Fiiller"},
-  {de:"denken", tr:"düşünmek", pos:"fiil", ex:"Ich denke oft an dich.", cat:"Fiiller"},
-  {de:"mögen", tr:"hoşlanmak", pos:"fiil", ex:"Ich mag Kaffee.", cat:"Fiiller"},
-  {de:"können", tr:"yapabilmek", pos:"fiil", ex:"Ich kann gut schwimmen.", cat:"Fiiller"},
-  {de:"müssen", tr:"zorunda olmak", pos:"fiil", ex:"Ich muss jetzt gehen.", cat:"Fiiller"},
-  {de:"wollen", tr:"istemek", pos:"fiil", ex:"Ich will nach Hause.", cat:"Fiiller"},
-  {de:"dürfen", tr:"izinli olmak", pos:"fiil", ex:"Darf ich reinkommen?", cat:"Fiiller"},
-
-  // Sıfatlar
-  {de:"gut", tr:"iyi", pos:"sıfat", ex:"Das schmeckt gut.", cat:"Sıfatlar"},
-  {de:"schlecht", tr:"kötü", pos:"sıfat", ex:"Mir geht es schlecht.", cat:"Sıfatlar"},
-  {de:"groß", tr:"büyük", pos:"sıfat", ex:"Das Haus ist groß.", cat:"Sıfatlar"},
-  {de:"klein", tr:"küçük", pos:"sıfat", ex:"Die Katze ist klein.", cat:"Sıfatlar"},
-  {de:"schnell", tr:"hızlı", pos:"sıfat", ex:"Der Zug ist schnell.", cat:"Sıfatlar"},
-  {de:"langsam", tr:"yavaş", pos:"sıfat", ex:"Er läuft langsam.", cat:"Sıfatlar"},
-  {de:"neu", tr:"yeni", pos:"sıfat", ex:"Mein Handy ist neu.", cat:"Sıfatlar"},
-  {de:"alt", tr:"eski/yaşlı", pos:"sıfat", ex:"Das Haus ist sehr alt.", cat:"Sıfatlar"},
-  {de:"jung", tr:"genç", pos:"sıfat", ex:"Sie ist noch sehr jung.", cat:"Sıfatlar"},
-  {de:"schön", tr:"güzel", pos:"sıfat", ex:"Die Aussicht ist schön.", cat:"Sıfatlar"},
-  {de:"hässlich", tr:"çirkin", pos:"sıfat", ex:"Das Bild ist hässlich.", cat:"Sıfatlar"},
-  {de:"glücklich", tr:"mutlu", pos:"sıfat", ex:"Ich bin sehr glücklich.", cat:"Sıfatlar"},
-  {de:"traurig", tr:"üzgün", pos:"sıfat", ex:"Warum bist du traurig?", cat:"Sıfatlar"},
-  {de:"müde", tr:"yorgun", pos:"sıfat", ex:"Ich bin sehr müde.", cat:"Sıfatlar"},
-  {de:"hungrig", tr:"aç", pos:"sıfat", ex:"Ich bin hungrig.", cat:"Sıfatlar"},
-  {de:"durstig", tr:"susamış", pos:"sıfat", ex:"Bist du durstig?", cat:"Sıfatlar"},
-  {de:"wichtig", tr:"önemli", pos:"sıfat", ex:"Das ist sehr wichtig.", cat:"Sıfatlar"},
-  {de:"einfach", tr:"kolay", pos:"sıfat", ex:"Diese Aufgabe ist einfach.", cat:"Sıfatlar"},
-  {de:"schwierig", tr:"zor", pos:"sıfat", ex:"Deutsch ist manchmal schwierig.", cat:"Sıfatlar"},
-  {de:"laut", tr:"gürültülü", pos:"sıfat", ex:"Die Straße ist sehr laut.", cat:"Sıfatlar"},
-  {de:"leise", tr:"sessiz", pos:"sıfat", ex:"Sei bitte leise.", cat:"Sıfatlar"},
-  {de:"sauber", tr:"temiz", pos:"sıfat", ex:"Die Küche ist sauber.", cat:"Sıfatlar"},
-  {de:"schmutzig", tr:"kirli", pos:"sıfat", ex:"Meine Schuhe sind schmutzig.", cat:"Sıfatlar"},
-  {de:"richtig", tr:"doğru", pos:"sıfat", ex:"Deine Antwort ist richtig.", cat:"Sıfatlar"},
-  {de:"falsch", tr:"yanlış", pos:"sıfat", ex:"Das ist leider falsch.", cat:"Sıfatlar"},
-
-  // Edatlar
-  {de:"in", tr:"içinde", pos:"edat", ex:"Das Buch ist in der Tasche.", cat:"Edatlar"},
-  {de:"auf", tr:"üzerinde", pos:"edat", ex:"Die Tasse steht auf dem Tisch.", cat:"Edatlar"},
-  {de:"unter", tr:"altında", pos:"edat", ex:"Die Katze schläft unter dem Bett.", cat:"Edatlar"},
-  {de:"über", tr:"üstünde/üzerinde", pos:"edat", ex:"Die Lampe hängt über dem Tisch.", cat:"Edatlar"},
-  {de:"neben", tr:"yanında", pos:"edat", ex:"Der Stuhl steht neben dem Tisch.", cat:"Edatlar"},
-  {de:"vor", tr:"önünde", pos:"edat", ex:"Das Auto steht vor dem Haus.", cat:"Edatlar"},
-  {de:"hinter", tr:"arkasında", pos:"edat", ex:"Der Garten ist hinter dem Haus.", cat:"Edatlar"},
-  {de:"zwischen", tr:"arasında", pos:"edat", ex:"Die Bank ist zwischen den Bäumen.", cat:"Edatlar"},
-  {de:"mit", tr:"ile", pos:"edat", ex:"Ich komme mit dir.", cat:"Edatlar"},
-  {de:"ohne", tr:"olmadan", pos:"edat", ex:"Er trinkt Kaffee ohne Zucker.", cat:"Edatlar"},
-  {de:"für", tr:"için", pos:"edat", ex:"Das Geschenk ist für dich.", cat:"Edatlar"},
-  {de:"von", tr:"-den/-dan", pos:"edat", ex:"Der Brief ist von meiner Mutter.", cat:"Edatlar"},
-  {de:"zu", tr:"-e/-a doğru", pos:"edat", ex:"Ich gehe zu meinem Freund.", cat:"Edatlar"},
-  {de:"bei", tr:"yanında/nezdinde", pos:"edat", ex:"Ich bin bei meiner Familie.", cat:"Edatlar"},
-  {de:"nach", tr:"-den sonra / -e doğru", pos:"edat", ex:"Nach der Arbeit gehe ich nach Hause.", cat:"Edatlar"},
-  {de:"aus", tr:"-den (kaynak)", pos:"edat", ex:"Ich komme aus der Türkei.", cat:"Edatlar"},
-  {de:"durch", tr:"içinden/aracılığıyla", pos:"edat", ex:"Wir gehen durch den Park.", cat:"Edatlar"},
-  {de:"gegen", tr:"karşı", pos:"edat", ex:"Er spielt gegen mich.", cat:"Edatlar"},
-  {de:"um", tr:"etrafında / saat", pos:"edat", ex:"Wir treffen uns um sechs Uhr.", cat:"Edatlar"},
-
-  // ===== A2 SEVİYESİ =====
-
-  // İş ve Kariyer (A2)
-  {de:"der Beruf", tr:"meslek", pos:"isim", ex:"Was ist dein Beruf?", cat:"İş ve Kariyer", level:"A2"},
-  {de:"die Arbeit", tr:"iş", pos:"isim", ex:"Meine Arbeit macht Spaß.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"das Büro", tr:"ofis", pos:"isim", ex:"Ich arbeite im Büro.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"die Firma", tr:"şirket", pos:"isim", ex:"Die Firma hat viele Mitarbeiter.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"der Chef", tr:"patron", pos:"isim", ex:"Mein Chef ist sehr streng.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"der Kollege", tr:"iş arkadaşı (erkek)", pos:"isim", ex:"Mein Kollege hilft mir gern.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"die Kollegin", tr:"iş arkadaşı (kadın)", pos:"isim", ex:"Meine Kollegin ist sehr nett.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"die Besprechung", tr:"toplantı", pos:"isim", ex:"Wir haben um zehn Uhr eine Besprechung.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"der Vertrag", tr:"sözleşme", pos:"isim", ex:"Ich unterschreibe den Vertrag.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"die Bewerbung", tr:"iş başvurusu", pos:"isim", ex:"Ich schreibe eine Bewerbung.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"das Gehalt", tr:"maaş", pos:"isim", ex:"Das Gehalt ist gut.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"die Erfahrung", tr:"deneyim", pos:"isim", ex:"Ich habe viel Erfahrung.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"die Ausbildung", tr:"meslek eğitimi", pos:"isim", ex:"Er macht eine Ausbildung als Koch.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"kündigen", tr:"istifa etmek/işten çıkarmak", pos:"fiil", ex:"Er hat seinen Job gekündigt.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"sich bewerben", tr:"başvuruda bulunmak", pos:"fiil", ex:"Ich bewerbe mich um die Stelle.", cat:"İş ve Kariyer", level:"A2"},
-  {de:"verdienen", tr:"kazanmak (para)", pos:"fiil", ex:"Sie verdient gut.", cat:"İş ve Kariyer", level:"A2"},
-
-  // Duygular ve Görüşler (A2)
-  {de:"meiner Meinung nach", tr:"bence", pos:"kalıp", ex:"Meiner Meinung nach ist das richtig.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"ich finde", tr:"bence/bulurum", pos:"kalıp", ex:"Ich finde den Film gut.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"die Angst", tr:"korku", pos:"isim", ex:"Ich habe Angst vor Spinnen.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"die Freude", tr:"sevinç", pos:"isim", ex:"Die Freude war sehr groß.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"die Wut", tr:"öfke", pos:"isim", ex:"Seine Wut war verständlich.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"überrascht", tr:"şaşırmış", pos:"sıfat", ex:"Ich bin sehr überrascht.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"enttäuscht", tr:"hayal kırıklığına uğramış", pos:"sıfat", ex:"Er ist von dem Ergebnis enttäuscht.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"stolz", tr:"gururlu", pos:"sıfat", ex:"Ich bin stolz auf dich.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"nervös", tr:"gergin", pos:"sıfat", ex:"Vor der Prüfung bin ich nervös.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"gespannt", tr:"heyecanlı/merak içinde", pos:"sıfat", ex:"Ich bin gespannt auf das Ergebnis.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"sich freuen", tr:"sevinmek", pos:"fiil", ex:"Ich freue mich auf das Wochenende.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"sich ärgern", tr:"kızmak", pos:"fiil", ex:"Er ärgert sich über den Verkehr.", cat:"Duygular ve Görüşler", level:"A2"},
-  {de:"sich fühlen", tr:"hissetmek", pos:"fiil", ex:"Wie fühlst du dich heute?", cat:"Duygular ve Görüşler", level:"A2"},
-
-  // Seyahat (A2)
-  {de:"der Urlaub", tr:"tatil", pos:"isim", ex:"Wir fahren in den Urlaub.", cat:"Seyahat", level:"A2"},
-  {de:"die Reise", tr:"seyahat", pos:"isim", ex:"Die Reise war anstrengend.", cat:"Seyahat", level:"A2"},
-  {de:"das Gepäck", tr:"bagaj", pos:"isim", ex:"Mein Gepäck ist noch nicht da.", cat:"Seyahat", level:"A2"},
-  {de:"der Koffer", tr:"valiz", pos:"isim", ex:"Ich packe meinen Koffer.", cat:"Seyahat", level:"A2"},
-  {de:"die Grenze", tr:"sınır", pos:"isim", ex:"Wir überqueren die Grenze.", cat:"Seyahat", level:"A2"},
-  {de:"der Reisepass", tr:"pasaport", pos:"isim", ex:"Vergiss deinen Reisepass nicht.", cat:"Seyahat", level:"A2"},
-  {de:"buchen", tr:"rezervasyon yapmak", pos:"fiil", ex:"Ich buche einen Flug.", cat:"Seyahat", level:"A2"},
-  {de:"reservieren", tr:"ayırtmak", pos:"fiil", ex:"Ich möchte einen Tisch reservieren.", cat:"Seyahat", level:"A2"},
-  {de:"die Unterkunft", tr:"konaklama", pos:"isim", ex:"Die Unterkunft ist sehr sauber.", cat:"Seyahat", level:"A2"},
-  {de:"die Sehenswürdigkeit", tr:"gezilecek yer", pos:"isim", ex:"Wir besuchen viele Sehenswürdigkeiten.", cat:"Seyahat", level:"A2"},
-  {de:"der Ausflug", tr:"gezi", pos:"isim", ex:"Wir machen einen Ausflug ans Meer.", cat:"Seyahat", level:"A2"},
-  {de:"übernachten", tr:"gecelemek", pos:"fiil", ex:"Wir übernachten im Hotel.", cat:"Seyahat", level:"A2"},
-
-  // Teknoloji ve Medya (A2)
-  {de:"der Computer", tr:"bilgisayar", pos:"isim", ex:"Mein Computer ist kaputt.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"das Internet", tr:"internet", pos:"isim", ex:"Das Internet ist heute langsam.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"die E-Mail", tr:"e-posta", pos:"isim", ex:"Ich schreibe eine E-Mail.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"das Handy", tr:"cep telefonu", pos:"isim", ex:"Mein Handy hat keinen Akku mehr.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"die Website", tr:"web sitesi", pos:"isim", ex:"Die Website ist sehr nützlich.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"herunterladen", tr:"indirmek", pos:"fiil", ex:"Ich lade die App herunter.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"hochladen", tr:"yüklemek", pos:"fiil", ex:"Ich lade das Foto hoch.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"die Nachricht", tr:"mesaj/haber", pos:"isim", ex:"Ich schicke dir eine Nachricht.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"das Programm", tr:"program", pos:"isim", ex:"Das Programm funktioniert nicht.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"die App", tr:"uygulama", pos:"isim", ex:"Diese App ist sehr praktisch.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"anrufen", tr:"aramak (telefon)", pos:"fiil", ex:"Ich rufe dich später an.", cat:"Teknoloji ve Medya", level:"A2"},
-  {de:"die sozialen Medien", tr:"sosyal medya", pos:"isim", ex:"Er nutzt viele soziale Medien.", cat:"Teknoloji ve Medya", level:"A2"},
-
-  // Çevre ve Doğa (A2)
-  {de:"die Umwelt", tr:"çevre", pos:"isim", ex:"Wir müssen die Umwelt schützen.", cat:"Çevre ve Doğa", level:"A2"},
-  {de:"der Müll", tr:"çöp", pos:"isim", ex:"Bitte trenne den Müll.", cat:"Çevre ve Doğa", level:"A2"},
-  {de:"recyceln", tr:"geri dönüştürmek", pos:"fiil", ex:"Wir recyceln Plastik.", cat:"Çevre ve Doğa", level:"A2"},
-  {de:"die Natur", tr:"doğa", pos:"isim", ex:"Ich liebe die Natur.", cat:"Çevre ve Doğa", level:"A2"},
-  {de:"der Wald", tr:"orman", pos:"isim", ex:"Wir spazieren im Wald.", cat:"Çevre ve Doğa", level:"A2"},
-  {de:"der Fluss", tr:"nehir", pos:"isim", ex:"Der Fluss ist sehr breit.", cat:"Çevre ve Doğa", level:"A2"},
-  {de:"das Meer", tr:"deniz", pos:"isim", ex:"Das Meer ist heute ruhig.", cat:"Çevre ve Doğa", level:"A2"},
-  {de:"der Berg", tr:"dağ", pos:"isim", ex:"Der Berg ist sehr hoch.", cat:"Çevre ve Doğa", level:"A2"},
-  {de:"die Luft", tr:"hava", pos:"isim", ex:"Die Luft ist hier sehr sauber.", cat:"Çevre ve Doğa", level:"A2"},
-  {de:"umweltfreundlich", tr:"çevre dostu", pos:"sıfat", ex:"Dieses Produkt ist umweltfreundlich.", cat:"Çevre ve Doğa", level:"A2"},
-
-  // Toplum ve Günlük Yaşam (A2)
-  {de:"die Gesellschaft", tr:"toplum", pos:"isim", ex:"Die Gesellschaft verändert sich schnell.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"die Nachbarschaft", tr:"mahalle/komşuluk", pos:"isim", ex:"Die Nachbarschaft ist sehr ruhig.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"der Nachbar", tr:"komşu", pos:"isim", ex:"Mein Nachbar ist sehr freundlich.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"die Regel", tr:"kural", pos:"isim", ex:"Wir müssen die Regeln befolgen.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"das Gesetz", tr:"yasa", pos:"isim", ex:"Das Gesetz ist sehr klar.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"die Meinung", tr:"görüş", pos:"isim", ex:"Jeder hat seine eigene Meinung.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"die Wahl", tr:"seçim", pos:"isim", ex:"Die Wahl findet im Herbst statt.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"wählen", tr:"seçmek/oy vermek", pos:"fiil", ex:"Ich gehe wählen.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"die Zeitung", tr:"gazete", pos:"isim", ex:"Er liest jeden Morgen die Zeitung.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"die Nachrichten", tr:"haberler", pos:"isim", ex:"Ich sehe die Nachrichten um acht.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"das Problem", tr:"sorun", pos:"isim", ex:"Wir haben ein kleines Problem.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-  {de:"die Lösung", tr:"çözüm", pos:"isim", ex:"Ich habe eine gute Lösung gefunden.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
-
-  // Eğitim (A2)
-  {de:"die Prüfung", tr:"sınav", pos:"isim", ex:"Ich habe morgen eine Prüfung.", cat:"Eğitim", level:"A2"},
-  {de:"das Zeugnis", tr:"karne", pos:"isim", ex:"Das Zeugnis ist sehr gut.", cat:"Eğitim", level:"A2"},
-  {de:"die Note", tr:"not (okul)", pos:"isim", ex:"Ich habe eine gute Note bekommen.", cat:"Eğitim", level:"A2"},
-  {de:"der Kurs", tr:"kurs", pos:"isim", ex:"Ich mache einen Deutschkurs.", cat:"Eğitim", level:"A2"},
-  {de:"die Hausaufgabe", tr:"ev ödevi", pos:"isim", ex:"Ich mache meine Hausaufgaben.", cat:"Eğitim", level:"A2"},
-  {de:"bestehen", tr:"başarmak (sınav)", pos:"fiil", ex:"Ich habe die Prüfung bestanden.", cat:"Eğitim", level:"A2"},
-  {de:"durchfallen", tr:"kalmak (sınavda)", pos:"fiil", ex:"Er ist durch die Prüfung gefallen.", cat:"Eğitim", level:"A2"},
-  {de:"wiederholen", tr:"tekrar etmek", pos:"fiil", ex:"Ich wiederhole die Wörter.", cat:"Eğitim", level:"A2"},
-
-  // Ev ve Yaşam (A2)
-  {de:"die Miete", tr:"kira", pos:"isim", ex:"Die Miete ist jeden Monat gleich.", cat:"Ev ve Yaşam", level:"A2"},
-  {de:"der Vermieter", tr:"ev sahibi", pos:"isim", ex:"Der Vermieter repariert das Fenster.", cat:"Ev ve Yaşam", level:"A2"},
-  {de:"umziehen", tr:"taşınmak", pos:"fiil", ex:"Wir ziehen nächsten Monat um.", cat:"Ev ve Yaşam", level:"A2"},
-  {de:"einrichten", tr:"döşemek (ev)", pos:"fiil", ex:"Wir richten die Wohnung neu ein.", cat:"Ev ve Yaşam", level:"A2"},
-  {de:"renovieren", tr:"tadilat yapmak", pos:"fiil", ex:"Wir renovieren die Küche.", cat:"Ev ve Yaşam", level:"A2"},
-  {de:"der Aufzug", tr:"asansör", pos:"isim", ex:"Der Aufzug ist kaputt.", cat:"Ev ve Yaşam", level:"A2"},
-  {de:"das Erdgeschoss", tr:"zemin kat", pos:"isim", ex:"Ich wohne im Erdgeschoss.", cat:"Ev ve Yaşam", level:"A2"},
-  {de:"der Stock", tr:"kat", pos:"isim", ex:"Wir wohnen im dritten Stock.", cat:"Ev ve Yaşam", level:"A2"},
-
-  // Alışveriş (A2 ek)
-  {de:"die Größe", tr:"beden/boyut", pos:"isim", ex:"Welche Größe brauchen Sie?", cat:"Alışveriş", level:"A2"},
-  {de:"anprobieren", tr:"prova etmek", pos:"fiil", ex:"Kann ich das anprobieren?", cat:"Alışveriş", level:"A2"},
-  {de:"umtauschen", tr:"değiştirmek (ürün)", pos:"fiil", ex:"Ich möchte das umtauschen.", cat:"Alışveriş", level:"A2"},
-  {de:"das Angebot", tr:"teklif/fırsat", pos:"isim", ex:"Das ist ein gutes Angebot.", cat:"Alışveriş", level:"A2"},
-  {de:"reduziert", tr:"indirimli", pos:"sıfat", ex:"Die Schuhe sind reduziert.", cat:"Alışveriş", level:"A2"},
-  {de:"die Marke", tr:"marka", pos:"isim", ex:"Welche Marke bevorzugst du?", cat:"Alışveriş", level:"A2"},
-  {de:"die Qualität", tr:"kalite", pos:"isim", ex:"Die Qualität ist sehr hoch.", cat:"Alışveriş", level:"A2"},
-
-  // Sağlık (A2 ek)
-  {de:"sich verletzen", tr:"yaralanmak", pos:"fiil", ex:"Er hat sich beim Sport verletzt.", cat:"Sağlık", level:"A2"},
-  {de:"die Verletzung", tr:"yaralanma", pos:"isim", ex:"Die Verletzung ist nicht schlimm.", cat:"Sağlık", level:"A2"},
-  {de:"der Unfall", tr:"kaza", pos:"isim", ex:"Es gab einen Unfall auf der Straße.", cat:"Sağlık", level:"A2"},
-  {de:"die Versicherung", tr:"sigorta", pos:"isim", ex:"Ich habe eine Krankenversicherung.", cat:"Sağlık", level:"A2"},
-  {de:"der Notfall", tr:"acil durum", pos:"isim", ex:"Das ist ein Notfall!", cat:"Sağlık", level:"A2"},
-  {de:"die Behandlung", tr:"tedavi", pos:"isim", ex:"Die Behandlung dauert zwei Wochen.", cat:"Sağlık", level:"A2"},
-
-  // Karakter Özellikleri (A2)
-  {de:"freundlich", tr:"cana yakın", pos:"sıfat", ex:"Sie ist immer sehr freundlich.", cat:"Karakter Özellikleri", level:"A2"},
-  {de:"ehrlich", tr:"dürüst", pos:"sıfat", ex:"Er ist ein ehrlicher Mensch.", cat:"Karakter Özellikleri", level:"A2"},
-  {de:"geduldig", tr:"sabırlı", pos:"sıfat", ex:"Meine Lehrerin ist sehr geduldig.", cat:"Karakter Özellikleri", level:"A2"},
-  {de:"ungeduldig", tr:"sabırsız", pos:"sıfat", ex:"Er wird schnell ungeduldig.", cat:"Karakter Özellikleri", level:"A2"},
-  {de:"fleißig", tr:"çalışkan", pos:"sıfat", ex:"Die Studentin ist sehr fleißig.", cat:"Karakter Özellikleri", level:"A2"},
-  {de:"faul", tr:"tembel", pos:"sıfat", ex:"Sei nicht so faul!", cat:"Karakter Özellikleri", level:"A2"},
-  {de:"höflich", tr:"kibar", pos:"sıfat", ex:"Er ist immer sehr höflich.", cat:"Karakter Özellikleri", level:"A2"},
-  {de:"zuverlässig", tr:"güvenilir", pos:"sıfat", ex:"Mein Kollege ist sehr zuverlässig.", cat:"Karakter Özellikleri", level:"A2"},
-  {de:"kreativ", tr:"yaratıcı", pos:"sıfat", ex:"Sie ist eine kreative Künstlerin.", cat:"Karakter Özellikleri", level:"A2"},
-
-  // Fiiller (A2 ek)
-  {de:"sich vorstellen", tr:"kendini tanıtmak", pos:"fiil", ex:"Darf ich mich vorstellen?", cat:"Fiiller (A2)", level:"A2"},
-  {de:"versuchen", tr:"denemek", pos:"fiil", ex:"Ich versuche es noch einmal.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"sich entscheiden", tr:"karar vermek", pos:"fiil", ex:"Ich kann mich nicht entscheiden.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"erklären", tr:"açıklamak", pos:"fiil", ex:"Kannst du mir das erklären?", cat:"Fiiller (A2)", level:"A2"},
-  {de:"vergleichen", tr:"karşılaştırmak", pos:"fiil", ex:"Wir vergleichen die Preise.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"sich verändern", tr:"değişmek", pos:"fiil", ex:"Die Stadt hat sich verändert.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"passieren", tr:"olmak (olay)", pos:"fiil", ex:"Was ist passiert?", cat:"Fiiller (A2)", level:"A2"},
-  {de:"funktionieren", tr:"çalışmak (işlev)", pos:"fiil", ex:"Der Fernseher funktioniert nicht.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"sich interessieren für", tr:"ilgilenmek", pos:"fiil", ex:"Ich interessiere mich für Musik.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"teilnehmen", tr:"katılmak", pos:"fiil", ex:"Ich nehme am Kurs teil.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"sich treffen", tr:"buluşmak", pos:"fiil", ex:"Wir treffen uns am Bahnhof.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"empfehlen", tr:"tavsiye etmek", pos:"fiil", ex:"Ich empfehle dieses Restaurant.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"sich beschweren", tr:"şikayet etmek", pos:"fiil", ex:"Er beschwert sich über das Essen.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"reparieren", tr:"tamir etmek", pos:"fiil", ex:"Ich muss mein Fahrrad reparieren.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"sich erinnern", tr:"hatırlamak", pos:"fiil", ex:"Ich erinnere mich gut daran.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"vergessen", tr:"unutmak", pos:"fiil", ex:"Ich habe meinen Schlüssel vergessen.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"sich verabreden", tr:"randevulaşmak", pos:"fiil", ex:"Wir verabreden uns für morgen.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"planen", tr:"planlamak", pos:"fiil", ex:"Wir planen eine Reise.", cat:"Fiiller (A2)", level:"A2"},
-  {de:"organisieren", tr:"organize etmek", pos:"fiil", ex:"Sie organisiert die Party.", cat:"Fiiller (A2)", level:"A2"},
+// ---- Sıfatlar ----
+{tr:"iyi", pos:"sıfat", cat:"Sıfatlar", de:{word:"gut", ex:"Das schmeckt gut."}, en:{word:"good", ex:"That tastes good."}, ar:{word:"جيد", ex:"طعمه جيد."}, exTr:"Bunun tadı güzel."},
+{tr:"kötü", pos:"sıfat", cat:"Sıfatlar", de:{word:"schlecht", ex:"Mir geht es schlecht."}, en:{word:"bad", ex:"I feel bad."}, ar:{word:"سيء", ex:"أشعر أنني بحالة سيئة."}, exTr:"Kendimi kötü hissediyorum."},
+{tr:"büyük", pos:"sıfat", cat:"Sıfatlar", de:{word:"groß", ex:"Das Haus ist groß."}, en:{word:"big", ex:"The house is big."}, ar:{word:"كبير", ex:"المنزل كبير."}, exTr:"Ev büyük."},
+{tr:"küçük", pos:"sıfat", cat:"Sıfatlar", de:{word:"klein", ex:"Die Katze ist klein."}, en:{word:"small", ex:"The cat is small."}, ar:{word:"صغير", ex:"القطة صغيرة."}, exTr:"Kedi küçük."},
+{tr:"yeni", pos:"sıfat", cat:"Sıfatlar", de:{word:"neu", ex:"Mein Handy ist neu."}, en:{word:"new", ex:"My phone is new."}, ar:{word:"جديد", ex:"هاتفي جديد."}, exTr:"Telefonum yeni."},
+{tr:"eski", pos:"sıfat", cat:"Sıfatlar", de:{word:"alt", ex:"Das Haus ist sehr alt."}, en:{word:"old", ex:"The house is very old."}, ar:{word:"قديم", ex:"المنزل قديم جداً."}, exTr:"Ev çok eski."},
+{tr:"mutlu", pos:"sıfat", cat:"Sıfatlar", de:{word:"glücklich", ex:"Ich bin sehr glücklich."}, en:{word:"happy", ex:"I am very happy."}, ar:{word:"سعيد", ex:"أنا سعيد جداً."}, exTr:"Ben çok mutluyum."},
+{tr:"üzgün", pos:"sıfat", cat:"Sıfatlar", de:{word:"traurig", ex:"Warum bist du traurig?"}, en:{word:"sad", ex:"Why are you sad?"}, ar:{word:"حزين", ex:"لماذا أنت حزين؟"}, exTr:"Neden üzgünsün?"},
 ];
 
-const categories = ["Tümü", ...Array.from(new Set(vocab.map(v => v.cat)))];
+const langNames = { de:"Deutsch", en:"English", ar:"العربية" };
+const langCodes = { de:"de-DE", en:"en-US", ar:"ar-SA", tr:"tr-TR" };
+
+let activeLang = "de";
 let activeCat = "Tümü";
-let activeLevel = "ALL";
 let deck = [...vocab];
 let idx = 0;
 let flipped = false;
 
-// quiz state
 let quizDeck = [];
 let qIdx = 0;
 let score = 0;
 let answered = false;
 
-function getLevel(v){ return v.level || 'A1'; }
-
-function levelFiltered(){
-  return activeLevel === 'ALL' ? vocab : vocab.filter(v => getLevel(v) === activeLevel);
+// ---------- speech ----------
+function speak(text, lang){
+  try{
+    if(!('speechSynthesis' in window) || !text) return;
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = lang;
+    u.rate = 0.95;
+    window.speechSynthesis.speak(u);
+  }catch(e){}
 }
 
+// ---------- segments / coloring ----------
+function segHtml(text, isRtl){
+  const parts = text.split(/,\s*/);
+  return parts.map((p,i)=>`<span class="seg seg-${i%6}">${escapeHtml(p)}</span>`).join(`<span class="seg-comma">${isRtl?'، ':', '}</span>`);
+}
+function escapeHtml(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// ---------- chips ----------
 function rebuildChips(){
-  const pool = levelFiltered();
-  const cats = ["Tümü", ...Array.from(new Set(pool.map(v => v.cat)))];
+  const cats = ["Tümü", ...Array.from(new Set(vocab.map(v => v.cat)))];
   if(!cats.includes(activeCat)) activeCat = "Tümü";
   const chipsEl = document.getElementById('chips');
   chipsEl.innerHTML = '';
@@ -1074,45 +622,65 @@ function rebuildChips(){
 }
 rebuildChips();
 
-document.querySelectorAll('.level-opt').forEach(opt => {
+document.querySelectorAll('.lang-opt').forEach(opt => {
   opt.onclick = () => {
-    activeLevel = opt.dataset.level;
-    document.querySelectorAll('.level-opt').forEach(o => o.classList.toggle('active', o === opt));
-    activeCat = "Tümü";
-    rebuildChips();
-    applyFilter();
+    activeLang = opt.dataset.lang;
+    document.querySelectorAll('.lang-opt').forEach(o => o.classList.toggle('active', o === opt));
+    idx = 0; flipped = false;
+    renderCard();
+    buildQuizDeck();
+    renderQuiz();
   };
 });
 
 function applyFilter(){
   document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.textContent === activeCat));
-  const pool = levelFiltered();
-  deck = activeCat === "Tümü" ? [...pool] : pool.filter(v => v.cat === activeCat);
+  deck = activeCat === "Tümü" ? [...vocab] : vocab.filter(v => v.cat === activeCat);
   idx = 0; flipped = false;
   renderCard();
   buildQuizDeck();
   renderQuiz();
 }
 
-function renderCard(){
+// ---------- cards ----------
+function renderCard(speakIt){
+  if(deck.length === 0) return;
   const v = deck[idx];
-  document.getElementById('deWord').textContent = v.de;
-  document.getElementById('dePos').textContent = v.pos;
+  const L = v[activeLang];
+  const isRtl = activeLang === 'ar';
+
+  document.getElementById('tagFront').textContent = langNames[activeLang];
+  const frontWordEl = document.getElementById('frontWord');
+  frontWordEl.textContent = L.word;
+  frontWordEl.className = 'word' + (isRtl ? ' rtl' : '');
+  document.getElementById('frontPos').textContent = v.pos;
+
+  const frontExEl = document.getElementById('frontExample');
+  frontExEl.className = 'example' + (isRtl ? ' rtl' : '');
+  frontExEl.innerHTML = segHtml(L.ex, isRtl);
+
   document.getElementById('trWord').textContent = v.tr;
-  document.getElementById('trExample').textContent = v.ex;
+  const trExEl = document.getElementById('trExample');
+  trExEl.className = 'example';
+  trExEl.innerHTML = segHtml(v.exTr, false);
+
   document.getElementById('cardCount').textContent = `${idx+1} / ${deck.length}`;
   document.getElementById('cardCat').textContent = activeCat;
   document.getElementById('cardBar').style.width = `${((idx+1)/deck.length)*100}%`;
-  document.getElementById('levelBadgeFront').textContent = getLevel(v);
-  document.getElementById('levelBadgeBack').textContent = getLevel(v);
+
   const cardEl = document.getElementById('card');
   cardEl.classList.remove('flipped');
   flipped = false;
+
+  if(speakIt !== false) speak(L.word, langCodes[activeLang]);
 }
 
 document.getElementById('card').onclick = () => {
   flipped = !flipped;
   document.getElementById('card').classList.toggle('flipped', flipped);
+  const v = deck[idx];
+  if(flipped){ speak(v.tr, langCodes.tr); }
+  else{ speak(v[activeLang].word, langCodes[activeLang]); }
 };
 document.getElementById('nextBtn').onclick = () => { idx = (idx+1) % deck.length; renderCard(); };
 document.getElementById('prevBtn').onclick = () => { idx = (idx-1+deck.length) % deck.length; renderCard(); };
@@ -1121,7 +689,7 @@ document.getElementById('shuffleBtn').onclick = () => {
   idx = 0; renderCard();
 };
 
-// ---- Quiz ----
+// ---------- quiz ----------
 function buildQuizDeck(){
   quizDeck = [...deck];
   for(let i=quizDeck.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [quizDeck[i],quizDeck[j]]=[quizDeck[j],quizDeck[i]]; }
@@ -1142,14 +710,20 @@ function renderQuiz(){
   document.getElementById('doneView').style.display = 'none';
   answered = false;
   const v = quizDeck[qIdx];
-  document.getElementById('quizWord').textContent = v.de;
+  const L = v[activeLang];
+  const isRtl = activeLang === 'ar';
+  const qWordEl = document.getElementById('quizWord');
+  qWordEl.textContent = L.word;
+  qWordEl.className = 'quiz-word' + (isRtl ? ' rtl' : '');
   document.getElementById('quizPos').textContent = v.pos;
   document.getElementById('quizCount').textContent = `Soru ${qIdx+1} / ${quizDeck.length}`;
   document.getElementById('quizBar').style.width = `${((qIdx+1)/quizDeck.length)*100}%`;
   document.getElementById('scorePill').textContent = `${score} doğru`;
 
+  speak(L.word, langCodes[activeLang]);
+
   let opts = [v.tr];
-  const pool = levelFiltered().filter(x => x.tr !== v.tr);
+  const pool = vocab.filter(x => x.tr !== v.tr);
   for(let i=pool.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]]; }
   opts = opts.concat(pool.slice(0,3).map(x => x.tr));
   for(let i=opts.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [opts[i],opts[j]]=[opts[j],opts[i]]; }
@@ -1174,14 +748,14 @@ function selectAnswer(chosen, correct, btnEl){
     if(b.textContent === correct) b.classList.add('correct');
     else if(b === btnEl) b.classList.add('wrong');
   });
-  if(chosen === correct) score++;
+  if(chosen === correct){ score++; speak(correct, langCodes.tr); }
   document.getElementById('scorePill').textContent = `${score} doğru`;
-  setTimeout(() => { qIdx++; renderQuiz(); }, 700);
+  setTimeout(() => { qIdx++; renderQuiz(); }, 800);
 }
 
 document.getElementById('restartBtn').onclick = buildQuizDeck;
 
-// ---- Tabs ----
+// ---------- tabs ----------
 document.getElementById('tabCards').onclick = () => {
   document.getElementById('tabCards').classList.add('active');
   document.getElementById('tabQuiz').classList.remove('active');
@@ -1197,18 +771,24 @@ document.getElementById('tabQuiz').onclick = () => {
   renderQuiz();
 };
 
-renderCard();
+renderCard(false);
 
-// ---- Kar tanesi animasyonu ----
+// ---------- background video fallback ----------
+(function(){
+  const v = document.getElementById('bgVideo');
+  const splash = document.getElementById('splash');
+  v.addEventListener('error', () => { v.classList.add('hide'); splash.classList.add('novideo'); }, true);
+  // if no source resolves within a moment, fall back too
+  setTimeout(() => { if(v.readyState === 0){ v.classList.add('hide'); splash.classList.add('novideo'); } }, 1200);
+})();
+
+// ---------- crystalline snow ----------
 (function(){
   const canvas = document.getElementById('snowCanvas');
   const ctx = canvas.getContext('2d');
   let w, h, flakes, running = true;
 
-  function resize(){
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
-  }
+  function resize(){ w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
   window.addEventListener('resize', resize);
   resize();
 
@@ -1216,43 +796,86 @@ renderCard();
     return Array.from({length:n}, () => ({
       x: Math.random()*w,
       y: Math.random()*h,
-      r: Math.random()*3 + 1,
-      speedY: Math.random()*0.6 + 0.25,
-      speedX: Math.random()*0.4 - 0.2,
+      r: Math.random()*4.5 + 2,
+      speedY: Math.random()*0.9 + 0.35,
+      speedX: Math.random()*0.5 - 0.25,
+      rot: Math.random()*Math.PI*2,
+      rotSpeed: (Math.random()*0.02 - 0.01),
       drift: Math.random()*Math.PI*2,
-      driftSpeed: Math.random()*0.015 + 0.005,
-      opacity: Math.random()*0.5 + 0.25
+      driftSpeed: Math.random()*0.02 + 0.006,
+      opacity: Math.random()*0.55 + 0.35,
+      twinkleSpeed: Math.random()*0.05 + 0.02,
+      twinklePhase: Math.random()*Math.PI*2
     }));
   }
-  flakes = makeFlakes(80);
+  flakes = makeFlakes(150);
+
+  function drawCrystal(f){
+    ctx.save();
+    ctx.translate(f.x, f.y);
+    ctx.rotate(f.rot);
+    const twinkle = (Math.sin(f.twinklePhase) + 1) / 2;
+    ctx.globalAlpha = f.opacity * (0.5 + twinkle*0.5);
+    const glow = ctx.createRadialGradient(0,0,0,0,0,f.r*3.2);
+    glow.addColorStop(0, 'rgba(210,240,255,0.9)');
+    glow.addColorStop(0.4, 'rgba(140,210,255,0.35)');
+    glow.addColorStop(1, 'rgba(140,210,255,0)');
+    ctx.fillStyle = glow;
+    ctx.beginPath();
+    ctx.arc(0,0,f.r*3.2,0,Math.PI*2);
+    ctx.fill();
+
+    ctx.strokeStyle = 'rgba(225,245,255,0.95)';
+    ctx.lineWidth = Math.max(0.6, f.r*0.16);
+    ctx.lineCap = 'round';
+    for(let i=0;i<6;i++){
+      const ang = (Math.PI/3)*i;
+      const x2 = Math.cos(ang)*f.r;
+      const y2 = Math.sin(ang)*f.r;
+      ctx.beginPath();
+      ctx.moveTo(0,0);
+      ctx.lineTo(x2,y2);
+      ctx.stroke();
+      const bx = Math.cos(ang)*f.r*0.55;
+      const by = Math.sin(ang)*f.r*0.55;
+      const branchAng1 = ang + 0.6;
+      const branchAng2 = ang - 0.6;
+      ctx.beginPath();
+      ctx.moveTo(bx,by);
+      ctx.lineTo(bx+Math.cos(branchAng1)*f.r*0.28, by+Math.sin(branchAng1)*f.r*0.28);
+      ctx.moveTo(bx,by);
+      ctx.lineTo(bx+Math.cos(branchAng2)*f.r*0.28, by+Math.sin(branchAng2)*f.r*0.28);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
 
   function tick(){
     if(!running) return;
     ctx.clearRect(0,0,w,h);
-    ctx.fillStyle = 'rgba(200,235,255,1)';
     flakes.forEach(f => {
       f.drift += f.driftSpeed;
+      f.rot += f.rotSpeed;
+      f.twinklePhase += f.twinkleSpeed;
       f.y += f.speedY;
-      f.x += f.speedX + Math.sin(f.drift)*0.3;
-      if(f.y > h + 5){ f.y = -5; f.x = Math.random()*w; }
-      if(f.x > w + 5) f.x = -5;
-      if(f.x < -5) f.x = w + 5;
-      ctx.globalAlpha = f.opacity;
-      ctx.beginPath();
-      ctx.arc(f.x, f.y, f.r, 0, Math.PI*2);
-      ctx.fill();
+      f.x += f.speedX + Math.sin(f.drift)*0.4;
+      if(f.y > h + 10){ f.y = -10; f.x = Math.random()*w; }
+      if(f.x > w + 10) f.x = -10;
+      if(f.x < -10) f.x = w + 10;
+      drawCrystal(f);
     });
     ctx.globalAlpha = 1;
     requestAnimationFrame(tick);
   }
   tick();
 
-  // Giriş ekranı: dokunulunca uygulamayı göster
   const splash = document.getElementById('splash');
   const mainApp = document.getElementById('mainApp');
+  const bgVideo = document.getElementById('bgVideo');
   splash.addEventListener('click', () => {
     splash.classList.add('hidden');
     mainApp.classList.add('revealed');
+    try{ bgVideo.pause(); }catch(e){}
     setTimeout(() => { running = false; }, 900);
   }, { once:true });
 })();
