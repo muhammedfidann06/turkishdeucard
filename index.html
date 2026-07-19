@@ -3,25 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Almanca ⇄ Türkçe Kartlar</title>
+<title>M HAMZA | Almanca ⇄ Türkçe Kartlar</title>
 <style>
   :root{
-    --bg: #14171f;
-    --panel: #1c2029;
-    --panel-2: #232838;
-    --gold: #d9a544;
-    --red: #b8453d;
-    --text: #f2eee4;
-    --muted: #9aa0b3;
-    --good: #6fae7f;
-    --bad: #c15c53;
+    --bg: #05070d;
+    --panel: #0d1220;
+    --panel-2: #121a2e;
+    --neon: #4fd8ff;
+    --neon-soft: #7ce8ff;
+    --violet: #8b7bff;
+    --pink: #ff5fa8;
+    --text: #eaf2ff;
+    --muted: #7c8aa8;
+    --good: #45e8b0;
+    --bad: #ff5f7a;
   }
   *{box-sizing:border-box;}
+  html, body{ margin:0; overflow-x:hidden; }
   body{
-    margin:0;
     background:
-      radial-gradient(circle at 15% 0%, rgba(217,165,68,0.10), transparent 45%),
-      radial-gradient(circle at 100% 100%, rgba(184,69,61,0.12), transparent 50%),
+      radial-gradient(circle at 12% -5%, rgba(79,216,255,0.12), transparent 40%),
+      radial-gradient(circle at 100% 10%, rgba(139,123,255,0.10), transparent 45%),
+      radial-gradient(circle at 50% 100%, rgba(255,95,168,0.06), transparent 50%),
       var(--bg);
     color:var(--text);
     font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
@@ -30,14 +33,104 @@
     justify-content:center;
     padding:28px 16px 60px;
   }
-  .app{ width:100%; max-width:480px; }
+  .app{ width:100%; max-width:480px;
+    opacity:0;
+    transform: translateY(14px);
+    pointer-events:none;
+    transition: opacity .9s ease, transform .9s ease;
+  }
+  .app.revealed{ opacity:1; transform:none; pointer-events:auto; }
+
+  /* Splash / giriş ekranı */
+  #splash{
+    position:fixed; inset:0;
+    z-index:999;
+    background:
+      radial-gradient(circle at 50% 45%, rgba(79,216,255,0.16), transparent 60%),
+      linear-gradient(180deg, #04060b, #060a14 55%, #070b16);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition: opacity .8s ease, visibility .8s;
+  }
+  #splash.hidden{ opacity:0; visibility:hidden; }
+  #snowCanvas{ position:absolute; inset:0; width:100%; height:100%; }
+  .splash-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:0 24px;
+  }
+  .splash-eyebrow{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    font-size:11px;
+    color:var(--neon-soft);
+    margin-bottom:18px;
+    opacity:.7;
+    text-shadow: 0 0 12px rgba(79,216,255,0.6);
+  }
+  .splash-name{
+    font-size:52px;
+    font-weight:700;
+    letter-spacing:.08em;
+    margin:0;
+    color: rgba(234,242,255,0.28);
+    -webkit-text-stroke: 1px rgba(124,232,255,0.55);
+    text-shadow:
+      0 0 8px rgba(79,216,255,0.55),
+      0 0 26px rgba(79,216,255,0.45),
+      0 0 60px rgba(79,216,255,0.35),
+      0 0 100px rgba(139,123,255,0.25);
+    animation: neonBreathe 3.4s ease-in-out infinite;
+  }
+  @keyframes neonBreathe{
+    0%,100%{ text-shadow:
+      0 0 8px rgba(79,216,255,0.5),
+      0 0 24px rgba(79,216,255,0.4),
+      0 0 56px rgba(79,216,255,0.3),
+      0 0 90px rgba(139,123,255,0.2); }
+    50%{ text-shadow:
+      0 0 12px rgba(79,216,255,0.75),
+      0 0 34px rgba(79,216,255,0.6),
+      0 0 74px rgba(79,216,255,0.45),
+      0 0 130px rgba(139,123,255,0.32); }
+  }
+  .splash-sub{
+    margin-top:26px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--neon-soft);
+    text-shadow: 0 0 10px rgba(79,216,255,0.5);
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{ opacity:.5; }
+    50%{ opacity:1; }
+  }
+  .credit{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    text-align:center;
+    font-size:11px;
+    color:var(--muted);
+    margin-top:26px;
+    letter-spacing:.08em;
+    opacity:.7;
+  }
+  .credit b{ color:var(--neon-soft); font-weight:700; text-shadow:0 0 8px rgba(79,216,255,0.5); }
   .eyebrow{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     letter-spacing:.14em;
     text-transform:uppercase;
     font-size:11px;
-    color:var(--gold);
+    color:var(--neon-soft);
     margin-bottom:4px;
+    text-shadow:0 0 10px rgba(79,216,255,0.4);
   }
   h1{
     font-size:28px;
@@ -48,7 +141,37 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color:var(--muted);
     font-size:13.5px;
-    margin-bottom:18px;
+    margin-bottom:16px;
+  }
+
+  /* Seviye kutucuğu (A1 / A2 / Tümü) */
+  .level-box{
+    display:flex;
+    gap:6px;
+    background: rgba(255,255,255,0.03);
+    border:1px solid rgba(79,216,255,0.18);
+    border-radius:12px;
+    padding:5px;
+    margin-bottom:14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  .level-opt{
+    flex:1;
+    text-align:center;
+    padding:8px 0;
+    border-radius:8px;
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.04em;
+    color:var(--muted);
+    cursor:pointer;
+    transition: all .2s ease;
+  }
+  .level-opt.active{
+    background: linear-gradient(135deg, rgba(79,216,255,0.22), rgba(139,123,255,0.18));
+    color: var(--neon-soft);
+    box-shadow: 0 0 16px rgba(79,216,255,0.25), inset 0 0 0 1px rgba(79,216,255,0.4);
+    text-shadow: 0 0 8px rgba(79,216,255,0.4);
   }
 
   .tabs{
@@ -62,7 +185,7 @@
     padding:10px 0;
     text-align:center;
     border-radius:10px;
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(79,216,255,0.14);
     background:var(--panel);
     color:var(--muted);
     font-size:13px;
@@ -70,10 +193,11 @@
     transition: all .15s ease;
   }
   .tab.active{
-    background:var(--gold);
-    color:#1c1610;
-    border-color:var(--gold);
+    background: linear-gradient(135deg, rgba(79,216,255,0.9), rgba(139,123,255,0.85));
+    color:#04121a;
+    border-color:transparent;
     font-weight:700;
+    box-shadow: 0 0 18px rgba(79,216,255,0.35);
   }
 
   .chips{
@@ -89,13 +213,14 @@
     font-size:11.5px;
     background:var(--panel);
     color:var(--muted);
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid rgba(79,216,255,0.12);
     cursor:pointer;
   }
   .chip.active{
-    background:rgba(217,165,68,0.16);
-    color:var(--gold);
-    border-color:rgba(217,165,68,0.5);
+    background:rgba(79,216,255,0.14);
+    color:var(--neon-soft);
+    border-color:rgba(79,216,255,0.55);
+    box-shadow: 0 0 10px rgba(79,216,255,0.2);
   }
 
   .progress-row{
@@ -109,14 +234,15 @@
   }
   .bar{
     height:3px;
-    background:rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.06);
     border-radius:2px;
     margin-bottom:20px;
     overflow:hidden;
   }
   .bar-fill{
     height:100%;
-    background:linear-gradient(90deg, var(--gold), var(--red));
+    background:linear-gradient(90deg, var(--neon), var(--violet));
+    box-shadow: 0 0 8px rgba(79,216,255,0.6);
     transition: width .25s ease;
   }
 
@@ -144,11 +270,13 @@
   }
   .face-front{
     background: linear-gradient(160deg, var(--panel-2), var(--panel));
-    border:1px solid rgba(217,165,68,0.25);
+    border:1px solid rgba(79,216,255,0.3);
+    box-shadow: 0 0 22px rgba(79,216,255,0.10), inset 0 0 30px rgba(79,216,255,0.03);
   }
   .face-back{
-    background: linear-gradient(160deg, #2a1a19, #1c2029);
-    border:1px solid rgba(184,69,61,0.35);
+    background: linear-gradient(160deg, #1c1030, var(--panel));
+    border:1px solid rgba(255,95,168,0.32);
+    box-shadow: 0 0 22px rgba(255,95,168,0.10);
     transform: rotateY(180deg);
   }
   .tag{
@@ -156,10 +284,24 @@
     font-size:10.5px;
     letter-spacing:.12em;
     text-transform:uppercase;
-    color:var(--gold);
+    color:var(--neon-soft);
+    text-shadow:0 0 8px rgba(79,216,255,0.4);
     margin-bottom:10px;
   }
-  .face-back .tag{ color:var(--red); }
+  .face-back .tag{ color:var(--pink); text-shadow:0 0 8px rgba(255,95,168,0.4); }
+  .level-badge{
+    position:absolute;
+    top:14px; right:16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.05em;
+    padding:3px 8px;
+    border-radius:999px;
+    background:rgba(79,216,255,0.14);
+    color:var(--neon-soft);
+    border:1px solid rgba(79,216,255,0.4);
+  }
   .word{ font-size:30px; font-weight:600; line-height:1.2; }
   .pos{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -188,22 +330,25 @@
     flex:1;
     padding:12px 0;
     border-radius:12px;
-    border:1px solid rgba(255,255,255,0.1);
+    border:1px solid rgba(79,216,255,0.16);
     background:var(--panel);
     color:var(--text);
     font-size:13.5px;
     cursor:pointer;
   }
   button.ctrl.primary{
-    background:var(--red);
-    border-color:var(--red);
+    background: linear-gradient(135deg, var(--neon), var(--violet));
+    border-color:transparent;
+    color:#04121a;
     font-weight:700;
+    box-shadow: 0 0 16px rgba(79,216,255,0.3);
   }
 
   /* Quiz mode */
   .quiz-card{
     background: linear-gradient(160deg, var(--panel-2), var(--panel));
-    border:1px solid rgba(217,165,68,0.2);
+    border:1px solid rgba(79,216,255,0.2);
+    box-shadow: 0 0 24px rgba(79,216,255,0.08);
     border-radius:20px;
     padding:28px 22px;
     text-align:center;
@@ -219,26 +364,27 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     padding:13px 16px;
     border-radius:12px;
-    border:1px solid rgba(255,255,255,0.1);
+    border:1px solid rgba(79,216,255,0.14);
     background:var(--panel);
     color:var(--text);
     font-size:14.5px;
     text-align:left;
     cursor:pointer;
   }
-  .opt.correct{ background:rgba(111,174,127,0.18); border-color:var(--good); color:var(--good); }
-  .opt.wrong{ background:rgba(193,92,83,0.18); border-color:var(--bad); color:var(--bad); }
+  .opt.correct{ background:rgba(69,232,176,0.14); border-color:var(--good); color:var(--good); box-shadow:0 0 12px rgba(69,232,176,0.25); }
+  .opt.wrong{ background:rgba(255,95,122,0.14); border-color:var(--bad); color:var(--bad); box-shadow:0 0 12px rgba(255,95,122,0.25); }
   .opt[disabled]{ cursor:default; }
 
   .score-pill{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     display:inline-block;
     font-size:12px;
-    color:var(--gold);
-    background:rgba(217,165,68,0.12);
+    color:var(--neon-soft);
+    background:rgba(79,216,255,0.12);
     padding:5px 12px;
     border-radius:999px;
     margin-bottom:14px;
+    text-shadow:0 0 8px rgba(79,216,255,0.3);
   }
 
   .done{
@@ -249,10 +395,26 @@
 </style>
 </head>
 <body>
-<div class="app">
+
+<div id="splash">
+  <canvas id="snowCanvas"></canvas>
+  <div class="splash-content">
+    <div class="splash-eyebrow">Almanca ⇄ Türkçe Kartlar</div>
+    <h1 class="splash-name">M HAMZA</h1>
+    <div class="splash-sub">GİRİŞ İÇİN EKRANA TIKLAYIN</div>
+  </div>
+</div>
+
+<div class="app" id="mainApp">
   <div class="eyebrow">Kelime Kartları</div>
   <h1>Almanca ⇄ Türkçe</h1>
-  <div class="sub">A1 seviyesi tüm temel kelimeler · 21 kategori</div>
+  <div class="sub">Goethe A1-A2 kelime hazinesi · seviye ve kategori seç</div>
+
+  <div class="level-box" id="levelBox">
+    <div class="level-opt active" data-level="ALL">Tümü</div>
+    <div class="level-opt" data-level="A1">A1</div>
+    <div class="level-opt" data-level="A2">A2</div>
+  </div>
 
   <div class="tabs">
     <div class="tab active" id="tabCards">Kartlar</div>
@@ -272,11 +434,13 @@
     <div class="stage">
       <div class="card" id="card">
         <div class="face face-front">
+          <div class="level-badge" id="levelBadgeFront">A1</div>
           <div class="tag">Deutsch</div>
           <div class="word" id="deWord">Hallo</div>
           <div class="pos" id="dePos">ünlem</div>
         </div>
         <div class="face face-back">
+          <div class="level-badge" id="levelBadgeBack">A1</div>
           <div class="tag">Türkçe</div>
           <div class="word" id="trWord">Merhaba</div>
           <div class="example" id="trExample">Hallo, wie geht's?</div>
@@ -301,7 +465,7 @@
     <div class="bar"><div class="bar-fill" id="quizBar" style="width:2.5%"></div></div>
 
     <div class="quiz-card">
-      <div class="tag" style="color:var(--gold)">Bu kelimenin anlamı nedir?</div>
+      <div class="tag" style="color:var(--neon-soft)">Bu kelimenin anlamı nedir?</div>
       <div class="quiz-word" id="quizWord">Hallo</div>
       <div class="quiz-sub" id="quizPos">ünlem</div>
     </div>
@@ -316,6 +480,8 @@
       <button class="ctrl primary" id="restartBtn">Tekrar Başla</button>
     </div>
   </div>
+
+  <div class="credit">İsim hakları <b>M HAMZA</b>'ya aittir</div>
 </div>
 
 <script>
@@ -713,10 +879,169 @@ const vocab = [
   {de:"durch", tr:"içinden/aracılığıyla", pos:"edat", ex:"Wir gehen durch den Park.", cat:"Edatlar"},
   {de:"gegen", tr:"karşı", pos:"edat", ex:"Er spielt gegen mich.", cat:"Edatlar"},
   {de:"um", tr:"etrafında / saat", pos:"edat", ex:"Wir treffen uns um sechs Uhr.", cat:"Edatlar"},
+
+  // ===== A2 SEVİYESİ =====
+
+  // İş ve Kariyer (A2)
+  {de:"der Beruf", tr:"meslek", pos:"isim", ex:"Was ist dein Beruf?", cat:"İş ve Kariyer", level:"A2"},
+  {de:"die Arbeit", tr:"iş", pos:"isim", ex:"Meine Arbeit macht Spaß.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"das Büro", tr:"ofis", pos:"isim", ex:"Ich arbeite im Büro.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"die Firma", tr:"şirket", pos:"isim", ex:"Die Firma hat viele Mitarbeiter.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"der Chef", tr:"patron", pos:"isim", ex:"Mein Chef ist sehr streng.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"der Kollege", tr:"iş arkadaşı (erkek)", pos:"isim", ex:"Mein Kollege hilft mir gern.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"die Kollegin", tr:"iş arkadaşı (kadın)", pos:"isim", ex:"Meine Kollegin ist sehr nett.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"die Besprechung", tr:"toplantı", pos:"isim", ex:"Wir haben um zehn Uhr eine Besprechung.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"der Vertrag", tr:"sözleşme", pos:"isim", ex:"Ich unterschreibe den Vertrag.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"die Bewerbung", tr:"iş başvurusu", pos:"isim", ex:"Ich schreibe eine Bewerbung.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"das Gehalt", tr:"maaş", pos:"isim", ex:"Das Gehalt ist gut.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"die Erfahrung", tr:"deneyim", pos:"isim", ex:"Ich habe viel Erfahrung.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"die Ausbildung", tr:"meslek eğitimi", pos:"isim", ex:"Er macht eine Ausbildung als Koch.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"kündigen", tr:"istifa etmek/işten çıkarmak", pos:"fiil", ex:"Er hat seinen Job gekündigt.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"sich bewerben", tr:"başvuruda bulunmak", pos:"fiil", ex:"Ich bewerbe mich um die Stelle.", cat:"İş ve Kariyer", level:"A2"},
+  {de:"verdienen", tr:"kazanmak (para)", pos:"fiil", ex:"Sie verdient gut.", cat:"İş ve Kariyer", level:"A2"},
+
+  // Duygular ve Görüşler (A2)
+  {de:"meiner Meinung nach", tr:"bence", pos:"kalıp", ex:"Meiner Meinung nach ist das richtig.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"ich finde", tr:"bence/bulurum", pos:"kalıp", ex:"Ich finde den Film gut.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"die Angst", tr:"korku", pos:"isim", ex:"Ich habe Angst vor Spinnen.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"die Freude", tr:"sevinç", pos:"isim", ex:"Die Freude war sehr groß.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"die Wut", tr:"öfke", pos:"isim", ex:"Seine Wut war verständlich.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"überrascht", tr:"şaşırmış", pos:"sıfat", ex:"Ich bin sehr überrascht.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"enttäuscht", tr:"hayal kırıklığına uğramış", pos:"sıfat", ex:"Er ist von dem Ergebnis enttäuscht.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"stolz", tr:"gururlu", pos:"sıfat", ex:"Ich bin stolz auf dich.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"nervös", tr:"gergin", pos:"sıfat", ex:"Vor der Prüfung bin ich nervös.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"gespannt", tr:"heyecanlı/merak içinde", pos:"sıfat", ex:"Ich bin gespannt auf das Ergebnis.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"sich freuen", tr:"sevinmek", pos:"fiil", ex:"Ich freue mich auf das Wochenende.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"sich ärgern", tr:"kızmak", pos:"fiil", ex:"Er ärgert sich über den Verkehr.", cat:"Duygular ve Görüşler", level:"A2"},
+  {de:"sich fühlen", tr:"hissetmek", pos:"fiil", ex:"Wie fühlst du dich heute?", cat:"Duygular ve Görüşler", level:"A2"},
+
+  // Seyahat (A2)
+  {de:"der Urlaub", tr:"tatil", pos:"isim", ex:"Wir fahren in den Urlaub.", cat:"Seyahat", level:"A2"},
+  {de:"die Reise", tr:"seyahat", pos:"isim", ex:"Die Reise war anstrengend.", cat:"Seyahat", level:"A2"},
+  {de:"das Gepäck", tr:"bagaj", pos:"isim", ex:"Mein Gepäck ist noch nicht da.", cat:"Seyahat", level:"A2"},
+  {de:"der Koffer", tr:"valiz", pos:"isim", ex:"Ich packe meinen Koffer.", cat:"Seyahat", level:"A2"},
+  {de:"die Grenze", tr:"sınır", pos:"isim", ex:"Wir überqueren die Grenze.", cat:"Seyahat", level:"A2"},
+  {de:"der Reisepass", tr:"pasaport", pos:"isim", ex:"Vergiss deinen Reisepass nicht.", cat:"Seyahat", level:"A2"},
+  {de:"buchen", tr:"rezervasyon yapmak", pos:"fiil", ex:"Ich buche einen Flug.", cat:"Seyahat", level:"A2"},
+  {de:"reservieren", tr:"ayırtmak", pos:"fiil", ex:"Ich möchte einen Tisch reservieren.", cat:"Seyahat", level:"A2"},
+  {de:"die Unterkunft", tr:"konaklama", pos:"isim", ex:"Die Unterkunft ist sehr sauber.", cat:"Seyahat", level:"A2"},
+  {de:"die Sehenswürdigkeit", tr:"gezilecek yer", pos:"isim", ex:"Wir besuchen viele Sehenswürdigkeiten.", cat:"Seyahat", level:"A2"},
+  {de:"der Ausflug", tr:"gezi", pos:"isim", ex:"Wir machen einen Ausflug ans Meer.", cat:"Seyahat", level:"A2"},
+  {de:"übernachten", tr:"gecelemek", pos:"fiil", ex:"Wir übernachten im Hotel.", cat:"Seyahat", level:"A2"},
+
+  // Teknoloji ve Medya (A2)
+  {de:"der Computer", tr:"bilgisayar", pos:"isim", ex:"Mein Computer ist kaputt.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"das Internet", tr:"internet", pos:"isim", ex:"Das Internet ist heute langsam.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"die E-Mail", tr:"e-posta", pos:"isim", ex:"Ich schreibe eine E-Mail.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"das Handy", tr:"cep telefonu", pos:"isim", ex:"Mein Handy hat keinen Akku mehr.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"die Website", tr:"web sitesi", pos:"isim", ex:"Die Website ist sehr nützlich.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"herunterladen", tr:"indirmek", pos:"fiil", ex:"Ich lade die App herunter.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"hochladen", tr:"yüklemek", pos:"fiil", ex:"Ich lade das Foto hoch.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"die Nachricht", tr:"mesaj/haber", pos:"isim", ex:"Ich schicke dir eine Nachricht.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"das Programm", tr:"program", pos:"isim", ex:"Das Programm funktioniert nicht.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"die App", tr:"uygulama", pos:"isim", ex:"Diese App ist sehr praktisch.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"anrufen", tr:"aramak (telefon)", pos:"fiil", ex:"Ich rufe dich später an.", cat:"Teknoloji ve Medya", level:"A2"},
+  {de:"die sozialen Medien", tr:"sosyal medya", pos:"isim", ex:"Er nutzt viele soziale Medien.", cat:"Teknoloji ve Medya", level:"A2"},
+
+  // Çevre ve Doğa (A2)
+  {de:"die Umwelt", tr:"çevre", pos:"isim", ex:"Wir müssen die Umwelt schützen.", cat:"Çevre ve Doğa", level:"A2"},
+  {de:"der Müll", tr:"çöp", pos:"isim", ex:"Bitte trenne den Müll.", cat:"Çevre ve Doğa", level:"A2"},
+  {de:"recyceln", tr:"geri dönüştürmek", pos:"fiil", ex:"Wir recyceln Plastik.", cat:"Çevre ve Doğa", level:"A2"},
+  {de:"die Natur", tr:"doğa", pos:"isim", ex:"Ich liebe die Natur.", cat:"Çevre ve Doğa", level:"A2"},
+  {de:"der Wald", tr:"orman", pos:"isim", ex:"Wir spazieren im Wald.", cat:"Çevre ve Doğa", level:"A2"},
+  {de:"der Fluss", tr:"nehir", pos:"isim", ex:"Der Fluss ist sehr breit.", cat:"Çevre ve Doğa", level:"A2"},
+  {de:"das Meer", tr:"deniz", pos:"isim", ex:"Das Meer ist heute ruhig.", cat:"Çevre ve Doğa", level:"A2"},
+  {de:"der Berg", tr:"dağ", pos:"isim", ex:"Der Berg ist sehr hoch.", cat:"Çevre ve Doğa", level:"A2"},
+  {de:"die Luft", tr:"hava", pos:"isim", ex:"Die Luft ist hier sehr sauber.", cat:"Çevre ve Doğa", level:"A2"},
+  {de:"umweltfreundlich", tr:"çevre dostu", pos:"sıfat", ex:"Dieses Produkt ist umweltfreundlich.", cat:"Çevre ve Doğa", level:"A2"},
+
+  // Toplum ve Günlük Yaşam (A2)
+  {de:"die Gesellschaft", tr:"toplum", pos:"isim", ex:"Die Gesellschaft verändert sich schnell.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"die Nachbarschaft", tr:"mahalle/komşuluk", pos:"isim", ex:"Die Nachbarschaft ist sehr ruhig.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"der Nachbar", tr:"komşu", pos:"isim", ex:"Mein Nachbar ist sehr freundlich.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"die Regel", tr:"kural", pos:"isim", ex:"Wir müssen die Regeln befolgen.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"das Gesetz", tr:"yasa", pos:"isim", ex:"Das Gesetz ist sehr klar.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"die Meinung", tr:"görüş", pos:"isim", ex:"Jeder hat seine eigene Meinung.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"die Wahl", tr:"seçim", pos:"isim", ex:"Die Wahl findet im Herbst statt.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"wählen", tr:"seçmek/oy vermek", pos:"fiil", ex:"Ich gehe wählen.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"die Zeitung", tr:"gazete", pos:"isim", ex:"Er liest jeden Morgen die Zeitung.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"die Nachrichten", tr:"haberler", pos:"isim", ex:"Ich sehe die Nachrichten um acht.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"das Problem", tr:"sorun", pos:"isim", ex:"Wir haben ein kleines Problem.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+  {de:"die Lösung", tr:"çözüm", pos:"isim", ex:"Ich habe eine gute Lösung gefunden.", cat:"Toplum ve Günlük Yaşam", level:"A2"},
+
+  // Eğitim (A2)
+  {de:"die Prüfung", tr:"sınav", pos:"isim", ex:"Ich habe morgen eine Prüfung.", cat:"Eğitim", level:"A2"},
+  {de:"das Zeugnis", tr:"karne", pos:"isim", ex:"Das Zeugnis ist sehr gut.", cat:"Eğitim", level:"A2"},
+  {de:"die Note", tr:"not (okul)", pos:"isim", ex:"Ich habe eine gute Note bekommen.", cat:"Eğitim", level:"A2"},
+  {de:"der Kurs", tr:"kurs", pos:"isim", ex:"Ich mache einen Deutschkurs.", cat:"Eğitim", level:"A2"},
+  {de:"die Hausaufgabe", tr:"ev ödevi", pos:"isim", ex:"Ich mache meine Hausaufgaben.", cat:"Eğitim", level:"A2"},
+  {de:"bestehen", tr:"başarmak (sınav)", pos:"fiil", ex:"Ich habe die Prüfung bestanden.", cat:"Eğitim", level:"A2"},
+  {de:"durchfallen", tr:"kalmak (sınavda)", pos:"fiil", ex:"Er ist durch die Prüfung gefallen.", cat:"Eğitim", level:"A2"},
+  {de:"wiederholen", tr:"tekrar etmek", pos:"fiil", ex:"Ich wiederhole die Wörter.", cat:"Eğitim", level:"A2"},
+
+  // Ev ve Yaşam (A2)
+  {de:"die Miete", tr:"kira", pos:"isim", ex:"Die Miete ist jeden Monat gleich.", cat:"Ev ve Yaşam", level:"A2"},
+  {de:"der Vermieter", tr:"ev sahibi", pos:"isim", ex:"Der Vermieter repariert das Fenster.", cat:"Ev ve Yaşam", level:"A2"},
+  {de:"umziehen", tr:"taşınmak", pos:"fiil", ex:"Wir ziehen nächsten Monat um.", cat:"Ev ve Yaşam", level:"A2"},
+  {de:"einrichten", tr:"döşemek (ev)", pos:"fiil", ex:"Wir richten die Wohnung neu ein.", cat:"Ev ve Yaşam", level:"A2"},
+  {de:"renovieren", tr:"tadilat yapmak", pos:"fiil", ex:"Wir renovieren die Küche.", cat:"Ev ve Yaşam", level:"A2"},
+  {de:"der Aufzug", tr:"asansör", pos:"isim", ex:"Der Aufzug ist kaputt.", cat:"Ev ve Yaşam", level:"A2"},
+  {de:"das Erdgeschoss", tr:"zemin kat", pos:"isim", ex:"Ich wohne im Erdgeschoss.", cat:"Ev ve Yaşam", level:"A2"},
+  {de:"der Stock", tr:"kat", pos:"isim", ex:"Wir wohnen im dritten Stock.", cat:"Ev ve Yaşam", level:"A2"},
+
+  // Alışveriş (A2 ek)
+  {de:"die Größe", tr:"beden/boyut", pos:"isim", ex:"Welche Größe brauchen Sie?", cat:"Alışveriş", level:"A2"},
+  {de:"anprobieren", tr:"prova etmek", pos:"fiil", ex:"Kann ich das anprobieren?", cat:"Alışveriş", level:"A2"},
+  {de:"umtauschen", tr:"değiştirmek (ürün)", pos:"fiil", ex:"Ich möchte das umtauschen.", cat:"Alışveriş", level:"A2"},
+  {de:"das Angebot", tr:"teklif/fırsat", pos:"isim", ex:"Das ist ein gutes Angebot.", cat:"Alışveriş", level:"A2"},
+  {de:"reduziert", tr:"indirimli", pos:"sıfat", ex:"Die Schuhe sind reduziert.", cat:"Alışveriş", level:"A2"},
+  {de:"die Marke", tr:"marka", pos:"isim", ex:"Welche Marke bevorzugst du?", cat:"Alışveriş", level:"A2"},
+  {de:"die Qualität", tr:"kalite", pos:"isim", ex:"Die Qualität ist sehr hoch.", cat:"Alışveriş", level:"A2"},
+
+  // Sağlık (A2 ek)
+  {de:"sich verletzen", tr:"yaralanmak", pos:"fiil", ex:"Er hat sich beim Sport verletzt.", cat:"Sağlık", level:"A2"},
+  {de:"die Verletzung", tr:"yaralanma", pos:"isim", ex:"Die Verletzung ist nicht schlimm.", cat:"Sağlık", level:"A2"},
+  {de:"der Unfall", tr:"kaza", pos:"isim", ex:"Es gab einen Unfall auf der Straße.", cat:"Sağlık", level:"A2"},
+  {de:"die Versicherung", tr:"sigorta", pos:"isim", ex:"Ich habe eine Krankenversicherung.", cat:"Sağlık", level:"A2"},
+  {de:"der Notfall", tr:"acil durum", pos:"isim", ex:"Das ist ein Notfall!", cat:"Sağlık", level:"A2"},
+  {de:"die Behandlung", tr:"tedavi", pos:"isim", ex:"Die Behandlung dauert zwei Wochen.", cat:"Sağlık", level:"A2"},
+
+  // Karakter Özellikleri (A2)
+  {de:"freundlich", tr:"cana yakın", pos:"sıfat", ex:"Sie ist immer sehr freundlich.", cat:"Karakter Özellikleri", level:"A2"},
+  {de:"ehrlich", tr:"dürüst", pos:"sıfat", ex:"Er ist ein ehrlicher Mensch.", cat:"Karakter Özellikleri", level:"A2"},
+  {de:"geduldig", tr:"sabırlı", pos:"sıfat", ex:"Meine Lehrerin ist sehr geduldig.", cat:"Karakter Özellikleri", level:"A2"},
+  {de:"ungeduldig", tr:"sabırsız", pos:"sıfat", ex:"Er wird schnell ungeduldig.", cat:"Karakter Özellikleri", level:"A2"},
+  {de:"fleißig", tr:"çalışkan", pos:"sıfat", ex:"Die Studentin ist sehr fleißig.", cat:"Karakter Özellikleri", level:"A2"},
+  {de:"faul", tr:"tembel", pos:"sıfat", ex:"Sei nicht so faul!", cat:"Karakter Özellikleri", level:"A2"},
+  {de:"höflich", tr:"kibar", pos:"sıfat", ex:"Er ist immer sehr höflich.", cat:"Karakter Özellikleri", level:"A2"},
+  {de:"zuverlässig", tr:"güvenilir", pos:"sıfat", ex:"Mein Kollege ist sehr zuverlässig.", cat:"Karakter Özellikleri", level:"A2"},
+  {de:"kreativ", tr:"yaratıcı", pos:"sıfat", ex:"Sie ist eine kreative Künstlerin.", cat:"Karakter Özellikleri", level:"A2"},
+
+  // Fiiller (A2 ek)
+  {de:"sich vorstellen", tr:"kendini tanıtmak", pos:"fiil", ex:"Darf ich mich vorstellen?", cat:"Fiiller (A2)", level:"A2"},
+  {de:"versuchen", tr:"denemek", pos:"fiil", ex:"Ich versuche es noch einmal.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"sich entscheiden", tr:"karar vermek", pos:"fiil", ex:"Ich kann mich nicht entscheiden.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"erklären", tr:"açıklamak", pos:"fiil", ex:"Kannst du mir das erklären?", cat:"Fiiller (A2)", level:"A2"},
+  {de:"vergleichen", tr:"karşılaştırmak", pos:"fiil", ex:"Wir vergleichen die Preise.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"sich verändern", tr:"değişmek", pos:"fiil", ex:"Die Stadt hat sich verändert.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"passieren", tr:"olmak (olay)", pos:"fiil", ex:"Was ist passiert?", cat:"Fiiller (A2)", level:"A2"},
+  {de:"funktionieren", tr:"çalışmak (işlev)", pos:"fiil", ex:"Der Fernseher funktioniert nicht.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"sich interessieren für", tr:"ilgilenmek", pos:"fiil", ex:"Ich interessiere mich für Musik.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"teilnehmen", tr:"katılmak", pos:"fiil", ex:"Ich nehme am Kurs teil.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"sich treffen", tr:"buluşmak", pos:"fiil", ex:"Wir treffen uns am Bahnhof.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"empfehlen", tr:"tavsiye etmek", pos:"fiil", ex:"Ich empfehle dieses Restaurant.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"sich beschweren", tr:"şikayet etmek", pos:"fiil", ex:"Er beschwert sich über das Essen.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"reparieren", tr:"tamir etmek", pos:"fiil", ex:"Ich muss mein Fahrrad reparieren.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"sich erinnern", tr:"hatırlamak", pos:"fiil", ex:"Ich erinnere mich gut daran.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"vergessen", tr:"unutmak", pos:"fiil", ex:"Ich habe meinen Schlüssel vergessen.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"sich verabreden", tr:"randevulaşmak", pos:"fiil", ex:"Wir verabreden uns für morgen.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"planen", tr:"planlamak", pos:"fiil", ex:"Wir planen eine Reise.", cat:"Fiiller (A2)", level:"A2"},
+  {de:"organisieren", tr:"organize etmek", pos:"fiil", ex:"Sie organisiert die Party.", cat:"Fiiller (A2)", level:"A2"},
 ];
 
 const categories = ["Tümü", ...Array.from(new Set(vocab.map(v => v.cat)))];
 let activeCat = "Tümü";
+let activeLevel = "ALL";
 let deck = [...vocab];
 let idx = 0;
 let flipped = false;
@@ -727,18 +1052,42 @@ let qIdx = 0;
 let score = 0;
 let answered = false;
 
-const chipsEl = document.getElementById('chips');
-categories.forEach(cat => {
-  const c = document.createElement('div');
-  c.className = 'chip' + (cat === activeCat ? ' active' : '');
-  c.textContent = cat;
-  c.onclick = () => { activeCat = cat; applyFilter(); };
-  chipsEl.appendChild(c);
+function getLevel(v){ return v.level || 'A1'; }
+
+function levelFiltered(){
+  return activeLevel === 'ALL' ? vocab : vocab.filter(v => getLevel(v) === activeLevel);
+}
+
+function rebuildChips(){
+  const pool = levelFiltered();
+  const cats = ["Tümü", ...Array.from(new Set(pool.map(v => v.cat)))];
+  if(!cats.includes(activeCat)) activeCat = "Tümü";
+  const chipsEl = document.getElementById('chips');
+  chipsEl.innerHTML = '';
+  cats.forEach(cat => {
+    const c = document.createElement('div');
+    c.className = 'chip' + (cat === activeCat ? ' active' : '');
+    c.textContent = cat;
+    c.onclick = () => { activeCat = cat; applyFilter(); };
+    chipsEl.appendChild(c);
+  });
+}
+rebuildChips();
+
+document.querySelectorAll('.level-opt').forEach(opt => {
+  opt.onclick = () => {
+    activeLevel = opt.dataset.level;
+    document.querySelectorAll('.level-opt').forEach(o => o.classList.toggle('active', o === opt));
+    activeCat = "Tümü";
+    rebuildChips();
+    applyFilter();
+  };
 });
 
 function applyFilter(){
   document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.textContent === activeCat));
-  deck = activeCat === "Tümü" ? [...vocab] : vocab.filter(v => v.cat === activeCat);
+  const pool = levelFiltered();
+  deck = activeCat === "Tümü" ? [...pool] : pool.filter(v => v.cat === activeCat);
   idx = 0; flipped = false;
   renderCard();
   buildQuizDeck();
@@ -754,6 +1103,8 @@ function renderCard(){
   document.getElementById('cardCount').textContent = `${idx+1} / ${deck.length}`;
   document.getElementById('cardCat').textContent = activeCat;
   document.getElementById('cardBar').style.width = `${((idx+1)/deck.length)*100}%`;
+  document.getElementById('levelBadgeFront').textContent = getLevel(v);
+  document.getElementById('levelBadgeBack').textContent = getLevel(v);
   const cardEl = document.getElementById('card');
   cardEl.classList.remove('flipped');
   flipped = false;
@@ -798,7 +1149,7 @@ function renderQuiz(){
   document.getElementById('scorePill').textContent = `${score} doğru`;
 
   let opts = [v.tr];
-  const pool = vocab.filter(x => x.tr !== v.tr);
+  const pool = levelFiltered().filter(x => x.tr !== v.tr);
   for(let i=pool.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]]; }
   opts = opts.concat(pool.slice(0,3).map(x => x.tr));
   for(let i=opts.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [opts[i],opts[j]]=[opts[j],opts[i]]; }
@@ -847,6 +1198,64 @@ document.getElementById('tabQuiz').onclick = () => {
 };
 
 renderCard();
+
+// ---- Kar tanesi animasyonu ----
+(function(){
+  const canvas = document.getElementById('snowCanvas');
+  const ctx = canvas.getContext('2d');
+  let w, h, flakes, running = true;
+
+  function resize(){
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function makeFlakes(n){
+    return Array.from({length:n}, () => ({
+      x: Math.random()*w,
+      y: Math.random()*h,
+      r: Math.random()*3 + 1,
+      speedY: Math.random()*0.6 + 0.25,
+      speedX: Math.random()*0.4 - 0.2,
+      drift: Math.random()*Math.PI*2,
+      driftSpeed: Math.random()*0.015 + 0.005,
+      opacity: Math.random()*0.5 + 0.25
+    }));
+  }
+  flakes = makeFlakes(80);
+
+  function tick(){
+    if(!running) return;
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle = 'rgba(200,235,255,1)';
+    flakes.forEach(f => {
+      f.drift += f.driftSpeed;
+      f.y += f.speedY;
+      f.x += f.speedX + Math.sin(f.drift)*0.3;
+      if(f.y > h + 5){ f.y = -5; f.x = Math.random()*w; }
+      if(f.x > w + 5) f.x = -5;
+      if(f.x < -5) f.x = w + 5;
+      ctx.globalAlpha = f.opacity;
+      ctx.beginPath();
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI*2);
+      ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(tick);
+  }
+  tick();
+
+  // Giriş ekranı: dokunulunca uygulamayı göster
+  const splash = document.getElementById('splash');
+  const mainApp = document.getElementById('mainApp');
+  splash.addEventListener('click', () => {
+    splash.classList.add('hidden');
+    mainApp.classList.add('revealed');
+    setTimeout(() => { running = false; }, 900);
+  }, { once:true });
+})();
 </script>
 </body>
 </html>
