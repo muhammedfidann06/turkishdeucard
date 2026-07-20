@@ -108,8 +108,41 @@ function initLeaderboard(){
       return (Date.now() - lastActivity) >= IDLE_MS;
     }
 
+    // Anahtar normalizasyonundan ÖNCE kullanılan eski format (büyük/küçük harf
+    // ve boşluklara duyarlı). Bazı kullanıcıların geçmiş süresi bu eski
+    // anahtar altında kalmış olabilir; aşağıdaki fonksiyon bunu tek seferlik
+    // olarak yeni (normalize edilmiş) anahtara taşır.
+    function legacyKey(name){
+      return name.trim().slice(0,20).replace(/[.#$/\[\]]/g, '_');
+    }
+
+    function migrateLegacyIfNeeded(name){
+      if(!db) return;
+      const newKey = sanitizeKey(name);
+      const oldKey = legacyKey(name);
+      if(!newKey || !oldKey || newKey === oldKey) return;
+      const newRef = db.ref('leaderboard/' + newKey);
+      const oldRef = db.ref('leaderboard/' + oldKey);
+      newRef.once('value').then((newSnap) => {
+        const newVal = newSnap.val();
+        const newHasData = newVal && typeof newVal.totalSeconds === 'number' && newVal.totalSeconds > 0;
+        oldRef.once('value').then((oldSnap) => {
+          const oldVal = oldSnap.val();
+          const oldSeconds = oldVal && typeof oldVal.totalSeconds === 'number' ? oldVal.totalSeconds : 0;
+          if(oldSeconds > 0 && !newHasData){
+            // Eski anahtardaki geçmiş süreyi yeni anahtara ekle (bir kereye mahsus).
+            newRef.transaction((current) => {
+              const prev = current && typeof current === 'object' ? current : { name: name, totalSeconds: 0 };
+              return { name: name, totalSeconds: (prev.totalSeconds || 0) + oldSeconds, lastSeen: Date.now() };
+            });
+          }
+        }).catch(()=>{});
+      }).catch(()=>{});
+    }
+
     function startTracking(name){
       currentName = name;
+      migrateLegacyIfNeeded(name);
       listenOwnProfile(name);
       if(!db) return;
       if(heartbeatTimer) clearInterval(heartbeatTimer);
