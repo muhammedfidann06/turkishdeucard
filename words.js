@@ -1,13 +1,9 @@
-// Words.js
+/* Words.js */
+window.VOCAB = window.VOCAB || [];
 const COLORS = ["#3dffa0","#4fe8ff","#ff5fb8","#c9ff3e","#9b7bff","#ffd23b"];
 function pair(i){ return [COLORS[i%COLORS.length], COLORS[(i+2)%COLORS.length]]; }
 
 let _i = 0;
-
-// GÜVENLİK ÖNLEMİ: Editörün hata vermemesi ve kodun çökmemesi için
-// VOCAB dizisi henüz tanımlanmamışsa burada boş bir dizi olarak yaratıyoruz.
-window.VOCAB = window.VOCAB || [];
-
 function add(lang, level, cat, w, tr, pos, ex, exTr){
   const c = pair(_i++);
   window.VOCAB.push({lang, level, cat, w, tr, pos, ex, exTr, c1:c[0], c2:c[1]});
@@ -15,12 +11,11 @@ function add(lang, level, cat, w, tr, pos, ex, exTr){
 
 /* 
 ================================================================
-   GERMAN — DEVASA KELİME HAVUZU (A1, A2)
+   KELİME HAVUZU
 ================================================================ 
 */
 add("de","A1","Selamlaşma","Hallo","Merhaba","ünlem","Hallo, wie geht's?","Merhaba, nasılsın?");
-// ... diğer kelimeler ...
-
+// ... diğer tüm kelimelerinizi buraya ekleyin ...
 
 /* A1 Seviyesi (Goethe kelimeleri türlerine göre dağıtıldı) */
 
