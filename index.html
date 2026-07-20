@@ -144,7 +144,19 @@
   .tabs{display:flex;gap:8px;margin-bottom:16px;}
   .tab{flex:1;padding:10px 0;text-align:center;border-radius:12px;border:1px solid rgba(79,232,255,0.16);background:var(--panel);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--muted);font-size:13px;cursor:pointer;transition:all .15s ease;}
   .tab:active{opacity:.6;transform:scale(.97);}
-  .tab.active{background:linear-gradient(135deg, var(--cyan), var(--violet));color:#04121a;border-color:transparent;font-weight:700;box-shadow:0 0 20px rgba(79,232,255,0.4);}
+  .tab.active{
+    position:relative;
+    background:linear-gradient(135deg, rgba(79,232,255,0.35), rgba(155,123,255,0.35), rgba(255,95,184,0.3));
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    color:#eafcff;border:1px solid rgba(255,255,255,0.4);font-weight:700;
+    box-shadow:0 0 24px rgba(79,232,255,0.5), 0 0 46px rgba(155,123,255,0.3), inset 0 0 14px rgba(255,255,255,0.18);
+    text-shadow:0 0 10px rgba(255,255,255,0.6);
+    animation:tabGlow 3s ease-in-out infinite;
+  }
+  @keyframes tabGlow{
+    0%,100%{box-shadow:0 0 24px rgba(79,232,255,0.5), 0 0 46px rgba(155,123,255,0.3), inset 0 0 14px rgba(255,255,255,0.18);}
+    50%{box-shadow:0 0 32px rgba(79,232,255,0.7), 0 0 58px rgba(155,123,255,0.45), inset 0 0 18px rgba(255,255,255,0.26);}
+  }
   .tab.active:active{opacity:.8;}
 
   .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;}
@@ -211,9 +223,22 @@
   button.ctrl{flex:1;padding:12px 0;border-radius:14px;border:1px solid rgba(79,232,255,0.22);background:var(--panel);color:var(--text);font-size:13.5px;cursor:pointer;transition:all .2s;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);}
   button.ctrl:hover{background:rgba(79,232,255,0.14);}
   button.ctrl:active{opacity:.55;transform:scale(.97);}
-  button.ctrl.primary{background:linear-gradient(135deg,var(--cyan),var(--violet));border-color:transparent;color:#04121a;font-weight:700;box-shadow:0 4px 18px rgba(155,123,255,0.35);}
-  button.ctrl.primary:hover{box-shadow:0 6px 24px rgba(155,123,255,0.5);}
-  button.ctrl.primary:active{opacity:.75;box-shadow:0 2px 10px rgba(155,123,255,0.25);}
+  button.ctrl.primary{
+    position:relative;overflow:hidden;
+    background:linear-gradient(135deg, rgba(79,232,255,0.9), rgba(155,123,255,0.9), rgba(255,95,184,0.85));
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,0.45);color:#fff;font-weight:800;
+    box-shadow:0 4px 20px rgba(79,232,255,0.4), 0 0 34px rgba(155,123,255,0.35), inset 0 0 16px rgba(255,255,255,0.25);
+    text-shadow:0 0 10px rgba(255,255,255,0.5);
+    background-size:200% 200%;
+    animation:primaryShine 3.5s ease-in-out infinite;
+  }
+  @keyframes primaryShine{
+    0%,100%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+  }
+  button.ctrl.primary:hover{box-shadow:0 6px 26px rgba(79,232,255,0.55), 0 0 44px rgba(155,123,255,0.5), inset 0 0 18px rgba(255,255,255,0.3);}
+  button.ctrl.primary:active{opacity:.7;box-shadow:0 2px 10px rgba(155,123,255,0.3);}
 
   .quiz-card{background:linear-gradient(160deg,var(--panel-2),var(--panel));box-shadow:0 8px 30px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(79,232,255,0.28);border-radius:var(--radius);padding:28px 22px;text-align:center;margin-bottom:18px;overflow:hidden;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);}
   .quiz-word{font-size:29px;font-weight:700;margin-bottom:6px;font-family:Georgia,'Iowan Old Style',serif;}
@@ -235,6 +260,13 @@
   .mistake-given{font-size:13px; color:var(--bad); margin-bottom:4px;}
   .mistake-correct{font-size:13px; color:var(--good);}
 
+  .session-timer{
+    text-align:center;font-size:11.5px;color:var(--cyan-soft);margin-top:22px;
+    letter-spacing:.05em;font-weight:700;
+    background:rgba(79,232,255,0.08);border:1px solid rgba(79,232,255,0.25);
+    padding:7px 12px;border-radius:999px;
+    text-shadow:0 0 8px rgba(79,232,255,0.4);
+  }
   .credit{text-align:center;font-size:11px;color:var(--muted);margin-top:26px;letter-spacing:.06em;opacity:.75;background:rgba(10,14,24,0.35);padding:8px 12px;border-radius:10px;}
   .credit b{color:var(--cyan-soft);font-weight:700;text-shadow:0 0 8px rgba(79,232,255,0.5);}
 
@@ -324,19 +356,36 @@
     font-size:11.5px;font-weight:700;color:var(--gold);letter-spacing:.04em;
     margin-bottom:8px;text-align:center;
   }
-  .splash-lb-list{display:flex;flex-direction:column;gap:5px;padding-bottom:6px;}
+  .splash-lb-list{display:flex;flex-direction:column;gap:6px;padding-bottom:6px;}
   .lb-row{
-    display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:10px;
-    background:rgba(255,255,255,0.03);
+    display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:10px;
+    background:rgba(255,255,255,0.03);border:1px solid transparent;
   }
-  .lb-row.me{background:rgba(255,210,59,0.14);border:1px solid rgba(255,210,59,0.4);}
-  .lb-rank{width:20px;text-align:center;font-weight:800;color:var(--muted);font-size:11.5px;}
-  .lb-row:nth-child(1) .lb-rank{color:#ffd23b;}
-  .lb-row:nth-child(2) .lb-rank{color:#dfe4f0;}
-  .lb-row:nth-child(3) .lb-rank{color:#e0a468;}
+  .lb-row.me{background:rgba(255,210,59,0.14);border-color:rgba(255,210,59,0.4);}
+  .lb-rank{width:20px;text-align:center;font-weight:800;font-size:12px;color:var(--muted);}
   .lb-name{flex:1;font-size:12px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;}
   .lb-time{font-size:11px;color:var(--cyan-soft);font-weight:700;}
   .lb-empty{text-align:center;color:var(--muted);font-size:11.5px;padding:10px 0;}
+
+  /* İlk 3 için neon altın / gümüş / bronz */
+  .lb-row:nth-child(1){
+    background:rgba(255,214,59,0.12);border-color:rgba(255,214,59,0.55);
+    box-shadow:0 0 16px rgba(255,214,59,0.3), inset 0 0 10px rgba(255,214,59,0.12);
+  }
+  .lb-row:nth-child(1) .lb-rank{color:#ffe45c;text-shadow:0 0 10px rgba(255,214,59,0.9);}
+  .lb-row:nth-child(1) .lb-time{color:#ffe45c;text-shadow:0 0 8px rgba(255,214,59,0.6);}
+  .lb-row:nth-child(2){
+    background:rgba(210,220,235,0.12);border-color:rgba(210,220,235,0.55);
+    box-shadow:0 0 16px rgba(210,220,235,0.28), inset 0 0 10px rgba(210,220,235,0.12);
+  }
+  .lb-row:nth-child(2) .lb-rank{color:#eef3fb;text-shadow:0 0 10px rgba(220,230,245,0.9);}
+  .lb-row:nth-child(2) .lb-time{color:#eef3fb;text-shadow:0 0 8px rgba(220,230,245,0.6);}
+  .lb-row:nth-child(3){
+    background:rgba(224,140,79,0.14);border-color:rgba(224,140,79,0.55);
+    box-shadow:0 0 16px rgba(224,140,79,0.3), inset 0 0 10px rgba(224,140,79,0.12);
+  }
+  .lb-row:nth-child(3) .lb-rank{color:#f0a468;text-shadow:0 0 10px rgba(224,140,79,0.9);}
+  .lb-row:nth-child(3) .lb-time{color:#f0a468;text-shadow:0 0 8px rgba(224,140,79,0.6);}
 
   @media (prefers-reduced-motion: reduce){
     .app, #splash, .card, .bar-fill{transition:none !important;}
@@ -491,6 +540,7 @@
     </div>
   </div>
 
+  <div class="session-timer" id="sessionTimer">⏱ Bu oturumda: 0sn</div>
   <div class="credit">İsim hakları <b>M HAMZA</b>'ya aittir</div>
 </div>
 
@@ -576,6 +626,28 @@ function warmUpSpeech(){
     u.volume = 0;
     window.speechSynthesis.speak(u);
   }catch(e){}
+}
+
+/* ======================= OTURUM SÜRESİ GÖSTERGESİ ======================= */
+function startSessionTimer(){
+  const el = document.getElementById('sessionTimer');
+  if(!el) return;
+  const start = Date.now();
+  function fmt(totalSeconds){
+    const s = Math.max(0, Math.floor(totalSeconds));
+    const h = Math.floor(s / 3600);
+    const m = Math.floor((s % 3600) / 60);
+    const sec = s % 60;
+    if(h > 0) return `${h}s ${m}dk ${sec}sn`;
+    if(m > 0) return `${m}dk ${sec}sn`;
+    return `${sec}sn`;
+  }
+  function tick(){
+    const elapsed = (Date.now() - start) / 1000;
+    el.textContent = `⏱ Bu oturumda: ${fmt(elapsed)}`;
+  }
+  tick();
+  setInterval(tick, 1000);
 }
 
 document.getElementById('soundBtn').onclick = () => {
@@ -1029,6 +1101,7 @@ function spawnShootingStar(){
       setTimeout(window.LB_checkName, 500);
     }
     if(typeof warmUpSpeech === 'function') warmUpSpeech();
+    startSessionTimer();
   }, { once:true });
 })();
 </script>
