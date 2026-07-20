@@ -43,7 +43,7 @@
     padding:26px 14px 60px;
   }
   ::selection{background:rgba(79,232,255,0.3);}
-  .app{width:100%;max-width:480px;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .9s ease,transform .9s ease;}
+  .app{position:relative;z-index:1;width:100%;max-width:480px;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .9s ease,transform .9s ease;}
   .app.revealed{opacity:1;transform:none;pointer-events:auto;}
   button, .chip, .opt, .tab, .level-opt, .lang-opt, .cat-trigger, .cat-close, a{
     font-family:inherit;
@@ -271,7 +271,7 @@
   .credit b{color:var(--cyan-soft);font-weight:700;text-shadow:0 0 8px rgba(79,232,255,0.5);}
 
   /* ===== KAYAN YILDIZ ===== */
-  #fxLayer{position:fixed;inset:0;z-index:3;pointer-events:none;overflow:hidden;}
+  #fxLayer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
   .shooting-star{
     position:absolute;height:2px;border-radius:3px;
     background:linear-gradient(90deg, rgba(255,255,255,0.95), rgba(180,215,255,0.5), transparent);
