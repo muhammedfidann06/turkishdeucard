@@ -658,22 +658,75 @@ document.getElementById('soundBtn').onclick = () => {
   if(!soundOn && 'speechSynthesis' in window) window.speechSynthesis.cancel();
 };
 
-/* ======================= COLOR SPLIT ======================= */
+/* ======================= COLOR SPLIT (kök eşleştirmeli) ======================= */
+function normalizeWord(w){
+  // Almanca artikelleri ve parantez içi notları (örn. "o (erkek)") temizle
+  return String(w)
+    .replace(/^(der|die|das)\s+/i, '')
+    .replace(/\s*\(.*?\)\s*/g, ' ')
+    .trim();
+}
+
+function buildCandidates(word){
+  // Fiil çekimlerine (Almanca -en, Türkçe -mek/-mak + ünlü düşmesi) toleranslı
+  // kök adayları üretir; en spesifik (uzun) adaydan başlanarak denenir.
+  const w = word.toLowerCase();
+  const cands = new Set([w]);
+  if(/mek$/.test(w) && w.length > 5){ cands.add(w.slice(0, -3)); cands.add(w.slice(0, -4)); }
+  else if(/mak$/.test(w) && w.length > 5){ cands.add(w.slice(0, -3)); cands.add(w.slice(0, -4)); }
+  if(/en$/.test(w) && w.length > 4) cands.add(w.slice(0, -2));
+  if(w.length > 4) cands.add(w.slice(0, Math.ceil(w.length * 0.7)));
+  return Array.from(cands).filter(c => c.length >= 2).sort((a, b) => b.length - a.length);
+}
+
+function findStemMatch(sentence, dictWord){
+  const clean = normalizeWord(dictWord);
+  if(!clean) return null;
+  const skip = new Set(['sich','zu','to','a','an','the','in','on','at','for','with','of','up','out','get','be']);
+  const tokens = clean.split(/\s+/).filter(t => t && !skip.has(t.toLowerCase()));
+  const mainToken = tokens.sort((a, b) => b.length - a.length)[0] || clean;
+  const isShort = mainToken.length <= 2;
+  const candidates = isShort ? [mainToken.toLowerCase()] : buildCandidates(mainToken);
+
+  const parts = sentence.split(/(\s+)/);
+  for(const target of candidates){
+    let bestIdx = -1, bestLen = -1;
+    for(let i = 0; i < parts.length; i++){
+      const clean2 = parts[i].toLowerCase().replace(/[^a-zçğıöşüäöüß]/gi, '');
+      if(!clean2) continue;
+      if(isShort){
+        if(clean2 === target){ bestIdx = i; break; }
+        continue;
+      }
+      if(clean2.length < target.length) continue;
+      let common = 0;
+      for(let k = 0; k < target.length; k++){
+        if(clean2[k] === target[k]) common++; else break;
+      }
+      if(common === target.length && clean2.length > bestLen){
+        bestLen = clean2.length; bestIdx = i;
+      }
+    }
+    if(bestIdx !== -1){
+      let offset = 0;
+      for(let i = 0; i < bestIdx; i++) offset += parts[i].length;
+      return { start: offset, end: offset + parts[bestIdx].length };
+    }
+  }
+  return null;
+}
+
 function colorSplit(sentence, word, c1, c2){
   if(!sentence) return '';
-  const idxOf = sentence.toLowerCase().indexOf(String(word).toLowerCase());
-  let html;
-  if(idxOf === -1){
-    const sp = sentence.indexOf(' ');
-    if(sp === -1){ html = `<span style="color:${c1}">${sentence}</span>`; }
-    else{ html = `<span style="color:${c1}">${sentence.slice(0,sp)}</span> <span style="color:${c2}">${sentence.slice(sp+1)}</span>`; }
-  } else {
-    const before = sentence.slice(0, idxOf);
-    const match = sentence.slice(idxOf, idxOf+word.length);
-    const after = sentence.slice(idxOf+word.length);
-    html = `${before}<span style="color:${c1}">${match}</span><span style="color:${c2}">${after}</span>`;
+  const range = findStemMatch(sentence, word);
+  if(!range){
+    // Eşleşme bulunamazsa cümleyi tek renkte göster (yanlış bölünme olmasın)
+    return `<span style="color:${c1}">${sentence}</span>`;
   }
-  return html;
+  const before = sentence.slice(0, range.start);
+  const match = sentence.slice(range.start, range.end);
+  const after = sentence.slice(range.end);
+  return `${before}<span style="color:${c1}">${match}</span><span style="color:${c2}">${after}</span>`;
 }
 
 /* ======================= RENDER: LANG / LEVEL / CHIPS ======================= */
