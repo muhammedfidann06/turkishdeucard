@@ -3002,6 +3002,66 @@ add("en","B1","Bilim Ek","atom","atom","noun","An atom is very small.","Bir atom
 add("en","B1","Bilim Ek","energy (physics)","enerji (fizik)","noun","Energy cannot be destroyed.","Enerji yok edilemez.");
 add("en","B1","Bilim Ek","laboratory","laboratuvar","noun","She works in a laboratory.","Bir laboratuvarda çalışıyor.");
 
+/* ---- İNGİLİZCE EK: Kişisel Bakım, Ofis İşleri, Doğa Ek 3, Duygu Deyimleri ---- */
+add("en","A1","Kişisel Bakım","brush your hair","saçını taramak","phrase","She brushes her hair every morning.","Her sabah saçını tarar.");
+add("en","A1","Kişisel Bakım","shave","tıraş olmak","verb","He shaves every morning.","Her sabah tıraş olur.");
+add("en","A1","Kişisel Bakım","nail","tırnak","noun","Her nails are painted red.","Tırnakları kırmızı boyalı.");
+add("en","A1","Kişisel Bakım","perfume","parfüm","noun","This perfume smells lovely.","Bu parfüm çok güzel kokuyor.");
+add("en","A1","Kişisel Bakım","makeup","makyaj","noun","She wears light makeup.","Hafif makyaj yapıyor.");
+add("en","A1","Ofis İşleri","meeting room","toplantı odası","noun","The meeting room is booked.","Toplantı odası rezerve edilmiş.");
+add("en","A1","Ofis İşleri","file (document)","dosya (belge)","noun","Put the file on my desk.","Dosyayı masama koy.");
+add("en","A1","Ofis İşleri","printer (office)","yazıcı (ofis)","noun","The office printer is out of paper.","Ofis yazıcısının kağıdı bitmiş.");
+add("en","A1","Ofis İşleri","photocopy","fotokopi","noun","I need a photocopy of this page.","Bu sayfanın bir fotokopisine ihtiyacım var.");
+add("en","A1","Doğa Ek 3","waterfall","şelale","noun","The waterfall is very powerful.","Şelale çok güçlü.");
+add("en","A1","Doğa Ek 3","cliff","uçurum","noun","Be careful near the cliff.","Uçurumun yakınında dikkatli ol.");
+add("en","A1","Doğa Ek 3","cave (nature)","mağara (tekrar)","noun","We explored a deep cave.","Derin bir mağarayı keşfettik.");
+add("en","A1","Doğa Ek 3","swamp","bataklık","noun","The swamp is full of frogs.","Bataklık kurbağalarla dolu.");
+add("en","A1","Doğa Ek 3","canyon","kanyon","noun","The canyon is breathtaking.","Kanyon nefes kesici.");
+add("en","A2","Duygu Deyimleri","I'm over the moon","çok mutluyum","phrase","I'm over the moon about the news.","Haber için çok mutluyum.");
+add("en","A2","Duygu Deyimleri","down in the dumps","çok üzgün / morali bozuk","phrase","She has been down in the dumps lately.","Son zamanlarda morali bozuk.");
+add("en","A2","Duygu Deyimleri","on cloud nine","bulutların üzerinde (çok mutlu)","phrase","He was on cloud nine after winning.","Kazandıktan sonra bulutların üzerindeydi.");
+add("en","A2","Duygu Deyimleri","butterflies in my stomach","içim gıcık gibi (heyecan)","phrase","I have butterflies in my stomach before the exam.","Sınavdan önce içim gıcık gibi.");
+add("en","A2","Duygu Deyimleri","break down (emotionally)","yıkılmak (duygusal)","phrase","She broke down after the bad news.","Kötü haberden sonra yıkıldı.");
+add("en","A2","Hava Deyimleri","raining cats and dogs","bardaktan boşanırcasına yağmur","phrase","It's raining cats and dogs outside.","Dışarıda bardaktan boşanırcasına yağmur yağıyor.");
+add("en","A2","Hava Deyimleri","under the weather","kendini iyi hissetmemek","phrase","I feel a bit under the weather today.","Bugün kendimi biraz iyi hissetmiyorum.");
+add("en","A1","Ev İşleri Ek 3","hang up clothes","kıyafet asmak","phrase","Please hang up your clothes.","Lütfen kıyafetlerini as.");
+add("en","A1","Ev İşleri Ek 3","fold clothes","kıyafet katlamak","phrase","I fold the laundry every Sunday.","Her pazar çamaşırları katlarım.");
+add("en","A1","Ev İşleri Ek 3","water the garden","bahçeyi sulamak","phrase","He waters the garden every evening.","Her akşam bahçeyi suluyor.");
+add("en","A1","Ev İşleri Ek 3","take the trash out","çöpü çıkarmak (tekrar)","phrase","Can you take the trash out?","Çöpü çıkarabilir misin?");
+add("en","A2","Toplum Ek 2","tradition (custom)","gelenek (tekrar)","noun","This is an old family tradition.","Bu eski bir aile geleneğidir.");
+add("en","A2","Toplum Ek 2","custom (habit)","adet / gelenek","noun","It's a local custom.","Bu yerel bir adettir.");
+add("en","A2","Toplum Ek 2","festival (cultural)","festival","noun","The city holds a music festival every year.","Şehir her yıl bir müzik festivali düzenliyor.");
+add("en","A2","Toplum Ek 2","heritage","miras (kültürel)","noun","This building is part of our heritage.","Bu bina mirasımızın bir parçasıdır.");
+
+/* ---- İNGİLİZCE EK 2: Spor Ek 3, Meslek Ek 2, Teknoloji Ek 2, Sayı deyimleri ---- */
+add("en","A1","Spor Ek 3","referee","hakem","noun","The referee stopped the game.","Hakem maçı durdurdu.");
+add("en","A1","Spor Ek 3","stadium","stadyum","noun","The stadium was full.","Stadyum doluydu.");
+add("en","A1","Spor Ek 3","championship","şampiyona","noun","They won the championship.","Şampiyonayı kazandılar.");
+add("en","A1","Spor Ek 3","medal","madalya","noun","She received a gold medal.","Bir altın madalya aldı.");
+add("en","A1","Spor Ek 3","score (points)","skor / puan","noun","What is the current score?","Şu anki skor nedir?");
+add("en","A1","Meslekler Ek 2","architect","mimar","noun","The architect designed a new building.","Mimar yeni bir bina tasarladı.");
+add("en","A1","Meslekler Ek 2","scientist","bilim insanı","noun","The scientist is doing research.","Bilim insanı araştırma yapıyor.");
+add("en","A1","Meslekler Ek 2","photographer","fotoğrafçı","noun","The photographer took great pictures.","Fotoğrafçı harika fotoğraflar çekti.");
+add("en","A1","Meslekler Ek 2","translator","çevirmen","noun","The translator works with many languages.","Çevirmen birçok dille çalışıyor.");
+add("en","A1","Meslekler Ek 2","accountant","muhasebeci","noun","The accountant checks the numbers.","Muhasebeci sayıları kontrol ediyor.");
+add("en","A2","Teknoloji Ek 2","cloud storage","bulut depolama","noun","I save my files in cloud storage.","Dosyalarımı bulut depolamada saklıyorum.");
+add("en","A2","Teknoloji Ek 2","firewall","güvenlik duvarı","noun","The firewall blocks unwanted access.","Güvenlik duvarı istenmeyen erişimi engeller.");
+add("en","A2","Teknoloji Ek 2","virus (computer)","virüs (bilgisayar)","noun","My computer has a virus.","Bilgisayarımda bir virüs var.");
+add("en","A2","Teknoloji Ek 2","antivirus","antivirüs","noun","I installed a new antivirus.","Yeni bir antivirüs yükledim.");
+add("en","A1","Sayı Deyimleri","a couple of","birkaç / bir çift","phrase","I need a couple of days.","Birkaç güne ihtiyacım var.");
+add("en","A1","Sayı Deyimleri","a few","birkaç tane","phrase","I have a few questions.","Birkaç sorum var.");
+add("en","A1","Sayı Deyimleri","a lot of","çok fazla","phrase","There is a lot of traffic today.","Bugün çok fazla trafik var.");
+add("en","A1","Sayı Deyimleri","plenty of","bolca","phrase","We have plenty of time.","Bol vaktimiz var.");
+add("en","A1","Sayı Deyimleri","several","birkaç / birçok","phrase","Several people came to the party.","Partiye birkaç kişi geldi.");
+add("en","A1","Zaman İfadeleri Ek","in a while","biraz sonra","phrase","I'll call you in a while.","Seni biraz sonra ararım.");
+add("en","A1","Zaman İfadeleri Ek","right away","hemen şimdi","phrase","I need this right away.","Buna hemen şimdi ihtiyacım var.");
+add("en","A1","Zaman İfadeleri Ek","for good","sonsuza dek / temelli","phrase","He moved away for good.","Temelli taşındı.");
+add("en","A1","Zaman İfadeleri Ek","once in a while","ara sıra","phrase","We meet once in a while.","Ara sıra görüşürüz.");
+add("en","A2","Duygular Ek 3","overjoyed","son derece mutlu","adjective","She was overjoyed at the news.","Haber karşısında son derece mutluydu.");
+add("en","A2","Duygular Ek 3","devastated","yıkılmış (üzüntüden)","adjective","He was devastated by the loss.","Kayıptan dolayı yıkıldı.");
+add("en","A2","Duygular Ek 3","content (satisfied)","huzurlu / memnun","adjective","She feels content with her life.","Hayatından memnun hissediyor.");
+add("en","A2","Duygular Ek 3","restless","huzursuz","adjective","He felt restless all night.","Bütün gece huzursuz hissetti.");
+
 /* 
 ================================================================
    ARABIC — DEVASA KELİME HAVUZU (A1, A2, B1, B2)
@@ -3447,4 +3507,30 @@ add("ar","A1","Bağlaçlar","و","ve","bağlaç","آكل و أشرب.","Yiyorum 
 add("ar","A1","Bağlaçlar","أو","veya","bağlaç","هل تريد شايا أو قهوة؟","Çay mı yoksa kahve mi istersin?");
 add("ar","A1","Bağlaçlar","لكن","ama / fakat","bağlaç","أريد لكن لا أستطيع.","İstiyorum ama yapamam.");
 add("ar","A1","Bağlaçlar","لأن","çünkü","bağlaç","أبقى في البيت لأني مريض.","Hastayım çünkü evde kalıyorum.");
+
+/* ---- ARAPÇA EK: Kişisel Bakım, Doğa, Meslekler, Duygular, Ev Eşyaları ---- */
+add("ar","A1","Kişisel Bakım","عطر","parfüm","isim","هذا العطر رائحته جميلة.","Bu parfüm çok güzel kokuyor.");
+add("ar","A1","Kişisel Bakım","مكياج","makyaj","isim","تضع مكياجا خفيفا.","Hafif makyaj yapıyor.");
+add("ar","A1","Doğa","شلال","şelale","isim","الشلال قوي جدا.","Şelale çok güçlü.");
+add("ar","A1","Doğa","منحدر","uçurum","isim","كن حذرا بالقرب من المنحدر.","Uçurumun yakınında dikkatli ol.");
+add("ar","A1","Meslekler","مهندس معماري","mimar","isim","صمم المهندس المعماري مبنى جديدا.","Mimar yeni bir bina tasarladı.");
+add("ar","A1","Meslekler","عالم","bilim insanı","isim","العالم يجري بحثا.","Bilim insanı araştırma yapıyor.");
+add("ar","A1","Meslekler","مصور","fotoğrafçı","isim","المصور التقط صورا رائعة.","Fotoğrafçı harika fotoğraflar çekti.");
+add("ar","A1","Meslekler","مترجم","çevirmen","isim","المترجم يعمل بلغات كثيرة.","Çevirmen birçok dille çalışıyor.");
+add("ar","A1","Duygular","مسرور جدا","son derece mutlu","sıfat","كانت مسرورة جدا بالخبر.","Haber için çok mutluydu.");
+add("ar","A1","Duygular","محبط","hayal kırıklığına uğramış","sıfat","شعر بالإحباط من النتيجة.","Sonuçtan hayal kırıklığına uğradı.");
+add("ar","A1","Ev Eşyaları","سجادة","halı","isim","السجادة جديدة.","Halı yeni.");
+add("ar","A1","Spor","ملعب","stadyum","isim","الملعب كان ممتلئا.","Stadyum doluydu.");
+add("ar","A1","Spor","ميدالية","madalya","isim","حصلت على ميدالية ذهبية.","Bir altın madalya aldı.");
+add("ar","A2","Teknoloji","تخزين سحابي","bulut depolama","isim","أحفظ ملفاتي في التخزين السحابي.","Dosyalarımı bulut depolamada saklıyorum.");
+add("ar","A2","Teknoloji","فيروس","virüs (bilgisayar)","isim","حاسوبي به فيروس.","Bilgisayarımda bir virüs var.");
+add("ar","A2","Zaman","بعد قليل","biraz sonra","kalıp","سأتصل بك بعد قليل.","Seni biraz sonra ararım.");
+add("ar","A2","Zaman","حالا","hemen şimdi","kalıp","أحتاج هذا حالا.","Buna hemen şimdi ihtiyacım var.");
+add("ar","A2","Sayılar","القليل من","birkaç tane","kalıp","لدي القليل من الأسئلة.","Birkaç sorum var.");
+add("ar","A2","Sayılar","الكثير من","çok fazla","kalıp","هناك الكثير من الزحام اليوم.","Bugün çok fazla trafik var.");
+add("ar","A2","Ev ve Yaşam","غرفة اجتماعات","toplantı odası","isim","غرفة الاجتماعات محجوزة.","Toplantı odası rezerve edilmiş.");
+add("ar","A2","Ev ve Yaşam","ملف","dosya (belge)","isim","ضع الملف على مكتبي.","Dosyayı masama koy.");
+add("ar","B1","Duygular","غامر بالفرح","son derece sevinçli","sıfat","كانت غامرة بالفرح بالخبر.","Haber karşısında son derece sevinçliydi.");
+add("ar","B1","Toplum","تراث","miras (kültürel)","isim","هذا المبنى جزء من تراثنا.","Bu bina mirasımızın bir parçasıdır.");
+add("ar","B1","Toplum","تقليد","gelenek","isim","هذا تقليد عائلي قديم.","Bu eski bir aile geleneğidir.");
 
