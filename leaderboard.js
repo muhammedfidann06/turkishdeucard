@@ -89,20 +89,30 @@ function initLeaderboard(){
     // GERÇEKTE ne kadar süre geçti" hesaplanıp aradaki fark tek seferde
     // veritabanına yazılır. Böylece hiçbir saniye kaybolmaz ve ekrandaki
     // sayaçla liderlik tablosu birbiriyle her zaman tutarlı kalır.
-    function flushElapsed(){
-      if(!db || !currentName || !sessionStart) return;
+    function flushElapsed(useBeacon){
+      if(!currentName || !sessionStart) return;
       const totalElapsed = (Date.now() - sessionStart) / 1000;
       const delta = totalElapsed - creditedSeconds;
-      if(delta >= 1){
-        addSeconds(currentName, delta);
+      if(delta >= 0.5){
+        addSeconds(currentName, delta, useBeacon);
         creditedSeconds = totalElapsed;
       }
     }
 
-    function addSeconds(name, seconds){
-      if(!db || !name) return;
+    function addSeconds(name, seconds, useBeacon){
+      if(!name) return;
       const key = sanitizeKey(name);
       if(!key) return;
+      // Sayfa kapanırken (pagehide/beforeunload) normal Firebase yazma işlemi
+      // bazen tamamlanmadan sayfa sonlanabilir. Bu durumda "keepalive" özellikli
+      // ham bir istekle son anda yazmayı garantiye almaya çalışıyoruz.
+      if(useBeacon && FIREBASE_CONFIG.databaseURL && FIREBASE_CONFIG.databaseURL.indexOf('BURAYA_YAPISTIR') === -1){
+        try{
+          const url = FIREBASE_CONFIG.databaseURL.replace(/\/$/, '') + '/leaderboard/' + key + '/lastFlushAttempt.json';
+          fetch(url, { method:'PUT', body: JSON.stringify(Date.now()), keepalive:true }).catch(()=>{});
+        }catch(e){}
+      }
+      if(!db) return;
       const ref = db.ref('leaderboard/' + key);
       ref.transaction((current) => {
         const prev = current && typeof current === 'object' ? current : { name: name, totalSeconds: 0 };
@@ -113,10 +123,18 @@ function initLeaderboard(){
     document.addEventListener('visibilitychange', () => {
       // Sekme tekrar görünür olduğunda ya da gizlendiğinde, aradaki gerçek
       // süreyi hemen veritabanına işle (arka planda geçen süre de dahil).
-      flushElapsed();
+      // NOT: Telefon uzun süre kilitli kalıp tarayıcı sekmeyi tamamen
+      // sonlandırırsa (işletim sisteminin bellek/pil tasarrufu davranışı),
+      // o sırada hiçbir JavaScript çalışamayacağı için o boşluk kaydedilemez —
+      // bu, web sitelerinin aşamayacağı bir platform kısıtlamasıdır.
+      if(document.visibilityState === 'hidden'){
+        flushElapsed(true);
+      } else {
+        flushElapsed();
+      }
     });
-    window.addEventListener('beforeunload', flushElapsed);
-    window.addEventListener('pagehide', flushElapsed);
+    window.addEventListener('beforeunload', () => flushElapsed(true));
+    window.addEventListener('pagehide', () => flushElapsed(true));
 
     /* ---------------- LİDERLİK TABLOSU GÖRÜNÜMÜ (splash içinde sabit) ---------------- */
     function fmtTime(totalSeconds){
@@ -132,6 +150,7 @@ function initLeaderboard(){
       return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     }
 
+    const MEDALS = ['🥇','🥈','🥉'];
     function renderLeaderboard(entries){
       const list = document.getElementById('splashLbList');
       if(!list) return;
@@ -147,8 +166,9 @@ function initLeaderboard(){
       entries.forEach((e, i) => {
         const row = document.createElement('div');
         row.className = 'lb-row' + (e.name === currentName ? ' me' : '');
+        const rankDisplay = MEDALS[i] || (i+1);
         row.innerHTML = `
-          <div class="lb-rank">${i+1}</div>
+          <div class="lb-rank">${rankDisplay}</div>
           <div class="lb-name">${escapeHtml(e.name)}${e.name===currentName ? ' (sen)' : ''}</div>
           <div class="lb-time">${fmtTime(e.totalSeconds)}</div>`;
         list.appendChild(row);
@@ -162,7 +182,7 @@ function initLeaderboard(){
         const entries = Object.values(val)
           .filter(v => v && v.name)
           .sort((a,b) => (b.totalSeconds||0) - (a.totalSeconds||0))
-          .slice(0, 3);
+          .slice(0, 5);
         renderLeaderboard(entries);
       }, (err) => {
         console.warn('Liderlik verisi okunamadı:', err);
