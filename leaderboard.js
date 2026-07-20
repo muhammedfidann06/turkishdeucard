@@ -82,7 +82,7 @@ function initLeaderboard(){
     let lastActivity = Date.now();
     let lastTick = Date.now();
     const FLUSH_MS = 5000;       // her 5 saniyede bir eşitle
-    const IDLE_MS = 10000;       // 10 saniye hareketsizlik = duraklat
+    const IDLE_MS = 60000;       // 60 saniye hareketsizlik = duraklat
 
     // Herhangi bir dokunma, tıklama, kaydırma veya tuş basımı "aktiflik" sayılır.
     const ACTIVITY_EVENTS = ['click','touchstart','touchmove','mousemove','keydown','scroll','pointerdown'];
@@ -110,9 +110,28 @@ function initLeaderboard(){
 
     function startTracking(name){
       currentName = name;
+      listenOwnProfile(name);
       if(!db) return;
       if(heartbeatTimer) clearInterval(heartbeatTimer);
       heartbeatTimer = setInterval(flushElapsed, FLUSH_MS);
+    }
+
+    // Kullanıcının bu isimle bugüne kadar TOPLAM (tüm cihazlar/oturumlar dahil)
+    // ne kadar vakit geçirdiğini gösteren kalıcı profil satırı.
+    function listenOwnProfile(name){
+      const el = document.getElementById('profileTimer');
+      if(!el) return;
+      if(!db){
+        el.textContent = `👤 ${name} — profil henüz bağlanmadı`;
+        return;
+      }
+      const key = sanitizeKey(name);
+      if(!key) return;
+      db.ref('leaderboard/' + key).on('value', (snap) => {
+        const val = snap.val();
+        const total = val && typeof val.totalSeconds === 'number' ? val.totalSeconds : 0;
+        el.textContent = `👤 ${name} — Toplam süren: ${fmtTime(total)}`;
+      });
     }
 
     // Zamanlayıcılar gecikse/atlasa bile (arka plana atma, ekran kilidi vb.),
@@ -212,7 +231,7 @@ function initLeaderboard(){
         const entries = Object.values(val)
           .filter(v => v && v.name)
           .sort((a,b) => (b.totalSeconds||0) - (a.totalSeconds||0))
-          .slice(0, 5);
+          .slice(0, 10);
         renderLeaderboard(entries);
       }, (err) => {
         console.warn('Liderlik verisi okunamadı:', err);
