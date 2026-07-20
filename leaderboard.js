@@ -27,7 +27,7 @@ const FIREBASE_CONFIG = {
 
 function initLeaderboard(){
   try{
-    const isConfigured = FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.apiKey.indexOf('BURAYA_YAPISTIR') === -1;
+    const isConfigured = FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.apiKey.indexOf('AIzaSyBHgCtHuIunwlleLCxFCexErrjyZkuNYE0') === -1;
     let db = null;
 
     if(isConfigured && typeof firebase !== 'undefined'){
