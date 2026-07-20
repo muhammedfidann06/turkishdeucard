@@ -45,7 +45,12 @@ function initLeaderboard(){
     const NAME_KEY = 'lb_user_name';
     function getStoredName(){ try{ return localStorage.getItem(NAME_KEY) || ''; }catch(e){ return ''; } }
     function setStoredName(n){ try{ localStorage.setItem(NAME_KEY, n); }catch(e){} }
-    function sanitizeKey(name){ return name.trim().slice(0,20).replace(/[.#$/\[\]]/g, '_'); }
+    function sanitizeKey(name){
+      // Aynı kişi ismini farklı büyük/küçük harf veya fazladan boşlukla yazsa bile
+      // HER ZAMAN aynı veritabanı anahtarına düşsün diye normalize ediyoruz.
+      // Aksi halde "Ali" ve "ali " iki farklı kişi gibi kaydolur ve süre bölünür.
+      return name.trim().toLowerCase().replace(/\s+/g, '_').slice(0,20).replace(/[.#$/\[\]]/g, '_');
+    }
 
     const nameOverlay = document.getElementById('nameOverlay');
     const nameInput = document.getElementById('nameInput');
