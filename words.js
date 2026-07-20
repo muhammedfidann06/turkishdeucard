@@ -1,24 +1,25 @@
-/* Words.js */
-window.VOCAB = window.VOCAB || [];
+/* ================================================================
+   WORDS.JS — Tüm kelime verisi (Almanca, İngilizce, Arapça)
+   Bu dosya index.html tarafından <script src="words.js"></script>
+   ile yüklenir ve global VOCAB dizisini oluşturur.
+================================================================ */
+
+/* ======================= VOCAB DATA ======================= */
 const COLORS = ["#3dffa0","#4fe8ff","#ff5fb8","#c9ff3e","#9b7bff","#ffd23b"];
 function pair(i){ return [COLORS[i%COLORS.length], COLORS[(i+2)%COLORS.length]]; }
 
+const VOCAB = [];
 let _i = 0;
 function add(lang, level, cat, w, tr, pos, ex, exTr){
   const c = pair(_i++);
-  window.VOCAB.push({lang, level, cat, w, tr, pos, ex, exTr, c1:c[0], c2:c[1]});
+  VOCAB.push({lang, level, cat, w, tr, pos, ex, exTr, c1:c[0], c2:c[1]});
 }
 
 /* 
 ================================================================
-   KELİME HAVUZU
+   GERMAN — DEVASA KELİME HAVUZU (A1, A2)
 ================================================================ 
 */
-add("de","A1","Selamlaşma","Hallo","Merhaba","ünlem","Hallo, wie geht's?","Merhaba, nasılsın?");
-// ... diğer tüm kelimelerinizi buraya ekleyin ...
-
-/* A1 Seviyesi (Goethe kelimeleri türlerine göre dağıtıldı) */
-
 /* A1 Seviyesi (Goethe kelimeleri türlerine göre dağıtıldı) */
 add("de","A1","Selamlaşma","Hallo","Merhaba","ünlem","Hallo, wie geht's?","Merhaba, nasılsın?");
 add("de","A1","Selamlaşma","Guten Morgen","Günaydın","ünlem","Guten Morgen, hast du gut geschlafen?","Günaydın, iyi uyudun mu?");
@@ -2016,6 +2017,108 @@ add("en","B2","Sıfatlar (B2)","redundant","gereksiz / fazlalık","adjective","S
 add("en","B2","Zarflar (B2)","henceforth","bundan böyle","adverb","Henceforth, meetings start at nine.","Bundan böyle toplantılar dokuzda başlıyor.");
 add("en","B2","Zarflar (B2)","notwithstanding","buna rağmen","adverb","Notwithstanding the risks, they proceeded.","Risklere rağmen devam ettiler.");
 
+/* ---- İNGİLİZCE A2 SEVİYESİ BÜYÜK GENİŞLETME ---- */
+add("en","A2","Günlük Rutin","alarm clock","çalar saat","noun","My alarm clock rings at seven.","Çalar saatim yedide çalıyor.");
+add("en","A2","Günlük Rutin","brush your teeth","diş fırçalamak","phrase","I brush my teeth twice a day.","Günde iki kez diş fırçalarım.");
+add("en","A2","Günlük Rutin","comb your hair","saç taramak","phrase","She combs her hair every morning.","Her sabah saçını tarar.");
+add("en","A2","Günlük Rutin","have breakfast","kahvaltı yapmak","phrase","We have breakfast together.","Birlikte kahvaltı yapıyoruz.");
+add("en","A2","Günlük Rutin","set the table","masa hazırlamak","phrase","Can you set the table, please?","Masayı hazırlayabilir misin lütfen?");
+add("en","A2","Günlük Rutin","do the laundry","çamaşır yıkamak","phrase","I do the laundry on Sundays.","Pazarları çamaşır yıkarım.");
+add("en","A2","Günlük Rutin","make the bed","yatağı toplamak","phrase","She makes the bed every day.","O her gün yatağı toplar.");
+add("en","A2","Günlük Rutin","take out the trash","çöpü çıkarmak","phrase","Please take out the trash tonight.","Lütfen bu gece çöpü çıkar.");
+add("en","A2","Hava Durumu","thunder","gök gürültüsü","noun","I hate the sound of thunder.","Gök gürültüsü sesinden nefret ederim.");
+add("en","A2","Hava Durumu","lightning","şimşek","noun","The lightning lit up the sky.","Şimşek gökyüzünü aydınlattı.");
+add("en","A2","Hava Durumu","humid","nemli","adjective","It's very humid today.","Bugün hava çok nemli.");
+add("en","A2","Hava Durumu","mild","ılıman","adjective","The winter was quite mild this year.","Bu yıl kış oldukça ılımandı.");
+add("en","A2","Hava Durumu","freezing","dondurucu","adjective","It's freezing outside today.","Bugün dışarısı dondurucu.");
+add("en","A2","Hava Durumu","boiling","kaynar / çok sıcak","adjective","It's boiling hot in the city.","Şehirde hava çok sıcak.");
+add("en","A2","Hava Durumu","drizzle","çisenti","noun","There is a light drizzle outside.","Dışarıda hafif bir çisenti var.");
+add("en","A2","Hava Durumu","hail","dolu (yağış)","noun","Hail damaged some cars.","Dolu bazı arabalara zarar verdi.");
+add("en","A2","Giysi","raincoat","yağmurluk","noun","Take a raincoat, it might rain.","Bir yağmurluk al, yağmur yağabilir.");
+add("en","A2","Giysi","swimsuit","mayo","noun","Don't forget your swimsuit.","Mayonu unutma.");
+add("en","A2","Giysi","boots","botlar","noun","I need new winter boots.","Yeni kış botlarına ihtiyacım var.");
+add("en","A2","Giysi","belt","kemer","noun","This belt matches your shoes.","Bu kemer ayakkabılarınla uyumlu.");
+add("en","A2","Giysi","earrings","küpeler","noun","She is wearing gold earrings.","Altın küpeler takıyor.");
+add("en","A2","Giysi","necklace","kolye","noun","This necklace was a gift.","Bu kolye bir hediyeydi.");
+add("en","A2","Giysi","fashionable","şık / moda","adjective","Her clothes are always fashionable.","Kıyafetleri her zaman şık.");
+add("en","A2","Boş Zaman","board game","kutu oyunu","noun","We play board games at home.","Evde kutu oyunları oynarız.");
+add("en","A2","Boş Zaman","puzzle","yapboz","noun","This puzzle has a thousand pieces.","Bu yapboz bin parçadan oluşuyor.");
+add("en","A2","Boş Zaman","gardening","bahçıvanlık","noun","Gardening relaxes her.","Bahçıvanlık onu rahatlatıyor.");
+add("en","A2","Boş Zaman","knitting","örgü","noun","My grandmother enjoys knitting.","Büyükannem örgü örmekten hoşlanır.");
+add("en","A2","Boş Zaman","collect stamps","pul biriktirmek","phrase","My uncle collects stamps.","Amcam pul biriktirir.");
+add("en","A2","Boş Zaman","go camping","kamp yapmak","phrase","We go camping every summer.","Her yaz kamp yaparız.");
+add("en","A2","İletişim & Teknoloji","voicemail","sesli mesaj","noun","Please leave a voicemail.","Lütfen sesli mesaj bırakın.");
+add("en","A2","İletişim & Teknoloji","attachment","ek dosya","noun","I forgot to add the attachment.","Ek dosyayı eklemeyi unuttum.");
+add("en","A2","İletişim & Teknoloji","username","kullanıcı adı","noun","What is your username?","Kullanıcı adın nedir?");
+add("en","A2","İletişim & Teknoloji","log in","giriş yapmak","verb","I can't log in to my account.","Hesabıma giriş yapamıyorum.");
+add("en","A2","İletişim & Teknoloji","log out","çıkış yapmak","verb","Remember to log out.","Çıkış yapmayı unutma.");
+add("en","A2","İletişim & Teknoloji","notification","bildirim","noun","I got a notification just now.","Az önce bir bildirim aldım.");
+add("en","A2","İletişim & Teknoloji","contact list","kişi listesi","noun","Add her to your contact list.","Onu kişi listene ekle.");
+add("en","A2","Şehir Yaşamı","pedestrian","yaya","noun","Watch out for pedestrians.","Yayalara dikkat et.");
+add("en","A2","Şehir Yaşamı","roundabout","göbekli kavşak","noun","Turn right at the roundabout.","Göbekli kavşakta sağa dön.");
+add("en","A2","Şehir Yaşamı","pavement","kaldırım","noun","Walk on the pavement, please.","Lütfen kaldırımda yürü.");
+add("en","A2","Şehir Yaşamı","traffic jam","trafik sıkışıklığı","noun","We were stuck in a traffic jam.","Trafik sıkışıklığında kaldık.");
+add("en","A2","Şehir Yaşamı","public transport","toplu taşıma","noun","I prefer public transport.","Toplu taşımayı tercih ederim.");
+add("en","A2","Şehir Yaşamı","suburb","banliyö","noun","They live in a quiet suburb.","Sakin bir banliyöde yaşıyorlar.");
+add("en","A2","Şehir Yaşamı","skyscraper","gökdelen","noun","The skyscraper is very tall.","Gökdelen çok uzun.");
+add("en","A2","Alışveriş","refund","geri ödeme","noun","I would like a refund, please.","Bir geri ödeme istiyorum lütfen.");
+add("en","A2","Alışveriş","voucher","hediye çeki / kupon","noun","I have a voucher for this shop.","Bu dükkan için bir kuponum var.");
+add("en","A2","Alışveriş","checkout","kasa (ödeme)","noun","The checkout line is very long.","Kasa kuyruğu çok uzun.");
+add("en","A2","Alışveriş","shopping cart","alışveriş arabası","noun","The shopping cart is full.","Alışveriş arabası dolu.");
+add("en","A2","Alışveriş","bargain","kelepir / pazarlık yapmak","noun","This is a real bargain.","Bu gerçek bir kelepir.");
+add("en","A2","Alışveriş","cashless","nakitsiz","adjective","This shop is completely cashless.","Bu dükkan tamamen nakitsiz.");
+add("en","A2","Yiyecek","leftovers","artık yemek","noun","We ate the leftovers for lunch.","Öğle yemeğinde artıkları yedik.");
+add("en","A2","Yiyecek","takeaway","paket servis","noun","Let's order a takeaway tonight.","Bu gece paket servis sipariş edelim.");
+add("en","A2","Yiyecek","recipe","tarif","noun","This recipe is very easy.","Bu tarif çok kolay.");
+add("en","A2","Yiyecek","ingredient","malzeme (yemek)","noun","We need one more ingredient.","Bir malzemeye daha ihtiyacımız var.");
+add("en","A2","Yiyecek","allergic reaction","alerjik reaksiyon","noun","She had an allergic reaction to nuts.","Fındığa alerjik reaksiyon gösterdi.");
+add("en","A2","Yiyecek","vegetarian","vejetaryen","adjective","He has been vegetarian for years.","Yıllardır vejetaryen.");
+add("en","A2","Yiyecek","organic","organik","adjective","We only buy organic vegetables.","Sadece organik sebze alırız.");
+add("en","A2","Duygular","embarrassing","utandırıcı","adjective","That was such an embarrassing moment.","O gerçekten utandırıcı bir andı.");
+add("en","A2","Duygular","homesick","memleket hasreti çeken","adjective","She feels homesick sometimes.","Bazen memleketini özlüyor.");
+add("en","A2","Duygular","grateful","minnettar","adjective","I am grateful for your help.","Yardımın için minnettarım.");
+add("en","A2","İş & Okul","part-time job","yarı zamanlı iş","noun","She has a part-time job at a café.","Bir kafede yarı zamanlı işi var.");
+add("en","A2","İş & Okul","full-time job","tam zamanlı iş","noun","He is looking for a full-time job.","Tam zamanlı bir iş arıyor.");
+add("en","A2","İş & Okul","boss","patron","noun","My boss is very understanding.","Patronum çok anlayışlı.");
+add("en","A2","İş & Okul","employee","çalışan","noun","The company has fifty employees.","Şirketin elli çalışanı var.");
+add("en","A2","İş & Okul","office hours","çalışma saatleri","noun","Our office hours are nine to five.","Çalışma saatlerimiz dokuz-beş arasında.");
+add("en","A2","İş & Okul","break time","mola zamanı","noun","We have a short break time.","Kısa bir mola zamanımız var.");
+add("en","A2","Seyahat","luggage","bagaj","noun","My luggage was lost at the airport.","Bagajım havaalanında kayboldu.");
+add("en","A2","Seyahat","boarding pass","biniş kartı","noun","Please show your boarding pass.","Lütfen biniş kartınızı gösterin.");
+add("en","A2","Seyahat","tour guide","tur rehberi","noun","The tour guide spoke three languages.","Tur rehberi üç dil konuşuyordu.");
+add("en","A2","Seyahat","souvenir","hediyelik eşya","noun","I bought a souvenir for my mom.","Anneme bir hediyelik eşya aldım.");
+add("en","A2","Seyahat","local","yerel / yöresel","adjective","We tried the local food.","Yöresel yemekleri denedik.");
+add("en","A2","Seyahat","abroad","yurt dışında","adverb","She studies abroad.","Yurt dışında okuyor.");
+add("en","A2","Sağlık","injury","yaralanma","noun","He recovered quickly from the injury.","Yaralanmadan hızlıca iyileşti.");
+add("en","A2","Sağlık","emergency room","acil servis","noun","We rushed to the emergency room.","Acil servise koştuk.");
+add("en","A2","Sağlık","checkup","kontrol muayenesi","noun","I have a checkup next week.","Gelecek hafta kontrol muayenem var.");
+add("en","A2","Sağlık","first aid","ilk yardım","noun","She knows first aid.","İlk yardım biliyor.");
+add("en","A2","Sağlık","painkiller","ağrı kesici","noun","I need a painkiller for my headache.","Baş ağrım için bir ağrı kesiciye ihtiyacım var.");
+add("en","A2","Aile & İlişkiler","stepfather","üvey baba","noun","His stepfather is very kind.","Üvey babası çok nazik.");
+add("en","A2","Aile & İlişkiler","stepmother","üvey anne","noun","Her stepmother lives abroad.","Üvey annesi yurt dışında yaşıyor.");
+add("en","A2","Aile & İlişkiler","relative","akraba","noun","Many relatives came to the wedding.","Düğüne birçok akraba geldi.");
+add("en","A2","Aile & İlişkiler","engaged","nişanlı","adjective","They got engaged last month.","Geçen ay nişanlandılar.");
+add("en","A2","Aile & İlişkiler","widow","dul kadın","noun","She has been a widow for five years.","Beş yıldır dul.");
+add("en","A2","Zaman & Sıklık","every other day","gün aşırı","phrase","I go running every other day.","Gün aşırı koşuya çıkıyorum.");
+add("en","A2","Zaman & Sıklık","from time to time","zaman zaman","phrase","We meet from time to time.","Zaman zaman görüşürüz.");
+add("en","A2","Zaman & Sıklık","in advance","önceden","phrase","Please book in advance.","Lütfen önceden rezervasyon yapın.");
+add("en","A2","Zaman & Sıklık","as soon as possible","mümkün olan en kısa sürede","phrase","Reply as soon as possible.","Mümkün olan en kısa sürede cevap ver.");
+add("en","A2","Fiiller","apologise","özür dilemek","verb","She apologised for the delay.","Gecikme için özür diledi.");
+add("en","A2","Fiiller","warn","uyarmak","verb","I warned him about the risk.","Onu riziko konusunda uyardım.");
+add("en","A2","Fiiller","refuse","reddetmek","verb","She refused the offer.","Teklifi reddetti.");
+add("en","A2","Fiiller","allow","izin vermek","verb","They don't allow pets here.","Burada evcil hayvanlara izin vermiyorlar.");
+add("en","A2","Fiiller","forbid","yasaklamak","verb","Smoking is forbidden inside.","İçeride sigara yasaktır.");
+add("en","A2","Sıfatlar","crowded","kalabalık","adjective","The train was very crowded.","Tren çok kalabalıktı.");
+add("en","A2","Sıfatlar","spacious","ferah / geniş","adjective","Their new flat is spacious.","Yeni daireleri ferah.");
+add("en","A2","Sıfatlar","cosy","rahat / şirin","adjective","This café feels really cosy.","Bu kafe gerçekten şirin hissettiriyor.");
+add("en","A2","Sıfatlar","polluted","kirlenmiş","adjective","The river is heavily polluted.","Nehir ağır bir şekilde kirlenmiş.");
+add("en","A2","Sıfatlar","peaceful","huzurlu","adjective","The village is very peaceful.","Köy çok huzurlu.");
+add("en","A2","Sıfatlar","lively","canlı / hareketli","adjective","The market is always lively.","Pazar her zaman hareketlidir.");
+add("en","A2","Sıfatlar","exhausting","yorucu","adjective","The trip was exhausting.","Seyahat yorucuydu.");
+add("en","A2","Sıfatlar","annoying","sinir bozucu","adjective","That noise is really annoying.","O gürültü gerçekten sinir bozucu.");
+add("en","A2","Sıfatlar","impressive","etkileyici","adjective","The view was very impressive.","Manzara çok etkileyiciydi.");
+add("en","A2","Sıfatlar","convenient","uygun / elverişli","adjective","This time is convenient for me.","Bu zaman benim için uygun.");
+
 /* 
 ================================================================
    ARABIC — DEVASA KELİME HAVUZU (A1, A2, B1, B2)
@@ -2056,3 +2159,5 @@ add("ar","B2","Eğitim","منهج","müfredat","isim","تم تحديث المن�
 add("ar","B2","Eğitim","أكاديمي","akademik","sıfat","لديها خلفية أكاديمية قوية.","Güçlü bir akademik geçmişi var.");
 add("ar","B2","Duygular","قلق","endişe","isim","أشعر ببعض القلق تجاه الامتحان.","Sınav konusunda biraz endişeliyim.");
 add("ar","B2","Duygular","ثقة بالنفس","özgüven","isim","لديها ثقة كبيرة بالنفس.","Onun büyük bir özgüveni var.");
+
+
