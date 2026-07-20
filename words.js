@@ -1016,6 +1016,80 @@ add("de","A2","Sağlık Ek","die Krücke","koltuk değneği","isim","Sie geht mi
 add("de","A2","Sağlık Ek","der Gips","alçı","isim","Sein Arm ist im Gips.","Onun kolu alçıda.");
 add("de","A2","Sağlık Ek","die Spritze","iğne (tıbbi)","isim","Ich habe Angst vor Spritzen.","İğnelerden korkarım.");
 
+/* ---- 6. TUR: KALAN GOETHE A1-A2 KELİMELERİ (Spor, Doğa, Ulaşım, Fiil/Sıfat tamamlama) ---- */
+add("de","A1","Spor Ek","der Basketball","basketbol","isim","Er spielt gern Basketball.","O basketbol oynamayı sever.");
+add("de","A1","Spor Ek","das Tennis","tenis","isim","Sie spielt jeden Sonntag Tennis.","O her pazar tenis oynuyor.");
+add("de","A1","Spor Ek","das Training","antrenman","isim","Das Training beginnt um sechs.","Antrenman saat altıda başlıyor.");
+add("de","A1","Spor Ek","der Trainer","antrenör","isim","Der Trainer ist sehr streng.","Antrenör çok katı.");
+add("de","A1","Spor Ek","die Mannschaft","takım","isim","Unsere Mannschaft ist sehr gut.","Takımımız çok iyi.");
+add("de","A1","Spor Ek","das Tor","gol / kale","isim","Er hat ein Tor geschossen.","Bir gol attı.");
+add("de","A1","Spor Ek","der Sieg","zafer","isim","Der Sieg war knapp.","Zafer çok yakındı.");
+add("de","A1","Spor Ek","die Niederlage","yenilgi","isim","Die Niederlage war schmerzhaft.","Yenilgi acı vericiydi.");
+add("de","A1","Ulaşım Ek","die Straßenbahn","tramvay","isim","Die Straßenbahn ist sehr praktisch.","Tramvay çok pratik.");
+add("de","A1","Ulaşım Ek","das Motorrad","motosiklet","isim","Er fährt gern Motorrad.","O motosiklet sürmeyi sever.");
+add("de","A1","Ulaşım Ek","das Schiff","gemi","isim","Das Schiff verlässt um zwölf den Hafen.","Gemi saat on ikide limandan ayrılıyor.");
+add("de","A1","Ulaşım Ek","der Hafen","liman","isim","Der Hafen ist voller Schiffe.","Liman gemilerle dolu.");
+add("de","A1","Ulaşım Ek","die Fahrt","yolculuk","isim","Die Fahrt dauert zwei Stunden.","Yolculuk iki saat sürüyor.");
+add("de","A1","Ulaşım Ek","das Gepäck","bagaj","isim","Mein Gepäck ist noch nicht da.","Bagajım henüz gelmedi.");
+add("de","A1","Ulaşım Ek","die Verspätung","gecikme","isim","Der Zug hat zehn Minuten Verspätung.","Tren on dakika gecikmeli.");
+add("de","A1","Doğa Ek 2","der Schatten","gölge","isim","Wir sitzen im Schatten.","Gölgede oturuyoruz.");
+add("de","A1","Doğa Ek 2","das Licht","ışık","isim","Das Licht ist zu hell.","Işık çok parlak.");
+add("de","A1","Doğa Ek 2","die Dunkelheit","karanlık","isim","Er hat Angst vor der Dunkelheit.","O karanlıktan korkuyor.");
+add("de","A1","Doğa Ek 2","die Wurzel","kök","isim","Die Wurzeln des Baumes sind tief.","Ağacın kökleri derin.");
+add("de","A1","Doğa Ek 2","der Ast","dal","isim","Der Vogel sitzt auf einem Ast.","Kuş bir dalın üzerinde oturuyor.");
+add("de","A1","Doğa Ek 2","das Blatt","yaprak","isim","Die Blätter fallen im Herbst.","Yapraklar sonbaharda düşer.");
+add("de","A1","Eylemler Ek 3","pflanzen","dikmek (bitki)","fiil","Wir pflanzen einen Baum.","Bir ağaç dikiyoruz.");
+add("de","A1","Eylemler Ek 3","gießen","sulamak","fiil","Ich gieße die Blumen jeden Tag.","Çiçekleri her gün suluyorum.");
+add("de","A1","Eylemler Ek 3","ernten","hasat etmek","fiil","Die Bauern ernten den Weizen.","Çiftçiler buğdayı hasat ediyor.");
+add("de","A1","Eylemler Ek 3","füttern","beslemek (hayvan)","fiil","Ich füttere die Katze.","Kediyi besliyorum.");
+add("de","A1","Eylemler Ek 3","streicheln","okşamak","fiil","Sie streichelt den Hund.","O köpeği okşuyor.");
+add("de","A1","Eylemler Ek 3","jagen","avlamak","fiil","Löwen jagen andere Tiere.","Aslanlar diğer hayvanları avlar.");
+add("de","A1","Eylemler Ek 3","fliehen","kaçmak","fiil","Die Maus flieht vor der Katze.","Fare kediden kaçıyor.");
+add("de","A1","Eylemler Ek 3","verstecken","saklamak/saklanmak","fiil","Das Kind versteckt sich.","Çocuk saklanıyor.");
+add("de","A1","Eylemler Ek 3","klettern","tırmanmak","fiil","Die Kinder klettern auf den Baum.","Çocuklar ağaca tırmanıyor.");
+add("de","A1","Eylemler Ek 3","rutschen","kaymak","fiil","Pass auf, der Boden ist rutschig.","Dikkat et, zemin kaygan.");
+add("de","A1","Eylemler Ek 3","balancieren","denge kurmak","fiil","Er balanciert auf dem Seil.","O ipin üzerinde denge kuruyor.");
+add("de","A1","Eylemler Ek 3","rudern","kürek çekmek","fiil","Wir rudern auf dem See.","Gölde kürek çekiyoruz.");
+add("de","A1","Eylemler Ek 3","segeln","yelken açmak","fiil","Sie segelt jeden Sommer.","O her yaz yelken açar.");
+add("de","A1","Eylemler Ek 3","tauchen","dalmak","fiil","Er taucht gern im Meer.","Denizde dalmayı sever.");
+add("de","A1","Eylemler Ek 3","rodeln","kızak kaymak","fiil","Die Kinder rodeln im Winter.","Çocuklar kışın kızak kayar.");
+add("de","A1","Sıfatlar Ek 3","feige","korkak","sıfat","Sei nicht so feige.","Bu kadar korkak olma.");
+add("de","A1","Sıfatlar Ek 3","schwach","zayıf (güçsüz)","sıfat","Nach der Krankheit fühlt er sich schwach.","Hastalıktan sonra kendini zayıf hissediyor.");
+add("de","A1","Sıfatlar Ek 3","fit","formda","sıfat","Sie ist sehr fit.","O çok formda.");
+add("de","A1","Sıfatlar Ek 3","wach","uyanık","sıfat","Ich bin schon ganz wach.","Zaten tamamen uyanığım.");
+add("de","A1","Sıfatlar Ek 3","schläfrig","uykulu","sıfat","Ich fühle mich schläfrig.","Kendimi uykulu hissediyorum.");
+add("de","A1","Sıfatlar Ek 3","hübsch","şirin / hoş","sıfat","Das Kleid ist wirklich hübsch.","Elbise gerçekten şirin.");
+add("de","A1","Sıfatlar Ek 3","hässlich","çirkin","sıfat","Das Gebäude ist ziemlich hässlich.","Bina oldukça çirkin.");
+add("de","A1","Yerler Ek","der Platz","meydan","isim","Der Platz ist immer voller Menschen.","Meydan her zaman insan dolu.");
+add("de","A1","Yerler Ek","das Denkmal","anıt","isim","Das Denkmal steht in der Stadtmitte.","Anıt şehir merkezinde duruyor.");
+add("de","A1","Yerler Ek","die Brücke","köprü","isim","Die Brücke führt über den Fluss.","Köprü nehrin üzerinden geçiyor.");
+add("de","A1","Yerler Ek","der Turm","kule","isim","Der Turm ist sehr hoch.","Kule çok yüksek.");
+add("de","A1","Yerler Ek","das Schloss","şato / kale","isim","Das Schloss ist sehr alt.","Şato çok eski.");
+add("de","A1","Yerler Ek","die Ruine","harabe","isim","Wir besichtigen die alte Ruine.","Eski harabeyi geziyoruz.");
+add("de","A1","Yerler Ek","der Marktplatz","pazar meydanı","isim","Der Marktplatz ist samstags voll.","Pazar meydanı cumartesileri dolu.");
+add("de","A1","Ölçüler Ek","der Zentimeter","santimetre","isim","Das Blatt ist dreißig Zentimeter lang.","Kağıt otuz santimetre uzunluğunda.");
+add("de","A1","Ölçüler Ek","der Kilometer","kilometre","isim","Die Strecke ist zehn Kilometer lang.","Yol on kilometre uzunluğunda.");
+add("de","A1","Ölçüler Ek","das Gewicht","ağırlık","isim","Das Gewicht des Pakets ist zwei Kilo.","Paketin ağırlığı iki kilo.");
+add("de","A1","İletişim Ek","der Akzent","aksan","isim","Er hat einen starken Akzent.","Onun güçlü bir aksanı var.");
+add("de","A1","İletişim Ek","die Übersetzung","çeviri","isim","Die Übersetzung ist nicht genau.","Çeviri tam olarak doğru değil.");
+add("de","A1","İletişim Ek","der Dolmetscher","tercüman","isim","Wir brauchen einen Dolmetscher.","Bir tercümana ihtiyacımız var.");
+add("de","A1","İletişim Ek","das Wörterbuch","sözlük","isim","Ich benutze oft ein Wörterbuch.","Sık sık bir sözlük kullanırım.");
+add("de","A1","Eğitim Ek 2","der Direktor","müdür (okul)","isim","Der Direktor ist sehr freundlich.","Müdür çok samimi.");
+add("de","A1","Eğitim Ek 2","die Klassenkameraden","sınıf arkadaşları","isim","Meine Klassenkameraden sind nett.","Sınıf arkadaşlarım çok kibar.");
+add("de","A1","Eğitim Ek 2","die Semesterferien","dönem tatili","isim","Die Semesterferien beginnen bald.","Dönem tatili yakında başlıyor.");
+add("de","A2","Toplum Ek","die Demokratie","demokrasi","isim","Demokratie basiert auf freien Wahlen.","Demokrasi özgür seçimlere dayanır.");
+add("de","A2","Toplum Ek","die Freiheit","özgürlük","isim","Freiheit ist sehr wichtig für uns.","Özgürlük bizim için çok önemlidir.");
+add("de","A2","Toplum Ek","die Gerechtigkeit","adalet","isim","Die Menschen fordern Gerechtigkeit.","İnsanlar adalet talep ediyor.");
+add("de","A2","Toplum Ek","die Gleichheit","eşitlik","isim","Gleichheit ist ein wichtiges Ziel.","Eşitlik önemli bir hedeftir.");
+add("de","A2","Ekonomi","das Geld","para","isim","Ich habe nicht genug Geld.","Yeterince param yok.");
+add("de","A2","Ekonomi","das Konto","hesap (banka)","isim","Ich habe ein neues Konto eröffnet.","Yeni bir hesap açtım.");
+add("de","A2","Ekonomi","die Kreditkarte","kredi kartı","isim","Ich bezahle mit Kreditkarte.","Kredi kartıyla ödüyorum.");
+add("de","A2","Ekonomi","der Kredit","kredi","isim","Sie hat einen Kredit aufgenommen.","Bir kredi çekti.");
+add("de","A2","Politika ve Hukuk","der Präsident","cumhurbaşkanı / başkan","isim","Der Präsident hält eine Rede.","Cumhurbaşkanı bir konuşma yapıyor.");
+add("de","A2","Politika ve Hukuk","das Parlament","parlamento","isim","Das Parlament stimmt heute ab.","Parlamento bugün oylama yapıyor.");
+add("de","A2","Politika ve Hukuk","die Partei","parti (siyasi)","isim","Er ist Mitglied einer Partei.","O bir partinin üyesi.");
+add("de","A2","Politika ve Hukuk","der Bürger","vatandaş","isim","Jeder Bürger hat Rechte.","Her vatandaşın hakları vardır.");
+
 /* 
 ================================================================
    ENGLISH — DEVASA KELİME HAVUZU (A1, A2, B1, B2)
@@ -2333,6 +2407,67 @@ add("en","A2","Sağlık Ek","crutches","koltuk değneği","noun","She walks with
 add("en","A2","Sağlık Ek","cast","alçı","noun","His arm is in a cast.","Onun kolu alçıda.");
 add("en","A2","Sağlık Ek","injection","iğne (tıbbi)","noun","I am afraid of injections.","İğnelerden korkarım.");
 
+/* ---- İNGİLİZCE: Spor, Doğa, Ulaşım, Fiil/Sıfat tamamlama ---- */
+add("en","A1","Spor Ek","basketball","basketbol","noun","He likes playing basketball.","O basketbol oynamayı sever.");
+add("en","A1","Spor Ek","tennis","tenis","noun","She plays tennis every Sunday.","O her pazar tenis oynuyor.");
+add("en","A1","Spor Ek","coach","antrenör","noun","The coach is very strict.","Antrenör çok katı.");
+add("en","A1","Spor Ek","team","takım","noun","Our team is very good.","Takımımız çok iyi.");
+add("en","A1","Spor Ek","victory","zafer","noun","The victory was close.","Zafer çok yakındı.");
+add("en","A1","Spor Ek","defeat","yenilgi","noun","The defeat was painful.","Yenilgi acı vericiydi.");
+add("en","A1","Ulaşım Ek","tram","tramvay","noun","The tram is very practical.","Tramvay çok pratik.");
+add("en","A1","Ulaşım Ek","motorcycle","motosiklet","noun","He likes riding a motorcycle.","O motosiklet sürmeyi sever.");
+add("en","A1","Ulaşım Ek","port","liman","noun","The port is full of ships.","Liman gemilerle dolu.");
+add("en","A1","Ulaşım Ek","journey","yolculuk","noun","The journey takes two hours.","Yolculuk iki saat sürüyor.");
+add("en","A1","Ulaşım Ek","delay","gecikme","noun","The train has a ten minute delay.","Tren on dakika gecikmeli.");
+add("en","A1","Doğa Ek 2","shadow","gölge","noun","We sit in the shadow.","Gölgede oturuyoruz.");
+add("en","A1","Doğa Ek 2","darkness","karanlık","noun","He is afraid of darkness.","O karanlıktan korkuyor.");
+add("en","A1","Doğa Ek 2","root","kök","noun","The tree's roots are deep.","Ağacın kökleri derin.");
+add("en","A1","Doğa Ek 2","branch","dal","noun","The bird sits on a branch.","Kuş bir dalın üzerinde oturuyor.");
+add("en","A1","Doğa Ek 2","leaf","yaprak","noun","The leaves fall in autumn.","Yapraklar sonbaharda düşer.");
+add("en","A1","Eylemler Ek 3","plant","dikmek (bitki)","verb","We are planting a tree.","Bir ağaç dikiyoruz.");
+add("en","A1","Eylemler Ek 3","water (a plant)","sulamak","verb","I water the flowers every day.","Çiçekleri her gün suluyorum.");
+add("en","A1","Eylemler Ek 3","harvest","hasat etmek","verb","The farmers harvest the wheat.","Çiftçiler buğdayı hasat ediyor.");
+add("en","A1","Eylemler Ek 3","feed","beslemek (hayvan)","verb","I feed the cat.","Kediyi besliyorum.");
+add("en","A1","Eylemler Ek 3","stroke","okşamak","verb","She strokes the dog.","O köpeği okşuyor.");
+add("en","A1","Eylemler Ek 3","hunt","avlamak","verb","Lions hunt other animals.","Aslanlar diğer hayvanları avlar.");
+add("en","A1","Eylemler Ek 3","flee","kaçmak","verb","The mouse flees from the cat.","Fare kediden kaçıyor.");
+add("en","A1","Eylemler Ek 3","hide","saklamak/saklanmak","verb","The child hides.","Çocuk saklanıyor.");
+add("en","A1","Eylemler Ek 3","climb","tırmanmak","verb","The children climb the tree.","Çocuklar ağaca tırmanıyor.");
+add("en","A1","Eylemler Ek 3","slip","kaymak","verb","Be careful, the floor is slippery.","Dikkat et, zemin kaygan.");
+add("en","A1","Eylemler Ek 3","row","kürek çekmek","verb","We row on the lake.","Gölde kürek çekiyoruz.");
+add("en","A1","Eylemler Ek 3","sail","yelken açmak","verb","She sails every summer.","O her yaz yelken açar.");
+add("en","A1","Eylemler Ek 3","dive","dalmak","verb","He likes diving in the sea.","Denizde dalmayı sever.");
+add("en","A1","Sıfatlar Ek 3","cowardly","korkak","adjective","Don't be so cowardly.","Bu kadar korkak olma.");
+add("en","A1","Sıfatlar Ek 3","fit","formda","adjective","She is very fit.","O çok formda.");
+add("en","A1","Sıfatlar Ek 3","awake","uyanık","adjective","I am already fully awake.","Zaten tamamen uyanığım.");
+add("en","A1","Sıfatlar Ek 3","sleepy","uykulu","adjective","I feel sleepy.","Kendimi uykulu hissediyorum.");
+add("en","A1","Sıfatlar Ek 3","pretty","şirin / hoş","adjective","The dress is really pretty.","Elbise gerçekten şirin.");
+add("en","A1","Sıfatlar Ek 3","ugly","çirkin","adjective","The building is quite ugly.","Bina oldukça çirkin.");
+add("en","A1","Yerler Ek","square","meydan","noun","The square is always full of people.","Meydan her zaman insan dolu.");
+add("en","A1","Yerler Ek","monument","anıt","noun","The monument stands in the city center.","Anıt şehir merkezinde duruyor.");
+add("en","A1","Yerler Ek","bridge","köprü","noun","The bridge crosses the river.","Köprü nehrin üzerinden geçiyor.");
+add("en","A1","Yerler Ek","tower","kule","noun","The tower is very tall.","Kule çok yüksek.");
+add("en","A1","Yerler Ek","castle","şato / kale","noun","The castle is very old.","Şato çok eski.");
+add("en","A1","Yerler Ek","ruins","harabe","noun","We are visiting the old ruins.","Eski harabeyi geziyoruz.");
+add("en","A1","Ölçüler Ek","centimeter","santimetre","noun","The paper is thirty centimeters long.","Kağıt otuz santimetre uzunluğunda.");
+add("en","A1","Ölçüler Ek","kilometer","kilometre","noun","The road is ten kilometers long.","Yol on kilometre uzunluğunda.");
+add("en","A1","Ölçüler Ek","weight","ağırlık","noun","The weight of the parcel is two kilos.","Paketin ağırlığı iki kilo.");
+add("en","A1","İletişim Ek","accent","aksan","noun","He has a strong accent.","Onun güçlü bir aksanı var.");
+add("en","A1","İletişim Ek","translation","çeviri","noun","The translation is not accurate.","Çeviri tam olarak doğru değil.");
+add("en","A1","İletişim Ek","interpreter","tercüman","noun","We need an interpreter.","Bir tercümana ihtiyacımız var.");
+add("en","A1","İletişim Ek","dictionary","sözlük","noun","I often use a dictionary.","Sık sık bir sözlük kullanırım.");
+add("en","A1","Eğitim Ek 2","principal","müdür (okul)","noun","The principal is very friendly.","Müdür çok samimi.");
+add("en","A1","Eğitim Ek 2","classmates","sınıf arkadaşları","noun","My classmates are nice.","Sınıf arkadaşlarım çok kibar.");
+add("en","A1","Eğitim Ek 2","semester break","dönem tatili","noun","The semester break starts soon.","Dönem tatili yakında başlıyor.");
+add("en","A2","Toplum Ek","freedom","özgürlük","noun","Freedom is very important to us.","Özgürlük bizim için çok önemlidir.");
+add("en","A2","Toplum Ek","equality","eşitlik","noun","Equality is an important goal.","Eşitlik önemli bir hedeftir.");
+add("en","A2","Ekonomi Ek","bank account","banka hesabı","noun","I opened a new bank account.","Yeni bir banka hesabı açtım.");
+add("en","A2","Ekonomi Ek","credit card","kredi kartı","noun","I pay with a credit card.","Kredi kartıyla ödüyorum.");
+add("en","A2","Ekonomi Ek","loan","kredi (borç)","noun","She took out a loan.","Bir kredi çekti.");
+add("en","A2","Politika ve Hukuk","president","cumhurbaşkanı / başkan","noun","The president gives a speech.","Cumhurbaşkanı bir konuşma yapıyor.");
+add("en","A2","Politika ve Hukuk","parliament","parlamento","noun","Parliament votes today.","Parlamento bugün oylama yapıyor.");
+add("en","A2","Politika ve Hukuk","political party","parti (siyasi)","noun","He is a member of a political party.","O bir siyasi partinin üyesi.");
+
 /* 
 ================================================================
    ARABIC — DEVASA KELİME HAVUZU (A1, A2, B1, B2)
@@ -2548,4 +2683,36 @@ add("ar","B2","Eğitim","تراكم معرفي / محو الأمية","okuryazar
 add("ar","B2","Ekonomi","تضخم","enflasyon","isim","التضخم ارتفع بشكل حاد هذا العام.","Enflasyon bu yıl keskin bir şekilde arttı.");
 add("ar","B2","Ekonomi","ركود اقتصادي","durgunluk / resesyon","isim","دخل البلد في ركود اقتصادي.","Ülke bir durgunluğa girdi.");
 add("ar","B2","Sağlık","نظام مناعي","bağışıklık sistemi","isim","الرياضة تقوي النظام المناعي.","Egzersiz bağışıklık sistemini güçlendirir.");
+
+/* ---- ARAPÇA: Spor, Doğa, Meslekler, Zaman genişlemesi ---- */
+add("ar","A1","Spor","كرة القدم","futbol","isim","الأطفال يلعبون كرة القدم.","Çocuklar futbol oynuyor.");
+add("ar","A1","Spor","رياضة","spor","isim","الرياضة مفيدة للصحة.","Spor sağlık için faydalıdır.");
+add("ar","A1","Doğa","شمس مشرقة","parlak güneş","isim","الشمس مشرقة اليوم.","Bugün güneş parlıyor.");
+add("ar","A1","Doğa","نجمة","yıldız","isim","النجوم تلمع في السماء.","Yıldızlar gökyüzünde parlıyor.");
+add("ar","A1","Doğa","قمر","ay (gökcismi)","isim","القمر جميل الليلة.","Bu gece ay güzel.");
+add("ar","A1","Doğa","بحيرة","göl","isim","البحيرة هادئة جدا.","Göl çok sakin.");
+add("ar","A1","Doğa","جبل","dağ","isim","الجبل مغطى بالثلج.","Dağ karla kaplı.");
+add("ar","A1","Meslekler","ممرضة","hemşire","isim","الممرضة لطيفة جدا.","Hemşire çok naziktir.");
+add("ar","A1","Meslekler","شرطي","polis memuru","isim","الشرطي يساعد الناس.","Polis memuru insanlara yardım eder.");
+add("ar","A1","Meslekler","طباخ","aşçı","isim","الطباخ يطبخ جيدا.","Aşçı iyi yemek yapar.");
+add("ar","A1","Zaman","دقيقة","dakika","isim","انتظر دقيقة من فضلك.","Bir dakika bekle lütfen.");
+add("ar","A1","Zaman","ساعة (زمن)","saat (süre)","isim","الفيلم يستغرق ساعتين.","Film iki saat sürüyor.");
+add("ar","A1","Yiyecek","موز","muz","isim","الموز حلو جدا.","Muz çok tatlıdır.");
+add("ar","A1","Yiyecek","خضروات","sebze","isim","الخضروات صحية.","Sebzeler sağlıklıdır.");
+add("ar","A1","Yiyecek","فاكهة","meyve","isim","أحب الفاكهة الطازجة.","Taze meyveyi severim.");
+add("ar","A1","Giysi","بنطلون","pantolon","isim","البنطلون طويل جدا.","Pantolon çok uzun.");
+add("ar","A1","Giysi","حقيبة","çanta","isim","حقيبتي ثقيلة جدا.","Çantam çok ağır.");
+add("ar","A1","Ev","غرفة نوم","yatak odası","isim","غرفة نومي في الطابق العلوي.","Yatak odam üst katta.");
+add("ar","A1","Ev","حمام","banyo","isim","الحمام جديد.","Banyo yeni.");
+add("ar","A2","İş ve Kariyer","اجتماع عمل","iş toplantısı","isim","لدينا اجتماع عمل مهم.","Önemli bir iş toplantımız var.");
+add("ar","A2","Sağlık","دواء","ilaç","isim","يجب أن تأخذ الدواء.","İlacı almalısın.");
+add("ar","A2","Sağlık","صيدلية","eczane","isim","الصيدلية قريبة جدا.","Eczane çok yakın.");
+add("ar","A2","Alışveriş","بطاقة ائتمان","kredi kartı","isim","أدفع ببطاقة الائتمان.","Kredi kartıyla ödüyorum.");
+add("ar","A2","Teknoloji","تطبيق هاتف","telefon uygulaması","isim","هذا التطبيق مفيد جدا.","Bu uygulama çok faydalı.");
+add("ar","B1","Toplum","حرية","özgürlük","isim","الحرية مهمة جدا لنا.","Özgürlük bizim için çok önemlidir.");
+add("ar","B1","Toplum","مساواة","eşitlik","isim","المساواة هدف مهم.","Eşitlik önemli bir hedeftir.");
+add("ar","B1","Politika","رئيس","cumhurbaşkanı / başkan","isim","الرئيس يلقي خطابا.","Cumhurbaşkanı bir konuşma yapıyor.");
+add("ar","B1","Politika","برلمان","parlamento","isim","البرلمان يصوت اليوم.","Parlamento bugün oylama yapıyor.");
+add("ar","B2","Ekonomi","استثمار","yatırım","isim","هذا استثمار محفوف بالمخاطر.","Bu riskli bir yatırım.");
+add("ar","B2","Ekonomi","ميزانية","bütçe","isim","يجب أن نلتزم بالميزانية.","Bütçeye sadık kalmamız gerekiyor.");
 
