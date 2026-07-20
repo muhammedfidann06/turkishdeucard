@@ -22,12 +22,12 @@ const FIREBASE_CONFIG = {
   projectId: "mhamzac-ca73d",
   storageBucket: "mhamzac-ca73d.firebasestorage.app",
   messagingSenderId: "1002199445271",
-  appId: "1:1002199445271:web:d0fa9caafefb855b679152","
+  appId: "1:1002199445271:web:2c6620ff1db498c4679152"
 };
 
 function initLeaderboard(){
   try{
-    const isConfigured = FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.apiKey.indexOf('AIzaSyBHgCtHuIunwlleLCxFCexErrjyZkuNYE0') === -1;
+    const isConfigured = FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.apiKey.indexOf('BURAYA_YAPISTIR') === -1;
     let db = null;
 
     if(isConfigured && typeof firebase !== 'undefined'){
@@ -160,16 +160,16 @@ function initLeaderboard(){
     const existing = getStoredName();
     if(existing){
       startTracking(existing);
-    } else {
-      const splash = document.getElementById('splash');
-      if(splash){
-        splash.addEventListener('click', () => {
-          setTimeout(showNameModal, 850);
-        });
-      } else {
+    }
+
+    // Ana script (splash tıklamasını zaten yönetiyor) bu fonksiyonu çağırarak
+    // ismi henüz kayıtlı değilse modalı güvenilir şekilde açar.
+    window.LB_checkName = function(){
+      if(!getStoredName()){
         showNameModal();
       }
-    }
+    };
+    window.LB_startTracking = startTracking;
   }catch(err){
     console.error('Liderlik tablosu başlatılırken hata oluştu:', err);
   }
