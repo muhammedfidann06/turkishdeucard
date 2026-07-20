@@ -349,18 +349,23 @@
 </div>
 
 <script>
-/* ======================= VOCAB DATA ======================= */
-const COLORS = ["#3dffa0","#4fe8ff","#ff5fb8","#c9ff3e","#9b7bff","#ffd23b"];
-function pair(i){ return [COLORS[i%COLORS.length], COLORS[(i+2)%COLORS.length]]; }
+<script>
+  /* Words.js dosyasını buraya bağlıyoruz */
+</script>
+<script src="Words.js"></script>
 
-const VOCAB = [];
-let _i = 0;
-function add(lang, level, cat, w, tr, pos, ex, exTr){
-  const c = pair(_i++);
-  VOCAB.push({lang, level, cat, w, tr, pos, ex, exTr, c1:c[0], c2:c[1]});
-}
+<script>
+  /* 
+     Burada artık 'const VOCAB = [];' veya 'function add...' 
+     yok. Çünkü onlar zaten Words.js içinde tanımlandı.
+     Doğrudan CONFIG ile devam edebilirsiniz.
+  */
 
-/* 
+
+  
+  // Uygulamanızın geri kalanı...
+</script>
+
 
 
 
