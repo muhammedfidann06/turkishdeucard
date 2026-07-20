@@ -146,7 +146,7 @@ function initLeaderboard(){
         const entries = Object.values(val)
           .filter(v => v && v.name)
           .sort((a,b) => (b.totalSeconds||0) - (a.totalSeconds||0))
-          .slice(0, 15);
+          .slice(0, 3);
         renderLeaderboard(entries);
       }, (err) => {
         console.warn('Liderlik verisi okunamadı:', err);
