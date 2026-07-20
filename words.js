@@ -1090,6 +1090,71 @@ add("de","A2","Politika ve Hukuk","das Parlament","parlamento","isim","Das Parla
 add("de","A2","Politika ve Hukuk","die Partei","parti (siyasi)","isim","Er ist Mitglied einer Partei.","O bir partinin üyesi.");
 add("de","A2","Politika ve Hukuk","der Bürger","vatandaş","isim","Jeder Bürger hat Rechte.","Her vatandaşın hakları vardır.");
 
+/* ---- 7. TUR: KALAN GOETHE A1-A2 KELİMELERİ (Bilgisayar, İnternet, Kişilik, Fiil tamamlama) ---- */
+add("de","A1","Bilgisayar Ek","der Drucker","yazıcı","isim","Der Drucker ist kaputt.","Yazıcı bozuk.");
+add("de","A1","Bilgisayar Ek","die Software","yazılım","isim","Diese Software ist sehr nützlich.","Bu yazılım çok faydalı.");
+add("de","A1","Bilgisayar Ek","herunterfahren","kapatmak (bilgisayar)","fiil","Ich fahre den Computer herunter.","Bilgisayarı kapatıyorum.");
+add("de","A1","Bilgisayar Ek","einschalten","açmak (cihaz)","fiil","Schalte bitte das Licht ein.","Lütfen ışığı aç.");
+add("de","A1","Bilgisayar Ek","ausschalten","kapatmak (cihaz)","fiil","Schalte den Fernseher aus.","Televizyonu kapat.");
+add("de","A1","Kişilik Ek","die Persönlichkeit","kişilik","isim","Er hat eine starke Persönlichkeit.","Onun güçlü bir kişiliği var.");
+add("de","A1","Kişilik Ek","der Charakter","karakter","isim","Sein Charakter ist sehr gut.","Onun karakteri çok iyi.");
+add("de","A1","Kişilik Ek","selbstsicher","kendine güvenen","sıfat","Sie wirkt sehr selbstsicher.","O çok kendine güvenen görünüyor.");
+add("de","A1","Kişilik Ek","bescheiden","alçakgönüllü","sıfat","Er ist trotz seines Erfolgs bescheiden.","Başarısına rağmen alçakgönüllü.");
+add("de","A1","Kişilik Ek","arrogant","kibirli","sıfat","Sein Verhalten ist arrogant.","Onun davranışı kibirli.");
+add("de","A1","Kişilik Ek","unfreundlich","soğuk / sevimsiz","sıfat","Der Verkäufer war unfreundlich.","Satıcı sevimsizdi.");
+add("de","A1","Kişilik Ek","humorvoll","esprili","sıfat","Er ist ein humorvoller Mensch.","O esprili bir insan.");
+add("de","A1","Kişilik Ek","ernsthaft","ciddi","sıfat","Sie ist eine sehr ernsthafte Person.","O çok ciddi bir kişi.");
+add("de","A1","Eylemler Ek 4","aufwachsen","büyümek (çocukken)","fiil","Er ist in Berlin aufgewachsen.","Berlin'de büyüdü.");
+add("de","A1","Eylemler Ek 4","erziehen","yetiştirmek (çocuk)","fiil","Eltern erziehen ihre Kinder.","Ebeveynler çocuklarını yetiştirir.");
+add("de","A1","Eylemler Ek 4","gehorchen","itaat etmek","fiil","Kinder sollen ihren Eltern gehorchen.","Çocuklar ebeveynlerine itaat etmeli.");
+add("de","A1","Eylemler Ek 4","sich benehmen","davranmak","fiil","Benimm dich bitte gut.","Lütfen iyi davran.");
+add("de","A1","Eylemler Ek 4","sich entwickeln","gelişmek","fiil","Das Kind entwickelt sich schnell.","Çocuk hızlı gelişiyor.");
+add("de","A1","Eylemler Ek 4","reifen","olgunlaşmak","fiil","Die Früchte reifen im Sommer.","Meyveler yazın olgunlaşır.");
+add("de","A1","Eylemler Ek 4","altern","yaşlanmak","fiil","Wir altern alle irgendwann.","Hepimiz bir gün yaşlanırız.");
+add("de","A1","Eylemler Ek 4","sich verändern","değişmek (kişi)","fiil","Er hat sich sehr verändert.","O çok değişti.");
+add("de","A1","Eylemler Ek 4","überleben","hayatta kalmak","fiil","Sie haben den Unfall überlebt.","Kazadan sağ kurtuldular.");
+add("de","A1","Eylemler Ek 4","ums Leben kommen","hayatını kaybetmek","kalıp","Er ist bei dem Unfall ums Leben gekommen.","Kazada hayatını kaybetti.");
+add("de","A1","Eylemler Ek 4","begraben","gömmek / defnetmek","fiil","Er wurde auf dem Friedhof begraben.","Mezarlığa defnedildi.");
+add("de","A1","Eylemler Ek 4","trauern","yas tutmak","fiil","Die Familie trauert um ihn.","Aile onun için yas tutuyor.");
+add("de","A1","Eylemler Ek 4","beten","dua etmek","fiil","Sie betet jeden Abend.","O her akşam dua eder.");
+add("de","A1","Din Ek","der Glaube","inanç","isim","Der Glaube gibt ihr Kraft.","İnanç ona güç veriyor.");
+add("de","A1","Din Ek","die Religion","din","isim","Religion ist ein sensibles Thema.","Din hassas bir konudur.");
+add("de","A1","Din Ek","die Moschee","cami","isim","Die Moschee ist sehr alt.","Cami çok eski.");
+add("de","A1","Yiyecek Ek 2","das Getränk","içecek","isim","Welches Getränk möchtest du?","Hangi içeceği istersin?");
+add("de","A1","Yiyecek Ek 2","der Snack","atıştırmalık","isim","Ich brauche einen kleinen Snack.","Küçük bir atıştırmalığa ihtiyacım var.");
+add("de","A1","Yiyecek Ek 2","die Portion","porsiyon","isim","Eine Portion reicht mir.","Bir porsiyon bana yeter.");
+add("de","A1","Yiyecek Ek 2","bestellen","sipariş vermek","fiil","Ich möchte etwas bestellen.","Bir şey sipariş vermek istiyorum.");
+add("de","A1","Yiyecek Ek 2","die Rechnung","hesap (restoran)","isim","Die Rechnung, bitte.","Hesap, lütfen.");
+add("de","A1","Yiyecek Ek 2","das Trinkgeld","bahşiş","isim","Wir geben immer Trinkgeld.","Her zaman bahşiş veririz.");
+add("de","A1","Yiyecek Ek 2","reservieren","rezervasyon yapmak","fiil","Ich möchte einen Tisch reservieren.","Bir masa ayırtmak istiyorum.");
+add("de","A2","Fiiller Ek 3","sich konzentrieren","konsantre olmak","fiil","Ich kann mich nicht konzentrieren.","Konsantre olamıyorum.");
+add("de","A2","Fiiller Ek 3","sich erholen","iyileşmek / dinlenmek","fiil","Er erholt sich langsam.","Yavaş yavaş iyileşiyor.");
+add("de","A2","Fiiller Ek 3","sich anpassen","uyum sağlamak","fiil","Sie passt sich schnell an.","Hızlı uyum sağlıyor.");
+add("de","A2","Fiiller Ek 3","sich verhalten","davranmak (durum)","fiil","Er hat sich seltsam verhalten.","Garip davrandı.");
+add("de","A2","Fiiller Ek 3","reagieren","tepki vermek","fiil","Er reagierte sehr ruhig.","Çok sakin tepki verdi.");
+add("de","A2","Fiiller Ek 3","sich weigern","reddetmek (yapmayı)","fiil","Er weigert sich zu antworten.","Cevap vermeyi reddediyor.");
+add("de","A2","Fiiller Ek 3","zustimmen","onaylamak / kabul etmek","fiil","Ich stimme dir voll zu.","Sana tamamen katılıyorum.");
+add("de","A2","Fiiller Ek 3","widersprechen","itiraz etmek","fiil","Er widersprach seinem Chef.","Patronuna itiraz etti.");
+add("de","A2","Fiiller Ek 3","zugeben","kabul etmek (hata)","fiil","Er gibt seinen Fehler zu.","Hatasını kabul ediyor.");
+add("de","A2","Fiiller Ek 3","leugnen","inkar etmek","fiil","Sie leugnet alles.","Her şeyi inkar ediyor.");
+add("de","A2","Sıfatlar Ek 4","überzeugend","ikna edici","sıfat","Seine Argumente waren überzeugend.","Onun argümanları ikna ediciydi.");
+add("de","A2","Sıfatlar Ek 4","logisch","mantıklı","sıfat","Das klingt logisch.","Bu mantıklı geliyor.");
+add("de","A2","Sıfatlar Ek 4","unlogisch","mantıksız","sıfat","Seine Entscheidung war unlogisch.","Onun kararı mantıksızdı.");
+add("de","A2","Sıfatlar Ek 4","vernünftig","makul / akıllıca","sıfat","Das ist eine vernünftige Lösung.","Bu makul bir çözüm.");
+add("de","A2","Sıfatlar Ek 4","albern","saçma / aptalca","sıfat","Das war eine alberne Idee.","Bu saçma bir fikirdi.");
+add("de","A2","Sıfatlar Ek 4","kompliziert","karmaşık","sıfat","Die Situation ist kompliziert.","Durum karmaşık.");
+add("de","A2","Sıfatlar Ek 4","direkt","doğrudan","sıfat","Er ist sehr direkt.","O çok doğrudan konuşur.");
+add("de","A2","Sıfatlar Ek 4","indirekt","dolaylı","sıfat","Er hat es indirekt gesagt.","Bunu dolaylı olarak söyledi.");
+add("de","A2","Zaman Ek 2","der Wecker","çalar saat","isim","Mein Wecker klingelt um sechs.","Çalar saatim altıda çalıyor.");
+add("de","A2","Zaman Ek 2","verschlafen","geç uyanmak","fiil","Ich habe heute verschlafen.","Bugün geç uyandım.");
+add("de","A2","Zaman Ek 2","der Alltag","günlük yaşam","isim","Der Alltag ist manchmal stressig.","Günlük yaşam bazen stresli.");
+add("de","A2","Zaman Ek 2","die Routine","rutin","isim","Ich habe eine feste Routine.","Sabit bir rutinim var.");
+add("de","A2","İlişkiler Ek","die Beziehung","ilişki","isim","Sie haben eine gute Beziehung.","İyi bir ilişkileri var.");
+add("de","A2","İlişkiler Ek","sich verloben","nişanlanmak","fiil","Sie haben sich letzten Monat verlobt.","Geçen ay nişanlandılar.");
+add("de","A2","İlişkiler Ek","sich trennen","ayrılmak","fiil","Sie haben sich getrennt.","Ayrıldılar.");
+add("de","A2","İlişkiler Ek","sich scheiden lassen","boşanmak","fiil","Sie lassen sich scheiden.","Boşanıyorlar.");
+add("de","A2","İlişkiler Ek","der Ex","eski sevgili","isim","Das ist mein Ex.","Bu benim eski sevgilim.");
+
 /* 
 ================================================================
    ENGLISH — DEVASA KELİME HAVUZU (A1, A2, B1, B2)
@@ -2468,6 +2533,58 @@ add("en","A2","Politika ve Hukuk","president","cumhurbaşkanı / başkan","noun"
 add("en","A2","Politika ve Hukuk","parliament","parlamento","noun","Parliament votes today.","Parlamento bugün oylama yapıyor.");
 add("en","A2","Politika ve Hukuk","political party","parti (siyasi)","noun","He is a member of a political party.","O bir siyasi partinin üyesi.");
 
+/* ---- İNGİLİZCE: Bilgisayar, Kişilik, Fiil, İlişkiler tamamlama ---- */
+add("en","A1","Bilgisayar Ek","mouse (computer)","fare (bilgisayar)","noun","The mouse doesn't work.","Fare çalışmıyor.");
+add("en","A1","Bilgisayar Ek","printer","yazıcı","noun","The printer is broken.","Yazıcı bozuk.");
+add("en","A1","Bilgisayar Ek","shut down","kapatmak (bilgisayar)","verb","I shut down the computer.","Bilgisayarı kapatıyorum.");
+add("en","A1","Bilgisayar Ek","turn on","açmak (cihaz)","verb","Please turn on the light.","Lütfen ışığı aç.");
+add("en","A1","Bilgisayar Ek","turn off","kapatmak (cihaz)","verb","Turn off the TV.","Televizyonu kapat.");
+add("en","A1","Kişilik Ek","modest","alçakgönüllü","adjective","He is modest despite his success.","Başarısına rağmen alçakgönüllü.");
+add("en","A1","Kişilik Ek","arrogant","kibirli","adjective","His behavior is arrogant.","Onun davranışı kibirli.");
+add("en","A1","Kişilik Ek","unfriendly","soğuk / sevimsiz","adjective","The seller was unfriendly.","Satıcı sevimsizdi.");
+add("en","A1","Kişilik Ek","humorous","esprili","adjective","He is a humorous person.","O esprili bir insan.");
+add("en","A1","Kişilik Ek","serious","ciddi","adjective","She is a very serious person.","O çok ciddi bir kişi.");
+add("en","A1","Eylemler Ek 4","grow up","büyümek (çocukken)","verb","He grew up in Berlin.","Berlin'de büyüdü.");
+add("en","A1","Eylemler Ek 4","raise (a child)","yetiştirmek (çocuk)","verb","Parents raise their children.","Ebeveynler çocuklarını yetiştirir.");
+add("en","A1","Eylemler Ek 4","obey","itaat etmek","verb","Children should obey their parents.","Çocuklar ebeveynlerine itaat etmeli.");
+add("en","A1","Eylemler Ek 4","behave","davranmak","verb","Please behave well.","Lütfen iyi davran.");
+add("en","A1","Eylemler Ek 4","develop (person)","gelişmek","verb","The child develops quickly.","Çocuk hızlı gelişiyor.");
+add("en","A1","Eylemler Ek 4","age","yaşlanmak","verb","We all age eventually.","Hepimiz bir gün yaşlanırız.");
+add("en","A1","Eylemler Ek 4","survive","hayatta kalmak","verb","They survived the accident.","Kazadan sağ kurtuldular.");
+add("en","A1","Eylemler Ek 4","pass away","hayatını kaybetmek","phrase","He passed away in the accident.","Kazada hayatını kaybetti.");
+add("en","A1","Eylemler Ek 4","bury","gömmek / defnetmek","verb","He was buried in the cemetery.","Mezarlığa defnedildi.");
+add("en","A1","Eylemler Ek 4","mourn","yas tutmak","verb","The family mourns him.","Aile onun için yas tutuyor.");
+add("en","A1","Eylemler Ek 4","pray","dua etmek","verb","She prays every evening.","O her akşam dua eder.");
+add("en","A1","Din Ek","faith","inanç","noun","Faith gives her strength.","İnanç ona güç veriyor.");
+add("en","A1","Din Ek","religion","din","noun","Religion is a sensitive topic.","Din hassas bir konudur.");
+add("en","A1","Din Ek","mosque","cami","noun","The mosque is very old.","Cami çok eski.");
+add("en","A1","Yiyecek Ek 2","drink (noun)","içecek","noun","Which drink would you like?","Hangi içeceği istersin?");
+add("en","A1","Yiyecek Ek 2","snack","atıştırmalık","noun","I need a small snack.","Küçük bir atıştırmalığa ihtiyacım var.");
+add("en","A1","Yiyecek Ek 2","dish (food)","yemek (tabak)","noun","This dish is very tasty.","Bu yemek çok lezzetli.");
+add("en","A1","Yiyecek Ek 2","portion","porsiyon","noun","One portion is enough for me.","Bir porsiyon bana yeter.");
+add("en","A1","Yiyecek Ek 2","order (food)","sipariş vermek","verb","I would like to order something.","Bir şey sipariş vermek istiyorum.");
+add("en","A1","Yiyecek Ek 2","bill (restaurant)","hesap (restoran)","noun","The bill, please.","Hesap, lütfen.");
+add("en","A1","Yiyecek Ek 2","tip (money)","bahşiş","noun","We always leave a tip.","Her zaman bahşiş bırakırız.");
+add("en","A2","Fiiller Ek 3","concentrate","konsantre olmak","verb","I can't concentrate.","Konsantre olamıyorum.");
+add("en","A2","Fiiller Ek 3","adapt (person)","uyum sağlamak","verb","She adapts quickly.","Hızlı uyum sağlıyor.");
+add("en","A2","Fiiller Ek 3","behave (in a situation)","davranmak (durum)","verb","He behaved strangely.","Garip davrandı.");
+add("en","A2","Fiiller Ek 3","agree","onaylamak / kabul etmek","verb","I fully agree with you.","Sana tamamen katılıyorum.");
+add("en","A2","Fiiller Ek 3","contradict","itiraz etmek","verb","He contradicted his boss.","Patronuna itiraz etti.");
+add("en","A2","Fiiller Ek 3","deny","inkar etmek","verb","She denies everything.","Her şeyi inkar ediyor.");
+add("en","A2","Sıfatlar Ek 4","convincing","ikna edici","adjective","His arguments were convincing.","Onun argümanları ikna ediciydi.");
+add("en","A2","Sıfatlar Ek 4","illogical","mantıksız","adjective","His decision was illogical.","Onun kararı mantıksızdı.");
+add("en","A2","Sıfatlar Ek 4","sensible","makul / akıllıca","adjective","That's a sensible solution.","Bu makul bir çözüm.");
+add("en","A2","Sıfatlar Ek 4","silly","saçma / aptalca","adjective","That was a silly idea.","Bu saçma bir fikirdi.");
+add("en","A2","Sıfatlar Ek 4","complicated","karmaşık","adjective","The situation is complicated.","Durum karmaşık.");
+add("en","A2","Sıfatlar Ek 4","direct","doğrudan","adjective","He is very direct.","O çok doğrudan konuşur.");
+add("en","A2","Sıfatlar Ek 4","indirect","dolaylı","adjective","He said it indirectly.","Bunu dolaylı olarak söyledi.");
+add("en","A2","Zaman Ek 2","oversleep","geç uyanmak","verb","I overslept today.","Bugün geç uyandım.");
+add("en","A2","Zaman Ek 2","daily life","günlük yaşam","noun","Daily life can be stressful.","Günlük yaşam bazen stresli olabilir.");
+add("en","A2","İlişkiler Ek","get engaged","nişanlanmak","verb","They got engaged last month.","Geçen ay nişanlandılar.");
+add("en","A2","İlişkiler Ek","break up","ayrılmak","verb","They broke up.","Ayrıldılar.");
+add("en","A2","İlişkiler Ek","get divorced","boşanmak","verb","They are getting divorced.","Boşanıyorlar.");
+add("en","A2","İlişkiler Ek","ex","eski sevgili","noun","That is my ex.","Bu benim eski sevgilim.");
+
 /* 
 ================================================================
    ARABIC — DEVASA KELİME HAVUZU (A1, A2, B1, B2)
@@ -2715,4 +2832,26 @@ add("ar","B1","Politika","رئيس","cumhurbaşkanı / başkan","isim","الرئ
 add("ar","B1","Politika","برلمان","parlamento","isim","البرلمان يصوت اليوم.","Parlamento bugün oylama yapıyor.");
 add("ar","B2","Ekonomi","استثمار","yatırım","isim","هذا استثمار محفوف بالمخاطر.","Bu riskli bir yatırım.");
 add("ar","B2","Ekonomi","ميزانية","bütçe","isim","يجب أن نلتزم بالميزانية.","Bütçeye sadık kalmamız gerekiyor.");
+
+/* ---- ARAPÇA: Kişilik, İlişkiler, Din, Fiil genişlemesi ---- */
+add("ar","A1","Kişilik","شخصية قوية","güçlü kişilik","isim","لديه شخصية قوية.","Onun güçlü bir kişiliği var.");
+add("ar","A1","Kişilik","متواضع","alçakgönüllü","sıfat","هو متواضع رغم نجاحه.","Başarısına rağmen alçakgönüllü.");
+add("ar","A1","Kişilik","مغرور","kibirli","sıfat","سلوكه مغرور.","Onun davranışı kibirli.");
+add("ar","A1","Din","إيمان","inanç","isim","الإيمان يمنحها القوة.","İnanç ona güç veriyor.");
+add("ar","A1","Din","مسجد","cami","isim","المسجد قديم جدا.","Cami çok eski.");
+add("ar","A1","Yiyecek","مشروب","içecek","isim","ماذا تريد أن تشرب؟","Ne içmek istersin?");
+add("ar","A1","Yiyecek","طبق","yemek (tabak)","isim","هذا الطبق لذيذ جدا.","Bu yemek çok lezzetli.");
+add("ar","A2","Eylemler","يتطور","gelişmek","fiil","الطفل يتطور بسرعة.","Çocuk hızlı gelişiyor.");
+add("ar","A2","Eylemler","ينجو","hayatta kalmak","fiil","نجوا من الحادث.","Kazadan sağ kurtuldular.");
+add("ar","A2","Eylemler","يصلي","dua etmek","fiil","تصلي كل مساء.","O her akşam dua eder.");
+add("ar","A2","Eylemler","يوافق","onaylamak / kabul etmek","fiil","أوافقك الرأي تماما.","Sana tamamen katılıyorum.");
+add("ar","A2","Eylemler","ينكر","inkar etmek","fiil","إنها تنكر كل شيء.","O her şeyi inkar ediyor.");
+add("ar","A2","Sıfatlar","معقد","karmaşık","sıfat","الوضع معقد.","Durum karmaşık.");
+add("ar","A2","İlişkiler","علاقة","ilişki","isim","لديهما علاقة جيدة.","İyi bir ilişkileri var.");
+add("ar","A2","İlişkiler","يخطب","nişanlanmak","fiil","خطبا الشهر الماضي.","Geçen ay nişanlandılar.");
+add("ar","A2","İlişkiler","يتطلقان","boşanmak","fiil","إنهما يتطلقان.","Boşanıyorlar.");
+add("ar","B1","Ekonomi","دين","borç","isim","لدى البلد دين كبير.","Ülkenin büyük bir borcu var.");
+add("ar","B1","Toplum","قانون جديد","yeni yasa","isim","القانون الجديد يؤثر على الجميع.","Yeni yasa herkesi etkiliyor.");
+add("ar","B2","Toplum","فساد","yolsuzluk","isim","الفضيحة كشفت فسادا واسعا.","Skandal yaygın yolsuzluğu ortaya çıkardı.");
+add("ar","B2","Görüşler","متحيز","önyargılı / taraflı","sıfat","بدت المقالة متحيزة.","Makale taraflı görünüyordu.");
 
