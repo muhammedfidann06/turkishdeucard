@@ -13,10 +13,15 @@ function add(lang, level, cat, w, tr, pos, ex, exTr){
 add("de","A1","Selamlaşma","Hallo","Merhaba","ünlem","Hallo, wie geht's?","Merhaba, nasılsın?");
 add("de","A1","Selamlaşma","Guten Morgen","Günaydın","ünlem","Guten Morgen, hast du gut geschlafen?","Günaydın, iyi uyudun mu?");
 // ... diğer tüm add satırları ...
+
+/*
 ================================================================
    GERMAN — DEVASA KELİME HAVUZU (A1, A2)
 ================================================================ 
 */
+
+/* A1 Seviyesi (Goethe kelimeleri türlerine göre dağıtıldı) */
+
 /* A1 Seviyesi (Goethe kelimeleri türlerine göre dağıtıldı) */
 add("de","A1","Selamlaşma","Hallo","Merhaba","ünlem","Hallo, wie geht's?","Merhaba, nasılsın?");
 add("de","A1","Selamlaşma","Guten Morgen","Günaydın","ünlem","Guten Morgen, hast du gut geschlafen?","Günaydın, iyi uyudun mu?");
