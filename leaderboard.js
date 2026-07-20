@@ -123,18 +123,27 @@ function initLeaderboard(){
       if(!newKey || !oldKey || newKey === oldKey) return;
       const newRef = db.ref('leaderboard/' + newKey);
       const oldRef = db.ref('leaderboard/' + oldKey);
-      newRef.once('value').then((newSnap) => {
-        const newVal = newSnap.val();
-        const newHasData = newVal && typeof newVal.totalSeconds === 'number' && newVal.totalSeconds > 0;
-        oldRef.once('value').then((oldSnap) => {
-          const oldVal = oldSnap.val();
-          const oldSeconds = oldVal && typeof oldVal.totalSeconds === 'number' ? oldVal.totalSeconds : 0;
-          if(oldSeconds > 0 && !newHasData){
-            // Eski anahtardaki geçmiş süreyi yeni anahtara ekle (bir kereye mahsus).
+      oldRef.once('value').then((oldSnap) => {
+        const oldVal = oldSnap.val();
+        const oldSeconds = oldVal && typeof oldVal.totalSeconds === 'number' ? oldVal.totalSeconds : 0;
+        if(oldSeconds <= 0){
+          return; // eski (bozuk) kayıt zaten yok, temizlenecek bir şey yok
+        }
+        newRef.once('value').then((newSnap) => {
+          const newVal = newSnap.val();
+          const newHasData = newVal && typeof newVal.totalSeconds === 'number' && newVal.totalSeconds > 0;
+          if(!newHasData){
+            // Henüz göç edilmemiş: eski süreyi yeni (tek/kalıcı) anahtara aktar.
             newRef.transaction((current) => {
               const prev = current && typeof current === 'object' ? current : { name: name, totalSeconds: 0 };
               return { name: name, totalSeconds: (prev.totalSeconds || 0) + oldSeconds, lastSeen: Date.now() };
+            }).then(() => {
+              oldRef.remove().catch(()=>{});
             });
+          } else {
+            // Daha önce göç edilmiş ama eski kayıt silinmemiş kalmış (aynı isim
+            // iki ayrı satır olarak görünüyordu) — şimdi temizle.
+            oldRef.remove().catch(()=>{});
           }
         }).catch(()=>{});
       }).catch(()=>{});
