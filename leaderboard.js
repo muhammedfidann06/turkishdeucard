@@ -69,33 +69,58 @@ function initLeaderboard(){
       console.warn('Liderlik tablosu: isim formu elementleri bulunamadı.');
     }
 
-    /* ---------------- SÜRE TAKİBİ (kalıcı, gerçek zamana dayalı, kayıpsız) ---------------- */
+    /* ---------------- SÜRE TAKİBİ (aktiflik bazlı, hile önleyici) ---------------- */
     let currentName = '';
     let heartbeatTimer = null;
-    let sessionStart = 0;      // bu oturumun başladığı an
-    let creditedSeconds = 0;   // bu oturumdan şu ana kadar veritabanına yazılan süre
-    const FLUSH_MS = 5000;     // her 5 saniyede bir gerçek süreyi eşitle
+    let creditedSeconds = 0;     // veritabanına şu ana kadar yazılan aktif süre
+    let activeAccumulated = 0;   // bu oturumda BİRİKEN gerçek aktif süre (hareketsizlik hariç)
+    let lastActivity = Date.now();
+    let lastTick = Date.now();
+    const FLUSH_MS = 5000;       // her 5 saniyede bir eşitle
+    const IDLE_MS = 10000;       // 10 saniye hareketsizlik = duraklat
+
+    // Herhangi bir dokunma, tıklama, kaydırma veya tuş basımı "aktiflik" sayılır.
+    const ACTIVITY_EVENTS = ['click','touchstart','touchmove','mousemove','keydown','scroll','pointerdown'];
+    ACTIVITY_EVENTS.forEach(evt => {
+      window.addEventListener(evt, () => { lastActivity = Date.now(); }, { passive:true });
+    });
+
+    // Her saniye çalışır: son 10 saniye içinde bir hareket olduysa geçen süreyi
+    // aktif süreye ekler; hareketsizlik 10 saniyeyi geçtiyse sayaç OLDUĞU YERDE
+    // durur (hem ekrandaki sayaç hem liderlik tablosu için). Kullanıcı tekrar
+    // dokunduğu an sayaç kaldığı yerden devam eder.
+    function tickActive(){
+      const now = Date.now();
+      const idleFor = now - lastActivity;
+      if(idleFor < IDLE_MS){
+        activeAccumulated += (now - lastTick) / 1000;
+      }
+      lastTick = now;
+    }
+    setInterval(tickActive, 1000);
+
+    function isIdleNow(){
+      return (Date.now() - lastActivity) >= IDLE_MS;
+    }
 
     function startTracking(name){
       currentName = name;
       if(!db) return;
-      if(!sessionStart) sessionStart = Date.now();
       if(heartbeatTimer) clearInterval(heartbeatTimer);
       heartbeatTimer = setInterval(flushElapsed, FLUSH_MS);
     }
 
-    // Ekranın arka plana atılması, kilitlenmesi veya sekmenin askıya alınması
-    // yüzünden zamanlayıcılar gecikse/atlasa bile, her çağrıda "şu ana kadar
-    // GERÇEKTE ne kadar süre geçti" hesaplanıp aradaki fark tek seferde
-    // veritabanına yazılır. Böylece hiçbir saniye kaybolmaz ve ekrandaki
-    // sayaçla liderlik tablosu birbiriyle her zaman tutarlı kalır.
+    // Zamanlayıcılar gecikse/atlasa bile (arka plana atma, ekran kilidi vb.),
+    // her çağrıda birikmiş AKTİF süre ile veritabanına yazılan miktar
+    // karşılaştırılıp aradaki fark tek seferde işlenir. Hareketsiz geçen
+    // süre bu birikimin dışında kaldığı için asla ödüllendirilmez.
     function flushElapsed(useBeacon){
-      if(!currentName || !sessionStart) return;
-      const totalElapsed = (Date.now() - sessionStart) / 1000;
-      const delta = totalElapsed - creditedSeconds;
+      tickActive();
+      if(!currentName) return;
+      const delta = activeAccumulated - creditedSeconds;
       if(delta >= 0.5){
         addSeconds(currentName, delta, useBeacon);
-        creditedSeconds = totalElapsed;
+        creditedSeconds = activeAccumulated;
       }
     }
 
@@ -206,6 +231,8 @@ function initLeaderboard(){
       }
     };
     window.LB_startTracking = startTracking;
+    window.LB_getActiveSeconds = () => activeAccumulated;
+    window.LB_isIdle = isIdleNow;
   }catch(err){
     console.error('Liderlik tablosu başlatılırken hata oluştu:', err);
   }
