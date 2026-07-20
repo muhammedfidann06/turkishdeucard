@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M HAMZA | Dil Kartları</title>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
 <style>
   :root{
     --bg:#1c1226;
@@ -284,6 +286,75 @@
     100%{transform:scaleX(1) scaleY(1);}
   }
 
+  /* ===== İSİM MODALI ===== */
+  #nameOverlay{
+    position:fixed;inset:0;z-index:800;
+    background:rgba(10,4,12,0.78);
+    display:none;align-items:center;justify-content:center;padding:20px;
+  }
+  #nameOverlay.open{display:flex;}
+  .name-card{
+    width:100%;max-width:380px;
+    background:linear-gradient(160deg, var(--panel-2), var(--panel));
+    -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border:1px solid rgba(255,179,123,0.35);border-radius:22px;
+    padding:26px 22px;text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+  }
+  .name-card h3{margin:0 0 6px;font-size:19px;color:var(--text);font-family:Georgia,'Iowan Old Style',serif;}
+  .name-card p{margin:0 0 18px;font-size:12.5px;color:var(--muted);line-height:1.5;}
+  .name-card input{
+    width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,179,123,0.3);
+    background:rgba(0,0,0,0.2);color:var(--text);font-size:15px;margin-bottom:14px;text-align:center;
+  }
+  .name-card input:focus{outline:2px solid var(--cyan-soft);}
+  .name-card button{
+    width:100%;padding:12px 0;border-radius:12px;border:none;cursor:pointer;
+    background:linear-gradient(135deg,var(--cyan),var(--pink));color:#2a1420;font-weight:700;font-size:14px;
+    box-shadow:0 4px 18px rgba(255,127,174,0.35);
+  }
+
+  /* ===== LİDERLİK TABLOSU ===== */
+  .lb-trigger{
+    position:fixed;top:14px;right:14px;z-index:60;
+    display:flex;align-items:center;gap:6px;
+    padding:8px 12px;border-radius:999px;cursor:pointer;
+    background:rgba(40,20,35,0.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border:1px solid rgba(255,210,59,0.4);color:var(--gold);font-size:12px;font-weight:700;
+    box-shadow:0 4px 14px rgba(0,0,0,0.3);
+  }
+  #lbOverlay{
+    position:fixed;inset:0;z-index:700;
+    background:rgba(10,4,12,0.75);
+    display:none;align-items:flex-end;justify-content:center;
+  }
+  #lbOverlay.open{display:flex;}
+  .lb-panel{
+    width:100%;max-width:480px;max-height:75vh;overflow-y:auto;
+    background:linear-gradient(160deg, var(--panel-2), var(--panel));
+    -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border:1px solid rgba(255,210,59,0.3);border-top-left-radius:22px;border-top-right-radius:22px;
+    padding:18px 16px 26px;box-shadow:0 -10px 44px rgba(0,0,0,0.55);
+  }
+  .lb-panel-header{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:15px;font-weight:700;color:var(--gold);margin-bottom:6px;
+    padding-bottom:10px;border-bottom:1px solid rgba(255,210,59,0.18);
+  }
+  .lb-sub{font-size:11.5px;color:var(--muted);margin-bottom:14px;}
+  .lb-row{
+    display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:12px;margin-bottom:6px;
+    background:rgba(255,255,255,0.03);
+  }
+  .lb-row.me{background:rgba(255,210,59,0.14);border:1px solid rgba(255,210,59,0.4);}
+  .lb-rank{width:26px;text-align:center;font-weight:800;color:var(--muted);font-size:13px;}
+  .lb-row:nth-child(1) .lb-rank{color:#ffd23b;}
+  .lb-row:nth-child(2) .lb-rank{color:#dfe4f0;}
+  .lb-row:nth-child(3) .lb-rank{color:#e0a468;}
+  .lb-name{flex:1;font-size:13.5px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .lb-time{font-size:12px;color:var(--cyan-soft);font-weight:700;}
+  .lb-empty{text-align:center;color:var(--muted);font-size:13px;padding:20px 0;}
+
   @media (prefers-reduced-motion: reduce){
     .app, #splash, .card, .bar-fill{transition:none !important;}
     .splash-name, .splash-sub{animation:none !important;}
@@ -294,6 +365,28 @@
 <body>
 
 <div id="fxLayer"></div>
+
+<div class="lb-trigger" id="lbTrigger">🏆 Liderlik</div>
+
+<div id="nameOverlay">
+  <div class="name-card">
+    <h3>Hoş geldin! 👋</h3>
+    <p>Liderlik tablosunda görünmek için adını gir. Sitede geçirdiğin süre kalıcı olarak bu isme eklenecek.</p>
+    <input type="text" id="nameInput" maxlength="20" placeholder="Adını yaz...">
+    <button id="nameSubmit">Başla</button>
+  </div>
+</div>
+
+<div id="lbOverlay">
+  <div class="lb-panel">
+    <div class="lb-panel-header">
+      <span>🏆 Liderlik Tablosu</span>
+      <span class="cat-close" id="lbClose">✕</span>
+    </div>
+    <div class="lb-sub">Sitede en çok vakit geçirenler — herkese açık, kalıcı sıralama</div>
+    <div id="lbList"></div>
+  </div>
+</div>
 
 <div id="catWrap" aria-hidden="true">
   <svg id="cat" viewBox="0 0 100 60" width="86" height="52">
@@ -448,6 +541,7 @@
 </div>
 
 <script src="words.js"></script>
+<script src="leaderboard.js"></script>
 <script>
 /* Kelime verisi artık words.js dosyasından yükleniyor (bkz. yukarıdaki <script src>). */
 /* ======================= CONFIG ======================= */
