@@ -69,20 +69,34 @@ function initLeaderboard(){
       console.warn('Liderlik tablosu: isim formu elementleri bulunamadı.');
     }
 
-    /* ---------------- SÜRE TAKİBİ (kalıcı, atomik artış) ---------------- */
+    /* ---------------- SÜRE TAKİBİ (kalıcı, gerçek zamana dayalı, kayıpsız) ---------------- */
     let currentName = '';
     let heartbeatTimer = null;
-    const HEARTBEAT_SEC = 15;
+    let sessionStart = 0;      // bu oturumun başladığı an
+    let creditedSeconds = 0;   // bu oturumdan şu ana kadar veritabanına yazılan süre
+    const FLUSH_MS = 5000;     // her 5 saniyede bir gerçek süreyi eşitle
 
     function startTracking(name){
       currentName = name;
       if(!db) return;
+      if(!sessionStart) sessionStart = Date.now();
       if(heartbeatTimer) clearInterval(heartbeatTimer);
-      heartbeatTimer = setInterval(() => {
-        if(document.visibilityState === 'visible'){
-          addSeconds(currentName, HEARTBEAT_SEC);
-        }
-      }, HEARTBEAT_SEC * 1000);
+      heartbeatTimer = setInterval(flushElapsed, FLUSH_MS);
+    }
+
+    // Ekranın arka plana atılması, kilitlenmesi veya sekmenin askıya alınması
+    // yüzünden zamanlayıcılar gecikse/atlasa bile, her çağrıda "şu ana kadar
+    // GERÇEKTE ne kadar süre geçti" hesaplanıp aradaki fark tek seferde
+    // veritabanına yazılır. Böylece hiçbir saniye kaybolmaz ve ekrandaki
+    // sayaçla liderlik tablosu birbiriyle her zaman tutarlı kalır.
+    function flushElapsed(){
+      if(!db || !currentName || !sessionStart) return;
+      const totalElapsed = (Date.now() - sessionStart) / 1000;
+      const delta = totalElapsed - creditedSeconds;
+      if(delta >= 1){
+        addSeconds(currentName, delta);
+        creditedSeconds = totalElapsed;
+      }
     }
 
     function addSeconds(name, seconds){
@@ -97,10 +111,12 @@ function initLeaderboard(){
     }
 
     document.addEventListener('visibilitychange', () => {
-      if(document.visibilityState === 'hidden' && currentName){
-        addSeconds(currentName, 3);
-      }
+      // Sekme tekrar görünür olduğunda ya da gizlendiğinde, aradaki gerçek
+      // süreyi hemen veritabanına işle (arka planda geçen süre de dahil).
+      flushElapsed();
     });
+    window.addEventListener('beforeunload', flushElapsed);
+    window.addEventListener('pagehide', flushElapsed);
 
     /* ---------------- LİDERLİK TABLOSU GÖRÜNÜMÜ (splash içinde sabit) ---------------- */
     function fmtTime(totalSeconds){
