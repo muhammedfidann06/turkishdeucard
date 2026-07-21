@@ -1112,10 +1112,33 @@ document.getElementById('tabQuiz').onclick = () => {
 };
 
 /* ======================= INIT ======================= */
-renderLangPair();
-rebuildLevelBox();
-rebuildChips();
-applyFilter();
+try{
+  renderLangPair();
+  rebuildLevelBox();
+  rebuildChips();
+  applyFilter();
+}catch(err){
+  console.error('Kelime verisi yüklenirken hata oluştu (vocab-core.js / vocab-de.js / vocab-en.js / vocab-ar.js dosyalarının hepsi doğru yüklendiğinden emin olun):', err);
+}
+
+/* Güvenlik önlemi: giriş ekranı tıklaması, aşağıdaki süsleme efektlerinden
+   (ay, yıldız, kuş, bulut, kar) TAMAMEN bağımsız olarak burada da kuruluyor.
+   Böylece o efektlerden biri hata verse bile "ekrana dokun" her zaman çalışır. */
+try{
+  const __splashEarly = document.getElementById('splash');
+  const __mainAppEarly = document.getElementById('mainApp');
+  if(__splashEarly && __mainAppEarly){
+    __splashEarly.addEventListener('click', () => {
+      __splashEarly.classList.add('hidden');
+      __mainAppEarly.classList.add('revealed');
+      try{ if(window.LB_checkName) setTimeout(window.LB_checkName, 500); }catch(e){}
+      try{ if(typeof warmUpSpeech === 'function') warmUpSpeech(); }catch(e){}
+      try{ if(typeof startSessionTimer === 'function') startSessionTimer(); }catch(e){}
+    }, { once:true });
+  }
+}catch(err){
+  console.error('Giriş dinleyicisi kurulurken hata oluştu:', err);
+}
 
 /* ======================= AY, YILDIZLAR & KAYAN YILDIZ ======================= */
 (function(){
