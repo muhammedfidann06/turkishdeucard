@@ -4557,4 +4557,204 @@ add("ar","A1","Malzeme Ek 2","مطاط","kauçuk","isim","الإطار مصنو�
 add("ar","A1","Malzeme Ek 2","رخام","mermer","isim","الأرضية مصنوعة من الرخام.","Zemin mermerden yapılmış.");
 add("ar","A1","Malzeme Ek 2","طوب","tuğla","isim","الجدار مصنوع من الطوب.","Duvar tuğladan yapılmış.");
 add("ar","A1","Malzeme Ek 2","خرسانة","beton","isim","الجسر مصنوع من الخرسانة.","Köprü betondan yapılmış.");
+// ==========================================
+// ENGLISH A2 — PART 1
+// ==========================================
 
+add("en","A2","Daily Life","activity","etkinlik","noun","Reading is my favorite activity.","Okumak en sevdiğim etkinliktir.");
+add("en","A2","Daily Life","address","adres","noun","What is your new address?","Yeni adresin nedir?");
+add("en","A2","Daily Life","advice","tavsiye","noun","My father gave me some good advice.","Babam bana iyi bir tavsiye verdi.");
+add("en","A2","Daily Life","area","alan, bölge","noun","This is a beautiful area.","Burası güzel bir bölge.");
+add("en","A2","Daily Life","article","makale, yazı","noun","I read an interesting article.","İlginç bir makale okudum.");
+add("en","A2","Daily Life","attention","dikkat","noun","Please pay attention to the teacher.","Lütfen öğretmene dikkat et.");
+add("en","A2","Daily Life","choice","seçim","noun","You have two choices.","İki seçeneğin var.");
+add("en","A2","Daily Life","condition","durum, koşul","noun","The car is in good condition.","Araba iyi durumda.");
+add("en","A2","Daily Life","decision","karar","noun","It was a difficult decision.","Zor bir karardı.");
+add("en","A2","Daily Life","difference","fark","noun","There is a big difference between them.","Aralarında büyük bir fark var.");
+add("en","A2","Daily Life","example","örnek","noun","Can you give me an example?","Bana bir örnek verebilir misin?");
+add("en","A2","Daily Life","experience","deneyim","noun","It was a great experience.","Harika bir deneyimdi.");
+add("en","A2","Daily Life","fact","gerçek","noun","That is an interesting fact.","Bu ilginç bir gerçek.");
+add("en","A2","Daily Life","habit","alışkanlık","noun","Reading is a good habit.","Okumak iyi bir alışkanlıktır.");
+add("en","A2","Daily Life","idea","fikir","noun","I have a good idea.","İyi bir fikrim var.");
+add("en","A2","Daily Life","information","bilgi","noun","I need more information.","Daha fazla bilgiye ihtiyacım var.");
+add("en","A2","Daily Life","interest","ilgi","noun","I have an interest in history.","Tarihe ilgim var.");
+add("en","A2","Daily Life","invitation","davetiye","noun","Thank you for the invitation.","Davetin için teşekkür ederim.");
+add("en","A2","Daily Life","message","mesaj","noun","I sent you a message.","Sana bir mesaj gönderdim.");
+add("en","A2","Daily Life","mistake","hata","noun","Everyone makes mistakes.","Herkes hata yapar.");
+add("en","A2","Daily Life","opinion","fikir, görüş","noun","What is your opinion?","Senin fikrin nedir?");
+add("en","A2","Daily Life","plan","plan","noun","We have a plan for the weekend.","Hafta sonu için bir planımız var.");
+add("en","A2","Daily Life","problem","sorun","noun","We have a small problem.","Küçük bir sorunumuz var.");
+add("en","A2","Daily Life","reason","sebep","noun","What is the reason?","Sebep nedir?");
+add("en","A2","Daily Life","result","sonuç","noun","The result was surprising.","Sonuç şaşırtıcıydı.");
+add("en","A2","Daily Life","solution","çözüm","noun","We need to find a solution.","Bir çözüm bulmamız gerekiyor.");
+add("en","A2","Daily Life","suggestion","öneri","noun","I have a suggestion.","Bir önerim var.");
+add("en","A2","Daily Life","thing","şey","noun","There are many things to do.","Yapılacak birçok şey var.");
+add("en","A2","Daily Life","way","yol, yöntem","noun","This is the best way to learn.","Öğrenmenin en iyi yolu bu.");
+add("en","A2","Daily Life","world","dünya","noun","The world is changing quickly.","Dünya hızla değişiyor.");
+
+
+// ==========================================
+// A2 — TRAVEL
+// ==========================================
+
+add("en","A2","Travel","airport","havaalanı","noun","We arrived at the airport early.","Havaalanına erken vardık.");
+add("en","A2","Travel","arrival","varış","noun","What time is your arrival?","Varış saatin kaç?");
+add("en","A2","Travel","departure","kalkış","noun","The departure is at eight.","Kalkış saat sekizde.");
+add("en","A2","Travel","journey","yolculuk","noun","The journey took five hours.","Yolculuk beş saat sürdü.");
+add("en","A2","Travel","luggage","bagaj","noun","Where can I leave my luggage?","Bagajımı nereye bırakabilirim?");
+add("en","A2","Travel","passport","pasaport","noun","I forgot my passport.","Pasaportumu unuttum.");
+add("en","A2","Travel","ticket","bilet","noun","I bought a train ticket.","Bir tren bileti aldım.");
+add("en","A2","Travel","platform","peron","noun","The train leaves from platform three.","Tren üçüncü perondan kalkıyor.");
+add("en","A2","Travel","station","istasyon","noun","The station is near my house.","İstasyon evimin yakınında.");
+add("en","A2","Travel","trip","gezi, seyahat","noun","We are planning a trip to London.","Londra'ya bir gezi planlıyoruz.");
+add("en","A2","Travel","tour","tur","noun","We went on a city tour.","Şehir turuna çıktık.");
+add("en","A2","Travel","tourist","turist","noun","Many tourists visit this city.","Birçok turist bu şehri ziyaret ediyor.");
+add("en","A2","Travel","hotel","otel","noun","We stayed at a small hotel.","Küçük bir otelde kaldık.");
+add("en","A2","Travel","reservation","rezervasyon","noun","I made a hotel reservation.","Otel rezervasyonu yaptım.");
+add("en","A2","Travel","reception","resepsiyon","noun","Please ask at the reception.","Lütfen resepsiyona sor.");
+add("en","A2","Travel","single","tek kişilik","adjective","I would like a single room.","Tek kişilik bir oda istiyorum.");
+add("en","A2","Travel","double","çift kişilik","adjective","We booked a double room.","Çift kişilik bir oda ayırttık.");
+add("en","A2","Travel","map","harita","noun","Can you show me on the map?","Bana haritada gösterebilir misin?");
+add("en","A2","Travel","direction","yön","noun","Can you give me directions?","Bana yol tarifi verebilir misin?");
+add("en","A2","Travel","corner","köşe","noun","The bank is on the corner.","Banka köşede.");
+add("en","A2","Travel","bridge","köprü","noun","We walked across the bridge.","Köprünün üzerinden yürüdük.");
+add("en","A2","Travel","square","meydan","noun","Let's meet in the main square.","Ana meydanda buluşalım.");
+add("en","A2","Travel","museum","müze","noun","We visited the museum yesterday.","Dün müzeyi ziyaret ettik.");
+add("en","A2","Travel","castle","kale","noun","The old castle is beautiful.","Eski kale çok güzel.");
+add("en","A2","Travel","beach","plaj","noun","The beach is very crowded today.","Plaj bugün çok kalabalık.");
+add("en","A2","Travel","island","ada","noun","They live on a small island.","Küçük bir adada yaşıyorlar.");
+add("en","A2","Travel","mountain","dağ","noun","We climbed the mountain.","Dağa tırmandık.");
+add("en","A2","Travel","forest","orman","noun","There is a forest near the village.","Köyün yakınında bir orman var.");
+add("en","A2","Travel","river","nehir","noun","The river is very long.","Nehir çok uzun.");
+
+
+// ==========================================
+// A2 — WORK
+// ==========================================
+
+add("en","A2","Work","office","ofis","noun","I work in an office.","Bir ofiste çalışıyorum.");
+add("en","A2","Work","company","şirket","noun","She works for a large company.","Büyük bir şirkette çalışıyor.");
+add("en","A2","Work","manager","yönetici","noun","My manager is very friendly.","Yöneticim çok arkadaş canlısı.");
+add("en","A2","Work","colleague","iş arkadaşı","noun","My colleagues are helpful.","İş arkadaşlarım yardımsever.");
+add("en","A2","Work","meeting","toplantı","noun","We have a meeting tomorrow.","Yarın bir toplantımız var.");
+add("en","A2","Work","job","iş","noun","I am looking for a new job.","Yeni bir iş arıyorum.");
+add("en","A2","Work","career","kariyer","noun","She wants a successful career.","Başarılı bir kariyer istiyor.");
+add("en","A2","Work","salary","maaş","noun","The salary is good.","Maaş iyi.");
+add("en","A2","Work","customer","müşteri","noun","The customer needs help.","Müşterinin yardıma ihtiyacı var.");
+add("en","A2","Work","business","işletme, iş","noun","He has his own business.","Kendi işi var.");
+add("en","A2","Work","project","proje","noun","We are working on a new project.","Yeni bir proje üzerinde çalışıyoruz.");
+add("en","A2","Work","task","görev","noun","I finished my task.","Görevimi bitirdim.");
+add("en","A2","Work","team","ekip","noun","I work in a small team.","Küçük bir ekipte çalışıyorum.");
+add("en","A2","Work","experience","deneyim","noun","You need some experience for this job.","Bu iş için biraz deneyime ihtiyacın var.");
+add("en","A2","Work","interview","mülakat","noun","I have a job interview tomorrow.","Yarın iş mülakatım var.");
+add("en","A2","Work","application","başvuru","noun","I sent my job application.","İş başvurumu gönderdim.");
+add("en","A2","Work","employee","çalışan","noun","The company has many employees.","Şirketin birçok çalışanı var.");
+add("en","A2","Work","employer","işveren","noun","My employer is very helpful.","İşverenim çok yardımsever.");
+add("en","A2","Work","training","eğitim","noun","The company offers training.","Şirket eğitim sunuyor.");
+add("en","A2","Work","break","mola","noun","Let's take a short break.","Kısa bir mola verelim.");
+
+
+// ==========================================
+// A2 — COMMON VERBS
+// ==========================================
+
+add("en","A2","Verbs","accept","kabul etmek","verb","I accepted the invitation.","Daveti kabul ettim.");
+add("en","A2","Verbs","agree","aynı fikirde olmak","verb","I agree with you.","Seninle aynı fikirdeyim.");
+add("en","A2","Verbs","appear","görünmek","verb","A rainbow appeared in the sky.","Gökyüzünde bir gökkuşağı göründü.");
+add("en","A2","Verbs","arrive","varmak","verb","We arrived at the hotel late.","Otele geç vardık.");
+add("en","A2","Verbs","believe","inanmak","verb","I believe you.","Sana inanıyorum.");
+add("en","A2","Verbs","belong","ait olmak","verb","This book belongs to me.","Bu kitap bana ait.");
+add("en","A2","Verbs","borrow","ödünç almak","verb","Can I borrow your pen?","Kalemini ödünç alabilir miyim?");
+add("en","A2","Verbs","cancel","iptal etmek","verb","We had to cancel the trip.","Geziyi iptal etmek zorunda kaldık.");
+add("en","A2","Verbs","celebrate","kutlamak","verb","We celebrate his birthday every year.","Her yıl doğum gününü kutlarız.");
+add("en","A2","Verbs","choose","seçmek","verb","You can choose any color.","Herhangi bir rengi seçebilirsin.");
+add("en","A2","Verbs","collect","toplamak","verb","She collects old books.","Eski kitaplar topluyor.");
+add("en","A2","Verbs","compare","karşılaştırmak","verb","Let's compare the two options.","İki seçeneği karşılaştıralım.");
+add("en","A2","Verbs","complain","şikayet etmek","verb","He always complains about his job.","İşi hakkında her zaman şikayet eder.");
+add("en","A2","Verbs","continue","devam etmek","verb","Please continue your work.","Lütfen işine devam et.");
+add("en","A2","Verbs","decide","karar vermek","verb","I decided to stay at home.","Evde kalmaya karar verdim.");
+add("en","A2","Verbs","describe","tanımlamak, tarif etmek","verb","Can you describe the man?","Adamı tarif edebilir misin?");
+add("en","A2","Verbs","develop","geliştirmek","verb","I want to develop my skills.","Becerilerimi geliştirmek istiyorum.");
+add("en","A2","Verbs","discover","keşfetmek","verb","We discovered a beautiful place.","Güzel bir yer keşfettik.");
+add("en","A2","Verbs","discuss","tartışmak","verb","We discussed the problem.","Sorunu tartıştık.");
+add("en","A2","Verbs","download","indirmek","verb","I downloaded the application.","Uygulamayı indirdim.");
+add("en","A2","Verbs","enter","girmek","verb","Please enter the room.","Lütfen odaya gir.");
+add("en","A2","Verbs","escape","kaçmak","verb","The dog escaped from the garden.","Köpek bahçeden kaçtı.");
+add("en","A2","Verbs","explain","açıklamak","verb","Can you explain this to me?","Bunu bana açıklayabilir misin?");
+add("en","A2","Verbs","fill","doldurmak","verb","Please fill in this form.","Lütfen bu formu doldur.");
+add("en","A2","Verbs","finish","bitirmek","verb","I finished my homework.","Ödevimi bitirdim.");
+add("en","A2","Verbs","follow","takip etmek","verb","Follow me, please.","Lütfen beni takip et.");
+add("en","A2","Verbs","forget","unutmak","verb","Don't forget your keys.","Anahtarlarını unutma.");
+add("en","A2","Verbs","guess","tahmin etmek","verb","Can you guess the answer?","Cevabı tahmin edebilir misin?");
+add("en","A2","Verbs","happen","olmak, meydana gelmek","verb","What happened yesterday?","Dün ne oldu?");
+add("en","A2","Verbs","imagine","hayal etmek","verb","Imagine living in another country.","Başka bir ülkede yaşadığını hayal et.");
+add("en","A2","Verbs","improve","geliştirmek","verb","I want to improve my English.","İngilizcemi geliştirmek istiyorum.");
+add("en","A2","Verbs","include","içermek","verb","The price includes breakfast.","Fiyata kahvaltı dahildir.");
+add("en","A2","Verbs","introduce","tanıtmak","verb","Let me introduce my friend.","Arkadaşımı tanıştırayım.");
+add("en","A2","Verbs","invite","davet etmek","verb","I invited my friends to dinner.","Arkadaşlarımı akşam yemeğine davet ettim.");
+add("en","A2","Verbs","join","katılmak","verb","Would you like to join us?","Bize katılmak ister misin?");
+add("en","A2","Verbs","lend","ödünç vermek","verb","Can you lend me some money?","Bana biraz para ödünç verebilir misin?");
+add("en","A2","Verbs","manage","başarmak, yönetmek","verb","I managed to finish the work.","İşi bitirmeyi başardım.");
+add("en","A2","Verbs","notice","fark etmek","verb","Did you notice the mistake?","Hatayı fark ettin mi?");
+add("en","A2","Verbs","offer","teklif etmek","verb","They offered me a job.","Bana bir iş teklif ettiler.");
+add("en","A2","Verbs","order","sipariş vermek","verb","We ordered pizza.","Pizza sipariş ettik.");
+add("en","A2","Verbs","organize","organize etmek","verb","She organized a party.","Bir parti organize etti.");
+add("en","A2","Verbs","prepare","hazırlamak","verb","I prepared dinner.","Akşam yemeği hazırladım.");
+add("en","A2","Verbs","promise","söz vermek","verb","I promise to help you.","Sana yardım edeceğime söz veriyorum.");
+add("en","A2","Verbs","protect","korumak","verb","We must protect the environment.","Çevreyi korumalıyız.");
+add("en","A2","Verbs","receive","almak, teslim almak","verb","I received your message.","Mesajını aldım.");
+add("en","A2","Verbs","recommend","tavsiye etmek","verb","I recommend this restaurant.","Bu restoranı tavsiye ederim.");
+add("en","A2","Verbs","remember","hatırlamak","verb","I remember your name.","Adını hatırlıyorum.");
+add("en","A2","Verbs","repair","tamir etmek","verb","He repaired my bicycle.","Bisikletimi tamir etti.");
+add("en","A2","Verbs","return","geri dönmek, iade etmek","verb","I returned the book to the library.","Kitabı kütüphaneye iade ettim.");
+add("en","A2","Verbs","save","kaydetmek, biriktirmek","verb","I am saving money for a car.","Araba için para biriktiriyorum.");
+add("en","A2","Verbs","share","paylaşmak","verb","Can you share this with me?","Bunu benimle paylaşabilir misin?");
+add("en","A2","Verbs","spend","harcamak","verb","I spend a lot of time studying.","Ders çalışmaya çok zaman harcıyorum.");
+add("en","A2","Verbs","suggest","önermek","verb","I suggest taking a taxi.","Taksiye binmeyi öneriyorum.");
+add("en","A2","Verbs","support","desteklemek","verb","My family supports me.","Ailem beni destekliyor.");
+add("en","A2","Verbs","travel","seyahat etmek","verb","I love traveling abroad.","Yurt dışına seyahat etmeyi seviyorum.");
+add("en","A2","Verbs","visit","ziyaret etmek","verb","We visited our grandparents.","Büyükanne ve büyükbabamızı ziyaret ettik.");
+add("en","A2","Verbs","wait","beklemek","verb","Please wait here.","Lütfen burada bekle.");
+add("en","A2","Verbs","worry","endişelenmek","verb","Don't worry about me.","Benim için endişelenme.");
+
+
+// ==========================================
+// A2 — ADJECTIVES
+// ==========================================
+
+add("en","A2","Adjectives","afraid","korkmuş","adjective","The child is afraid of the dark.","Çocuk karanlıktan korkuyor.");
+add("en","A2","Adjectives","alone","yalnız","adjective","She lives alone.","Yalnız yaşıyor.");
+add("en","A2","Adjectives","available","mevcut, uygun","adjective","Is this room available?","Bu oda müsait mi?");
+add("en","A2","Adjectives","basic","temel","adjective","I have basic English skills.","Temel İngilizce becerilerim var.");
+add("en","A2","Adjectives","careful","dikkatli","adjective","Be careful with that glass.","O bardağa dikkat et.");
+add("en","A2","Adjectives","certain","belirli, emin","adjective","I am certain about my decision.","Kararımdan eminim.");
+add("en","A2","Adjectives","comfortable","rahat","adjective","This chair is very comfortable.","Bu sandalye çok rahat.");
+add("en","A2","Adjectives","crowded","kalabalık","adjective","The bus is crowded.","Otobüs kalabalık.");
+add("en","A2","Adjectives","dangerous","tehlikeli","adjective","This road is dangerous at night.","Bu yol gece tehlikelidir.");
+add("en","A2","Adjectives","difficult","zor","adjective","The exam was difficult.","Sınav zordu.");
+add("en","A2","Adjectives","different","farklı","adjective","We have different opinions.","Farklı fikirlerimiz var.");
+add("en","A2","Adjectives","easy","kolay","adjective","This exercise is easy.","Bu egzersiz kolay.");
+add("en","A2","Adjectives","empty","boş","adjective","The room is empty.","Oda boş.");
+add("en","A2","Adjectives","famous","ünlü","adjective","This city is famous for its food.","Bu şehir yemekleriyle ünlüdür.");
+add("en","A2","Adjectives","friendly","arkadaş canlısı","adjective","The people here are friendly.","Buradaki insanlar arkadaş canlısı.");
+add("en","A2","Adjectives","full","dolu","adjective","The restaurant is full.","Restoran dolu.");
+add("en","A2","Adjectives","healthy","sağlıklı","adjective","Fruit is healthy.","Meyve sağlıklıdır.");
+add("en","A2","Adjectives","helpful","yardımsever","adjective","Your advice was very helpful.","Tavsiyen çok yardımcı oldu.");
+add("en","A2","Adjectives","local","yerel","adjective","We bought local products.","Yerel ürünler satın aldık.");
+add("en","A2","Adjectives","modern","modern","adjective","This is a modern building.","Bu modern bir bina.");
+add("en","A2","Adjectives","necessary","gerekli","adjective","Is it necessary to bring a passport?","Pasaport getirmek gerekli mi?");
+add("en","A2","Adjectives","popular","popüler","adjective","Football is popular in many countries.","Futbol birçok ülkede popülerdir.");
+add("en","A2","Adjectives","possible","mümkün","adjective","Is it possible to pay by card?","Kartla ödeme yapmak mümkün mü?");
+add("en","A2","Adjectives","private","özel","adjective","This is a private room.","Bu özel bir oda.");
+add("en","A2","Adjectives","public","halka açık","adjective","This is a public park.","Burası halka açık bir park.");
+add("en","A2","Adjectives","quiet","sessiz","adjective","The neighborhood is quiet.","Mahalle sessiz.");
+add("en","A2","Adjectives","ready","hazır","adjective","Are you ready to leave?","Gitmeye hazır mısın?");
+add("en","A2","Adjectives","recent","yakın zamanda olmuş","adjective","This is a recent photo.","Bu yakın zamanda çekilmiş bir fotoğraf.");
+add("en","A2","Adjectives","safe","güvenli","adjective","This area is safe.","Bu bölge güvenli.");
+add("en","A2","Adjectives","similar","benzer","adjective","Our ideas are similar.","Fikirlerimiz benzer.");
+add("en","A2","Adjectives","special","özel","adjective","Today is a special day.","Bugün özel bir gün.");
+add("en","A2","Adjectives","strange","garip","adjective","That sounds strange.","Bu kulağa garip geliyor.");
+add("en","A2","Adjectives","successful","başarılı","adjective","She is a successful businesswoman.","O başarılı bir iş kadını.");
+add("en","A2","Adjectives","surprised","şaşırmış","adjective","I was surprised by the news.","Habere şaşırdım.");
+add("en","A2","Adjectives","tired","yorgun","adjective","I am tired after work.","İşten sonra yorgunum.");
+add("en","A2","Adjectives","worried","endişeli","adjective","She is worried about the exam.","Sınav hakkında endişeli.");
