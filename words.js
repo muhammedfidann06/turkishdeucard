@@ -9043,610 +9043,5709 @@ add("en","B1","Health","back","sırt","noun","My back hurts after sitting all da
 add("en","B1","Health","stomach","mide, karın","noun","My stomach hurts.","Karnım ağrıyor.");
 add("en","B1","Health","leg","bacak","noun","My leg is injured.","Bacağım yaralı.");
 /* ================================================================
-   WORDS-AR.JS — ARAPÇA A2 KELİMELERİ
+   ARAPÇA B1 — PART 1
 ================================================================ */
-
-// ======================= A2 — GÜNLÜK HAYAT =======================
-
-add("ar","A2","Günlük Hayat","عادة","alışkanlık","isim","هذه عادة جيدة.","Bu iyi bir alışkanlık.");
-
-add("ar","A2","Günlük Hayat","حياة","hayat","isim","الحياة جميلة.","Hayat güzeldir.");
-
-add("ar","A2","Günlük Hayat","وقت","zaman","isim","ليس لدي وقت.","Zamanım yok.");
-
-add("ar","A2","Günlük Hayat","لحظة","an","isim","انتظر لحظة.","Bir dakika bekle.");
-
-add("ar","A2","Günlük Hayat","موعد","randevu","isim","لدي موعد غدا.","Yarın randevum var.");
-
-add("ar","A2","Günlük Hayat","رحلة","gezi","isim","كانت الرحلة ممتعة.","Gezi eğlenceliydi.");
-
-add("ar","A2","Günlük Hayat","عطلة","tatil","isim","سنذهب في عطلة الأسبوع المقبل.","Gelecek hafta tatile gideceğiz.");
-
-add("ar","A2","Günlük Hayat","زيارة","ziyaret","isim","سنقوم بزيارة عائلتنا.","Ailemizi ziyaret edeceğiz.");
-
-add("ar","A2","Günlük Hayat","مناسبة","etkinlik / özel gün","isim","هذه مناسبة مهمة.","Bu önemli bir etkinliktir.");
-
-add("ar","A2","Günlük Hayat","حفل","parti / tören","isim","سنذهب إلى الحفل الليلة.","Bu gece partiye gideceğiz.");
-
-add("ar","A2","Günlük Hayat","دعوة","davetiye / davet","isim","شكرا على الدعوة.","Davetin için teşekkürler.");
-
-add("ar","A2","Günlük Hayat","ضيف","misafir","isim","لدينا ضيف اليوم.","Bugün bir misafirimiz var.");
-
-add("ar","A2","Günlük Hayat","جيران","komşular","isim","جيراننا لطفاء.","Komşularımız naziktir.");
-
-add("ar","A2","Günlük Hayat","علاقة","ilişki","isim","لدي علاقة جيدة معه.","Onunla iyi bir ilişkim var.");
-
-add("ar","A2","Günlük Hayat","صديق","arkadaş","isim","هو صديقي المقرب.","O benim yakın arkadaşım.");
-
-add("ar","A2","Günlük Hayat","مجموعة","grup","isim","نحن نعمل في مجموعة.","Bir grup halinde çalışıyoruz.");
-
-add("ar","A2","Günlük Hayat","فريق","takım","isim","فريقي قوي.","Takımım güçlü.");
-
-add("ar","A2","Günlük Hayat","مكان","yer","isim","هذا مكان جميل.","Burası güzel bir yer.");
-
-add("ar","A2","Günlük Hayat","منطقة","bölge","isim","هذه منطقة هادئة.","Burası sakin bir bölge.");
-
-add("ar","A2","Günlük Hayat","مدينة","şehir","isim","أعيش في مدينة كبيرة.","Büyük bir şehirde yaşıyorum.");
-
-add("ar","A2","Günlük Hayat","قرية","köy","isim","جدي يعيش في قرية.","Dedem bir köyde yaşıyor.");
-
-add("ar","A2","Günlük Hayat","شارع","sokak","isim","بيتي في هذا الشارع.","Evim bu sokakta.");
-
-add("ar","A2","Günlük Hayat","طريق","yol","isim","هذا هو الطريق الصحيح.","Bu doğru yol.");
-
-add("ar","A2","Günlük Hayat","جسر","köprü","isim","نعبر الجسر كل يوم.","Her gün köprüden geçiyoruz.");
-
-add("ar","A2","Günlük Hayat","حديقة","park / bahçe","isim","الأطفال يلعبون في الحديقة.","Çocuklar parkta oynuyor.");
-
-
-// ======================= A2 — EV =======================
-
-add("ar","A2","Ev","منزل","ev","isim","منزلي قريب من المدرسة.","Evim okula yakın.");
-
-add("ar","A2","Ev","غرفة","oda","isim","غرفتي صغيرة.","Odam küçük.");
-
-add("ar","A2","Ev","مطبخ","mutfak","isim","أمي في المطبخ.","Annem mutfakta.");
-
-add("ar","A2","Ev","حمام","banyo","isim","الحمام نظيف.","Banyo temiz.");
-
-add("ar","A2","Ev","شرفة","balkon","isim","لدينا شرفة كبيرة.","Büyük bir balkonumuz var.");
-
-add("ar","A2","Ev","سقف","çatı / tavan","isim","السقف مرتفع.","Tavan yüksek.");
-
-add("ar","A2","Ev","جدار","duvar","isim","الجدار أبيض.","Duvar beyaz.");
-
-add("ar","A2","Ev","أرضية","zemin / döşeme","isim","الأرضية نظيفة.","Zemin temiz.");
-
-add("ar","A2","Ev","نافذة","pencere","isim","افتح النافذة من فضلك.","Lütfen pencereyi aç.");
-
-add("ar","A2","Ev","باب","kapı","isim","أغلق الباب.","Kapıyı kapat.");
-
-add("ar","A2","Ev","مفتاح","anahtar","isim","أين مفتاحي؟","Anahtarım nerede?");
-
-add("ar","A2","Ev","كرسي","sandalye","isim","اجلس على الكرسي.","Sandalyeye otur.");
-
-add("ar","A2","Ev","طاولة","masa","isim","الكتاب على الطاولة.","Kitap masanın üzerinde.");
-
-add("ar","A2","Ev","سرير","yatak","isim","أنا في السرير.","Yataktayım.");
-
-add("ar","A2","Ev","خزانة","dolap","isim","ملابسي في الخزانة.","Kıyafetlerim dolapta.");
-
-add("ar","A2","Ev","مرآة","ayna","isim","أنظر إلى المرآة.","Aynaya bakıyorum.");
-
-add("ar","A2","Ev","مصباح","lamba","isim","أطفئ المصباح.","Lambayı kapat.");
-
-add("ar","A2","Ev","ثلاجة","buzdolabı","isim","الحليب في الثلاجة.","Süt buzdolabında.");
-
-add("ar","A2","Ev","غسالة","çamaşır makinesi","isim","الغسالة تعمل.","Çamaşır makinesi çalışıyor.");
-
-add("ar","A2","Ev","مفتوح","açık","sıfat","الباب مفتوح.","Kapı açık.");
-
-add("ar","A2","Ev","مغلق","kapalı","sıfat","المحل مغلق.","Mağaza kapalı.");
-
-add("ar","A2","Ev","نظيف","temiz","sıfat","البيت نظيف.","Ev temiz.");
-
-add("ar","A2","Ev","متسخ","kirli","sıfat","القميص متسخ.","Gömlek kirli.");
-
-add("ar","A2","Ev","هادئ","sakin","sıfat","الحي هادئ.","Mahalle sakin.");
-
-add("ar","A2","Ev","مريح","rahat","sıfat","هذا الكرسي مريح.","Bu sandalye rahat.");
-
-
-// ======================= A2 — YEMEK =======================
-
-add("ar","A2","Yemek","طعام","yiyecek / yemek","isim","الطعام لذيذ.","Yemek lezzetli.");
-
-add("ar","A2","Yemek","وجبة","öğün","isim","تناولت وجبة جيدة.","İyi bir öğün yedim.");
-
-add("ar","A2","Yemek","فطور","kahvaltı","isim","أتناول الفطور في الصباح.","Sabah kahvaltı yapıyorum.");
-
-add("ar","A2","Yemek","غداء","öğle yemeği","isim","الغداء جاهز.","Öğle yemeği hazır.");
-
-add("ar","A2","Yemek","عشاء","akşam yemeği","isim","نتناول العشاء معا.","Akşam yemeğini birlikte yiyoruz.");
-
-add("ar","A2","Yemek","خبز","ekmek","isim","أريد بعض الخبز.","Biraz ekmek istiyorum.");
-
-add("ar","A2","Yemek","أرز","pirinç","isim","أنا أحب الأرز.","Pirinç seviyorum.");
-
-add("ar","A2","Yemek","لحم","et","isim","لا آكل اللحم كثيرا.","Çok fazla et yemem.");
-
-add("ar","A2","Yemek","دجاج","tavuk","isim","أريد دجاجا مشويا.","Izgara tavuk istiyorum.");
-
-add("ar","A2","Yemek","سمك","balık","isim","السمك طازج.","Balık taze.");
-
-add("ar","A2","Yemek","خضروات","sebzeler","isim","يجب أن نأكل الخضروات.","Sebze yemeliyiz.");
-
-add("ar","A2","Yemek","فاكهة","meyve","isim","أحب الفاكهة الطازجة.","Taze meyveleri seviyorum.");
-
-add("ar","A2","Yemek","تفاح","elma","isim","أكلت تفاحة.","Bir elma yedim.");
-
-add("ar","A2","Yemek","برتقال","portakal","isim","هذا البرتقال حلو.","Bu portakal tatlı.");
-
-add("ar","A2","Yemek","موز","muz","isim","أكلت موزة.","Bir muz yedim.");
-
-add("ar","A2","Yemek","سكر","şeker","isim","لا أريد السكر.","Şeker istemiyorum.");
-
-add("ar","A2","Yemek","ملح","tuz","isim","أضف قليلا من الملح.","Biraz tuz ekle.");
-
-add("ar","A2","Yemek","زيت","yağ","isim","نحتاج إلى زيت.","Yağa ihtiyacımız var.");
-
-add("ar","A2","Yemek","ماء","su","isim","أريد كوب ماء.","Bir bardak su istiyorum.");
-
-add("ar","A2","Yemek","عصير","meyve suyu","isim","أشرب عصير البرتقال.","Portakal suyu içiyorum.");
-
-add("ar","A2","Yemek","قهوة","kahve","isim","أشرب القهوة كل صباح.","Her sabah kahve içerim.");
-
-add("ar","A2","Yemek","شاي","çay","isim","هل تريد الشاي؟","Çay ister misin?");
-
-add("ar","A2","Yemek","مطعم","restoran","isim","هذا المطعم مشهور.","Bu restoran ünlü.");
-
-add("ar","A2","Yemek","قائمة","menü / liste","isim","أعطني القائمة من فضلك.","Lütfen bana menüyü ver.");
-
-add("ar","A2","Yemek","فاتورة","hesap / fatura","isim","من فضلك أحضر الفاتورة.","Lütfen hesabı getir.");
-
-
-// ======================= A2 — FİİLLER =======================
-
-add("ar","A2","Fiiller","يحتاج","ihtiyaç duymak","fiil","أحتاج إلى مساعدتك.","Yardımına ihtiyacım var.");
-
-add("ar","A2","Fiiller","يقرر","karar vermek","fiil","يجب أن أقرر اليوم.","Bugün karar vermeliyim.");
-
-add("ar","A2","Fiiller","يحاول","denemek","fiil","أحاول أن أتعلم العربية.","Arapça öğrenmeye çalışıyorum.");
-
-add("ar","A2","Fiiller","يبدأ","başlamak","fiil","الدرس يبدأ الساعة التاسعة.","Ders saat dokuzda başlıyor.");
-
-add("ar","A2","Fiiller","ينتهي","bitmek","fiil","الفيلم ينتهي قريبا.","Film yakında bitiyor.");
-
-add("ar","A2","Fiiller","يستمر","devam etmek","fiil","العمل يستمر حتى المساء.","İş akşama kadar devam ediyor.");
-
-add("ar","A2","Fiiller","يختار","seçmek","fiil","اخترت هذا الكتاب.","Bu kitabı seçtim.");
-
-add("ar","A2","Fiiller","يغير","değiştirmek","fiil","أريد أن أغير خطتي.","Planımı değiştirmek istiyorum.");
-
-add("ar","A2","Fiiller","يشرح","açıklamak","fiil","المعلم يشرح الدرس.","Öğretmen dersi açıklıyor.");
-
-add("ar","A2","Fiiller","يسأل","sormak","fiil","أريد أن أسأل سؤالا.","Bir soru sormak istiyorum.");
-
-add("ar","A2","Fiiller","يجيب","cevaplamak","fiil","أجاب عن السؤال.","Soruyu cevapladı.");
-
-add("ar","A2","Fiiller","يتذكر","hatırlamak","fiil","لا أتذكر اسمه.","Adını hatırlamıyorum.");
-
-add("ar","A2","Fiiller","ينسى","unutmak","fiil","لا تنس موعدك.","Randevunu unutma.");
-
-add("ar","A2","Fiiller","يفهم","anlamak","fiil","أنا أفهم ما تقول.","Ne söylediğini anlıyorum.");
-
-add("ar","A2","Fiiller","يعتقد","düşünmek / inanmak","fiil","أعتقد أن هذا صحيح.","Bunun doğru olduğunu düşünüyorum.");
-
-add("ar","A2","Fiiller","يظن","sanmak","fiil","أظن أنه في البيت.","Sanırım o evde.");
-
-add("ar","A2","Fiiller","يحب","sevmek","fiil","أنا أحب السفر.","Seyahat etmeyi seviyorum.");
-
-add("ar","A2","Fiiller","يكره","nefret etmek","fiil","هو يكره الانتظار.","Beklemekten nefret ediyor.");
-
-add("ar","A2","Fiiller","يفضل","tercih etmek","fiil","أفضل الشاي على القهوة.","Kahveyeye çayı tercih ederim.");
-
-add("ar","A2","Fiiller","يستخدم","kullanmak","fiil","أستخدم هاتفي كل يوم.","Telefonumu her gün kullanıyorum.");
-
-add("ar","A2","Fiiller","يبحث","aramak","fiil","أبحث عن عملي الجديد.","Yeni işimi arıyorum.");
-
-add("ar","A2","Fiiller","يجد","bulmak","fiil","وجدت مفاتيحي.","Anahtarlarımı buldum.");
-
-add("ar","A2","Fiiller","يفقد","kaybetmek","fiil","فقدت هاتفي.","Telefonumu kaybettim.");
-
-add("ar","A2","Fiiller","يحمل","taşımak","fiil","هو يحمل حقيبة كبيرة.","Büyük bir çanta taşıyor.");
-
-add("ar","A2","Fiiller","يرسل","göndermek","fiil","سأرسل لك رسالة.","Sana bir mesaj göndereceğim.");
-
-add("ar","A2","Fiiller","يستقبل","almak / karşılamak","fiil","استقبلت رسالة جديدة.","Yeni bir mesaj aldım.");
-
-add("ar","A2","Fiiller","يزور","ziyaret etmek","fiil","سأزور صديقي غدا.","Yarın arkadaşımı ziyaret edeceğim.");
-
-add("ar","A2","Fiiller","يسافر","seyahat etmek","fiil","أحب أن أسافر.","Seyahat etmeyi seviyorum.");
-
-add("ar","A2","Fiiller","يصل","varmak","fiil","وصلنا إلى الفندق.","Otele vardık.");
-
-add("ar","A2","Fiiller","يغادر","ayrılmak","fiil","سنغادر غدا.","Yarın ayrılacağız.");
-
-
-// ======================= A2 — SIFATLAR =======================
-
-add("ar","A2","Sıfatlar","سهل","kolay","sıfat","هذا السؤال سهل.","Bu soru kolay.");
-
-add("ar","A2","Sıfatlar","صعب","zor","sıfat","الامتحان صعب.","Sınav zor.");
-
-add("ar","A2","Sıfatlar","مهم","önemli","sıfat","هذا الأمر مهم.","Bu konu önemli.");
-
-add("ar","A2","Sıfatlar","مفيد","faydalı","sıfat","هذا الكتاب مفيد.","Bu kitap faydalı.");
-
-add("ar","A2","Sıfatlar","ممكن","mümkün","sıfat","كل شيء ممكن.","Her şey mümkün.");
-
-add("ar","A2","Sıfatlar","مستحيل","imkansız","sıfat","هذا مستحيل.","Bu imkansız.");
-
-add("ar","A2","Sıfatlar","مختلف","farklı","sıfat","هذا شيء مختلف.","Bu farklı bir şey.");
-
-add("ar","A2","Sıfatlar","متشابه","benzer","sıfat","الكتابان متشابهان.","İki kitap birbirine benziyor.");
-
-add("ar","A2","Sıfatlar","مشهور","ünlü","sıfat","هذا المكان مشهور.","Bu yer ünlü.");
-
-add("ar","A2","Sıfatlar","خاص","özel","sıfat","هذا يوم خاص.","Bu özel bir gün.");
-
-add("ar","A2","Sıfatlar","طبيعي","doğal","sıfat","هذا أمر طبيعي.","Bu doğal bir şey.");
-
-add("ar","A2","Sıfatlar","حقيقي","gerçek","sıfat","هذا خبر حقيقي.","Bu gerçek bir haber.");
-
-add("ar","A2","Sıfatlar","جاهز","hazır","sıfat","أنا جاهز الآن.","Şimdi hazırım.");
-
-add("ar","A2","Sıfatlar","مشغول","meşgul","sıfat","أنا مشغول اليوم.","Bugün meşgulüm.");
-
-add("ar","A2","Sıfatlar","فارغ","boş","sıfat","الكرسي فارغ.","Sandalye boş.");
-
-add("ar","A2","Sıfatlar","ممتلئ","dolu","sıfat","الكوب ممتلئ.","Bardak dolu.");
-
-add("ar","A2","Sıfatlar","سريع","hızlı","sıfat","السيارة سريعة.","Araba hızlı.");
-
-add("ar","A2","Sıfatlar","بطيء","yavaş","sıfat","الإنترنت بطيء.","İnternet yavaş.");
-
-add("ar","A2","Sıfatlar","قريب","yakın","sıfat","المطار قريب.","Havaalanı yakın.");
-
-add("ar","A2","Sıfatlar","بعيد","uzak","sıfat","المدرسة بعيدة.","Okul uzak.");
-
-add("ar","A2","Sıfatlar","غالي","pahalı","sıfat","هذا الهاتف غالي.","Bu telefon pahalı.");
-
-add("ar","A2","Sıfatlar","رخيص","ucuz","sıfat","هذا المطعم رخيص.","Bu restoran ucuz.");
-
-add("ar","A2","Sıfatlar","قديم","eski","sıfat","هذا مبنى قديم.","Bu eski bir bina.");
-
-add("ar","A2","Sıfatlar","حديث","modern / yeni","sıfat","هذا فندق حديث.","Bu modern bir otel.");
-
-add("ar","A2","Sıfatlar","قوي","güçlü","sıfat","هو رجل قوي.","O güçlü bir adam.");
-
-add("ar","A2","Sıfatlar","ضعيف","zayıf","sıfat","أنا أشعر بالضعف.","Kendimi zayıf hissediyorum.");
-
-
-// ======================= A2 — EĞİTİM VE İŞ =======================
-
-add("ar","A2","Eğitim","مدرسة","okul","isim","أذهب إلى المدرسة كل يوم.","Her gün okula gidiyorum.");
-
-add("ar","A2","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
-
-add("ar","A2","Eğitim","درس","ders","isim","لدي درس اليوم.","Bugün dersim var.");
-
-add("ar","A2","Eğitim","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
-
-add("ar","A2","Eğitim","سؤال","soru","isim","لدي سؤال.","Bir sorum var.");
-
-add("ar","A2","Eğitim","إجابة","cevap","isim","هذه هي الإجابة الصحيحة.","Bu doğru cevap.");
-
-add("ar","A2","Eğitim","كتاب","kitap","isim","أقرأ كتابا جديدا.","Yeni bir kitap okuyorum.");
-
-add("ar","A2","Eğitim","مقال","makale","isim","قرأت مقالا مفيدا.","Faydalı bir makale okudum.");
-
-add("ar","A2","Eğitim","لغة","dil","isim","أتعلم لغة جديدة.","Yeni bir dil öğreniyorum.");
-
-add("ar","A2","Eğitim","كلمة","kelime","isim","ما معنى هذه الكلمة؟","Bu kelimenin anlamı nedir?");
-
-add("ar","A2","Eğitim","جملة","cümle","isim","اكتب جملة قصيرة.","Kısa bir cümle yaz.");
-
-add("ar","A2","Eğitim","معلومة","bilgi","isim","هذه معلومة مهمة.","Bu önemli bir bilgi.");
-
-add("ar","A2","İş","عمل","iş","isim","أبحث عن عمل.","İş arıyorum.");
-
-add("ar","A2","İş","وظيفة","meslek / iş","isim","وجدت وظيفة جديدة.","Yeni bir iş buldum.");
-
-add("ar","A2","İş","شركة","şirket","isim","أعمل في شركة كبيرة.","Büyük bir şirkette çalışıyorum.");
-
-add("ar","A2","İş","مدير","müdür","isim","المدير في مكتبه.","Müdür ofisinde.");
-
-add("ar","A2","İş","موظف","çalışan","isim","هو موظف جديد.","O yeni bir çalışan.");
-
-add("ar","A2","İş","اجتماع","toplantı","isim","لدينا اجتماع غدا.","Yarın toplantımız var.");
-
-add("ar","A2","İş","مكتب","ofis","isim","مكتبي في الطابق الثاني.","Ofisim ikinci katta.");
-
-add("ar","A2","İş","راتب","maaş","isim","راتبي جيد.","Maaşım iyi.");
-
-
-// ======================= A2 — ULAŞIM =======================
-
-add("ar","A2","Ulaşım","سيارة","araba","isim","لدي سيارة جديدة.","Yeni bir arabam var.");
-
-add("ar","A2","Ulaşım","حافلة","otobüs","isim","أذهب إلى العمل بالحافلة.","İşe otobüsle gidiyorum.");
-
-add("ar","A2","Ulaşım","قطار","tren","isim","سأسافر بالقطار.","Trenle seyahat edeceğim.");
-
-add("ar","A2","Ulaşım","طائرة","uçak","isim","الطائرة وصلت.","Uçak geldi.");
-
-add("ar","A2","Ulaşım","مطار","havaalanı","isim","وصلت إلى المطار مبكرا.","Havaalanına erken vardım.");
-
-add("ar","A2","Ulaşım","محطة","istasyon","isim","أنتظر في المحطة.","İstasyonda bekliyorum.");
-
-add("ar","A2","Ulaşım","تذكرة","bilet","isim","أين تذكرتي؟","Biletim nerede?");
-
-add("ar","A2","Ulaşım","رحلة","seyahat","isim","كانت الرحلة طويلة.","Seyahat uzundu.");
-
-add("ar","A2","Ulaşım","خريطة","harita","isim","أين الخريطة؟","Harita nerede?");
-
-add("ar","A2","Ulaşım","اتجاه","yön","isim","ما هو الاتجاه؟","Yön nedir?");
-
-add("ar","A2","Ulaşım","يمين","sağ","isim","انعطف إلى اليمين.","Sağa dön.");
-
-add("ar","A2","Ulaşım","يسار","sol","isim","انعطف إلى اليسار.","Sola dön.");
-
-add("ar","A2","Ulaşım","مستقيم","düz","sıfat","اذهب إلى الأمام مباشرة.","Düz git.");
-
-
-// ======================= A2 — SAĞLIK =======================
-
-add("ar","A2","Sağlık","صحة","sağlık","isim","الصحة أهم شيء.","Sağlık en önemli şeydir.");
-
-add("ar","A2","Sağlık","طبيب","doktor","isim","أحتاج إلى طبيب.","Bir doktora ihtiyacım var.");
-
-add("ar","A2","Sağlık","مستشفى","hastane","isim","المستشفى قريب.","Hastane yakın.");
-
-add("ar","A2","Sağlık","دواء","ilaç","isim","أحتاج إلى هذا الدواء.","Bu ilaca ihtiyacım var.");
-
-add("ar","A2","Sağlık","ألم","ağrı","isim","لدي ألم في رأسي.","Başım ağrıyor.");
-
-add("ar","A2","Sağlık","رأس","baş","isim","رأسي يؤلمني.","Başım ağrıyor.");
-
-add("ar","A2","Sağlık","معدة","mide","isim","معدتي تؤلمني.","Mideme ağrıyor.");
-
-add("ar","A2","Sağlık","حمى","ateş","isim","لديه حمى.","Onun ateşi var.");
-
-add("ar","A2","Sağlık","سعال","öksürük","isim","لدي سعال.","Öksürüğüm var.");
-
-add("ar","A2","Sağlık","راحة","dinlenme","isim","أحتاج إلى الراحة.","Dinlenmeye ihtiyacım var.");
-
-add("ar","A2","Sağlık","مريض","hasta","sıfat","أنا مريض اليوم.","Bugün hastayım.");
-
-add("ar","A2","Sağlık","سليم","sağlıklı","sıfat","هو سليم الآن.","O şimdi sağlıklı.");
-
-add("ar","A2","Sağlık","متعب","yorgun","sıfat","أنا متعب جدا.","Çok yorgunum.");
-
-
-// ======================= A2 — DUYGULAR =======================
-
-add("ar","A2","Duygular","سعيد","mutlu","sıfat","أنا سعيد اليوم.","Bugün mutluyum.");
-
-add("ar","A2","Duygular","حزين","üzgün","sıfat","هو حزين قليلا.","O biraz üzgün.");
-
-add("ar","A2","Duygular","غاضب","kızgın","sıfat","لماذا أنت غاضب؟","Neden kızgınsın?");
-
-add("ar","A2","Duygular","خائف","korkmuş","sıfat","الطفل خائف.","Çocuk korkmuş.");
-
-add("ar","A2","Duygular","متحمس","heyecanlı","sıfat","أنا متحمس للرحلة.","Gezi için heyecanlıyım.");
-
-add("ar","A2","Duygular","قلق","endişeli","sıfat","أنا قلق بشأن الامتحان.","Sınav hakkında endişeliyim.");
-
-add("ar","A2","Duygular","مفاجأة","sürpriz","isim","لدي مفاجأة لك.","Senin için bir sürprizim var.");
-
-add("ar","A2","Duygular","أمل","umut","isim","لدي أمل كبير.","Büyük bir umudum var.");
-
-add("ar","A2","Duygular","خوف","korku","isim","لا أشعر بالخوف.","Korku hissetmiyorum.");
-
-add("ar","A2","Duygular","حب","aşk / sevgi","isim","الحب مهم في الحياة.","Aşk hayatta önemlidir.");
-
-
-// ======================= A2 — TEKNOLOJİ =======================
-
-add("ar","A2","Teknoloji","هاتف","telefon","isim","هاتفي جديد.","Telefonum yeni.");
-
-add("ar","A2","Teknoloji","حاسوب","bilgisayar","isim","أستخدم الحاسوب في العمل.","İş için bilgisayar kullanıyorum.");
-
-add("ar","A2","Teknoloji","إنترنت","internet","isim","الإنترنت سريع هنا.","İnternet burada hızlı.");
-
-add("ar","A2","Teknoloji","موقع","web sitesi","isim","هذا موقع مفيد.","Bu faydalı bir web sitesi.");
-
-add("ar","A2","Teknoloji","برنامج","program / uygulama","isim","أستخدم هذا البرنامج كل يوم.","Bu programı her gün kullanıyorum.");
-
-add("ar","A2","Teknoloji","تطبيق","uygulama","isim","هذا التطبيق سهل الاستخدام.","Bu uygulamanın kullanımı kolay.");
-
-add("ar","A2","Teknoloji","رسالة","mesaj","isim","أرسلت لك رسالة.","Sana bir mesaj gönderdim.");
-
-add("ar","A2","Teknoloji","صورة","fotoğraf / resim","isim","هذه صورة جميلة.","Bu güzel bir fotoğraf.");
-
-add("ar","A2","Teknoloji","فيديو","video","isim","شاهدت فيديو جديدا.","Yeni bir video izledim.");
-
-add("ar","A2","Teknoloji","ملف","dosya","isim","أرسلت الملف عبر البريد الإلكتروني.","Dosyayı e-posta ile gönderdim.");
-
-add("ar","A2","Teknoloji","كلمة مرور","şifre","isim","نسيت كلمة المرور.","Şifreyi unuttum.");
-
-add("ar","A2","Teknoloji","حساب","hesap","isim","لدي حساب جديد.","Yeni bir hesabım var.");
-// ======================= A2 — ALIŞVERİŞ =======================
-add("ar","A2","Alışveriş","متجر","mağaza","isim","ذهبت إلى المتجر أمس.","Dün mağazaya gittim.");
-add("ar","A2","Alışveriş","سوق","pazar","isim","السوق مزدحم اليوم.","Pazar bugün kalabalık.");
-add("ar","A2","Alışveriş","زبون","müşteri","isim","الزبون ينتظر هنا.","Müşteri burada bekliyor.");
-add("ar","A2","Alışveriş","سعر","fiyat","isim","ما سعر هذا؟","Bunun fiyatı ne?");
-add("ar","A2","Alışveriş","خصم","indirim","isim","هل يوجد خصم؟","İndirim var mı?");
-add("ar","A2","Alışveriş","جودة","kalite","isim","جودة هذا المنتج جيدة.","Bu ürünün kalitesi iyi.");
-add("ar","A2","Alışveriş","منتج","ürün","isim","هذا منتج جديد.","Bu yeni bir ürün.");
-add("ar","A2","Alışveriş","حجم","beden / boyut","isim","هل لديك حجم أكبر؟","Daha büyük bedeniniz var mı?");
-add("ar","A2","Alışveriş","لون","renk","isim","أحب هذا اللون.","Bu rengi seviyorum.");
-add("ar","A2","Alışveriş","أسود","siyah","sıfat","أريد قميصا أسود.","Siyah bir gömlek istiyorum.");
-add("ar","A2","Alışveriş","أبيض","beyaz","sıfat","الحذاء أبيض.","Ayakkabı beyaz.");
-add("ar","A2","Alışveriş","أحمر","kırmızı","sıfat","أحب اللون الأحمر.","Kırmızı rengi seviyorum.");
-add("ar","A2","Alışveriş","أزرق","mavi","sıfat","اشتريت قميصا أزرق.","Mavi bir gömlek aldım.");
-add("ar","A2","Alışveriş","ملابس","kıyafetler","isim","أحتاج إلى ملابس جديدة.","Yeni kıyafetlere ihtiyacım var.");
-add("ar","A2","Alışveriş","قميص","gömlek","isim","هذا القميص جميل.","Bu gömlek güzel.");
-add("ar","A2","Alışveriş","بنطال","pantolon","isim","أين البنطال الأسود؟","Siyah pantolon nerede?");
-add("ar","A2","Alışveriş","حذاء","ayakkabı","isim","هذا الحذاء مريح.","Bu ayakkabı rahat.");
-add("ar","A2","Alışveriş","معطف","mont / palto","isim","أحتاج إلى معطف شتوي.","Kışlık bir paltoya ihtiyacım var.");
-add("ar","A2","Alışveriş","قبعة","şapka","isim","وضعت قبعة على رأسي.","Başıma bir şapka taktım.");
-add("ar","A2","Alışveriş","حقيبة","çanta","isim","حقيبتي ثقيلة.","Çantam ağır.");
-add("ar","A2","Alışveriş","نقود","para","isim","ليس لدي نقود كافية.","Yeterince param yok.");
-add("ar","A2","Alışveriş","بطاقة","kart","isim","سأدفع بالبطاقة.","Kartla ödeyeceğim.");
-add("ar","A2","Alışveriş","نقدا","nakit","zarf","هل يمكنني الدفع نقدا؟","Nakit ödeyebilir miyim?");
-add("ar","A2","Alışveriş","شراء","satın alma","isim","أريد شراء هاتف جديد.","Yeni bir telefon satın almak istiyorum.");
-add("ar","A2","Alışveriş","بيع","satış","isim","هذا المتجر يبيع الملابس.","Bu mağaza kıyafet satıyor.");
-// ======================= A2 — HAVA DURUMU =======================
-add("ar","A2","Hava Durumu","طقس","hava durumu","isim","كيف هو الطقس اليوم؟","Bugün hava nasıl?");
-add("ar","A2","Hava Durumu","جو","hava","isim","الجو جميل اليوم.","Bugün hava güzel.");
-add("ar","A2","Hava Durumu","شمس","güneş","isim","الشمس مشرقة.","Güneş parlıyor.");
-add("ar","A2","Hava Durumu","مطر","yağmur","isim","المطر غزير اليوم.","Bugün yağmur şiddetli.");
-add("ar","A2","Hava Durumu","ثلج","kar","isim","الثلج يتساقط.","Kar yağıyor.");
-add("ar","A2","Hava Durumu","ريح","rüzgar","isim","الريح قوية.","Rüzgar güçlü.");
-add("ar","A2","Hava Durumu","سحاب","bulut","isim","هناك سحاب كثير.","Çok bulut var.");
-add("ar","A2","Hava Durumu","درجة الحرارة","sıcaklık","isim","درجة الحرارة مرتفعة.","Sıcaklık yüksek.");
-add("ar","A2","Hava Durumu","بارد","soğuk","sıfat","الجو بارد جدا.","Hava çok soğuk.");
-add("ar","A2","Hava Durumu","حار","sıcak","sıfat","اليوم حار.","Bugün hava sıcak.");
-add("ar","A2","Hava Durumu","دافئ","ılık / sıcak","sıfat","الجو دافئ في الربيع.","İlkbaharda hava ılıktır.");
-add("ar","A2","Hava Durumu","رطب","nemli","sıfat","الجو رطب اليوم.","Bugün hava nemli.");
-add("ar","A2","Hava Durumu","جاف","kuru","sıfat","الجو جاف هنا.","Burada hava kuru.");
-add("ar","A2","Hava Durumu","مشمس","güneşli","sıfat","غدا سيكون الجو مشمسا.","Yarın hava güneşli olacak.");
-add("ar","A2","Hava Durumu","غائم","bulutlu","sıfat","الجو غائم اليوم.","Bugün hava bulutlu.");
-// ======================= A2 — DOĞA =======================
-add("ar","A2","Doğa","طبيعة","doğa","isim","أحب الطبيعة.","Doğayı seviyorum.");
-add("ar","A2","Doğa","جبل","dağ","isim","رأيت جبلا عاليا.","Yüksek bir dağ gördüm.");
-add("ar","A2","Doğa","بحر","deniz","isim","نحن بالقرب من البحر.","Denizin yakınındayız.");
-add("ar","A2","Doğa","نهر","nehir","isim","هذا النهر طويل.","Bu nehir uzun.");
-add("ar","A2","Doğa","بحيرة","göl","isim","البحيرة جميلة جدا.","Göl çok güzel.");
-add("ar","A2","Doğa","غابة","orman","isim","مشينا في الغابة.","Ormanda yürüdük.");
-add("ar","A2","Doğa","شجرة","ağaç","isim","هناك شجرة كبيرة.","Büyük bir ağaç var.");
-add("ar","A2","Doğa","زهرة","çiçek","isim","هذه الزهرة جميلة.","Bu çiçek güzel.");
-add("ar","A2","Doğa","نبات","bitki","isim","هذا النبات يحتاج إلى الماء.","Bu bitkinin suya ihtiyacı var.");
-add("ar","A2","Doğa","حيوان","hayvan","isim","أحب الحيوانات.","Hayvanları seviyorum.");
-add("ar","A2","Doğa","طائر","kuş","isim","رأيت طائرا في الحديقة.","Parkta bir kuş gördüm.");
-add("ar","A2","Doğa","كلب","köpek","isim","كلبي يحب اللعب.","Köpeğim oynamayı seviyor.");
-add("ar","A2","Doğa","قطة","kedi","isim","القطة تحت الطاولة.","Kedi masanın altında.");
-add("ar","A2","Doğa","سماء","gökyüzü","isim","السماء زرقاء.","Gökyüzü mavi.");
-add("ar","A2","Doğa","هواء","hava","isim","الهواء نقي هنا.","Burada hava temiz.");
-// ======================= A2 — SEYAHAT VE TURİZM =======================
-add("ar","A2","Seyahat","فندق","otel","isim","حجزنا غرفة في الفندق.","Otelde bir oda rezerve ettik.");
-add("ar","A2","Seyahat","غرفة","oda","isim","الغرفة مريحة.","Oda rahat.");
-add("ar","A2","Seyahat","حجز","rezervasyon","isim","لدي حجز في الفندق.","Otelde rezervasyonum var.");
-add("ar","A2","Seyahat","سائح","turist","isim","السائح يزور المدينة.","Turist şehri ziyaret ediyor.");
-add("ar","A2","Seyahat","سياحة","turizm","isim","السياحة مهمة للاقتصاد.","Turizm ekonomi için önemlidir.");
-add("ar","A2","Seyahat","شاطئ","plaj","isim","الشاطئ قريب من الفندق.","Plaj otele yakın.");
-add("ar","A2","Seyahat","جزيرة","ada","isim","سنزور جزيرة جميلة.","Güzel bir adayı ziyaret edeceğiz.");
-add("ar","A2","Seyahat","متحف","müze","isim","زرنا المتحف أمس.","Dün müzeyi ziyaret ettik.");
-add("ar","A2","Seyahat","قلعة","kale","isim","هذه قلعة قديمة.","Bu eski bir kale.");
-add("ar","A2","Seyahat","كنيسة","kilise","isim","الكنيسة في وسط المدينة.","Kilise şehir merkezinde.");
-add("ar","A2","Seyahat","مسجد","cami","isim","المسجد قريب من الفندق.","Cami otele yakın.");
-add("ar","A2","Seyahat","مركز المدينة","şehir merkezi","isim","الفندق في مركز المدينة.","Otel şehir merkezinde.");
-add("ar","A2","Seyahat","استقبال","resepsiyon","isim","اسأل في الاستقبال.","Resepsiyona sor.");
-add("ar","A2","Seyahat","جواز سفر","pasaport","isim","أين جواز سفري؟","Pasaportum nerede?");
-add("ar","A2","Seyahat","أمتعة","bagaj","isim","أين أمتعتي؟","Bagajım nerede?");
-add("ar","A2","Seyahat","حقيبة سفر","valiz","isim","حقيبة سفري ثقيلة.","Valizim ağır.");
-add("ar","A2","Seyahat","تأشيرة","vize","isim","أحتاج إلى تأشيرة.","Vizeye ihtiyacım var.");
-add("ar","A2","Seyahat","حدود","sınır","isim","عبرنا الحدود.","Sınırı geçtik.");
-// ======================= A2 — ZAMAN =======================
-add("ar","A2","Zaman","اليوم","bugün","zarf","سأعمل اليوم.","Bugün çalışacağım.");
-add("ar","A2","Zaman","أمس","dün","zarf","رأيته أمس.","Onu dün gördüm.");
-add("ar","A2","Zaman","غدا","yarın","zarf","سأسافر غدا.","Yarın seyahat edeceğim.");
-add("ar","A2","Zaman","الآن","şimdi","zarf","أنا مشغول الآن.","Şimdi meşgulüm.");
-add("ar","A2","Zaman","لاحقا","daha sonra","zarf","سأتصل بك لاحقا.","Seni daha sonra arayacağım.");
-add("ar","A2","Zaman","مبكرا","erken","zarf","استيقظت مبكرا.","Erken uyandım.");
-add("ar","A2","Zaman","متأخرا","geç","zarf","وصلت متأخرا.","Geç geldim.");
-add("ar","A2","Zaman","دائما","her zaman","zarf","أذهب إلى العمل دائما.","Her zaman işe giderim.");
-add("ar","A2","Zaman","غالبا","genellikle","zarf","غالبا أشرب القهوة.","Genellikle kahve içerim.");
-add("ar","A2","Zaman","أحيانا","bazen","zarf","أحيانا أقرأ في الليل.","Bazen gece okurum.");
-add("ar","A2","Zaman","نادرا","nadiren","zarf","نادرا ما أشاهد التلفاز.","Nadiren televizyon izlerim.");
-add("ar","A2","Zaman","أبدا","asla / hiç","zarf","لا أفعل ذلك أبدا.","Bunu asla yapmam.");
-add("ar","A2","Zaman","قبل","önce","edat","وصلت قبل الموعد.","Randevudan önce geldim.");
-add("ar","A2","Zaman","بعد","sonra","edat","سأذهب بعد العمل.","İşten sonra gideceğim.");
-add("ar","A2","Zaman","أثناء","sırasında","edat","اتصل بي أثناء العمل.","İş sırasında beni ara.");
-add("ar","A2","Zaman","خلال","boyunca / içinde","edat","تعلمت الكثير خلال السنة.","Yıl boyunca çok şey öğrendim.");
-// ======================= A2 — SIK KULLANILAN FİİLLER =======================
-add("ar","A2","Fiiller","يعيش","yaşamak","fiil","أعيش في تركيا.","Türkiye'de yaşıyorum.");
-add("ar","A2","Fiiller","يسكن","ikamet etmek","fiil","أسكن بالقرب من الجامعة.","Üniversitenin yakınında oturuyorum.");
-add("ar","A2","Fiiller","يدرس","çalışmak / öğrenim görmek","fiil","أدرس اللغة العربية.","Arapça çalışıyorum.");
-add("ar","A2","Fiiller","يتعلم","öğrenmek","fiil","أتعلم لغة جديدة.","Yeni bir dil öğreniyorum.");
-add("ar","A2","Fiiller","يعلم","öğretmek / bilmek","fiil","المعلم يعلم الطلاب.","Öğretmen öğrencilere ders veriyor.");
-add("ar","A2","Fiiller","يقرأ","okumak","fiil","أقرأ كتابا كل أسبوع.","Her hafta bir kitap okurum.");
-add("ar","A2","Fiiller","يكتب","yazmak","fiil","أكتب رسالة لصديقي.","Arkadaşıma bir mektup yazıyorum.");
-add("ar","A2","Fiiller","يشاهد","izlemek","fiil","أشاهد الأخبار كل مساء.","Her akşam haberleri izlerim.");
-add("ar","A2","Fiiller","يستمع","dinlemek","fiil","أستمع إلى الموسيقى.","Müzik dinliyorum.");
-add("ar","A2","Fiiller","يتكلم","konuşmak","fiil","أتكلم العربية قليلا.","Biraz Arapça konuşuyorum.");
-add("ar","A2","Fiiller","يقول","söylemek","fiil","ماذا تقول؟","Ne diyorsun?");
-add("ar","A2","Fiiller","يسمع","duymak","fiil","لا أسمعك جيدا.","Seni iyi duyamıyorum.");
-add("ar","A2","Fiiller","يرى","görmek","fiil","أراك غدا.","Seni yarın göreceğim.");
-add("ar","A2","Fiiller","ينظر","bakmak","fiil","انظر إلى الصورة.","Resme bak.");
-add("ar","A2","Fiiller","يعرف","bilmek / tanımak","fiil","أنا أعرف هذا الرجل.","Bu adamı tanıyorum.");
-add("ar","A2","Fiiller","يعمل","çalışmak","fiil","أعمل في شركة.","Bir şirkette çalışıyorum.");
-add("ar","A2","Fiiller","يلعب","oynamak","fiil","الأطفال يلعبون في الخارج.","Çocuklar dışarıda oynuyor.");
-add("ar","A2","Fiiller","يركض","koşmak","fiil","أركض كل صباح.","Her sabah koşarım.");
-add("ar","A2","Fiiller","يمشي","yürümek","fiil","أمشي إلى العمل.","İşe yürüyorum.");
-add("ar","A2","Fiiller","يجلس","oturmak","fiil","اجلس هنا من فضلك.","Lütfen buraya otur.");
-add("ar","A2","Fiiller","يقف","ayakta durmak","fiil","هو يقف أمام الباب.","O kapının önünde duruyor.");
-add("ar","A2","Fiiller","ينام","uyumak","fiil","أنام مبكرا.","Erken uyurum.");
-add("ar","A2","Fiiller","يستيقظ","uyanmak","fiil","أستيقظ في السابعة.","Yedide uyanırım.");
-add("ar","A2","Fiiller","يطبخ","yemek pişirmek","fiil","أمي تطبخ العشاء.","Annem akşam yemeği pişiriyor.");
-add("ar","A2","Fiiller","يأكل","yemek yemek","fiil","آكل الفطور في الصباح.","Sabah kahvaltı yaparım.");
-add("ar","A2","Fiiller","يشرب","içmek","fiil","أشرب الماء كثيرا.","Çok su içerim.");
-add("ar","A2","Fiiller","يشتري","satın almak","fiil","أريد شراء سيارة.","Bir araba satın almak istiyorum.");
-add("ar","A2","Fiiller","يدفع","ödemek","fiil","سأدفع الفاتورة.","Hesabı ödeyeceğim.");
-add("ar","A2","Fiiller","يفتح","açmak","fiil","افتح الباب.","Kapıyı aç.");
-add("ar","A2","Fiiller","يغلق","kapatmak","fiil","أغلق النافذة.","Pencereyi kapat.");
-// ======================= A2 — BAĞLAÇLAR VE ZARFLAR =======================
-add("ar","A2","Bağlaçlar","لكن","ama / fakat","bağlaç","أريد الذهاب، لكنني مشغول.","Gitmek istiyorum ama meşgulüm.");
-add("ar","A2","Bağlaçlar","لأن","çünkü","bağlaç","لم أذهب لأنني كنت مريضا.","Gitmedim çünkü hastaydım.");
-add("ar","A2","Bağlaçlar","لذلك","bu yüzden","bağlaç","كنت متعبا، لذلك نمت.","Yorgundum, bu yüzden uyudum.");
-add("ar","A2","Bağlaçlar","أيضا","ayrıca / de","zarf","أنا أدرس أيضا.","Ben de çalışıyorum.");
-add("ar","A2","Bağlaçlar","فقط","sadece","zarf","أريد دقيقة واحدة فقط.","Sadece bir dakika istiyorum.");
-add("ar","A2","Bağlaçlar","تقريبا","neredeyse","zarf","انتهيت تقريبا.","Neredeyse bitirdim.");
-add("ar","A2","Bağlaçlar","حقا","gerçekten","zarf","هذا حقا جميل.","Bu gerçekten güzel.");
-add("ar","A2","Bağlaçlar","جدا","çok","zarf","أنا سعيد جدا.","Çok mutluyum.");
-add("ar","A2","Bağlaçlar","قليلا","biraz","zarf","أتكلم العربية قليلا.","Biraz Arapça konuşuyorum.");
-add("ar","A2","Bağlaçlar","كثيرا","çok / sık sık","zarf","أقرأ كثيرا.","Çok okurum.");
-add("ar","A2","Bağlaçlar","معا","birlikte","zarf","نحن نعمل معا.","Birlikte çalışıyoruz.");
-add("ar","A2","Bağlaçlar","وحده","tek başına","zarf","ذهب وحده.","Tek başına gitti.");
-// ======================= A2 — İLETİŞİM =======================
-add("ar","A2","İletişim","خبر","haber","isim","سمعت خبرا جديدا.","Yeni bir haber duydum.");
-add("ar","A2","İletişim","خبرة","deneyim","isim","لديه خبرة في هذا المجال.","Bu alanda deneyimi var.");
-add("ar","A2","İletişim","رأي","fikir / görüş","isim","ما رأيك؟","Senin fikrin nedir?");
-add("ar","A2","İletişim","فكرة","fikir","isim","لدي فكرة جيدة.","İyi bir fikrim var.");
-add("ar","A2","İletişim","سبب","sebep","isim","ما السبب؟","Sebep nedir?");
-add("ar","A2","İletişim","نتيجة","sonuç","isim","هذه نتيجة جيدة.","Bu iyi bir sonuç.");
-add("ar","A2","İletişim","مشكلة","sorun","isim","لدينا مشكلة صغيرة.","Küçük bir sorunumuz var.");
-add("ar","A2","İletişim","حل","çözüm","isim","وجدنا حلا للمشكلة.","Soruna bir çözüm bulduk.");
-add("ar","A2","İletişim","قرار","karar","isim","هذا قرار مهم.","Bu önemli bir karar.");
-add("ar","A2","İletişim","خطة","plan","isim","لدي خطة جديدة.","Yeni bir planım var.");
-add("ar","A2","İletişim","هدف","hedef","isim","لدي هدف واضح.","Net bir hedefim var.");
-add("ar","A2","İletişim","نجاح","başarı","isim","أتمنى لك النجاح.","Sana başarılar diliyorum.");
-add("ar","A2","İletişim","فشل","başarısızlık","isim","الفشل جزء من التعلم.","Başarısızlık öğrenmenin bir parçasıdır.");
-add("ar","A2","İletişim","تجربة","deneyim / tecrübe","isim","كانت تجربة مفيدة.","Faydalı bir deneyimdi.");
-add("ar","A2","İletişim","مساعدة","yardım","isim","شكرا على مساعدتك.","Yardımın için teşekkürler.");
-add("ar","A2","İletişim","نصيحة","tavsiye","isim","أعطني نصيحة.","Bana bir tavsiye ver.");
-add("ar","A2","İletişim","سؤال","soru","isim","أريد أن أطرح سؤالا.","Bir soru sormak istiyorum.");
-add("ar","A2","İletişim","جواب","cevap","isim","لا أعرف الجواب.","Cevabı bilmiyorum.");
-// ======================= A2 — EK FİİLLER =======================
-add("ar","A2","Fiiller","يساعد","yardım etmek","fiil","هل يمكنك مساعدتي؟","Bana yardım edebilir misin?");
-add("ar","A2","Fiiller","ينتظر","beklemek","fiil","أنا أنتظرك هنا.","Seni burada bekliyorum.");
-add("ar","A2","Fiiller","يقابل","buluşmak / karşılaşmak","fiil","سأقابل صديقي اليوم.","Bugün arkadaşımla buluşacağım.");
-add("ar","A2","Fiiller","يدعو","davet etmek","fiil","دعوت أصدقائي إلى الحفل.","Arkadaşlarımı partiye davet ettim.");
-add("ar","A2","Fiiller","يقبل","kabul etmek","fiil","قبلت العرض.","Teklifi kabul ettim.");
-add("ar","A2","Fiiller","يرفض","reddetmek","fiil","رفض العرض.","Teklifi reddetti.");
-add("ar","A2","Fiiller","يوافق","katılmak / hemfikir olmak","fiil","أنا أوافق على رأيك.","Fikrine katılıyorum.");
-add("ar","A2","Fiiller","يختلف","farklı olmak / anlaşmazlık yaşamak","fiil","نحن نختلف في الرأي.","Fikirlerimiz farklı.");
-add("ar","A2","Fiiller","يتفق","anlaşmak","fiil","اتفقنا على الخطة.","Plan üzerinde anlaştık.");
-add("ar","A2","Fiiller","يشرح","açıklamak","fiil","هل يمكنك شرح هذا؟","Bunu açıklayabilir misin?");
-add("ar","A2","Fiiller","يكرر","tekrarlamak","fiil","هل يمكنك تكرار السؤال؟","Soruyu tekrar edebilir misin?");
-add("ar","A2","Fiiller","يتوقف","durmak","fiil","توقف عن الكلام.","Konuşmayı bırak.");
-add("ar","A2","Fiiller","يستمر","devam etmek","fiil","استمر في العمل.","Çalışmaya devam et.");
-add("ar","A2","Fiiller","يتغير","değişmek","fiil","الطقس يتغير بسرعة.","Hava hızla değişiyor.");
-add("ar","A2","Fiiller","ينمو","büyümek","fiil","الأطفال ينمون بسرعة.","Çocuklar hızlı büyüyor.");
-add("ar","A2","Fiiller","يحدث","olmak / gerçekleşmek","fiil","ماذا يحدث هنا؟","Burada ne oluyor?");
-add("ar","A2","Fiiller","يظهر","görünmek / ortaya çıkmak","fiil","ظهرت مشكلة جديدة.","Yeni bir sorun ortaya çıktı.");
-add("ar","A2","Fiiller","يختفي","kaybolmak","fiil","اختفى الهاتف.","Telefon kayboldu.");
-add("ar","A2","Fiiller","ينجح","başarılı olmak","fiil","نجحت في الامتحان.","Sınavda başarılı oldum.");
-add("ar","A2","Fiiller","يفشل","başarısız olmak","fiil","لم أفشل في المحاولة.","Denemede başarısız olmadım.");
+// ======================= B1 — SOYUT KAVRAMLAR =======================
+add("ar","B1","Soyut Kavramlar","مجتمع","toplum","isim","يحتاج المجتمع إلى التعاون.","Toplumun iş birliğine ihtiyacı vardır.");
+add("ar","B1","Soyut Kavramlar","ثقافة","kültür","isim","الثقافة جزء مهم من حياة الإنسان.","Kültür insan hayatının önemli bir parçasıdır.");
+add("ar","B1","Soyut Kavramlar","تطور","gelişim","isim","شهدت المدينة تطورا كبيرا.","Şehir büyük bir gelişme yaşadı.");
+add("ar","B1","Soyut Kavramlar","تغيير","değişim","isim","نحتاج إلى تغيير بعض الأشياء.","Bazı şeyleri değiştirmemiz gerekiyor.");
+add("ar","B1","Soyut Kavramlar","مستقبل","gelecek","isim","أفكر كثيرا في مستقبلي.","Geleceğim hakkında çok düşünüyorum.");
+add("ar","B1","Soyut Kavramlar","ماضي","geçmiş","isim","لا يمكننا تغيير الماضي.","Geçmişi değiştiremeyiz.");
+add("ar","B1","Soyut Kavramlar","حاضر","şimdiki zaman / bugün","isim","يجب أن نعيش في الحاضر.","Şimdiki zamanda yaşamalıyız.");
+add("ar","B1","Soyut Kavramlar","فرصة","fırsat","isim","هذه فرصة جيدة للتعلم.","Bu öğrenmek için iyi bir fırsat.");
+add("ar","B1","Soyut Kavramlar","احتمال","olasılık","isim","هناك احتمال كبير للنجاح.","Başarı ihtimali yüksek.");
+add("ar","B1","Soyut Kavramlar","ضرورة","gereklilik","isim","التعليم ضرورة في الحياة.","Eğitim hayatta bir gerekliliktir.");
+add("ar","B1","Soyut Kavramlar","حرية","özgürlük","isim","الحرية حق أساسي.","Özgürlük temel bir haktır.");
+add("ar","B1","Soyut Kavramlar","مسؤولية","sorumluluk","isim","هذه مسؤولية كبيرة.","Bu büyük bir sorumluluktur.");
+add("ar","B1","Soyut Kavramlar","حقوق","haklar","isim","يجب احترام حقوق الإنسان.","İnsan haklarına saygı gösterilmelidir.");
+add("ar","B1","Soyut Kavramlar","واجب","görev / sorumluluk","isim","من واجبنا مساعدة الآخرين.","Başkalarına yardım etmek görevimizdir.");
+add("ar","B1","Soyut Kavramlar","قيمة","değer","isim","الوقت له قيمة كبيرة.","Zamanın büyük bir değeri vardır.");
+add("ar","B1","Soyut Kavramlar","هدف","amaç / hedef","isim","ما هو هدفك في الحياة؟","Hayattaki amacın nedir?");
+add("ar","B1","Soyut Kavramlar","غاية","amaç","isim","ما هي غايتك من هذا العمل؟","Bu işteki amacın nedir?");
+add("ar","B1","Soyut Kavramlar","مبدأ","ilke","isim","الصدق مبدأ مهم بالنسبة لي.","Dürüstlük benim için önemli bir ilkedir.");
+add("ar","B1","Soyut Kavramlar","تأثير","etki","isim","للتكنولوجيا تأثير كبير على حياتنا.","Teknolojinin hayatımız üzerinde büyük bir etkisi var.");
+add("ar","B1","Soyut Kavramlar","نتيجة","sonuç","isim","كانت النتيجة أفضل مما توقعنا.","Sonuç beklediğimizden daha iyiydi.");
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم لبناء المستقبل.","Eğitim geleceği inşa etmek için önemlidir.");
+add("ar","B1","Eğitim","معرفة","bilgi / bilgi birikimi","isim","المعرفة تساعدنا على فهم العالم.","Bilgi dünyayı anlamamıza yardımcı olur.");
+add("ar","B1","Eğitim","مهارة","beceri","isim","أريد تطوير مهاراتي.","Becerilerimi geliştirmek istiyorum.");
+add("ar","B1","Eğitim","خبرة","deneyim","isim","لديه خبرة طويلة في هذا المجال.","Bu alanda uzun bir deneyimi var.");
+add("ar","B1","Eğitim","تخصص","uzmanlık / bölüm","isim","ما هو تخصصك في الجامعة؟","Üniversitedeki bölümün nedir?");
+add("ar","B1","Eğitim","تخصص جامعي","üniversite bölümü","isim","أدرس في تخصص جامعي جديد.","Yeni bir üniversite bölümünde okuyorum.");
+add("ar","B1","Eğitim","محاضرة","ders / konferans","isim","حضرت محاضرة مهمة اليوم.","Bugün önemli bir derse katıldım.");
+add("ar","B1","Eğitim","بحث","araştırma","isim","أعمل على بحث جديد.","Yeni bir araştırma üzerinde çalışıyorum.");
+add("ar","B1","Eğitim","بحث علمي","bilimsel araştırma","isim","نشر الباحث بحثا علميا.","Araştırmacı bilimsel bir araştırma yayımladı.");
+add("ar","B1","Eğitim","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","Eğitim","مادة","ders / konu","isim","هذه المادة صعبة قليلا.","Bu ders biraz zor.");
+add("ar","B1","Eğitim","منهج","müfredat","isim","تم تغيير المنهج الدراسي.","Ders müfredatı değiştirildi.");
+add("ar","B1","Eğitim","درجة","not / derece","isim","حصلت على درجة جيدة.","İyi bir not aldım.");
+add("ar","B1","Eğitim","شهادة","sertifika / diploma","isim","حصلت على شهادة من الجامعة.","Üniversiteden diploma aldım.");
+add("ar","B1","Eğitim","تخرج","mezuniyet","isim","بعد التخرج سأبحث عن عمل.","Mezuniyetten sonra iş arayacağım.");
+add("ar","B1","Eğitim","طالب","öğrenci","isim","الطالب يدرس بجد.","Öğrenci ciddi şekilde çalışıyor.");
+add("ar","B1","Eğitim","أستاذ","profesör / öğretmen","isim","الأستاذ يشرح الموضوع بوضوح.","Profesör konuyu açıkça açıklıyor.");
+add("ar","B1","Eğitim","مكتبة","kütüphane","isim","أدرس في المكتبة كل مساء.","Her akşam kütüphanede çalışıyorum.");
+// ======================= B1 — İŞ HAYATI =======================
+add("ar","B1","İş","مهنة","meslek","isim","ما هي مهنتك؟","Mesleğin nedir?");
+add("ar","B1","İş","مجال","alan / sektör","isim","أعمل في مجال التكنولوجيا.","Teknoloji alanında çalışıyorum.");
+add("ar","B1","İş","خبرة عملية","iş deneyimi","isim","لدي خبرة عملية جيدة.","İyi bir iş deneyimim var.");
+add("ar","B1","İş","موظف","çalışan","isim","الشركة تبحث عن موظفين جدد.","Şirket yeni çalışanlar arıyor.");
+add("ar","B1","İş","صاحب العمل","işveren","isim","تحدثت مع صاحب العمل.","İşverenle konuştum.");
+add("ar","B1","İş","زميل","iş arkadaşı","isim","زميلي يساعدني كثيرا.","İş arkadaşım bana çok yardımcı oluyor.");
+add("ar","B1","İş","إدارة","yönetim","isim","تعمل الإدارة على حل المشكلة.","Yönetim sorunu çözmek için çalışıyor.");
+add("ar","B1","İş","إدارة الأعمال","işletme yönetimi","isim","أدرس إدارة الأعمال في الجامعة.","Üniversitede işletme okuyorum.");
+add("ar","B1","İş","مقابلة","mülakat","isim","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","İş","سيرة ذاتية","özgeçmiş","isim","أرسلت سيرتي الذاتية إلى الشركة.","Özgeçmişimi şirkete gönderdim.");
+add("ar","B1","İş","راتب","maaş","isim","يحصل على راتب جيد.","İyi bir maaş alıyor.");
+add("ar","B1","İş","دخل","gelir","isim","يريد زيادة دخله.","Gelirini artırmak istiyor.");
+add("ar","B1","İş","مصروف","harcama","isim","يجب أن أقلل مصروفي.","Harcamalarımı azaltmalıyım.");
+add("ar","B1","İş","ربح","kâr","isim","حققت الشركة ربحا كبيرا.","Şirket büyük bir kâr elde etti.");
+add("ar","B1","İş","خسارة","zarar / kayıp","isim","تعرضت الشركة لخسارة كبيرة.","Şirket büyük bir zarar yaşadı.");
+add("ar","B1","İş","اتفاق","anlaşma","isim","وقعنا اتفاقا جديدا.","Yeni bir anlaşma imzaladık.");
+add("ar","B1","İş","اجتماع","toplantı","isim","سيبدأ الاجتماع بعد قليل.","Toplantı birazdan başlayacak.");
+add("ar","B1","İş","موعد نهائي","son teslim tarihi","isim","يجب أن ننهي العمل قبل الموعد النهائي.","İşi son teslim tarihinden önce bitirmeliyiz.");
+// ======================= B1 — TEKNOLOJİ =======================
+add("ar","B1","Teknoloji","تكنولوجيا","teknoloji","isim","تغير التكنولوجيا حياتنا بسرعة.","Teknoloji hayatımızı hızla değiştiriyor.");
+add("ar","B1","Teknoloji","رقمي","dijital","sıfat","نعيش في عالم رقمي.","Dijital bir dünyada yaşıyoruz.");
+add("ar","B1","Teknoloji","بيانات","veri","isim","تحتاج الشركة إلى تحليل البيانات.","Şirketin verileri analiz etmesi gerekiyor.");
+add("ar","B1","Teknoloji","معلومات","bilgi","isim","وجدت معلومات مفيدة على الإنترنت.","İnternette faydalı bilgiler buldum.");
+add("ar","B1","Teknoloji","شبكة","ağ","isim","الشبكة لا تعمل بشكل جيد.","Ağ düzgün çalışmıyor.");
+add("ar","B1","Teknoloji","اتصال","bağlantı","isim","الاتصال بالإنترنت ضعيف.","İnternet bağlantısı zayıf.");
+add("ar","B1","Teknoloji","ذكاء اصطناعي","yapay zeka","isim","يستخدم الذكاء الاصطناعي في مجالات كثيرة.","Yapay zeka birçok alanda kullanılıyor.");
+add("ar","B1","Teknoloji","روبوت","robot","isim","يمكن للروبوت القيام بالعديد من المهام.","Robot birçok görevi yapabilir.");
+add("ar","B1","Teknoloji","نظام","sistem","isim","النظام يعمل بشكل جيد.","Sistem iyi çalışıyor.");
+add("ar","B1","Teknoloji","تطبيق","uygulama","isim","هذا التطبيق يساعدني في الدراسة.","Bu uygulama ders çalışmama yardımcı oluyor.");
+add("ar","B1","Teknoloji","تحديث","güncelleme","isim","يحتاج البرنامج إلى تحديث.","Programın güncellenmesi gerekiyor.");
+add("ar","B1","Teknoloji","أمان","güvenlik","isim","أمان البيانات مهم جدا.","Veri güvenliği çok önemlidir.");
+add("ar","B1","Teknoloji","خصوصية","gizlilik","isim","يجب حماية خصوصية المستخدمين.","Kullanıcıların gizliliği korunmalıdır.");
+add("ar","B1","Teknoloji","حساب","hesap","isim","أنشأت حسابا جديدا.","Yeni bir hesap oluşturdum.");
+add("ar","B1","Teknoloji","كلمة مرور","şifre","isim","يجب تغيير كلمة المرور بانتظام.","Şifre düzenli olarak değiştirilmelidir.");
+// ======================= B1 — ÇEVRE =======================
+add("ar","B1","Çevre","بيئة","çevre","isim","يجب أن نحمي البيئة.","Çevreyi korumalıyız.");
+add("ar","B1","Çevre","تلوث","kirlilik","isim","تلوث الهواء مشكلة خطيرة.","Hava kirliliği ciddi bir sorundur.");
+add("ar","B1","Çevre","تغير المناخ","iklim değişikliği","isim","تغير المناخ يؤثر على العالم كله.","İklim değişikliği tüm dünyayı etkiliyor.");
+add("ar","B1","Çevre","احتباس حراري","küresel ısınma","isim","الاحتباس الحراري مشكلة عالمية.","Küresel ısınma küresel bir sorundur.");
+add("ar","B1","Çevre","طاقة","enerji","isim","نحتاج إلى مصادر طاقة نظيفة.","Temiz enerji kaynaklarına ihtiyacımız var.");
+add("ar","B1","Çevre","طاقة شمسية","güneş enerjisi","isim","تستخدم بعض المنازل الطاقة الشمسية.","Bazı evler güneş enerjisi kullanıyor.");
+add("ar","B1","Çevre","موارد","kaynaklar","isim","يجب أن نحافظ على الموارد الطبيعية.","Doğal kaynakları korumalıyız.");
+add("ar","B1","Çevre","نفايات","atıklar","isim","يجب تقليل النفايات.","Atıklar azaltılmalıdır.");
+add("ar","B1","Çevre","إعادة التدوير","geri dönüşüm","isim","إعادة التدوير تساعد في حماية البيئة.","Geri dönüşüm çevrenin korunmasına yardımcı olur.");
+add("ar","B1","Çevre","طبيعي","doğal","sıfat","نحتاج إلى حماية المناطق الطبيعية.","Doğal alanları korumamız gerekiyor.");
+add("ar","B1","Çevre","مستدام","sürdürülebilir","sıfat","نحتاج إلى حلول مستدامة.","Sürdürülebilir çözümlere ihtiyacımız var.");
+// ======================= B1 — TOPLUM =======================
+add("ar","B1","Toplum","دولة","devlet / ülke","isim","تعمل الدولة على تحسين التعليم.","Devlet eğitimi geliştirmek için çalışıyor.");
+add("ar","B1","Toplum","حكومة","hükümet","isim","أعلنت الحكومة قرارا جديدا.","Hükümet yeni bir karar açıkladı.");
+add("ar","B1","Toplum","قانون","kanun / yasa","isim","يجب احترام القانون.","Yasalara saygı gösterilmelidir.");
+add("ar","B1","Toplum","انتخابات","seçimler","isim","ستجري الانتخابات قريبا.","Seçimler yakında yapılacak.");
+add("ar","B1","Toplum","مواطن","vatandaş","isim","كل مواطن له حقوق وواجبات.","Her vatandaşın hakları ve görevleri vardır.");
+add("ar","B1","Toplum","شعب","halk","isim","الشعب يريد التغيير.","Halk değişim istiyor.");
+add("ar","B1","Toplum","اقتصاد","ekonomi","isim","الاقتصاد يتغير بسرعة.","Ekonomi hızla değişiyor.");
+add("ar","B1","Toplum","أزمة","kriz","isim","تمر البلاد بأزمة اقتصادية.","Ülke ekonomik bir kriz yaşıyor.");
+add("ar","B1","Toplum","مشكلة","sorun","isim","هذه مشكلة اجتماعية كبيرة.","Bu büyük bir toplumsal sorundur.");
+add("ar","B1","Toplum","حل","çözüm","isim","نحتاج إلى إيجاد حل للمشكلة.","Soruna bir çözüm bulmamız gerekiyor.");
+add("ar","B1","Toplum","مساواة","eşitlik","isim","المساواة مهمة في المجتمع.","Toplumda eşitlik önemlidir.");
+add("ar","B1","Toplum","عدالة","adalet","isim","يجب أن يكون هناك عدل للجميع.","Herkes için adalet olmalıdır.");
+// ======================= B1 — FİİLLER =======================
+add("ar","B1","Fiiller","يطور","geliştirmek","fiil","أريد تطوير مهاراتي.","Becerilerimi geliştirmek istiyorum.");
+add("ar","B1","Fiiller","يحسن","iyileştirmek","fiil","نريد تحسين جودة الخدمة.","Hizmet kalitesini iyileştirmek istiyoruz.");
+add("ar","B1","Fiiller","يؤثر","etkilemek","fiil","الطقس يؤثر على مزاجي.","Hava durumu ruh halimi etkiliyor.");
+add("ar","B1","Fiiller","يؤدي","yol açmak / neden olmak","fiil","قلة النوم تؤدي إلى التعب.","Az uyumak yorgunluğa yol açar.");
+add("ar","B1","Fiiller","يحقق","gerçekleştirmek / elde etmek","fiil","حقق هدفه أخيرا.","Sonunda hedefine ulaştı.");
+add("ar","B1","Fiiller","يواجه","karşılaşmak","fiil","نواجه مشكلة كبيرة.","Büyük bir sorunla karşılaşıyoruz.");
+add("ar","B1","Fiiller","يشارك","katılmak / paylaşmak","fiil","شارك في المشروع.","Projeye katıldı.");
+add("ar","B1","Fiiller","يناقش","tartışmak","fiil","ناقشنا المشكلة في الاجتماع.","Toplantıda sorunu tartıştık.");
+add("ar","B1","Fiiller","يقترح","önermek","fiil","اقترح فكرة جديدة.","Yeni bir fikir önerdi.");
+add("ar","B1","Fiiller","يوافق","onaylamak / kabul etmek","fiil","وافق المدير على الخطة.","Müdür planı onayladı.");
+add("ar","B1","Fiiller","يرفض","reddetmek","fiil","رفضت الشركة الطلب.","Şirket talebi reddetti.");
+add("ar","B1","Fiiller","يقرر","karar vermek","fiil","قررنا السفر غدا.","Yarın seyahat etmeye karar verdik.");
+add("ar","B1","Fiiller","يتوقع","beklemek / tahmin etmek","fiil","أتوقع أن يصل غدا.","Yarın varmasını bekliyorum.");
+add("ar","B1","Fiiller","يتطلب","gerektirmek","fiil","هذا العمل يتطلب خبرة.","Bu iş deneyim gerektiriyor.");
+add("ar","B1","Fiiller","يستفيد","yararlanmak","fiil","يمكنك الاستفادة من هذه الفرصة.","Bu fırsattan yararlanabilirsin.");
+add("ar","B1","Fiiller","يعتمد","bağlı olmak","fiil","النجاح يعتمد على العمل الجاد.","Başarı sıkı çalışmaya bağlıdır.");
+add("ar","B1","Fiiller","ينتمي","ait olmak","fiil","أنا أنتمي إلى هذا المجتمع.","Ben bu topluma aidim.");
+add("ar","B1","Fiiller","يتعامل","ilgilenmek / başa çıkmak","fiil","يجب أن نتعامل مع المشكلة.","Sorunla ilgilenmeliyiz.");
+add("ar","B1","Fiiller","يتجنب","kaçınmak","fiil","أحاول تجنب المشاكل.","Sorunlardan kaçınmaya çalışıyorum.");
+add("ar","B1","Fiiller","يستمر","devam etmek","fiil","استمر في العمل رغم الصعوبات.","Zorluklara rağmen çalışmaya devam etti.");
+add("ar","B1","Fiiller","يكتشف","keşfetmek","fiil","اكتشفنا مكانا جميلا.","Güzel bir yer keşfettik.");
+add("ar","B1","Fiiller","يلاحظ","fark etmek / gözlemlemek","fiil","لاحظت تغيرا في سلوكه.","Davranışında bir değişiklik fark ettim.");
+add("ar","B1","Fiiller","يختار","seçmek","fiil","اخترت الخيار الأفضل.","En iyi seçeneği seçtim.");
+add("ar","B1","Fiiller","يقارن","karşılaştırmak","fiil","يقارن الناس بين المنتجات قبل الشراء.","İnsanlar satın almadan önce ürünleri karşılaştırır.");
+add("ar","B1","Fiiller","يشرح","açıklamak","fiil","شرح المعلم الفكرة بوضوح.","Öğretmen fikri açıkça açıkladı.");
+// ======================= B1 — SIFATLAR =======================
+add("ar","B1","Sıfatlar","ضروري","gerekli","sıfat","هذا الأمر ضروري.","Bu konu gereklidir.");
+add("ar","B1","Sıfatlar","مهم","önemli","sıfat","هذا موضوع مهم.","Bu önemli bir konudur.");
+add("ar","B1","Sıfatlar","مفيد","faydalı","sıfat","هذا الكتاب مفيد جدا.","Bu kitap çok faydalıdır.");
+add("ar","B1","Sıfatlar","متاح","mevcut / erişilebilir","sıfat","الخدمة متاحة للجميع.","Hizmet herkes için mevcut.");
+add("ar","B1","Sıfatlar","مناسب","uygun","sıfat","هذا الوقت مناسب لي.","Bu zaman benim için uygun.");
+add("ar","B1","Sıfatlar","مختلف","farklı","sıfat","لدينا آراء مختلفة.","Farklı görüşlerimiz var.");
+add("ar","B1","Sıfatlar","مشابه","benzer","sıfat","هاتان الفكرتان متشابهتان.","Bu iki fikir benzer.");
+add("ar","B1","Sıfatlar","معقد","karmaşık","sıfat","هذا النظام معقد.","Bu sistem karmaşık.");
+add("ar","B1","Sıfatlar","بسيط","basit","sıfat","الحل بسيط.","Çözüm basit.");
+add("ar","B1","Sıfatlar","فعال","etkili","sıfat","هذه طريقة فعالة.","Bu etkili bir yöntemdir.");
+add("ar","B1","Sıfatlar","إيجابي","olumlu","sıfat","كانت تجربة إيجابية.","Olumlu bir deneyimdi.");
+add("ar","B1","Sıfatlar","سلبي","olumsuz","sıfat","كان تأثير القرار سلبيا.","Kararın etkisi olumsuzdu.");
+add("ar","B1","Sıfatlar","مستقل","bağımsız","sıfat","هو شخص مستقل.","O bağımsız bir kişidir.");
+add("ar","B1","Sıfatlar","مسؤول","sorumlu","sıfat","هو شخص مسؤول.","O sorumlu bir kişidir.");
+add("ar","B1","Sıfatlar","ناجح","başarılı","sıfat","هو رجل ناجح.","O başarılı bir adamdır.");
+add("ar","B1","Sıfatlar","مشترك","ortak","sıfat","لدينا هدف مشترك.","Ortak bir hedefimiz var.");
+add("ar","B1","Sıfatlar","محلي","yerel","sıfat","أحب المنتجات المحلية.","Yerel ürünleri seviyorum.");
+add("ar","B1","Sıfatlar","عالمي","küresel","sıfat","هذه مشكلة عالمية.","Bu küresel bir sorundur.");
+// ======================= B1 — ZARFLAR VE BAĞLAÇLAR =======================
+add("ar","B1","Bağlaçlar","بالإضافة إلى ذلك","buna ek olarak","bağlaç","بالإضافة إلى ذلك، نحتاج إلى وقت.","Buna ek olarak zamana ihtiyacımız var.");
+add("ar","B1","Bağlaçlar","على الرغم من","rağmen","bağlaç","على الرغم من المطر، خرجنا.","Yağmura rağmen dışarı çıktık.");
+add("ar","B1","Bağlaçlar","بسبب","nedeniyle","edat","تأخرنا بسبب الزحام.","Trafik nedeniyle geç kaldık.");
+add("ar","B1","Bağlaçlar","من أجل","amacıyla / için","edat","أدرس من أجل مستقبلي.","Geleceğim için çalışıyorum.");
+add("ar","B1","Bağlaçlar","بدلا من","yerine","edat","استخدم الحافلة بدلا من السيارة.","Araba yerine otobüsü kullan.");
+add("ar","B1","Bağلاçlar","على الأقل","en azından","zarf","أحتاج إلى يوم واحد على الأقل.","En az bir güne ihtiyacım var.");
+add("ar","B1","Bağلاçlar","عادة","genellikle","zarf","عادة أذهب إلى العمل سيرا.","Genellikle işe yürüyerek giderim.");
+add("ar","B1","Bağلاçlar","خصوصا","özellikle","zarf","أحب الفواكه، خصوصا التفاح.","Meyveleri, özellikle elmaları severim.");
+add("ar","B1","Bağلاçlar","بالتأكيد","kesinlikle","zarf","سأساعدك بالتأكيد.","Sana kesinlikle yardım edeceğim.");
+add("ar","B1","Bağلاçlar","ربما","belki","zarf","ربما أذهب غدا.","Belki yarın giderim.");
+add("ar","B1","Bağلاçlar","فعلا","gerçekten","zarf","هذا فعلا مهم.","Bu gerçekten önemli.");
+add("ar","B1","Bağلاçlar","بشكل عام","genel olarak","zarf","بشكل عام، الأمور جيدة.","Genel olarak işler iyi.");
+// ======================= B1 — İLETİŞİM VE MEDYA =======================
+add("ar","B1","Medya","إعلام","medya","isim","الإعلام له تأثير كبير على المجتمع.","Medyanın toplum üzerinde büyük bir etkisi vardır.");
+add("ar","B1","Medya","صحيفة","gazete","isim","قرأت الخبر في الصحيفة.","Haberi gazetede okudum.");
+add("ar","B1","Medya","مجلة","dergi","isim","أقرأ مجلة كل شهر.","Her ay bir dergi okuyorum.");
+add("ar","B1","Medya","مقال","makale","isim","قرأت مقالا عن التكنولوجيا.","Teknoloji hakkında bir makale okudum.");
+add("ar","B1","Medya","خبر","haber","isim","هذا خبر مهم.","Bu önemli bir haber.");
+add("ar","B1","Medya","تقرير","rapor","isim","أعد الموظف تقريرا جديدا.","Çalışan yeni bir rapor hazırladı.");
+add("ar","B1","Medya","مصدر","kaynak","isim","ما هو مصدر هذه المعلومات؟","Bu bilgilerin kaynağı nedir?");
+add("ar","B1","Medya","معلومة","bilgi","isim","هذه معلومة موثوقة.","Bu güvenilir bir bilgidir.");
+add("ar","B1","Medya","إعلان","reklam / duyuru","isim","شاهدت إعلانا جديدا.","Yeni bir reklam gördüm.");
+add("ar","B1","Medya","مقابلة","röportaj","isim","شاهدت مقابلة مع الكاتب.","Yazarla yapılan bir röportaj izledim.");
+add("ar","B1","Medya","رأي","görüş","isim","هذا رأيي الشخصي.","Bu benim kişisel görüşüm.");
+add("ar","B1","Medya","نقاش","tartışma","isim","كان هناك نقاش طويل.","Uzun bir tartışma vardı.");
+add("ar","B1","Medya","خبر عاجل","son dakika haberi","isim","ظهر خبر عاجل على التلفاز.","Televizyonda son dakika haberi çıktı.");
+// ======================= B1 — DUYGULAR VE KİŞİLİK =======================
+add("ar","B1","Kişilik","شخصية","kişilik","isim","لديه شخصية قوية.","Güçlü bir kişiliği var.");
+add("ar","B1","Kişilik","ثقة","güven","isim","الثقة مهمة في العلاقات.","İlişkilerde güven önemlidir.");
+add("ar","B1","Kişilik","ثقة بالنفس","özgüven","isim","الثقة بالنفس تساعد على النجاح.","Özgüven başarıya yardımcı olur.");
+add("ar","B1","Kişilik","احترام","saygı","isim","يجب أن نحترم الآخرين.","Başkalarına saygı göstermeliyiz.");
+add("ar","B1","Kişilik","صبر","sabır","isim","التعلم يحتاج إلى صبر.","Öğrenmek sabır gerektirir.");
+add("ar","B1","Kişilik","شجاعة","cesaret","isim","تحتاج إلى الشجاعة لاتخاذ القرار.","Karar vermek için cesarete ihtiyacın var.");
+add("ar","B1","Kişilik","قلق","endişe","isim","أشعر بالقلق بشأن المستقبل.","Gelecek hakkında endişeli hissediyorum.");
+add("ar","B1","Kişilik","ضغط","stres / baskı","isim","العمل يسبب لي ضغطا كبيرا.","İş bana çok fazla stres veriyor.");
+add("ar","B1","Kişilik","دافع","motivasyon","isim","أحتاج إلى دافع جديد.","Yeni bir motivasyona ihtiyacım var.");
+add("ar","B1","Kişilik","طموح","hırs / hedef","isim","لديه طموح كبير.","Büyük hedefleri var.");
+add("ar","B1","Kişilik","فضول","merak","isim","لدي فضول لمعرفة الحقيقة.","Gerçeği öğrenmek için merak ediyorum.");
+add("ar","B1","Kişilik","اهتمام","ilgi","isim","لدي اهتمام بالتكنولوجيا.","Teknolojiye ilgim var.");
+add("ar","B1","Kişilik","موهبة","yetenek","isim","لديه موهبة في الموسيقى.","Müzik konusunda yeteneği var.");
+add("ar","B1","Kişilik","إبداع","yaratıcılık","isim","الإبداع مهم في هذا العمل.","Yaratıcılık bu işte önemlidir.");
+add("ar","B1","Kişilik","ذكاء","zeka","isim","الذكاء وحده لا يكفي.","Zeka tek başına yeterli değildir.");
+/* ================================================================
+   ARAPÇA B1 — PART 2
+================================================================ */
+// ======================= B1 — EKONOMİ VE FİNANS =======================
+add("ar","B1","Ekonomi","اقتصاد","ekonomi","isim","الاقتصاد يتغير بسرعة.","Ekonomi hızla değişiyor.");
+add("ar","B1","Ekonomi","اقتصادي","ekonomik","sıfat","نحن نواجه مشكلة اقتصادية.","Ekonomik bir sorunla karşı karşıyayız.");
+add("ar","B1","Ekonomi","مالي","finansal","sıfat","لديه مشاكل مالية.","Finansal sorunları var.");
+add("ar","B1","Ekonomi","مال","para","isim","المال ليس كل شيء في الحياة.","Para hayattaki her şey değildir.");
+add("ar","B1","Ekonomi","ثروة","servet / zenginlik","isim","يريد بناء ثروة في المستقبل.","Gelecekte bir servet oluşturmak istiyor.");
+add("ar","B1","Ekonomi","فقر","yoksulluk","isim","الفقر مشكلة عالمية.","Yoksulluk küresel bir sorundur.");
+add("ar","B1","Ekonomi","غنى","zenginlik","isim","الغنى لا يعني السعادة دائما.","Zenginlik her zaman mutluluk anlamına gelmez.");
+add("ar","B1","Ekonomi","سوق","piyasa","isim","السوق يتغير باستمرار.","Piyasa sürekli değişiyor.");
+add("ar","B1","Ekonomi","شركة","şirket","isim","تعمل في شركة كبيرة.","Büyük bir şirkette çalışıyor.");
+add("ar","B1","Ekonomi","مؤسسة","kurum / kuruluş","isim","هذه مؤسسة دولية.","Bu uluslararası bir kuruluştur.");
+add("ar","B1","Ekonomi","بنك","banka","isim","ذهبت إلى البنك صباحا.","Sabah bankaya gittim.");
+add("ar","B1","Ekonomi","حساب مصرفي","banka hesabı","isim","فتحت حسابا مصرفيا جديدا.","Yeni bir banka hesabı açtım.");
+add("ar","B1","Ekonomi","قرض","kredi / borç","isim","أخذ قرضا من البنك.","Bankadan kredi aldı.");
+add("ar","B1","Ekonomi","دين","borç","isim","أريد أن أسدد ديني.","Borcumu ödemek istiyorum.");
+add("ar","B1","Ekonomi","ضريبة","vergi","isim","يجب دفع الضرائب في الوقت المحدد.","Vergiler zamanında ödenmelidir.");
+add("ar","B1","Ekonomi","سعر","fiyat","isim","ارتفع سعر النفط.","Petrol fiyatı yükseldi.");
+add("ar","B1","Ekonomi","تكلفة","maliyet","isim","تكلفة المشروع مرتفعة.","Projenin maliyeti yüksek.");
+add("ar","B1","Ekonomi","ميزانية","bütçe","isim","يجب أن نضع ميزانية واضحة.","Net bir bütçe hazırlamalıyız.");
+add("ar","B1","Ekonomi","استثمار","yatırım","isim","الاستثمار يحتاج إلى تخطيط جيد.","Yatırım iyi bir planlama gerektirir.");
+add("ar","B1","Ekonomi","مستثمر","yatırımcı","isim","المستثمر يبحث عن فرصة جيدة.","Yatırımcı iyi bir fırsat arıyor.");
+add("ar","B1","Ekonomi","أسهم","hisseler","isim","يستثمر في الأسهم.","Hisselere yatırım yapıyor.");
+add("ar","B1","Ekonomi","سند","tahvil","isim","اشترى بعض السندات.","Birkaç tahvil satın aldı.");
+add("ar","B1","Ekonomi","عملة","para birimi","isim","ما هي عملة هذا البلد؟","Bu ülkenin para birimi nedir?");
+add("ar","B1","Ekonomi","صرف","döviz / bozdurma","isim","أحتاج إلى صرف بعض المال.","Biraz para bozdurmam gerekiyor.");
+add("ar","B1","Ekonomi","سعر الصرف","döviz kuru","isim","ما هو سعر الصرف اليوم؟","Bugünkü döviz kuru nedir?");
+add("ar","B1","Ekonomi","تجارة","ticaret","isim","التجارة بين البلدين مهمة.","İki ülke arasındaki ticaret önemlidir.");
+add("ar","B1","Ekonomi","استيراد","ithalat","isim","تعتمد الدولة على استيراد بعض المنتجات.","Ülke bazı ürünlerin ithalatına bağlıdır.");
+add("ar","B1","Ekonomi","تصدير","ihracat","isim","تعمل الشركة في مجال التصدير.","Şirket ihracat alanında çalışıyor.");
+add("ar","B1","Ekonomi","طلب","talep","isim","زاد الطلب على هذا المنتج.","Bu ürüne olan talep arttı.");
+add("ar","B1","Ekonomi","عرض","arz / teklif","isim","هناك عرض خاص هذا الأسبوع.","Bu hafta özel bir teklif var.");
+// ======================= B1 — SAĞLIK =======================
+add("ar","B1","Sağlık","صحة","sağlık","isim","الصحة أهم من المال.","Sağlık paradan daha önemlidir.");
+add("ar","B1","Sağlık","مرض","hastalık","isim","هذا المرض منتشر في المنطقة.","Bu hastalık bölgede yaygın.");
+add("ar","B1","Sağlık","أعراض","belirtiler","isim","ما هي أعراض هذا المرض؟","Bu hastalığın belirtileri nelerdir?");
+add("ar","B1","Sağlık","علاج","tedavi","isim","بدأ العلاج الأسبوع الماضي.","Tedavi geçen hafta başladı.");
+add("ar","B1","Sağlık","دواء","ilaç","isim","يجب أن تأخذ الدواء بانتظام.","İlacı düzenli olarak almalısın.");
+add("ar","B1","Sağlık","طبيب","doktor","isim","تحدثت مع الطبيب.","Doktorla konuştum.");
+add("ar","B1","Sağlık","مريض","hasta","isim","المريض يحتاج إلى الراحة.","Hastanın dinlenmeye ihtiyacı var.");
+add("ar","B1","Sağlık","مستشفى","hastane","isim","ذهب إلى المستشفى أمس.","Dün hastaneye gitti.");
+add("ar","B1","Sağlık","عيادة","klinik","isim","العيادة قريبة من منزلي.","Klinik evime yakın.");
+add("ar","B1","Sağlık","طوارئ","acil servis","isim","اتصل بالطوارئ فورا.","Hemen acil servisi ara.");
+add("ar","B1","Sağlık","عملية","ameliyat","isim","سيخضع لعملية غدا.","Yarın ameliyat olacak.");
+add("ar","B1","Sağlık","فحص","muayene / kontrol","isim","أحتاج إلى فحص طبي.","Tıbbi muayeneye ihtiyacım var.");
+add("ar","B1","Sağlık","نتيجة الفحص","muayene sonucu","isim","متى تظهر نتيجة الفحص؟","Muayene sonucu ne zaman çıkar?");
+add("ar","B1","Sağlık","ألم","ağrı","isim","أشعر بألم في ظهري.","Sırtımda ağrı hissediyorum.");
+add("ar","B1","Sağlık","حمى","ateş","isim","لديه حمى منذ يومين.","İki gündür ateşi var.");
+add("ar","B1","Sağlık","صداع","baş ağrısı","isim","أعاني من صداع شديد.","Şiddetli baş ağrısı çekiyorum.");
+add("ar","B1","Sağlık","تعب","yorgunluk","isim","أشعر بتعب شديد.","Çok yorgun hissediyorum.");
+add("ar","B1","Sağlık","راحة","dinlenme","isim","تحتاج إلى الراحة.","Dinlenmeye ihtiyacın var.");
+add("ar","B1","Sağlık","غذاء","beslenme / gıda","isim","الغذاء الصحي مهم.","Sağlıklı beslenme önemlidir.");
+add("ar","B1","Sağlık","نظام غذائي","beslenme düzeni / diyet","isim","أتبع نظاما غذائيا صحيا.","Sağlıklı bir beslenme düzeni uyguluyorum.");
+add("ar","B1","Sağlık","رياضة","spor","isim","ممارسة الرياضة مفيدة للصحة.","Spor yapmak sağlık için faydalıdır.");
+add("ar","B1","Sağlık","تمرين","egzersiz","isim","أمارس التمارين كل صباح.","Her sabah egzersiz yaparım.");
+add("ar","B1","Sağlık","نوم","uyku","isim","أحتاج إلى نوم كاف.","Yeterli uykuya ihtiyacım var.");
+add("ar","B1","Sağlık","عادات","alışkanlıklar","isim","أحاول تغيير عاداتي السيئة.","Kötü alışkanlıklarımı değiştirmeye çalışıyorum.");
+// ======================= B1 — SEYAHAT =======================
+add("ar","B1","Seyahat","رحلة","seyahat / gezi","isim","كانت الرحلة ممتعة.","Gezi eğlenceliydi.");
+add("ar","B1","Seyahat","سفر","seyahat","isim","أحب السفر إلى أماكن جديدة.","Yeni yerlere seyahat etmeyi seviyorum.");
+add("ar","B1","Seyahat","وجهة","destinasyon","isim","هذه وجهة سياحية مشهورة.","Burası ünlü bir turistik destinasyondur.");
+add("ar","B1","Seyahat","رحلة جوية","uçuş","isim","رحلتي الجوية تأخرت.","Uçuşum gecikti.");
+add("ar","B1","Seyahat","مطار","havaalanı","isim","وصلنا إلى المطار مبكرا.","Havaalanına erken geldik.");
+add("ar","B1","Seyahat","رحلة بحرية","deniz yolculuğu","isim","قمنا برحلة بحرية طويلة.","Uzun bir deniz yolculuğu yaptık.");
+add("ar","B1","Seyahat","تذكرة","bilet","isim","اشتريت تذكرة ذهاب وعودة.","Gidiş-dönüş bileti aldım.");
+add("ar","B1","Seyahat","رحلة ذهاب وعودة","gidiş-dönüş yolculuğu","isim","حجزت رحلة ذهاب وعودة.","Gidiş-dönüş yolculuğu rezervasyonu yaptım.");
+add("ar","B1","Seyahat","إقامة","konaklama","isim","كانت إقامتنا مريحة.","Konaklamamız rahattı.");
+add("ar","B1","Seyahat","سكن","konut / konaklama","isim","وجدت سكنا بالقرب من الجامعة.","Üniversitenin yakınında konaklama buldum.");
+add("ar","B1","Seyahat","مغادرة","ayrılış","isim","موعد المغادرة في السادسة.","Kalkış saati altıda.");
+add("ar","B1","Seyahat","وصول","varış","isim","موعد الوصول الساعة الثامنة.","Varış saati sekiz.");
+add("ar","B1","Seyahat","تأخير","gecikme","isim","هناك تأخير في القطار.","Trende gecikme var.");
+add("ar","B1","Seyahat","مسافر","yolcu","isim","كان المسافر ينتظر القطار.","Yolcu treni bekliyordu.");
+add("ar","B1","Seyahat","مرشد سياحي","tur rehberi","isim","رافقنا مرشد سياحي.","Bize bir tur rehberi eşlik etti.");
+add("ar","B1","Seyahat","منظر","manzara","isim","المنظر من الفندق رائع.","Otelden manzara harika.");
+add("ar","B1","Seyahat","منطقة سياحية","turistik bölge","isim","هذه منطقة سياحية مشهورة.","Burası ünlü bir turistik bölgedir.");
+add("ar","B1","Seyahat","معلم","turistik yer / simge","isim","زرنا أهم المعالم في المدينة.","Şehrin en önemli turistik yerlerini ziyaret ettik.");
+add("ar","B1","Seyahat","تجربة سفر","seyahat deneyimi","isim","كانت تجربة سفر لا تنسى.","Unutulmaz bir seyahat deneyimiydi.");
+add("ar","B1","Seyahat","ثقافة محلية","yerel kültür","isim","أحب التعرف على الثقافة المحلية.","Yerel kültürü tanımayı seviyorum.");
+// ======================= B1 — EĞİTİM VE ÖĞRENME =======================
+add("ar","B1","Öğrenme","تعلم","öğrenme","isim","التعلم المستمر مهم.","Sürekli öğrenmek önemlidir.");
+add("ar","B1","Öğrenme","تعلم ذاتي","öz öğrenme","isim","أعتمد على التعلم الذاتي.","Öz öğrenmeye güveniyorum.");
+add("ar","B1","Öğrenme","دورة","kurs","isim","سجلت في دورة لغة.","Bir dil kursuna kaydoldum.");
+add("ar","B1","Öğrenme","دورة تدريبية","eğitim kursu","isim","أكملت دورة تدريبية.","Bir eğitim kursunu tamamladım.");
+add("ar","B1","Öğrenme","تدريب","eğitim / staj","isim","أبحث عن فرصة تدريب.","Staj fırsatı arıyorum.");
+add("ar","B1","Öğrenme","اختبار","test / sınav","isim","لدي اختبار غدا.","Yarın sınavım var.");
+add("ar","B1","Öğrenme","امتحان","sınav","isim","أستعد للامتحان.","Sınava hazırlanıyorum.");
+add("ar","B1","Öğrenme","واجب منزلي","ödev","isim","أنهيت واجبي المنزلي.","Ödevimi bitirdim.");
+add("ar","B1","Öğrenme","ملاحظة","not","isim","كتبت ملاحظات أثناء الدرس.","Ders sırasında notlar aldım.");
+add("ar","B1","Öğrenme","مصطلح","terim","isim","لا أعرف هذا المصطلح.","Bu terimi bilmiyorum.");
+add("ar","B1","Öğrenme","موضوع","konu","isim","هذا موضوع مهم.","Bu önemli bir konu.");
+add("ar","B1","Öğrenme","مستوى","seviye","isim","ما هو مستواك في اللغة؟","Dil seviyen nedir?");
+add("ar","B1","Öğrenme","تقدم","ilerleme","isim","أحرزت تقدما جيدا.","İyi bir ilerleme kaydettim.");
+add("ar","B1","Öğrenme","خطأ","hata","isim","ارتكبت خطأ صغيرا.","Küçük bir hata yaptım.");
+add("ar","B1","Öğrenme","تصحيح","düzeltme","isim","أحتاج إلى تصحيح أخطائي.","Hatalarımı düzeltmem gerekiyor.");
+add("ar","B1","Öğrenme","ممارسة","pratik","isim","الممارسة تساعد على التعلم.","Pratik yapmak öğrenmeye yardımcı olur.");
+add("ar","B1","Öğrenme","ذاكرة","hafıza","isim","القراءة تساعد على تحسين الذاكرة.","Okumak hafızayı geliştirmeye yardımcı olur.");
+add("ar","B1","Öğrenme","تركيز","konsantrasyon","isim","أحتاج إلى التركيز في الدراسة.","Ders çalışırken konsantre olmam gerekiyor.");
+add("ar","B1","Öğrenme","انتباه","dikkat","isim","يجب أن تنتبه إلى التفاصيل.","Detaylara dikkat etmelisin.");
+add("ar","B1","Öğrenme","معلومة جديدة","yeni bilgi","isim","تعلمت معلومة جديدة اليوم.","Bugün yeni bir bilgi öğrendim.");
+// ======================= B1 — GÜNLÜK YAŞAM =======================
+add("ar","B1","Günlük Yaşam","روتين","rutin","isim","لدي روتين يومي ثابت.","Sabit bir günlük rutinim var.");
+add("ar","B1","Günlük Yaşam","عادة يومية","günlük alışkanlık","isim","القراءة عادة يومية جيدة.","Okumak iyi bir günlük alışkanlıktır.");
+add("ar","B1","Günlük Yaşam","موعد","randevu","isim","لدي موعد مع الطبيب.","Doktorla randevum var.");
+add("ar","B1","Günlük Yaşam","مناسبة","özel gün / etkinlik","isim","هذه مناسبة مهمة لعائلتنا.","Bu ailemiz için önemli bir özel gündür.");
+add("ar","B1","Günlük Yaşam","احتفال","kutlama","isim","نحن نستعد للاحتفال.","Kutlamaya hazırlanıyoruz.");
+add("ar","B1","Günlük Yaşam","حفلة","parti","isim","ذهبت إلى حفلة مع أصدقائي.","Arkadaşlarımla bir partiye gittim.");
+add("ar","B1","Günlük Yaşam","دعوة","davetiye / davet","isim","تلقيت دعوة لحضور الحفل.","Partiye katılmak için davet aldım.");
+add("ar","B1","Günlük Yaşam","زيارة","ziyaret","isim","كانت زيارة قصيرة.","Kısa bir ziyaretti.");
+add("ar","B1","Günlük Yaşam","علاقة","ilişki","isim","العلاقة بينهما جيدة.","Aralarındaki ilişki iyi.");
+add("ar","B1","Günlük Yaşam","صداقة","arkadaşlık","isim","الصداقة الحقيقية مهمة.","Gerçek arkadaşlık önemlidir.");
+add("ar","B1","Günlük Yaşam","جار","komşu","isim","جاري شخص لطيف.","Komşum iyi bir insan.");
+add("ar","B1","Günlük Yaşam","حي","mahalle","isim","أعيش في حي هادئ.","Sessiz bir mahallede yaşıyorum.");
+add("ar","B1","Günlük Yaşam","مدينة","şehir","isim","هذه مدينة كبيرة.","Bu büyük bir şehir.");
+add("ar","B1","Günlük Yaşam","ضاحية","banliyö","isim","يسكن في ضاحية هادئة.","Sessiz bir banliyöde yaşıyor.");
+add("ar","B1","Günlük Yaşam","وسط المدينة","şehir merkezi","isim","المطعم في وسط المدينة.","Restoran şehir merkezinde.");
+add("ar","B1","Günlük Yaşam","ازدحام","yoğunluk / trafik sıkışıklığı","isim","كان هناك ازدحام شديد.","Çok yoğunluk vardı.");
+add("ar","B1","Günlük Yaşam","مرور","trafik","isim","المرور مزدحم في الصباح.","Sabahları trafik yoğun.");
+add("ar","B1","Günlük Yaşam","مواصلات عامة","toplu taşıma","isim","أستخدم المواصلات العامة يوميا.","Her gün toplu taşıma kullanıyorum.");
+add("ar","B1","Günlük Yaşam","محطة","istasyon / durak","isim","سأنتظرك في المحطة.","Seni istasyonda bekleyeceğim.");
+add("ar","B1","Günlük Yaşam","خط","hat","isim","أي خط يجب أن أستخدم؟","Hangi hattı kullanmalıyım?");
+// ======================= B1 — İLERİ FİİLLER =======================
+add("ar","B1","Fiiller","يعتبر","saymak / kabul etmek","fiil","يعتبر هذا القرار مهما.","Bu karar önemli kabul ediliyor.");
+add("ar","B1","Fiiller","يتعلق","ilgili olmak","fiil","هذا السؤال يتعلق بالمشكلة.","Bu soru sorunla ilgilidir.");
+add("ar","B1","Fiiller","يتضمن","içermek","fiil","البرنامج يتضمن عدة دروس.","Program birkaç ders içeriyor.");
+add("ar","B1","Fiiller","يحتوي","içermek","fiil","الكتاب يحتوي على معلومات مفيدة.","Kitap faydalı bilgiler içeriyor.");
+add("ar","B1","Fiiller","يستخدم","kullanmak","fiil","يستخدم الناس الإنترنت يوميا.","İnsanlar interneti her gün kullanıyor.");
+add("ar","B1","Fiiller","يحتاج","ihtiyaç duymak","fiil","المشروع يحتاج إلى وقت.","Projenin zamana ihtiyacı var.");
+add("ar","B1","Fiiller","يحاول","çalışmak / denemek","fiil","أحاول تحسين لغتي.","Dilimi geliştirmeye çalışıyorum.");
+add("ar","B1","Fiiller","يستطيع","-ebilmek","fiil","أستطيع حل المشكلة.","Sorunu çözebilirim.");
+add("ar","B1","Fiiller","يتمكن","başarabilmek","fiil","تمكن من إنهاء العمل.","İşi bitirmeyi başardı.");
+add("ar","B1","Fiiller","يفضل","tercih etmek","fiil","أفضل العمل في الصباح.","Sabah çalışmayı tercih ederim.");
+add("ar","B1","Fiiller","يقرر","karar vermek","fiil","قررت تغيير عملي.","İşimi değiştirmeye karar verdim.");
+add("ar","B1","Fiiller","يخطط","planlamak","fiil","نخطط للسفر في الصيف.","Yazın seyahat etmeyi planlıyoruz.");
+add("ar","B1","Fiiller","ينظم","düzenlemek","fiil","ينظم الفريق اجتماعا كل أسبوع.","Ekip her hafta bir toplantı düzenliyor.");
+add("ar","B1","Fiiller","يدير","yönetmek","fiil","يدير شركة صغيرة.","Küçük bir şirket yönetiyor.");
+add("ar","B1","Fiiller","يقود","yönetmek / sürmek","fiil","يقود الفريق بشكل جيد.","Ekibi iyi yönetiyor.");
+add("ar","B1","Fiiller","ينشئ","oluşturmak","fiil","أنشأنا مشروعا جديدا.","Yeni bir proje oluşturduk.");
+add("ar","B1","Fiiller","يبني","inşa etmek","fiil","يبنون مستقبلا أفضل.","Daha iyi bir gelecek inşa ediyorlar.");
+add("ar","B1","Fiiller","يؤسس","kurmak","fiil","أسس شركة جديدة.","Yeni bir şirket kurdu.");
+add("ar","B1","Fiiller","ينضم","katılmak","fiil","انضم إلى الفريق مؤخرا.","Yakın zamanda takıma katıldı.");
+add("ar","B1","Fiiller","يغادر","ayrılmak","fiil","غادر المنزل مبكرا.","Evden erken ayrıldı.");
+add("ar","B1","Fiiller","يصل","ulaşmak / varmak","fiil","وصلنا إلى الفندق مساء.","Akşam otele vardık.");
+add("ar","B1","Fiiller","يسافر","seyahat etmek","fiil","أسافر كثيرا بسبب عملي.","İşim nedeniyle çok seyahat ediyorum.");
+add("ar","B1","Fiiller","يستكشف","keşfetmek","fiil","أحب استكشاف المدن الجديدة.","Yeni şehirleri keşfetmeyi seviyorum.");
+add("ar","B1","Fiiller","يزور","ziyaret etmek","fiil","سنزور المتحف غدا.","Yarın müzeyi ziyaret edeceğiz.");
+add("ar","B1","Fiiller","يستمتع","keyif almak","fiil","أستمتع بوقتي مع أصدقائي.","Arkadaşlarımla vakit geçirmekten keyif alıyorum.");
+// ======================= B1 — EK SIFATLAR =======================
+add("ar","B1","Sıfatlar","شخصي","kişisel","sıfat","هذا رأيي الشخصي.","Bu benim kişisel görüşüm.");
+add("ar","B1","Sıfatlar","عام","genel","sıfat","هذا سؤال عام.","Bu genel bir soru.");
+add("ar","B1","Sıfatlar","خاص","özel","sıfat","هذا موضوع خاص.","Bu özel bir konu.");
+add("ar","B1","Sıfatlar","رسمي","resmi","sıfat","هذا خطاب رسمي.","Bu resmi bir mektuptur.");
+add("ar","B1","Sıfatlar","غير رسمي","gayri resmi","sıfat","كان اللقاء غير رسمي.","Toplantı gayri resmiydi.");
+add("ar","B1","Sıfatlar","محتمل","muhtemel","sıfat","هذا احتمال محتمل.","Bu muhtemel bir olasılıktır.");
+add("ar","B1","Sıfatlar","مستحيل","imkansız","sıfat","هذا الأمر مستحيل.","Bu şey imkansız.");
+add("ar","B1","Sıfatlar","مؤقت","geçici","sıfat","هذا حل مؤقت.","Bu geçici bir çözümdür.");
+add("ar","B1","Sıfatlar","دائم","kalıcı","sıfat","نحتاج إلى حل دائم.","Kalıcı bir çözüme ihtiyacımız var.");
+add("ar","B1","Sıfatlar","متوفر","mevcut","sıfat","المنتج متوفر الآن.","Ürün şu anda mevcut.");
+add("ar","B1","Sıfatlar","مشغول","meşgul","sıfat","أنا مشغول هذا الأسبوع.","Bu hafta meşgulüm.");
+add("ar","B1","Sıfatlar","متفرغ","müsait","sıfat","هل أنت متفرغ غدا؟","Yarın müsait misin?");
+add("ar","B1","Sıfatlar","مزدحم","kalabalık / yoğun","sıfat","المطعم مزدحم جدا.","Restoran çok kalabalık.");
+add("ar","B1","Sıfatlar","هادئ","sakin","sıfat","هذا المكان هادئ.","Burası sakin.");
+add("ar","B1","Sıfatlar","مريح","rahat","sıfat","هذا الكرسي مريح.","Bu sandalye rahat.");
+add("ar","B1","Sıfatlar","مزعج","rahatsız edici","sıfat","الصوت مزعج.","Ses rahatsız edici.");
+add("ar","B1","Sıfatlar","خطير","tehlikeli","sıfat","هذا الطريق خطير في الليل.","Bu yol gece tehlikelidir.");
+add("ar","B1","Sıfatlar","آمن","güvenli","sıfat","هذا المكان آمن.","Burası güvenli.");
+add("ar","B1","Sıfatlar","مفيد","yararlı","sıfat","هذا الدرس مفيد.","Bu ders faydalıdır.");
+add("ar","B1","Sıfatlar","ضار","zararlı","sıfat","التدخين ضار بالصحة.","Sigara içmek sağlığa zararlıdır.");
+/* ================================================================
+   ARAPÇA B1 — PART 3
+================================================================ */
+// ======================= B1 — İLERİ GÜNLÜK FİİLLER =======================
+add("ar","B1","Fiiller","يقبل","kabul etmek","fiil","قبلت العرض الجديد.","Yeni teklifi kabul ettim.");
+add("ar","B1","Fiiller","يرفض","reddetmek","fiil","رفض طلبه.","Talebini reddetti.");
+add("ar","B1","Fiiller","يوافق","katılmak / kabul etmek","fiil","أوافق على رأيك.","Fikrine katılıyorum.");
+add("ar","B1","Fiiller","يختلف","farklı olmak / anlaşmazlık yaşamak","fiil","نختلف في بعض الأمور.","Bazı konularda farklı düşünüyoruz.");
+add("ar","B1","Fiiller","يتفق","anlaşmak","fiil","اتفقنا على الخطة.","Plan konusunda anlaştık.");
+add("ar","B1","Fiiller","يناقش","tartışmak","fiil","ناقشنا الموضوع بالتفصيل.","Konuyu ayrıntılı olarak tartıştık.");
+add("ar","B1","Fiiller","يقترح","önermek","fiil","اقترحت فكرة جديدة.","Yeni bir fikir önerdim.");
+add("ar","B1","Fiiller","يشرح","açıklamak","fiil","شرح المعلم القاعدة.","Öğretmen kuralı açıkladı.");
+add("ar","B1","Fiiller","يوضح","açıklığa kavuşturmak","fiil","أوضح المدير سبب القرار.","Müdür kararın nedenini açıkladı.");
+add("ar","B1","Fiiller","يصف","tanımlamak / tarif etmek","fiil","صف لي المكان.","Bana yeri tarif et.");
+add("ar","B1","Fiiller","يذكر","bahsetmek / anmak","fiil","ذكر اسمي في الاجتماع.","Toplantıda ismimden bahsetti.");
+add("ar","B1","Fiiller","يشير","işaret etmek / belirtmek","fiil","يشير التقرير إلى مشكلة كبيرة.","Rapor büyük bir soruna işaret ediyor.");
+add("ar","B1","Fiiller","يعني","anlamına gelmek","fiil","ماذا يعني هذا الكلام؟","Bu söz ne anlama geliyor?");
+add("ar","B1","Fiiller","يمثل","temsil etmek","fiil","هذا الرقم يمثل نسبة كبيرة.","Bu sayı büyük bir oranı temsil ediyor.");
+add("ar","B1","Fiiller","يتوقع","beklemek / tahmin etmek","fiil","أتوقع أن يكون الطقس جيدا.","Havanın güzel olmasını bekliyorum.");
+add("ar","B1","Fiiller","يتخيل","hayal etmek","fiil","أتخيل حياتي في المستقبل.","Gelecekteki hayatımı hayal ediyorum.");
+add("ar","B1","Fiiller","يتذكر","hatırlamak","fiil","لا أستطيع أن أتذكر اسمه.","Onun adını hatırlayamıyorum.");
+add("ar","B1","Fiiller","ينسى","unutmak","fiil","نسيت موعد الاجتماع.","Toplantı saatini unuttum.");
+add("ar","B1","Fiiller","يتعلم","öğrenmek","fiil","أتعلم لغة جديدة.","Yeni bir dil öğreniyorum.");
+add("ar","B1","Fiiller","يعلم","öğretmek / bilmek","fiil","يعلم الأطفال اللغة العربية.","Çocuklara Arapça öğretiyor.");
+add("ar","B1","Fiiller","يفهم","anlamak","fiil","أفهم ما تقصده.","Ne demek istediğini anlıyorum.");
+add("ar","B1","Fiiller","يعتقد","inanmak / düşünmek","fiil","أعتقد أن هذا صحيح.","Bunun doğru olduğunu düşünüyorum.");
+add("ar","B1","Fiiller","يظن","sanmak","fiil","ظننت أنه في المنزل.","Onun evde olduğunu sandım.");
+add("ar","B1","Fiiller","يشعر","hissetmek","fiil","أشعر بالسعادة اليوم.","Bugün mutlu hissediyorum.");
+add("ar","B1","Fiiller","يخاف","korkmak","fiil","لا تخف من الفشل.","Başarısızlıktan korkma.");
+add("ar","B1","Fiiller","يقلق","endişelenmek","fiil","لا تقلق بشأن المستقبل.","Gelecek hakkında endişelenme.");
+add("ar","B1","Fiiller","يأمل","umut etmek","fiil","آمل أن تنجح.","Başarılı olmanı umuyorum.");
+add("ar","B1","Fiiller","يتمنى","dilemek","fiil","أتمنى لك يوما سعيدا.","Sana mutlu bir gün diliyorum.");
+add("ar","B1","Fiiller","يفضل","tercih etmek","fiil","أفضل الشاي على القهوة.","Çayı kahveye tercih ederim.");
+add("ar","B1","Fiiller","يحتاج إلى","ihtiyaç duymak","fiil","أحتاج إلى بعض الوقت.","Biraz zamana ihtiyacım var.");
+// ======================= B1 — İLETİŞİM =======================
+add("ar","B1","İletişim","اتصال","iletişim","isim","التواصل الجيد مهم في العمل.","İyi iletişim işte önemlidir.");
+add("ar","B1","İletişim","تواصل","iletişim kurma","isim","نحتاج إلى تواصل أفضل.","Daha iyi iletişime ihtiyacımız var.");
+add("ar","B1","İletişim","رسالة","mesaj","isim","أرسلت لك رسالة.","Sana bir mesaj gönderdim.");
+add("ar","B1","İletişim","مكالمة","arama / telefon görüşmesi","isim","تلقيت مكالمة من صديقي.","Arkadaşımdan bir telefon aldım.");
+add("ar","B1","İletişim","بريد إلكتروني","e-posta","isim","أرسلت بريدا إلكترونيا.","Bir e-posta gönderdim.");
+add("ar","B1","İletişim","محادثة","sohbet","isim","كانت لدينا محادثة طويلة.","Uzun bir sohbetimiz oldu.");
+add("ar","B1","İletişim","حوار","diyalog","isim","دار حوار مهم بينهما.","Aralarında önemli bir diyalog geçti.");
+add("ar","B1","İletişim","مناقشة","tartışma / görüşme","isim","كانت المناقشة مفيدة.","Tartışma faydalıydı.");
+add("ar","B1","İletişim","اقتراح","öneri","isim","لدي اقتراح جيد.","İyi bir önerim var.");
+add("ar","B1","İletişim","نصيحة","tavsiye","isim","أعطاني نصيحة مفيدة.","Bana faydalı bir tavsiye verdi.");
+add("ar","B1","İletişim","وعد","söz / vaat","isim","أعطاني وعدا.","Bana söz verdi.");
+add("ar","B1","İletişim","قرار","karar","isim","هذا قرار مهم.","Bu önemli bir karar.");
+add("ar","B1","İletişim","اتفاق","anlaşma","isim","توصلنا إلى اتفاق.","Bir anlaşmaya vardık.");
+add("ar","B1","İletişim","خلاف","anlaşmazlık","isim","حدث خلاف بينهما.","Aralarında bir anlaşmazlık oldu.");
+add("ar","B1","İletişim","حجة","argüman","isim","قدم حجة قوية.","Güçlü bir argüman sundu.");
+add("ar","B1","İletişim","دليل","kanıt","isim","لا يوجد دليل كاف.","Yeterli kanıt yok.");
+add("ar","B1","İletişim","سبب","sebep","isim","ما سبب المشكلة؟","Sorunun nedeni nedir?");
+add("ar","B1","İletişim","نتيجة","sonuç","isim","كانت النتيجة مفاجئة.","Sonuç şaşırtıcıydı.");
+// ======================= B1 — İŞ VE KARİYER =======================
+add("ar","B1","Kariyer","وظيفة","iş / pozisyon","isim","وجد وظيفة جديدة.","Yeni bir iş buldu.");
+add("ar","B1","Kariyer","عمل","iş","isim","أبحث عن عمل مناسب.","Uygun bir iş arıyorum.");
+add("ar","B1","Kariyer","مهنة","meslek","isim","اختار مهنة صعبة.","Zor bir meslek seçti.");
+add("ar","B1","Kariyer","مسار مهني","kariyer yolu","isim","أفكر في مساري المهني.","Kariyer yolumu düşünüyorum.");
+add("ar","B1","Kariyer","خبرة","deneyim","isim","لديه خبرة في الإدارة.","Yönetim konusunda deneyimi var.");
+add("ar","B1","Kariyer","مهارة","beceri","isim","أريد تعلم مهارة جديدة.","Yeni bir beceri öğrenmek istiyorum.");
+add("ar","B1","Kariyer","موهبة","yetenek","isim","لديه موهبة في التصميم.","Tasarım konusunda yeteneği var.");
+add("ar","B1","Kariyer","مؤهلات","nitelikler","isim","لديه المؤهلات المطلوبة.","Gerekli niteliklere sahip.");
+add("ar","B1","Kariyer","مقابلة عمل","iş görüşmesi","isim","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","Kariyer","طلب وظيفة","iş başvurusu","isim","قدمت طلب وظيفة.","İş başvurusu yaptım.");
+add("ar","B1","Kariyer","سيرة ذاتية","özgeçmiş","isim","أرسلت سيرتي الذاتية.","Özgeçmişimi gönderdim.");
+add("ar","B1","Kariyer","راتب","maaş","isim","الراتب جيد.","Maaş iyi.");
+add("ar","B1","Kariyer","زيادة","zam / artış","isim","حصل على زيادة في الراتب.","Maaş zammı aldı.");
+add("ar","B1","Kariyer","ترقية","terfi","isim","حصل على ترقية في العمل.","İşte terfi aldı.");
+add("ar","B1","Kariyer","استقالة","istifa","isim","قدم استقالته أمس.","Dün istifasını verdi.");
+add("ar","B1","Kariyer","بطالة","işsizlik","isim","البطالة مشكلة كبيرة.","İşsizlik büyük bir sorundur.");
+add("ar","B1","Kariyer","دوام كامل","tam zamanlı","isim","أعمل بدوام كامل.","Tam zamanlı çalışıyorum.");
+add("ar","B1","Kariyer","دوام جزئي","yarı zamanlı","isim","يعمل بدوام جزئي.","Yarı zamanlı çalışıyor.");
+add("ar","B1","Kariyer","عمل عن بعد","uzaktan çalışma","isim","أفضل العمل عن بعد.","Uzaktan çalışmayı tercih ediyorum.");
+add("ar","B1","Kariyer","بيئة العمل","iş ortamı","isim","بيئة العمل جيدة.","İş ortamı iyi.");
+add("ar","B1","Kariyer","فريق العمل","çalışma ekibi","isim","فريق العمل متعاون.","Çalışma ekibi iş birliği yapıyor.");
+add("ar","B1","Kariyer","مدير","yönetici","isim","مديري شخص متعاون.","Yöneticim iş birliği yapan bir kişidir.");
+add("ar","B1","Kariyer","موظف","çalışan","isim","الموظف يعمل بجد.","Çalışan çok çalışıyor.");
+add("ar","B1","Kariyer","مسؤولية","sorumluluk","isim","لدي مسؤوليات كثيرة.","Çok fazla sorumluluğum var.");
+// ======================= B1 — TEKNOLOJİ VE İNTERNET =======================
+add("ar","B1","Teknoloji","إنترنت","internet","isim","أستخدم الإنترنت كل يوم.","Her gün internet kullanıyorum.");
+add("ar","B1","Teknoloji","موقع إلكتروني","web sitesi","isim","وجدت المعلومات في موقع إلكتروني.","Bilgileri bir web sitesinde buldum.");
+add("ar","B1","Teknoloji","منصة","platform","isim","أستخدم منصة تعليمية.","Bir eğitim platformu kullanıyorum.");
+add("ar","B1","Teknoloji","حساب مستخدم","kullanıcı hesabı","isim","أنشأت حساب مستخدم جديدا.","Yeni bir kullanıcı hesabı oluşturdum.");
+add("ar","B1","Teknoloji","مستخدم","kullanıcı","isim","يستخدم التطبيق ملايين المستخدمين.","Uygulamayı milyonlarca kullanıcı kullanıyor.");
+add("ar","B1","Teknoloji","تحميل","indirme","isim","بدأ تحميل الملف.","Dosyanın indirilmesi başladı.");
+add("ar","B1","Teknoloji","رفع","yükleme","isim","تم رفع الملف بنجاح.","Dosya başarıyla yüklendi.");
+add("ar","B1","Teknoloji","ملف","dosya","isim","أرسلت لك الملف.","Sana dosyayı gönderdim.");
+add("ar","B1","Teknoloji","مجلد","klasör","isim","حفظت الملف في المجلد.","Dosyayı klasöre kaydettim.");
+add("ar","B1","Teknoloji","برنامج","program / yazılım","isim","أستخدم برنامجا جديدا.","Yeni bir program kullanıyorum.");
+add("ar","B1","Teknoloji","برمجية","yazılım","isim","هذه البرمجية سهلة الاستخدام.","Bu yazılım kullanımı kolaydır.");
+add("ar","B1","Teknoloji","جهاز","cihaz","isim","اشتريت جهازا جديدا.","Yeni bir cihaz aldım.");
+add("ar","B1","Teknoloji","شاشة","ekran","isim","الشاشة كبيرة وواضحة.","Ekran büyük ve net.");
+add("ar","B1","Teknoloji","لوحة مفاتيح","klavye","isim","أحتاج إلى لوحة مفاتيح جديدة.","Yeni bir klavyeye ihtiyacım var.");
+add("ar","B1","Teknoloji","فأرة","fare","isim","الفأرة لا تعمل.","Fare çalışmıyor.");
+add("ar","B1","Teknoloji","بطارية","pil","isim","بطارية هاتفي ضعيفة.","Telefonumun pili zayıf.");
+add("ar","B1","Teknoloji","شاحن","şarj cihazı","isim","نسيت الشاحن في المنزل.","Şarj cihazını evde unuttum.");
+add("ar","B1","Teknoloji","اتصال لاسلكي","kablosuz bağlantı","isim","الاتصال اللاسلكي ضعيف.","Kablosuz bağlantı zayıf.");
+add("ar","B1","Teknoloji","إشارة","sinyal","isim","الإشارة ضعيفة هنا.","Burada sinyal zayıf.");
+add("ar","B1","Teknoloji","كلمة مرور","şifre","isim","نسيت كلمة المرور.","Şifremi unuttum.");
+add("ar","B1","Teknoloji","حماية","koruma","isim","نحتاج إلى حماية أفضل.","Daha iyi korumaya ihtiyacımız var.");
+add("ar","B1","Teknoloji","فيروس","virüs","isim","أصيب الكمبيوتر بفيروس.","Bilgisayara virüs bulaştı.");
+add("ar","B1","Teknoloji","خطأ","hata","isim","ظهر خطأ في النظام.","Sistemde bir hata oluştu.");
+add("ar","B1","Teknoloji","إصلاح","onarım / düzeltme","isim","يحتاج الجهاز إلى إصلاح.","Cihazın onarıma ihtiyacı var.");
+add("ar","B1","Teknoloji","نسخة احتياطية","yedek","isim","أنشأت نسخة احتياطية للملفات.","Dosyaların yedeğini oluşturdum.");
+// ======================= B1 — ÇEVRE VE DOĞA =======================
+add("ar","B1","Çevre","طبيعة","doğa","isim","أحب قضاء الوقت في الطبيعة.","Doğada zaman geçirmeyi seviyorum.");
+add("ar","B1","Çevre","غابة","orman","isim","مشينا في الغابة.","Ormanda yürüdük.");
+add("ar","B1","Çevre","جبل","dağ","isim","تسلقنا الجبل.","Dağa tırmandık.");
+add("ar","B1","Çevre","بحر","deniz","isim","الهواء قرب البحر منعش.","Denizin kenarındaki hava ferahlatıcı.");
+add("ar","B1","Çevre","نهر","nehir","isim","يمر نهر كبير بالقرب من المدينة.","Şehrin yakınından büyük bir nehir geçiyor.");
+add("ar","B1","Çevre","بحيرة","göl","isim","جلسنا بجانب البحيرة.","Gölün yanında oturduk.");
+add("ar","B1","Çevre","مناخ","iklim","isim","المناخ هنا معتدل.","Buradaki iklim ılımandır.");
+add("ar","B1","Çevre","طقس","hava durumu","isim","الطقس يتغير بسرعة.","Hava durumu hızla değişiyor.");
+add("ar","B1","Çevre","جفاف","kuraklık","isim","تعاني المنطقة من الجفاف.","Bölge kuraklıktan muzdarip.");
+add("ar","B1","Çevre","فيضان","sel","isim","تسبب المطر في فيضان كبير.","Yağmur büyük bir sele neden oldu.");
+add("ar","B1","Çevre","عاصفة","fırtına","isim","كانت هناك عاصفة قوية.","Güçlü bir fırtına vardı.");
+add("ar","B1","Çevre","حرارة","sıcaklık / ısı","isim","ارتفعت درجة الحرارة اليوم.","Bugün sıcaklık yükseldi.");
+add("ar","B1","Çevre","برودة","soğukluk","isim","لا أحب البرودة الشديدة.","Aşırı soğuğu sevmiyorum.");
+add("ar","B1","Çevre","موسم","mevsim","isim","هذا أفضل موسم للسفر.","Bu seyahat için en iyi mevsim.");
+add("ar","B1","Çevre","حيوان","hayvan","isim","أحب الحيوانات.","Hayvanları seviyorum.");
+add("ar","B1","Çevre","نبات","bitki","isim","هذه النباتات تحتاج إلى الماء.","Bu bitkilerin suya ihtiyacı var.");
+add("ar","B1","Çevre","زراعة","tarım","isim","الزراعة مهمة للاقتصاد.","Tarım ekonomi için önemlidir.");
+add("ar","B1","Çevre","مزرعة","çiftlik","isim","يعمل في مزرعة كبيرة.","Büyük bir çiftlikte çalışıyor.");
+add("ar","B1","Çevre","موارد طبيعية","doğal kaynaklar","isim","يجب حماية الموارد الطبيعية.","Doğal kaynaklar korunmalıdır.");
+add("ar","B1","Çevre","حماية البيئة","çevre koruma","isim","حماية البيئة مسؤولية الجميع.","Çevreyi korumak herkesin sorumluluğudur.");
+// ======================= B1 — TOPLUM VE HAYAT =======================
+add("ar","B1","Toplum","حياة","hayat","isim","الحياة مليئة بالتجارب.","Hayat deneyimlerle doludur.");
+add("ar","B1","Toplum","أسلوب حياة","yaşam tarzı","isim","أريد تغيير أسلوب حياتي.","Yaşam tarzımı değiştirmek istiyorum.");
+add("ar","B1","Toplum","مستوى المعيشة","yaşam standardı","isim","ارتفع مستوى المعيشة في المنطقة.","Bölgedeki yaşam standardı yükseldi.");
+add("ar","B1","Toplum","خدمة","hizmet","isim","الخدمة ممتازة.","Hizmet mükemmel.");
+add("ar","B1","Toplum","خدمات عامة","kamu hizmetleri","isim","الخدمات العامة مهمة للمواطنين.","Kamu hizmetleri vatandaşlar için önemlidir.");
+add("ar","B1","Toplum","مشكلة اجتماعية","toplumsal sorun","isim","البطالة مشكلة اجتماعية.","İşsizlik toplumsal bir sorundur.");
+add("ar","B1","Toplum","حلول","çözümler","isim","نحتاج إلى حلول عملية.","Pratik çözümlere ihtiyacımız var.");
+add("ar","B1","Toplum","تعاون","iş birliği","isim","التعاون يساعد على النجاح.","İş birliği başarıya yardımcı olur.");
+add("ar","B1","Toplum","مشاركة","katılım / paylaşım","isim","مشاركة الشباب مهمة.","Gençlerin katılımı önemlidir.");
+add("ar","B1","Toplum","مجموعة","grup","isim","انضممت إلى مجموعة جديدة.","Yeni bir gruba katıldım.");
+add("ar","B1","Toplum","منظمة","organizasyon / kuruluş","isim","تعمل هذه المنظمة من أجل الأطفال.","Bu kuruluş çocuklar için çalışıyor.");
+add("ar","B1","Toplum","جمعية","dernek","isim","انضم إلى جمعية محلية.","Yerel bir derneğe katıldı.");
+add("ar","B1","Toplum","متطوع","gönüllü","isim","يعمل كمتطوع في المستشفى.","Hastanede gönüllü olarak çalışıyor.");
+add("ar","B1","Toplum","مساعدة","yardım","isim","نحتاج إلى مساعدة الجميع.","Herkesin yardımına ihtiyacımız var.");
+add("ar","B1","Toplum","مشكلة","problem","isim","نحاول حل المشكلة.","Sorunu çözmeye çalışıyoruz.");
+add("ar","B1","Toplum","حل","çözüm","isim","وجدنا حلا للمشكلة.","Soruna bir çözüm bulduk.");
+add("ar","B1","Toplum","سبب","neden","isim","لا أعرف سبب التأخير.","Gecikmenin nedenini bilmiyorum.");
+add("ar","B1","Toplum","نتيجة","sonuç","isim","كانت النتيجة جيدة.","Sonuç iyiydi.");
+add("ar","B1","Toplum","تغيير","değişiklik","isim","حدث تغيير كبير.","Büyük bir değişiklik oldu.");
+add("ar","B1","Toplum","تقدم","ilerleme","isim","هناك تقدم واضح.","Belirgin bir ilerleme var.");
+// ======================= B1 — BAĞLAÇLAR VE İFADELER =======================
+add("ar","B1","Bağlaçlar","لذلك","bu nedenle / bu yüzden","bağlaç","كان مريضا، لذلك لم يذهب إلى العمل.","Hastaydı, bu yüzden işe gitmedi.");
+add("ar","B1","Bağlaçlar","لهذا السبب","bu nedenle","bağlaç","تأخر القطار، ولهذا السبب تأخرت.","Tren gecikti, bu nedenle ben de geç kaldım.");
+add("ar","B1","Bağlaçlar","مع ذلك","bununla birlikte / yine de","bağlaç","كان الجو باردا، ومع ذلك خرجنا.","Hava soğuktu, yine de dışarı çıktık.");
+add("ar","B1","Bağlaçlar","بالرغم من ذلك","buna rağmen","bağlaç","كان الأمر صعبا، وبالرغم من ذلك نجح.","İş zordu, buna rağmen başarılı oldu.");
+add("ar","B1","Bağlaçlar","من ناحية أخرى","diğer taraftan","bağlaç","العمل جيد، ومن ناحية أخرى الراتب منخفض.","İş iyi, diğer taraftan maaş düşük.");
+add("ar","B1","Bağlaçlar","على سبيل المثال","örneğin","bağlaç","هناك دول كثيرة، على سبيل المثال ألمانيا والنمسا.","Birçok ülke var, örneğin Almanya ve Avusturya.");
+add("ar","B1","Bağlaçlar","بشكل خاص","özellikle","zarf","أحب هذه المدينة بشكل خاص.","Bu şehri özellikle seviyorum.");
+add("ar","B1","Bağlaçlar","في النهاية","sonunda","zarf","في النهاية وجدنا الحل.","Sonunda çözümü bulduk.");
+add("ar","B1","Bağlaçlar","في البداية","başlangıçta","zarf","في البداية كان الأمر صعبا.","Başlangıçta iş zordu.");
+add("ar","B1","Bağlaçlar","بعد ذلك","ondan sonra","zarf","ذهبنا إلى الفندق بعد ذلك.","Ondan sonra otele gittik.");
+add("ar","B1","Bağlaçlar","قبل ذلك","ondan önce","zarf","كنت قد رأيته قبل ذلك.","Onu daha önce görmüştüm.");
+add("ar","B1","Bağlaçlar","في الوقت نفسه","aynı zamanda","zarf","يعمل ويدرس في الوقت نفسه.","Aynı zamanda çalışıyor ve okuyor.");
+add("ar","B1","Bağlaçlar","منذ ذلك الحين","o zamandan beri","zarf","منذ ذلك الحين لم أره.","O zamandan beri onu görmedim.");
+add("ar","B1","Bağlaçlar","في الواقع","aslında","zarf","في الواقع، الأمر أسهل مما توقعت.","Aslında iş beklediğimden daha kolay.");
+add("ar","B1","Bağlaçlar","على أي حال","her halükarda","ifade","على أي حال، يجب أن نبدأ.","Her halükarda başlamalıyız.");
+// ======================= B1 — DUYGULAR VE KİŞİLİK =======================
+add("ar","B1","Duygular","سعادة","mutluluk","isim","السعادة لا تعتمد على المال.","Mutluluk paraya bağlı değildir.");
+add("ar","B1","Duygular","حزن","üzüntü","isim","شعر بالحزن بعد الخبر.","Haberi duyduktan sonra üzüldü.");
+add("ar","B1","Duygular","غضب","öfke","isim","حاول السيطرة على غضبه.","Öfkesini kontrol etmeye çalıştı.");
+add("ar","B1","Duygular","خوف","korku","isim","لا تدع الخوف يمنعك.","Korkunun seni engellemesine izin verme.");
+add("ar","B1","Duygular","قلق","endişe","isim","أشعر بالقلق قليلا.","Biraz endişeli hissediyorum.");
+add("ar","B1","Duygular","توتر","gerginlik","isim","أشعر بالتوتر قبل الامتحان.","Sınavdan önce gergin hissediyorum.");
+add("ar","B1","Duygular","راحة","rahatlama","isim","شعرت بالراحة بعد انتهاء العمل.","İş bittikten sonra rahatladım.");
+add("ar","B1","Duygular","أمل","umut","isim","لا تفقد الأمل.","Umudunu kaybetme.");
+add("ar","B1","Duygular","ثقة","güven","isim","لدي ثقة كبيرة به.","Ona büyük bir güvenim var.");
+add("ar","B1","Duygular","احترام","saygı","isim","أحترم رأيك.","Fikrine saygı duyuyorum.");
+add("ar","B1","Duygular","مسؤولية","sorumluluk","isim","تحمل المسؤولية.","Sorumluluğu üstlendi.");
+add("ar","B1","Duygular","استقلال","bağımsızlık","isim","يحب الاستقلال.","Bağımsızlığı seviyor.");
+add("ar","B1","Duygular","حرية","özgürlük","isim","الحرية مسؤولية أيضا.","Özgürlük aynı zamanda bir sorumluluktur.");
+add("ar","B1","Duygular","نجاح","başarı","isim","النجاح يحتاج إلى الصبر.","Başarı sabır gerektirir.");
+add("ar","B1","Duygular","فشل","başarısızlık","isim","الفشل جزء من التعلم.","Başarısızlık öğrenmenin bir parçasıdır.");
+add("ar","B1","Duygular","تجربة","deneyim","isim","كانت تجربة مفيدة.","Faydalı bir deneyimdi.");
+add("ar","B1","Duygular","مفاجأة","sürpriz","isim","كانت النتيجة مفاجأة.","Sonuç sürprizdi.");
+add("ar","B1","Duygular","اهتمام","ilgi","isim","لدي اهتمام كبير بالتكنولوجيا.","Teknolojiye büyük ilgim var.");
+add("ar","B1","Duygular","فضول","merak","isim","الفضول يساعد على التعلم.","Merak öğrenmeye yardımcı olur.");
+add("ar","B1","Duygular","إعجاب","hayranlık / beğeni","isim","لدي إعجاب بهذا الفنان.","Bu sanatçıya hayranlık duyuyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 4
+================================================================ */
+// ======================= B1 — ALIŞVERİŞ =======================
+add("ar","B1","Alışveriş","تسوق","alışveriş","isim","أحب التسوق في عطلة نهاية الأسبوع.","Hafta sonu alışveriş yapmayı seviyorum.");
+add("ar","B1","Alışveriş","متجر","mağaza","isim","هذا المتجر قريب من منزلي.","Bu mağaza evime yakın.");
+add("ar","B1","Alışveriş","مركز تجاري","alışveriş merkezi","isim","ذهبنا إلى مركز تجاري كبير.","Büyük bir alışveriş merkezine gittik.");
+add("ar","B1","Alışveriş","بائع","satıcı","isim","سألت البائع عن السعر.","Satıcıya fiyatı sordum.");
+add("ar","B1","Alışveriş","زبون","müşteri","isim","الزبون ينتظر دوره.","Müşteri sırasını bekliyor.");
+add("ar","B1","Alışveriş","منتج","ürün","isim","هذا المنتج جديد.","Bu ürün yeni.");
+add("ar","B1","Alışveriş","جودة","kalite","isim","جودة المنتج ممتازة.","Ürünün kalitesi mükemmel.");
+add("ar","B1","Alışveriş","مقاس","beden / ölçü","isim","هل يوجد هذا القميص بمقاس أكبر؟","Bu gömleğin daha büyük bedeni var mı?");
+add("ar","B1","Alışveriş","لون","renk","isim","هل يوجد لون آخر؟","Başka bir renk var mı?");
+add("ar","B1","Alışveriş","خصم","indirim","isim","هل يوجد خصم على هذا المنتج؟","Bu üründe indirim var mı?");
+add("ar","B1","Alışveriş","عرض خاص","özel teklif","isim","هناك عرض خاص هذا الأسبوع.","Bu hafta özel bir teklif var.");
+add("ar","B1","Alışveriş","فاتورة","fatura","isim","هل يمكنني الحصول على الفاتورة؟","Faturayı alabilir miyim?");
+add("ar","B1","Alışveriş","إيصال","fiş","isim","احتفظ بالإيصال.","Fişi sakla.");
+add("ar","B1","Alışveriş","دفع","ödeme","isim","يمكنك الدفع نقدا أو بالبطاقة.","Nakit veya kartla ödeme yapabilirsin.");
+add("ar","B1","Alışveriş","نقدا","nakit","zarf","هل يمكنني الدفع نقدا؟","Nakit ödeyebilir miyim?");
+add("ar","B1","Alışveriş","بطاقة ائتمان","kredi kartı","isim","أدفع باستخدام بطاقة الائتمان.","Kredi kartıyla ödüyorum.");
+add("ar","B1","Alışveriş","بطاقة خصم","banka kartı","isim","أستخدم بطاقة الخصم للدفع.","Ödeme yapmak için banka kartı kullanıyorum.");
+add("ar","B1","Alışveriş","استرجاع","iade","isim","أريد استرجاع المنتج.","Ürünü iade etmek istiyorum.");
+add("ar","B1","Alışveriş","استبدال","değişim","isim","أريد استبدال هذا القميص.","Bu gömleği değiştirmek istiyorum.");
+add("ar","B1","Alışveriş","ضمان","garanti","isim","هل يوجد ضمان لهذا الجهاز؟","Bu cihazın garantisi var mı?");
+add("ar","B1","Alışveriş","متوفر","stokta mevcut","sıfat","هذا المنتج غير متوفر حاليا.","Bu ürün şu anda stokta yok.");
+add("ar","B1","Alışveriş","نفد","tükenmek","fiil","نفد هذا المنتج بسرعة.","Bu ürün hızlıca tükendi.");
+add("ar","B1","Alışveriş","يشتري","satın almak","fiil","أريد شراء هاتف جديد.","Yeni bir telefon satın almak istiyorum.");
+add("ar","B1","Alışveriş","يبيع","satmak","fiil","هذا المتجر يبيع الملابس.","Bu mağaza kıyafet satıyor.");
+add("ar","B1","Alışveriş","يجرب","denemek","fiil","هل يمكنني تجربة هذا الحذاء؟","Bu ayakkabıyı deneyebilir miyim؟");
+// ======================= B1 — RESTORAN VE YEMEK =======================
+add("ar","B1","Restoran","مطعم","restoran","isim","هذا المطعم مشهور جدا.","Bu restoran çok ünlü.");
+add("ar","B1","Restoran","قائمة الطعام","menü","isim","هل يمكنني رؤية قائمة الطعام؟","Menüyü görebilir miyim?");
+add("ar","B1","Restoran","طبق","yemek / tabak","isim","هذا الطبق لذيذ جدا.","Bu yemek çok lezzetli.");
+add("ar","B1","Restoran","وجبة","öğün","isim","تناولت وجبة خفيفة.","Hafif bir öğün yedim.");
+add("ar","B1","Restoran","مقبلات","meze / başlangıç","isim","طلبنا بعض المقبلات.","Birkaç meze sipariş ettik.");
+add("ar","B1","Restoran","حلوى","tatlı","isim","أريد حلوى بعد العشاء.","Akşam yemeğinden sonra tatlı istiyorum.");
+add("ar","B1","Restoran","مشروب","içecek","isim","ما هو مشروبك المفضل؟","En sevdiğin içecek nedir?");
+add("ar","B1","Restoran","ماء معدني","maden suyu","isim","أريد زجاجة ماء معدني.","Bir şişe maden suyu istiyorum.");
+add("ar","B1","Restoran","فاتورة","hesap","isim","من فضلك، الحساب.","Lütfen hesabı getirir misiniz?");
+add("ar","B1","Restoran","بقشيش","bahşiş","isim","ترك بقشيشا للنادل.","Garsona bahşiş bıraktı.");
+add("ar","B1","Restoran","نادل","garson","isim","ناديت النادل.","Garsona seslendim.");
+add("ar","B1","Restoran","طباخ","aşçı","isim","الطباخ يحضر الطعام.","Aşçı yemeği hazırlıyor.");
+add("ar","B1","Restoran","مطبخ","mutfak","isim","أحب المطبخ العربي.","Arap mutfağını seviyorum.");
+add("ar","B1","Restoran","مكونات","malzemeler","isim","ما هي مكونات هذا الطبق؟","Bu yemeğin malzemeleri nelerdir?");
+add("ar","B1","Restoran","طازج","taze","sıfat","الخضروات طازجة.","Sebzeler taze.");
+add("ar","B1","Restoran","حار","acı / sıcak","sıfat","هذا الطعام حار جدا.","Bu yemek çok acı.");
+add("ar","B1","Restoran","مالح","tuzlu","sıfat","الحساء مالح قليلا.","Çorba biraz tuzlu.");
+add("ar","B1","Restoran","حلو","tatlı","sıfat","هذا الطعام حلو جدا.","Bu yemek çok tatlı.");
+add("ar","B1","Restoran","لذيذ","lezzetli","sıfat","الطعام لذيذ.","Yemek lezzetli.");
+add("ar","B1","Restoran","جائع","aç","sıfat","أنا جائع جدا.","Çok açım.");
+add("ar","B1","Restoran","شبعان","tok","sıfat","أنا شبعان الآن.","Şimdi tokum.");
+// ======================= B1 — OTEL VE KONAKLAMA =======================
+add("ar","B1","Konaklama","فندق","otel","isim","حجزنا غرفة في فندق.","Bir otelde oda ayırttık.");
+add("ar","B1","Konaklama","غرفة","oda","isim","غرفتنا في الطابق الثالث.","Odamız üçüncü katta.");
+add("ar","B1","Konaklama","حجز","rezervasyon","isim","لدي حجز باسم محمد.","Muhammed adına rezervasyonum var.");
+add("ar","B1","Konaklama","استقبال","resepsiyon","isim","سألت في مكتب الاستقبال.","Resepsiyona sordum.");
+add("ar","B1","Konaklama","موظف الاستقبال","resepsiyon görevlisi","isim","ساعدني موظف الاستقبال.","Resepsiyon görevlisi bana yardım etti.");
+add("ar","B1","Konaklama","تسجيل الدخول","check-in","isim","متى يبدأ تسجيل الدخول؟","Check-in ne zaman başlıyor?");
+add("ar","B1","Konaklama","تسجيل الخروج","check-out","isim","متى يجب أن نسجل الخروج؟","Ne zaman check-out yapmalıyız?");
+add("ar","B1","Konaklama","مفتاح","anahtar","isim","أين مفتاح الغرفة؟","Odanın anahtarı nerede?");
+add("ar","B1","Konaklama","بطاقة الغرفة","oda kartı","isim","نسيت بطاقة الغرفة.","Oda kartını unuttum.");
+add("ar","B1","Konaklama","مصعد","asansör","isim","المصعد لا يعمل.","Asansör çalışmıyor.");
+add("ar","B1","Konaklama","طابق","kat","isim","غرفتي في الطابق الثاني.","Odam ikinci katta.");
+add("ar","B1","Konaklama","سرير","yatak","isim","الغرفة تحتوي على سريرين.","Odada iki yatak var.");
+add("ar","B1","Konaklama","حمام","banyo","isim","هل يوجد حمام خاص؟","Özel banyo var mı?");
+add("ar","B1","Konaklama","مكيف الهواء","klima","isim","مكيف الهواء لا يعمل.","Klima çalışmıyor.");
+add("ar","B1","Konaklama","إطلالة","manzara","isim","الغرفة لها إطلالة جميلة.","Odanın güzel bir manzarası var.");
+add("ar","B1","Konaklama","خدمة الغرف","oda servisi","isim","اتصلت بخدمة الغرف.","Oda servisini aradım.");
+add("ar","B1","Konaklama","منشفة","havlu","isim","أحتاج إلى منشفة جديدة.","Yeni bir havluya ihtiyacım var.");
+add("ar","B1","Konaklama","نظافة","temizlik","isim","نظافة الفندق ممتازة.","Otelin temizliği mükemmel.");
+add("ar","B1","Konaklama","شكوى","şikayet","isim","أريد تقديم شكوى.","Şikayette bulunmak istiyorum.");
+add("ar","B1","Konaklama","مشكلة","sorun","isim","هناك مشكلة في الغرفة.","Odada bir sorun var.");
+// ======================= B1 — ULAŞIM =======================
+add("ar","B1","Ulaşım","وسيلة نقل","ulaşım aracı","isim","ما هي أفضل وسيلة نقل؟","En iyi ulaşım aracı nedir?");
+add("ar","B1","Ulaşım","حافلة","otobüs","isim","أذهب إلى العمل بالحافلة.","İşe otobüsle gidiyorum.");
+add("ar","B1","Ulaşım","قطار","tren","isim","القطار سريع ومريح.","Tren hızlı ve rahat.");
+add("ar","B1","Ulaşım","مترو","metro","isim","أستخدم المترو كل يوم.","Her gün metro kullanıyorum.");
+add("ar","B1","Ulaşım","ترام","tramvay","isim","نأخذ الترام إلى وسط المدينة.","Şehir merkezine tramvayla gidiyoruz.");
+add("ar","B1","Ulaşım","سيارة أجرة","taksi","isim","أخذت سيارة أجرة إلى الفندق.","Otele taksiyle gittim.");
+add("ar","B1","Ulaşım","دراجة","bisiklet","isim","أذهب إلى الجامعة بالدراجة.","Üniversiteye bisikletle gidiyorum.");
+add("ar","B1","Ulaşım","موقف الحافلات","otobüs durağı","isim","انتظرني عند موقف الحافلات.","Beni otobüs durağında bekle.");
+add("ar","B1","Ulaşım","محطة القطار","tren istasyonu","isim","محطة القطار بعيدة.","Tren istasyonu uzak.");
+add("ar","B1","Ulaşım","اتجاه","yön","isim","هل هذا هو الاتجاه الصحيح؟","Bu doğru yön mü?");
+add("ar","B1","Ulaşım","طريق","yol","isim","هذا الطريق أقصر.","Bu yol daha kısa.");
+add("ar","B1","Ulaşım","شارع","sokak / cadde","isim","المطعم في هذا الشارع.","Restoran bu caddede.");
+add("ar","B1","Ulaşım","جسر","köprü","isim","نعبر الجسر.","Köprüden geçiyoruz.");
+add("ar","B1","Ulaşım","نفق","tünel","isim","السيارة دخلت النفق.","Araba tünele girdi.");
+add("ar","B1","Ulaşım","تقاطع","kavşak","isim","انعطف عند التقاطع.","Kavşakta dön.");
+add("ar","B1","Ulaşım","إشارة المرور","trafik ışığı","isim","توقف عند إشارة المرور.","Trafik ışığında dur.");
+add("ar","B1","Ulaşım","ازدحام مروري","trafik sıkışıklığı","isim","هناك ازدحام مروري شديد.","Büyük bir trafik sıkışıklığı var.");
+add("ar","B1","Ulaşım","حادث","kaza","isim","حدث حادث على الطريق.","Yolda bir kaza oldu.");
+add("ar","B1","Ulaşım","سرعة","hız","isim","يجب أن تقلل السرعة.","Hızı azaltmalısın.");
+add("ar","B1","Ulaşım","وقود","yakıt","isim","السيارة تحتاج إلى وقود.","Arabanın yakıta ihtiyacı var.");
+// ======================= B1 — RESMİ İŞLEMLER =======================
+add("ar","B1","Resmi İşlemler","وثيقة","belge","isim","أحتاج إلى وثيقة رسمية.","Resmi bir belgeye ihtiyacım var.");
+add("ar","B1","Resmi İşlemler","جواز سفر","pasaport","isim","أين جواز سفرك؟","Pasaportun nerede?");
+add("ar","B1","Resmi İşlemler","بطاقة هوية","kimlik kartı","isim","أظهر بطاقة هويتك من فضلك.","Lütfen kimlik kartını göster.");
+add("ar","B1","Resmi İşlemler","تأشيرة","vize","isim","أحتاج إلى تأشيرة للسفر.","Seyahat etmek için vizeye ihtiyacım var.");
+add("ar","B1","Resmi İşlemler","إقامة","oturum","isim","قدمت طلب الإقامة.","Oturum başvurusu yaptım.");
+add("ar","B1","Resmi İşlemler","تصريح","izin / ruhsat","isim","أحتاج إلى تصريح للعمل.","Çalışmak için izne ihtiyacım var.");
+add("ar","B1","Resmi İşlemler","طلب","başvuru / talep","isim","قدمت طلبا جديدا.","Yeni bir başvuru yaptım.");
+add("ar","B1","Resmi İşlemler","استمارة","form","isim","يجب أن تملأ الاستمارة.","Formu doldurmalısın.");
+add("ar","B1","Resmi İşlemler","توقيع","imza","isim","أحتاج إلى توقيعك هنا.","Burada imzana ihtiyacım var.");
+add("ar","B1","Resmi İşlemler","موعد","randevu","isim","لدي موعد في السفارة.","Büyükelçilikte randevum var.");
+add("ar","B1","Resmi İşlemler","سفارة","büyükelçilik","isim","ذهبت إلى السفارة.","Büyükelçiliğe gittim.");
+add("ar","B1","Resmi İşlemler","قنصلية","konsolosluk","isim","اتصلت بالقنصلية.","Konsolosluğu aradım.");
+add("ar","B1","Resmi İşlemler","مكتب حكومي","devlet dairesi","isim","ذهبت إلى مكتب حكومي.","Bir devlet dairesine gittim.");
+add("ar","B1","Resmi İşlemler","إجراء","işlem / prosedür","isim","هذا الإجراء يستغرق وقتا.","Bu işlem zaman alıyor.");
+add("ar","B1","Resmi İşlemler","موافقة","onay","isim","ننتظر الموافقة.","Onayı bekliyoruz.");
+add("ar","B1","Resmi İşlemler","رفض","ret","isim","تلقيت رسالة رفض.","Ret mesajı aldım.");
+add("ar","B1","Resmi İşlemler","موعد نهائي","son tarih","isim","الموعد النهائي غدا.","Son tarih yarın.");
+add("ar","B1","Resmi İşlemler","نسخة","kopya","isim","أحتاج إلى نسخة من الوثيقة.","Belgenin bir kopyasına ihtiyacım var.");
+add("ar","B1","Resmi İşlemler","أصل","asıl / orijinal","isim","أحضر الوثيقة الأصلية.","Orijinal belgeyi getir.");
+add("ar","B1","Resmi İşlemler","ترجمة","çeviri","isim","أحتاج إلى ترجمة الوثيقة.","Belgenin çevirisine ihtiyacım var.");
+// ======================= B1 — ALIŞKANLIKLAR VE GÜNLÜK EYLEMLER =======================
+add("ar","B1","Günlük Fiiller","يستيقظ","uyanmak","fiil","أستيقظ في السابعة صباحا.","Sabah yedide uyanırım.");
+add("ar","B1","Günlük Fiiller","يستعد","hazırlanmak","fiil","أستعد للعمل بسرعة.","İşe hızlıca hazırlanıyorum.");
+add("ar","B1","Günlük Fiiller","يغادر","ayrılmak","fiil","أغادر المنزل في الثامنة.","Evden sekizde ayrılırım.");
+add("ar","B1","Günlük Fiiller","يعود","geri dönmek","fiil","أعود إلى المنزل مساء.","Akşam eve dönerim.");
+add("ar","B1","Günlük Fiiller","يستريح","dinlenmek","fiil","أستريح بعد العمل.","İşten sonra dinlenirim.");
+add("ar","B1","Günlük Fiiller","ينظف","temizlemek","fiil","أنظف غرفتي كل أسبوع.","Odamı her hafta temizlerim.");
+add("ar","B1","Günlük Fiiller","يرتب","düzenlemek","fiil","أرتب مكتبي كل صباح.","Masamı her sabah düzenlerim.");
+add("ar","B1","Günlük Fiiller","يطبخ","yemek pişirmek","fiil","أطبخ العشاء في المنزل.","Akşam yemeğini evde pişiririm.");
+add("ar","B1","Günlük Fiiller","يغسل","yıkamak","fiil","أغسل الملابس في نهاية الأسبوع.","Hafta sonunda çamaşırları yıkarım.");
+add("ar","B1","Günlük Fiiller","يشتري","satın almak","fiil","أشتري الطعام من السوق.","Yiyecekleri pazardan satın alırım.");
+add("ar","B1","Günlük Fiiller","يحضر","hazırlamak / getirmek","fiil","أحضر حقيبتي قبل السفر.","Seyahatten önce çantamı hazırlarım.");
+add("ar","B1","Günlük Fiiller","يحجز","rezervasyon yapmak","fiil","حجزت غرفة في الفندق.","Otelde bir oda rezerve ettim.");
+add("ar","B1","Günlük Fiiller","يلغي","iptal etmek","fiil","ألغيت الموعد.","Randevuyu iptal ettim.");
+add("ar","B1","Günlük Fiiller","يؤجل","ertelemek","fiil","أجلنا الاجتماع إلى الغد.","Toplantıyı yarına erteledik.");
+add("ar","B1","Günlük Fiiller","يؤكد","onaylamak / teyit etmek","fiil","أريد تأكيد الحجز.","Rezervasyonu teyit etmek istiyorum.");
+add("ar","B1","Günlük Fiiller","يتصل","aramak / bağlantı kurmak","fiil","سأتصل بك لاحقا.","Seni daha sonra arayacağım.");
+add("ar","B1","Günlük Fiiller","يرسل","göndermek","fiil","أرسل لي العنوان.","Bana adresi gönder.");
+add("ar","B1","Günlük Fiiller","يستقبل","almak / karşılamak","fiil","استقبلت رسالة جديدة.","Yeni bir mesaj aldım.");
+add("ar","B1","Günlük Fiiller","يشارك","paylaşmak","fiil","شارك الصورة مع أصدقائك.","Fotoğrafı arkadaşlarınla paylaş.");
+add("ar","B1","Günlük Fiiller","يحفظ","kaydetmek / ezberlemek","fiil","احفظ هذه الكلمات.","Bu kelimeleri ezberle.");
+// ======================= B1 — SIK KULLANILAN KALIPLAR =======================
+add("ar","B1","Kalıplar","في رأيي","bence","ifade","في رأيي، هذا أفضل حل.","Bence bu en iyi çözüm.");
+add("ar","B1","Kalıplar","حسب رأيي","bana göre","ifade","حسب رأيي، يجب أن ننتظر.","Bana göre beklemeliyiz.");
+add("ar","B1","Kalıplar","لا أعتقد أن","sanmıyorum ki","ifade","لا أعتقد أن هذا صحيح.","Bunun doğru olduğunu sanmıyorum.");
+add("ar","B1","Kalıplar","أعتقد أن","bence / düşünüyorum ki","ifade","أعتقد أن الأمر ممكن.","Bence bu mümkün.");
+add("ar","B1","Kalıplar","من وجهة نظري","benim bakış açıma göre","ifade","من وجهة نظري، القرار جيد.","Benim bakış açıma göre karar iyi.");
+add("ar","B1","Kalıplar","على حد علمي","bildiğim kadarıyla","ifade","على حد علمي، الاجتماع غدا.","Bildiğim kadarıyla toplantı yarın.");
+add("ar","B1","Kalıplar","حسب ما أعرف","bildiğim kadarıyla","ifade","حسب ما أعرف، هو في ألمانيا.","Bildiğim kadarıyla o Almanya'da.");
+add("ar","B1","Kalıplar","لا مشكلة","sorun değil","ifade","لا مشكلة، يمكننا الانتظار.","Sorun değil, bekleyebiliriz.");
+add("ar","B1","Kalıplar","لا بأس","önemli değil / sorun değil","ifade","لا بأس، لا تقلق.","Sorun değil, endişelenme.");
+add("ar","B1","Kalıplar","ليس لدي أي فكرة","hiçbir fikrim yok","ifade","ليس لدي أي فكرة عن ذلك.","Bunun hakkında hiçbir fikrim yok.");
+add("ar","B1","Kalıplar","لا أستطيع الانتظار","sabırsızlanıyorum","ifade","لا أستطيع الانتظار حتى أراك.","Seni görmek için sabırsızlanıyorum.");
+add("ar","B1","Kalıplar","هذا يعتمد على","bu şuna bağlı","ifade","هذا يعتمد على الوقت.","Bu zamana bağlı.");
+add("ar","B1","Kalıplar","الأمر متروك لك","sana kalmış","ifade","الأمر متروك لك.","Sana kalmış.");
+add("ar","B1","Kalıplar","لا يهم","önemi yok","ifade","لا يهم ما حدث.","Ne olduğu önemli değil.");
+add("ar","B1","Kalıplar","بالتأكيد","kesinlikle","ifade","بالتأكيد سأساعدك.","Kesinlikle sana yardım edeceğim.");
+add("ar","B1","Kalıplar","ربما","belki","ifade","ربما نلتقي غدا.","Belki yarın buluşuruz.");
+add("ar","B1","Kalıplar","بصراحة","dürüst olmak gerekirse","ifade","بصراحة، لا أعرف.","Dürüst olmak gerekirse bilmiyorum.");
+add("ar","B1","Kalıplar","بالمناسبة","bu arada","ifade","بالمناسبة، أين محمد؟","Bu arada Muhammed nerede?");
+add("ar","B1","Kalıplar","على أي حال","her neyse / her halükarda","ifade","على أي حال، لنبدأ.","Her neyse, başlayalım.");
+add("ar","B1","Kalıplar","في الوقت الحالي","şu anda","ifade","في الوقت الحالي، أنا مشغول.","Şu anda meşgulüm.");
+/* ================================================================
+   ARAPÇA B1 — PART 5
+================================================================ */
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم لمستقبل المجتمع.","Eğitim toplumun geleceği için önemlidir.");
+add("ar","B1","Eğitim","مدرسة","okul","isim","المدرسة قريبة من منزلي.","Okul evime yakın.");
+add("ar","B1","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Eğitim","كلية","fakülte","isim","أدرس في كلية الهندسة.","Mühendislik fakültesinde okuyorum.");
+add("ar","B1","Eğitim","تخصص","bölüm / uzmanlık alanı","isim","ما هو تخصصك؟","Bölümün nedir?");
+add("ar","B1","Eğitim","مادة","ders / konu","isim","هذه المادة صعبة.","Bu ders zor.");
+add("ar","B1","Eğitim","دورة","kurs","isim","سجلت في دورة للغة الألمانية.","Almanca kursuna kaydoldum.");
+add("ar","B1","Eğitim","درس","ders","isim","لدي درس اليوم.","Bugün dersim var.");
+add("ar","B1","Eğitim","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
+add("ar","B1","Eğitim","اختبار","test","isim","أجبت عن جميع أسئلة الاختبار.","Testin tüm sorularını cevapladım.");
+add("ar","B1","Eğitim","واجب منزلي","ödev","isim","أنهيت واجبي المنزلي.","Ödevimi bitirdim.");
+add("ar","B1","Eğitim","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","Eğitim","بحث","araştırma","isim","أجريت بحثا عن هذا الموضوع.","Bu konu hakkında araştırma yaptım.");
+add("ar","B1","Eğitim","مقال","makale","isim","قرأت مقالا مفيدا.","Faydalı bir makale okudum.");
+add("ar","B1","Eğitim","كتاب مدرسي","ders kitabı","isim","اشتريت كتابا مدرسيا جديدا.","Yeni bir ders kitabı aldım.");
+add("ar","B1","Eğitim","مكتبة","kütüphane","isim","أدرس في المكتبة.","Kütüphanede çalışıyorum.");
+add("ar","B1","Eğitim","معرفة","bilgi","isim","أريد زيادة معرفتي.","Bilgimi artırmak istiyorum.");
+add("ar","B1","Eğitim","معلومة","bilgi / bilgi parçası","isim","وجدت معلومة مهمة.","Önemli bir bilgi buldum.");
+add("ar","B1","Eğitim","خبرة","deneyim","isim","التجربة تمنحنا خبرة.","Deneyim bize tecrübe kazandırır.");
+add("ar","B1","Eğitim","تدريب","eğitim / staj","isim","أشارك في تدريب مهني.","Mesleki bir eğitime katılıyorum.");
+add("ar","B1","Eğitim","تدريب عملي","uygulamalı eğitim","isim","أحتاج إلى تدريب عملي.","Uygulamalı eğitime ihtiyacım var.");
+add("ar","B1","Eğitim","شهادة","sertifika / diploma","isim","حصلت على شهادة جديدة.","Yeni bir sertifika aldım.");
+add("ar","B1","Eğitim","درجة","not / derece","isim","حصل على درجة عالية في الامتحان.","Sınavda yüksek not aldı.");
+add("ar","B1","Eğitim","منحة","burs","isim","حصلت على منحة دراسية.","Burs aldım.");
+add("ar","B1","Eğitim","منهج","müfredat","isim","المنهج الدراسي شامل.","Müfredat kapsamlıdır.");
+// ======================= B1 — SAĞLIK =======================
+add("ar","B1","Sağlık","صحة","sağlık","isim","الصحة أهم من المال.","Sağlık paradan daha önemlidir.");
+add("ar","B1","Sağlık","مرض","hastalık","isim","هذا المرض قابل للعلاج.","Bu hastalık tedavi edilebilir.");
+add("ar","B1","Sağlık","علاج","tedavi","isim","بدأ العلاج أمس.","Tedavi dün başladı.");
+add("ar","B1","Sağlık","طبيب","doktor","isim","ذهبت إلى الطبيب.","Doktora gittim.");
+add("ar","B1","Sağlık","مريض","hasta","isim","المريض يحتاج إلى الراحة.","Hastanın dinlenmeye ihtiyacı var.");
+add("ar","B1","Sağlık","مستشفى","hastane","isim","المستشفى قريب من هنا.","Hastane buraya yakın.");
+add("ar","B1","Sağlık","عيادة","klinik","isim","ذهبت إلى العيادة صباحا.","Sabah kliniğe gittim.");
+add("ar","B1","Sağlık","صيدلية","eczane","isim","أين أقرب صيدلية؟","En yakın eczane nerede?");
+add("ar","B1","Sağlık","دواء","ilaç","isim","يجب أن تأخذ الدواء.","İlacı almalısın.");
+add("ar","B1","Sağlık","وصفة طبية","reçete","isim","أعطاني الطبيب وصفة طبية.","Doktor bana reçete verdi.");
+add("ar","B1","Sağlık","ألم","ağrı","isim","أشعر بألم في ظهري.","Sırtımda ağrı hissediyorum.");
+add("ar","B1","Sağlık","صداع","baş ağrısı","isim","لدي صداع شديد.","Şiddetli baş ağrım var.");
+add("ar","B1","Sağlık","حمى","ateş","isim","لديه حمى منذ أمس.","Dünden beri ateşi var.");
+add("ar","B1","Sağlık","سعال","öksürük","isim","لدي سعال قوي.","Şiddetli öksürüğüm var.");
+add("ar","B1","Sağlık","نزلة برد","soğuk algınlığı","isim","أصبت بنزلة برد.","Soğuk algınlığına yakalandım.");
+add("ar","B1","Sağlık","إصابة","yaralanma","isim","تعرض لإصابة أثناء المباراة.","Maç sırasında yaralandı.");
+add("ar","B1","Sağlık","عملية","ameliyat","isim","سيخضع لعملية غدا.","Yarın ameliyat olacak.");
+add("ar","B1","Sağlık","فحص","muayene / kontrol","isim","أحتاج إلى فحص طبي.","Tıbbi muayeneye ihtiyacım var.");
+add("ar","B1","Sağlık","موعد طبي","doktor randevusu","isim","لدي موعد طبي غدا.","Yarın doktor randevum var.");
+add("ar","B1","Sağlık","طوارئ","acil durum","isim","اتصل بالطوارئ بسرعة.","Hemen acili ara.");
+add("ar","B1","Sağlık","إسعاف","ambulans","isim","اتصلوا بسيارة الإسعاف.","Ambulans çağırın.");
+add("ar","B1","Sağlık","غذاء صحي","sağlıklı beslenme","isim","الغذاء الصحي مهم.","Sağlıklı beslenme önemlidir.");
+add("ar","B1","Sağlık","رياضة","spor","isim","أمارس الرياضة ثلاث مرات في الأسبوع.","Haftada üç kez spor yapıyorum.");
+add("ar","B1","Sağlık","نوم","uyku","isim","أحتاج إلى نوم جيد.","İyi bir uykuya ihtiyacım var.");
+add("ar","B1","Sağlık","راحة","dinlenme","isim","يحتاج جسمك إلى الراحة.","Vücudunun dinlenmeye ihtiyacı var.");
+// ======================= B1 — SEYAHAT =======================
+add("ar","B1","Seyahat","سفر","seyahat","isim","أحب السفر إلى بلدان جديدة.","Yeni ülkelere seyahat etmeyi seviyorum.");
+add("ar","B1","Seyahat","رحلة","gezi / seyahat","isim","كانت رحلة طويلة.","Uzun bir yolculuktu.");
+add("ar","B1","Seyahat","سائح","turist","isim","المدينة مليئة بالسياح.","Şehir turistlerle dolu.");
+add("ar","B1","Seyahat","سياحة","turizm","isim","السياحة مهمة للاقتصاد.","Turizm ekonomi için önemlidir.");
+add("ar","B1","Seyahat","وجهة","destinasyon","isim","هذه وجهة سياحية مشهورة.","Bu popüler bir turistik destinasyondur.");
+add("ar","B1","Seyahat","مطار","havaalanı","isim","وصلنا إلى المطار مبكرا.","Havaalanına erken vardık.");
+add("ar","B1","Seyahat","رحلة جوية","uçuş","isim","رحلتي الجوية في المساء.","Uçuşum akşam.");
+add("ar","B1","Seyahat","تذكرة","bilet","isim","اشتريت تذكرة ذهاب وعودة.","Gidiş-dönüş bileti aldım.");
+add("ar","B1","Seyahat","جواز سفر","pasaport","isim","لا تنس جواز سفرك.","Pasaportunu unutma.");
+add("ar","B1","Seyahat","حقيبة","çanta","isim","حقيبتي ثقيلة جدا.","Çantam çok ağır.");
+add("ar","B1","Seyahat","أمتعة","bagaj","isim","أين يمكنني استلام أمتعتي؟","Bagajımı nereden alabilirim?");
+add("ar","B1","Seyahat","بوابة","kapı","isim","الطائرة تغادر من البوابة رقم خمسة.","Uçak beş numaralı kapıdan kalkıyor.");
+add("ar","B1","Seyahat","إقلاع","kalkış","isim","موعد الإقلاع في الساعة الثامنة.","Kalkış saati sekiz.");
+add("ar","B1","Seyahat","هبوط","iniş","isim","موعد الهبوط في العاشرة.","İniş saati on.");
+add("ar","B1","Seyahat","تأخير","gecikme","isim","هناك تأخير في الرحلة.","Uçuşta gecikme var.");
+add("ar","B1","Seyahat","إلغاء","iptal","isim","تم إلغاء الرحلة.","Uçuş iptal edildi.");
+add("ar","B1","Seyahat","خريطة","harita","isim","أحتاج إلى خريطة للمدينة.","Şehrin haritasına ihtiyacım var.");
+add("ar","B1","Seyahat","دليل سياحي","tur rehberi","isim","استأجرنا دليلا سياحيا.","Bir tur rehberi kiraladık.");
+add("ar","B1","Seyahat","معلم سياحي","turistik yer","isim","زرنا أهم المعالم السياحية.","En önemli turistik yerleri ziyaret ettik.");
+add("ar","B1","Seyahat","متحف","müze","isim","زرنا متحفا مشهورا.","Ünlü bir müzeyi ziyaret ettik.");
+add("ar","B1","Seyahat","قصر","saray","isim","هذا القصر قديم جدا.","Bu saray çok eski.");
+add("ar","B1","Seyahat","قلعة","kale","isim","تقع القلعة فوق الجبل.","Kale dağın üzerinde bulunuyor.");
+add("ar","B1","Seyahat","شاطئ","plaj","isim","قضينا اليوم على الشاطئ.","Günü plajda geçirdik.");
+add("ar","B1","Seyahat","جزيرة","ada","isim","نريد زيارة جزيرة صغيرة.","Küçük bir adayı ziyaret etmek istiyoruz.");
+add("ar","B1","Seyahat","حدود","sınır","isim","عبرنا الحدود بالسيارة.","Sınırı arabayla geçtik.");
+// ======================= B1 — MEDYA VE HABERLER =======================
+add("ar","B1","Medya","خبر","haber","isim","سمعت خبرا مهما.","Önemli bir haber duydum.");
+add("ar","B1","Medya","أخبار","haberler","isim","أشاهد الأخبار كل مساء.","Her akşam haberleri izliyorum.");
+add("ar","B1","Medya","صحيفة","gazete","isim","أقرأ الصحيفة كل صباح.","Her sabah gazete okuyorum.");
+add("ar","B1","Medya","مجلة","dergi","isim","اشتريت مجلة جديدة.","Yeni bir dergi aldım.");
+add("ar","B1","Medya","مقالة","makale","isim","قرأت مقالة عن الاقتصاد.","Ekonomi hakkında bir makale okudum.");
+add("ar","B1","Medya","تقرير","rapor","isim","شاهدت تقريرا عن المدينة.","Şehir hakkında bir rapor izledim.");
+add("ar","B1","Medya","مقابلة","röportaj","isim","شاهدت مقابلة مع لاعب مشهور.","Ünlü bir oyuncuyla röportaj izledim.");
+add("ar","B1","Medya","مراسل","muhabir","isim","المراسل في مكان الحدث.","Muhabir olay yerinde.");
+add("ar","B1","Medya","صحفي","gazeteci","isim","يعمل كصحفي منذ سنوات.","Yıllardır gazeteci olarak çalışıyor.");
+add("ar","B1","Medya","قناة","kanal","isim","هذه القناة تقدم أخبارا جديدة.","Bu kanal yeni haberler sunuyor.");
+add("ar","B1","Medya","برنامج","program","isim","أشاهد برنامجا تعليميا.","Eğitim programı izliyorum.");
+add("ar","B1","Medya","فيلم","film","isim","شاهدنا فيلما ممتعا.","Eğlenceli bir film izledik.");
+add("ar","B1","Medya","مسلسل","dizi","isim","أتابع مسلسلا جديدا.","Yeni bir dizi takip ediyorum.");
+add("ar","B1","Medya","حلقة","bölüm","isim","شاهدت الحلقة الأخيرة.","Son bölümü izledim.");
+add("ar","B1","Medya","موسيقى","müzik","isim","أستمع إلى الموسيقى أثناء العمل.","Çalışırken müzik dinliyorum.");
+add("ar","B1","Medya","فيديو","video","isim","شاهدت فيديو قصيرا.","Kısa bir video izledim.");
+add("ar","B1","Medya","صورة","fotoğraf / resim","isim","التقطت صورة جميلة.","Güzel bir fotoğraf çektim.");
+add("ar","B1","Medya","محتوى","içerik","isim","هذا المحتوى مفيد.","Bu içerik faydalı.");
+add("ar","B1","Medya","مصدر","kaynak","isim","ما هو مصدر هذه المعلومات؟","Bu bilginin kaynağı nedir?");
+add("ar","B1","Medya","رأي","fikir / görüş","isim","لكل شخص رأيه الخاص.","Herkesin kendi görüşü vardır.");
+add("ar","B1","Medya","حقيقة","gerçek","isim","يجب أن نعرف الحقيقة.","Gerçeği bilmeliyiz.");
+add("ar","B1","Medya","إشاعة","söylenti","isim","هذه مجرد إشاعة.","Bu sadece bir söylenti.");
+add("ar","B1","Medya","عنوان","başlık","isim","قرأت العنوان في الصحيفة.","Başlığı gazetede okudum.");
+add("ar","B1","Medya","حدث","olay","isim","كان الحدث مهما جدا.","Olay çok önemliydi.");
+add("ar","B1","Medya","تغطية إعلامية","medya kapsamı","isim","حصل الحدث على تغطية إعلامية كبيرة.","Olay büyük medya kapsamı aldı.");
+// ======================= B1 — EKONOMİ VE PARA =======================
+add("ar","B1","Ekonomi","اقتصاد","ekonomi","isim","الاقتصاد يتغير بسرعة.","Ekonomi hızla değişiyor.");
+add("ar","B1","Ekonomi","مال","para","isim","المال ليس كل شيء.","Para her şey değildir.");
+add("ar","B1","Ekonomi","سعر","fiyat","isim","ارتفع سعر البنزين.","Benzin fiyatı arttı.");
+add("ar","B1","Ekonomi","تكلفة","maliyet","isim","تكلفة المشروع مرتفعة.","Projenin maliyeti yüksek.");
+add("ar","B1","Ekonomi","دخل","gelir","isim","زاد دخله هذا العام.","Geliri bu yıl arttı.");
+add("ar","B1","Ekonomi","مصروف","harcama","isim","أحاول تقليل مصروفي.","Harcamalarımı azaltmaya çalışıyorum.");
+add("ar","B1","Ekonomi","ميزانية","bütçe","isim","يجب أن نضع ميزانية.","Bir bütçe oluşturmalıyız.");
+add("ar","B1","Ekonomi","ربح","kâr","isim","حققت الشركة ربحا كبيرا.","Şirket büyük bir kâr elde etti.");
+add("ar","B1","Ekonomi","خسارة","zarar","isim","تعرضت الشركة لخسارة كبيرة.","Şirket büyük bir zarar yaşadı.");
+add("ar","B1","Ekonomi","استثمار","yatırım","isim","أفكر في الاستثمار في مشروع جديد.","Yeni bir projeye yatırım yapmayı düşünüyorum.");
+add("ar","B1","Ekonomi","استيراد","ithalat","isim","تعتمد الدولة على استيراد بعض المنتجات.","Ülke bazı ürünlerin ithalatına bağlı.");
+add("ar","B1","Ekonomi","تصدير","ihracat","isim","تزداد صادرات البلاد كل عام.","Ülkenin ihracatı her yıl artıyor.");
+add("ar","B1","Ekonomi","سوق","pazar","isim","السوق المحلي كبير.","Yerel pazar büyük.");
+add("ar","B1","Ekonomi","شركة","şirket","isim","أعمل في شركة دولية.","Uluslararası bir şirkette çalışıyorum.");
+add("ar","B1","Ekonomi","زبون","müşteri","isim","الشركة تهتم بعملائها.","Şirket müşterileriyle ilgileniyor.");
+add("ar","B1","Ekonomi","عميل","müşteri / danışan","isim","لدينا عميل جديد.","Yeni bir müşterimiz var.");
+add("ar","B1","Ekonomi","تجارة","ticaret","isim","التجارة بين البلدين قوية.","İki ülke arasındaki ticaret güçlü.");
+add("ar","B1","Ekonomi","تضخم","enflasyon","isim","ارتفع التضخم هذا العام.","Enflasyon bu yıl arttı.");
+add("ar","B1","Ekonomi","بنك","banka","isim","ذهبت إلى البنك صباحا.","Sabah bankaya gittim.");
+add("ar","B1","Ekonomi","حساب بنكي","banka hesabı","isim","فتحت حسابا بنكيا جديدا.","Yeni bir banka hesabı açtım.");
+add("ar","B1","Ekonomi","تحويل مالي","para transferi","isim","أرسلت تحويلا ماليا.","Para transferi yaptım.");
+add("ar","B1","Ekonomi","قرض","kredi","isim","أخذ قرضا من البنك.","Bankadan kredi aldı.");
+add("ar","B1","Ekonomi","فائدة","faiz","isim","نسبة الفائدة مرتفعة.","Faiz oranı yüksek.");
+add("ar","B1","Ekonomi","دين","borç","isim","أريد سداد ديني.","Borcumu ödemek istiyorum.");
+// ======================= B1 — SOSYAL HAYAT =======================
+add("ar","B1","Sosyal Hayat","مجتمع","toplum","isim","نحن جزء من المجتمع.","Biz toplumun bir parçasıyız.");
+add("ar","B1","Sosyal Hayat","شخصية","kişilik","isim","لديه شخصية قوية.","Güçlü bir kişiliği var.");
+add("ar","B1","Sosyal Hayat","علاقة","ilişki","isim","العلاقة بينهما جيدة.","Aralarındaki ilişki iyi.");
+add("ar","B1","Sosyal Hayat","صداقة","arkadaşlık","isim","الصداقة الحقيقية مهمة.","Gerçek arkadaşlık önemlidir.");
+add("ar","B1","Sosyal Hayat","جيران","komşular","isim","جيراننا لطفاء.","Komşularımız nazik.");
+add("ar","B1","Sosyal Hayat","زميل","meslektaş / sınıf arkadaşı","isim","زميلي يساعدني كثيرا.","Meslektaşım bana çok yardımcı oluyor.");
+add("ar","B1","Sosyal Hayat","ضيف","misafir","isim","لدينا ضيف الليلة.","Bu gece bir misafirimiz var.");
+add("ar","B1","Sosyal Hayat","مناسبة","etkinlik / vesile","isim","هذه مناسبة مهمة.","Bu önemli bir etkinlik.");
+add("ar","B1","Sosyal Hayat","حفلة","parti","isim","ذهبنا إلى حفلة كبيرة.","Büyük bir partiye gittik.");
+add("ar","B1","Sosyal Hayat","احتفال","kutlama","isim","كان هناك احتفال في المدينة.","Şehirde bir kutlama vardı.");
+add("ar","B1","Sosyal Hayat","دعوة","davetiye / davet","isim","تلقيت دعوة لحضور الحفل.","Partiye katılmak için davet aldım.");
+add("ar","B1","Sosyal Hayat","لقاء","buluşma","isim","لدينا لقاء غدا.","Yarın bir buluşmamız var.");
+add("ar","B1","Sosyal Hayat","موعد","buluşma / randevu","isim","لدي موعد مع صديقي.","Arkadaşımla buluşmam var.");
+add("ar","B1","Sosyal Hayat","زيارة","ziyaret","isim","قمنا بزيارة عائلية.","Aile ziyareti yaptık.");
+add("ar","B1","Sosyal Hayat","هدية","hediye","isim","اشتريت هدية لأخي.","Kardeşim için hediye aldım.");
+add("ar","B1","Sosyal Hayat","مساعدة","yardım","isim","شكرا على مساعدتك.","Yardımın için teşekkürler.");
+add("ar","B1","Sosyal Hayat","خدمة","hizmet","isim","أقدم خدمة مجانية.","Ücretsiz hizmet sunuyorum.");
+add("ar","B1","Sosyal Hayat","احترام","saygı","isim","يجب أن نحترم الآخرين.","Başkalarına saygı duymalıyız.");
+add("ar","B1","Sosyal Hayat","اختلاف","farklılık","isim","الاختلاف بين الناس طبيعي.","İnsanlar arasındaki farklılık doğaldır.");
+add("ar","B1","Sosyal Hayat","مساواة","eşitlik","isim","نحتاج إلى المساواة.","Eşitliğe ihtiyacımız var.");
+add("ar","B1","Sosyal Hayat","حقوق","haklar","isim","يجب حماية حقوق الإنسان.","İnsan hakları korunmalıdır.");
+add("ar","B1","Sosyal Hayat","واجب","görev / yükümlülük","isim","لكل شخص حقوق وواجبات.","Herkesin hakları ve görevleri vardır.");
+add("ar","B1","Sosyal Hayat","قانون","kanun","isim","يجب احترام القانون.","Kanuna saygı gösterilmelidir.");
+add("ar","B1","Sosyal Hayat","دولة","devlet / ülke","isim","تعمل الدولة على تطوير التعليم.","Devlet eğitimi geliştirmek için çalışıyor.");
+add("ar","B1","Sosyal Hayat","مواطن","vatandaş","isim","كل مواطن لديه حقوق.","Her vatandaşın hakları vardır.");
+/* ================================================================
+   ARAPÇA B1 — PART 6
+================================================================ */
+// ======================= B1 — İŞ HAYATI =======================
+add("ar","B1","İş Hayatı","عمل","iş / çalışma","isim","أحب عملي كثيرا.","İşimi çok seviyorum.");
+add("ar","B1","İş Hayatı","وظيفة","iş / meslek","isim","وجدت وظيفة جديدة.","Yeni bir iş buldum.");
+add("ar","B1","İş Hayatı","مهنة","meslek","isim","ما مهنتك؟","Mesleğin nedir?");
+add("ar","B1","İş Hayatı","شركة","şirket","isim","تعمل في شركة كبيرة.","Büyük bir şirkette çalışıyor.");
+add("ar","B1","İş Hayatı","مكتب","ofis","isim","أعمل في مكتب صغير.","Küçük bir ofiste çalışıyorum.");
+add("ar","B1","İş Hayatı","موظف","çalışan","isim","هو موظف في البنك.","O bankada çalışan biri.");
+add("ar","B1","İş Hayatı","مدير","yönetici","isim","تحدثت مع المدير.","Yöneticiyle konuştum.");
+add("ar","B1","İş Hayatı","زميل","meslektaş","isim","زميلي في العمل يساعدني.","İş arkadaşım bana yardım ediyor.");
+add("ar","B1","İş Hayatı","فريق","ekip","isim","أعمل مع فريق جيد.","İyi bir ekiple çalışıyorum.");
+add("ar","B1","İş Hayatı","اجتماع","toplantı","isim","لدينا اجتماع في الصباح.","Sabah bir toplantımız var.");
+add("ar","B1","İş Hayatı","مقابلة عمل","iş görüşmesi","isim","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","İş Hayatı","سيرة ذاتية","özgeçmiş / CV","isim","أرسلت سيرتي الذاتية إلى الشركة.","CV'mi şirkete gönderdim.");
+add("ar","B1","İş Hayatı","خبرة عمل","iş deneyimi","isim","لدي خبرة عمل لمدة ثلاث سنوات.","Üç yıllık iş deneyimim var.");
+add("ar","B1","İş Hayatı","راتب","maaş","isim","راتبي جيد.","Maaşım iyi.");
+add("ar","B1","İş Hayatı","أجر","ücret","isim","الأجر يعتمد على الخبرة.","Ücret deneyime bağlıdır.");
+add("ar","B1","İş Hayatı","دوام","mesai / çalışma saatleri","isim","دوامي يبدأ في الثامنة.","Mesaim saat sekizde başlıyor.");
+add("ar","B1","İş Hayatı","دوام كامل","tam zamanlı","sıfat","أعمل بدوام كامل.","Tam zamanlı çalışıyorum.");
+add("ar","B1","İş Hayatı","دوام جزئي","yarı zamanlı","sıfat","أبحث عن عمل بدوام جزئي.","Yarı zamanlı iş arıyorum.");
+add("ar","B1","İş Hayatı","إجازة","izin / tatil","isim","سآخذ إجازة الأسبوع المقبل.","Gelecek hafta izin alacağım.");
+add("ar","B1","İş Hayatı","عطلة","tatil","isim","أنا في عطلة الآن.","Şu anda tatildeyim.");
+add("ar","B1","İş Hayatı","مهمة","görev","isim","لدي مهمة مهمة اليوم.","Bugün önemli bir görevim var.");
+add("ar","B1","İş Hayatı","مسؤولية","sorumluluk","isim","هذه مسؤولية كبيرة.","Bu büyük bir sorumluluk.");
+add("ar","B1","İş Hayatı","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","İş Hayatı","موعد نهائي","son teslim tarihi","isim","يجب أن ننهي العمل قبل الموعد النهائي.","İşi son teslim tarihinden önce bitirmeliyiz.");
+add("ar","B1","İş Hayatı","ترقية","terfi","isim","حصل على ترقية في العمل.","İşinde terfi aldı.");
+add("ar","B1","İş Hayatı","استقالة","istifa","isim","قدم استقالته من الشركة.","Şirketten istifa etti.");
+add("ar","B1","İş Hayatı","توظيف","işe alma","isim","تبدأ الشركة عملية التوظيف.","Şirket işe alım sürecini başlatıyor.");
+add("ar","B1","İş Hayatı","تقديم طلب","başvurmak","fiil","قدمت طلبا للحصول على الوظيفة.","İş için başvuru yaptım.");
+add("ar","B1","İş Hayatı","يعمل","çalışmak","fiil","أعمل من المنزل اليوم.","Bugün evden çalışıyorum.");
+add("ar","B1","İş Hayatı","يكسب","kazanmak","fiil","يكسب مالا جيدا.","İyi para kazanıyor.");
+// ======================= B1 — TEKNOLOJİ =======================
+add("ar","B1","Teknoloji","تكنولوجيا","teknoloji","isim","أحب التكنولوجيا الحديثة.","Modern teknolojiyi seviyorum.");
+add("ar","B1","Teknoloji","جهاز","cihaz","isim","اشتريت جهازا جديدا.","Yeni bir cihaz aldım.");
+add("ar","B1","Teknoloji","حاسوب","bilgisayar","isim","أستخدم الحاسوب كل يوم.","Her gün bilgisayar kullanıyorum.");
+add("ar","B1","Teknoloji","حاسوب محمول","dizüstü bilgisayar","isim","أحتاج إلى حاسوب محمول جديد.","Yeni bir dizüstü bilgisayara ihtiyacım var.");
+add("ar","B1","Teknoloji","هاتف ذكي","akıllı telefon","isim","هاتفه الذكي جديد.","Akıllı telefonu yeni.");
+add("ar","B1","Teknoloji","شاشة","ekran","isim","شاشة الحاسوب كبيرة.","Bilgisayar ekranı büyük.");
+add("ar","B1","Teknoloji","لوحة مفاتيح","klavye","isim","لوحة المفاتيح لا تعمل.","Klavye çalışmıyor.");
+add("ar","B1","Teknoloji","فأرة","fare","isim","أين فأرة الحاسوب؟","Bilgisayar faresi nerede?");
+add("ar","B1","Teknoloji","بطارية","pil","isim","بطارية هاتفي فارغة.","Telefonumun pili boş.");
+add("ar","B1","Teknoloji","شاحن","şarj cihazı","isim","نسيت الشاحن في المنزل.","Şarj cihazını evde unuttum.");
+add("ar","B1","Teknoloji","إنترنت","internet","isim","ليس لدي اتصال بالإنترنت.","İnternet bağlantım yok.");
+add("ar","B1","Teknoloji","اتصال","bağlantı","isim","الاتصال ضعيف هنا.","Burada bağlantı zayıf.");
+add("ar","B1","Teknoloji","شبكة","ağ","isim","الشبكة لا تعمل.","Ağ çalışmıyor.");
+add("ar","B1","Teknoloji","موقع إلكتروني","web sitesi","isim","وجدت المعلومات في موقع إلكتروني.","Bilgiyi bir web sitesinde buldum.");
+add("ar","B1","Teknoloji","تطبيق","uygulama","isim","أستخدم هذا التطبيق كل يوم.","Bu uygulamayı her gün kullanıyorum.");
+add("ar","B1","Teknoloji","برنامج","yazılım / program","isim","أحتاج إلى برنامج جديد.","Yeni bir programa ihtiyacım var.");
+add("ar","B1","Teknoloji","ملف","dosya","isim","أرسلت الملف عبر البريد الإلكتروني.","Dosyayı e-posta ile gönderdim.");
+add("ar","B1","Teknoloji","مجلد","klasör","isim","احفظ الملف في هذا المجلد.","Dosyayı bu klasöre kaydet.");
+add("ar","B1","Teknoloji","كلمة مرور","şifre","isim","نسيت كلمة المرور.","Şifremi unuttum.");
+add("ar","B1","Teknoloji","حساب","hesap","isim","لدي حساب على هذا الموقع.","Bu web sitesinde hesabım var.");
+add("ar","B1","Teknoloji","تسجيل الدخول","giriş yapmak","isim","اضغط هنا لتسجيل الدخول.","Giriş yapmak için buraya tıklayın.");
+add("ar","B1","Teknoloji","تسجيل الخروج","çıkış yapmak","isim","لا تنس تسجيل الخروج.","Çıkış yapmayı unutma.");
+add("ar","B1","Teknoloji","تحميل","indirmek","isim","أريد تحميل التطبيق.","Uygulamayı indirmek istiyorum.");
+add("ar","B1","Teknoloji","رفع","yüklemek","isim","رفعت الملف إلى الموقع.","Dosyayı siteye yükledim.");
+add("ar","B1","Teknoloji","تحديث","güncelleme","isim","يحتاج التطبيق إلى تحديث.","Uygulamanın güncellenmesi gerekiyor.");
+add("ar","B1","Teknoloji","بحث","arama","isim","استخدم محرك البحث للعثور على المعلومات.","Bilgi bulmak için arama motorunu kullan.");
+add("ar","B1","Teknoloji","رابط","bağlantı / link","isim","أرسل لي الرابط من فضلك.","Bana bağlantıyı gönder lütfen.");
+add("ar","B1","Teknoloji","رسالة إلكترونية","e-posta","isim","أرسلت لك رسالة إلكترونية.","Sana bir e-posta gönderdim.");
+add("ar","B1","Teknoloji","شبكات التواصل الاجتماعي","sosyal medya","isim","أستخدم شبكات التواصل الاجتماعي كثيرا.","Sosyal medyayı çok kullanıyorum.");
+add("ar","B1","Teknoloji","خصوصية","gizlilik","isim","يجب أن نحمي خصوصيتنا.","Gizliliğimizi korumalıyız.");
+// ======================= B1 — İNTERNET VE İLETİŞİM =======================
+add("ar","B1","İletişim","تواصل","iletişim","isim","التواصل مهم في العمل.","İletişim işte önemlidir.");
+add("ar","B1","İletişim","مكالمة","telefon görüşmesi","isim","أجريت مكالمة طويلة.","Uzun bir telefon görüşmesi yaptım.");
+add("ar","B1","İletişim","رسالة","mesaj","isim","أرسلت لك رسالة.","Sana bir mesaj gönderdim.");
+add("ar","B1","İletişim","بريد إلكتروني","e-posta","isim","تحققت من بريدي الإلكتروني.","E-postamı kontrol ettim.");
+add("ar","B1","İletişim","محادثة","sohbet","isim","كانت لدينا محادثة ممتعة.","Keyifli bir sohbetimiz oldu.");
+add("ar","B1","İletişim","مكالمة فيديو","görüntülü arama","isim","أجريت مكالمة فيديو مع عائلتي.","Ailemle görüntülü arama yaptım.");
+add("ar","B1","İletişim","إشعار","bildirim","isim","تلقيت إشعارا جديدا.","Yeni bir bildirim aldım.");
+add("ar","B1","İletişim","تعليق","yorum","isim","كتب تعليقا على المنشور.","Gönderiye yorum yazdı.");
+add("ar","B1","İletişim","منشور","gönderi","isim","نشرت منشورا جديدا.","Yeni bir gönderi paylaştım.");
+add("ar","B1","İletişim","متابع","takipçi","isim","لديه آلاف المتابعين.","Binlerce takipçisi var.");
+add("ar","B1","İletişim","متابعة","takip","isim","بدأت متابعة هذا الحساب.","Bu hesabı takip etmeye başladım.");
+add("ar","B1","İletişim","مشاركة","paylaşım","isim","حصل المنشور على مشاركات كثيرة.","Gönderi çok fazla paylaşım aldı.");
+add("ar","B1","İletişim","إعجاب","beğeni","isim","حصلت الصورة على الكثير من الإعجابات.","Fotoğraf çok fazla beğeni aldı.");
+add("ar","B1","İletişim","حساب مستخدم","kullanıcı hesabı","isim","أنشأت حساب مستخدم جديدا.","Yeni bir kullanıcı hesabı oluşturdum.");
+add("ar","B1","İletişim","اسم المستخدم","kullanıcı adı","isim","ما اسم المستخدم الخاص بك؟","Kullanıcı adın nedir?");
+add("ar","B1","İletişim","رمز","kod","isim","أدخل الرمز هنا.","Kodu buraya gir.");
+add("ar","B1","İletişim","تنزيل","indirme","isim","بدأ تنزيل الملف.","Dosyanın indirilmesi başladı.");
+add("ar","B1","İletişim","إرسال","gönderme","isim","اضغط على زر الإرسال.","Gönderme düğmesine bas.");
+add("ar","B1","İletişim","حظر","engellemek","fiil","حظرت هذا الحساب.","Bu hesabı engelledim.");
+add("ar","B1","İletişim","حذف","silmek","fiil","حذفت الرسالة.","Mesajı sildim.");
+// ======================= B1 — ÇEVRE VE DOĞA =======================
+add("ar","B1","Çevre","بيئة","çevre","isim","يجب أن نحمي البيئة.","Çevreyi korumalıyız.");
+add("ar","B1","Çevre","طبيعة","doğa","isim","أحب قضاء الوقت في الطبيعة.","Doğada vakit geçirmeyi seviyorum.");
+add("ar","B1","Çevre","هواء","hava","isim","الهواء هنا نظيف.","Buradaki hava temiz.");
+add("ar","B1","Çevre","تلوث","kirlilik","isim","التلوث مشكلة كبيرة.","Kirlilik büyük bir sorun.");
+add("ar","B1","Çevre","تلوث الهواء","hava kirliliği","isim","تلوث الهواء يزداد في المدن.","Şehirlerde hava kirliliği artıyor.");
+add("ar","B1","Çevre","تلوث المياه","su kirliliği","isim","تلوث المياه خطر على الإنسان.","Su kirliliği insanlar için tehlikelidir.");
+add("ar","B1","Çevre","نفايات","atıklar","isim","يجب تقليل النفايات.","Atıklar azaltılmalı.");
+add("ar","B1","Çevre","قمامة","çöp","isim","لا ترم القمامة في الشارع.","Çöpleri sokağa atma.");
+add("ar","B1","Çevre","إعادة تدوير","geri dönüşüm","isim","إعادة التدوير تساعد البيئة.","Geri dönüşüm çevreye yardımcı olur.");
+add("ar","B1","Çevre","طاقة","enerji","isim","نحتاج إلى طاقة نظيفة.","Temiz enerjiye ihtiyacımız var.");
+add("ar","B1","Çevre","طاقة شمسية","güneş enerjisi","isim","تستخدم بعض المنازل الطاقة الشمسية.","Bazı evler güneş enerjisi kullanıyor.");
+add("ar","B1","Çevre","طاقة متجددة","yenilenebilir enerji","isim","الطاقة المتجددة مهمة للمستقبل.","Yenilenebilir enerji gelecek için önemlidir.");
+add("ar","B1","Çevre","مناخ","iklim","isim","يتغير المناخ بسرعة.","İklim hızla değişiyor.");
+add("ar","B1","Çevre","تغير المناخ","iklim değişikliği","isim","تغير المناخ يؤثر على العالم.","İklim değişikliği dünyayı etkiliyor.");
+add("ar","B1","Çevre","احتباس حراري","küresel ısınma","isim","الاحتباس الحراري مشكلة عالمية.","Küresel ısınma küresel bir sorundur.");
+add("ar","B1","Çevre","غابة","orman","isim","نمشِ في الغابة.","Ormanda yürüyoruz.");
+add("ar","B1","Çevre","شجرة","ağaç","isim","زرعنا شجرة جديدة.","Yeni bir ağaç diktik.");
+add("ar","B1","Çevre","نبات","bitki","isim","هذه النباتات تحتاج إلى الماء.","Bu bitkilerin suya ihtiyacı var.");
+add("ar","B1","Çevre","حيوان","hayvan","isim","أحب الحيوانات.","Hayvanları seviyorum.");
+add("ar","B1","Çevre","بحر","deniz","isim","البحر هادئ اليوم.","Deniz bugün sakin.");
+add("ar","B1","Çevre","نهر","nehir","isim","يمر نهر كبير بالمدينة.","Şehirden büyük bir nehir geçiyor.");
+add("ar","B1","Çevre","جبل","dağ","isim","ذهبنا إلى الجبل.","Dağa gittik.");
+add("ar","B1","Çevre","صحراء","çöl","isim","الصحراء واسعة جدا.","Çöl çok geniş.");
+add("ar","B1","Çevre","جزيرة","ada","isim","الجزيرة جميلة جدا.","Ada çok güzel.");
+add("ar","B1","Çevre","محمية طبيعية","doğa koruma alanı","isim","زرنا محمية طبيعية.","Bir doğa koruma alanını ziyaret ettik.");
+// ======================= B1 — DUYGULAR =======================
+add("ar","B1","Duygular","سعادة","mutluluk","isim","السعادة لا تعتمد على المال.","Mutluluk paraya bağlı değildir.");
+add("ar","B1","Duygular","حزن","üzüntü","isim","شعر بالحزن بعد الخبر.","Haberi duyduktan sonra üzüldü.");
+add("ar","B1","Duygular","غضب","öfke","isim","لا أستطيع إخفاء غضبي.","Öfkemi gizleyemiyorum.");
+add("ar","B1","Duygular","خوف","korku","isim","شعرت بالخوف في الظلام.","Karanlıkta korku hissettim.");
+add("ar","B1","Duygular","قلق","endişe","isim","أشعر بالقلق بشأن الامتحان.","Sınav hakkında endişeliyim.");
+add("ar","B1","Duygular","توتر","stres","isim","العمل يسبب لي التوتر.","İş bana stres veriyor.");
+add("ar","B1","Duygular","راحة","rahatlık","isim","أشعر بالراحة هنا.","Burada kendimi rahat hissediyorum.");
+add("ar","B1","Duygular","أمل","umut","isim","ما زال لدي أمل.","Hâlâ umudum var.");
+add("ar","B1","Duygular","حلم","hayal / rüya","isim","لدي حلم كبير.","Büyük bir hayalim var.");
+add("ar","B1","Duygular","رغبة","istek / arzu","isim","لدي رغبة في السفر.","Seyahat etme isteğim var.");
+add("ar","B1","Duygular","ثقة","güven","isim","لدي ثقة بنفسي.","Kendime güveniyorum.");
+add("ar","B1","Duygular","شك","şüphe","isim","لدي شك في كلامه.","Sözlerinden şüphe duyuyorum.");
+add("ar","B1","Duygular","اهتمام","ilgi","isim","لدي اهتمام بالتكنولوجيا.","Teknolojiye ilgim var.");
+add("ar","B1","Duygular","فضول","merak","isim","لدي فضول لمعرفة الحقيقة.","Gerçeği öğrenmek için merak ediyorum.");
+add("ar","B1","Duygular","دهشة","şaşkınlık","isim","شعرت بالدهشة عندما رأيته.","Onu görünce şaşırdım.");
+add("ar","B1","Duygular","مفاجأة","sürpriz","isim","كانت مفاجأة جميلة.","Güzel bir sürprizdi.");
+add("ar","B1","Duygular","خيبة أمل","hayal kırıklığı","isim","شعرت بخيبة أمل كبيرة.","Büyük bir hayal kırıklığı yaşadım.");
+add("ar","B1","Duygular","فخر","gurur","isim","أشعر بالفخر بك.","Seninle gurur duyuyorum.");
+add("ar","B1","Duygular","ندم","pişmanlık","isim","أشعر بالندم على قراري.","Kararımdan pişmanım.");
+add("ar","B1","Duygular","غيرة","kıskançlık","isim","الغيرة يمكن أن تسبب المشاكل.","Kıskançlık sorunlara yol açabilir.");
+// ======================= B1 — KİŞİLİK VE KARAKTER =======================
+add("ar","B1","Kişilik","شخصية","kişilik","isim","لها شخصية قوية.","Güçlü bir kişiliği var.");
+add("ar","B1","Kişilik","صفة","özellik","isim","الصبر صفة مهمة.","Sabır önemli bir özelliktir.");
+add("ar","B1","Kişilik","طبع","karakter / huy","isim","هذا من طبعه.","Bu onun karakterinde var.");
+add("ar","B1","Kişilik","هادئ","sakin","sıfat","هو شخص هادئ.","O sakin bir insan.");
+add("ar","B1","Kişilik","عصبي","sinirli","sıfat","هو عصبي قليلا.","O biraz sinirli.");
+add("ar","B1","Kişilik","صبور","sabırlı","sıfat","هي شخص صبور.","O sabırlı bir insan.");
+add("ar","B1","Kişilik","صبور","sabırlı","sıfat","يجب أن تكون صبورا.","Sabırlı olmalısın.");
+add("ar","B1","Kişilik","متفائل","iyimser","sıfat","أنا شخص متفائل.","Ben iyimser bir insanım.");
+add("ar","B1","Kişilik","متشائم","kötümser","sıfat","لا تكن متشائما.","Kötümser olma.");
+add("ar","B1","Kişilik","شجاع","cesur","sıfat","هو رجل شجاع.","O cesur bir adam.");
+add("ar","B1","Kişilik","خجول","utangaç","sıfat","كانت خجولة في البداية.","Başlangıçta utangaçtı.");
+add("ar","B1","Kişilik","اجتماعي","sosyal","sıfat","هو شخص اجتماعي جدا.","O çok sosyal bir insan.");
+add("ar","B1","Kişilik","انطوائي","içe dönük","sıfat","هو شخص انطوائي.","O içe dönük bir insan.");
+add("ar","B1","Kişilik","كريم","cömert","sıfat","هو شخص كريم.","O cömert bir insan.");
+add("ar","B1","Kişilik","أناني","bencil","sıfat","لا تكن أنانيا.","Bencil olma.");
+add("ar","B1","Kişilik","صادق","dürüst","sıfat","هو شخص صادق.","O dürüst bir insan.");
+add("ar","B1","Kişilik","كاذب","yalancı","sıfat","لا أحب الأشخاص الكاذبين.","Yalancı insanları sevmem.");
+add("ar","B1","Kişilik","لطيف","nazik / hoş","sıfat","إنها فتاة لطيفة.","O nazik bir kız.");
+add("ar","B1","Kişilik","ذكي","zeki","sıfat","إنه طالب ذكي.","O zeki bir öğrenci.");
+add("ar","B1","Kişilik","كسول","tembel","sıfat","لا تكن كسولا.","Tembel olma.");
+add("ar","B1","Kişilik","نشيط","aktif / enerjik","sıfat","هو شخص نشيط.","O enerjik bir insan.");
+add("ar","B1","Kişilik","موثوق","güvenilir","sıfat","إنه شخص موثوق.","O güvenilir bir insan.");
+add("ar","B1","Kişilik","مسؤول","sorumlu","sıfat","هو موظف مسؤول.","O sorumlu bir çalışan.");
+add("ar","B1","Kişilik","مستقل","bağımsız","sıfat","أريد أن أكون مستقلا.","Bağımsız olmak istiyorum.");
+add("ar","B1","Kişilik","مرن","esnek","sıfat","يجب أن تكون مرنا في العمل.","İşte esnek olmalısın.");
+// ======================= B1 — TEMEL FİİLLER =======================
+add("ar","B1","Fiiller","يقرر","karar vermek","fiil","قررت السفر غدا.","Yarın seyahat etmeye karar verdim.");
+add("ar","B1","Fiiller","يختار","seçmek","fiil","اخترت هذا الخيار.","Bu seçeneği seçtim.");
+add("ar","B1","Fiiller","يفضل","tercih etmek","fiil","أفضل العمل في الصباح.","Sabah çalışmayı tercih ederim.");
+add("ar","B1","Fiiller","يحاول","denemek","fiil","أحاول تعلم اللغة العربية.","Arapça öğrenmeye çalışıyorum.");
+add("ar","B1","Fiiller","ينجح","başarmak","fiil","نجحت في الامتحان.","Sınavda başarılı oldum.");
+add("ar","B1","Fiiller","يفشل","başarısız olmak","fiil","فشل في الاختبار.","Testte başarısız oldu.");
+add("ar","B1","Fiiller","يتطور","gelişmek","fiil","تطور مستواي بسرعة.","Seviyem hızla gelişti.");
+add("ar","B1","Fiiller","يحسن","iyileştirmek","fiil","أريد تحسين لغتي.","Dilimi geliştirmek istiyorum.");
+add("ar","B1","Fiiller","يغير","değiştirmek","fiil","غيرت رأيي.","Fikrimi değiştirdim.");
+add("ar","B1","Fiiller","يتغير","değişmek","fiil","العالم يتغير بسرعة.","Dünya hızla değişiyor.");
+add("ar","B1","Fiiller","يشرح","açıklamak","fiil","هل يمكنك شرح هذا؟","Bunu açıklayabilir misin?");
+add("ar","B1","Fiiller","يفهم","anlamak","fiil","لم أفهم السؤال.","Soruyu anlamadım.");
+add("ar","B1","Fiiller","يتذكر","hatırlamak","fiil","هل تتذكر اسمي؟","Adımı hatırlıyor musun?");
+add("ar","B1","Fiiller","ينسى","unutmak","fiil","نسيت موعدي.","Randevumu unuttum.");
+add("ar","B1","Fiiller","يتوقع","beklemek / tahmin etmek","fiil","أتوقع أن يصل غدا.","Yarın varmasını bekliyorum.");
+add("ar","B1","Fiiller","يحتاج","ihtiyaç duymak","fiil","أحتاج إلى مساعدتك.","Yardımına ihtiyacım var.");
+add("ar","B1","Fiiller","يستطيع","-ebilmek","fiil","أستطيع مساعدتك.","Sana yardım edebilirim.");
+add("ar","B1","Fiiller","يجب","zorunda olmak / -meli","fiil","يجب أن نذهب الآن.","Şimdi gitmeliyiz.");
+add("ar","B1","Fiiller","يستمر","devam etmek","fiil","استمر في العمل.","Çalışmaya devam et.");
+add("ar","B1","Fiiller","يتوقف","durmak / bırakmak","fiil","توقف عن الكلام.","Konuşmayı bırak.");
+add("ar","B1","Fiiller","يبدأ","başlamak","fiil","بدأ الاجتماع في الساعة التاسعة.","Toplantı saat dokuzda başladı.");
+add("ar","B1","Fiiller","ينتهي","bitmek","fiil","ينتهي الدرس في الساعة الخامسة.","Ders saat beşte bitiyor.");
+add("ar","B1","Fiiller","يحدث","olmak / meydana gelmek","fiil","ماذا حدث؟","Ne oldu?");
+add("ar","B1","Fiiller","يؤثر","etkilemek","fiil","الطقس يؤثر على مزاجي.","Hava durumu ruh halimi etkiliyor.");
+add("ar","B1","Fiiller","يعتمد","bağlı olmak","fiil","القرار يعتمد على الظروف.","Karar koşullara bağlı.");
+add("ar","B1","Fiiller","يشارك","katılmak / paylaşmak","fiil","شارك في الاجتماع.","Toplantıya katıldı.");
+add("ar","B1","Fiiller","يناقش","tartışmak","fiil","ناقشنا المشكلة معا.","Sorunu birlikte tartıştık.");
+add("ar","B1","Fiiller","يتفق","aynı fikirde olmak","fiil","أتفق معك تماما.","Sana tamamen katılıyorum.");
+add("ar","B1","Fiiller","يختلف","farklı düşünmek / anlaşmazlık yaşamak","fiil","أختلف معك في هذه النقطة.","Bu konuda sana katılmıyorum.");
+add("ar","B1","Fiiller","يقترح","önermek","fiil","أقترح فكرة جديدة.","Yeni bir fikir öneriyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 7
+================================================================ */
+// ======================= B1 — ŞEHİR VE YAŞAM =======================
+add("ar","B1","Şehir","مدينة","şehir","isim","أعيش في مدينة كبيرة.","Büyük bir şehirde yaşıyorum.");
+add("ar","B1","Şehir","قرية","köy","isim","جدي يعيش في قرية صغيرة.","Dedem küçük bir köyde yaşıyor.");
+add("ar","B1","Şehir","منطقة","bölge / semt","isim","هذه منطقة هادئة.","Burası sakin bir bölge.");
+add("ar","B1","Şehir","حي","mahalle","isim","أعيش في حي هادئ.","Sakin bir mahallede yaşıyorum.");
+add("ar","B1","Şehir","وسط المدينة","şehir merkezi","isim","المطعم في وسط المدينة.","Restoran şehir merkezinde.");
+add("ar","B1","Şehir","ضاحية","banliyö","isim","تعيش عائلتي في الضاحية.","Ailem banliyöde yaşıyor.");
+add("ar","B1","Şehir","شارع","sokak / cadde","isim","هذا الشارع مزدحم دائما.","Bu cadde her zaman kalabalık.");
+add("ar","B1","Şehir","ساحة","meydan","isim","سنلتقي في الساحة الرئيسية.","Ana meydanda buluşacağız.");
+add("ar","B1","Şehir","مبنى","bina","isim","هذا المبنى قديم جدا.","Bu bina çok eski.");
+add("ar","B1","Şehir","برج","kule","isim","يقع البرج في وسط المدينة.","Kule şehir merkezinde bulunuyor.");
+add("ar","B1","Şehir","جسر","köprü","isim","عبرنا الجسر سيرا على الأقدام.","Köprüyü yürüyerek geçtik.");
+add("ar","B1","Şehir","نفق","tünel","isim","مررنا عبر النفق.","Tünelden geçtik.");
+add("ar","B1","Şehir","حديقة","park","isim","أذهب إلى الحديقة كل صباح.","Her sabah parka gidiyorum.");
+add("ar","B1","Şehir","موقف","durak / park yeri","isim","أين موقف الحافلات؟","Otobüs durağı nerede?");
+add("ar","B1","Şehir","مركز تسوق","alışveriş merkezi","isim","ذهبت إلى مركز التسوق.","Alışveriş merkezine gittim.");
+add("ar","B1","Şehir","سوق","pazar","isim","السوق مزدحم اليوم.","Pazar bugün kalabalık.");
+add("ar","B1","Şehir","مركز","merkez","isim","المركز قريب من هنا.","Merkez buraya yakın.");
+add("ar","B1","Şehir","مؤسسة","kurum","isim","هذه مؤسسة حكومية.","Bu bir devlet kurumu.");
+add("ar","B1","Şehir","بلدية","belediye","isim","ذهبت إلى البلدية.","Belediyeye gittim.");
+add("ar","B1","Şehir","مركز الشرطة","polis merkezi","isim","مركز الشرطة قريب.","Polis merkezi yakın.");
+add("ar","B1","Şehir","مركز إطفاء","itfaiye","isim","مركز الإطفاء بعيد قليلا.","İtfaiye biraz uzakta.");
+add("ar","B1","Şehir","مستشفى عام","devlet hastanesi","isim","ذهبت إلى المستشفى العام.","Devlet hastanesine gittim.");
+add("ar","B1","Şehir","جامعة","üniversite","isim","الجامعة تقع خارج المدينة.","Üniversite şehrin dışında bulunuyor.");
+add("ar","B1","Şehir","ملعب","stadyum","isim","ذهبنا إلى الملعب لمشاهدة المباراة.","Maçı izlemek için stadyuma gittik.");
+add("ar","B1","Şehir","مسرح","tiyatro","isim","سنذهب إلى المسرح الليلة.","Bu gece tiyatroya gideceğiz.");
+// ======================= B1 — ULAŞIM =======================
+add("ar","B1","Ulaşım","مواصلات","ulaşım","isim","المواصلات العامة جيدة هنا.","Burada toplu taşıma iyi.");
+add("ar","B1","Ulaşım","نقل عام","toplu taşıma","isim","أستخدم النقل العام كل يوم.","Her gün toplu taşıma kullanıyorum.");
+add("ar","B1","Ulaşım","حافلة","otobüs","isim","أنتظر الحافلة.","Otobüsü bekliyorum.");
+add("ar","B1","Ulaşım","قطار","tren","isim","سأسافر بالقطار.","Trenle seyahat edeceğim.");
+add("ar","B1","Ulaşım","مترو","metro","isim","أذهب إلى العمل بالمترو.","İşe metroyla gidiyorum.");
+add("ar","B1","Ulaşım","ترام","tramvay","isim","نأخذ الترام إلى وسط المدينة.","Şehir merkezine tramvayla gidiyoruz.");
+add("ar","B1","Ulaşım","سيارة أجرة","taksi","isim","أخذت سيارة أجرة إلى الفندق.","Otele taksiyle gittim.");
+add("ar","B1","Ulaşım","سيارة","araba","isim","أذهب إلى العمل بالسيارة.","İşe arabayla gidiyorum.");
+add("ar","B1","Ulaşım","دراجة","bisiklet","isim","أذهب إلى الجامعة بالدراجة.","Üniversiteye bisikletle gidiyorum.");
+add("ar","B1","Ulaşım","دراجة نارية","motosiklet","isim","يملك دراجة نارية جديدة.","Yeni bir motosikleti var.");
+add("ar","B1","Ulaşım","طريق","yol","isim","هذا الطريق طويل.","Bu yol uzun.");
+add("ar","B1","Ulaşım","طريق سريع","otoyol","isim","استخدمنا الطريق السريع.","Otoyolu kullandık.");
+add("ar","B1","Ulaşım","ازدحام مروري","trafik sıkışıklığı","isim","هناك ازدحام مروري شديد.","Şiddetli trafik sıkışıklığı var.");
+add("ar","B1","Ulaşım","إشارة مرور","trafik ışığı","isim","توقف عند إشارة المرور.","Trafik ışığında dur.");
+add("ar","B1","Ulaşım","مفترق طرق","kavşak","isim","انعطف عند مفترق الطرق.","Kavşaktan dön.");
+add("ar","B1","Ulaşım","اتجاه","yön","isim","هل هذا هو الاتجاه الصحيح؟","Doğru yön bu mu?");
+add("ar","B1","Ulaşım","مسافة","mesafe","isim","المسافة بين المدينتين كبيرة.","İki şehir arasındaki mesafe büyük.");
+add("ar","B1","Ulaşım","سرعة","hız","isim","السرعة هنا محدودة.","Burada hız sınırlı.");
+add("ar","B1","Ulaşım","حادث","kaza","isim","وقع حادث على الطريق.","Yolda bir kaza oldu.");
+add("ar","B1","Ulaşım","سائق","sürücü","isim","السائق يقود بسرعة.","Sürücü hızlı sürüyor.");
+add("ar","B1","Ulaşım","راكب","yolcu","isim","كان القطار مليئا بالركاب.","Tren yolcularla doluydu.");
+add("ar","B1","Ulaşım","محطة","istasyon","isim","نلتقي أمام المحطة.","İstasyonun önünde buluşuyoruz.");
+add("ar","B1","Ulaşım","رصيف","kaldırım","isim","امش على الرصيف.","Kaldırımda yürü.");
+add("ar","B1","Ulaşım","ممر","geçit","isim","استخدم ممر المشاة.","Yaya geçidini kullan.");
+add("ar","B1","Ulaşım","إشارة","işaret / sinyal","isim","اتبع الإشارات.","İşaretleri takip et.");
+// ======================= B1 — ALIŞVERİŞ =======================
+add("ar","B1","Alışveriş","تسوق","alışveriş","isim","أحب التسوق في عطلة نهاية الأسبوع.","Hafta sonu alışveriş yapmayı seviyorum.");
+add("ar","B1","Alışveriş","متجر","mağaza","isim","هذا المتجر قريب من منزلي.","Bu mağaza evime yakın.");
+add("ar","B1","Alışveriş","محل","dükkan","isim","هناك محل جديد في الشارع.","Caddede yeni bir dükkân var.");
+add("ar","B1","Alışveriş","سوبر ماركت","süpermarket","isim","ذهبت إلى السوبر ماركت.","Süpermarkete gittim.");
+add("ar","B1","Alışveriş","منتج","ürün","isim","هذا المنتج عالي الجودة.","Bu ürün yüksek kaliteli.");
+add("ar","B1","Alışveriş","بضاعة","mal / ürün","isim","وصلت بضاعة جديدة.","Yeni ürünler geldi.");
+add("ar","B1","Alışveriş","جودة","kalite","isim","جودة هذا المنتج ممتازة.","Bu ürünün kalitesi mükemmel.");
+add("ar","B1","Alışveriş","خصم","indirim","isim","هناك خصم كبير اليوم.","Bugün büyük bir indirim var.");
+add("ar","B1","Alışveriş","عرض","kampanya / teklif","isim","هذا المنتج عليه عرض خاص.","Bu ürün özel kampanyada.");
+add("ar","B1","Alışveriş","فاتورة","fatura","isim","أين الفاتورة؟","Fatura nerede?");
+add("ar","B1","Alışveriş","إيصال","fiş","isim","احتفظ بالإيصال.","Fişi sakla.");
+add("ar","B1","Alışveriş","دفع","ödeme","isim","الدفع نقدا فقط.","Ödeme sadece nakit.");
+add("ar","B1","Alışveriş","نقدا","nakit olarak","zarf","هل يمكنني الدفع نقدا؟","Nakit ödeyebilir miyim?");
+add("ar","B1","Alışveriş","بطاقة ائتمان","kredi kartı","isim","أدفع ببطاقة الائتمان.","Kredi kartıyla ödüyorum.");
+add("ar","B1","Alışveriş","بطاقة مصرفية","banka kartı","isim","هل تقبلون بطاقة مصرفية؟","Banka kartı kabul ediyor musunuz?");
+add("ar","B1","Alışveriş","سعر","fiyat","isim","ما سعر هذا المنتج؟","Bu ürünün fiyatı nedir?");
+add("ar","B1","Alışveriş","غالي","pahalı","sıfat","هذا الهاتف غالي جدا.","Bu telefon çok pahalı.");
+add("ar","B1","Alışveriş","رخيص","ucuz","sıfat","وجدت حذاء رخيصا.","Ucuz bir ayakkabı buldum.");
+add("ar","B1","Alışveriş","مقاس","beden / ölçü","isim","هل لديك هذا القميص بمقاس أكبر؟","Bu gömleğin daha büyük bedeni var mı?");
+add("ar","B1","Alışveriş","لون","renk","isim","هل يوجد هذا اللون؟","Bu renk var mı?");
+add("ar","B1","Alışveriş","تجربة","denemek / deneyim","isim","أريد تجربة هذا القميص.","Bu gömleği denemek istiyorum.");
+add("ar","B1","Alışveriş","تبديل","değişim","isim","أريد تبديل المنتج.","Ürünü değiştirmek istiyorum.");
+add("ar","B1","Alışveriş","استرجاع","iade","isim","أريد استرجاع المنتج.","Ürünü iade etmek istiyorum.");
+add("ar","B1","Alışveriş","ضمان","garanti","isim","هل يوجد ضمان؟","Garantisi var mı?");
+add("ar","B1","Alışveriş","متوفر","mevcut","sıfat","هل هذا المنتج متوفر؟","Bu ürün mevcut mu?");
+// ======================= B1 — RESTORAN VE YEMEK =======================
+add("ar","B1","Restoran","مطعم","restoran","isim","هذا المطعم مشهور جدا.","Bu restoran çok ünlü.");
+add("ar","B1","Restoran","قائمة الطعام","menü","isim","هل يمكنني رؤية قائمة الطعام؟","Menüyü görebilir miyim?");
+add("ar","B1","Restoran","طبق","yemek / tabak","isim","هذا الطبق لذيذ جدا.","Bu yemek çok lezzetli.");
+add("ar","B1","Restoran","وجبة","öğün","isim","تناولت وجبة خفيفة.","Hafif bir öğün yedim.");
+add("ar","B1","Restoran","مقبلات","meze / başlangıç","isim","طلبنا بعض المقبلات.","Birkaç meze sipariş ettik.");
+add("ar","B1","Restoran","طبق رئيسي","ana yemek","isim","أريد طبقا رئيسيا.","Ana yemek istiyorum.");
+add("ar","B1","Restoran","حلوى","tatlı","isim","هل تريد حلوى؟","Tatlı ister misin?");
+add("ar","B1","Restoran","مشروب","içecek","isim","أريد مشروبا باردا.","Soğuk bir içecek istiyorum.");
+add("ar","B1","Restoran","ماء","su","isim","هل يمكنني الحصول على ماء؟","Su alabilir miyim?");
+add("ar","B1","Restoran","فاتورة","hesap","isim","من فضلك، الفاتورة.","Hesabı alabilir miyim lütfen?");
+add("ar","B1","Restoran","نادل","garson","isim","ناديت النادل.","Garsona seslendim.");
+add("ar","B1","Restoran","حجز","rezervasyon","isim","لدي حجز لشخصين.","İki kişilik rezervasyonum var.");
+add("ar","B1","Restoran","طاولة","masa","isim","نريد طاولة لشخصين.","İki kişilik bir masa istiyoruz.");
+add("ar","B1","Restoran","مطبخ","mutfak","isim","المطبخ العربي مشهور.","Arap mutfağı ünlüdür.");
+add("ar","B1","Restoran","مكونات","malzemeler","isim","ما هي مكونات هذا الطبق؟","Bu yemeğin malzemeleri nelerdir?");
+add("ar","B1","Restoran","طازج","taze","sıfat","الخضروات طازجة.","Sebzeler taze.");
+add("ar","B1","Restoran","حار","acı / sıcak","sıfat","هذا الطعام حار جدا.","Bu yemek çok acı.");
+add("ar","B1","Restoran","مالح","tuzlu","sıfat","الحساء مالح جدا.","Çorba çok tuzlu.");
+add("ar","B1","Restoran","حلو","tatlı","sıfat","هذا الشاي حلو.","Bu çay tatlı.");
+add("ar","B1","Restoran","مر","acı","sıfat","القهوة مرة.","Kahve acı.");
+add("ar","B1","Restoran","لذيذ","lezzetli","sıfat","الطعام لذيذ.","Yemek lezzetli.");
+add("ar","B1","Restoran","صحي","sağlıklı","sıfat","هذا الطعام صحي.","Bu yemek sağlıklı.");
+add("ar","B1","Restoran","نباتي","vejetaryen","sıfat","هل لديكم طعام نباتي؟","Vejetaryen yemeğiniz var mı?");
+add("ar","B1","Restoran","جائع","aç","sıfat","أنا جائع جدا.","Çok açım.");
+add("ar","B1","Restoran","شبعان","tok","sıfat","أنا شبعان الآن.","Şimdi tokum.");
+// ======================= B1 — KONUT =======================
+add("ar","B1","Konut","منزل","ev","isim","أعيش في منزل صغير.","Küçük bir evde yaşıyorum.");
+add("ar","B1","Konut","شقة","daire","isim","استأجرت شقة جديدة.","Yeni bir daire kiraladım.");
+add("ar","B1","Konut","غرفة","oda","isim","غرفتي واسعة.","Odam geniş.");
+add("ar","B1","Konut","غرفة نوم","yatak odası","isim","غرفة النوم في الطابق الثاني.","Yatak odası ikinci katta.");
+add("ar","B1","Konut","غرفة معيشة","oturma odası","isim","نجلس في غرفة المعيشة.","Oturma odasında oturuyoruz.");
+add("ar","B1","Konut","مطبخ","mutfak","isim","المطبخ صغير.","Mutfak küçük.");
+add("ar","B1","Konut","حمام","banyo","isim","الحمام نظيف.","Banyo temiz.");
+add("ar","B1","Konut","شرفة","balkon","isim","لدينا شرفة كبيرة.","Büyük bir balkonumuz var.");
+add("ar","B1","Konut","حديقة","bahçe","isim","البيت لديه حديقة جميلة.","Evin güzel bir bahçesi var.");
+add("ar","B1","Konut","طابق","kat","isim","أعيش في الطابق الثالث.","Üçüncü katta yaşıyorum.");
+add("ar","B1","Konut","مصعد","asansör","isim","المصعد لا يعمل.","Asansör çalışmıyor.");
+add("ar","B1","Konut","درج","merdiven","isim","اصعد الدرج.","Merdivenlerden çık.");
+add("ar","B1","Konut","باب","kapı","isim","أغلق الباب.","Kapıyı kapat.");
+add("ar","B1","Konut","نافذة","pencere","isim","افتح النافذة.","Pencereyi aç.");
+add("ar","B1","Konut","مفتاح","anahtar","isim","أين مفتاح المنزل؟","Ev anahtarı nerede?");
+add("ar","B1","Konut","إيجار","kira","isim","الإيجار مرتفع هنا.","Burada kira yüksek.");
+add("ar","B1","Konut","مالك","ev sahibi","isim","تحدثت مع مالك المنزل.","Ev sahibiyle konuştum.");
+add("ar","B1","Konut","مستأجر","kiracı","isim","المستأجر يدفع الإيجار كل شهر.","Kiracı her ay kira ödüyor.");
+add("ar","B1","Konut","عقد","sözleşme","isim","وقعت عقد الإيجار.","Kira sözleşmesini imzaladım.");
+add("ar","B1","Konut","نقل","taşınma","isim","سأنتقل إلى منزل جديد.","Yeni bir eve taşınacağım.");
+add("ar","B1","Konut","أثاث","mobilya","isim","اشتريت أثاثا جديدا.","Yeni mobilyalar aldım.");
+add("ar","B1","Konut","غسالة","çamaşır makinesi","isim","الغسالة لا تعمل.","Çamaşır makinesi çalışmıyor.");
+add("ar","B1","Konut","ثلاجة","buzdolabı","isim","الثلاجة ممتلئة.","Buzdolabı dolu.");
+add("ar","B1","Konut","تدفئة","ısıtma","isim","التدفئة لا تعمل.","Isıtma çalışmıyor.");
+// ======================= B1 — HUKUK VE RESMİ İŞLER =======================
+add("ar","B1","Hukuk","قانون","kanun","isim","يجب احترام القانون.","Kanuna saygı gösterilmelidir.");
+add("ar","B1","Hukuk","محكمة","mahkeme","isim","ذهبت القضية إلى المحكمة.","Dava mahkemeye gitti.");
+add("ar","B1","Hukuk","قضية","dava","isim","هذه قضية معقدة.","Bu karmaşık bir dava.");
+add("ar","B1","Hukuk","محام","avukat","isim","تحدثت مع المحامي.","Avukatla konuştum.");
+add("ar","B1","Hukuk","شرطة","polis","isim","اتصلت بالشرطة.","Polisi aradım.");
+add("ar","B1","Hukuk","جريمة","suç","isim","هذه جريمة خطيرة.","Bu ciddi bir suç.");
+add("ar","B1","Hukuk","مجرم","suçlu","isim","ألقت الشرطة القبض على المجرم.","Polis suçluyu yakaladı.");
+add("ar","B1","Hukuk","ضحية","mağdur","isim","تحدثت الضحية مع الشرطة.","Mağdur polisle konuştu.");
+add("ar","B1","Hukuk","شاهد","tanık","isim","كان هناك شاهد على الحادث.","Olayın bir tanığı vardı.");
+add("ar","B1","Hukuk","دليل","kanıt","isim","لا يوجد دليل كاف.","Yeterli kanıt yok.");
+add("ar","B1","Hukuk","حق","hak","isim","لكل شخص حق في التعليم.","Herkesin eğitim hakkı vardır.");
+add("ar","B1","Hukuk","حرية","özgürlük","isim","الحرية حق أساسي.","Özgürlük temel bir haktır.");
+add("ar","B1","Hukuk","مسؤولية","sorumluluk","isim","هذه مسؤوليتك.","Bu senin sorumluluğun.");
+add("ar","B1","Hukuk","واجب","görev / yükümlülük","isim","من واجبنا مساعدة الآخرين.","Başkalarına yardım etmek görevimizdir.");
+add("ar","B1","Hukuk","وثيقة","belge","isim","أحتاج إلى وثيقة رسمية.","Resmi bir belgeye ihtiyacım var.");
+add("ar","B1","Hukuk","طلب","başvuru / talep","isim","قدمت طلبا رسميا.","Resmi bir başvuru yaptım.");
+add("ar","B1","Hukuk","تصريح","izin / ruhsat","isim","أحتاج إلى تصريح للعمل.","Çalışmak için izne ihtiyacım var.");
+add("ar","B1","Hukuk","جواز سفر","pasaport","isim","جواز سفري منتهي.","Pasaportumun süresi dolmuş.");
+add("ar","B1","Hukuk","إقامة","oturma izni","isim","أحتاج إلى تجديد الإقامة.","Oturma iznimi yenilemem gerekiyor.");
+add("ar","B1","Hukuk","جنسية","vatandaşlık","isim","حصل على الجنسية الجديدة.","Yeni vatandaşlık aldı.");
+add("ar","B1","Hukuk","هوية","kimlik","isim","أرني بطاقة الهوية.","Kimlik kartını göster.");
+add("ar","B1","Hukuk","توقيع","imza","isim","أحتاج إلى توقيعك.","İmzana ihtiyacım var.");
+add("ar","B1","Hukuk","نسخة","kopya / nüsha","isim","أحتاج إلى نسخة من الوثيقة.","Belgenin bir kopyasına ihtiyacım var.");
+add("ar","B1","Hukuk","أصل","asıl / orijinal","isim","أحضر الوثيقة الأصلية.","Orijinal belgeyi getir.");
+add("ar","B1","Hukuk","موعد","randevu","isim","لدي موعد في البلدية.","Belediyede randevum var.");
+/* ================================================================
+   ARAPÇA B1 — PART 8
+================================================================ */
+// ======================= B1 — SOYUT KAVRAMLAR =======================
+add("ar","B1","Soyut Kavramlar","سبب","sebep","isim","ما سبب المشكلة؟","Sorunun sebebi nedir?");
+add("ar","B1","Soyut Kavramlar","نتيجة","sonuç","isim","كانت النتيجة جيدة.","Sonuç iyiydi.");
+add("ar","B1","Soyut Kavramlar","هدف","hedef","isim","هدفي هو تعلم اللغة.","Hedefim dili öğrenmek.");
+add("ar","B1","Soyut Kavramlar","خطة","plan","isim","لدينا خطة جديدة.","Yeni bir planımız var.");
+add("ar","B1","Soyut Kavramlar","فكرة","fikir","isim","لدي فكرة جيدة.","İyi bir fikrim var.");
+add("ar","B1","Soyut Kavramlar","قرار","karar","isim","اتخذت قرارا مهما.","Önemli bir karar verdim.");
+add("ar","B1","Soyut Kavramlar","اختيار","seçim","isim","هذا اختيار صعب.","Bu zor bir seçim.");
+add("ar","B1","Soyut Kavramlar","فرصة","fırsat","isim","هذه فرصة جيدة.","Bu iyi bir fırsat.");
+add("ar","B1","Soyut Kavramlar","احتمال","olasılık","isim","هناك احتمال كبير للمطر.","Yağmur ihtimali yüksek.");
+add("ar","B1","Soyut Kavramlar","مشكلة","sorun","isim","لدينا مشكلة كبيرة.","Büyük bir sorunumuz var.");
+add("ar","B1","Soyut Kavramlar","حل","çözüm","isim","وجدنا حلا للمشكلة.","Soruna bir çözüm bulduk.");
+add("ar","B1","Soyut Kavramlar","صعوبة","zorluk","isim","واجهنا بعض الصعوبات.","Bazı zorluklarla karşılaştık.");
+add("ar","B1","Soyut Kavramlar","سهولة","kolaylık","isim","استخدام التطبيق سهل.","Uygulamayı kullanmak kolay.");
+add("ar","B1","Soyut Kavramlar","نجاح","başarı","isim","أتمنى لك النجاح.","Sana başarılar diliyorum.");
+add("ar","B1","Soyut Kavramlar","فشل","başarısızlık","isim","الفشل جزء من التعلم.","Başarısızlık öğrenmenin bir parçasıdır.");
+add("ar","B1","Soyut Kavramlar","تجربة","deneyim","isim","كانت تجربة مفيدة.","Faydalı bir deneyimdi.");
+add("ar","B1","Soyut Kavramlar","خبرة","tecrübe","isim","لديه خبرة طويلة.","Uzun bir tecrübesi var.");
+add("ar","B1","Soyut Kavramlar","مستقبل","gelecek","isim","أفكر في مستقبلي كثيرا.","Geleceğimi çok düşünüyorum.");
+add("ar","B1","Soyut Kavramlar","ماضي","geçmiş","isim","لا أريد التفكير في الماضي.","Geçmişi düşünmek istemiyorum.");
+add("ar","B1","Soyut Kavramlar","حاضر","şimdi / şimdiki zaman","isim","يجب أن نعيش في الحاضر.","Şimdiki zamanda yaşamalıyız.");
+add("ar","B1","Soyut Kavramlar","واقع","gerçeklik","isim","يجب أن نواجه الواقع.","Gerçekle yüzleşmeliyiz.");
+add("ar","B1","Soyut Kavramlar","حقيقة","gerçek","isim","أريد معرفة الحقيقة.","Gerçeği bilmek istiyorum.");
+add("ar","B1","Soyut Kavramlar","رأي","görüş","isim","هذا رأيي الشخصي.","Bu benim kişisel görüşüm.");
+add("ar","B1","Soyut Kavramlar","وجهة نظر","bakış açısı","isim","أحترم وجهة نظرك.","Bakış açına saygı duyuyorum.");
+add("ar","B1","Soyut Kavramlar","موقف","durum / tutum","isim","هذا موقف صعب.","Bu zor bir durum.");
+add("ar","B1","Soyut Kavramlar","حالة","durum / hâl","isim","حالة المريض مستقرة.","Hastanın durumu stabil.");
+add("ar","B1","Soyut Kavramlar","ظرف","koşul / durum","isim","الظروف تغيرت.","Koşullar değişti.");
+add("ar","B1","Soyut Kavramlar","طريقة","yöntem / şekil","isim","هذه طريقة جيدة للتعلم.","Bu iyi bir öğrenme yöntemi.");
+add("ar","B1","Soyut Kavramlar","وسيلة","araç / yöntem","isim","الإنترنت وسيلة مهمة للتعلم.","İnternet öğrenmek için önemli bir araçtır.");
+add("ar","B1","Soyut Kavramlar","مستوى","seviye","isim","مستواي في اللغة تحسن.","Dil seviyem gelişti.");
+// ======================= B1 — SIK KULLANILAN SIFATLAR =======================
+add("ar","B1","Sıfatlar","مهم","önemli","sıfat","هذا موضوع مهم.","Bu önemli bir konu.");
+add("ar","B1","Sıfatlar","ضروري","gerekli","sıfat","الماء ضروري للحياة.","Su yaşam için gereklidir.");
+add("ar","B1","Sıfatlar","مفيد","faydalı","sıfat","هذا الكتاب مفيد جدا.","Bu kitap çok faydalı.");
+add("ar","B1","Sıfatlar","ضار","zararlı","sıfat","التدخين ضار بالصحة.","Sigara içmek sağlığa zararlıdır.");
+add("ar","B1","Sıfatlar","مناسب","uygun","sıfat","هذا الوقت مناسب لي.","Bu zaman benim için uygun.");
+add("ar","B1","Sıfatlar","غير مناسب","uygun olmayan","sıfat","هذا المكان غير مناسب للأطفال.","Bu yer çocuklar için uygun değil.");
+add("ar","B1","Sıfatlar","مختلف","farklı","sıfat","لدينا آراء مختلفة.","Farklı görüşlerimiz var.");
+add("ar","B1","Sıfatlar","متشابه","benzer","sıfat","اللغتان متشابهتان.","İki dil birbirine benziyor.");
+add("ar","B1","Sıfatlar","مشهور","ünlü","sıfat","هذا المطعم مشهور.","Bu restoran ünlü.");
+add("ar","B1","Sıfatlar","عالمي","küresel","sıfat","هذه مشكلة عالمية.","Bu küresel bir sorun.");
+add("ar","B1","Sıfatlar","محلي","yerel","sıfat","أحب المنتجات المحلية.","Yerel ürünleri seviyorum.");
+add("ar","B1","Sıfatlar","رسمي","resmi","sıfat","أحتاج إلى وثيقة رسمية.","Resmi bir belgeye ihtiyacım var.");
+add("ar","B1","Sıfatlar","خاص","özel","sıfat","هذا أمر خاص.","Bu özel bir konu.");
+add("ar","B1","Sıfatlar","عام","genel / kamu","sıfat","هذا مكان عام.","Burası halka açık bir yer.");
+add("ar","B1","Sıfatlar","شخصي","kişisel","sıfat","هذا رأيي الشخصي.","Bu benim kişisel görüşüm.");
+add("ar","B1","Sıfatlar","اجتماعي","sosyal","sıfat","لدينا مشكلة اجتماعية.","Sosyal bir sorunumuz var.");
+add("ar","B1","Sıfatlar","اقتصادي","ekonomik","sıfat","الوضع الاقتصادي صعب.","Ekonomik durum zor.");
+add("ar","B1","Sıfatlar","سياسي","siyasi","sıfat","هذا موضوع سياسي حساس.","Bu hassas bir siyasi konu.");
+add("ar","B1","Sıfatlar","ثقافي","kültürel","sıfat","هذا حدث ثقافي مهم.","Bu önemli bir kültürel etkinlik.");
+add("ar","B1","Sıfatlar","علمي","bilimsel","sıfat","نحتاج إلى دليل علمي.","Bilimsel kanıta ihtiyacımız var.");
+add("ar","B1","Sıfatlar","تقني","teknik","sıfat","لدي مشكلة تقنية.","Teknik bir sorunum var.");
+add("ar","B1","Sıfatlar","رقمي","dijital","sıfat","نعيش في عصر رقمي.","Dijital bir çağda yaşıyoruz.");
+add("ar","B1","Sıfatlar","حديث","modern","sıfat","هذا مبنى حديث.","Bu modern bir bina.");
+add("ar","B1","Sıfatlar","قديم","eski","sıfat","هذا مبنى قديم.","Bu eski bir bina.");
+add("ar","B1","Sıfatlar","بسيط","basit","sıfat","الحل بسيط.","Çözüm basit.");
+add("ar","B1","Sıfatlar","معقد","karmaşık","sıfat","المشكلة معقدة.","Sorun karmaşık.");
+add("ar","B1","Sıfatlar","واضح","açık / net","sıfat","الجواب واضح.","Cevap açık.");
+add("ar","B1","Sıfatlar","غاضب","kızgın","sıfat","كان غاضبا جدا.","Çok kızgındı.");
+add("ar","B1","Sıfatlar","سعيد","mutlu","sıfat","أنا سعيد اليوم.","Bugün mutluyum.");
+// ======================= B1 — BAĞLAÇLAR VE BAĞLAYICILAR =======================
+add("ar","B1","Bağlaçlar","لأن","çünkü","bağlaç","لم أذهب لأنني كنت مريضا.","Gitmedim çünkü hastaydım.");
+add("ar","B1","Bağlaçlar","لذلك","bu yüzden","bağlaç","كنت متعبا، لذلك نمت مبكرا.","Yorgundum, bu yüzden erken uyudum.");
+add("ar","B1","Bağlaçlar","لكن","ama / fakat","bağlaç","أريد الذهاب، لكنني مشغول.","Gitmek istiyorum ama meşgulüm.");
+add("ar","B1","Bağlaçlar","ومع ذلك","bununla birlikte / yine de","bağlaç","كان الجو باردا، ومع ذلك خرجنا.","Hava soğuktu, yine de dışarı çıktık.");
+add("ar","B1","Bağlaçlar","بالرغم من","-e rağmen","edat","خرجنا بالرغم من المطر.","Yağmura rağmen dışarı çıktık.");
+add("ar","B1","Bağlaçlar","على الرغم من","-e rağmen","edat","نجح على الرغم من الصعوبات.","Zorluklara rağmen başarılı oldu.");
+add("ar","B1","Bağlaçlar","إذا","eğer","bağlaç","إذا درست، ستنجح.","Çalışırsan başarılı olursun.");
+add("ar","B1","Bağlaçlar","عندما","-dığında / ne zaman","bağlaç","سأتصل بك عندما أصل.","Vardığımda seni arayacağım.");
+add("ar","B1","Bağlaçlar","قبل أن","-meden önce","bağlaç","اغسل يديك قبل أن تأكل.","Yemeden önce ellerini yıka.");
+add("ar","B1","Bağlaçlar","بعد أن","-dikten sonra","bağlaç","خرجنا بعد أن انتهى الاجتماع.","Toplantı bittikten sonra çıktık.");
+add("ar","B1","Bağlaçlar","بينما","-iken","bağlaç","كنت أقرأ بينما كان أخي يشاهد التلفاز.","Ben kitap okurken kardeşim televizyon izliyordu.");
+add("ar","B1","Bağlaçlar","حتى","-e kadar / hatta","bağlaç","سأنتظرك حتى تصل.","Sen gelene kadar seni bekleyeceğim.");
+add("ar","B1","Bağlaçlar","لكي","-mek için","bağlaç","أدرس لكي أنجح.","Başarılı olmak için çalışıyorum.");
+add("ar","B1","Bağlaçlar","من أجل","için","edat","أعمل من أجل مستقبلي.","Geleceğim için çalışıyorum.");
+add("ar","B1","Bağlaçlar","بالإضافة إلى","ek olarak / yanı sıra","bağlaç","بالإضافة إلى العمل، أدرس.","İşin yanı sıra okuyorum.");
+add("ar","B1","Bağlaçlar","مثلا","örneğin","zarf","يمكنك الذهاب إلى أماكن كثيرة، مثلا المتحف.","Birçok yere gidebilirsin, örneğin müzeye.");
+add("ar","B1","Bağlaçlar","خصوصا","özellikle","zarf","أحب الفواكه، خصوصا التفاح.","Meyveleri, özellikle elmayı seviyorum.");
+add("ar","B1","Bağlaçlar","عادة","genellikle","zarf","عادة أستيقظ مبكرا.","Genellikle erken kalkarım.");
+add("ar","B1","Bağlaçlar","غالبا","çoğunlukla / sık sık","zarf","غالبا أعمل من المنزل.","Çoğunlukla evden çalışırım.");
+add("ar","B1","Bağlaçlar","نادرا","nadiren","zarf","نادرا ما أشاهد التلفاز.","Nadiren televizyon izlerim.");
+// ======================= B1 — DAHA GELİŞMİŞ FİİLLER =======================
+add("ar","B1","Fiiller","يقبل","kabul etmek","fiil","قبلت العرض.","Teklifi kabul ettim.");
+add("ar","B1","Fiiller","يرفض","reddetmek","fiil","رفضت الطلب.","Başvuruyu reddetti.");
+add("ar","B1","Fiiller","يوافق","onaylamak / kabul etmek","fiil","وافق المدير على الخطة.","Yönetici planı onayladı.");
+add("ar","B1","Fiiller","يرفض","reddetmek","fiil","رفضت الشركة الاقتراح.","Şirket öneriyi reddetti.");
+add("ar","B1","Fiiller","يحتاج إلى","ihtiyaç duymak","fiil","يحتاج المشروع إلى المزيد من الوقت.","Projenin daha fazla zamana ihtiyacı var.");
+add("ar","B1","Fiiller","يحصل على","elde etmek","fiil","حصلت على وظيفة جديدة.","Yeni bir iş elde ettim.");
+add("ar","B1","Fiiller","يخسر","kaybetmek","fiil","خسر المباراة.","Maçı kaybetti.");
+add("ar","B1","Fiiller","يربح","kazanmak","fiil","ربح الفريق المباراة.","Takım maçı kazandı.");
+add("ar","B1","Fiiller","يحقق","gerçekleştirmek / elde etmek","fiil","حقق هدفه أخيرا.","Sonunda hedefine ulaştı.");
+add("ar","B1","Fiiller","يطور","geliştirmek","fiil","تطور الشركة منتجا جديدا.","Şirket yeni bir ürün geliştiriyor.");
+add("ar","B1","Fiiller","ينشئ","oluşturmak","fiil","أنشأت حسابا جديدا.","Yeni bir hesap oluşturdum.");
+add("ar","B1","Fiiller","يستخدم","kullanmak","fiil","أستخدم هذا التطبيق يوميا.","Bu uygulamayı her gün kullanıyorum.");
+add("ar","B1","Fiiller","يستفيد من","yararlanmak","fiil","استفدت من هذه الفرصة.","Bu fırsattan yararlandım.");
+add("ar","B1","Fiiller","يتجنب","kaçınmak","fiil","أحاول تجنب المشاكل.","Sorunlardan kaçınmaya çalışıyorum.");
+add("ar","B1","Fiiller","يواجه","karşılaşmak / yüzleşmek","fiil","نواجه مشكلة كبيرة.","Büyük bir sorunla karşı karşıyayız.");
+add("ar","B1","Fiiller","يتعامل مع","başa çıkmak / ilgilenmek","fiil","كيف تتعامل مع الضغط؟","Stresle nasıl başa çıkıyorsun?");
+add("ar","B1","Fiiller","يعتمد على","bağlı olmak","fiil","كل شيء يعتمد على القرار.","Her şey karara bağlı.");
+add("ar","B1","Fiiller","ينتمي إلى","ait olmak","fiil","هذا الكتاب ينتمي إلى صديقي.","Bu kitap arkadaşıma ait.");
+add("ar","B1","Fiiller","يبدو","görünmek","fiil","يبدو الأمر صعبا.","İş zor görünüyor.");
+add("ar","B1","Fiiller","يظهر","ortaya çıkmak / görünmek","fiil","ظهرت مشكلة جديدة.","Yeni bir sorun ortaya çıktı.");
+add("ar","B1","Fiiller","يختفي","kaybolmak","fiil","اختفت المشكلة.","Sorun ortadan kayboldu.");
+add("ar","B1","Fiiller","ينمو","büyümek","fiil","ينمو الاقتصاد بسرعة.","Ekonomi hızla büyüyor.");
+add("ar","B1","Fiiller","ينخفض","azalmak / düşmek","fiil","انخفضت الأسعار.","Fiyatlar düştü.");
+add("ar","B1","Fiiller","يرتفع","yükselmek / artmak","fiil","ارتفعت الأسعار.","Fiyatlar arttı.");
+add("ar","B1","Fiiller","يزداد","artmak","fiil","يزداد عدد السكان.","Nüfus artıyor.");
+add("ar","B1","Fiiller","ينقص","azalmak / eksilmek","fiil","ينقص الوقت بسرعة.","Zaman hızla azalıyor.");
+add("ar","B1","Fiiller","يوفر","sağlamak / tasarruf etmek","fiil","هذا النظام يوفر الوقت.","Bu sistem zaman kazandırıyor.");
+add("ar","B1","Fiiller","يوفر المال","para tasarrufu yapmak","fiil","أريد توفير المال للسفر.","Seyahat için para biriktirmek istiyorum.");
+add("ar","B1","Fiiller","ينفق","harcamak","fiil","أنفق كثيرا من المال.","Çok para harcıyorum.");
+// ======================= B1 — GÜNLÜK EYLEMLER =======================
+add("ar","B1","Günlük Eylemler","يستيقظ","uyanmak","fiil","أستيقظ في السابعة.","Saat yedide uyanırım.");
+add("ar","B1","Günlük Eylemler","ينهض","kalkmak","fiil","أنهض من السرير مبكرا.","Yataktan erken kalkarım.");
+add("ar","B1","Günlük Eylemler","يستحم","duş almak","fiil","أستحم كل صباح.","Her sabah duş alırım.");
+add("ar","B1","Günlük Eylemler","يرتدي","giymek","fiil","ماذا سترتدي اليوم؟","Bugün ne giyeceksin?");
+add("ar","B1","Günlük Eylemler","يخلع","çıkarmak","fiil","خلعت حذائي.","Ayakkabılarımı çıkardım.");
+add("ar","B1","Günlük Eylemler","يطبخ","yemek pişirmek","fiil","أحب الطبخ في المنزل.","Evde yemek pişirmeyi seviyorum.");
+add("ar","B1","Günlük Eylemler","ينظف","temizlemek","fiil","أنظف غرفتي كل أسبوع.","Odamı her hafta temizlerim.");
+add("ar","B1","Günlük Eylemler","يغسل","yıkamak","fiil","أغسل يدي قبل الأكل.","Yemekten önce ellerimi yıkarım.");
+add("ar","B1","Günlük Eylemler","يشتري","satın almak","fiil","اشتريت هاتفا جديدا.","Yeni bir telefon satın aldım.");
+add("ar","B1","Günlük Eylemler","يبيع","satmak","fiil","يبيع منتجات عبر الإنترنت.","İnternetten ürün satıyor.");
+add("ar","B1","Günlük Eylemler","يستأجر","kiralamak","fiil","استأجرت شقة في المدينة.","Şehirde bir daire kiraladım.");
+add("ar","B1","Günlük Eylemler","يستعير","ödünç almak","fiil","استعرت كتابا من المكتبة.","Kütüphaneden bir kitap ödünç aldım.");
+add("ar","B1","Günlük Eylemler","يعيد","geri vermek","fiil","أعدت الكتاب إلى المكتبة.","Kitabı kütüphaneye geri verdim.");
+add("ar","B1","Günlük Eylemler","يرتب","düzenlemek","fiil","أرتب غرفتي.","Odamı düzenliyorum.");
+add("ar","B1","Günlük Eylemler","يصلح","tamir etmek","fiil","أصلحت الحاسوب.","Bilgisayarı tamir ettim.");
+add("ar","B1","Günlük Eylemler","يكسر","kırmak","fiil","كسرت هاتفي بالخطأ.","Telefonumu yanlışlıkla kırdım.");
+add("ar","B1","Günlük Eylemler","يملأ","doldurmak","fiil","املأ هذا النموذج.","Bu formu doldur.");
+add("ar","B1","Günlük Eylemler","يفرغ","boşaltmak","fiil","أفرغت الحقيبة.","Çantayı boşalttım.");
+add("ar","B1","Günlük Eylemler","يضع","koymak","fiil","ضع الكتاب على الطاولة.","Kitabı masanın üzerine koy.");
+add("ar","B1","Günlük Eylemler","يحمل","taşımak","fiil","هل يمكنك حمل هذه الحقيبة؟","Bu çantayı taşıyabilir misin?");
+add("ar","B1","Günlük Eylemler","ينقل","taşımak / nakletmek","fiil","نقلنا الأثاث إلى المنزل الجديد.","Mobilyaları yeni eve taşıdık.");
+add("ar","B1","Günlük Eylemler","يرسل","göndermek","fiil","أرسلت الوثائق بالبريد.","Belgeleri postayla gönderdim.");
+add("ar","B1","Günlük Eylemler","يستلم","teslim almak","fiil","استلمت الطرد اليوم.","Paketi bugün teslim aldım.");
+add("ar","B1","Günlük Eylemler","يحجز","rezervasyon yapmak","fiil","حجزت غرفة في الفندق.","Otelde bir oda rezerve ettim.");
+add("ar","B1","Günlük Eylemler","يلغي","iptal etmek","fiil","ألغيت الرحلة.","Seyahati iptal ettim.");
+/* ================================================================
+   ARAPÇA B1 — PART 9
+================================================================ */
+// ======================= B1 — İŞ HAYATI =======================
+add("ar","B1","İş","وظيفة","iş / meslek","isim","وجدت وظيفة جديدة.","Yeni bir iş buldum.");
+add("ar","B1","İş","عمل","iş / çalışma","isim","أحب عملي كثيرا.","İşimi çok seviyorum.");
+add("ar","B1","İş","شركة","şirket","isim","أعمل في شركة كبيرة.","Büyük bir şirkette çalışıyorum.");
+add("ar","B1","İş","مكتب","ofis","isim","مكتبي في الطابق الثاني.","Ofisim ikinci katta.");
+add("ar","B1","İş","موظف","çalışan","isim","هو موظف في البنك.","O bankada çalışan bir personel.");
+add("ar","B1","İş","مدير","yönetici / müdür","isim","تحدثت مع المدير.","Müdürle konuştum.");
+add("ar","B1","İş","زميل","iş arkadaşı","isim","زميلي يساعدني دائما.","İş arkadaşım bana her zaman yardım eder.");
+add("ar","B1","İş","فريق","ekip","isim","أعمل مع فريق جيد.","İyi bir ekiple çalışıyorum.");
+add("ar","B1","İş","اجتماع","toplantı","isim","لدينا اجتماع غدا.","Yarın toplantımız var.");
+add("ar","B1","İş","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","İş","مهمة","görev","isim","لدي مهمة مهمة اليوم.","Bugün önemli bir görevim var.");
+add("ar","B1","İş","موعد نهائي","son teslim tarihi","isim","يجب أن ننهي العمل قبل الموعد النهائي.","İşi son teslim tarihinden önce bitirmeliyiz.");
+add("ar","B1","İş","راتب","maaş","isim","راتبي جيد.","Maaşım iyi.");
+add("ar","B1","İş","دخل","gelir","isim","يزداد دخلي كل عام.","Gelirim her yıl artıyor.");
+add("ar","B1","İş","خبرة","deneyim / tecrübe","isim","لدي خبرة في هذا المجال.","Bu alanda deneyimim var.");
+add("ar","B1","İş","مهارة","beceri","isim","أحتاج إلى تطوير مهاراتي.","Becerilerimi geliştirmem gerekiyor.");
+add("ar","B1","İş","مهنة","meslek","isim","ما مهنتك؟","Mesleğin nedir?");
+add("ar","B1","İş","تدريب","staj / eğitim","isim","أبحث عن فرصة تدريب.","Staj fırsatı arıyorum.");
+add("ar","B1","İş","مقابلة","mülakat","isim","لدي مقابلة عمل غدا.","Yarın iş mülakatım var.");
+add("ar","B1","İş","سيرة ذاتية","özgeçmiş","isim","أرسلت سيرتي الذاتية إلى الشركة.","Özgeçmişimi şirkete gönderdim.");
+add("ar","B1","İş","طلب وظيفة","iş başvurusu","isim","قدمت طلب وظيفة.","İş başvurusu yaptım.");
+add("ar","B1","İş","دوام","mesai / çalışma süresi","isim","أعمل بدوام كامل.","Tam zamanlı çalışıyorum.");
+add("ar","B1","İş","دوام جزئي","yarı zamanlı çalışma","isim","أعمل بدوام جزئي.","Yarı zamanlı çalışıyorum.");
+add("ar","B1","İş","دوام كامل","tam zamanlı çalışma","isim","أبحث عن عمل بدوام كامل.","Tam zamanlı iş arıyorum.");
+add("ar","B1","İş","إجازة","izin / tatil","isim","سآخذ إجازة الأسبوع القادم.","Gelecek hafta izin alacağım.");
+add("ar","B1","İş","عطلة نهاية الأسبوع","hafta sonu","isim","لا أعمل في عطلة نهاية الأسبوع.","Hafta sonu çalışmıyorum.");
+add("ar","B1","İş","استقالة","istifa","isim","قدم استقالته من الشركة.","Şirketten istifa etti.");
+add("ar","B1","İş","ترقية","terfi","isim","حصل على ترقية في العمل.","İşinde terfi aldı.");
+add("ar","B1","İş","مسؤول","sorumlu","sıfat","هو مسؤول عن المشروع.","Projeden o sorumlu.");
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم للجميع.","Eğitim herkes için önemlidir.");
+add("ar","B1","Eğitim","مدرسة","okul","isim","ذهبت إلى المدرسة مبكرا.","Okula erken gittim.");
+add("ar","B1","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Eğitim","كلية","fakülte","isim","أدرس في كلية الهندسة.","Mühendislik fakültesinde okuyorum.");
+add("ar","B1","Eğitim","تخصص","bölüm / uzmanlık alanı","isim","ما تخصصك؟","Bölümün nedir?");
+add("ar","B1","Eğitim","طالب","öğrenci","isim","أنا طالب جامعي.","Üniversite öğrencisiyim.");
+add("ar","B1","Eğitim","أستاذ","profesör / öğretmen","isim","تحدثت مع الأستاذ.","Profesörle konuştum.");
+add("ar","B1","Eğitim","معلم","öğretmen","isim","المعلم يشرح الدرس.","Öğretmen dersi açıklıyor.");
+add("ar","B1","Eğitim","درس","ders","isim","بدأ الدرس في التاسعة.","Ders saat dokuzda başladı.");
+add("ar","B1","Eğitim","محاضرة","konferans / ders","isim","حضرت محاضرة مهمة.","Önemli bir konferansa katıldım.");
+add("ar","B1","Eğitim","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
+add("ar","B1","Eğitim","اختبار","test","isim","أجبت عن جميع أسئلة الاختبار.","Testin tüm sorularını cevapladım.");
+add("ar","B1","Eğitim","واجب","ödev","isim","أنهيت واجبي.","Ödevimi bitirdim.");
+add("ar","B1","Eğitim","بحث","araştırma","isim","أعمل على بحث جديد.","Yeni bir araştırma üzerinde çalışıyorum.");
+add("ar","B1","Eğitim","مقال","makale","isim","قرأت مقالا علميا.","Bilimsel bir makale okudum.");
+add("ar","B1","Eğitim","كتاب","kitap","isim","هذا كتاب مفيد.","Bu faydalı bir kitap.");
+add("ar","B1","Eğitim","مكتبة","kütüphane","isim","أدرس في المكتبة.","Kütüphanede çalışıyorum.");
+add("ar","B1","Eğitim","معرفة","bilgi","isim","لديه معرفة واسعة.","Geniş bilgisi var.");
+add("ar","B1","Eğitim","معلومة","bilgi / bilgi parçası","isim","هذه معلومة مهمة.","Bu önemli bir bilgi.");
+add("ar","B1","Eğitim","علم","bilim / bilgi","isim","أحب العلم.","Bilimi seviyorum.");
+add("ar","B1","Eğitim","لغة","dil","isim","أتعلم لغة جديدة.","Yeni bir dil öğreniyorum.");
+add("ar","B1","Eğitim","تعلم","öğrenme","isim","التعلم يحتاج إلى وقت.","Öğrenmek zaman gerektirir.");
+add("ar","B1","Eğitim","تدريس","öğretme","isim","التدريس مهنة مهمة.","Öğretmenlik önemli bir meslektir.");
+add("ar","B1","Eğitim","شهادة","sertifika / diploma","isim","حصلت على شهادة جديدة.","Yeni bir sertifika aldım.");
+add("ar","B1","Eğitim","درجة","derece / diploma","isim","حصل على درجة جامعية.","Üniversite diploması aldı.");
+// ======================= B1 — TEKNOLOJİ =======================
+add("ar","B1","Teknoloji","تكنولوجيا","teknoloji","isim","أحب التكنولوجيا الحديثة.","Modern teknolojiyi seviyorum.");
+add("ar","B1","Teknoloji","حاسوب","bilgisayar","isim","أستخدم الحاسوب كل يوم.","Bilgisayarı her gün kullanıyorum.");
+add("ar","B1","Teknoloji","هاتف ذكي","akıllı telefon","isim","اشتريت هاتفا ذكيا جديدا.","Yeni bir akıllı telefon aldım.");
+add("ar","B1","Teknoloji","شاشة","ekran","isim","الشاشة كبيرة.","Ekran büyük.");
+add("ar","B1","Teknoloji","لوحة مفاتيح","klavye","isim","لوحة المفاتيح لا تعمل.","Klavye çalışmıyor.");
+add("ar","B1","Teknoloji","فأرة","fare","isim","أين فأرة الحاسوب؟","Bilgisayar faresi nerede?");
+add("ar","B1","Teknoloji","برنامج","program / yazılım","isim","أستخدم برنامجا جديدا.","Yeni bir program kullanıyorum.");
+add("ar","B1","Teknoloji","تطبيق","uygulama","isim","هذا التطبيق مفيد جدا.","Bu uygulama çok faydalı.");
+add("ar","B1","Teknoloji","موقع إلكتروني","web sitesi","isim","زرت الموقع الإلكتروني.","Web sitesini ziyaret ettim.");
+add("ar","B1","Teknoloji","إنترنت","internet","isim","لا يوجد إنترنت هنا.","Burada internet yok.");
+add("ar","B1","Teknoloji","شبكة","ağ","isim","الشبكة بطيئة اليوم.","Ağ bugün yavaş.");
+add("ar","B1","Teknoloji","كلمة مرور","şifre","isim","نسيت كلمة المرور.","Şifreyi unuttum.");
+add("ar","B1","Teknoloji","حساب","hesap","isim","أنشأت حسابا جديدا.","Yeni bir hesap oluşturdum.");
+add("ar","B1","Teknoloji","ملف","dosya","isim","أرسلت الملف بالبريد الإلكتروني.","Dosyayı e-postayla gönderdim.");
+add("ar","B1","Teknoloji","مجلد","klasör","isim","احفظ الملف في هذا المجلد.","Dosyayı bu klasöre kaydet.");
+add("ar","B1","Teknoloji","رابط","bağlantı / link","isim","أرسل لي الرابط.","Bana bağlantıyı gönder.");
+add("ar","B1","Teknoloji","تنزيل","indirme","isim","بدأ تنزيل الملف.","Dosya indirilmeye başladı.");
+add("ar","B1","Teknoloji","تحميل","yükleme","isim","تم تحميل الصورة.","Fotoğraf yüklendi.");
+add("ar","B1","Teknoloji","تحديث","güncelleme","isim","هناك تحديث جديد.","Yeni bir güncelleme var.");
+add("ar","B1","Teknoloji","نسخة احتياطية","yedek","isim","أنشأت نسخة احتياطية للملفات.","Dosyaların yedeğini oluşturdum.");
+add("ar","B1","Teknoloji","بيانات","veri","isim","نحتاج إلى المزيد من البيانات.","Daha fazla veriye ihtiyacımız var.");
+add("ar","B1","Teknoloji","معلومات","bilgi","isim","وجدت معلومات مفيدة.","Faydalı bilgiler buldum.");
+add("ar","B1","Teknoloji","أمان","güvenlik","isim","أمان الحساب مهم.","Hesap güvenliği önemlidir.");
+add("ar","B1","Teknoloji","خصوصية","gizlilik","isim","أحترم خصوصية المستخدمين.","Kullanıcıların gizliliğine saygı duyuyorum.");
+add("ar","B1","Teknoloji","ذكاء اصطناعي","yapay zekâ","isim","الذكاء الاصطناعي يتطور بسرعة.","Yapay zekâ hızla gelişiyor.");
+// ======================= B1 — İLETİŞİM =======================
+add("ar","B1","İletişim","اتصال","iletişim / arama","isim","أحتاج إلى اتصال جيد.","İyi bir iletişime ihtiyacım var.");
+add("ar","B1","İletişim","رسالة","mesaj","isim","أرسلت لك رسالة.","Sana bir mesaj gönderdim.");
+add("ar","B1","İletişim","بريد إلكتروني","e-posta","isim","أرسلت بريدا إلكترونيا.","Bir e-posta gönderdim.");
+add("ar","B1","İletişim","مكالمة","arama / telefon görüşmesi","isim","تلقيت مكالمة مهمة.","Önemli bir telefon aldım.");
+add("ar","B1","İletişim","محادثة","sohbet / konuşma","isim","كانت لدينا محادثة طويلة.","Uzun bir konuşmamız oldu.");
+add("ar","B1","İletişim","نقاش","tartışma","isim","بدأنا نقاشا حول الموضوع.","Konu hakkında bir tartışma başlattık.");
+add("ar","B1","İletişim","مناقشة","tartışma / görüşme","isim","ناقشنا المشكلة في الاجتماع.","Toplantıda sorunu tartıştık.");
+add("ar","B1","İletişim","اقتراح","öneri","isim","لدي اقتراح جيد.","İyi bir önerim var.");
+add("ar","B1","İletişim","نصيحة","tavsiye","isim","أعطاني نصيحة مفيدة.","Bana faydalı bir tavsiye verdi.");
+add("ar","B1","İletişim","سؤال","soru","isim","لدي سؤال.","Bir sorum var.");
+add("ar","B1","İletişim","جواب","cevap","isim","لم أعرف الجواب.","Cevabı bilmiyordum.");
+add("ar","B1","İletişim","شرح","açıklama","isim","أحتاج إلى شرح أكثر.","Daha fazla açıklamaya ihtiyacım var.");
+add("ar","B1","İletişim","توضيح","açıklama / netleştirme","isim","أريد توضيحا من فضلك.","Lütfen bir açıklama istiyorum.");
+add("ar","B1","İletişim","موافقة","onay","isim","أحتاج إلى موافقة المدير.","Yöneticinin onayına ihtiyacım var.");
+add("ar","B1","İletişim","رفض","ret","isim","تلقيت رسالة رفض.","Bir ret mesajı aldım.");
+add("ar","B1","İletişim","دعوة","davet","isim","شكرا على الدعوة.","Davet için teşekkürler.");
+add("ar","B1","İletişim","موعد","randevu / buluşma","isim","لدينا موعد غدا.","Yarın bir randevumuz var.");
+add("ar","B1","İletişim","خبر","haber","isim","سمعت خبرا جيدا.","İyi bir haber duydum.");
+add("ar","B1","İletişim","إعلان","duyuru / ilan","isim","قرأت الإعلان على الإنترنت.","Duyuruyu internette okudum.");
+add("ar","B1","İletişim","معلومة","bilgi","isim","أرسل لي المعلومة.","Bilgiyi bana gönder.");
+// ======================= B1 — MEDYA =======================
+add("ar","B1","Medya","إعلام","medya","isim","للإعلام تأثير كبير.","Medyanın büyük bir etkisi var.");
+add("ar","B1","Medya","صحيفة","gazete","isim","قرأت الخبر في الصحيفة.","Haberi gazetede okudum.");
+add("ar","B1","Medya","مجلة","dergi","isim","اشتريت مجلة جديدة.","Yeni bir dergi aldım.");
+add("ar","B1","Medya","خبر","haber","isim","هذا خبر مهم.","Bu önemli bir haber.");
+add("ar","B1","Medya","صحفي","gazeteci","isim","تحدث الصحفي مع الوزير.","Gazeteci bakanla konuştu.");
+add("ar","B1","Medya","مقابلة","röportaj","isim","شاهدت مقابلة تلفزيونية.","Bir televizyon röportajı izledim.");
+add("ar","B1","Medya","برنامج تلفزيوني","televizyon programı","isim","أشاهد برنامجا تلفزيونيا.","Bir televizyon programı izliyorum.");
+add("ar","B1","Medya","فيلم","film","isim","شاهدت فيلما جديدا.","Yeni bir film izledim.");
+add("ar","B1","Medya","مسلسل","dizi","isim","أتابع مسلسلا جديدا.","Yeni bir dizi takip ediyorum.");
+add("ar","B1","Medya","موسيقى","müzik","isim","أستمع إلى الموسيقى كل يوم.","Her gün müzik dinliyorum.");
+add("ar","B1","Medya","أغنية","şarkı","isim","هذه أغنيتي المفضلة.","Bu benim en sevdiğim şarkı.");
+add("ar","B1","Medya","صورة","fotoğraf","isim","التقطت صورة جميلة.","Güzel bir fotoğraf çektim.");
+add("ar","B1","Medya","فيديو","video","isim","شاهدت الفيديو مرتين.","Videoyu iki kez izledim.");
+add("ar","B1","Medya","محتوى","içerik","isim","هذا المحتوى مفيد.","Bu içerik faydalı.");
+add("ar","B1","Medya","مشاهد","izleyici","isim","كان هناك الكثير من المشاهدين.","Çok sayıda izleyici vardı.");
+add("ar","B1","Medya","متابع","takipçi","isim","لديه آلاف المتابعين.","Binlerce takipçisi var.");
+// ======================= B1 — SEYAHAT =======================
+add("ar","B1","Seyahat","سفر","seyahat","isim","أحب السفر كثيرا.","Seyahat etmeyi çok seviyorum.");
+add("ar","B1","Seyahat","رحلة","gezi / yolculuk","isim","كانت الرحلة ممتعة.","Gezi eğlenceliydi.");
+add("ar","B1","Seyahat","سياحة","turizm","isim","السياحة مهمة للاقتصاد.","Turizm ekonomi için önemlidir.");
+add("ar","B1","Seyahat","سائح","turist","isim","المدينة مليئة بالسياح.","Şehir turistlerle dolu.");
+add("ar","B1","Seyahat","فندق","otel","isim","حجزت فندقا في المدينة.","Şehirde bir otel rezerve ettim.");
+add("ar","B1","Seyahat","غرفة مزدوجة","çift kişilik oda","isim","أريد غرفة مزدوجة.","Çift kişilik bir oda istiyorum.");
+add("ar","B1","Seyahat","استقبال","resepsiyon","isim","سألت في الاستقبال.","Resepsiyona sordum.");
+add("ar","B1","Seyahat","تسجيل الوصول","check-in","isim","متى يبدأ تسجيل الوصول؟","Check-in ne zaman başlıyor?");
+add("ar","B1","Seyahat","تسجيل المغادرة","check-out","isim","متى يجب أن أسجل المغادرة؟","Check-out ne zaman yapmalıyım?");
+add("ar","B1","Seyahat","مطار","havaalanı","isim","وصلنا إلى المطار مبكرا.","Havaalanına erken vardık.");
+add("ar","B1","Seyahat","رحلة جوية","uçuş","isim","رحلتي الجوية تأخرت.","Uçuşum gecikti.");
+add("ar","B1","Seyahat","تذكرة","bilet","isim","اشتريت تذكرة الطائرة.","Uçak bileti aldım.");
+add("ar","B1","Seyahat","جواز سفر","pasaport","isim","لا تنس جواز سفرك.","Pasaportunu unutma.");
+add("ar","B1","Seyahat","حقيبة","çanta","isim","أين حقيبتي؟","Çantam nerede?");
+add("ar","B1","Seyahat","أمتعة","bagaj","isim","أين يمكنني استلام الأمتعة؟","Bagajı nereden alabilirim?");
+add("ar","B1","Seyahat","رحلة ذهاب وعودة","gidiş-dönüş yolculuğu","isim","أريد تذكرة ذهاب وعودة.","Gidiş-dönüş bileti istiyorum.");
+add("ar","B1","Seyahat","رحلة ذهاب فقط","tek yön yolculuk","isim","أريد تذكرة ذهاب فقط.","Tek yön bilet istiyorum.");
+add("ar","B1","Seyahat","وجهة","varış noktası / destinasyon","isim","ما هي وجهتك؟","Varış noktanız neresi?");
+add("ar","B1","Seyahat","خريطة","harita","isim","أحتاج إلى خريطة للمدينة.","Şehir haritasına ihtiyacım var.");
+add("ar","B1","Seyahat","دليل سياحي","tur rehberi","isim","استأجرنا دليلا سياحيا.","Bir tur rehberi kiraladık.");
+add("ar","B1","Seyahat","معلم سياحي","turistik yer","isim","زرنا الكثير من المعالم السياحية.","Birçok turistik yer ziyaret ettik.");
+add("ar","B1","Seyahat","متحف","müze","isim","زرنا متحفا مشهورا.","Ünlü bir müzeyi ziyaret ettik.");
+add("ar","B1","Seyahat","قلعة","kale","isim","القلعة قديمة جدا.","Kale çok eski.");
+add("ar","B1","Seyahat","شاطئ","sahil / plaj","isim","قضينا اليوم على الشاطئ.","Günü sahilde geçirdik.");
+add("ar","B1","Seyahat","جزيرة","ada","isim","زرت جزيرة جميلة.","Güzel bir ada ziyaret ettim.");
+add("ar","B1","Seyahat","جبل","dağ","isim","ذهبنا إلى الجبل.","Dağa gittik.");
+add("ar","B1","Seyahat","بحر","deniz","isim","أحب السباحة في البحر.","Denizde yüzmeyi seviyorum.");
+add("ar","B1","Seyahat","منظر","manzara","isim","المنظر رائع.","Manzara harika.");
+add("ar","B1","Seyahat","حجز","rezervasyon","isim","أكدت الحجز.","Rezervasyonu onayladım.");
+add("ar","B1","Seyahat","إلغاء","iptal","isim","تلقيت رسالة إلغاء الرحلة.","Seyahatin iptal edildiğine dair mesaj aldım.");
+/* ================================================================
+   ARAPÇA B1 — PART 10
+================================================================ */
+// ======================= B1 — SAĞLIK =======================
+add("ar","B1","Sağlık","صحة","sağlık","isim","الصحة أهم من المال.","Sağlık paradan daha önemlidir.");
+add("ar","B1","Sağlık","مرض","hastalık","isim","هذا المرض منتشر في المنطقة.","Bu hastalık bölgede yaygın.");
+add("ar","B1","Sağlık","مريض","hasta","sıfat","أنا مريض اليوم.","Bugün hastayım.");
+add("ar","B1","Sağlık","طبيب","doktor","isim","ذهبت إلى الطبيب.","Doktora gittim.");
+add("ar","B1","Sağlık","ممرضة","hemşire","isim","الممرضة تساعد الطبيب.","Hemşire doktora yardım ediyor.");
+add("ar","B1","Sağlık","مستشفى","hastane","isim","المستشفى قريب من هنا.","Hastane buraya yakın.");
+add("ar","B1","Sağlık","عيادة","klinik","isim","ذهبت إلى العيادة.","Kliniğe gittim.");
+add("ar","B1","Sağlık","صيدلية","eczane","isim","الصيدلية مغلقة الآن.","Eczane şu anda kapalı.");
+add("ar","B1","Sağlık","دواء","ilaç","isim","يجب أن آخذ الدواء.","İlacı almam gerekiyor.");
+add("ar","B1","Sağlık","وصفة طبية","reçete","isim","كتب الطبيب وصفة طبية.","Doktor reçete yazdı.");
+add("ar","B1","Sağlık","علاج","tedavi","isim","بدأت العلاج أمس.","Tedaviye dün başladım.");
+add("ar","B1","Sağlık","عملية","ameliyat","isim","يحتاج المريض إلى عملية.","Hastanın ameliyata ihtiyacı var.");
+add("ar","B1","Sağlık","ألم","ağrı","isim","لدي ألم في ظهري.","Sırtımda ağrı var.");
+add("ar","B1","Sağlık","صداع","baş ağrısı","isim","لدي صداع شديد.","Şiddetli baş ağrım var.");
+add("ar","B1","Sağlık","حمى","ateş","isim","لدي حمى منذ أمس.","Dünden beri ateşim var.");
+add("ar","B1","Sağlık","سعال","öksürük","isim","لدي سعال قوي.","Şiddetli öksürüğüm var.");
+add("ar","B1","Sağlık","زكام","soğuk algınlığı","isim","أصبت بالزكام.","Soğuk algınlığına yakalandım.");
+add("ar","B1","Sağlık","حساسية","alerji","isim","لدي حساسية من بعض الأطعمة.","Bazı yiyeceklere alerjim var.");
+add("ar","B1","Sağlık","إصابة","yaralanma","isim","تعرض لإصابة في ساقه.","Bacağından yaralandı.");
+add("ar","B1","Sağlık","جرح","yara","isim","لدي جرح صغير.","Küçük bir yarayı var.");
+add("ar","B1","Sağlık","دم","kan","isim","هناك دم على يدي.","Elimde kan var.");
+add("ar","B1","Sağlık","ضغط الدم","tansiyon","isim","ضغط دمي مرتفع.","Tansiyonum yüksek.");
+add("ar","B1","Sağlık","وزن","kilo / ağırlık","isim","أريد أن أخسر وزنا.","Kilo vermek istiyorum.");
+add("ar","B1","Sağlık","رياضة","spor","isim","أمارس الرياضة بانتظام.","Düzenli spor yapıyorum.");
+add("ar","B1","Sağlık","تمرين","egzersiz","isim","أقوم بالتمارين كل صباح.","Her sabah egzersiz yapıyorum.");
+add("ar","B1","Sağlık","غذاء","beslenme / gıda","isim","الغذاء الصحي مهم.","Sağlıklı beslenme önemlidir.");
+add("ar","B1","Sağlık","نظام غذائي","diyet","isim","أتبع نظاما غذائيا صحيا.","Sağlıklı bir diyet uyguluyorum.");
+add("ar","B1","Sağlık","راحة","dinlenme","isim","أحتاج إلى بعض الراحة.","Biraz dinlenmeye ihtiyacım var.");
+add("ar","B1","Sağlık","نوم","uyku","isim","النوم الجيد مهم للصحة.","İyi uyku sağlık için önemlidir.");
+// ======================= B1 — DUYGULAR VE DÜŞÜNCELER =======================
+add("ar","B1","Duygular","شعور","his / duygu","isim","لدي شعور غريب.","Garip bir his var.");
+add("ar","B1","Duygular","سعادة","mutluluk","isim","أتمنى لك السعادة.","Sana mutluluk diliyorum.");
+add("ar","B1","Duygular","حزن","üzüntü","isim","شعر بالحزن بعد الخبر.","Haberi duyduktan sonra üzüldü.");
+add("ar","B1","Duygular","خوف","korku","isim","لا أشعر بالخوف.","Korku hissetmiyorum.");
+add("ar","B1","Duygular","قلق","endişe","isim","أشعر بالقلق بشأن الامتحان.","Sınav hakkında endişeliyim.");
+add("ar","B1","Duygular","غضب","öfke","isim","من الصعب التحكم في الغضب.","Öfkeyi kontrol etmek zor.");
+add("ar","B1","Duygular","أمل","umut","isim","لا تفقد الأمل.","Umudunu kaybetme.");
+add("ar","B1","Duygular","ثقة","güven","isim","لدي ثقة بنفسي.","Kendime güveniyorum.");
+add("ar","B1","Duygular","احترام","saygı","isim","أحترم رأيك.","Fikrine saygı duyuyorum.");
+add("ar","B1","Duygular","حب","sevgi / aşk","isim","الحب شعور قوي.","Aşk güçlü bir duygudur.");
+add("ar","B1","Duygular","كراهية","nefret","isim","الكراهية ليست حلا.","Nefret bir çözüm değildir.");
+add("ar","B1","Duygular","فرح","sevinç","isim","شعرنا بفرح كبير.","Büyük bir sevinç hissettik.");
+add("ar","B1","Duygular","دهشة","şaşkınlık","isim","كانت المفاجأة مصدر دهشة للجميع.","Sürpriz herkesi şaşırttı.");
+add("ar","B1","Duygular","مفاجأة","sürpriz","isim","حضرت له مفاجأة.","Ona bir sürpriz hazırladım.");
+add("ar","B1","Duygular","ملل","can sıkıntısı","isim","أشعر بالملل في المنزل.","Evde canım sıkılıyor.");
+add("ar","B1","Duygular","وحدة","yalnızlık","isim","أشعر بالوحدة أحيانا.","Bazen yalnız hissediyorum.");
+add("ar","B1","Duygular","راحة البال","iç huzuru","isim","أريد أن أعيش براحة البال.","İç huzuruyla yaşamak istiyorum.");
+add("ar","B1","Duygular","تفكير","düşünme","isim","التفكير يساعد على حل المشاكل.","Düşünmek sorunları çözmeye yardımcı olur.");
+add("ar","B1","Duygular","ذاكرة","hafıza","isim","لدي ذاكرة جيدة.","İyi bir hafızam var.");
+add("ar","B1","Duygular","انتباه","dikkat","isim","انتبه إلى التفاصيل.","Detaylara dikkat et.");
+add("ar","B1","Duygular","تركيز","konsantrasyon","isim","أحتاج إلى التركيز.","Konsantre olmam gerekiyor.");
+add("ar","B1","Duygular","قرار","karar","isim","اتخذت قراري.","Kararımı verdim.");
+add("ar","B1","Duygular","اعتقاد","inanç / düşünce","isim","لدي اعتقاد مختلف.","Farklı bir inancım var.");
+add("ar","B1","Duygular","شك","şüphe","isim","لدي بعض الشكوك.","Bazı şüphelerim var.");
+add("ar","B1","Duygular","اهتمام","ilgi","isim","لدي اهتمام بالتكنولوجيا.","Teknolojiye ilgim var.");
+// ======================= B1 — İLİŞKİLER =======================
+add("ar","B1","İlişkiler","علاقة","ilişki","isim","لدي علاقة جيدة مع عائلتي.","Ailemle iyi bir ilişkim var.");
+add("ar","B1","İlişkiler","صداقة","arkadaşlık","isim","الصداقة مهمة في الحياة.","Arkadaşlık hayatta önemlidir.");
+add("ar","B1","İlişkiler","صديق","arkadaş","isim","صديقي يعيش في ألمانيا.","Arkadaşım Almanya'da yaşıyor.");
+add("ar","B1","İlişkiler","جار","komşu","isim","جاري شخص لطيف.","Komşum iyi bir insan.");
+add("ar","B1","İlişkiler","عائلة","aile","isim","عائلتي كبيرة.","Ailem büyük.");
+add("ar","B1","İlişkiler","والدان","ebeveynler","isim","أحترم والدي.","Ebeveynlerime saygı duyuyorum.");
+add("ar","B1","İlişkiler","زوج","koca / eş","isim","زوجها يعمل في شركة.","Kocası bir şirkette çalışıyor.");
+add("ar","B1","İlişkiler","زوجة","eş / karı","isim","زوجتي تحب السفر.","Eşim seyahat etmeyi seviyor.");
+add("ar","B1","İlişkiler","ابن","oğul","isim","لدي ابن واحد.","Bir oğlum var.");
+add("ar","B1","İlişkiler","ابنة","kız evlat","isim","ابنتي تدرس في الجامعة.","Kızım üniversitede okuyor.");
+add("ar","B1","İlişkiler","أخ","erkek kardeş","isim","أخي أكبر مني.","Erkek kardeşim benden büyük.");
+add("ar","B1","İlişkiler","أخت","kız kardeş","isim","أختي تعيش في تركيا.","Kız kardeşim Türkiye'de yaşıyor.");
+add("ar","B1","İlişkiler","قريب","akraba","isim","لدي أقارب في هذه المدينة.","Bu şehirde akrabalarım var.");
+add("ar","B1","İlişkiler","ضيف","misafir","isim","لدينا ضيف الليلة.","Bu gece misafirimiz var.");
+add("ar","B1","İlişkiler","مجتمع","toplum","isim","نحن جزء من المجتمع.","Toplumun bir parçasıyız.");
+add("ar","B1","İlişkiler","شخص","kişi","isim","إنه شخص محترم.","O saygılı bir insan.");
+add("ar","B1","İlişkiler","إنسان","insan","isim","كل إنسان لديه حقوق.","Her insanın hakları vardır.");
+add("ar","B1","İlişkiler","شخصية","kişilik","isim","لديه شخصية قوية.","Güçlü bir kişiliği var.");
+add("ar","B1","İlişkiler","سلوك","davranış","isim","هذا السلوك غير مقبول.","Bu davranış kabul edilemez.");
+add("ar","B1","İlişkiler","تصرف","davranış / hareket","isim","تصرفه كان غريبا.","Davranışı garipti.");
+add("ar","B1","İlişkiler","مساعدة","yardım","isim","شكرا على مساعدتك.","Yardımın için teşekkürler.");
+add("ar","B1","İlişkiler","تعاون","iş birliği","isim","نحتاج إلى التعاون.","İş birliğine ihtiyacımız var.");
+add("ar","B1","İlişkiler","اتفاق","anlaşma","isim","توصلنا إلى اتفاق.","Bir anlaşmaya vardık.");
+add("ar","B1","İlişkiler","خلاف","anlaşmazlık","isim","كان بينهما خلاف.","Aralarında bir anlaşmazlık vardı.");
+add("ar","B1","İlişkiler","نزاع","çatışma","isim","يجب حل النزاع سلميا.","Çatışma barışçıl bir şekilde çözülmeli.");
+// ======================= B1 — TOPLUM =======================
+add("ar","B1","Toplum","مجتمع","toplum","isim","المجتمع يتغير بسرعة.","Toplum hızla değişiyor.");
+add("ar","B1","Toplum","دولة","devlet / ülke","isim","هذه دولة متقدمة.","Bu gelişmiş bir ülke.");
+add("ar","B1","Toplum","حكومة","hükümet","isim","أعلنت الحكومة قرارا جديدا.","Hükümet yeni bir karar açıkladı.");
+add("ar","B1","Toplum","رئيس","başkan","isim","تحدث الرئيس إلى الشعب.","Başkan halka konuştu.");
+add("ar","B1","Toplum","وزير","bakan","isim","اجتمع الوزير مع المسؤولين.","Bakan yetkililerle görüştü.");
+add("ar","B1","Toplum","مواطن","vatandaş","isim","كل مواطن لديه حقوق.","Her vatandaşın hakları vardır.");
+add("ar","B1","Toplum","سكان","nüfus / sakinler","isim","عدد السكان يزداد.","Nüfus artıyor.");
+add("ar","B1","Toplum","انتخابات","seçimler","isim","ستجري الانتخابات قريبا.","Seçimler yakında yapılacak.");
+add("ar","B1","Toplum","تصويت","oylama","isim","بدأ التصويت صباحا.","Oylama sabah başladı.");
+add("ar","B1","Toplum","حزب","parti","isim","ينتمي إلى حزب سياسي.","Bir siyasi partiye mensup.");
+add("ar","B1","Toplum","اقتصاد","ekonomi","isim","الاقتصاد يتحسن.","Ekonomi iyileşiyor.");
+add("ar","B1","Toplum","مال","para","isim","المال ليس كل شيء.","Para her şey değildir.");
+add("ar","B1","Toplum","ثروة","zenginlik / servet","isim","الثروة لا تعني السعادة دائما.","Zenginlik her zaman mutluluk anlamına gelmez.");
+add("ar","B1","Toplum","فقر","yoksulluk","isim","الفقر مشكلة عالمية.","Yoksulluk küresel bir sorundur.");
+add("ar","B1","Toplum","بطالة","işsizlik","isim","البطالة مرتفعة في بعض المناطق.","Bazı bölgelerde işsizlik yüksek.");
+add("ar","B1","Toplum","عمل","çalışma / emek","isim","العمل مهم للإنسان.","Çalışmak insan için önemlidir.");
+add("ar","B1","Toplum","مساواة","eşitlik","isim","نحتاج إلى المساواة.","Eşitliğe ihtiyacımız var.");
+add("ar","B1","Toplum","عدالة","adalet","isim","العدالة مهمة في المجتمع.","Adalet toplumda önemlidir.");
+add("ar","B1","Toplum","حقوق الإنسان","insan hakları","isim","يجب احترام حقوق الإنسان.","İnsan haklarına saygı gösterilmelidir.");
+add("ar","B1","Toplum","حرية التعبير","ifade özgürlüğü","isim","حرية التعبير حق أساسي.","İfade özgürlüğü temel bir haktır.");
+// ======================= B1 — ÇEVRE =======================
+add("ar","B1","Çevre","بيئة","çevre","isim","يجب حماية البيئة.","Çevre korunmalıdır.");
+add("ar","B1","Çevre","تلوث","kirlilik","isim","تلوث الهواء مشكلة خطيرة.","Hava kirliliği ciddi bir sorundur.");
+add("ar","B1","Çevre","هواء","hava","isim","الهواء هنا نظيف.","Buradaki hava temiz.");
+add("ar","B1","Çevre","ماء","su","isim","الماء ضروري للحياة.","Su yaşam için gereklidir.");
+add("ar","B1","Çevre","نهر","nehir","isim","يمر نهر كبير عبر المدينة.","Şehrin içinden büyük bir nehir geçiyor.");
+add("ar","B1","Çevre","بحيرة","göl","isim","البحيرة جميلة جدا.","Göl çok güzel.");
+add("ar","B1","Çevre","غابة","orman","isim","ذهبنا إلى الغابة.","Ormana gittik.");
+add("ar","B1","Çevre","صحراء","çöl","isim","الصحراء واسعة جدا.","Çöl çok geniş.");
+add("ar","B1","Çevre","جبل","dağ","isim","تسلقنا الجبل.","Dağa tırmandık.");
+add("ar","B1","Çevre","طبيعة","doğa","isim","أحب الطبيعة.","Doğayı seviyorum.");
+add("ar","B1","Çevre","حيوان","hayvan","isim","أحب الحيوانات.","Hayvanları seviyorum.");
+add("ar","B1","Çevre","نبات","bitki","isim","هذه النبتة تحتاج إلى الماء.","Bu bitkinin suya ihtiyacı var.");
+add("ar","B1","Çevre","شجرة","ağaç","isim","زرعنا شجرة جديدة.","Yeni bir ağaç diktik.");
+add("ar","B1","Çevre","زهرة","çiçek","isim","هذه الزهرة جميلة.","Bu çiçek güzel.");
+add("ar","B1","Çevre","نفايات","atık / çöp","isim","يجب أن نقلل من النفايات.","Atıkları azaltmalıyız.");
+add("ar","B1","Çevre","قمامة","çöp","isim","لا ترم القمامة في الشارع.","Çöpü sokağa atma.");
+add("ar","B1","Çevre","إعادة التدوير","geri dönüşüm","isim","إعادة التدوير مهمة للبيئة.","Geri dönüşüm çevre için önemlidir.");
+add("ar","B1","Çevre","طاقة","enerji","isim","نحتاج إلى طاقة نظيفة.","Temiz enerjiye ihtiyacımız var.");
+add("ar","B1","Çevre","طاقة شمسية","güneş enerjisi","isim","الطاقة الشمسية مصدر نظيف.","Güneş enerjisi temiz bir kaynaktır.");
+add("ar","B1","Çevre","تغير المناخ","iklim değişikliği","isim","تغير المناخ مشكلة عالمية.","İklim değişikliği küresel bir sorundur.");
+add("ar","B1","Çevre","طقس","hava durumu","isim","الطقس يتغير بسرعة.","Hava durumu hızla değişiyor.");
+add("ar","B1","Çevre","مناخ","iklim","isim","المناخ هنا معتدل.","Buradaki iklim ılıman.");
+add("ar","B1","Çevre","عاصفة","fırtına","isim","كانت هناك عاصفة قوية.","Güçlü bir fırtına vardı.");
+add("ar","B1","Çevre","فيضانات","sel","isim","تسببت الأمطار في فيضانات.","Yağmurlar sele neden oldu.");
+add("ar","B1","Çevre","جفاف","kuraklık","isim","تعاني المنطقة من الجفاف.","Bölge kuraklıktan muzdarip.");
+add("ar","B1","Çevre","حرارة","sıcaklık / ısı","isim","درجة الحرارة مرتفعة اليوم.","Bugün sıcaklık yüksek.");
+add("ar","B1","Çevre","برودة","soğukluk","isim","لا أتحمل البرودة.","Soğuğa dayanamıyorum.");
+add("ar","B1","Çevre","موسم","mevsim","isim","هذا أفضل موسم للسفر.","Bu seyahat için en iyi mevsim.");
+add("ar","B1","Çevre","ربيع","ilkbahar","isim","أحب فصل الربيع.","İlkbaharı seviyorum.");
+add("ar","B1","Çevre","صيف","yaz","isim","الصيف حار هنا.","Burada yaz sıcak.");
+add("ar","B1","Çevre","خريف","sonbahar","isim","أحب ألوان الخريف.","Sonbaharın renklerini seviyorum.");
+add("ar","B1","Çevre","شتاء","kış","isim","الشتاء بارد جدا.","Kış çok soğuk.");
+// ======================= B1 — DOĞA FİİLLERİ =======================
+add("ar","B1","Doğa Fiilleri","يحمي","korumak","fiil","يجب أن نحمي الطبيعة.","Doğayı korumalıyız.");
+add("ar","B1","Doğa Fiilleri","يقلل","azaltmak","fiil","يجب أن نقلل استهلاك الطاقة.","Enerji tüketimini azaltmalıyız.");
+add("ar","B1","Doğa Fiilleri","يعيد التدوير","geri dönüştürmek","fiil","نحن نعيد تدوير البلاستيك.","Plastikleri geri dönüştürüyoruz.");
+add("ar","B1","Doğa Fiilleri","يزرع","dikmek / yetiştirmek","fiil","يزرع المزارع الأشجار.","Çiftçi ağaç dikiyor.");
+add("ar","B1","Doğa Fiilleri","يستهلك","tüketmek","fiil","نستهلك الكثير من الماء.","Çok fazla su tüketiyoruz.");
+add("ar","B1","Doğa Fiilleri","ينظف","temizlemek","fiil","نظفنا الشاطئ.","Sahili temizledik.");
+add("ar","B1","Doğa Fiilleri","يلوث","kirletmek","fiil","المصانع تلوث الهواء.","Fabrikalar havayı kirletiyor.");
+add("ar","B1","Doğa Fiilleri","يتغير","değişmek","fiil","المناخ يتغير بسرعة.","İklim hızla değişiyor.");
+add("ar","B1","Doğa Fiilleri","يذوب","erimek","fiil","الجليد يذوب بسرعة.","Buz hızla eriyor.");
+add("ar","B1","Doğa Fiilleri","ينقرض","nesli tükenmek","fiil","بعض الحيوانات مهددة بالانقراض.","Bazı hayvanların nesli tükenme tehlikesi altında.");
+/* ================================================================
+   ARAPÇA B1 — PART 11
+================================================================ */
+// ======================= B1 — ALIŞVERİŞ =======================
+add("ar","B1","Alışveriş","تسوق","alışveriş","isim","أحب التسوق في عطلة نهاية الأسبوع.","Hafta sonu alışveriş yapmayı seviyorum.");
+add("ar","B1","Alışveriş","متجر","mağaza","isim","هذا المتجر قريب من منزلي.","Bu mağaza evime yakın.");
+add("ar","B1","Alışveriş","سوق","pazar","isim","ذهبت إلى السوق صباحا.","Sabah pazara gittim.");
+add("ar","B1","Alışveriş","مركز تجاري","alışveriş merkezi","isim","التقينا في مركز تجاري كبير.","Büyük bir alışveriş merkezinde buluştuk.");
+add("ar","B1","Alışveriş","زبون","müşteri","isim","الزبون ينتظر دوره.","Müşteri sırasını bekliyor.");
+add("ar","B1","Alışveriş","بائع","satıcı","isim","سألت البائع عن السعر.","Satıcıya fiyatı sordum.");
+add("ar","B1","Alışveriş","منتج","ürün","isim","هذا المنتج عالي الجودة.","Bu ürün yüksek kaliteli.");
+add("ar","B1","Alışveriş","سلعة","mal / ürün","isim","ارتفعت أسعار السلع.","Malların fiyatları arttı.");
+add("ar","B1","Alışveriş","سعر","fiyat","isim","ما سعر هذا القميص؟","Bu gömleğin fiyatı ne?");
+add("ar","B1","Alışveriş","خصم","indirim","isim","هل يوجد خصم على هذا المنتج؟","Bu üründe indirim var mı?");
+add("ar","B1","Alışveriş","عرض","kampanya / teklif","isim","هناك عرض خاص هذا الأسبوع.","Bu hafta özel bir kampanya var.");
+add("ar","B1","Alışveriş","فاتورة","fatura","isim","هل يمكنني الحصول على الفاتورة؟","Faturayı alabilir miyim?");
+add("ar","B1","Alışveriş","إيصال","fiş","isim","احتفظ بالإيصال.","Fişi sakla.");
+add("ar","B1","Alışveriş","دفع","ödeme","isim","تم الدفع بواسطة البطاقة.","Ödeme kartla yapıldı.");
+add("ar","B1","Alışveriş","نقد","nakit","isim","ليس لدي نقود نقدية.","Nakit param yok.");
+add("ar","B1","Alışveriş","بطاقة ائتمان","kredi kartı","isim","هل تقبلون بطاقة الائتمان؟","Kredi kartı kabul ediyor musunuz?");
+add("ar","B1","Alışveriş","بطاقة مصرفية","banka kartı","isim","دفعت ببطاقتي المصرفية.","Banka kartımla ödedim.");
+add("ar","B1","Alışveriş","حجم","beden / boyut","isim","هل لديك هذا القميص بحجم أكبر؟","Bu gömleğin daha büyük bedeni var mı?");
+add("ar","B1","Alışveriş","لون","renk","isim","هل يوجد هذا اللون؟","Bu renk var mı?");
+add("ar","B1","Alışveriş","جودة","kalite","isim","جودة المنتج ممتازة.","Ürünün kalitesi mükemmel.");
+add("ar","B1","Alışveriş","ماركة","marka","isim","هذه ماركة مشهورة.","Bu ünlü bir marka.");
+add("ar","B1","Alışveriş","اختيار","seçim","isim","لديك الكثير من الخيارات.","Çok fazla seçeneğin var.");
+add("ar","B1","Alışveriş","خيار","seçenek","isim","هذا أفضل خيار بالنسبة لي.","Bu benim için en iyi seçenek.");
+add("ar","B1","Alışveriş","استبدال","değişim","isim","أريد استبدال هذا المنتج.","Bu ürünü değiştirmek istiyorum.");
+add("ar","B1","Alışveriş","استرجاع","iade","isim","أريد استرجاع المنتج.","Ürünü iade etmek istiyorum.");
+add("ar","B1","Alışveriş","متوفر","mevcut","sıfat","هل هذا المنتج متوفر؟","Bu ürün mevcut mu?");
+add("ar","B1","Alışveriş","نفد","tükenmiş","fiil","هذا المنتج نفد من المخزون.","Bu ürün stokta tükendi.");
+// ======================= B1 — FİNANS =======================
+add("ar","B1","Finans","بنك","banka","isim","ذهبت إلى البنك.","Bankaya gittim.");
+add("ar","B1","Finans","حساب بنكي","banka hesabı","isim","لدي حساب بنكي جديد.","Yeni bir banka hesabım var.");
+add("ar","B1","Finans","رصيد","bakiye","isim","تحققت من رصيدي.","Bakiyemi kontrol ettim.");
+add("ar","B1","Finans","تحويل","havale / transfer","isim","أرسلت تحويلا بنكيا.","Banka havalesi gönderdim.");
+add("ar","B1","Finans","إيداع","para yatırma","isim","قمت بإيداع المال في الحساب.","Hesaba para yatırdım.");
+add("ar","B1","Finans","سحب","para çekme","isim","أريد سحب بعض المال.","Biraz para çekmek istiyorum.");
+add("ar","B1","Finans","قرض","kredi / borç","isim","أخذ قرضا من البنك.","Bankadan kredi aldı.");
+add("ar","B1","Finans","فائدة","faiz","isim","الفائدة مرتفعة هذا العام.","Faiz bu yıl yüksek.");
+add("ar","B1","Finans","دين","borç","isim","أريد أن أسدد ديني.","Borcumu ödemek istiyorum.");
+add("ar","B1","Finans","ضريبة","vergi","isim","يجب دفع الضرائب في الوقت المحدد.","Vergiler zamanında ödenmelidir.");
+add("ar","B1","Finans","ميزانية","bütçe","isim","يجب أن أضع ميزانية شهرية.","Aylık bir bütçe yapmalıyım.");
+add("ar","B1","Finans","مصروف","harcama","isim","أحاول تقليل مصاريفي.","Harcamalarımı azaltmaya çalışıyorum.");
+add("ar","B1","Finans","ادخار","tasarruf","isim","أدخر المال للسفر.","Seyahat için para biriktiriyorum.");
+add("ar","B1","Finans","استثمار","yatırım","isim","أريد أن أتعلم عن الاستثمار.","Yatırım hakkında bilgi edinmek istiyorum.");
+add("ar","B1","Finans","ربح","kâr","isim","حققت الشركة ربحا كبيرا.","Şirket büyük bir kâr elde etti.");
+add("ar","B1","Finans","خسارة","zarar","isim","تكبدت الشركة خسارة.","Şirket zarar etti.");
+add("ar","B1","Finans","سعر الصرف","döviz kuru","isim","ما سعر الصرف اليوم؟","Bugünkü döviz kuru nedir?");
+add("ar","B1","Finans","عملة","para birimi","isim","ما عملة هذا البلد؟","Bu ülkenin para birimi nedir?");
+add("ar","B1","Finans","دولار","dolar","isim","دفعت عشرة دولارات.","On dolar ödedim.");
+add("ar","B1","Finans","يورو","euro","isim","لدي بعض اليورو.","Biraz eurom var.");
+add("ar","B1","Finans","ليرة","lira","isim","دفعت بالليرة التركية.","Türk lirasıyla ödedim.");
+// ======================= B1 — EV =======================
+add("ar","B1","Ev","منزل","ev","isim","منزلي قريب من الجامعة.","Evim üniversiteye yakın.");
+add("ar","B1","Ev","شقة","daire","isim","أعيش في شقة صغيرة.","Küçük bir dairede yaşıyorum.");
+add("ar","B1","Ev","غرفة","oda","isim","غرفتي في الطابق الأول.","Odam birinci katta.");
+add("ar","B1","Ev","غرفة نوم","yatak odası","isim","غرفة النوم هادئة.","Yatak odası sessiz.");
+add("ar","B1","Ev","غرفة معيشة","oturma odası","isim","نشاهد التلفاز في غرفة المعيشة.","Oturma odasında televizyon izliyoruz.");
+add("ar","B1","Ev","مطبخ","mutfak","isim","المطبخ صغير ولكنه عملي.","Mutfak küçük ama kullanışlı.");
+add("ar","B1","Ev","حمام","banyo","isim","الحمام نظيف.","Banyo temiz.");
+add("ar","B1","Ev","شرفة","balkon","isim","لدينا شرفة جميلة.","Güzel bir balkonumuz var.");
+add("ar","B1","Ev","حديقة","bahçe","isim","هناك حديقة أمام المنزل.","Evin önünde bir bahçe var.");
+add("ar","B1","Ev","سقف","çatı","isim","السقف يحتاج إلى إصلاح.","Çatının tamire ihtiyacı var.");
+add("ar","B1","Ev","جدار","duvar","isim","الجدار أبيض.","Duvar beyaz.");
+add("ar","B1","Ev","أرضية","zemin / döşeme","isim","الأرضية نظيفة.","Zemin temiz.");
+add("ar","B1","Ev","نافذة","pencere","isim","افتح النافذة من فضلك.","Lütfen pencereyi aç.");
+add("ar","B1","Ev","باب","kapı","isim","أغلقت الباب.","Kapıyı kapattım.");
+add("ar","B1","Ev","مفتاح","anahtar","isim","أين مفتاحي؟","Anahtarım nerede?");
+add("ar","B1","Ev","أثاث","mobilya","isim","اشترينا أثاثا جديدا.","Yeni mobilyalar aldık.");
+add("ar","B1","Ev","طاولة","masa","isim","الكتاب على الطاولة.","Kitap masanın üzerinde.");
+add("ar","B1","Ev","كرسي","sandalye","isim","اجلس على الكرسي.","Sandalyeye otur.");
+add("ar","B1","Ev","سرير","yatak","isim","السرير مريح.","Yatak rahat.");
+add("ar","B1","Ev","خزانة","dolap","isim","وضعت الملابس في الخزانة.","Kıyafetleri dolaba koydum.");
+add("ar","B1","Ev","ثلاجة","buzdolabı","isim","الحليب في الثلاجة.","Süt buzdolabında.");
+add("ar","B1","Ev","غسالة","çamaşır makinesi","isim","الغسالة لا تعمل.","Çamaşır makinesi çalışmıyor.");
+add("ar","B1","Ev","مكنسة كهربائية","elektrikli süpürge","isim","أستخدم المكنسة الكهربائية كل أسبوع.","Her hafta elektrikli süpürge kullanıyorum.");
+add("ar","B1","Ev","إيجار","kira","isim","الإيجار مرتفع في هذه المدينة.","Bu şehirde kira yüksek.");
+add("ar","B1","Ev","مالك","ev sahibi","isim","تحدثت مع مالك المنزل.","Ev sahibiyle konuştum.");
+add("ar","B1","Ev","مستأجر","kiracı","isim","المستأجر يدفع الإيجار كل شهر.","Kiracı her ay kirayı ödüyor.");
+add("ar","B1","Ev","جيران","komşular","isim","جيراننا لطفاء.","Komşularımız iyi insanlar.");
+add("ar","B1","Ev","إصلاح","tamir","isim","المنزل يحتاج إلى إصلاح.","Evin tamire ihtiyacı var.");
+add("ar","B1","Ev","تنظيف","temizlik","isim","أقوم بالتنظيف كل يوم.","Her gün temizlik yapıyorum.");
+// ======================= B1 — ULAŞIM =======================
+add("ar","B1","Ulaşım","مواصلات","ulaşım / toplu taşıma","isim","المواصلات العامة جيدة هنا.","Burada toplu taşıma iyi.");
+add("ar","B1","Ulaşım","سيارة","araba","isim","اشتريت سيارة جديدة.","Yeni bir araba aldım.");
+add("ar","B1","Ulaşım","حافلة","otobüs","isim","أذهب إلى العمل بالحافلة.","İşe otobüsle gidiyorum.");
+add("ar","B1","Ulaşım","قطار","tren","isim","سافرت بالقطار.","Trenle seyahat ettim.");
+add("ar","B1","Ulaşım","مترو","metro","isim","أستخدم المترو كل يوم.","Her gün metro kullanıyorum.");
+add("ar","B1","Ulaşım","ترام","tramvay","isim","الترام سريع ومريح.","Tramvay hızlı ve rahat.");
+add("ar","B1","Ulaşım","تاكسي","taksi","isim","أخذت سيارة أجرة إلى الفندق.","Otele taksiyle gittim.");
+add("ar","B1","Ulaşım","دراجة","bisiklet","isim","أذهب إلى العمل بالدراجة.","İşe bisikletle gidiyorum.");
+add("ar","B1","Ulaşım","طريق","yol","isim","هذا الطريق طويل.","Bu yol uzun.");
+add("ar","B1","Ulaşım","شارع","cadde / sokak","isim","المطعم في هذا الشارع.","Restoran bu caddede.");
+add("ar","B1","Ulaşım","جسر","köprü","isim","عبرنا الجسر.","Köprüyü geçtik.");
+add("ar","B1","Ulaşım","محطة","istasyon / durak","isim","انتظرني في المحطة.","Beni istasyonda bekle.");
+add("ar","B1","Ulaşım","موقف الحافلات","otobüs durağı","isim","الحافلة تنتظر في موقف الحافلات.","Otobüs durakta bekliyor.");
+add("ar","B1","Ulaşım","ازدحام مروري","trafik sıkışıklığı","isim","هناك ازدحام مروري شديد.","Şiddetli trafik sıkışıklığı var.");
+add("ar","B1","Ulaşım","إشارة مرور","trafik ışığı","isim","توقف عند إشارة المرور.","Trafik ışığında dur.");
+add("ar","B1","Ulaşım","سرعة","hız","isim","السرعة هنا محدودة.","Burada hız sınırlıdır.");
+add("ar","B1","Ulaşım","رخصة قيادة","ehliyet","isim","حصلت على رخصة قيادة.","Ehliyet aldım.");
+add("ar","B1","Ulaşım","سائق","sürücü","isim","السائق يقود بسرعة.","Sürücü hızlı sürüyor.");
+add("ar","B1","Ulaşım","راكب","yolcu","isim","كان القطار مليئا بالركاب.","Tren yolcularla doluydu.");
+add("ar","B1","Ulaşım","وقود","yakıt","isim","سعر الوقود مرتفع.","Yakıt fiyatı yüksek.");
+add("ar","B1","Ulaşım","محطة وقود","benzin istasyonu","isim","توقفت عند محطة الوقود.","Benzin istasyonunda durdum.");
+add("ar","B1","Ulaşım","حركة المرور","trafik","isim","حركة المرور مزدحمة اليوم.","Bugün trafik yoğun.");
+add("ar","B1","Ulaşım","حادث","kaza","isim","حدث حادث على الطريق.","Yolda bir kaza oldu.");
+add("ar","B1","Ulaşım","تأخير","gecikme","isim","هناك تأخير في القطار.","Trende gecikme var.");
+add("ar","B1","Ulaşım","وصول","varış","isim","موعد الوصول الساعة الثامنة.","Varış saati sekiz.");
+add("ar","B1","Ulaşım","مغادرة","kalkış / ayrılış","isim","موعد المغادرة الساعة السابعة.","Kalkış saati yedi.");
+// ======================= B1 — ŞEHİR HAYATI =======================
+add("ar","B1","Şehir","مدينة","şehir","isim","هذه مدينة كبيرة.","Bu büyük bir şehir.");
+add("ar","B1","Şehir","قرية","köy","isim","ولدت في قرية صغيرة.","Küçük bir köyde doğdum.");
+add("ar","B1","Şehir","عاصمة","başkent","isim","فيينا عاصمة النمسا.","Viyana Avusturya'nın başkentidir.");
+add("ar","B1","Şehir","منطقة","bölge / semt","isim","أعيش في منطقة هادئة.","Sakin bir bölgede yaşıyorum.");
+add("ar","B1","Şehir","حي","mahalle","isim","هذا حي مشهور.","Bu ünlü bir mahalle.");
+add("ar","B1","Şehir","وسط المدينة","şehir merkezi","isim","المطعم في وسط المدينة.","Restoran şehir merkezinde.");
+add("ar","B1","Şehir","ضاحية","banliyö","isim","يعيش في ضاحية هادئة.","Sakin bir banliyöde yaşıyor.");
+add("ar","B1","Şehir","مبنى","bina","isim","هذا المبنى قديم.","Bu bina eski.");
+add("ar","B1","Şehir","برج","kule","isim","البرج مرتفع جدا.","Kule çok yüksek.");
+add("ar","B1","Şehir","ميدان","meydan","isim","التقينا في الميدان.","Meydanda buluştuk.");
+add("ar","B1","Şehir","حديقة عامة","park","isim","نذهب إلى الحديقة العامة كل يوم.","Her gün parka gidiyoruz.");
+add("ar","B1","Şehir","مكتبة عامة","halk kütüphanesi","isim","المكتبة العامة مفتوحة اليوم.","Halk kütüphanesi bugün açık.");
+add("ar","B1","Şehir","مستشفى","hastane","isim","المستشفى قريب من المركز.","Hastane merkeze yakın.");
+add("ar","B1","Şehir","مركز شرطة","polis merkezi","isim","مركز الشرطة قريب.","Polis merkezi yakın.");
+add("ar","B1","Şehir","محطة إطفاء","itfaiye istasyonu","isim","محطة الإطفاء ليست بعيدة.","İtfaiye istasyonu uzak değil.");
+add("ar","B1","Şehir","مطعم","restoran","isim","هذا المطعم مشهور.","Bu restoran ünlü.");
+add("ar","B1","Şehir","مقهى","kafe","isim","نجلس في المقهى كل مساء.","Her akşam kafede oturuyoruz.");
+add("ar","B1","Şehir","مخبز","fırın","isim","اشتريت الخبز من المخبز.","Ekmeği fırından aldım.");
+add("ar","B1","Şehir","بنك","banka","isim","البنك بجانب الفندق.","Banka otelin yanında.");
+add("ar","B1","Şehir","بريد","postane","isim","أرسلت الطرد من مكتب البريد.","Paketi postaneden gönderdim.");
+// ======================= B1 — GÜNLÜK YAŞAM FİİLLERİ =======================
+add("ar","B1","Günlük Fiiller","يستأجر","kiralamak","fiil","أريد أن أستأجر شقة.","Bir daire kiralamak istiyorum.");
+add("ar","B1","Günlük Fiiller","يشتري","satın almak","fiil","أريد أن أشتري حاسوبا جديدا.","Yeni bir bilgisayar satın almak istiyorum.");
+add("ar","B1","Günlük Fiiller","يبيع","satmak","fiil","يبيع المنتجات عبر الإنترنت.","Ürünleri internet üzerinden satıyor.");
+add("ar","B1","Günlük Fiiller","يدفع","ödemek","fiil","دفعت الفاتورة أمس.","Faturayı dün ödedim.");
+add("ar","B1","Günlük Fiiller","يوفر","tasarruf etmek / biriktirmek","fiil","أحاول أن أوفر المال.","Para biriktirmeye çalışıyorum.");
+add("ar","B1","Günlük Fiiller","ينفق","harcamak","fiil","لا أنفق الكثير من المال.","Çok para harcamıyorum.");
+add("ar","B1","Günlük Fiiller","يحجز","rezervasyon yapmak","fiil","حجزت غرفة في الفندق.","Otelde bir oda rezerve ettim.");
+add("ar","B1","Günlük Fiiller","يلغي","iptal etmek","fiil","ألغيت الرحلة.","Seyahati iptal ettim.");
+add("ar","B1","Günlük Fiiller","يؤكد","onaylamak","fiil","أكدت موعد الاجتماع.","Toplantı tarihini onayladım.");
+add("ar","B1","Günlük Fiiller","يصل","varmak","fiil","وصلت إلى المنزل متأخرا.","Eve geç vardım.");
+add("ar","B1","Günlük Fiiller","يغادر","ayrılmak","fiil","غادرت المنزل في الصباح.","Sabah evden ayrıldım.");
+add("ar","B1","Günlük Fiiller","ينتظر","beklemek","fiil","أنتظرك أمام الفندق.","Seni otelin önünde bekliyorum.");
+add("ar","B1","Günlük Fiiller","يقابل","buluşmak / karşılaşmak","fiil","سأقابل صديقي غدا.","Yarın arkadaşımla buluşacağım.");
+add("ar","B1","Günlük Fiiller","يزور","ziyaret etmek","fiil","سأزور عائلتي في الصيف.","Yazın ailemi ziyaret edeceğim.");
+add("ar","B1","Günlük Fiiller","يسافر","seyahat etmek","fiil","أسافر كثيرا بسبب عملي.","İşim nedeniyle çok seyahat ediyorum.");
+add("ar","B1","Günlük Fiiller","يعيش","yaşamak","fiil","أعيش في مدينة كبيرة.","Büyük bir şehirde yaşıyorum.");
+add("ar","B1","Günlük Fiiller","ينتقل","taşınmak / transfer olmak","fiil","سأنتقل إلى مدينة أخرى.","Başka bir şehre taşınacağım.");
+add("ar","B1","Günlük Fiiller","يغير","değiştirmek","fiil","أريد أن أغير عملي.","İşimi değiştirmek istiyorum.");
+add("ar","B1","Günlük Fiiller","يصلح","tamir etmek","fiil","سأصلح السيارة غدا.","Arabayı yarın tamir edeceğim.");
+add("ar","B1","Günlük Fiiller","ينظف","temizlemek","fiil","أنظف غرفتي كل يوم.","Odamı her gün temizliyorum.");
+add("ar","B1","Günlük Fiiller","يطبخ","yemek pişirmek","fiil","أحب أن أطبخ في المنزل.","Evde yemek pişirmeyi seviyorum.");
+add("ar","B1","Günlük Fiiller","يغسل","yıkamak","fiil","أغسل الملابس في عطلة نهاية الأسبوع.","Hafta sonu çamaşırları yıkıyorum.");
+add("ar","B1","Günlük Fiiller","يرتب","düzenlemek","fiil","أرتب غرفتي كل صباح.","Odamı her sabah düzenliyorum.");
+add("ar","B1","Günlük Fiiller","يقرر","karar vermek","fiil","قررت أن أتعلم لغة جديدة.","Yeni bir dil öğrenmeye karar verdim.");
+add("ar","B1","Günlük Fiiller","يختار","seçmek","fiil","اخترت هذا الخيار.","Bu seçeneği seçtim.");
+add("ar","B1","Günlük Fiiller","يحاول","denemek","fiil","أحاول أن أتعلم بسرعة.","Hızlı öğrenmeye çalışıyorum.");
+add("ar","B1","Günlük Fiiller","يحتاج","ihtiyaç duymak","fiil","أحتاج إلى مساعدتك.","Yardımına ihtiyacım var.");
+add("ar","B1","Günlük Fiiller","يستخدم","kullanmak","fiil","أستخدم هذا التطبيق يوميا.","Bu uygulamayı her gün kullanıyorum.");
+add("ar","B1","Günlük Fiiller","يفضل","tercih etmek","fiil","أفضل السفر بالقطار.","Trenle seyahat etmeyi tercih ederim.");
+add("ar","B1","Günlük Fiiller","يتجنب","kaçınmak","fiil","أحاول تجنب المشاكل.","Sorunlardan kaçınmaya çalışıyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 12
+================================================================ */
+// ======================= B1 — ÖNEMLİ FİİLLER 1 =======================
+add("ar","B1","Fiiller","يعتقد","inanmak / düşünmek","fiil","أعتقد أن هذا القرار صحيح.","Bu kararın doğru olduğunu düşünüyorum.");
+add("ar","B1","Fiiller","يظن","sanmak / düşünmek","fiil","أظن أنه سيأتي غدا.","Sanırım yarın gelecek.");
+add("ar","B1","Fiiller","يعرف","bilmek / tanımak","fiil","أعرف هذا الشخص جيدا.","Bu kişiyi iyi tanıyorum.");
+add("ar","B1","Fiiller","يفهم","anlamak","fiil","أفهم ما تقوله.","Ne söylediğini anlıyorum.");
+add("ar","B1","Fiiller","يتذكر","hatırlamak","fiil","لا أتذكر اسمه.","Adını hatırlamıyorum.");
+add("ar","B1","Fiiller","ينسى","unutmak","fiil","نسيت موعد الاجتماع.","Toplantının tarihini unuttum.");
+add("ar","B1","Fiiller","يتعلم","öğrenmek","fiil","أتعلم اللغة العربية.","Arapça öğreniyorum.");
+add("ar","B1","Fiiller","يعلم","öğretmek","fiil","هو يعلم الأطفال اللغة الإنجليزية.","Çocuklara İngilizce öğretiyor.");
+add("ar","B1","Fiiller","يشرح","açıklamak","fiil","اشرح لي هذه الفكرة.","Bu fikri bana açıkla.");
+add("ar","B1","Fiiller","يسأل","sormak","fiil","سألت المعلم سؤالا.","Öğretmene bir soru sordum.");
+add("ar","B1","Fiiller","يجيب","cevaplamak","fiil","أجاب عن السؤال بسرعة.","Soruyu hızlıca cevapladı.");
+add("ar","B1","Fiiller","يخبر","haber vermek / söylemek","fiil","أخبرني بالحقيقة.","Bana gerçeği söyledi.");
+add("ar","B1","Fiiller","يخبره","ona söylemek","fiil","سأخبره غدا.","Ona yarın söyleyeceğim.");
+add("ar","B1","Fiiller","يقول","söylemek","fiil","ماذا تقول؟","Ne söylüyorsun?");
+add("ar","B1","Fiiller","يتحدث","konuşmak","fiil","نتحدث عن العمل.","İş hakkında konuşuyoruz.");
+add("ar","B1","Fiiller","يناقش","tartışmak","fiil","ناقشنا المشكلة معا.","Sorunu birlikte tartıştık.");
+add("ar","B1","Fiiller","يقترح","önermek","fiil","أقترح أن نبدأ الآن.","Şimdi başlamamızı öneriyorum.");
+add("ar","B1","Fiiller","يوافق","kabul etmek / katılmak","fiil","أوافق على رأيك.","Fikrine katılıyorum.");
+add("ar","B1","Fiiller","يرفض","reddetmek","fiil","رفض العرض.","Teklifi reddetti.");
+add("ar","B1","Fiiller","يقبل","kabul etmek","fiil","قبل الوظيفة الجديدة.","Yeni işi kabul etti.");
+add("ar","B1","Fiiller","يقرر","karar vermek","fiil","قرر السفر إلى أوروبا.","Avrupa'ya seyahat etmeye karar verdi.");
+add("ar","B1","Fiiller","يخطط","planlamak","fiil","نخطط لرحلة جديدة.","Yeni bir gezi planlıyoruz.");
+add("ar","B1","Fiiller","يستعد","hazırlanmak","fiil","أستعد للامتحان.","Sınava hazırlanıyorum.");
+add("ar","B1","Fiiller","يبدأ","başlamak","fiil","بدأ العمل في الصباح.","Sabah çalışmaya başladı.");
+add("ar","B1","Fiiller","ينتهي","bitmek","fiil","ينتهي الدرس في الساعة الثالثة.","Ders saat üçte bitiyor.");
+add("ar","B1","Fiiller","يستمر","devam etmek","fiil","استمر المطر طوال الليل.","Yağmur bütün gece devam etti.");
+add("ar","B1","Fiiller","يتوقف","durmak","fiil","توقف المطر.","Yağmur durdu.");
+add("ar","B1","Fiiller","يحدث","olmak / meydana gelmek","fiil","ماذا حدث؟","Ne oldu?");
+add("ar","B1","Fiiller","يتغير","değişmek","fiil","كل شيء يتغير مع الوقت.","Her şey zamanla değişir.");
+add("ar","B1","Fiiller","يتطور","gelişmek","fiil","تتطور التكنولوجيا بسرعة.","Teknoloji hızla gelişiyor.");
+// ======================= B1 — ÖNEMLİ FİİLLER 2 =======================
+add("ar","B1","Fiiller","ينجح","başarmak / başarılı olmak","fiil","نجح في الامتحان.","Sınavı başardı.");
+add("ar","B1","Fiiller","يفشل","başarısız olmak","fiil","فشل في الاختبار.","Testte başarısız oldu.");
+add("ar","B1","Fiiller","يحاول","denemek / çabalamak","fiil","سأحاول مرة أخرى.","Tekrar deneyeceğim.");
+add("ar","B1","Fiiller","يستطيع","yapabilmek","fiil","أستطيع مساعدتك.","Sana yardım edebilirim.");
+add("ar","B1","Fiiller","يستطيع أن","-ebilmek","fiil","يستطيع أن يتحدث ثلاث لغات.","Üç dil konuşabilir.");
+add("ar","B1","Fiiller","يحتاج إلى","ihtiyaç duymak","fiil","أحتاج إلى وقت أكثر.","Daha fazla zamana ihtiyacım var.");
+add("ar","B1","Fiiller","يريد","istemek","fiil","أريد أن أتعلم بسرعة.","Hızlı öğrenmek istiyorum.");
+add("ar","B1","Fiiller","يفضل","tercih etmek","fiil","أفضل البقاء في المنزل.","Evde kalmayı tercih ederim.");
+add("ar","B1","Fiiller","يحب","sevmek","fiil","أحب قراءة الكتب.","Kitap okumayı seviyorum.");
+add("ar","B1","Fiiller","يكره","nefret etmek","fiil","أكره الانتظار.","Beklemekten nefret ederim.");
+add("ar","B1","Fiiller","يستمتع","keyif almak","fiil","أستمتع بوقتي مع أصدقائي.","Arkadaşlarımla zaman geçirmekten keyif alıyorum.");
+add("ar","B1","Fiiller","يشعر","hissetmek","fiil","أشعر بالتعب اليوم.","Bugün yorgun hissediyorum.");
+add("ar","B1","Fiiller","يخاف","korkmak","fiil","لا أخاف من السفر.","Seyahat etmekten korkmuyorum.");
+add("ar","B1","Fiiller","يقلق","endişelenmek","fiil","لا تقلق بشأن ذلك.","Bunun için endişelenme.");
+add("ar","B1","Fiiller","يثق","güvenmek","fiil","أثق بك.","Sana güveniyorum.");
+add("ar","B1","Fiiller","يحترم","saygı göstermek","fiil","أحترم رأيك.","Fikrine saygı duyuyorum.");
+add("ar","B1","Fiiller","يساعد","yardım etmek","fiil","ساعدني صديقي كثيرا.","Arkadaşım bana çok yardım etti.");
+add("ar","B1","Fiiller","يشارك","katılmak / paylaşmak","fiil","شارك في الاجتماع.","Toplantıya katıldı.");
+add("ar","B1","Fiiller","ينضم","katılmak","fiil","انضم إلى الفريق.","Takıma katıldı.");
+add("ar","B1","Fiiller","يقابل","buluşmak / karşılaşmak","fiil","سأقابل صديقي مساء.","Akşam arkadaşımla buluşacağım.");
+add("ar","B1","Fiiller","يدعو","davet etmek","fiil","دعاني إلى حفلة.","Beni partiye davet etti.");
+add("ar","B1","Fiiller","يزور","ziyaret etmek","fiil","زرت عائلتي أمس.","Dün ailemi ziyaret ettim.");
+add("ar","B1","Fiiller","يتصل","aramak / iletişim kurmak","fiil","سأتصل بك لاحقا.","Seni daha sonra arayacağım.");
+add("ar","B1","Fiiller","يرسل","göndermek","fiil","أرسلت لك رسالة.","Sana bir mesaj gönderdim.");
+add("ar","B1","Fiiller","يستلم","teslim almak","fiil","استلمت الطرد اليوم.","Paketi bugün teslim aldım.");
+add("ar","B1","Fiiller","يحصل على","elde etmek / almak","fiil","حصلت على وظيفة جديدة.","Yeni bir iş buldum.");
+add("ar","B1","Fiiller","يفقد","kaybetmek","fiil","فقدت هاتفي.","Telefonumu kaybettim.");
+add("ar","B1","Fiiller","يجد","bulmak","fiil","وجدت مفاتيحي.","Anahtarlarımı buldum.");
+add("ar","B1","Fiiller","يبحث عن","aramak","fiil","أبحث عن شقة جديدة.","Yeni bir daire arıyorum.");
+// ======================= B1 — SIFATLAR 1 =======================
+add("ar","B1","Sıfat","مهم","önemli","sıfat","هذا موضوع مهم.","Bu önemli bir konu.");
+add("ar","B1","Sıfat","ضروري","gerekli","sıfat","هذا الشيء ضروري.","Bu şey gerekli.");
+add("ar","B1","Sıfat","مفيد","faydalı","sıfat","هذا الكتاب مفيد جدا.","Bu kitap çok faydalı.");
+add("ar","B1","Sıfat","ضار","zararlı","sıfat","التدخين ضار بالصحة.","Sigara içmek sağlığa zararlıdır.");
+add("ar","B1","Sıfat","ممكن","mümkün","sıfat","كل شيء ممكن.","Her şey mümkün.");
+add("ar","B1","Sıfat","مستحيل","imkansız","sıfat","هذا الأمر مستحيل.","Bu şey imkansız.");
+add("ar","B1","Sıfat","صحيح","doğru","sıfat","جوابك صحيح.","Cevabın doğru.");
+add("ar","B1","Sıfat","خاطئ","yanlış","sıfat","هذا الجواب خاطئ.","Bu cevap yanlış.");
+add("ar","B1","Sıfat","واضح","açık / net","sıfat","الشرح واضح.","Açıklama net.");
+add("ar","B1","Sıfat","غامض","belirsiz / gizemli","sıfat","الموقف غامض.","Durum belirsiz.");
+add("ar","B1","Sıfat","بسيط","basit","sıfat","الحل بسيط.","Çözüm basit.");
+add("ar","B1","Sıfat","معقد","karmaşık","sıfat","الموضوع معقد.","Konu karmaşık.");
+add("ar","B1","Sıfat","سهل","kolay","sıfat","الامتحان سهل.","Sınav kolay.");
+add("ar","B1","Sıfat","صعب","zor","sıfat","هذا السؤال صعب.","Bu soru zor.");
+add("ar","B1","Sıfat","سريع","hızlı","sıfat","القطار سريع.","Tren hızlı.");
+add("ar","B1","Sıfat","بطيء","yavaş","sıfat","الإنترنت بطيء.","İnternet yavaş.");
+add("ar","B1","Sıfat","قوي","güçlü","sıfat","هو شخص قوي.","O güçlü bir insan.");
+add("ar","B1","Sıfat","ضعيف","zayıf","sıfat","الإشارة ضعيفة.","Sinyal zayıf.");
+add("ar","B1","Sıfat","ذكي","zeki","sıfat","هو طالب ذكي.","O zeki bir öğrenci.");
+add("ar","B1","Sıfat","غبي","aptal","sıfat","هذا قرار غبي.","Bu aptalca bir karar.");
+add("ar","B1","Sıfat","هادئ","sakin","sıfat","هذا مكان هادئ.","Burası sakin bir yer.");
+add("ar","B1","Sıfat","مزدحم","kalabalık","sıfat","الشارع مزدحم اليوم.","Cadde bugün kalabalık.");
+add("ar","B1","Sıfat","مشغول","meşgul","sıfat","أنا مشغول الآن.","Şu anda meşgulüm.");
+add("ar","B1","Sıfat","متاح","müsait / mevcut","sıfat","هل أنت متاح غدا؟","Yarın müsait misin?");
+add("ar","B1","Sıfat","مناسب","uygun","sıfat","هذا الوقت مناسب لي.","Bu zaman benim için uygun.");
+add("ar","B1","Sıfat","غير مناسب","uygunsuz","sıfat","هذا المكان غير مناسب للأطفال.","Bu yer çocuklar için uygun değil.");
+add("ar","B1","Sıfat","مختلف","farklı","sıfat","لدينا آراء مختلفة.","Farklı görüşlerimiz var.");
+add("ar","B1","Sıfat","مشابه","benzer","sıfat","اللغتان متشابهتان.","İki dil birbirine benziyor.");
+add("ar","B1","Sıfat","خاص","özel","sıfat","هذا يوم خاص.","Bu özel bir gün.");
+add("ar","B1","Sıfat","عام","genel / kamu","sıfat","هذا مكان عام.","Burası halka açık bir yer.");
+// ======================= B1 — SIFATLAR 2 =======================
+add("ar","B1","Sıfat","حقيقي","gerçek","sıfat","هذه قصة حقيقية.","Bu gerçek bir hikaye.");
+add("ar","B1","Sıfat","خيالي","hayali","sıfat","هذا عالم خيالي.","Bu hayali bir dünya.");
+add("ar","B1","Sıfat","طبيعي","doğal","sıfat","هذا أمر طبيعي.","Bu doğal bir şey.");
+add("ar","B1","Sıfat","غريب","garip","sıfat","هذا أمر غريب.","Bu garip bir şey.");
+add("ar","B1","Sıfat","عادي","normal","sıfat","هذا أمر عادي.","Bu normal bir şey.");
+add("ar","B1","Sıfat","مختلف","farklı","sıfat","هذا شيء مختلف.","Bu farklı bir şey.");
+add("ar","B1","Sıfat","مشهور","ünlü","sıfat","هذا مطعم مشهور.","Bu ünlü bir restoran.");
+add("ar","B1","Sıfat","معروف","tanınmış / bilinen","sıfat","هو شخص معروف.","O tanınmış bir kişi.");
+add("ar","B1","Sıfat","مجهول","bilinmeyen","sıfat","المكان مجهول بالنسبة لي.","Burası benim için bilinmeyen bir yer.");
+add("ar","B1","Sıfat","ناجح","başarılı","sıfat","هو رجل ناجح.","O başarılı bir adam.");
+add("ar","B1","Sıfat","فاشل","başarısız","sıfat","المشروع فاشل.","Proje başarısız.");
+add("ar","B1","Sıfat","مستعد","hazır","sıfat","أنا مستعد للامتحان.","Sınava hazırım.");
+add("ar","B1","Sıfat","متأخر","geç / gecikmiş","sıfat","وصل متأخرا.","Geç geldi.");
+add("ar","B1","Sıfat","مبكر","erken","sıfat","استيقظت مبكرا.","Erken uyandım.");
+add("ar","B1","Sıfat","متأكد","emin","sıfat","أنا متأكد من ذلك.","Bundan eminim.");
+add("ar","B1","Sıfat","محتمل","muhtemel","sıfat","من المحتمل أن تمطر.","Yağmur yağması muhtemel.");
+add("ar","B1","Sıfat","ضروري","zorunlu","sıfat","الحضور ضروري.","Katılım zorunludur.");
+add("ar","B1","Sıfat","اختياري","isteğe bağlı","sıfat","هذا النشاط اختياري.","Bu etkinlik isteğe bağlı.");
+add("ar","B1","Sıfat","إيجابي","olumlu","sıfat","كانت نتيجة إيجابية.","Sonuç olumluydu.");
+add("ar","B1","Sıfat","سلبي","olumsuz","sıfat","كان رد فعله سلبيا.","Tepkisi olumsuzdu.");
+add("ar","B1","Sıfat","مفيد","yararlı","sıfat","هذا الدرس مفيد.","Bu ders yararlı.");
+add("ar","B1","Sıfat","ضار","zararlı","sıfat","هذا المنتج ضار.","Bu ürün zararlı.");
+add("ar","B1","Sıfat","آمن","güvenli","sıfat","هذا المكان آمن.","Burası güvenli.");
+add("ar","B1","Sıfat","خطير","tehlikeli","sıfat","الطريق خطير ليلا.","Yol gece tehlikelidir.");
+add("ar","B1","Sıfat","رخيص","ucuz","sıfat","هذا الفندق رخيص.","Bu otel ucuz.");
+add("ar","B1","Sıfat","غالي","pahalı","sıfat","هذا الهاتف غالي.","Bu telefon pahalı.");
+// ======================= B1 — BAĞLAÇLAR VE BAĞLANTI KELİMELERİ =======================
+add("ar","B1","Bağlaç","لأن","çünkü","bağlaç","لم أذهب لأنني كنت مريضا.","Gitmedim çünkü hastaydım.");
+add("ar","B1","Bağlaç","لذلك","bu yüzden","bağlaç","كنت متعبا، لذلك نمت مبكرا.","Yorgundum, bu yüzden erken uyudum.");
+add("ar","B1","Bağlaç","لكن","ama / fakat","bağlaç","أحب المدينة، لكن الحياة غالية.","Şehri seviyorum ama hayat pahalı.");
+add("ar","B1","Bağlaç","مع ذلك","bununla birlikte / yine de","bağlaç","كان الجو سيئا، ومع ذلك خرجنا.","Hava kötüydü, yine de dışarı çıktık.");
+add("ar","B1","Bağlaç","بالرغم من","rağmen","bağlaç","بالرغم من المطر، ذهبنا إلى العمل.","Yağmura rağmen işe gittik.");
+add("ar","B1","Bağlaç","بالإضافة إلى ذلك","buna ek olarak","bağlaç","العمل جيد، بالإضافة إلى ذلك الراتب مرتفع.","İş iyi, buna ek olarak maaş yüksek.");
+add("ar","B1","Bağlaç","من ناحية أخرى","öte yandan","bağlaç","المدينة جميلة، ومن ناحية أخرى هي غالية.","Şehir güzel, öte yandan pahalı.");
+add("ar","B1","Bağlaç","أولا","ilk olarak","zarf","أولا، يجب أن نفهم المشكلة.","İlk olarak sorunu anlamalıyız.");
+add("ar","B1","Bağlaç","ثم","sonra","zarf","تناولنا العشاء ثم ذهبنا إلى المنزل.","Akşam yemeği yedik, sonra eve gittik.");
+add("ar","B1","Bağlaç","بعد ذلك","bundan sonra / ardından","zarf","أنهينا العمل وبعد ذلك خرجنا.","İşi bitirdik, ardından dışarı çıktık.");
+add("ar","B1","Bağlaç","أخيرا","son olarak / nihayet","zarf","وأخيرا وصلنا إلى الفندق.","Sonunda otele vardık.");
+add("ar","B1","Bağlaç","عادة","genellikle","zarf","عادة أذهب إلى العمل بالحافلة.","Genellikle işe otobüsle giderim.");
+add("ar","B1","Bağlaç","غالبا","sıklıkla","zarf","غالبا ما أقرأ في المساء.","Akşamları sık sık okurum.");
+add("ar","B1","Bağlaç","أحيانا","bazen","zarf","أحيانا أعمل من المنزل.","Bazen evden çalışırım.");
+add("ar","B1","Bağlaç","نادرا","nadiren","zarf","نادرا ما أشاهد التلفاز.","Nadiren televizyon izlerim.");
+add("ar","B1","Bağlaç","أبدا","asla / hiçbir zaman","zarf","لا أشرب القهوة أبدا.","Asla kahve içmem.");
+add("ar","B1","Bağlaç","ربما","belki","zarf","ربما أسافر غدا.","Belki yarın seyahat ederim.");
+add("ar","B1","Bağlaç","بالتأكيد","kesinlikle","zarf","سأساعدك بالتأكيد.","Kesinlikle sana yardım edeceğim.");
+add("ar","B1","Bağlaç","فعلا","gerçekten","zarf","هذا فعلا مهم.","Bu gerçekten önemli.");
+add("ar","B1","Bağlaç","خاصة","özellikle","zarf","أحب الفواكه، خاصة التفاح.","Meyveleri, özellikle elmaları severim.");
+// ======================= B1 — SOYUT İSİMLER =======================
+add("ar","B1","Soyut","فكرة","fikir","isim","لدي فكرة جديدة.","Yeni bir fikrim var.");
+add("ar","B1","Soyut","رأي","görüş / fikir","isim","ما رأيك؟","Senin fikrin nedir?");
+add("ar","B1","Soyut","سبب","sebep","isim","ما سبب المشكلة؟","Sorunun sebebi nedir?");
+add("ar","B1","Soyut","نتيجة","sonuç","isim","كانت النتيجة جيدة.","Sonuç iyiydi.");
+add("ar","B1","Soyut","هدف","hedef","isim","هدفي هو تعلم اللغة.","Hedefim dili öğrenmek.");
+add("ar","B1","Soyut","خطة","plan","isim","لدي خطة للمستقبل.","Gelecek için bir planım var.");
+add("ar","B1","Soyut","فرصة","fırsat","isim","هذه فرصة جيدة.","Bu iyi bir fırsat.");
+add("ar","B1","Soyut","مشكلة","sorun","isim","لدينا مشكلة كبيرة.","Büyük bir sorunumuz var.");
+add("ar","B1","Soyut","حل","çözüm","isim","نحتاج إلى حل سريع.","Hızlı bir çözüme ihtiyacımız var.");
+add("ar","B1","Soyut","تجربة","deneyim / tecrübe","isim","كانت تجربة مفيدة.","Faydalı bir deneyimdi.");
+add("ar","B1","Soyut","تغيير","değişiklik","isim","نحتاج إلى تغيير كبير.","Büyük bir değişikliğe ihtiyacımız var.");
+add("ar","B1","Soyut","تقدم","ilerleme","isim","أحرزت تقدما كبيرا.","Büyük ilerleme kaydettim.");
+add("ar","B1","Soyut","نجاح","başarı","isim","أتمنى لك النجاح.","Sana başarı diliyorum.");
+add("ar","B1","Soyut","فشل","başarısızlık","isim","الفشل جزء من التعلم.","Başarısızlık öğrenmenin bir parçasıdır.");
+add("ar","B1","Soyut","مستقبل","gelecek","isim","أفكر في مستقبلي.","Geleceğimi düşünüyorum.");
+add("ar","B1","Soyut","ماضي","geçmiş","isim","لا أريد أن أعيش في الماضي.","Geçmişte yaşamak istemiyorum.");
+add("ar","B1","Soyut","حاضر","şimdi / bugün","isim","يجب أن نعيش في الحاضر.","Şimdiki zamanda yaşamalıyız.");
+add("ar","B1","Soyut","وقت","zaman","isim","ليس لدي وقت كاف.","Yeterli zamanım yok.");
+add("ar","B1","Soyut","خبرة","tecrübe","isim","الخبرة مهمة في العمل.","İş hayatında tecrübe önemlidir.");
+add("ar","B1","Soyut","مسؤولية","sorumluluk","isim","هذه مسؤوليتك.","Bu senin sorumluluğun.");
+add("ar","B1","Soyut","واجب","görev / sorumluluk","isim","من واجبي أن أساعدك.","Sana yardım etmek benim görevim.");
+add("ar","B1","Soyut","حق","hak","isim","لك الحق في السؤال.","Soru sorma hakkın var.");
+add("ar","B1","Soyut","حرية","özgürlük","isim","الحرية مهمة للجميع.","Özgürlük herkes için önemlidir.");
+add("ar","B1","Soyut","قانون","yasa / kanun","isim","يجب احترام القانون.","Yasalara saygı gösterilmelidir.");
+add("ar","B1","Soyut","نظام","sistem","isim","النظام يعمل بشكل جيد.","Sistem iyi çalışıyor.");
+add("ar","B1","Soyut","طريقة","yöntem / yol","isim","هذه طريقة جيدة للتعلم.","Bu iyi bir öğrenme yöntemi.");
+add("ar","B1","Soyut","مستوى","seviye","isim","مستواي في اللغة يتحسن.","Dil seviyem gelişiyor.");
+add("ar","B1","Soyut","نوع","tür","isim","ما نوع هذا الطعام؟","Bu ne tür bir yemek?");
+add("ar","B1","Soyut","شكل","şekil / biçim","isim","هذا الشكل مختلف.","Bu şekil farklı.");
+add("ar","B1","Soyut","مجال","alan","isim","أعمل في مجال التكنولوجيا.","Teknoloji alanında çalışıyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 13
+================================================================ */
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم لمستقبل الإنسان.","Eğitim insanın geleceği için önemlidir.");
+add("ar","B1","Eğitim","مدرسة","okul","isim","أخي يذهب إلى المدرسة كل يوم.","Kardeşim her gün okula gidiyor.");
+add("ar","B1","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Eğitim","كلية","fakülte","isim","أدرس في كلية الهندسة.","Mühendislik fakültesinde okuyorum.");
+add("ar","B1","Eğitim","قسم","bölüm","isim","ما اسم قسمك؟","Bölümünün adı ne?");
+add("ar","B1","Eğitim","طالب","öğrenci","isim","أنا طالب في الجامعة.","Üniversite öğrencisiyim.");
+add("ar","B1","Eğitim","أستاذ","profesör / öğretmen","isim","الأستاذ يشرح الدرس.","Profesör dersi açıklıyor.");
+add("ar","B1","Eğitim","معلم","öğretmen","isim","المعلم يساعد الطلاب.","Öğretmen öğrencilere yardım ediyor.");
+add("ar","B1","Eğitim","درس","ders","isim","عندي درس اليوم.","Bugün dersim var.");
+add("ar","B1","Eğitim","محاضرة","ders / konferans","isim","حضرت المحاضرة صباحا.","Sabah derse katıldım.");
+add("ar","B1","Eğitim","مادة","ders / konu","isim","هذه المادة صعبة.","Bu ders zor.");
+add("ar","B1","Eğitim","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
+add("ar","B1","Eğitim","اختبار","test","isim","أجبت عن جميع أسئلة الاختبار.","Testteki tüm soruları cevapladım.");
+add("ar","B1","Eğitim","واجب","ödev","isim","يجب أن أنهي واجبي.","Ödevimi bitirmeliyim.");
+add("ar","B1","Eğitim","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","Eğitim","بحث","araştırma","isim","أكتب بحثا عن التكنولوجيا.","Teknoloji hakkında bir araştırma yazıyorum.");
+add("ar","B1","Eğitim","شهادة","sertifika / diploma","isim","حصلت على شهادة جديدة.","Yeni bir sertifika aldım.");
+add("ar","B1","Eğitim","درجة","not / derece","isim","حصلت على درجة عالية.","Yüksek bir not aldım.");
+add("ar","B1","Eğitim","علامة","not / puan","isim","علامتي في الامتحان جيدة.","Sınav notum iyi.");
+add("ar","B1","Eğitim","معرفة","bilgi","isim","لديه معرفة واسعة في هذا المجال.","Bu alanda geniş bilgisi var.");
+add("ar","B1","Eğitim","مهارة","beceri","isim","أريد تطوير مهاراتي.","Becerilerimi geliştirmek istiyorum.");
+add("ar","B1","Eğitim","لغة","dil","isim","أتعلم لغة جديدة.","Yeni bir dil öğreniyorum.");
+add("ar","B1","Eğitim","مفردات","kelime bilgisi","isim","أحاول زيادة مفرداتي.","Kelime bilgimi artırmaya çalışıyorum.");
+add("ar","B1","Eğitim","قواعد","dilbilgisi","isim","أدرس قواعد اللغة.","Dilbilgisi çalışıyorum.");
+add("ar","B1","Eğitim","نطق","telaffuz","isim","أريد تحسين نطقي.","Telaffuzumu geliştirmek istiyorum.");
+add("ar","B1","Eğitim","قراءة","okuma","isim","أحب القراءة.","Okumayı seviyorum.");
+add("ar","B1","Eğitim","كتابة","yazma","isim","الكتابة تساعدني على التعلم.","Yazmak öğrenmeme yardımcı oluyor.");
+add("ar","B1","Eğitim","استماع","dinleme","isim","أتمرن على الاستماع كل يوم.","Her gün dinleme çalışıyorum.");
+add("ar","B1","Eğitim","محادثة","konuşma","isim","أريد ممارسة المحادثة.","Konuşma pratiği yapmak istiyorum.");
+add("ar","B1","Eğitim","تعلم","öğrenme","isim","التعلم يحتاج إلى وقت.","Öğrenmek zaman gerektirir.");
+// ======================= B1 — EĞİTİM FİİLLERİ =======================
+add("ar","B1","Eğitim Fiilleri","يدرس","ders çalışmak / okumak","fiil","أدرس اللغة العربية كل يوم.","Her gün Arapça çalışıyorum.");
+add("ar","B1","Eğitim Fiilleri","يتعلم","öğrenmek","fiil","أتعلم كلمات جديدة.","Yeni kelimeler öğreniyorum.");
+add("ar","B1","Eğitim Fiilleri","يتدرب","pratik yapmak","fiil","أتدرب على التحدث يوميا.","Her gün konuşma pratiği yapıyorum.");
+add("ar","B1","Eğitim Fiilleri","يتمرن","alıştırma yapmak","fiil","أتمرن على القواعد.","Dilbilgisi alıştırması yapıyorum.");
+add("ar","B1","Eğitim Fiilleri","يراجع","tekrar etmek / gözden geçirmek","fiil","أراجع الدرس قبل الامتحان.","Sınavdan önce dersi tekrar ediyorum.");
+add("ar","B1","Eğitim Fiilleri","يحفظ","ezberlemek","fiil","أحفظ عشر كلمات جديدة.","On yeni kelime ezberliyorum.");
+add("ar","B1","Eğitim Fiilleri","يقرأ","okumak","fiil","أقرأ كتابا باللغة العربية.","Arapça bir kitap okuyorum.");
+add("ar","B1","Eğitim Fiilleri","يكتب","yazmak","fiil","أكتب ملاحظاتي في الدفتر.","Notlarımı deftere yazıyorum.");
+add("ar","B1","Eğitim Fiilleri","يترجم","çevirmek","fiil","أترجم النص إلى التركية.","Metni Türkçeye çeviriyorum.");
+add("ar","B1","Eğitim Fiilleri","يصحح","düzeltmek","fiil","المعلم يصحح أخطائي.","Öğretmen hatalarımı düzeltiyor.");
+add("ar","B1","Eğitim Fiilleri","يشرح","açıklamak","fiil","اشرح لي هذه القاعدة.","Bu kuralı bana açıkla.");
+add("ar","B1","Eğitim Fiilleri","يناقش","tartışmak","fiil","ناقشنا الموضوع في الصف.","Konuyu sınıfta tartıştık.");
+add("ar","B1","Eğitim Fiilleri","يشارك","katılmak","fiil","يشارك في الدرس بنشاط.","Derse aktif olarak katılıyor.");
+add("ar","B1","Eğitim Fiilleri","ينجح","başarmak","fiil","نجحت في الامتحان.","Sınavı geçtim.");
+add("ar","B1","Eğitim Fiilleri","يرسب","sınavda kalmak","fiil","رسب في الامتحان.","Sınavda kaldı.");
+add("ar","B1","Eğitim Fiilleri","يتخرج","mezun olmak","fiil","سأتخرج من الجامعة العام المقبل.","Gelecek yıl üniversiteden mezun olacağım.");
+add("ar","B1","Eğitim Fiilleri","يتخصص","uzmanlaşmak / bölüm okumak","fiil","أتخصص في علوم الحاسوب.","Bilgisayar bilimleri alanında uzmanlaşıyorum.");
+add("ar","B1","Eğitim Fiilleri","يطور","geliştirmek","fiil","أريد تطوير مهاراتي.","Becerilerimi geliştirmek istiyorum.");
+// ======================= B1 — İŞ HAYATI =======================
+add("ar","B1","İş","عمل","iş / çalışma","isim","أحب عملي.","İşimi seviyorum.");
+add("ar","B1","İş","وظيفة","iş / meslek","isim","أبحث عن وظيفة جديدة.","Yeni bir iş arıyorum.");
+add("ar","B1","İş","شركة","şirket","isim","أعمل في شركة كبيرة.","Büyük bir şirkette çalışıyorum.");
+add("ar","B1","İş","مكتب","ofis","isim","مكتبي في الطابق الثاني.","Ofisim ikinci katta.");
+add("ar","B1","İş","موظف","çalışan","isim","هو موظف في البنك.","Bankada çalışan biri.");
+add("ar","B1","İş","مدير","müdür","isim","تحدثت مع المدير.","Müdürle konuştum.");
+add("ar","B1","İş","زميل","iş arkadaşı","isim","زميلي يساعدني كثيرا.","İş arkadaşım bana çok yardım ediyor.");
+add("ar","B1","İş","فريق","ekip","isim","نعمل في فريق واحد.","Aynı ekipte çalışıyoruz.");
+add("ar","B1","İş","اجتماع","toplantı","isim","لدي اجتماع في الساعة العاشرة.","Saat onda toplantım var.");
+add("ar","B1","İş","مقابلة","mülakat","isim","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","İş","راتب","maaş","isim","راتبي جيد.","Maaşım iyi.");
+add("ar","B1","İş","خبرة","deneyim","isim","لدي خبرة في هذا المجال.","Bu alanda deneyimim var.");
+add("ar","B1","İş","مهارة","beceri","isim","هذه مهارة مهمة للعمل.","Bu iş için önemli bir beceri.");
+add("ar","B1","İş","مسؤولية","sorumluluk","isim","هذه مسؤوليتي.","Bu benim sorumluluğum.");
+add("ar","B1","İş","مشروع","proje","isim","هذا مشروع مهم للشركة.","Bu şirket için önemli bir proje.");
+add("ar","B1","İş","موعد نهائي","son teslim tarihi","isim","الموعد النهائي غدا.","Son teslim tarihi yarın.");
+add("ar","B1","İş","دوام","mesai / çalışma süresi","isim","دوامي يبدأ الساعة الثامنة.","Mesaim saat sekizde başlıyor.");
+add("ar","B1","İş","إجازة","izin / tatil","isim","سآخذ إجازة الأسبوع المقبل.","Gelecek hafta izin alacağım.");
+add("ar","B1","İş","استراحة","mola","isim","أحتاج إلى استراحة قصيرة.","Kısa bir molaya ihtiyacım var.");
+add("ar","B1","İş","تقاعد","emeklilik","isim","يفكر في التقاعد.","Emekli olmayı düşünüyor.");
+add("ar","B1","İş","مهنة","meslek / kariyer","isim","اخترت مهنة في مجال التكنولوجيا.","Teknoloji alanında bir kariyer seçtim.");
+add("ar","B1","İş","مسار مهني","kariyer yolu","isim","أفكر في مساري المهني.","Kariyer yolumu düşünüyorum.");
+// ======================= B1 — İŞ FİİLLERİ =======================
+add("ar","B1","İş Fiilleri","يعمل","çalışmak","fiil","أعمل من المنزل اليوم.","Bugün evden çalışıyorum.");
+add("ar","B1","İş Fiilleri","يوظف","işe almak","fiil","الشركة توظف موظفين جدد.","Şirket yeni çalışanlar işe alıyor.");
+add("ar","B1","İş Fiilleri","يقدم","başvurmak / sunmak","fiil","قدمت طلبا للعمل.","İş başvurusu yaptım.");
+add("ar","B1","İş Fiilleri","يتقدم","başvurmak / ilerlemek","fiil","تقدمت لوظيفة جديدة.","Yeni bir işe başvurdum.");
+add("ar","B1","İş Fiilleri","يكسب","kazanmak","fiil","يكسب راتبا جيدا.","İyi bir maaş kazanıyor.");
+add("ar","B1","İş Fiilleri","يكمل","tamamlamak","fiil","أكملت المشروع في الوقت المحدد.","Projeyi zamanında tamamladım.");
+add("ar","B1","İş Fiilleri","ينجز","bitirmek / tamamlamak","fiil","أنجزت جميع المهام.","Tüm görevleri tamamladım.");
+add("ar","B1","İş Fiilleri","يدير","yönetmek","fiil","يدير فريقا كبيرا.","Büyük bir ekibi yönetiyor.");
+add("ar","B1","İş Fiilleri","يقود","yönetmek / liderlik etmek","fiil","يقود المشروع بنجاح.","Projeyi başarıyla yönetiyor.");
+add("ar","B1","İş Fiilleri","ينظم","düzenlemek","fiil","أنظم وقتي بشكل جيد.","Zamanımı iyi organize ediyorum.");
+add("ar","B1","İş Fiilleri","يتعاون","işbirliği yapmak","fiil","نتعاون مع شركات أخرى.","Diğer şirketlerle işbirliği yapıyoruz.");
+add("ar","B1","İş Fiilleri","يتواصل","iletişim kurmak","fiil","أتواصل مع العملاء يوميا.","Müşterilerle her gün iletişim kuruyorum.");
+add("ar","B1","İş Fiilleri","يرسل","göndermek","fiil","أرسلت البريد الإلكتروني للمدير.","E-postayı müdüre gönderdim.");
+add("ar","B1","İş Fiilleri","يستقبل","karşılamak / almak","fiil","نستقبل العملاء في المكتب.","Ofiste müşterileri karşılıyoruz.");
+add("ar","B1","İş Fiilleri","يقدم طلبا","başvuru yapmak","fiil","قدمت طلبا للحصول على الوظيفة.","İş için başvuru yaptım.");
+add("ar","B1","İş Fiilleri","يستقيل","istifa etmek","fiil","استقال من وظيفته.","İşinden istifa etti.");
+add("ar","B1","İş Fiilleri","يفصل","işten çıkarmak","fiil","فصلت الشركة بعض الموظفين.","Şirket bazı çalışanları işten çıkardı.");
+add("ar","B1","İş Fiilleri","يرقي","terfi ettirmek","fiil","تمت ترقيته إلى مدير.","Müdürlüğe terfi etti.");
+add("ar","B1","İş Fiilleri","يتقاعد","emekli olmak","fiil","سيتقاعد العام المقبل.","Gelecek yıl emekli olacak.");
+// ======================= B1 — TEKNOLOJİ =======================
+add("ar","B1","Teknoloji","تكنولوجيا","teknoloji","isim","التكنولوجيا تتطور بسرعة.","Teknoloji hızla gelişiyor.");
+add("ar","B1","Teknoloji","حاسوب","bilgisayar","isim","أستخدم الحاسوب في عملي.","İşimde bilgisayar kullanıyorum.");
+add("ar","B1","Teknoloji","هاتف ذكي","akıllı telefon","isim","اشتريت هاتفا ذكيا جديدا.","Yeni bir akıllı telefon aldım.");
+add("ar","B1","Teknoloji","تطبيق","uygulama","isim","أستخدم هذا التطبيق كل يوم.","Bu uygulamayı her gün kullanıyorum.");
+add("ar","B1","Teknoloji","برنامج","program / yazılım","isim","هذا البرنامج سهل الاستخدام.","Bu programın kullanımı kolay.");
+add("ar","B1","Teknoloji","موقع إلكتروني","web sitesi","isim","زرت الموقع الإلكتروني.","Web sitesini ziyaret ettim.");
+add("ar","B1","Teknoloji","صفحة","sayfa","isim","افتح الصفحة الرئيسية.","Ana sayfayı aç.");
+add("ar","B1","Teknoloji","حساب","hesap","isim","لدي حساب على هذا الموقع.","Bu web sitesinde hesabım var.");
+add("ar","B1","Teknoloji","كلمة مرور","şifre","isim","نسيت كلمة المرور.","Şifremi unuttum.");
+add("ar","B1","Teknoloji","ملف","dosya","isim","أرسلت الملف عبر البريد الإلكتروني.","Dosyayı e-posta ile gönderdim.");
+add("ar","B1","Teknoloji","مجلد","klasör","isim","وضعت الملف في المجلد.","Dosyayı klasöre koydum.");
+add("ar","B1","Teknoloji","صورة","resim","isim","حملت صورة جديدة.","Yeni bir fotoğraf yükledim.");
+add("ar","B1","Teknoloji","فيديو","video","isim","شاهدت فيديو تعليمي.","Eğitici bir video izledim.");
+add("ar","B1","Teknoloji","شبكة","ağ","isim","الشبكة لا تعمل.","Ağ çalışmıyor.");
+add("ar","B1","Teknoloji","إنترنت","internet","isim","الإنترنت بطيء اليوم.","İnternet bugün yavaş.");
+add("ar","B1","Teknoloji","اتصال","bağlantı","isim","الاتصال ضعيف.","Bağlantı zayıf.");
+add("ar","B1","Teknoloji","بيانات","veri","isim","يجب حماية البيانات.","Veriler korunmalıdır.");
+add("ar","B1","Teknoloji","معلومات","bilgi","isim","أحتاج إلى مزيد من المعلومات.","Daha fazla bilgiye ihtiyacım var.");
+add("ar","B1","Teknoloji","خصوصية","gizlilik","isim","الخصوصية مهمة على الإنترنت.","İnternette gizlilik önemlidir.");
+add("ar","B1","Teknoloji","أمان","güvenlik","isim","أمان الحساب مهم.","Hesap güvenliği önemlidir.");
+add("ar","B1","Teknoloji","ذكاء اصطناعي","yapay zeka","isim","الذكاء الاصطناعي يتطور بسرعة.","Yapay zeka hızla gelişiyor.");
+// ======================= B1 — TEKNOLOJİ FİİLLERİ =======================
+add("ar","B1","Teknoloji Fiilleri","ينزل","indirmek","fiil","أنزلت التطبيق على هاتفي.","Uygulamayı telefonuma indirdim.");
+add("ar","B1","Teknoloji Fiilleri","يحمل","yüklemek","fiil","حملت الملف على الموقع.","Dosyayı web sitesine yükledim.");
+add("ar","B1","Teknoloji Fiilleri","يفتح","açmak","fiil","افتح التطبيق.","Uygulamayı aç.");
+add("ar","B1","Teknoloji Fiilleri","يغلق","kapatmak","fiil","أغلق الحاسوب.","Bilgisayarı kapat.");
+add("ar","B1","Teknoloji Fiilleri","يحذف","silmek","fiil","حذفت الملف القديم.","Eski dosyayı sildim.");
+add("ar","B1","Teknoloji Fiilleri","يحفظ","kaydetmek","fiil","احفظ الملف قبل الخروج.","Çıkmadan önce dosyayı kaydet.");
+add("ar","B1","Teknoloji Fiilleri","ينسخ","kopyalamak","fiil","انسخ النص هنا.","Metni buraya kopyala.");
+add("ar","B1","Teknoloji Fiilleri","يلصق","yapıştırmak","fiil","ألصق النص في الصفحة.","Metni sayfaya yapıştırıyorum.");
+add("ar","B1","Teknoloji Fiilleri","يبحث","aramak / araştırmak","fiil","أبحث عن المعلومات على الإنترنت.","İnternette bilgi arıyorum.");
+add("ar","B1","Teknoloji Fiilleri","يتصفح","internette gezinmek","fiil","أتصفح الإنترنت في المساء.","Akşamları internette geziyorum.");
+add("ar","B1","Teknoloji Fiilleri","يتصل","bağlanmak","fiil","لا أستطيع الاتصال بالإنترنت.","İnternete bağlanamıyorum.");
+add("ar","B1","Teknoloji Fiilleri","يسجل","kayıt olmak / kaydetmek","fiil","سجلت حسابا جديدا.","Yeni bir hesap oluşturdum.");
+add("ar","B1","Teknoloji Fiilleri","يسجل الدخول","giriş yapmak","fiil","سجل الدخول إلى حسابك.","Hesabına giriş yap.");
+add("ar","B1","Teknoloji Fiilleri","يسجل الخروج","çıkış yapmak","fiil","لا تنس تسجيل الخروج.","Çıkış yapmayı unutma.");
+add("ar","B1","Teknoloji Fiilleri","يشارك","paylaşmak","fiil","شارك الصورة مع أصدقائك.","Fotoğrafı arkadaşlarınla paylaş.");
+// ======================= B1 — İLETİŞİM =======================
+add("ar","B1","İletişim","اتصال","iletişim","isim","التواصل الجيد مهم في العمل.","İyi iletişim işte önemlidir.");
+add("ar","B1","İletişim","رسالة","mesaj","isim","أرسلت لك رسالة.","Sana bir mesaj gönderdim.");
+add("ar","B1","İletişim","بريد إلكتروني","e-posta","isim","أرسلت بريدا إلكترونيا.","Bir e-posta gönderdim.");
+add("ar","B1","İletişim","مكالمة","arama / telefon görüşmesi","isim","تلقيت مكالمة من المدير.","Müdürden bir telefon aldım.");
+add("ar","B1","İletişim","مكالمة فيديو","görüntülü arama","isim","لدينا مكالمة فيديو الليلة.","Bu gece görüntülü görüşmemiz var.");
+add("ar","B1","İletişim","محادثة","sohbet","isim","كانت محادثة ممتعة.","Eğlenceli bir sohbetti.");
+add("ar","B1","İletişim","نقاش","tartışma","isim","كان لدينا نقاش طويل.","Uzun bir tartışmamız oldu.");
+add("ar","B1","İletişim","معلومة","bilgi","isim","أعطني هذه المعلومة.","Bana bu bilgiyi ver.");
+add("ar","B1","İletişim","خبر","haber","isim","سمعت خبرا جديدا.","Yeni bir haber duydum.");
+add("ar","B1","İletişim","إعلان","duyuru / reklam","isim","رأيت إعلانا على الإنترنت.","İnternette bir reklam gördüm.");
+add("ar","B1","İletişim","وسيلة إعلام","medya","isim","أتابع وسائل الإعلام يوميا.","Medyayı her gün takip ediyorum.");
+add("ar","B1","İletişim","صحيفة","gazete","isim","أقرأ الصحيفة كل صباح.","Her sabah gazete okuyorum.");
+add("ar","B1","İletişim","مجلة","dergi","isim","اشتريت مجلة جديدة.","Yeni bir dergi aldım.");
+add("ar","B1","İletişim","خبر عاجل","son dakika haberi","isim","هذا خبر عاجل.","Bu son dakika haberi.");
+add("ar","B1","İletişim","رأي","görüş","isim","أحترم رأيك.","Fikrine saygı duyuyorum.");
+add("ar","B1","İletişim","حقيقة","gerçek","isim","أريد أن أعرف الحقيقة.","Gerçeği bilmek istiyorum.");
+add("ar","B1","İletişim","كذبة","yalan","isim","لا أحب الكذب.","Yalan söylemeyi sevmiyorum.");
+add("ar","B1","İletişim","وعد","söz / vaat","isim","وعدني أن يأتي.","Geleceğine söz verdi.");
+add("ar","B1","İletişim","نصيحة","tavsiye","isim","أعطني نصيحة.","Bana tavsiye ver.");
+add("ar","B1","İletişim","اقتراح","öneri","isim","لدي اقتراح جيد.","İyi bir önerim var.");
+// ======================= B1 — İLETİŞİM FİİLLERİ =======================
+add("ar","B1","İletişim Fiilleri","يتواصل","iletişim kurmak","fiil","أتواصل مع أصدقائي يوميا.","Arkadaşlarımla her gün iletişim kuruyorum.");
+add("ar","B1","İletişim Fiilleri","يتحدث","konuşmak","fiil","تحدثنا عن المشكلة.","Sorun hakkında konuştuk.");
+add("ar","B1","İletişim Fiilleri","يناقش","tartışmak","fiil","ناقشنا الموضوع بهدوء.","Konuyu sakin bir şekilde tartıştık.");
+add("ar","B1","İletişim Fiilleri","يسأل","sormak","fiil","سألت المعلم عن الدرس.","Öğretmene ders hakkında sordum.");
+add("ar","B1","İletişim Fiilleri","يجيب","cevaplamak","fiil","أجاب عن سؤالي.","Sorumu cevapladı.");
+add("ar","B1","İletişim Fiilleri","يشرح","açıklamak","fiil","شرح لي المشكلة.","Sorunu bana açıkladı.");
+add("ar","B1","İletişim Fiilleri","يقترح","önermek","fiil","اقترح فكرة جديدة.","Yeni bir fikir önerdi.");
+add("ar","B1","İletişim Fiilleri","ينصح","tavsiye etmek","fiil","أنصحك بزيارة الطبيب.","Doktora gitmeni tavsiye ederim.");
+add("ar","B1","İletişim Fiilleri","يحذر","uyarmak","fiil","حذرني من الخطر.","Beni tehlikeye karşı uyardı.");
+add("ar","B1","İletişim Fiilleri","يوافق","katılmak / kabul etmek","fiil","أوافق على اقتراحك.","Önerine katılıyorum.");
+add("ar","B1","İletişim Fiilleri","يعترض","itiraz etmek","fiil","اعترض على القرار.","Karara itiraz etti.");
+add("ar","B1","İletişim Fiilleri","يؤكد","doğrulamak / teyit etmek","fiil","أكد الموعد عبر البريد الإلكتروني.","Tarihi e-posta ile teyit etti.");
+add("ar","B1","İletişim Fiilleri","ينكر","inkar etmek","fiil","أنكر أنه فعل ذلك.","Bunu yaptığını inkar etti.");
+add("ar","B1","İletişim Fiilleri","يصف","tanımlamak / tarif etmek","fiil","وصف المكان بالتفصيل.","Yeri ayrıntılı bir şekilde tarif etti.");
+add("ar","B1","İletişim Fiilleri","يعبر عن","ifade etmek","fiil","يعبر عن رأيه بوضوح.","Fikrini açıkça ifade ediyor.");
+/* ================================================================
+   ARAPÇA B1 — PART 14
+================================================================ */
+// ======================= B1 — GÜNLÜK YAŞAM =======================
+add("ar","B1","Günlük Yaşam","حياة","hayat / yaşam","isim","الحياة في المدينة مختلفة.","Şehirdeki yaşam farklı.");
+add("ar","B1","Günlük Yaşam","روتين","rutin","isim","لدي روتين يومي بسيط.","Basit bir günlük rutinim var.");
+add("ar","B1","Günlük Yaşam","عادة","alışkanlık","isim","لدي عادة جيدة.","İyi bir alışkanlığım var.");
+add("ar","B1","Günlük Yaşam","نشاط","aktivite","isim","أمارس نشاطا رياضيا كل يوم.","Her gün sportif bir aktivite yapıyorum.");
+add("ar","B1","Günlük Yaşam","راحة","dinlenme","isim","أحتاج إلى بعض الراحة.","Biraz dinlenmeye ihtiyacım var.");
+add("ar","B1","Günlük Yaşam","وقت فراغ","boş zaman","isim","ماذا تفعل في وقت فراغك؟","Boş zamanında ne yaparsın?");
+add("ar","B1","Günlük Yaşam","موعد","randevu","isim","لدي موعد مع الطبيب.","Doktorla randevum var.");
+add("ar","B1","Günlük Yaşam","مناسبة","etkinlik / özel gün","isim","هذه مناسبة مهمة.","Bu önemli bir etkinlik.");
+add("ar","B1","Günlük Yaşam","حفلة","parti","isim","سنقيم حفلة غدا.","Yarın parti düzenleyeceğiz.");
+add("ar","B1","Günlük Yaşam","رحلة","gezi / seyahat","isim","كانت الرحلة ممتعة.","Gezi eğlenceliydi.");
+add("ar","B1","Günlük Yaşam","عطلة","tatil","isim","سأسافر في العطلة.","Tatilde seyahat edeceğim.");
+add("ar","B1","Günlük Yaşam","نزهة","gezinti","isim","ذهبنا في نزهة قصيرة.","Kısa bir gezintiye çıktık.");
+add("ar","B1","Günlük Yaşam","زيارة","ziyaret","isim","كانت زيارة عائلية جميلة.","Güzel bir aile ziyaretiydi.");
+add("ar","B1","Günlük Yaşam","دعوة","davet","isim","تلقيت دعوة إلى حفلة.","Bir partiye davet aldım.");
+add("ar","B1","Günlük Yaşam","احتفال","kutlama","isim","كان هناك احتفال كبير.","Büyük bir kutlama vardı.");
+add("ar","B1","Günlük Yaşam","مناسبة خاصة","özel gün","isim","اليوم مناسبة خاصة.","Bugün özel bir gün.");
+add("ar","B1","Günlük Yaşam","قرار","karar","isim","اتخذت قرارا مهما.","Önemli bir karar verdim.");
+add("ar","B1","Günlük Yaşam","اختيار","seçim / tercih","isim","هذا اختيار جيد.","Bu iyi bir seçim.");
+add("ar","B1","Günlük Yaşam","فرصة","fırsat","isim","هذه فرصة لا تتكرر.","Bu tekrarlanmayacak bir fırsat.");
+add("ar","B1","Günlük Yaşam","تجربة","deneyim","isim","كانت تجربة لا تنسى.","Unutulmaz bir deneyimdi.");
+// ======================= B1 — GÜNLÜK YAŞAM FİİLLERİ =======================
+add("ar","B1","Günlük Fiiller","يستيقظ","uyanmak","fiil","أستيقظ في الساعة السابعة.","Saat yedide uyanıyorum.");
+add("ar","B1","Günlük Fiiller","ينام","uyumak","fiil","أنام مبكرا في أيام العمل.","İş günlerinde erken uyurum.");
+add("ar","B1","Günlük Fiiller","يستريح","dinlenmek","fiil","أستريح بعد العمل.","İşten sonra dinleniyorum.");
+add("ar","B1","Günlük Fiiller","يستحم","duş almak / yıkanmak","fiil","أستحم كل صباح.","Her sabah duş alırım.");
+add("ar","B1","Günlük Fiiller","يرتدي","giymek","fiil","ماذا سترتدي اليوم؟","Bugün ne giyeceksin?");
+add("ar","B1","Günlük Fiiller","يخلع","çıkarmak","fiil","خلعت حذائي.","Ayakkabılarımı çıkardım.");
+add("ar","B1","Günlük Fiiller","يطبخ","yemek pişirmek","fiil","أطبخ العشاء في المنزل.","Akşam yemeğini evde pişiriyorum.");
+add("ar","B1","Günlük Fiiller","ينظف","temizlemek","fiil","أنظف غرفتي كل أسبوع.","Odamı her hafta temizlerim.");
+add("ar","B1","Günlük Fiiller","يغسل","yıkamak","fiil","أغسل يدي قبل الطعام.","Yemekten önce ellerimi yıkarım.");
+add("ar","B1","Günlük Fiiller","يشتري","satın almak","fiil","أشتري الطعام من السوق.","Yiyecekleri marketten alıyorum.");
+add("ar","B1","Günlük Fiiller","يبيع","satmak","fiil","يبيع المنتجات عبر الإنترنت.","Ürünleri internet üzerinden satıyor.");
+add("ar","B1","Günlük Fiiller","يدفع","ödemek","fiil","دفعت الفاتورة.","Faturayı ödedim.");
+add("ar","B1","Günlük Fiiller","يوفر","tasarruf etmek","fiil","أوفر المال للسفر.","Seyahat için para biriktiriyorum.");
+add("ar","B1","Günlük Fiiller","ينفق","harcamak","fiil","أنفق الكثير من المال على الطعام.","Yemeğe çok para harcıyorum.");
+add("ar","B1","Günlük Fiiller","يستأجر","kiralamak","fiil","استأجرت شقة في المدينة.","Şehirde bir daire kiraladım.");
+add("ar","B1","Günlük Fiiller","يسكن","ikamet etmek / yaşamak","fiil","أسكن بالقرب من الجامعة.","Üniversitenin yakınında yaşıyorum.");
+add("ar","B1","Günlük Fiiller","ينتقل","taşınmak","fiil","سأنتقل إلى مدينة جديدة.","Yeni bir şehre taşınacağım.");
+add("ar","B1","Günlük Fiiller","يعتاد على","alışmak","fiil","أحاول أن أعتاد على الحياة الجديدة.","Yeni hayata alışmaya çalışıyorum.");
+add("ar","B1","Günlük Fiiller","يستمر","devam etmek","fiil","استمر في العمل.","Çalışmaya devam etti.");
+add("ar","B1","Günlük Fiiller","يتوقف عن","bırakmak / durmak","fiil","توقف عن التدخين.","Sigara içmeyi bıraktı.");
+// ======================= B1 — SEYAHAT =======================
+add("ar","B1","Seyahat","سفر","seyahat","isim","أحب السفر كثيرا.","Seyahat etmeyi çok seviyorum.");
+add("ar","B1","Seyahat","رحلة","seyahat / gezi","isim","خططنا لرحلة إلى أوروبا.","Avrupa'ya bir gezi planladık.");
+add("ar","B1","Seyahat","سياحة","turizm","isim","السياحة مهمة للاقتصاد.","Turizm ekonomi için önemlidir.");
+add("ar","B1","Seyahat","سائح","turist","isim","المدينة مليئة بالسياح.","Şehir turistlerle dolu.");
+add("ar","B1","Seyahat","وجهة","destinasyon","isim","ما هي وجهتك القادمة؟","Bir sonraki destinasyonun neresi?");
+add("ar","B1","Seyahat","بلد","ülke","isim","أريد زيارة بلد جديد.","Yeni bir ülke ziyaret etmek istiyorum.");
+add("ar","B1","Seyahat","مدينة","şehir","isim","هذه مدينة جميلة.","Bu güzel bir şehir.");
+add("ar","B1","Seyahat","قرية","köy","isim","زرت قرية صغيرة.","Küçük bir köy ziyaret ettim.");
+add("ar","B1","Seyahat","مطار","havaalanı","isim","وصلت إلى المطار مبكرا.","Havaalanına erken geldim.");
+add("ar","B1","Seyahat","محطة","istasyon","isim","نلتقي أمام المحطة.","İstasyonun önünde buluşuyoruz.");
+add("ar","B1","Seyahat","موقف","durak","isim","الحافلة تتوقف عند هذا الموقف.","Otobüs bu durakta duruyor.");
+add("ar","B1","Seyahat","تذكرة","bilet","isim","اشتريت تذكرة ذهاب وعودة.","Gidiş-dönüş bileti aldım.");
+add("ar","B1","Seyahat","جواز سفر","pasaport","isim","لا تنس جواز سفرك.","Pasaportunu unutma.");
+add("ar","B1","Seyahat","تأشيرة","vize","isim","أحتاج إلى تأشيرة للسفر.","Seyahat etmek için vizeye ihtiyacım var.");
+add("ar","B1","Seyahat","حقيبة","çanta / bavul","isim","حقيبتي ثقيلة.","Çantam ağır.");
+add("ar","B1","Seyahat","أمتعة","bagaj","isim","أين يمكنني استلام أمتعتي؟","Bagajımı nereden alabilirim?");
+add("ar","B1","Seyahat","رحلة جوية","uçuş","isim","رحلتي الجوية تأخرت.","Uçuşum gecikti.");
+add("ar","B1","Seyahat","إقلاع","kalkış","isim","موعد الإقلاع الساعة التاسعة.","Kalkış saati dokuz.");
+add("ar","B1","Seyahat","هبوط","iniş","isim","موعد الهبوط الساعة الثالثة.","İniş saati üç.");
+add("ar","B1","Seyahat","بوابة","kapı / gate","isim","أين بوابة الرحلة؟","Uçuşun kapısı nerede?");
+add("ar","B1","Seyahat","مقعد","koltuk","isim","مقعدي بجانب النافذة.","Koltuk numaram pencerenin yanında.");
+add("ar","B1","Seyahat","نافذة","pencere","isim","أريد مقعدا بجانب النافذة.","Pencere kenarında bir koltuk istiyorum.");
+add("ar","B1","Seyahat","ممر","koridor","isim","أفضل الجلوس بجانب الممر.","Koridor tarafında oturmayı tercih ederim.");
+add("ar","B1","Seyahat","خريطة","harita","isim","أين الخريطة؟","Harita nerede?");
+add("ar","B1","Seyahat","دليل سياحي","turist rehberi","isim","اشتريت دليلا سياحيا.","Turist rehberi satın aldım.");
+// ======================= B1 — SEYAHAT FİİLLERİ =======================
+add("ar","B1","Seyahat Fiilleri","يسافر","seyahat etmek","fiil","أسافر كثيرا بسبب عملي.","İşim nedeniyle çok seyahat ediyorum.");
+add("ar","B1","Seyahat Fiilleri","يحجز","rezervasyon yapmak","fiil","حجزت غرفة في الفندق.","Otelde bir oda rezerve ettim.");
+add("ar","B1","Seyahat Fiilleri","يصل","varmak","fiil","وصلنا إلى المدينة مساء.","Akşam şehre vardık.");
+add("ar","B1","Seyahat Fiilleri","يغادر","ayrılmak","fiil","سنغادر غدا صباحا.","Yarın sabah ayrılacağız.");
+add("ar","B1","Seyahat Fiilleri","يركب","binmek","fiil","ركبت الحافلة إلى المركز.","Merkeze otobüsle gittim.");
+add("ar","B1","Seyahat Fiilleri","ينزل","inmek","fiil","نزلت من القطار.","Trenden indim.");
+add("ar","B1","Seyahat Fiilleri","يستقل","binmek","fiil","استقللت الحافلة إلى المطار.","Havaalanına otobüsle gittim.");
+add("ar","B1","Seyahat Fiilleri","يقود","araba kullanmak","fiil","أقود السيارة كل يوم.","Her gün araba kullanıyorum.");
+add("ar","B1","Seyahat Fiilleri","يستأجر","kiralamak","fiil","استأجرنا سيارة في المطار.","Havaalanında araba kiraladık.");
+add("ar","B1","Seyahat Fiilleri","يستكشف","keşfetmek","fiil","أحب استكشاف المدن الجديدة.","Yeni şehirleri keşfetmeyi seviyorum.");
+add("ar","B1","Seyahat Fiilleri","يزور","ziyaret etmek","fiil","زرت متحفا مشهورا.","Ünlü bir müze ziyaret ettim.");
+add("ar","B1","Seyahat Fiilleri","يتجول","gezmek","fiil","تجولنا في المدينة القديمة.","Eski şehirde gezdik.");
+add("ar","B1","Seyahat Fiilleri","يضيع","kaybolmak","fiil","ضللت الطريق في المدينة.","Şehirde yolumu kaybettim.");
+add("ar","B1","Seyahat Fiilleri","يتبع","takip etmek","fiil","اتبع الخريطة.","Haritayı takip et.");
+add("ar","B1","Seyahat Fiilleri","يعود","geri dönmek","fiil","سأعود إلى المنزل غدا.","Yarın eve döneceğim.");
+// ======================= B1 — ULAŞIM =======================
+add("ar","B1","Ulaşım","مواصلات","ulaşım","isim","المواصلات العامة جيدة هنا.","Burada toplu taşıma iyi.");
+add("ar","B1","Ulaşım","سيارة","araba","isim","اشتريت سيارة مستعملة.","İkinci el araba aldım.");
+add("ar","B1","Ulaşım","حافلة","otobüs","isim","أذهب إلى العمل بالحافلة.","İşe otobüsle gidiyorum.");
+add("ar","B1","Ulaşım","قطار","tren","isim","القطار سريع ومريح.","Tren hızlı ve rahat.");
+add("ar","B1","Ulaşım","مترو","metro","isim","أستخدم المترو كل يوم.","Her gün metro kullanıyorum.");
+add("ar","B1","Ulaşım","ترام","tramvay","isim","أخذنا الترام إلى المركز.","Merkeze tramvayla gittik.");
+add("ar","B1","Ulaşım","تاكسي","taksi","isim","أخذت سيارة أجرة إلى الفندق.","Otele taksiyle gittim.");
+add("ar","B1","Ulaşım","دراجة","bisiklet","isim","أذهب إلى العمل بالدراجة.","İşe bisikletle gidiyorum.");
+add("ar","B1","Ulaşım","طائرة","uçak","isim","سافرت بالطائرة لأول مرة.","İlk kez uçakla seyahat ettim.");
+add("ar","B1","Ulaşım","سفينة","gemi","isim","ركبنا السفينة.","Gemiye bindik.");
+add("ar","B1","Ulaşım","طريق","yol","isim","الطريق طويل.","Yol uzun.");
+add("ar","B1","Ulaşım","شارع","cadde / sokak","isim","المطعم في هذا الشارع.","Restoran bu caddede.");
+add("ar","B1","Ulaşım","جسر","köprü","isim","عبرنا الجسر.","Köprüden geçtik.");
+add("ar","B1","Ulaşım","إشارة مرور","trafik ışığı","isim","توقف عند إشارة المرور.","Trafik ışığında dur.");
+add("ar","B1","Ulaşım","ازدحام مروري","trafik sıkışıklığı","isim","هناك ازدحام مروري شديد.","Şiddetli trafik sıkışıklığı var.");
+add("ar","B1","Ulaşım","سرعة","hız","isim","السرعة محدودة هنا.","Burada hız sınırlı.");
+add("ar","B1","Ulaşım","اتجاه","yön","isim","هل هذا هو الاتجاه الصحيح؟","Bu doğru yön mü?");
+add("ar","B1","Ulaşım","مسافة","mesafe","isim","المسافة ليست طويلة.","Mesafe uzun değil.");
+add("ar","B1","Ulaşım","خريطة","harita","isim","أحتاج إلى خريطة المدينة.","Şehir haritasına ihtiyacım var.");
+add("ar","B1","Ulaşım","مخرج","çıkış","isim","أين المخرج؟","Çıkış nerede?");
+// ======================= B1 — KONAKLAMA =======================
+add("ar","B1","Konaklama","فندق","otel","isim","حجزنا فندقا قريبا من المركز.","Merkeze yakın bir otel rezerve ettik.");
+add("ar","B1","Konaklama","غرفة","oda","isim","أريد غرفة لشخصين.","İki kişilik bir oda istiyorum.");
+add("ar","B1","Konaklama","شقة","daire","isim","استأجرت شقة صغيرة.","Küçük bir daire kiraladım.");
+add("ar","B1","Konaklama","نزل","pansiyon / hostel","isim","أقمنا في نزل رخيص.","Ucuz bir hostelde kaldık.");
+add("ar","B1","Konaklama","استقبال","resepsiyon","isim","اسأل في مكتب الاستقبال.","Resepsiyona sor.");
+add("ar","B1","Konaklama","حجز","rezervasyon","isim","لدي حجز باسم محمد.","Muhammed adına rezervasyonum var.");
+add("ar","B1","Konaklama","مفتاح","anahtar","isim","أين مفتاح غرفتي؟","Odamın anahtarı nerede?");
+add("ar","B1","Konaklama","مصعد","asansör","isim","المصعد لا يعمل.","Asansör çalışmıyor.");
+add("ar","B1","Konaklama","طابق","kat","isim","غرفتي في الطابق الثالث.","Odam üçüncü katta.");
+add("ar","B1","Konaklama","سرير","yatak","isim","السرير مريح.","Yatak rahat.");
+add("ar","B1","Konaklama","حمام","banyo","isim","الحمام نظيف.","Banyo temiz.");
+add("ar","B1","Konaklama","مطبخ","mutfak","isim","الشقة فيها مطبخ كبير.","Dairenin büyük bir mutfağı var.");
+add("ar","B1","Konaklama","إقامة","konaklama","isim","كانت إقامتنا مريحة.","Konaklamamız rahattı.");
+add("ar","B1","Konaklama","خدمة","hizmet","isim","الخدمة ممتازة.","Hizmet mükemmel.");
+add("ar","B1","Konaklama","سعر","fiyat","isim","السعر مناسب.","Fiyat uygun.");
+add("ar","B1","Konaklama","إلغاء","iptal","isim","أريد إلغاء الحجز.","Rezervasyonu iptal etmek istiyorum.");
+// ======================= B1 — ALIŞVERİŞ =======================
+add("ar","B1","Alışveriş","تسوق","alışveriş","isim","أحب التسوق في عطلة نهاية الأسبوع.","Hafta sonu alışveriş yapmayı seviyorum.");
+add("ar","B1","Alışveriş","متجر","mağaza","isim","هذا المتجر قريب من منزلي.","Bu mağaza evime yakın.");
+add("ar","B1","Alışveriş","سوق","pazar","isim","ذهبت إلى السوق صباحا.","Sabah pazara gittim.");
+add("ar","B1","Alışveriş","مركز تجاري","alışveriş merkezi","isim","المركز التجاري كبير جدا.","Alışveriş merkezi çok büyük.");
+add("ar","B1","Alışveriş","منتج","ürün","isim","هذا المنتج جيد.","Bu ürün iyi.");
+add("ar","B1","Alışveriş","جودة","kalite","isim","جودة المنتج عالية.","Ürünün kalitesi yüksek.");
+add("ar","B1","Alışveriş","خصم","indirim","isim","هناك خصم كبير اليوم.","Bugün büyük bir indirim var.");
+add("ar","B1","Alışveriş","عرض","kampanya / teklif","isim","هذا عرض خاص.","Bu özel bir teklif.");
+add("ar","B1","Alışveriş","فاتورة","fatura","isim","هل يمكنني الحصول على الفاتورة؟","Faturayı alabilir miyim?");
+add("ar","B1","Alışveriş","إيصال","fiş / makbuz","isim","احتفظ بالإيصال.","Fişi sakla.");
+add("ar","B1","Alışveriş","نقد","nakit","isim","هل يمكنني الدفع نقدا؟","Nakit ödeyebilir miyim?");
+add("ar","B1","Alışveriş","بطاقة ائتمان","kredi kartı","isim","أدفع ببطاقة الائتمان.","Kredi kartıyla ödüyorum.");
+add("ar","B1","Alışveriş","سعر","fiyat","isim","كم سعر هذا؟","Bunun fiyatı ne kadar?");
+add("ar","B1","Alışveriş","مقاس","beden","isim","هل لديكم مقاس أكبر؟","Daha büyük bedeniniz var mı?");
+add("ar","B1","Alışveriş","لون","renk","isim","هل يوجد لون آخر؟","Başka rengi var mı?");
+add("ar","B1","Alışveriş","علامة تجارية","marka","isim","هذه علامة تجارية مشهورة.","Bu ünlü bir marka.");
+add("ar","B1","Alışveriş","زبون","müşteri","isim","الزبون ينتظر في الطابور.","Müşteri sırada bekliyor.");
+add("ar","B1","Alışveriş","بائع","satıcı","isim","سألت البائع عن السعر.","Satıcıya fiyatı sordum.");
+add("ar","B1","Alışveriş","طابور","kuyruk / sıra","isim","هناك طابور طويل.","Uzun bir kuyruk var.");
+add("ar","B1","Alışveriş","استبدال","değişim","isim","أريد استبدال المنتج.","Ürünü değiştirmek istiyorum.");
+// ======================= B1 — ALIŞVERİŞ FİİLLERİ =======================
+add("ar","B1","Alışveriş Fiilleri","يتسوق","alışveriş yapmak","fiil","أتسوق مرة واحدة في الأسبوع.","Haftada bir kez alışveriş yaparım.");
+add("ar","B1","Alışveriş Fiilleri","يختار","seçmek","fiil","اخترت هذا المنتج.","Bu ürünü seçtim.");
+add("ar","B1","Alışveriş Fiilleri","يقارن","karşılaştırmak","fiil","أقارن الأسعار قبل الشراء.","Satın almadan önce fiyatları karşılaştırırım.");
+add("ar","B1","Alışveriş Fiilleri","يشتري","satın almak","fiil","اشتريت حاسوبا جديدا.","Yeni bir bilgisayar satın aldım.");
+add("ar","B1","Alışveriş Fiilleri","يبيع","satmak","fiil","هذا المتجر يبيع الملابس.","Bu mağaza kıyafet satıyor.");
+add("ar","B1","Alışveriş Fiilleri","يدفع","ödemek","fiil","دفعت بالبطاقة.","Kartla ödedim.");
+add("ar","B1","Alışveriş Fiilleri","يكلف","maliyeti olmak","fiil","كم يكلف هذا؟","Bu ne kadar tutuyor?");
+add("ar","B1","Alışveriş Fiilleri","يسترد","geri ödeme almak","fiil","أريد استرداد أموالي.","Paramı geri almak istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يستبدل","değiştirmek","fiil","أريد استبدال هذا المنتج.","Bu ürünü değiştirmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يجرب","denemek","fiil","هل يمكنني تجربة هذا القميص؟","Bu gömleği deneyebilir miyim?");
+add("ar","B1","Alışveriş Fiilleri","يفحص","kontrol etmek","fiil","افحص المنتج قبل الشراء.","Satın almadan önce ürünü kontrol et.");
+add("ar","B1","Alışveriş Fiilleri","يطلب","sipariş vermek","fiil","طلبت الطعام عبر الإنترنت.","İnternetten yemek sipariş ettim.");
+add("ar","B1","Alışveriş Fiilleri","يوصل","teslim etmek","fiil","سيتم توصيل الطلب غدا.","Sipariş yarın teslim edilecek.");
+add("ar","B1","Alışveriş Fiilleri","يرجع","geri vermek / iade etmek","fiil","أرجعت المنتج إلى المتجر.","Ürünü mağazaya iade ettim.");
+/* ================================================================
+   ARAPÇA B1 — PART 15
+================================================================ */
+// ======================= B1 — SAĞLIK =======================
+add("ar","B1","Sağlık","صحة","sağlık","isim","الصحة أهم من المال.","Sağlık paradan daha önemlidir.");
+add("ar","B1","Sağlık","مرض","hastalık","isim","هذا المرض يحتاج إلى علاج.","Bu hastalığın tedaviye ihtiyacı var.");
+add("ar","B1","Sağlık","علاج","tedavi","isim","بدأ العلاج الأسبوع الماضي.","Tedavi geçen hafta başladı.");
+add("ar","B1","Sağlık","دواء","ilaç","isim","يجب أن أتناول الدواء.","İlacı almam gerekiyor.");
+add("ar","B1","Sağlık","طبيب","doktor","isim","ذهبت إلى الطبيب أمس.","Dün doktora gittim.");
+add("ar","B1","Sağlık","مريض","hasta","isim","المريض يحتاج إلى الراحة.","Hastanın dinlenmeye ihtiyacı var.");
+add("ar","B1","Sağlık","مستشفى","hastane","isim","المستشفى قريب من هنا.","Hastane buraya yakın.");
+add("ar","B1","Sağlık","عيادة","klinik","isim","ذهبت إلى العيادة صباحا.","Sabah kliniğe gittim.");
+add("ar","B1","Sağlık","صيدلية","eczane","isim","الصيدلية مفتوحة الآن.","Eczane şu anda açık.");
+add("ar","B1","Sağlık","موعد طبي","doktor randevusu","isim","لدي موعد طبي غدا.","Yarın doktor randevum var.");
+add("ar","B1","Sağlık","فحص","muayene / kontrol","isim","أحتاج إلى فحص طبي.","Tıbbi muayeneye ihtiyacım var.");
+add("ar","B1","Sağlık","تحليل","tahlil","isim","طلب الطبيب تحليلا للدم.","Doktor kan tahlili istedi.");
+add("ar","B1","Sağlık","نتيجة","sonuç","isim","ظهرت نتيجة التحليل.","Tahlil sonucu çıktı.");
+add("ar","B1","Sağlık","ألم","ağrı","isim","لدي ألم في ظهري.","Sırtım ağrıyor.");
+add("ar","B1","Sağlık","صداع","baş ağrısı","isim","لدي صداع شديد.","Şiddetli baş ağrım var.");
+add("ar","B1","Sağlık","حمى","ateş","isim","لديه حمى منذ أمس.","Dünden beri ateşi var.");
+add("ar","B1","Sağlık","سعال","öksürük","isim","لدي سعال قوي.","Şiddetli öksürüğüm var.");
+add("ar","B1","Sağlık","زكام","soğuk algınlığı","isim","أصبت بالزكام الأسبوع الماضي.","Geçen hafta soğuk algınlığına yakalandım.");
+add("ar","B1","Sağlık","إنفلونزا","grip","isim","أصبت بالإنفلونزا.","Gribe yakalandım.");
+add("ar","B1","Sağlık","حساسية","alerji","isim","لدي حساسية من بعض الأطعمة.","Bazı yiyeceklere alerjim var.");
+add("ar","B1","Sağlık","إصابة","yaralanma","isim","تعرض لإصابة أثناء الرياضة.","Spor sırasında yaralandı.");
+add("ar","B1","Sağlık","جرح","yara","isim","لدي جرح في يدي.","Elimde bir yara var.");
+add("ar","B1","Sağlık","عملية","ameliyat","isim","أجرى عملية ناجحة.","Başarılı bir ameliyat geçirdi.");
+add("ar","B1","Sağlık","طوارئ","acil durum","isim","اتصل بالطوارئ فورا.","Hemen acil servisi ara.");
+add("ar","B1","Sağlık","إسعاف","ambulans","isim","وصلت سيارة الإسعاف بسرعة.","Ambulans hızlı bir şekilde geldi.");
+// ======================= B1 — VÜCUT =======================
+add("ar","B1","Vücut","جسم","vücut","isim","يحتاج الجسم إلى الماء.","Vücudun suya ihtiyacı vardır.");
+add("ar","B1","Vücut","رأس","baş","isim","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Vücut","عين","göz","isim","عيني تؤلمني.","Gözüm ağrıyor.");
+add("ar","B1","Vücut","أذن","kulak","isim","أشعر بألم في أذني.","Kulağımda ağrı hissediyorum.");
+add("ar","B1","Vücut","أنف","burun","isim","أنفي مسدود.","Burnum tıkalı.");
+add("ar","B1","Vücut","فم","ağız","isim","افتح فمك.","Ağzını aç.");
+add("ar","B1","Vücut","أسنان","dişler","isim","يجب أن أنظف أسناني.","Dişlerimi temizlemeliyim.");
+add("ar","B1","Vücut","لسان","dil","isim","لساني يؤلمني.","Dilim ağrıyor.");
+add("ar","B1","Vücut","رقبة","boyun","isim","أشعر بألم في رقبتي.","Boynumda ağrı hissediyorum.");
+add("ar","B1","Vücut","كتف","omuz","isim","كتفي يؤلمني.","Omzum ağrıyor.");
+add("ar","B1","Vücut","ذراع","kol","isim","أصبت ذراعي.","Kolumu yaraladım.");
+add("ar","B1","Vücut","يد","el","isim","يدي باردة.","Elim soğuk.");
+add("ar","B1","Vücut","إصبع","parmak","isim","جرحت إصبعي.","Parmağımı kestim.");
+add("ar","B1","Vücut","صدر","göğüs","isim","أشعر بألم في صدري.","Göğsümde ağrı hissediyorum.");
+add("ar","B1","Vücut","ظهر","sırt","isim","ظهري يؤلمني.","Sırtım ağrıyor.");
+add("ar","B1","Vücut","بطن","karın","isim","بطني يؤلمني.","Karnım ağrıyor.");
+add("ar","B1","Vücut","ساق","bacak","isim","ساقي متعبة.","Bacağım yorgun.");
+add("ar","B1","Vücut","ركبة","diz","isim","ركبتي تؤلمني.","Dizim ağrıyor.");
+add("ar","B1","Vücut","قدم","ayak","isim","قدمي تؤلمني.","Ayağım ağrıyor.");
+add("ar","B1","Vücut","جلد","cilt / deri","isim","جلدي حساس.","Cildim hassas.");
+// ======================= B1 — SAĞLIK FİİLLERİ =======================
+add("ar","B1","Sağlık Fiilleri","يمرض","hastalanmak","fiil","لا أريد أن أمرض.","Hastalanmak istemiyorum.");
+add("ar","B1","Sağlık Fiilleri","يتعافى","iyileşmek","fiil","بدأ يتعافى بعد العملية.","Ameliyattan sonra iyileşmeye başladı.");
+add("ar","B1","Sağlık Fiilleri","يشعر","hissetmek","fiil","أشعر بالتعب اليوم.","Bugün yorgun hissediyorum.");
+add("ar","B1","Sağlık Fiilleri","يتألم","acı çekmek / ağrımak","fiil","قدمي تؤلمني كثيرا.","Ayağım çok ağrıyor.");
+add("ar","B1","Sağlık Fiilleri","يسعل","öksürmek","fiil","يسعل طوال الليل.","Bütün gece öksürüyor.");
+add("ar","B1","Sağlık Fiilleri","يعطس","hapşırmak","fiil","أعطس كثيرا في الربيع.","İlkbaharda çok hapşırıyorum.");
+add("ar","B1","Sağlık Fiilleri","يتنفس","nefes almak","fiil","يصعب عليه التنفس.","Nefes almakta zorlanıyor.");
+add("ar","B1","Sağlık Fiilleri","يتناول","almak / tüketmek","fiil","أتناول الدواء بعد الطعام.","İlacı yemekten sonra alıyorum.");
+add("ar","B1","Sağlık Fiilleri","يفحص","muayene etmek / kontrol etmek","fiil","فحص الطبيب المريض.","Doktor hastayı muayene etti.");
+add("ar","B1","Sağlık Fiilleri","يعالج","tedavi etmek","fiil","يعالج الطبيب المرضى.","Doktor hastaları tedavi ediyor.");
+add("ar","B1","Sağlık Fiilleri","يشفى","iyileşmek","fiil","شفى المريض تماما.","Hasta tamamen iyileşti.");
+add("ar","B1","Sağlık Fiilleri","يصاب","yakalanmak / maruz kalmak","fiil","أصيب بالإنفلونزا.","Gribe yakalandı.");
+add("ar","B1","Sağlık Fiilleri","يجرح","yaralamak","fiil","جرح يده أثناء العمل.","Çalışırken elini yaraladı.");
+add("ar","B1","Sağlık Fiilleri","يمنع","önlemek","fiil","الرياضة تمنع بعض الأمراض.","Spor bazı hastalıkları önler.");
+add("ar","B1","Sağlık Fiilleri","يحمي","korumak","fiil","يجب أن نحمي صحتنا.","Sağlığımızı korumalıyız.");
+// ======================= B1 — SPOR VE FİZİKSEL AKTİVİTE =======================
+add("ar","B1","Spor","رياضة","spor","isim","أمارس الرياضة بانتظام.","Düzenli olarak spor yapıyorum.");
+add("ar","B1","Spor","تمرين","egzersiz","isim","أقوم بتمارين كل صباح.","Her sabah egzersiz yapıyorum.");
+add("ar","B1","Spor","لياقة بدنية","fiziksel kondisyon","isim","أريد تحسين لياقتي البدنية.","Fiziksel kondisyonumu geliştirmek istiyorum.");
+add("ar","B1","Spor","عضلة","kas","isim","هذه الرياضة تقوي العضلات.","Bu spor kasları güçlendirir.");
+add("ar","B1","Spor","قوة","güç","isim","تحتاج إلى قوة كبيرة.","Büyük bir güce ihtiyacın var.");
+add("ar","B1","Spor","طاقة","enerji","isim","ليس لدي طاقة اليوم.","Bugün enerjim yok.");
+add("ar","B1","Spor","تعب","yorgunluk","isim","أشعر بالتعب بعد التمرين.","Antrenmandan sonra yorgun hissediyorum.");
+add("ar","B1","Spor","جري","koşu","isim","أحب الجري في الصباح.","Sabahları koşmayı seviyorum.");
+add("ar","B1","Spor","سباحة","yüzme","isim","السباحة رياضة ممتازة.","Yüzme mükemmel bir spordur.");
+add("ar","B1","Spor","كرة قدم","futbol","isim","ألعب كرة القدم مع أصدقائي.","Arkadaşlarımla futbol oynuyorum.");
+add("ar","B1","Spor","فريق","takım","isim","فريقي فاز بالمباراة.","Takımım maçı kazandı.");
+add("ar","B1","Spor","مباراة","maç","isim","شاهدنا المباراة أمس.","Dün maçı izledik.");
+add("ar","B1","Spor","لاعب","oyuncu","isim","هذا لاعب مشهور.","Bu ünlü bir oyuncu.");
+add("ar","B1","Spor","مدرب","antrenör","isim","المدرب يساعد الفريق.","Antrenör takıma yardım ediyor.");
+add("ar","B1","Spor","بطولة","şampiyona / turnuva","isim","شارك في بطولة كبيرة.","Büyük bir turnuvaya katıldı.");
+// ======================= B1 — DUYGULAR =======================
+add("ar","B1","Duygular","سعادة","mutluluk","isim","السعادة ليست مرتبطة بالمال.","Mutluluk parayla bağlantılı değildir.");
+add("ar","B1","Duygular","حزن","üzüntü","isim","شعرت بالحزن بعد الخبر.","Haberi duyduktan sonra üzüldüm.");
+add("ar","B1","Duygular","فرح","sevinç","isim","شعرت بفرح كبير.","Büyük bir sevinç hissettim.");
+add("ar","B1","Duygular","خوف","korku","isim","شعرت بالخوف في الظلام.","Karanlıkta korktum.");
+add("ar","B1","Duygular","قلق","endişe","isim","أشعر بالقلق بشأن الامتحان.","Sınav hakkında endişeliyim.");
+add("ar","B1","Duygular","توتر","stres / gerginlik","isim","أشعر بالكثير من التوتر.","Çok stres hissediyorum.");
+add("ar","B1","Duygular","غضب","öfke","isim","لا أستطيع التحكم في غضبي.","Öfkemi kontrol edemiyorum.");
+add("ar","B1","Duygular","حب","sevgi / aşk","isim","الحب شعور قوي.","Aşk güçlü bir duygudur.");
+add("ar","B1","Duygular","كراهية","nefret","isim","لا أحب الكراهية.","Nefretten hoşlanmam.");
+add("ar","B1","Duygular","ثقة","güven","isim","لدي ثقة بنفسي.","Kendime güveniyorum.");
+add("ar","B1","Duygular","أمل","umut","isim","لدي أمل في المستقبل.","Gelecek için umudum var.");
+add("ar","B1","Duygular","يأس","umutsuzluk","isim","لا أريد أن أشعر باليأس.","Umutsuz hissetmek istemiyorum.");
+add("ar","B1","Duygular","مفاجأة","sürpriz","isim","كانت المفاجأة جميلة.","Sürpriz güzeldi.");
+add("ar","B1","Duygular","دهشة","şaşkınlık","isim","شعرت بالدهشة عندما رأيته.","Onu görünce şaşırdım.");
+add("ar","B1","Duygular","خجل","utangaçlık","isim","يشعر بالخجل أمام الناس.","İnsanların önünde utanıyor.");
+add("ar","B1","Duygular","ملل","can sıkıntısı","isim","أشعر بالملل في المنزل.","Evde canım sıkılıyor.");
+add("ar","B1","Duygular","اهتمام","ilgi","isim","لدي اهتمام بالتكنولوجيا.","Teknolojiye ilgim var.");
+add("ar","B1","Duygular","فضول","merak","isim","لدي فضول لمعرفة الحقيقة.","Gerçeği öğrenmek için merak ediyorum.");
+add("ar","B1","Duygular","احترام","saygı","isim","أحترم رأيك.","Fikrine saygı duyuyorum.");
+add("ar","B1","Duygular","ندم","pişmanlık","isim","أشعر بالندم على قراري.","Kararım için pişmanlık duyuyorum.");
+// ======================= B1 — DUYGU SIFATLARI =======================
+add("ar","B1","Duygu Sıfatları","سعيد","mutlu","sıfat","أنا سعيد اليوم.","Bugün mutluyum.");
+add("ar","B1","Duygu Sıfatları","حزين","üzgün","sıfat","هو حزين بسبب الخبر.","Haber yüzünden üzgün.");
+add("ar","B1","Duygu Sıfatları","خائف","korkmuş","sıfat","أنا خائف من الكلاب.","Köpeklerden korkuyorum.");
+add("ar","B1","Duygu Sıfatları","قلق","endişeli","sıfat","أنا قلق بشأن المستقبل.","Gelecek hakkında endişeliyim.");
+add("ar","B1","Duygu Sıfatları","متوتر","stresli","sıfat","هو متوتر قبل الامتحان.","Sınavdan önce stresli.");
+add("ar","B1","Duygu Sıfatları","غاضب","kızgın","sıfat","كان غاضبا جدا.","Çok kızgındı.");
+add("ar","B1","Duygu Sıfatları","متحمس","heyecanlı","sıfat","أنا متحمس للرحلة.","Gezi için heyecanlıyım.");
+add("ar","B1","Duygu Sıfatları","متفاجئ","şaşırmış","sıfat","كنت متفاجئا من النتيجة.","Sonuca şaşırdım.");
+add("ar","B1","Duygu Sıfatları","مرتاح","rahatlamış","sıfat","أشعر بالراحة الآن.","Şimdi rahatlamış hissediyorum.");
+add("ar","B1","Duygu Sıfatları","متعب","yorgun","sıfat","أنا متعب بعد العمل.","İşten sonra yorgunum.");
+add("ar","B1","Duygu Sıfatları","ممل","sıkıcı","sıfat","الفيلم كان مملا.","Film sıkıcıydı.");
+add("ar","B1","Duygu Sıfatları","ممتع","eğlenceli","sıfat","الدرس كان ممتعا.","Ders eğlenceliydi.");
+add("ar","B1","Duygu Sıfatları","مثير","heyecan verici","sıfat","كانت المباراة مثيرة.","Maç heyecan vericiydi.");
+add("ar","B1","Duygu Sıfatları","مخيف","korkutucu","sıfat","الفيلم مخيف.","Film korkutucu.");
+add("ar","B1","Duygu Sıfatları","مريح","rahatlatıcı","sıfat","هذا المكان مريح.","Burası rahatlatıcı.");
+// ======================= B1 — PSİKOLOJİ VE KİŞİLİK =======================
+add("ar","B1","Kişilik","شخصية","kişilik","isim","لديه شخصية قوية.","Güçlü bir kişiliği var.");
+add("ar","B1","Kişilik","سلوك","davranış","isim","هذا السلوك غير مقبول.","Bu davranış kabul edilemez.");
+add("ar","B1","Kişilik","تصرف","davranış / hareket","isim","تصرفه كان غريبا.","Davranışı garipti.");
+add("ar","B1","Kişilik","تفكير","düşünme / düşünce","isim","طريقة تفكيره مختلفة.","Düşünme şekli farklı.");
+add("ar","B1","Kişilik","شعور","duygu","isim","هذا شعور طبيعي.","Bu normal bir duygu.");
+add("ar","B1","Kişilik","ذاكرة","hafıza","isim","لدي ذاكرة جيدة.","İyi bir hafızam var.");
+add("ar","B1","Kişilik","ذكاء","zeka","isim","الذكاء ليس كل شيء.","Zeka her şey değildir.");
+add("ar","B1","Kişilik","تركيز","konsantrasyon","isim","أحتاج إلى التركيز.","Konsantre olmam gerekiyor.");
+add("ar","B1","Kişilik","انتباه","dikkat","isim","انتبه إلى التفاصيل.","Detaylara dikkat et.");
+add("ar","B1","Kişilik","شجاعة","cesaret","isim","يحتاج الأمر إلى شجاعة.","Bu cesaret gerektirir.");
+add("ar","B1","Kişilik","صبر","sabır","isim","التعلم يحتاج إلى الصبر.","Öğrenmek sabır gerektirir.");
+add("ar","B1","Kişilik","مسؤولية","sorumluluk","isim","تحمل المسؤولية.","Sorumluluk al.");
+add("ar","B1","Kişilik","استقلال","bağımsızlık","isim","أريد أن أعيش باستقلال.","Bağımsız yaşamak istiyorum.");
+add("ar","B1","Kişilik","حرية","özgürlük","isim","الحرية مهمة للجميع.","Özgürlük herkes için önemlidir.");
+add("ar","B1","Kişilik","طموح","hırs / hedef","isim","لديه طموح كبير.","Büyük hedefleri var.");
+// ======================= B1 — KİŞİLİK SIFATLARI =======================
+add("ar","B1","Kişilik Sıfatları","هادئ","sakin","sıfat","هو شخص هادئ.","O sakin bir insan.");
+add("ar","B1","Kişilik Sıfatları","نشيط","aktif / enerjik","sıfat","هو شخص نشيط.","O enerjik bir insan.");
+add("ar","B1","Kişilik Sıfatları","كسول","tembel","sıfat","لا تكن كسولا.","Tembel olma.");
+add("ar","B1","Kişilik Sıfatları","ذكي","zeki","sıfat","هو طالب ذكي.","O zeki bir öğrenci.");
+add("ar","B1","Kişilik Sıfatları","غبي","aptal","sıfat","هذا قرار غبي.","Bu aptalca bir karar.");
+add("ar","B1","Kişilik Sıfatları","شجاع","cesur","sıfat","إنه رجل شجاع.","O cesur bir adam.");
+add("ar","B1","Kişilik Sıfatları","خجول","utangaç","sıfat","هو خجول قليلا.","O biraz utangaç.");
+add("ar","B1","Kişilik Sıfatları","اجتماعي","sosyal","sıfat","هي فتاة اجتماعية.","O sosyal bir kız.");
+add("ar","B1","Kişilik Sıfatları","كريم","cömert","sıfat","هو شخص كريم.","O cömert bir insan.");
+add("ar","B1","Kişilik Sıfatları","بخيل","cimri","sıfat","لا أحب الأشخاص البخلاء.","Cimri insanları sevmem.");
+add("ar","B1","Kişilik Sıfatları","صادق","dürüst","sıfat","هو شخص صادق.","O dürüst bir insan.");
+add("ar","B1","Kişilik Sıfatları","كاذب","yalancı","sıfat","لا أثق بالشخص الكاذب.","Yalancı bir insana güvenmem.");
+add("ar","B1","Kişilik Sıfatları","صبور","sabırlı","sıfat","يجب أن تكون صبورا.","Sabırlı olmalısın.");
+add("ar","B1","Kişilik Sıfatları","عصبي","sinirli","sıfat","هو شخص عصبي.","O sinirli bir insan.");
+add("ar","B1","Kişilik Sıfatları","متواضع","mütevazı","sıfat","هو شخص متواضع.","O mütevazı bir insan.");
+add("ar","B1","Kişilik Sıfatları","واثق","kendine güvenen","sıfat","هو واثق من نفسه.","Kendine güveniyor.");
+add("ar","B1","Kişilik Sıfatları","مسؤول","sorumlu","sıfat","هو موظف مسؤول.","O sorumlu bir çalışan.");
+add("ar","B1","Kişilik Sıfatları","مستقل","bağımsız","sıfat","أريد أن أكون مستقلا.","Bağımsız olmak istiyorum.");
+add("ar","B1","Kişilik Sıfatları","طموح","hırslı","sıfat","إنه شخص طموح.","O hırslı bir insan.");
+add("ar","B1","Kişilik Sıfatları","فضولي","meraklı","sıfat","أنا شخص فضولي.","Ben meraklı bir insanım.");
+/* ================================================================
+   ARAPÇA B1 — PART 16
+================================================================ */
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم للمستقبل.","Eğitim gelecek için önemlidir.");
+add("ar","B1","Eğitim","مدرسة","okul","isim","أخي يذهب إلى المدرسة.","Kardeşim okula gidiyor.");
+add("ar","B1","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Eğitim","كلية","fakülte","isim","أدرس في كلية الهندسة.","Mühendislik fakültesinde okuyorum.");
+add("ar","B1","Eğitim","قسم","bölüm","isim","ما هو قسمك في الجامعة؟","Üniversitedeki bölümün ne?");
+add("ar","B1","Eğitim","طالب","öğrenci","isim","أنا طالب في الجامعة.","Üniversitede öğrenciyim.");
+add("ar","B1","Eğitim","أستاذ","profesör / öğretmen","isim","الأستاذ يشرح الدرس.","Öğretmen dersi açıklıyor.");
+add("ar","B1","Eğitim","معلم","öğretmen","isim","المعلم يساعد الطلاب.","Öğretmen öğrencilere yardım ediyor.");
+add("ar","B1","Eğitim","درس","ders","isim","لدي درس في الصباح.","Sabah dersim var.");
+add("ar","B1","Eğitim","مادة","ders / konu","isim","هذه مادة صعبة.","Bu zor bir ders.");
+add("ar","B1","Eğitim","موضوع","konu","isim","موضوع الدرس مهم.","Dersin konusu önemli.");
+add("ar","B1","Eğitim","كتاب","kitap","isim","أقرأ كتابا جديدا.","Yeni bir kitap okuyorum.");
+add("ar","B1","Eğitim","دفتر","defter","isim","أكتب في دفتري.","Defterime yazıyorum.");
+add("ar","B1","Eğitim","قلم","kalem","isim","أحتاج إلى قلم.","Bir kaleme ihtiyacım var.");
+add("ar","B1","Eğitim","مكتبة","kütüphane","isim","أدرس في المكتبة.","Kütüphanede çalışıyorum.");
+add("ar","B1","Eğitim","قاعة","salon / sınıf","isim","المحاضرة في القاعة الكبيرة.","Ders büyük salonda.");
+add("ar","B1","Eğitim","محاضرة","ders / konferans","isim","حضرت محاضرة مهمة.","Önemli bir derse katıldım.");
+add("ar","B1","Eğitim","دورة","kurs","isim","أشارك في دورة للغة الألمانية.","Almanca kursuna katılıyorum.");
+add("ar","B1","Eğitim","تدريب","eğitim / staj","isim","بدأت تدريبا جديدا.","Yeni bir eğitime başladım.");
+add("ar","B1","Eğitim","شهادة","sertifika / diploma","isim","حصلت على شهادة.","Sertifika aldım.");
+// ======================= B1 — EĞİTİM VE SINAV =======================
+add("ar","B1","Eğitim","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
+add("ar","B1","Eğitim","اختبار","test","isim","أجبت عن جميع أسئلة الاختبار.","Testin tüm sorularını cevapladım.");
+add("ar","B1","Eğitim","سؤال","soru","isim","لدي سؤال.","Bir sorum var.");
+add("ar","B1","Eğitim","إجابة","cevap","isim","لا أعرف الإجابة.","Cevabı bilmiyorum.");
+add("ar","B1","Eğitim","نتيجة","sonuç","isim","كانت نتيجة الامتحان جيدة.","Sınav sonucu iyiydi.");
+add("ar","B1","Eğitim","درجة","not / puan","isim","حصلت على درجة عالية.","Yüksek bir not aldım.");
+add("ar","B1","Eğitim","نجاح","başarı","isim","أتمنى لك النجاح.","Sana başarılar diliyorum.");
+add("ar","B1","Eğitim","رسوب","başarısızlık","isim","الرسوب في الامتحان ليس نهاية العالم.","Sınavda başarısız olmak dünyanın sonu değil.");
+add("ar","B1","Eğitim","واجب","ödev","isim","يجب أن أنهي واجبي.","Ödevimi bitirmeliyim.");
+add("ar","B1","Eğitim","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","Eğitim","بحث","araştırma","isim","أكتب بحثا عن التكنولوجيا.","Teknoloji hakkında araştırma yazıyorum.");
+add("ar","B1","Eğitim","تقرير","rapor","isim","يجب أن أكتب تقريرا.","Bir rapor yazmam gerekiyor.");
+add("ar","B1","Eğitim","عرض تقديمي","sunum","isim","سأقدم عرضا تقديميا غدا.","Yarın bir sunum yapacağım.");
+add("ar","B1","Eğitim","مناقشة","tartışma","isim","شارك الطلاب في المناقشة.","Öğrenciler tartışmaya katıldı.");
+add("ar","B1","Eğitim","معلومة","bilgi","isim","وجدت معلومات مفيدة.","Faydalı bilgiler buldum.");
+// ======================= B1 — ÖĞRENME FİİLLERİ =======================
+add("ar","B1","Öğrenme Fiilleri","يتعلم","öğrenmek","fiil","أتعلم اللغة العربية.","Arapça öğreniyorum.");
+add("ar","B1","Öğrenme Fiilleri","يدرس","çalışmak / ders çalışmak","fiil","أدرس كل يوم.","Her gün ders çalışıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يقرأ","okumak","fiil","أقرأ كتابا كل أسبوع.","Her hafta bir kitap okuyorum.");
+add("ar","B1","Öğrenme Fiilleri","يكتب","yazmak","fiil","أكتب ملاحظاتي في الدفتر.","Notlarımı deftere yazıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يفهم","anlamak","fiil","لا أفهم هذا السؤال.","Bu soruyu anlamıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يشرح","açıklamak","fiil","المعلم يشرح القاعدة.","Öğretmen kuralı açıklıyor.");
+add("ar","B1","Öğrenme Fiilleri","يسأل","sormak","fiil","سألت الأستاذ عن الموضوع.","Öğretmene konu hakkında sordum.");
+add("ar","B1","Öğrenme Fiilleri","يجيب","cevaplamak","fiil","أجاب عن السؤال بشكل صحيح.","Soruyu doğru cevapladı.");
+add("ar","B1","Öğrenme Fiilleri","يحفظ","ezberlemek","fiil","أحفظ كلمات جديدة كل يوم.","Her gün yeni kelimeler ezberliyorum.");
+add("ar","B1","Öğrenme Fiilleri","يتذكر","hatırlamak","fiil","لا أستطيع أن أتذكر اسمه.","Adını hatırlayamıyorum.");
+add("ar","B1","Öğrenme Fiilleri","ينسى","unutmak","fiil","نسيت موعد الامتحان.","Sınav tarihini unuttum.");
+add("ar","B1","Öğrenme Fiilleri","يتدرب","pratik yapmak","fiil","أتدرب على اللغة كل يوم.","Her gün dil pratiği yapıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يتقدم","ilerlemek","fiil","أشعر أنني أتقدم بسرعة.","Hızlı ilerlediğimi hissediyorum.");
+add("ar","B1","Öğrenme Fiilleri","يطور","geliştirmek","fiil","أريد تطوير مهاراتي.","Becerilerimi geliştirmek istiyorum.");
+add("ar","B1","Öğrenme Fiilleri","يحسن","iyileştirmek","fiil","أريد تحسين لغتي.","Dilimi geliştirmek istiyorum.");
+add("ar","B1","Öğrenme Fiilleri","يترجم","çevirmek","fiil","أترجم النص إلى التركية.","Metni Türkçeye çeviriyorum.");
+add("ar","B1","Öğrenme Fiilleri","يبحث","araştırmak / aramak","fiil","أبحث عن معلومات جديدة.","Yeni bilgiler araştırıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يكتشف","keşfetmek","fiil","اكتشفت طريقة جديدة للتعلم.","Yeni bir öğrenme yöntemi keşfettim.");
+add("ar","B1","Öğrenme Fiilleri","يشارك","katılmak / paylaşmak","fiil","يشارك الطلاب في الدرس.","Öğrenciler derse katılıyor.");
+add("ar","B1","Öğrenme Fiilleri","يناقش","tartışmak","fiil","ناقشنا الموضوع في الصف.","Konuyu sınıfta tartıştık.");
+// ======================= B1 — EĞİTİM SIFATLARI =======================
+add("ar","B1","Eğitim Sıfatları","سهل","kolay","sıfat","هذا السؤال سهل.","Bu soru kolay.");
+add("ar","B1","Eğitim Sıfatları","صعب","zor","sıfat","الامتحان صعب.","Sınav zor.");
+add("ar","B1","Eğitim Sıfatları","مهم","önemli","sıfat","هذا الموضوع مهم.","Bu konu önemli.");
+add("ar","B1","Eğitim Sıfatları","مفيد","faydalı","sıfat","هذا الكتاب مفيد.","Bu kitap faydalı.");
+add("ar","B1","Eğitim Sıfatları","ضروري","gerekli","sıfat","التدريب ضروري للتعلم.","Pratik yapmak öğrenmek için gereklidir.");
+add("ar","B1","Eğitim Sıfatları","مثير للاهتمام","ilginç","sıfat","الدرس مثير للاهتمام.","Ders ilginç.");
+add("ar","B1","Eğitim Sıfatları","ممل","sıkıcı","sıfat","هذا الدرس ممل.","Bu ders sıkıcı.");
+add("ar","B1","Eğitim Sıfatları","متقدم","ileri","sıfat","هذا كتاب متقدم.","Bu ileri seviye bir kitap.");
+add("ar","B1","Eğitim Sıfatları","مبتدئ","başlangıç seviyesi","sıfat","أنا طالب مبتدئ.","Başlangıç seviyesinde bir öğrenciyim.");
+add("ar","B1","Eğitim Sıfatları","مستعد","hazır","sıfat","أنا مستعد للامتحان.","Sınava hazırım.");
+add("ar","B1","Eğitim Sıfatları","ناجح","başarılı","sıfat","كان طالبا ناجحا.","Başarılı bir öğrenciydi.");
+add("ar","B1","Eğitim Sıfatları","فاشل","başarısız","sıfat","لا أريد أن أكون فاشلا.","Başarısız olmak istemiyorum.");
+add("ar","B1","Eğitim Sıfatları","متفوق","başarılı / üstün","sıfat","هو طالب متفوق.","O başarılı bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","موهوب","yetenekli","sıfat","هي طالبة موهوبة.","O yetenekli bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","مجتهد","çalışkan","sıfat","هو طالب مجتهد.","O çalışkan bir öğrenci.");
+// ======================= B1 — ÜNİVERSİTE HAYATI =======================
+add("ar","B1","Üniversite","حرم جامعي","kampüs","isim","الجامعة لديها حرم جامعي كبير.","Üniversitenin büyük bir kampüsü var.");
+add("ar","B1","Üniversite","سكن طلابي","öğrenci yurdu","isim","أعيش في سكن طلابي.","Öğrenci yurdunda yaşıyorum.");
+add("ar","B1","Üniversite","منحة","burs","isim","حصلت على منحة دراسية.","Burs kazandım.");
+add("ar","B1","Üniversite","رسوم دراسية","öğrenim ücreti","isim","الرسوم الدراسية مرتفعة.","Öğrenim ücreti yüksek.");
+add("ar","B1","Üniversite","تخصص","uzmanlık / bölüm","isim","ما هو تخصصك؟","Uzmanlığın / bölümün ne?");
+add("ar","B1","Üniversite","درجة جامعية","üniversite derecesi","isim","أريد الحصول على درجة جامعية.","Üniversite diploması almak istiyorum.");
+add("ar","B1","Üniversite","بكالوريوس","lisans","isim","أدرس للحصول على درجة البكالوريوس.","Lisans derecesi almak için okuyorum.");
+add("ar","B1","Üniversite","ماجستير","yüksek lisans","isim","أريد دراسة الماجستير.","Yüksek lisans yapmak istiyorum.");
+add("ar","B1","Üniversite","دكتوراه","doktora","isim","يدرس للحصول على الدكتوراه.","Doktora yapıyor.");
+add("ar","B1","Üniversite","فصل دراسي","dönem","isim","يبدأ الفصل الدراسي في سبتمبر.","Dönem eylülde başlıyor.");
+add("ar","B1","Üniversite","جدول","program / ders programı","isim","أين جدول المحاضرات؟","Ders programı nerede?");
+add("ar","B1","Üniversite","تسجيل","kayıt","isim","بدأ التسجيل في الجامعة.","Üniversite kayıtları başladı.");
+add("ar","B1","Üniversite","قبول","kabul","isim","حصلت على قبول من الجامعة.","Üniversiteden kabul aldım.");
+add("ar","B1","Üniversite","تخصص جامعي","üniversite bölümü","isim","اخترت تخصصا جامعيا جديدا.","Yeni bir üniversite bölümü seçtim.");
+add("ar","B1","Üniversite","زميل","sınıf / iş arkadaşı","isim","زميلي يساعدني في الدراسة.","Arkadaşım ders çalışırken bana yardım ediyor.");
+// ======================= B1 — EĞİTİM İLE İLGİLİ BAĞLAÇLAR VE İFADELER =======================
+add("ar","B1","Eğitim İfadeleri","بسبب","nedeniyle","edat","تأخرت بسبب الامتحان.","Sınav nedeniyle geciktim.");
+add("ar","B1","Eğitim İfadeleri","لذلك","bu nedenle / bu yüzden","bağlaç","كنت مريضا، لذلك لم أذهب إلى الجامعة.","Hastaydım, bu yüzden üniversiteye gitmedim.");
+add("ar","B1","Eğitim İfadeleri","بالإضافة إلى ذلك","buna ek olarak","bağlaç","أدرس اللغة، بالإضافة إلى ذلك أقرأ الكتب.","Dil çalışıyorum, buna ek olarak kitap okuyorum.");
+add("ar","B1","Eğitim İfadeleri","على الرغم من","rağmen","bağlaç","على الرغم من صعوبة الدرس، فهمته.","Ders zor olmasına rağmen onu anladım.");
+add("ar","B1","Eğitim İfadeleri","من أجل","amacıyla / için","edat","أدرس من أجل النجاح.","Başarmak için çalışıyorum.");
+add("ar","B1","Eğitim İfadeleri","قبل أن","-meden önce","bağlaç","أراجع الدرس قبل أن أنام.","Uyumadan önce dersi tekrar ediyorum.");
+add("ar","B1","Eğitim İfadeleri","بعد أن","-dikten sonra","bağlaç","أرتاح بعد أن أنهي واجبي.","Ödevimi bitirdikten sonra dinleniyorum.");
+add("ar","B1","Eğitim İfadeleri","بينما","-iken","bağlaç","أستمع إلى الموسيقى بينما أدرس.","Ders çalışırken müzik dinliyorum.");
+add("ar","B1","Eğitim İfadeleri","إذا","eğer","bağlaç","إذا درست جيدا، ستنجح.","İyi çalışırsan başarılı olursun.");
+add("ar","B1","Eğitim İfadeleri","عندما","-dığında / ne zaman","bağlaç","أشعر بالسعادة عندما أتعلم شيئا جديدا.","Yeni bir şey öğrendiğimde mutlu hissediyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 17
+================================================================ */
+// ======================= B1 — İŞ HAYATI =======================
+add("ar","B1","İş","عمل","iş / çalışma","isim","أحب عملي كثيرا.","İşimi çok seviyorum.");
+add("ar","B1","İş","وظيفة","iş / meslek","isim","أبحث عن وظيفة جديدة.","Yeni bir iş arıyorum.");
+add("ar","B1","İş","مهنة","meslek","isim","ما هي مهنتك؟","Mesleğin nedir?");
+add("ar","B1","İş","شركة","şirket","isim","أعمل في شركة كبيرة.","Büyük bir şirkette çalışıyorum.");
+add("ar","B1","İş","مؤسسة","kurum","isim","هذه مؤسسة دولية.","Bu uluslararası bir kurum.");
+add("ar","B1","İş","مكتب","ofis","isim","أعمل في مكتب صغير.","Küçük bir ofiste çalışıyorum.");
+add("ar","B1","İş","موظف","çalışan / memur","isim","هو موظف في البنك.","O bankada çalışan bir memur.");
+add("ar","B1","İş","مدير","yönetici / müdür","isim","المدير في اجتماع الآن.","Müdür şu anda toplantıda.");
+add("ar","B1","İş","رئيس","başkan / amir","isim","تحدثت مع رئيسي.","Amirimle konuştum.");
+add("ar","B1","İş","زميل","iş arkadaşı","isim","زميلي يعمل معي.","İş arkadaşım benimle çalışıyor.");
+add("ar","B1","İş","عميل","müşteri","isim","تحدثت مع العميل.","Müşteriyle konuştum.");
+add("ar","B1","İş","شريك","ortak / partner","isim","هذا شريكي في العمل.","Bu benim iş ortağım.");
+add("ar","B1","İş","اجتماع","toplantı","isim","لدينا اجتماع غدا.","Yarın toplantımız var.");
+add("ar","B1","İş","مشروع","proje","isim","نعمل على مشروع مهم.","Önemli bir proje üzerinde çalışıyoruz.");
+add("ar","B1","İş","مهمة","görev","isim","لدي مهمة جديدة.","Yeni bir görevim var.");
+add("ar","B1","İş","مسؤولية","sorumluluk","isim","هذه مسؤولية كبيرة.","Bu büyük bir sorumluluk.");
+add("ar","B1","İş","راتب","maaş","isim","راتبي جيد.","Maaşım iyi.");
+add("ar","B1","İş","أجر","ücret / maaş","isim","الأجر يعتمد على الخبرة.","Ücret deneyime bağlıdır.");
+add("ar","B1","İş","دوام","mesai / çalışma süresi","isim","دوامي يبدأ في الثامنة.","Mesaim saat sekizde başlıyor.");
+add("ar","B1","İş","وقت العمل","çalışma saatleri","isim","ما هي أوقات العمل؟","Çalışma saatleri nedir?");
+// ======================= B1 — KARİYER =======================
+add("ar","B1","Kariyer","مستقبل","gelecek","isim","أفكر في مستقبلي.","Geleceğimi düşünüyorum.");
+add("ar","B1","Kariyer","خبرة","deneyim","isim","لدي خبرة في هذا المجال.","Bu alanda deneyimim var.");
+add("ar","B1","Kariyer","مهارة","beceri","isim","أريد تطوير مهاراتي.","Becerilerimi geliştirmek istiyorum.");
+add("ar","B1","Kariyer","مؤهل","nitelik / yeterlilik","isim","لديه مؤهلات جيدة.","İyi niteliklere sahip.");
+add("ar","B1","Kariyer","شهادة","sertifika / diploma","isim","أحتاج إلى شهادة لهذه الوظيفة.","Bu iş için bir sertifikaya ihtiyacım var.");
+add("ar","B1","Kariyer","تخصص","uzmanlık","isim","تخصصي هو إدارة الأعمال.","Uzmanlığım işletme yönetimi.");
+add("ar","B1","Kariyer","نجاح","başarı","isim","النجاح يحتاج إلى وقت.","Başarı zaman gerektirir.");
+add("ar","B1","Kariyer","هدف","hedef","isim","لدي أهداف واضحة.","Net hedeflerim var.");
+add("ar","B1","Kariyer","خطة","plan","isim","لدي خطة للمستقبل.","Gelecek için bir planım var.");
+add("ar","B1","Kariyer","فرصة عمل","iş fırsatı","isim","وجدت فرصة عمل جيدة.","İyi bir iş fırsatı buldum.");
+add("ar","B1","Kariyer","ترقية","terfi","isim","حصل على ترقية في العمل.","İşte terfi aldı.");
+add("ar","B1","Kariyer","استقالة","istifa","isim","قدم استقالته من الشركة.","Şirketten istifa etti.");
+add("ar","B1","Kariyer","تقاعد","emeklilik","isim","يفكر في التقاعد.","Emekliliği düşünüyor.");
+add("ar","B1","Kariyer","بطالة","işsizlik","isim","البطالة مشكلة كبيرة.","İşsizlik büyük bir sorun.");
+add("ar","B1","Kariyer","سوق العمل","iş piyasası","isim","سوق العمل يتغير بسرعة.","İş piyasası hızlı değişiyor.");
+// ======================= B1 — İŞ BAŞVURUSU =======================
+add("ar","B1","İş Başvurusu","طلب وظيفة","iş başvurusu","isim","قدمت طلب وظيفة.","İş başvurusu yaptım.");
+add("ar","B1","İş Başvurusu","سيرة ذاتية","özgeçmiş / CV","isim","أرسلت سيرتي الذاتية.","CV'mi gönderdim.");
+add("ar","B1","İş Başvurusu","رسالة تحفيزية","motivasyon mektubu","isim","كتبت رسالة تحفيزية.","Motivasyon mektubu yazdım.");
+add("ar","B1","İş Başvurusu","مقابلة عمل","iş görüşmesi","isim","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","İş Başvurusu","مرشح","aday","isim","هناك ثلاثة مرشحين للوظيفة.","İş için üç aday var.");
+add("ar","B1","İş Başvurusu","صاحب العمل","işveren","isim","تحدثت مع صاحب العمل.","İşverenle konuştum.");
+add("ar","B1","İş Başvurusu","موظف الموارد البشرية","İK çalışanı","isim","تحدثت مع موظف الموارد البشرية.","İK çalışanıyla konuştum.");
+add("ar","B1","İş Başvurusu","مقابلة","mülakat / görüşme","isim","كانت المقابلة جيدة.","Görüşme iyi geçti.");
+add("ar","B1","İş Başvurusu","عرض عمل","iş teklifi","isim","تلقيت عرض عمل.","İş teklifi aldım.");
+add("ar","B1","İş Başvurusu","عقد عمل","iş sözleşmesi","isim","وقعت عقد العمل.","İş sözleşmesini imzaladım.");
+add("ar","B1","İş Başvurusu","فترة تجريبية","deneme süresi","isim","لدي فترة تجريبية لمدة ثلاثة أشهر.","Üç aylık deneme sürem var.");
+add("ar","B1","İş Başvurusu","خبرة عمل","iş deneyimi","isim","لدي خبرة عمل لمدة عامين.","İki yıllık iş deneyimim var.");
+add("ar","B1","İş Başvurusu","مرجع","referans","isim","أحتاج إلى مرجع مهني.","Profesyonel bir referansa ihtiyacım var.");
+add("ar","B1","İş Başvurusu","مؤهلات","nitelikler","isim","لدي المؤهلات المطلوبة.","Gerekli niteliklere sahibim.");
+add("ar","B1","İş Başvurusu","شروط","şartlar","isim","ما هي شروط الوظيفة؟","İşin şartları nelerdir?");
+// ======================= B1 — OFİS =======================
+add("ar","B1","Ofis","حاسوب","bilgisayar","isim","أستخدم الحاسوب في العمل.","İşte bilgisayar kullanıyorum.");
+add("ar","B1","Ofis","شاشة","ekran","isim","الشاشة كبيرة.","Ekran büyük.");
+add("ar","B1","Ofis","لوحة مفاتيح","klavye","isim","أحتاج إلى لوحة مفاتيح جديدة.","Yeni bir klavyeye ihtiyacım var.");
+add("ar","B1","Ofis","طابعة","yazıcı","isim","الطابعة لا تعمل.","Yazıcı çalışmıyor.");
+add("ar","B1","Ofis","ملف","dosya","isim","أرسلت الملف عبر البريد الإلكتروني.","Dosyayı e-posta ile gönderdim.");
+add("ar","B1","Ofis","وثيقة","belge","isim","أحتاج إلى هذه الوثيقة.","Bu belgeye ihtiyacım var.");
+add("ar","B1","Ofis","بريد إلكتروني","e-posta","isim","أرسلت بريدا إلكترونيا.","Bir e-posta gönderdim.");
+add("ar","B1","Ofis","رسالة","mesaj / mektup","isim","وصلتني رسالة من المدير.","Müdürden bir mesaj aldım.");
+add("ar","B1","Ofis","اتصال","arama / bağlantı","isim","تلقيت اتصالا من الشركة.","Şirketten bir telefon aldım.");
+add("ar","B1","Ofis","هاتف","telefon","isim","هاتف العمل على المكتب.","İş telefonu masanın üzerinde.");
+add("ar","B1","Ofis","طاولة","masa","isim","اجلس إلى الطاولة.","Masaya otur.");
+add("ar","B1","Ofis","كرسي","sandalye","isim","هذا الكرسي مريح.","Bu sandalye rahat.");
+add("ar","B1","Ofis","اجتماع","toplantı","isim","الاجتماع يبدأ في العاشرة.","Toplantı saat onda başlıyor.");
+add("ar","B1","Ofis","موعد نهائي","son teslim tarihi","isim","الموعد النهائي غدا.","Son teslim tarihi yarın.");
+add("ar","B1","Ofis","جدول أعمال","gündem","isim","أرسل المدير جدول الأعمال.","Müdür gündemi gönderdi.");
+// ======================= B1 — İŞ FİİLLERİ =======================
+add("ar","B1","İş Fiilleri","يعمل","çalışmak","fiil","أعمل في شركة دولية.","Uluslararası bir şirkette çalışıyorum.");
+add("ar","B1","İş Fiilleri","يوظف","işe almak","fiil","الشركة توظف موظفين جدد.","Şirket yeni çalışanlar işe alıyor.");
+add("ar","B1","İş Fiilleri","يقدم","sunmak / başvurmak","fiil","قدمت طلبا للعمل.","İş için başvuru yaptım.");
+add("ar","B1","İş Fiilleri","يستقيل","istifa etmek","fiil","استقال من وظيفته.","İşinden istifa etti.");
+add("ar","B1","İş Fiilleri","يتقاعد","emekli olmak","fiil","سيتقاعد العام المقبل.","Gelecek yıl emekli olacak.");
+add("ar","B1","İş Fiilleri","يكسب","kazanmak","fiil","يكسب راتبا جيدا.","İyi bir maaş kazanıyor.");
+add("ar","B1","İş Fiilleri","يدير","yönetmek","fiil","يدير فريقا كبيرا.","Büyük bir ekibi yönetiyor.");
+add("ar","B1","İş Fiilleri","يقود","yönetmek / liderlik etmek","fiil","يقود المشروع بنجاح.","Projeyi başarıyla yönetiyor.");
+add("ar","B1","İş Fiilleri","ينظم","düzenlemek","fiil","ينظم المدير الاجتماع.","Müdür toplantıyı düzenliyor.");
+add("ar","B1","İş Fiilleri","يخطط","planlamak","fiil","نخطط لمشروع جديد.","Yeni bir proje planlıyoruz.");
+add("ar","B1","İş Fiilleri","يناقش","tartışmak","fiil","ناقشنا المشكلة في الاجتماع.","Toplantıda sorunu tartıştık.");
+add("ar","B1","İş Fiilleri","يتفق","anlaşmak","fiil","اتفقنا على الخطة.","Plan üzerinde anlaştık.");
+add("ar","B1","İş Fiilleri","يختلف","aynı fikirde olmamak","fiil","أختلف مع رأيك.","Fikrine katılmıyorum.");
+add("ar","B1","İş Fiilleri","يتعاون","iş birliği yapmak","fiil","نتعاون مع شركات أخرى.","Diğer şirketlerle iş birliği yapıyoruz.");
+add("ar","B1","İş Fiilleri","يتواصل","iletişim kurmak","fiil","أتواصل مع العملاء يوميا.","Müşterilerle her gün iletişim kuruyorum.");
+add("ar","B1","İş Fiilleri","يرسل","göndermek","fiil","أرسلت التقرير إلى المدير.","Raporu müdüre gönderdim.");
+add("ar","B1","İş Fiilleri","يستلم","teslim almak","fiil","استلمت رسالة من الشركة.","Şirketten bir mesaj aldım.");
+add("ar","B1","İş Fiilleri","يوقع","imzalamak","fiil","وقعت العقد.","Sözleşmeyi imzaladım.");
+add("ar","B1","İş Fiilleri","يحضر","katılmak / hazır bulunmak","fiil","حضرت الاجتماع.","Toplantıya katıldım.");
+add("ar","B1","İş Fiilleri","ينجز","tamamlamak / gerçekleştirmek","fiil","أنجزت المهمة في الوقت المحدد.","Görevi zamanında tamamladım.");
+// ======================= B1 — İŞ SIFATLARI =======================
+add("ar","B1","İş Sıfatları","مشغول","meşgul","sıfat","أنا مشغول اليوم.","Bugün meşgulüm.");
+add("ar","B1","İş Sıfatları","متفرغ","müsait / boş","sıfat","أنا متفرغ بعد الظهر.","Öğleden sonra müsaitim.");
+add("ar","B1","İş Sıfatları","ناجح","başarılı","sıfat","إنه رجل أعمال ناجح.","O başarılı bir iş insanı.");
+add("ar","B1","İş Sıfatları","فاشل","başarısız","sıfat","كان المشروع فاشلا.","Proje başarısız oldu.");
+add("ar","B1","İş Sıfatları","محترف","profesyonel","sıfat","هو موظف محترف.","O profesyonel bir çalışan.");
+add("ar","B1","İş Sıfatları","مبتدئ","başlangıç seviyesinde","sıfat","أنا موظف مبتدئ.","Ben yeni başlayan bir çalışanım.");
+add("ar","B1","İş Sıfatları","متخصص","uzmanlaşmış","sıfat","هو متخصص في التكنولوجيا.","Teknoloji alanında uzmanlaşmış.");
+add("ar","B1","İş Sıfatları","مؤهل","nitelikli","sıfat","إنه موظف مؤهل.","O nitelikli bir çalışan.");
+add("ar","B1","İş Sıfatları","موثوق","güvenilir","sıfat","هو شخص موثوق.","O güvenilir bir insan.");
+add("ar","B1","İş Sıfatları","مسؤول","sorumlu","sıfat","هو موظف مسؤول.","O sorumlu bir çalışan.");
+add("ar","B1","İş Sıfatları","مستقل","bağımsız","sıfat","أعمل بشكل مستقل.","Bağımsız çalışıyorum.");
+add("ar","B1","İş Sıfatları","مرن","esnek","sıfat","ساعات العمل مرنة.","Çalışma saatleri esnek.");
+add("ar","B1","İş Sıfatları","ضروري","gerekli","sıfat","العمل الجماعي ضروري.","Ekip çalışması gereklidir.");
+add("ar","B1","İş Sıfatları","مؤقت","geçici","sıfat","لدي عقد مؤقت.","Geçici bir sözleşmem var.");
+add("ar","B1","İş Sıfatları","دائم","kalıcı","sıfat","أبحث عن وظيفة دائمة.","Kalıcı bir iş arıyorum.");
+// ======================= B1 — İŞ YERİ İFADELERİ =======================
+add("ar","B1","İş İfadeleri","بدوام كامل","tam zamanlı","ifade","أعمل بدوام كامل.","Tam zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","بدوام جزئي","yarı zamanlı","ifade","أعمل بدوام جزئي.","Yarı zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","عن بعد","uzaktan","ifade","أعمل عن بعد من المنزل.","Evden uzaktan çalışıyorum.");
+add("ar","B1","İş İfadeleri","من المنزل","evden","ifade","أعمل من المنزل يومين في الأسبوع.","Haftada iki gün evden çalışıyorum.");
+add("ar","B1","İş İfadeleri","في الوقت المحدد","zamanında","ifade","وصلت إلى العمل في الوقت المحدد.","İşe zamanında geldim.");
+add("ar","B1","İş İfadeleri","في الوقت المناسب","uygun zamanda","ifade","وصلنا في الوقت المناسب.","Uygun zamanda geldik.");
+add("ar","B1","İş İfadeleri","في المستقبل","gelecekte","ifade","أريد أن أعمل في الخارج في المستقبل.","Gelecekte yurtdışında çalışmak istiyorum.");
+add("ar","B1","İş İfadeleri","في مجال","alanında","ifade","أعمل في مجال التكنولوجيا.","Teknoloji alanında çalışıyorum.");
+add("ar","B1","İş İfadeleri","التقدم في العمل","işte ilerleme","ifade","أريد التقدم في عملي.","İşimde ilerlemek istiyorum.");
+add("ar","B1","İş İfadeleri","البحث عن عمل","iş aramak","ifade","أنا أبحث عن عمل جديد.","Yeni bir iş arıyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 18
+================================================================ */
+// ======================= B1 — SEYAHAT =======================
+add("ar","B1","Seyahat","سفر","seyahat","isim","أحب السفر إلى بلدان جديدة.","Yeni ülkelere seyahat etmeyi seviyorum.");
+add("ar","B1","Seyahat","رحلة","gezi / yolculuk","isim","كانت الرحلة ممتعة.","Gezi eğlenceliydi.");
+add("ar","B1","Seyahat","سياحة","turizm","isim","السياحة مهمة للاقتصاد.","Turizm ekonomi için önemlidir.");
+add("ar","B1","Seyahat","سائح","turist","isim","يوجد الكثير من السياح هنا.","Burada çok turist var.");
+add("ar","B1","Seyahat","وجهة","varış noktası / destinasyon","isim","هذه وجهة سياحية مشهورة.","Burası ünlü bir turistik destinasyondur.");
+add("ar","B1","Seyahat","بلد","ülke","isim","أريد زيارة هذا البلد.","Bu ülkeyi ziyaret etmek istiyorum.");
+add("ar","B1","Seyahat","مدينة","şehir","isim","هذه مدينة جميلة.","Bu güzel bir şehir.");
+add("ar","B1","Seyahat","قرية","köy","isim","زرنا قرية صغيرة.","Küçük bir köyü ziyaret ettik.");
+add("ar","B1","Seyahat","عاصمة","başkent","isim","فيينا عاصمة النمسا.","Viyana Avusturya'nın başkentidir.");
+add("ar","B1","Seyahat","حدود","sınır","isim","عبرنا الحدود صباحا.","Sabah sınırı geçtik.");
+add("ar","B1","Seyahat","جواز سفر","pasaport","isim","نسيت جواز سفري في الفندق.","Pasaportumu otelde unuttum.");
+add("ar","B1","Seyahat","تأشيرة","vize","isim","أحتاج إلى تأشيرة للسفر.","Seyahat etmek için vizeye ihtiyacım var.");
+add("ar","B1","Seyahat","تذكرة","bilet","isim","اشتريت تذكرة الطائرة.","Uçak bileti aldım.");
+add("ar","B1","Seyahat","حجز","rezervasyon","isim","لدي حجز في الفندق.","Otelde rezervasyonum var.");
+add("ar","B1","Seyahat","أمتعة","bagaj","isim","أين أمتعتك؟","Bagajın nerede?");
+add("ar","B1","Seyahat","حقيبة سفر","valiz","isim","حقيبتي ثقيلة جدا.","Valizim çok ağır.");
+add("ar","B1","Seyahat","خريطة","harita","isim","أحتاج إلى خريطة للمدينة.","Şehir haritasına ihtiyacım var.");
+add("ar","B1","Seyahat","دليل سياحي","tur rehberi","isim","استأجرنا دليلا سياحيا.","Bir tur rehberi tuttuk.");
+add("ar","B1","Seyahat","معلومات سياحية","turistik bilgi","isim","أين يمكنني الحصول على معلومات سياحية؟","Turistik bilgiyi nereden alabilirim?");
+add("ar","B1","Seyahat","معلم سياحي","turistik yer","isim","زرنا جميع المعالم السياحية.","Tüm turistik yerleri ziyaret ettik.");
+// ======================= B1 — ULAŞIM =======================
+add("ar","B1","Ulaşım","مواصلات","ulaşım","isim","المواصلات العامة جيدة هنا.","Burada toplu taşıma iyi.");
+add("ar","B1","Ulaşım","وسيلة نقل","ulaşım aracı","isim","ما هي أفضل وسيلة نقل؟","En iyi ulaşım aracı nedir?");
+add("ar","B1","Ulaşım","سيارة","araba","isim","استأجرت سيارة.","Araba kiraladım.");
+add("ar","B1","Ulaşım","حافلة","otobüs","isim","أذهب إلى العمل بالحافلة.","İşe otobüsle gidiyorum.");
+add("ar","B1","Ulaşım","قطار","tren","isim","سافرت بالقطار.","Trenle seyahat ettim.");
+add("ar","B1","Ulaşım","مترو","metro","isim","أخذت المترو إلى المركز.","Merkeze metro ile gittim.");
+add("ar","B1","Ulaşım","ترام","tramvay","isim","الترام سريع ومريح.","Tramvay hızlı ve rahat.");
+add("ar","B1","Ulaşım","سيارة أجرة","taksi","isim","أخذت سيارة أجرة إلى الفندق.","Otele taksiyle gittim.");
+add("ar","B1","Ulaşım","دراجة","bisiklet","isim","أذهب إلى الجامعة بالدراجة.","Üniversiteye bisikletle gidiyorum.");
+add("ar","B1","Ulaşım","طائرة","uçak","isim","سأسافر بالطائرة غدا.","Yarın uçakla seyahat edeceğim.");
+add("ar","B1","Ulaşım","سفينة","gemi","isim","سافرنا بالسفينة.","Gemiyle seyahat ettik.");
+add("ar","B1","Ulaşım","مطار","havaalanı","isim","وصلت إلى المطار مبكرا.","Havaalanına erken geldim.");
+add("ar","B1","Ulaşım","محطة","istasyon","isim","أين محطة القطار؟","Tren istasyonu nerede?");
+add("ar","B1","Ulaşım","موقف الحافلات","otobüs durağı","isim","انتظرني عند موقف الحافلات.","Beni otobüs durağında bekle.");
+add("ar","B1","Ulaşım","رصيف","peron","isim","القطار على الرصيف الثالث.","Tren üçüncü peronda.");
+add("ar","B1","Ulaşım","رحلة جوية","uçuş","isim","رحلتي الجوية تأخرت.","Uçuşum gecikti.");
+add("ar","B1","Ulaşım","إقلاع","kalkış","isim","موعد الإقلاع الساعة التاسعة.","Kalkış saati dokuz.");
+add("ar","B1","Ulaşım","هبوط","iniş","isim","موعد الهبوط في الساعة الثانية.","İniş saati ikide.");
+add("ar","B1","Ulaşım","تأخير","gecikme","isim","هناك تأخير في الرحلة.","Uçuşta gecikme var.");
+add("ar","B1","Ulaşım","ازدحام","trafik yoğunluğu","isim","هناك ازدحام شديد في الطريق.","Yolda yoğun trafik var.");
+// ======================= B1 — HAVAALANI =======================
+add("ar","B1","Havaalanı","بوابة","kapı","isim","بوابة الصعود رقم خمسة.","Biniş kapısı beş numara.");
+add("ar","B1","Havaalanı","صالة","salon / terminal","isim","نحن في الصالة الثانية.","İkinci terminaldeyiz.");
+add("ar","B1","Havaalanı","جوازات السفر","pasaport kontrolü","isim","انتظر عند جوازات السفر.","Pasaport kontrolünde bekle.");
+add("ar","B1","Havaalanı","تفتيش أمني","güvenlik kontrolü","isim","يجب أن تمر عبر التفتيش الأمني.","Güvenlik kontrolünden geçmelisin.");
+add("ar","B1","Havaalanı","أمن","güvenlik","isim","الأمن في المطار مهم.","Havaalanında güvenlik önemlidir.");
+add("ar","B1","Havaalanı","صعود إلى الطائرة","uçağa biniş","isim","بدأ الصعود إلى الطائرة.","Uçağa biniş başladı.");
+add("ar","B1","Havaalanı","بطاقة الصعود","biniş kartı","isim","أين بطاقة الصعود؟","Biniş kartı nerede?");
+add("ar","B1","Havaalanı","أمتعة يدوية","el bagajı","isim","هذه حقيبتي اليدوية.","Bu benim el bagajım.");
+add("ar","B1","Havaalanı","أمتعة مسجلة","kayıtlı bagaj","isim","لدي حقيبة واحدة مسجلة.","Bir kayıtlı bagajım var.");
+add("ar","B1","Havaalanı","استلام الأمتعة","bagaj teslim alma","isim","أين استلام الأمتعة؟","Bagaj teslim alma yeri nerede?");
+add("ar","B1","Havaalanı","رحلة مباشرة","direkt uçuş","isim","أريد رحلة مباشرة.","Direkt uçuş istiyorum.");
+add("ar","B1","Havaalanı","رحلة ترانزيت","aktarmalı uçuş","isim","لدي رحلة ترانزيت في إسطنبول.","İstanbul'da aktarmalı uçuşum var.");
+add("ar","B1","Havaalanı","رحلة ذهاب وإياب","gidiş-dönüş uçuş","isim","حجزت رحلة ذهاب وإياب.","Gidiş-dönüş uçuş rezervasyonu yaptım.");
+add("ar","B1","Havaalanı","رحلة ذهاب فقط","tek yön uçuş","isim","أريد تذكرة ذهاب فقط.","Tek yön bilet istiyorum.");
+add("ar","B1","Havaalanı","شركة طيران","havayolu şirketi","isim","هذه شركة طيران مشهورة.","Bu ünlü bir havayolu şirketi.");
+// ======================= B1 — OTEL =======================
+add("ar","B1","Otel","فندق","otel","isim","حجزت غرفة في الفندق.","Otelde bir oda ayırttım.");
+add("ar","B1","Otel","غرفة","oda","isim","الغرفة نظيفة.","Oda temiz.");
+add("ar","B1","Otel","غرفة مفردة","tek kişilik oda","isim","أريد غرفة مفردة.","Tek kişilik oda istiyorum.");
+add("ar","B1","Otel","غرفة مزدوجة","çift kişilik oda","isim","حجزنا غرفة مزدوجة.","Çift kişilik oda ayırttık.");
+add("ar","B1","Otel","استقبال","resepsiyon","isim","سألت في الاستقبال.","Resepsiyona sordum.");
+add("ar","B1","Otel","موظف الاستقبال","resepsiyon görevlisi","isim","موظف الاستقبال يساعدني.","Resepsiyon görevlisi bana yardım ediyor.");
+add("ar","B1","Otel","تسجيل الوصول","check-in","isim","متى يبدأ تسجيل الوصول؟","Check-in ne zaman başlıyor?");
+add("ar","B1","Otel","تسجيل المغادرة","check-out","isim","متى يجب أن نقوم بتسجيل المغادرة؟","Check-out ne zaman yapmalıyız?");
+add("ar","B1","Otel","مفتاح","anahtar","isim","أين مفتاح غرفتي؟","Odamın anahtarı nerede?");
+add("ar","B1","Otel","بطاقة مفتاح","anahtar kartı","isim","بطاقة المفتاح لا تعمل.","Anahtar kartı çalışmıyor.");
+add("ar","B1","Otel","مصعد","asansör","isim","المصعد في نهاية الممر.","Asansör koridorun sonunda.");
+add("ar","B1","Otel","ممر","koridor","isim","الغرفة في نهاية الممر.","Oda koridorun sonunda.");
+add("ar","B1","Otel","طابق","kat","isim","غرفتي في الطابق الثالث.","Odam üçüncü katta.");
+add("ar","B1","Otel","إفطار","kahvaltı","isim","الإفطار مشمول في السعر.","Kahvaltı fiyata dahil.");
+add("ar","B1","Otel","خدمة الغرف","oda servisi","isim","طلبت خدمة الغرف.","Oda servisi istedim.");
+add("ar","B1","Otel","تنظيف","temizlik","isim","أحتاج إلى تنظيف الغرفة.","Odanın temizlenmesine ihtiyacım var.");
+add("ar","B1","Otel","مناشف","havlular","isim","نحتاج إلى مناشف إضافية.","Ekstra havlulara ihtiyacımız var.");
+add("ar","B1","Otel","إنترنت لاسلكي","kablosuz internet / Wi-Fi","isim","هل يوجد إنترنت لاسلكي؟","Kablosuz internet var mı?");
+add("ar","B1","Otel","مسبح","havuz","isim","يوجد مسبح في الفندق.","Otelde havuz var.");
+add("ar","B1","Otel","منظر","manzara","isim","الغرفة لديها منظر جميل.","Odanın güzel bir manzarası var.");
+// ======================= B1 — TATİL =======================
+add("ar","B1","Tatil","عطلة","tatil","isim","سأذهب في عطلة الأسبوع المقبل.","Gelecek hafta tatile gideceğim.");
+add("ar","B1","Tatil","إجازة","izin / tatil","isim","لدي إجازة لمدة أسبوع.","Bir haftalık iznim var.");
+add("ar","B1","Tatil","شاطئ","plaj","isim","قضينا اليوم على الشاطئ.","Günü plajda geçirdik.");
+add("ar","B1","Tatil","بحر","deniz","isim","أحب السباحة في البحر.","Denizde yüzmeyi seviyorum.");
+add("ar","B1","Tatil","جزيرة","ada","isim","زرنا جزيرة جميلة.","Güzel bir adayı ziyaret ettik.");
+add("ar","B1","Tatil","جبل","dağ","isim","ذهبنا إلى الجبل.","Dağa gittik.");
+add("ar","B1","Tatil","غابة","orman","isim","مشينا في الغابة.","Ormanda yürüdük.");
+add("ar","B1","Tatil","طبيعة","doğa","isim","أحب الطبيعة.","Doğayı seviyorum.");
+add("ar","B1","Tatil","منظر طبيعي","doğal manzara","isim","المنظر الطبيعي رائع.","Doğal manzara harika.");
+add("ar","B1","Tatil","تخييم","kamp yapma","isim","ذهبنا للتخييم في الجبال.","Dağlarda kamp yapmaya gittik.");
+add("ar","B1","Tatil","مغامرة","macera","isim","كانت الرحلة مغامرة رائعة.","Gezi harika bir maceraydı.");
+add("ar","B1","Tatil","استرخاء","rahatlama","isim","أحتاج إلى بعض الاسترخاء.","Biraz rahatlamaya ihtiyacım var.");
+add("ar","B1","Tatil","استكشاف","keşif","isim","أحب استكشاف أماكن جديدة.","Yeni yerleri keşfetmeyi seviyorum.");
+add("ar","B1","Tatil","تصوير","fotoğraf çekme","isim","أحب التصوير أثناء السفر.","Seyahat ederken fotoğraf çekmeyi seviyorum.");
+add("ar","B1","Tatil","ذكرى","anı","isim","لدي ذكريات جميلة من الرحلة.","Geziden güzel anılarım var.");
+// ======================= B1 — SEYAHAT FİİLLERİ =======================
+add("ar","B1","Seyahat Fiilleri","يسافر","seyahat etmek","fiil","أسافر كثيرا للعمل.","İş için çok seyahat ediyorum.");
+add("ar","B1","Seyahat Fiilleri","يزور","ziyaret etmek","fiil","أريد زيارة النمسا.","Avusturya'yı ziyaret etmek istiyorum.");
+add("ar","B1","Seyahat Fiilleri","يصل","varmak","fiil","وصلنا إلى الفندق مساء.","Akşam otele vardık.");
+add("ar","B1","Seyahat Fiilleri","يغادر","ayrılmak","fiil","سنغادر غدا صباحا.","Yarın sabah ayrılacağız.");
+add("ar","B1","Seyahat Fiilleri","يحجز","rezervasyon yapmak","fiil","حجزت غرفة في الفندق.","Otelde bir oda ayırttım.");
+add("ar","B1","Seyahat Fiilleri","يستأجر","kiralamak","fiil","استأجرنا سيارة.","Araba kiraladık.");
+add("ar","B1","Seyahat Fiilleri","يركب","binmek","fiil","ركبت القطار إلى فيينا.","Viyana'ya trenle gittim.");
+add("ar","B1","Seyahat Fiilleri","ينزل","inmek","fiil","نزلت من الحافلة.","Otobüsten indim.");
+add("ar","B1","Seyahat Fiilleri","يعبر","geçmek","fiil","عبرنا الحدود.","Sınırı geçtik.");
+add("ar","B1","Seyahat Fiilleri","يتجول","gezmek / dolaşmak","fiil","تجولنا في المدينة القديمة.","Eski şehirde dolaştık.");
+add("ar","B1","Seyahat Fiilleri","يستكشف","keşfetmek","fiil","استكشفنا أماكن جديدة.","Yeni yerleri keşfettik.");
+add("ar","B1","Seyahat Fiilleri","يستريح","dinlenmek","fiil","أريد أن أستريح في الفندق.","Otelde dinlenmek istiyorum.");
+add("ar","B1","Seyahat Fiilleri","يستمتع","keyif almak","fiil","استمتعنا بالعطلة كثيرا.","Tatilimizden çok keyif aldık.");
+add("ar","B1","Seyahat Fiilleri","يضيع","kaybolmak","fiil","ضعت في المدينة.","Şehirde kayboldum.");
+add("ar","B1","Seyahat Fiilleri","يتبع","takip etmek","fiil","اتبع الخريطة.","Haritayı takip et.");
+// ======================= B1 — SEYAHAT SIFATLARI =======================
+add("ar","B1","Seyahat Sıfatları","سياحي","turistik","sıfat","هذا مكان سياحي مشهور.","Burası ünlü bir turistik yer.");
+add("ar","B1","Seyahat Sıfatları","جميل","güzel","sıfat","المدينة جميلة جدا.","Şehir çok güzel.");
+add("ar","B1","Seyahat Sıfatları","رائع","harika","sıfat","كانت الرحلة رائعة.","Gezi harikaydı.");
+add("ar","B1","Seyahat Sıfatları","مزدحم","kalabalık","sıfat","المطار مزدحم اليوم.","Havaalanı bugün kalabalık.");
+add("ar","B1","Seyahat Sıfatları","هادئ","sakin","sıfat","القرية هادئة.","Köy sakin.");
+add("ar","B1","Seyahat Sıfatları","بعيد","uzak","sıfat","الفندق بعيد عن المركز.","Otel merkezden uzak.");
+add("ar","B1","Seyahat Sıfatları","قريب","yakın","sıfat","المطار قريب من هنا.","Havaalanı buraya yakın.");
+add("ar","B1","Seyahat Sıfatları","مريح","rahat","sıfat","القطار مريح.","Tren rahat.");
+add("ar","B1","Seyahat Sıfatları","سريع","hızlı","sıfat","القطار سريع.","Tren hızlı.");
+add("ar","B1","Seyahat Sıfatları","بطيء","yavaş","sıfat","الحافلة بطيئة.","Otobüs yavaş.");
+add("ar","B1","Seyahat Sıfatları","مكلف","pahalı","sıfat","الفندق مكلف جدا.","Otel çok pahalı.");
+add("ar","B1","Seyahat Sıfatları","رخيص","ucuz","sıfat","وجدنا فندقا رخيصا.","Ucuz bir otel bulduk.");
+add("ar","B1","Seyahat Sıfatları","متاح","mevcut / müsait","sıfat","هل هناك غرفة متاحة؟","Müsait bir oda var mı?");
+add("ar","B1","Seyahat Sıfatları","محجوز","rezerve edilmiş","sıfat","كل الغرف محجوزة.","Tüm odalar rezerve edilmiş.");
+add("ar","B1","Seyahat Sıfatları","مفتوح","açık","sıfat","المتحف مفتوح اليوم.","Müze bugün açık.");
+// ======================= B1 — SEYAHAT İFADELERİ =======================
+add("ar","B1","Seyahat İfadeleri","في الطريق","yolda","ifade","نحن في الطريق إلى الفندق.","Otele gidiyoruz.");
+add("ar","B1","Seyahat İfadeleri","في الخارج","yurt dışında / dışarıda","ifade","أريد أن أعيش في الخارج.","Yurt dışında yaşamak istiyorum.");
+add("ar","B1","Seyahat İfadeleri","في الداخل","içeride","ifade","الناس ينتظرون في الداخل.","İnsanlar içeride bekliyor.");
+add("ar","B1","Seyahat İfadeleri","في الخارج","dışarıda","ifade","الطقس جميل في الخارج.","Dışarıda hava güzel.");
+add("ar","B1","Seyahat İfadeleri","ذهاب وإياب","gidiş-dönüş","ifade","أريد تذكرة ذهاب وإياب.","Gidiş-dönüş bilet istiyorum.");
+add("ar","B1","Seyahat İfadeleri","ذهاب فقط","tek yön","ifade","أريد تذكرة ذهاب فقط.","Tek yön bilet istiyorum.");
+add("ar","B1","Seyahat İfadeleri","في أقرب وقت ممكن","mümkün olan en kısa sürede","ifade","أريد السفر في أقرب وقت ممكن.","Mümkün olan en kısa sürede seyahat etmek istiyorum.");
+add("ar","B1","Seyahat İfadeleri","في الموعد","zamanında","ifade","وصل القطار في الموعد.","Tren zamanında geldi.");
+add("ar","B1","Seyahat İfadeleri","على متن الطائرة","uçakta","ifade","كنت على متن الطائرة عندما اتصلت.","Aradığında uçaktaydım.");
+add("ar","B1","Seyahat İfadeleri","رحلة آمنة","güvenli yolculuk","ifade","أتمنى لك رحلة آمنة.","Sana güvenli yolculuklar dilerim.");
+/* ================================================================
+   ARAPÇA B1 — PART 19
+================================================================ */
+// ======================= B1 — EV VE KONUT =======================
+add("ar","B1","Ev","منزل","ev","isim","أعيش في منزل صغير.","Küçük bir evde yaşıyorum.");
+add("ar","B1","Ev","بيت","ev","isim","بيتي قريب من الجامعة.","Evim üniversiteye yakın.");
+add("ar","B1","Ev","شقة","daire","isim","أعيش في شقة في وسط المدينة.","Şehir merkezinde bir dairede yaşıyorum.");
+add("ar","B1","Ev","غرفة","oda","isim","غرفتي كبيرة ومريحة.","Odam büyük ve rahat.");
+add("ar","B1","Ev","غرفة نوم","yatak odası","isim","غرفة النوم في الطابق الثاني.","Yatak odası ikinci katta.");
+add("ar","B1","Ev","غرفة معيشة","oturma odası","isim","نجلس في غرفة المعيشة.","Oturma odasında oturuyoruz.");
+add("ar","B1","Ev","مطبخ","mutfak","isim","أمي تطبخ في المطبخ.","Annem mutfakta yemek yapıyor.");
+add("ar","B1","Ev","حمام","banyo","isim","الحمام نظيف.","Banyo temiz.");
+add("ar","B1","Ev","شرفة","balkon","isim","لدينا شرفة كبيرة.","Büyük bir balkonumuz var.");
+add("ar","B1","Ev","حديقة","bahçe","isim","أحب الجلوس في الحديقة.","Bahçede oturmayı seviyorum.");
+add("ar","B1","Ev","سطح","çatı","isim","السطح يحتاج إلى إصلاح.","Çatının tamire ihtiyacı var.");
+add("ar","B1","Ev","طابق","kat","isim","أعيش في الطابق الثالث.","Üçüncü katta yaşıyorum.");
+add("ar","B1","Ev","مدخل","giriş","isim","المدخل على اليمين.","Giriş sağda.");
+add("ar","B1","Ev","باب","kapı","isim","أغلق الباب من فضلك.","Lütfen kapıyı kapat.");
+add("ar","B1","Ev","نافذة","pencere","isim","افتح النافذة.","Pencereyi aç.");
+add("ar","B1","Ev","جدار","duvar","isim","اللوحة على الجدار.","Tablo duvarda.");
+add("ar","B1","Ev","أرضية","zemin / yer","isim","الأرضية نظيفة.","Zemin temiz.");
+add("ar","B1","Ev","سقف","tavan","isim","السقف مرتفع.","Tavan yüksek.");
+add("ar","B1","Ev","درج","merdiven","isim","اصعد الدرج.","Merdivenlerden çık.");
+add("ar","B1","Ev","مصعد","asansör","isim","المصعد لا يعمل.","Asansör çalışmıyor.");
+// ======================= B1 — EV EŞYALARI =======================
+add("ar","B1","Ev Eşyaları","أثاث","mobilya","isim","اشتريت أثاثا جديدا.","Yeni mobilyalar aldım.");
+add("ar","B1","Ev Eşyaları","طاولة","masa","isim","الكتاب على الطاولة.","Kitap masanın üzerinde.");
+add("ar","B1","Ev Eşyaları","كرسي","sandalye","isim","اجلس على الكرسي.","Sandalyeye otur.");
+add("ar","B1","Ev Eşyaları","أريكة","kanepe","isim","نجلس على الأريكة.","Kanepede oturuyoruz.");
+add("ar","B1","Ev Eşyaları","سرير","yatak","isim","السرير مريح.","Yatak rahat.");
+add("ar","B1","Ev Eşyaları","خزانة","dolap","isim","ملابسي في الخزانة.","Kıyafetlerim dolapta.");
+add("ar","B1","Ev Eşyaları","مرآة","ayna","isim","أنظر إلى نفسي في المرآة.","Aynada kendime bakıyorum.");
+add("ar","B1","Ev Eşyaları","مصباح","lamba","isim","أطفئ المصباح.","Lambayı kapat.");
+add("ar","B1","Ev Eşyaları","ثلاجة","buzdolabı","isim","الحليب في الثلاجة.","Süt buzdolabında.");
+add("ar","B1","Ev Eşyaları","فرن","fırın","isim","الطعام في الفرن.","Yemek fırında.");
+add("ar","B1","Ev Eşyaları","غسالة","çamaşır makinesi","isim","الغسالة تعمل الآن.","Çamaşır makinesi şimdi çalışıyor.");
+add("ar","B1","Ev Eşyaları","مكنسة كهربائية","elektrikli süpürge","isim","أستخدم المكنسة الكهربائية.","Elektrikli süpürge kullanıyorum.");
+add("ar","B1","Ev Eşyaları","تلفاز","televizyon","isim","نشاهد التلفاز مساء.","Akşam televizyon izliyoruz.");
+add("ar","B1","Ev Eşyaları","حاسوب محمول","dizüstü bilgisayar","isim","أعمل على حاسوبي المحمول.","Dizüstü bilgisayarımda çalışıyorum.");
+add("ar","B1","Ev Eşyaları","هاتف ذكي","akıllı telefon","isim","اشتريت هاتفا ذكيا جديدا.","Yeni bir akıllı telefon aldım.");
+// ======================= B1 — EV İLE İLGİLİ FİİLLER =======================
+add("ar","B1","Ev Fiilleri","يسكن","ikamet etmek / yaşamak","fiil","أسكن في مدينة كبيرة.","Büyük bir şehirde yaşıyorum.");
+add("ar","B1","Ev Fiilleri","يعيش","yaşamak","fiil","أعيش مع عائلتي.","Ailemle yaşıyorum.");
+add("ar","B1","Ev Fiilleri","ينتقل","taşınmak","fiil","سأنتقل إلى منزل جديد.","Yeni bir eve taşınacağım.");
+add("ar","B1","Ev Fiilleri","يستأجر","kiralamak","fiil","أستأجر شقة صغيرة.","Küçük bir daire kiralıyorum.");
+add("ar","B1","Ev Fiilleri","يشتري","satın almak","fiil","أريد شراء منزل.","Bir ev satın almak istiyorum.");
+add("ar","B1","Ev Fiilleri","يبيع","satmak","fiil","باع منزله العام الماضي.","Geçen yıl evini sattı.");
+add("ar","B1","Ev Fiilleri","يفتح","açmak","fiil","افتح الباب.","Kapıyı aç.");
+add("ar","B1","Ev Fiilleri","يغلق","kapatmak","fiil","أغلق النافذة.","Pencereyi kapat.");
+add("ar","B1","Ev Fiilleri","ينظف","temizlemek","fiil","أنظف غرفتي كل أسبوع.","Odamı her hafta temizliyorum.");
+add("ar","B1","Ev Fiilleri","يرتب","düzenlemek","fiil","أرتب غرفتي كل صباح.","Odamı her sabah düzenliyorum.");
+add("ar","B1","Ev Fiilleri","يطبخ","yemek pişirmek","fiil","أطبخ العشاء اليوم.","Bugün akşam yemeği pişiriyorum.");
+add("ar","B1","Ev Fiilleri","يغسل","yıkamak","fiil","أغسل الملابس.","Çamaşırları yıkıyorum.");
+add("ar","B1","Ev Fiilleri","يصلح","tamir etmek","fiil","أصلح الباب.","Kapıyı tamir ediyorum.");
+add("ar","B1","Ev Fiilleri","يغير","değiştirmek","fiil","أريد تغيير الأثاث.","Mobilyaları değiştirmek istiyorum.");
+add("ar","B1","Ev Fiilleri","يشارك","paylaşmak","fiil","أشارك الغرفة مع أخي.","Odayı kardeşimle paylaşıyorum.");
+// ======================= B1 — AİLE =======================
+add("ar","B1","Aile","عائلة","aile","isim","عائلتي كبيرة.","Ailem büyük.");
+add("ar","B1","Aile","والدان","ebeveynler","isim","والداي يعيشان في تركيا.","Ebeveynlerim Türkiye'de yaşıyor.");
+add("ar","B1","Aile","أب","baba","isim","أبي يعمل في شركة.","Babam bir şirkette çalışıyor.");
+add("ar","B1","Aile","أم","anne","isim","أمي تطبخ جيدا.","Annem iyi yemek yapıyor.");
+add("ar","B1","Aile","ابن","oğul","isim","لديه ابن واحد.","Bir oğlu var.");
+add("ar","B1","Aile","ابنة","kız evlat","isim","لديها ابنة صغيرة.","Küçük bir kızı var.");
+add("ar","B1","Aile","أخ","erkek kardeş","isim","لدي أخ أكبر.","Büyük bir erkek kardeşim var.");
+add("ar","B1","Aile","أخت","kız kardeş","isim","أختي تدرس في الجامعة.","Kız kardeşim üniversitede okuyor.");
+add("ar","B1","Aile","جد","dede","isim","جدي يعيش في القرية.","Dedem köyde yaşıyor.");
+add("ar","B1","Aile","جدة","nine","isim","جدتي تحب الطبخ.","Ninem yemek yapmayı seviyor.");
+add("ar","B1","Aile","عم","amca","isim","عمي يعيش في ألمانيا.","Amcam Almanya'da yaşıyor.");
+add("ar","B1","Aile","خال","dayı","isim","خالي يعمل في الخارج.","Dayım yurt dışında çalışıyor.");
+add("ar","B1","Aile","عمة","hala","isim","عمتي تزورنا كل أسبوع.","Halam bizi her hafta ziyaret ediyor.");
+add("ar","B1","Aile","خالة","teyze","isim","خالتي قريبة من منزلي.","Teyzem evime yakın oturuyor.");
+add("ar","B1","Aile","ابن العم","amca oğlu / kuzeni","isim","ابن عمي صديقي المقرب.","Amcamın oğlu benim yakın arkadaşım.");
+add("ar","B1","Aile","قريب","akraba","isim","لدي أقارب في أوروبا.","Avrupa'da akrabalarım var.");
+add("ar","B1","Aile","زوج","eş / koca","isim","زوجها يعمل في بنك.","Kocası bankada çalışıyor.");
+add("ar","B1","Aile","زوجة","eş / karı","isim","زوجته طبيبة.","Karısı doktor.");
+add("ar","B1","Aile","طفل","çocuk","isim","لديهم طفلان.","İki çocukları var.");
+add("ar","B1","Aile","أطفال","çocuklar","isim","الأطفال يلعبون في الحديقة.","Çocuklar bahçede oynuyor.");
+// ======================= B1 — AİLE VE İLİŞKİLER =======================
+add("ar","B1","İlişkiler","علاقة","ilişki","isim","لدي علاقة جيدة مع عائلتي.","Ailemle iyi bir ilişkim var.");
+add("ar","B1","İlişkiler","صداقة","arkadaşlık","isim","الصداقة الحقيقية مهمة.","Gerçek arkadaşlık önemlidir.");
+add("ar","B1","İlişkiler","صديق","arkadaş","isim","هو صديقي المقرب.","O benim yakın arkadaşım.");
+add("ar","B1","İlişkiler","صديقة","kız arkadaş / kadın arkadaş","isim","هي صديقتي.","O benim arkadaşım.");
+add("ar","B1","İlişkiler","حب","aşk","isim","الحب يحتاج إلى الثقة.","Aşk güven gerektirir.");
+add("ar","B1","İlişkiler","زواج","evlilik","isim","الزواج مسؤولية كبيرة.","Evlilik büyük bir sorumluluktur.");
+add("ar","B1","İlişkiler","خطوبة","nişan","isim","أعلنوا عن خطوبتهم.","Nişanlandıklarını açıkladılar.");
+add("ar","B1","İlişkiler","طلاق","boşanma","isim","الطلاق قرار صعب.","Boşanma zor bir karardır.");
+add("ar","B1","İlişkiler","ثقة","güven","isim","الثقة مهمة في أي علاقة.","Güven her ilişkide önemlidir.");
+add("ar","B1","İlişkiler","احترام","saygı","isim","يجب أن نحترم بعضنا.","Birbirimize saygı duymalıyız.");
+add("ar","B1","İlişkiler","مساعدة","yardım","isim","أحتاج إلى مساعدتك.","Yardımına ihtiyacım var.");
+add("ar","B1","İlişkiler","دعم","destek","isim","أشكر عائلتي على دعمهم.","Aileme destekleri için teşekkür ederim.");
+add("ar","B1","İlişkiler","خلاف","anlaşmazlık","isim","حدث خلاف بينهما.","Aralarında bir anlaşmazlık oldu.");
+add("ar","B1","İlişkiler","مشكلة","sorun","isim","لدينا مشكلة صغيرة.","Küçük bir sorunumuz var.");
+add("ar","B1","İlişkiler","حل","çözüm","isim","نحتاج إلى إيجاد حل.","Bir çözüm bulmamız gerekiyor.");
+// ======================= B1 — KOMŞULUK =======================
+add("ar","B1","Komşuluk","جار","komşu","isim","جاري رجل طيب.","Komşum iyi bir adam.");
+add("ar","B1","Komşuluk","جيران","komşular","isim","جيراننا لطفاء.","Komşularımız nazik.");
+add("ar","B1","Komşuluk","حي","mahalle","isim","أعيش في حي هادئ.","Sakin bir mahallede yaşıyorum.");
+add("ar","B1","Komşuluk","منطقة","bölge","isim","هذه منطقة جميلة.","Burası güzel bir bölge.");
+add("ar","B1","Komşuluk","مبنى","bina","isim","أسكن في مبنى قديم.","Eski bir binada oturuyorum.");
+add("ar","B1","Komşuluk","مجتمع","toplum","isim","نحن جزء من المجتمع.","Toplumun bir parçasıyız.");
+add("ar","B1","Komşuluk","خدمة","hizmet","isim","الخدمات العامة جيدة هنا.","Burada kamu hizmetleri iyi.");
+add("ar","B1","Komşuluk","متجر","mağaza","isim","هناك متجر قريب من المنزل.","Evin yakınında bir mağaza var.");
+add("ar","B1","Komşuluk","سوق","pazar","isim","أذهب إلى السوق كل أسبوع.","Her hafta pazara gidiyorum.");
+add("ar","B1","Komşuluk","مخبز","fırın","isim","المخبز قريب من منزلي.","Fırın evime yakın.");
+add("ar","B1","Komşuluk","مطعم","restoran","isim","هناك مطعم جيد في الحي.","Mahallede iyi bir restoran var.");
+add("ar","B1","Komşuluk","حديقة عامة","park","isim","الأطفال يلعبون في الحديقة العامة.","Çocuklar parkta oynuyor.");
+add("ar","B1","Komşuluk","ملعب","oyun alanı / saha","isim","يوجد ملعب للأطفال.","Çocuklar için oyun alanı var.");
+add("ar","B1","Komşuluk","مركز صحي","sağlık merkezi","isim","المركز الصحي قريب.","Sağlık merkezi yakın.");
+add("ar","B1","Komşuluk","مركز تسوق","alışveriş merkezi","isim","ذهبنا إلى مركز التسوق.","Alışveriş merkezine gittik.");
+// ======================= B1 — EV VE YAŞAM SIFATLARI =======================
+add("ar","B1","Yaşam Sıfatları","واسع","geniş","sıfat","الشقة واسعة.","Daire geniş.");
+add("ar","B1","Yaşam Sıfatları","ضيق","dar","sıfat","الممر ضيق.","Koridor dar.");
+add("ar","B1","Yaşam Sıfatları","نظيف","temiz","sıfat","المنزل نظيف.","Ev temiz.");
+add("ar","B1","Yaşam Sıfatları","متسخ","kirli","sıfat","المطبخ متسخ.","Mutfak kirli.");
+add("ar","B1","Yaşam Sıfatları","مرتب","düzenli","sıfat","غرفتي مرتبة.","Odam düzenli.");
+add("ar","B1","Yaşam Sıfatları","فوضوي","dağınık","sıfat","غرفته فوضوية.","Odası dağınık.");
+add("ar","B1","Yaşam Sıfatları","هادئ","sakin","sıfat","الحي هادئ.","Mahalle sakin.");
+add("ar","B1","Yaşam Sıfatları","صاخب","gürültülü","sıfat","الشارع صاخب.","Cadde gürültülü.");
+add("ar","B1","Yaşam Sıfatları","قديم","eski","sıfat","هذا مبنى قديم.","Bu eski bir bina.");
+add("ar","B1","Yaşam Sıfatları","حديث","modern","sıfat","هذا منزل حديث.","Bu modern bir ev.");
+add("ar","B1","Yaşam Sıfatları","مريح","rahat","sıfat","هذا المنزل مريح.","Bu ev rahat.");
+add("ar","B1","Yaşam Sıfatları","غير مريح","rahatsız","sıfat","هذا الكرسي غير مريح.","Bu sandalye rahatsız.");
+add("ar","B1","Yaşam Sıfatları","آمن","güvenli","sıfat","هذه منطقة آمنة.","Burası güvenli bir bölge.");
+add("ar","B1","Yaşam Sıfatları","خطير","tehlikeli","sıfat","هذا المكان خطير ليلا.","Burası gece tehlikeli.");
+add("ar","B1","Yaşam Sıfatları","مناسب","uygun","sıfat","هذا المنزل مناسب لعائلتي.","Bu ev ailem için uygun.");
+// ======================= B1 — GÜNLÜK YAŞAM İFADELERİ =======================
+add("ar","B1","Günlük Yaşam","في المنزل","evde","ifade","أبقى في المنزل اليوم.","Bugün evde kalıyorum.");
+add("ar","B1","Günlük Yaşam","في الخارج","dışarıda","ifade","أنا في الخارج الآن.","Şu anda dışarıdayım.");
+add("ar","B1","Günlük Yaşam","في الداخل","içeride","ifade","الجو بارد في الخارج، ابق في الداخل.","Dışarısı soğuk, içeride kal.");
+add("ar","B1","Günlük Yaşam","في الحي","mahallede","ifade","هناك متجر جديد في الحي.","Mahallede yeni bir mağaza var.");
+add("ar","B1","Günlük Yaşam","بالقرب من","yakınında","ifade","بيتي بالقرب من الجامعة.","Evim üniversitenin yakınında.");
+add("ar","B1","Günlük Yaşam","بعيدا عن","uzakta","ifade","المطار بعيدا عن المدينة.","Havaalanı şehirden uzakta.");
+add("ar","B1","Günlük Yaşam","مع العائلة","aileyle","ifade","أحب قضاء الوقت مع العائلة.","Ailemle zaman geçirmeyi seviyorum.");
+add("ar","B1","Günlük Yaşam","مع الأصدقاء","arkadaşlarla","ifade","أخرج مع الأصدقاء في عطلة نهاية الأسبوع.","Hafta sonu arkadaşlarla dışarı çıkıyorum.");
+add("ar","B1","Günlük Yaşam","في وقت الفراغ","boş zamanlarda","ifade","أقرأ في وقت الفراغ.","Boş zamanlarımda kitap okurum.");
+add("ar","B1","Günlük Yaşam","كل يوم","her gün","ifade","أمارس الرياضة كل يوم.","Her gün spor yapıyorum.");
+add("ar","B1","Günlük Yaşam","كل أسبوع","her hafta","ifade","أزور عائلتي كل أسبوع.","Her hafta ailemi ziyaret ediyorum.");
+add("ar","B1","Günlük Yaşam","من وقت لآخر","zaman zaman","ifade","أذهب إلى المطعم من وقت لآخر.","Zaman zaman restorana giderim.");
+add("ar","B1","Günlük Yaşam","عادة","genellikle","zarf","عادة أستيقظ مبكرا.","Genellikle erken kalkarım.");
+add("ar","B1","Günlük Yaşam","أحيانا","bazen","zarf","أحيانا أعمل من المنزل.","Bazen evden çalışırım.");
+add("ar","B1","Günlük Yaşam","نادرا","nadiren","zarf","نادرا ما أشاهد التلفاز.","Nadiren televizyon izlerim.");
+/* ================================================================
+   ARAPÇA B1 — PART 20
+================================================================ */
+// ======================= B1 — SAĞLIK =======================
+add("ar","B1","Sağlık","صحة","sağlık","isim","الصحة أهم من المال.","Sağlık paradan daha önemlidir.");
+add("ar","B1","Sağlık","مرض","hastalık","isim","هذا المرض منتشر في الشتاء.","Bu hastalık kışın yaygındır.");
+add("ar","B1","Sağlık","ألم","ağrı","isim","لدي ألم في ظهري.","Sırtımda ağrı var.");
+add("ar","B1","Sağlık","صداع","baş ağrısı","isim","لدي صداع شديد.","Şiddetli baş ağrım var.");
+add("ar","B1","Sağlık","حمى","ateş","isim","لدي حمى منذ أمس.","Dünden beri ateşim var.");
+add("ar","B1","Sağlık","سعال","öksürük","isim","لدي سعال منذ ثلاثة أيام.","Üç gündür öksürüyorum.");
+add("ar","B1","Sağlık","زكام","soğuk algınlığı","isim","أصبت بزكام شديد.","Şiddetli bir soğuk algınlığına yakalandım.");
+add("ar","B1","Sağlık","إنفلونزا","grip","isim","أصبت بالإنفلونزا الأسبوع الماضي.","Geçen hafta grip oldum.");
+add("ar","B1","Sağlık","التهاب","iltihap / enfeksiyon","isim","لدي التهاب في الحلق.","Boğazımda iltihap var.");
+add("ar","B1","Sağlık","جرح","yara","isim","لدي جرح في يدي.","Elimde bir yara var.");
+add("ar","B1","Sağlık","حرق","yanık","isim","هذا الحرق يؤلمني.","Bu yanık canımı acıtıyor.");
+add("ar","B1","Sağlık","كسر","kırık","isim","لديه كسر في ساقه.","Bacağında kırık var.");
+add("ar","B1","Sağlık","إصابة","yaralanma","isim","تعرض لإصابة أثناء الرياضة.","Spor sırasında yaralandı.");
+add("ar","B1","Sağlık","دوخة","baş dönmesi","isim","أشعر بالدوخة.","Başım dönüyor.");
+add("ar","B1","Sağlık","غثيان","mide bulantısı","isim","أشعر بالغثيان.","Mideme bulanıyor.");
+add("ar","B1","Sağlık","تعب","yorgunluk","isim","أشعر بالتعب الشديد.","Kendimi çok yorgun hissediyorum.");
+add("ar","B1","Sağlık","ضغط الدم","tansiyon","isim","يجب أن أقيس ضغط الدم.","Tansiyonumu ölçmeliyim.");
+add("ar","B1","Sağlık","درجة الحرارة","vücut sıcaklığı / sıcaklık","isim","درجة حرارتي مرتفعة.","Vücut sıcaklığım yüksek.");
+add("ar","B1","Sağlık","علاج","tedavi","isim","أحتاج إلى علاج مناسب.","Uygun bir tedaviye ihtiyacım var.");
+add("ar","B1","Sağlık","شفاء","iyileşme","isim","أتمنى لك الشفاء العاجل.","Acil şifalar dilerim.");
+// ======================= B1 — DOKTOR VE HASTANE =======================
+add("ar","B1","Hastane","طبيب","doktor","isim","ذهبت إلى الطبيب.","Doktora gittim.");
+add("ar","B1","Hastane","طبيبة","kadın doktor","isim","الطبيبة فحصتني.","Kadın doktor beni muayene etti.");
+add("ar","B1","Hastane","ممرض","erkek hemşire","isim","الممرض يساعد الطبيب.","Hemşire doktora yardım ediyor.");
+add("ar","B1","Hastane","ممرضة","kadın hemşire","isim","الممرضة أعطتني الدواء.","Hemşire bana ilacı verdi.");
+add("ar","B1","Hastane","مستشفى","hastane","isim","المستشفى قريب من منزلي.","Hastane evime yakın.");
+add("ar","B1","Hastane","عيادة","klinik","isim","ذهبت إلى العيادة صباحا.","Sabah kliniğe gittim.");
+add("ar","B1","Hastane","طوارئ","acil servis","isim","ذهبنا إلى قسم الطوارئ.","Acil servise gittik.");
+add("ar","B1","Hastane","موعد","randevu","isim","لدي موعد مع الطبيب.","Doktorla randevum var.");
+add("ar","B1","Hastane","فحص","muayene / kontrol","isim","أحتاج إلى فحص طبي.","Tıbbi muayeneye ihtiyacım var.");
+add("ar","B1","Hastane","تشخيص","teşhis","isim","أعطاني الطبيب تشخيصا دقيقا.","Doktor bana doğru bir teşhis koydu.");
+add("ar","B1","Hastane","تحليل","tahlil","isim","يجب أن أجري تحليلا للدم.","Kan tahlili yaptırmalıyım.");
+add("ar","B1","Hastane","فحص الدم","kan testi","isim","نتيجة فحص الدم طبيعية.","Kan testinin sonucu normal.");
+add("ar","B1","Hastane","أشعة","röntgen","isim","أحتاج إلى أشعة.","Röntgen çektirmem gerekiyor.");
+add("ar","B1","Hastane","عملية","ameliyat","isim","سيحتاج إلى عملية.","Ameliyata ihtiyacı olacak.");
+add("ar","B1","Hastane","جراحة","cerrahi","isim","الجراحة كانت ناجحة.","Ameliyat başarılıydı.");
+add("ar","B1","Hastane","مريض","hasta","isim","المريض يحتاج إلى الراحة.","Hastanın dinlenmeye ihtiyacı var.");
+add("ar","B1","Hastane","مريضة","kadın hasta","isim","المريضة تنتظر الطبيب.","Kadın hasta doktoru bekliyor.");
+add("ar","B1","Hastane","غرفة الطوارئ","acil servis odası","isim","هو في غرفة الطوارئ.","O acil servis odasında.");
+add("ar","B1","Hastane","وصفة طبية","reçete","isim","كتب الطبيب وصفة طبية.","Doktor reçete yazdı.");
+add("ar","B1","Hastane","تأمين صحي","sağlık sigortası","isim","لدي تأمين صحي.","Sağlık sigortam var.");
+// ======================= B1 — İLAÇ VE TEDAVİ =======================
+add("ar","B1","İlaç","دواء","ilaç","isim","أحتاج إلى دواء.","İlaca ihtiyacım var.");
+add("ar","B1","İlaç","حبوب","haplar","isim","يجب أن أتناول هذه الحبوب.","Bu hapları almalıyım.");
+add("ar","B1","İlaç","شراب","şurup","isim","أعطاني الطبيب شرابا للسعال.","Doktor bana öksürük şurubu verdi.");
+add("ar","B1","İlaç","مرهم","merhem","isim","استخدم هذا المرهم مرتين يوميا.","Bu merhemi günde iki kez kullan.");
+add("ar","B1","İlaç","قطرة","damla","isim","أحتاج إلى قطرات للعين.","Göz damlasına ihtiyacım var.");
+add("ar","B1","İlaç","مضاد حيوي","antibiyotik","isim","وصف الطبيب مضادا حيويا.","Doktor antibiyotik yazdı.");
+add("ar","B1","İlaç","مسكن","ağrı kesici","isim","أخذت مسكنا للصداع.","Baş ağrısı için ağrı kesici aldım.");
+add("ar","B1","İlaç","جرعة","doz","isim","لا تتجاوز الجرعة المحددة.","Belirtilen dozu aşma.");
+add("ar","B1","İlaç","آثار جانبية","yan etkiler","isim","هذا الدواء له آثار جانبية.","Bu ilacın yan etkileri var.");
+add("ar","B1","İlaç","صيدلية","eczane","isim","أين أقرب صيدلية؟","En yakın eczane nerede?");
+add("ar","B1","İlaç","صيدلي","eczacı","isim","سألت الصيدلي عن الدواء.","Eczacıya ilacı sordum.");
+add("ar","B1","İlaç","علاج","tedavi","isim","بدأت العلاج أمس.","Tedaviye dün başladım.");
+add("ar","B1","İlaç","راحة","dinlenme","isim","يحتاج إلى الراحة.","Dinlenmeye ihtiyacı var.");
+add("ar","B1","İlaç","نصيحة طبية","tıbbi tavsiye","isim","أحتاج إلى نصيحة طبية.","Tıbbi tavsiyeye ihtiyacım var.");
+add("ar","B1","İlaç","وصفة","reçete","isim","هل لديك وصفة؟","Reçeten var mı?");
+// ======================= B1 — VÜCUT =======================
+add("ar","B1","Vücut","جسم","vücut","isim","يجب أن نحافظ على صحة الجسم.","Vücudun sağlığını korumalıyız.");
+add("ar","B1","Vücut","رأس","baş","isim","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Vücut","عين","göz","isim","عيني حمراء.","Gözüm kızarık.");
+add("ar","B1","Vücut","أذن","kulak","isim","أشعر بألم في أذني.","Kulağımda ağrı hissediyorum.");
+add("ar","B1","Vücut","أنف","burun","isim","أنفي مسدود.","Burnum tıkalı.");
+add("ar","B1","Vücut","فم","ağız","isim","افتح فمك.","Ağzını aç.");
+add("ar","B1","Vücut","أسنان","dişler","isim","يجب أن أنظف أسناني.","Dişlerimi temizlemeliyim.");
+add("ar","B1","Vücut","حلق","boğaz","isim","حلقي يؤلمني.","Boğazım ağrıyor.");
+add("ar","B1","Vücut","رقبة","boyun","isim","لدي ألم في رقبتي.","Boynumda ağrı var.");
+add("ar","B1","Vücut","كتف","omuz","isim","كتفي يؤلمني.","Omzum ağrıyor.");
+add("ar","B1","Vücut","ظهر","sırt","isim","ظهري يؤلمني.","Sırtım ağrıyor.");
+add("ar","B1","Vücut","ذراع","kol","isim","أصبت ذراعي.","Kolumu yaraladım.");
+add("ar","B1","Vücut","يد","el","isim","يدي تؤلمني.","Elim ağrıyor.");
+add("ar","B1","Vücut","إصبع","parmak","isim","جرحت إصبعي.","Parmağımı yaraladım.");
+add("ar","B1","Vücut","صدر","göğüs","isim","أشعر بألم في صدري.","Göğsümde ağrı hissediyorum.");
+add("ar","B1","Vücut","بطن","karın","isim","بطني يؤلمني.","Karnım ağrıyor.");
+add("ar","B1","Vücut","ساق","bacak","isim","ساقي تؤلمني.","Bacağım ağrıyor.");
+add("ar","B1","Vücut","ركبة","diz","isim","ركبتي تؤلمني.","Dizim ağrıyor.");
+add("ar","B1","Vücut","قدم","ayak","isim","قدمي متورمة.","Ayağım şişmiş.");
+add("ar","B1","Vücut","جلد","cilt / deri","isim","جلدي حساس.","Cildim hassas.");
+// ======================= B1 — SAĞLIK FİİLLERİ =======================
+add("ar","B1","Sağlık Fiilleri","يشعر","hissetmek","fiil","أشعر بالتعب.","Yorgun hissediyorum.");
+add("ar","B1","Sağlık Fiilleri","يمرض","hastalanmak","fiil","لا أريد أن أمرض.","Hastalanmak istemiyorum.");
+add("ar","B1","Sağlık Fiilleri","يتحسن","iyileşmek","fiil","أشعر أنني أتحسن.","İyileştiğimi hissediyorum.");
+add("ar","B1","Sağlık Fiilleri","يتعافى","iyileşmek / toparlanmak","fiil","تعافى بعد العملية.","Ameliyattan sonra iyileşti.");
+add("ar","B1","Sağlık Fiilleri","يؤلم","acımak / ağrımak","fiil","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Sağlık Fiilleri","يسعل","öksürmek","fiil","هو يسعل كثيرا.","Çok öksürüyor.");
+add("ar","B1","Sağlık Fiilleri","يعطس","hapşırmak","fiil","أعطس كثيرا في الربيع.","İlkbaharda çok hapşırırım.");
+add("ar","B1","Sağlık Fiilleri","يتنفس","nefes almak","fiil","لا أستطيع التنفس جيدا.","İyi nefes alamıyorum.");
+add("ar","B1","Sağlık Fiilleri","ينام","uyumak","fiil","يجب أن أنام بشكل أفضل.","Daha iyi uyumalıyım.");
+add("ar","B1","Sağlık Fiilleri","يستريح","dinlenmek","fiil","يجب أن ترتاح.","Dinlenmelisin.");
+add("ar","B1","Sağlık Fiilleri","يتناول","almak / tüketmek","fiil","أتناول الدواء بعد الطعام.","İlacı yemekten sonra alıyorum.");
+add("ar","B1","Sağlık Fiilleri","يفحص","muayene etmek","fiil","يفحص الطبيب المريض.","Doktor hastayı muayene ediyor.");
+add("ar","B1","Sağlık Fiilleri","يقيس","ölçmek","fiil","الممرضة تقيس درجة حرارتي.","Hemşire ateşimi ölçüyor.");
+add("ar","B1","Sağlık Fiilleri","يعالج","tedavi etmek","fiil","الطبيب يعالج المريض.","Doktor hastayı tedavi ediyor.");
+add("ar","B1","Sağlık Fiilleri","يصف","reçete yazmak / tarif etmek","fiil","وصف الطبيب دواء جديدا.","Doktor yeni bir ilaç yazdı.");
+// ======================= B1 — SAĞLIK SIFATLARI =======================
+add("ar","B1","Sağlık Sıfatları","صحي","sağlıklı","sıfat","أحاول أن أعيش حياة صحية.","Sağlıklı bir hayat yaşamaya çalışıyorum.");
+add("ar","B1","Sağlık Sıfatları","مريض","hasta","sıfat","هو مريض اليوم.","O bugün hasta.");
+add("ar","B1","Sağlık Sıfatları","سليم","sağlam / sağlıklı","sıfat","الفحص سليم.","Muayene sonucu normal.");
+add("ar","B1","Sağlık Sıfatları","متعب","yorgun","sıfat","أنا متعب جدا.","Çok yorgunum.");
+add("ar","B1","Sağlık Sıfatları","ضعيف","zayıf / güçsüz","sıfat","أشعر أنني ضعيف.","Kendimi güçsüz hissediyorum.");
+add("ar","B1","Sağlık Sıfatları","قوي","güçlü","sıfat","جسمي قوي.","Vücudum güçlü.");
+add("ar","B1","Sağlık Sıfatları","خطير","tehlikeli","sıfat","هذا المرض خطير.","Bu hastalık tehlikeli.");
+add("ar","B1","Sağlık Sıfatları","مزمن","kronik","sıfat","لديه مرض مزمن.","Kronik bir hastalığı var.");
+add("ar","B1","Sağlık Sıfatları","معدي","bulaşıcı","sıfat","هذا المرض معدي.","Bu hastalık bulaşıcı.");
+add("ar","B1","Sağlık Sıfatları","طبيعي","normal","sıfat","نتيجة الفحص طبيعية.","Test sonucu normal.");
+add("ar","B1","Sağlık Sıfatları","عاجل","acil","sıfat","هذه حالة عاجلة.","Bu acil bir durum.");
+add("ar","B1","Sağlık Sıfatları","مؤلم","ağrılı","sıfat","الفحص كان مؤلما.","Muayene ağrılıydı.");
+add("ar","B1","Sağlık Sıfatları","حساس","hassas","sıfat","جلدي حساس.","Cildim hassas.");
+add("ar","B1","Sağlık Sıfatları","متورم","şişmiş","sıfat","قدمي متورمة.","Ayağım şişmiş.");
+add("ar","B1","Sağlık Sıfatları","أفضل","daha iyi","sıfat","أشعر أنني أفضل اليوم.","Bugün kendimi daha iyi hissediyorum.");
+// ======================= B1 — SAĞLIK İFADELERİ =======================
+add("ar","B1","Sağlık İfadeleri","أشعر بالتعب","yorgun hissediyorum","ifade","أشعر بالتعب بعد العمل.","İşten sonra yorgun hissediyorum.");
+add("ar","B1","Sağlık İfadeleri","أشعر بالمرض","kendimi hasta hissediyorum","ifade","أشعر بالمرض منذ صباح اليوم.","Bu sabahtan beri kendimi hasta hissediyorum.");
+add("ar","B1","Sağlık İfadeleri","لدي ألم","ağrım var","ifade","لدي ألم في ظهري.","Sırtımda ağrı var.");
+add("ar","B1","Sağlık İfadeleri","لا أشعر أنني بخير","kendimi iyi hissetmiyorum","ifade","لا أشعر أنني بخير اليوم.","Bugün kendimi iyi hissetmiyorum.");
+add("ar","B1","Sağlık İfadeleri","أشعر بتحسن","daha iyi hissediyorum","ifade","أشعر بتحسن الآن.","Şimdi daha iyi hissediyorum.");
+add("ar","B1","Sağlık İfadeleri","أتمنى لك الشفاء","geçmiş olsun / acil şifalar","ifade","أتمنى لك الشفاء العاجل.","Geçmiş olsun.");
+add("ar","B1","Sağlık İfadeleri","اعتن بنفسك","kendine iyi bak","ifade","اعتن بنفسك ولا تتعب كثيرا.","Kendine iyi bak ve çok yorulma.");
+add("ar","B1","Sağlık İfadeleri","خذ قسطا من الراحة","biraz dinlen","ifade","خذ قسطا من الراحة اليوم.","Bugün biraz dinlen.");
+add("ar","B1","Sağlık İfadeleri","اشرب الكثير من الماء","bol su iç","ifade","اشرب الكثير من الماء.","Bol su iç.");
+add("ar","B1","Sağlık İfadeleri","تناول الدواء","ilacı al","ifade","تناول الدواء في الوقت المحدد.","İlacı zamanında al.");
+add("ar","B1","Sağlık İfadeleri","اذهب إلى الطبيب","doktora git","ifade","إذا كنت مريضا، اذهب إلى الطبيب.","Hastaysan doktora git.");
+add("ar","B1","Sağlık İfadeleri","اتصل بالإسعاف","ambulansı ara","ifade","اتصل بالإسعاف بسرعة.","Hemen ambulansı ara.");
+add("ar","B1","Sağlık İfadeleri","حالة طارئة","acil durum","ifade","هذه حالة طارئة.","Bu acil bir durum.");
+add("ar","B1","Sağlık İfadeleri","في حالة الطوارئ","acil durumda","ifade","اتصل بهذا الرقم في حالة الطوارئ.","Acil durumda bu numarayı ara.");
+add("ar","B1","Sağlık İfadeleri","على معدة فارغة","aç karnına","ifade","خذ هذا الدواء على معدة فارغة.","Bu ilacı aç karnına al.");
+/* ================================================================
+   ARAPÇA B1 — PART 21
+================================================================ */
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم لمستقبل الشباب.","Eğitim gençlerin geleceği için önemlidir.");
+add("ar","B1","Eğitim","دراسة","eğitim / öğrenim","isim","أحب الدراسة.","Ders çalışmayı / öğrenmeyi seviyorum.");
+add("ar","B1","Eğitim","مدرسة","okul","isim","أذهب إلى المدرسة كل يوم.","Her gün okula gidiyorum.");
+add("ar","B1","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Eğitim","كلية","fakülte","isim","أدرس في كلية الهندسة.","Mühendislik fakültesinde okuyorum.");
+add("ar","B1","Eğitim","معهد","enstitü / kurum","isim","أدرس في معهد للغات.","Bir dil enstitüsünde okuyorum.");
+add("ar","B1","Eğitim","دورة","kurs","isim","أشارك في دورة للغة الألمانية.","Almanca kursuna katılıyorum.");
+add("ar","B1","Eğitim","صف","sınıf","isim","الطلاب في الصف.","Öğrenciler sınıfta.");
+add("ar","B1","Eğitim","درس","ders","isim","عندي درس اليوم.","Bugün dersim var.");
+add("ar","B1","Eğitim","محاضرة","konferans / ders","isim","حضرت محاضرة في الجامعة.","Üniversitede bir derse katıldım.");
+add("ar","B1","Eğitim","مادة","ders / konu","isim","هذه المادة صعبة.","Bu ders zor.");
+add("ar","B1","Eğitim","موضوع","konu","isim","هذا موضوع مهم.","Bu önemli bir konu.");
+add("ar","B1","Eğitim","واجب","ödev","isim","لدي الكثير من الواجبات.","Çok ödevim var.");
+add("ar","B1","Eğitim","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","Eğitim","بحث","araştırma","isim","أكتب بحثا عن التكنولوجيا.","Teknoloji hakkında bir araştırma yazıyorum.");
+add("ar","B1","Eğitim","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
+add("ar","B1","Eğitim","اختبار","test","isim","أجبت عن جميع أسئلة الاختبار.","Testin tüm sorularını cevapladım.");
+add("ar","B1","Eğitim","نتيجة","sonuç","isim","انتظرت نتيجة الامتحان.","Sınav sonucunu bekledim.");
+add("ar","B1","Eğitim","درجة","not / puan","isim","حصلت على درجة عالية.","Yüksek bir not aldım.");
+add("ar","B1","Eğitim","شهادة","sertifika / diploma","isim","حصلت على شهادة اللغة.","Dil sertifikası aldım.");
+// ======================= B1 — OKUL PERSONELİ =======================
+add("ar","B1","Eğitim Personeli","طالب","erkek öğrenci","isim","أنا طالب في الجامعة.","Üniversitede öğrenciyim.");
+add("ar","B1","Eğitim Personeli","طالبة","kız öğrenci","isim","هي طالبة مجتهدة.","O çalışkan bir öğrenci.");
+add("ar","B1","Eğitim Personeli","طلاب","öğrenciler","isim","الطلاب يدرسون في المكتبة.","Öğrenciler kütüphanede çalışıyor.");
+add("ar","B1","Eğitim Personeli","مدرس","erkek öğretmen","isim","المدرس يشرح الدرس.","Öğretmen dersi açıklıyor.");
+add("ar","B1","Eğitim Personeli","مدرسة","kadın öğretmen","isim","المدرسة تساعد الطلاب.","Kadın öğretmen öğrencilere yardım ediyor.");
+add("ar","B1","Eğitim Personeli","أستاذ","profesör / öğretim görevlisi","isim","الأستاذ يشرح الموضوع.","Profesör konuyu açıklıyor.");
+add("ar","B1","Eğitim Personeli","أستاذة","kadın profesör / öğretim görevlisi","isim","الأستاذة تدرس في الجامعة.","Kadın profesör üniversitede ders veriyor.");
+add("ar","B1","Eğitim Personeli","مدير","müdür","isim","المدير في مكتبه.","Müdür ofisinde.");
+add("ar","B1","Eğitim Personeli","موظف","çalışan / görevli","isim","موظف الجامعة يساعدني.","Üniversite çalışanı bana yardım ediyor.");
+add("ar","B1","Eğitim Personeli","زميل","erkek sınıf / iş arkadaşı","isim","زميلي يجلس بجانبي.","Arkadaşım / sınıf arkadaşım yanımda oturuyor.");
+add("ar","B1","Eğitim Personeli","زميلة","kadın sınıf / iş arkadaşı","isim","زميلتي تدرس معي.","Kız arkadaşım / sınıf arkadaşım benimle çalışıyor.");
+add("ar","B1","Eğitim Personeli","معلم","öğretmen","isim","المعلم يشرح القاعدة.","Öğretmen kuralı açıklıyor.");
+add("ar","B1","Eğitim Personeli","مدرب","eğitmen / antrenör","isim","المدرب يشرح لنا الطريقة.","Eğitmen bize yöntemi açıklıyor.");
+add("ar","B1","Eğitim Personeli","مساعد","asistan","isim","المساعد يساعد الأستاذ.","Asistan profesöre yardım ediyor.");
+// ======================= B1 — ÖĞRENME FİİLLERİ =======================
+add("ar","B1","Öğrenme Fiilleri","يتعلم","öğrenmek","fiil","أتعلم اللغة الألمانية.","Almanca öğreniyorum.");
+add("ar","B1","Öğrenme Fiilleri","يدرس","ders çalışmak / okumak","fiil","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Öğrenme Fiilleri","يقرأ","okumak","fiil","أقرأ كتابا كل أسبوع.","Her hafta bir kitap okuyorum.");
+add("ar","B1","Öğrenme Fiilleri","يكتب","yazmak","fiil","أكتب واجبي الآن.","Şimdi ödevimi yazıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يشرح","açıklamak","fiil","يشرح الأستاذ الدرس.","Profesör dersi açıklıyor.");
+add("ar","B1","Öğrenme Fiilleri","يفهم","anlamak","fiil","أفهم هذا الموضوع جيدا.","Bu konuyu iyi anlıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يحفظ","ezberlemek","fiil","أحفظ كلمات جديدة كل يوم.","Her gün yeni kelimeler ezberliyorum.");
+add("ar","B1","Öğrenme Fiilleri","يتذكر","hatırlamak","fiil","لا أتذكر اسم الكتاب.","Kitabın adını hatırlamıyorum.");
+add("ar","B1","Öğrenme Fiilleri","ينسى","unutmak","fiil","نسيت موعد الامتحان.","Sınav tarihini unuttum.");
+add("ar","B1","Öğrenme Fiilleri","يتدرب","pratik yapmak","fiil","أتدرب على التحدث كل يوم.","Her gün konuşma pratiği yapıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يتمرن","alıştırma yapmak","fiil","أتمرن على القواعد.","Dilbilgisi alıştırması yapıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يسأل","sormak","fiil","سألت المعلم عن السؤال.","Öğretmene soruyu sordum.");
+add("ar","B1","Öğrenme Fiilleri","يجيب","cevaplamak","fiil","أجاب الطالب عن السؤال.","Öğrenci soruyu cevapladı.");
+add("ar","B1","Öğrenme Fiilleri","يناقش","tartışmak","fiil","ناقشنا الموضوع في الصف.","Konuyu sınıfta tartıştık.");
+add("ar","B1","Öğrenme Fiilleri","يشارك","katılmak / paylaşmak","fiil","يشارك الطلاب في النقاش.","Öğrenciler tartışmaya katılıyor.");
+// ======================= B1 — SINAV VE BAŞARI =======================
+add("ar","B1","Sınav","نجاح","başarı","isim","النجاح يحتاج إلى العمل.","Başarı çalışmayı gerektirir.");
+add("ar","B1","Sınav","فشل","başarısızlık","isim","الفشل ليس نهاية الطريق.","Başarısızlık yolun sonu değildir.");
+add("ar","B1","Sınav","نجح","başarmak / geçmek","fiil","نجحت في الامتحان.","Sınavı geçtim.");
+add("ar","B1","Sınav","رسب","kalmak / başarısız olmak","fiil","رسب في الامتحان.","Sınavda kaldı.");
+add("ar","B1","Sınav","استعد","hazırlanmak","fiil","أستعد للامتحان.","Sınava hazırlanıyorum.");
+add("ar","B1","Sınav","تحضير","hazırlık","isim","أحتاج إلى وقت للتحضير.","Hazırlık için zamana ihtiyacım var.");
+add("ar","B1","Sınav","مراجعة","tekrar / gözden geçirme","isim","أقوم بمراجعة الدروس.","Dersleri tekrar ediyorum.");
+add("ar","B1","Sınav","سؤال","soru","isim","هذا السؤال صعب.","Bu soru zor.");
+add("ar","B1","Sınav","جواب","cevap","isim","لا أعرف الجواب.","Cevabı bilmiyorum.");
+add("ar","B1","Sınav","حل","çözüm","isim","وجدت الحل الصحيح.","Doğru çözümü buldum.");
+add("ar","B1","Sınav","علامة","not / puan","isim","حصلت على علامة جيدة.","İyi bir not aldım.");
+add("ar","B1","Sınav","معدل","ortalama","isim","معدلي جيد هذا الفصل.","Bu dönem ortalamam iyi.");
+add("ar","B1","Sınav","مستوى","seviye","isim","مستوى لغتي جيد.","Dil seviyem iyi.");
+add("ar","B1","Sınav","تقدم","ilerleme","isim","أشعر بتقدم في اللغة.","Dilde ilerleme kaydettiğimi hissediyorum.");
+add("ar","B1","Sınav","هدف","hedef","isim","هدفي هو تعلم اللغة.","Hedefim dili öğrenmek.");
+// ======================= B1 — ÜNİVERSİTE =======================
+add("ar","B1","Üniversite","تخصص","bölüm / uzmanlık alanı","isim","ما هو تخصصك؟","Bölümün nedir?");
+add("ar","B1","Üniversite","بكالوريوس","lisans","isim","أدرس للحصول على درجة البكالوريوس.","Lisans derecesi almak için okuyorum.");
+add("ar","B1","Üniversite","ماجستير","yüksek lisans","isim","أريد دراسة الماجستير.","Yüksek lisans yapmak istiyorum.");
+add("ar","B1","Üniversite","دكتوراه","doktora","isim","يعمل على درجة الدكتوراه.","Doktora yapıyor.");
+add("ar","B1","Üniversite","فصل دراسي","dönem","isim","بدأ الفصل الدراسي الجديد.","Yeni dönem başladı.");
+add("ar","B1","Üniversite","عام دراسي","akademik yıl","isim","يبدأ العام الدراسي في سبتمبر.","Akademik yıl eylülde başlıyor.");
+add("ar","B1","Üniversite","جدول","program / çizelge","isim","هذا هو جدولي الدراسي.","Bu benim ders programım.");
+add("ar","B1","Üniversite","مكتبة","kütüphane","isim","أدرس في المكتبة.","Kütüphanede ders çalışıyorum.");
+add("ar","B1","Üniversite","مختبر","laboratuvar","isim","لدينا درس في المختبر.","Laboratuvarda dersimiz var.");
+add("ar","B1","Üniversite","حرم جامعي","kampüs","isim","الحرم الجامعي كبير.","Kampüs büyük.");
+add("ar","B1","Üniversite","تسجيل","kayıt","isim","أكملت التسجيل في الجامعة.","Üniversite kaydını tamamladım.");
+add("ar","B1","Üniversite","قبول","kabul","isim","حصلت على قبول من الجامعة.","Üniversiteden kabul aldım.");
+add("ar","B1","Üniversite","منحة","burs","isim","حصلت على منحة دراسية.","Burs aldım.");
+add("ar","B1","Üniversite","رسوم دراسية","öğrenim ücreti","isim","الرسوم الدراسية مرتفعة.","Öğrenim ücreti yüksek.");
+add("ar","B1","Üniversite","سكن طلابي","öğrenci yurdu","isim","أعيش في سكن طلابي.","Öğrenci yurdunda yaşıyorum.");
+// ======================= B1 — EĞİTİM SIFATLARI =======================
+add("ar","B1","Eğitim Sıfatları","سهل","kolay","sıfat","هذا السؤال سهل.","Bu soru kolay.");
+add("ar","B1","Eğitim Sıfatları","صعب","zor","sıfat","الامتحان صعب.","Sınav zor.");
+add("ar","B1","Eğitim Sıfatları","مهم","önemli","sıfat","هذا الدرس مهم.","Bu ders önemli.");
+add("ar","B1","Eğitim Sıfatları","مفيد","faydalı","sıfat","هذا الكتاب مفيد.","Bu kitap faydalı.");
+add("ar","B1","Eğitim Sıfatları","ممتع","eğlenceli","sıfat","الدرس ممتع.","Ders eğlenceli.");
+add("ar","B1","Eğitim Sıfatları","ممل","sıkıcı","sıfat","هذا الدرس ممل.","Bu ders sıkıcı.");
+add("ar","B1","Eğitim Sıfatları","سهل الفهم","anlaşılması kolay","sıfat","الشرح سهل الفهم.","Açıklama anlaşılması kolay.");
+add("ar","B1","Eğitim Sıfatları","واضح","açık / net","sıfat","السؤال واضح.","Soru açık.");
+add("ar","B1","Eğitim Sıfatları","غاضم","belirsiz","sıfat","السؤال غامض.","Soru belirsiz.");
+add("ar","B1","Eğitim Sıfatları","متقدم","ileri","sıfat","هذا كتاب متقدم.","Bu ileri seviye bir kitap.");
+add("ar","B1","Eğitim Sıfatları","أساسي","temel","sıfat","هذه قاعدة أساسية.","Bu temel bir kuraldır.");
+add("ar","B1","Eğitim Sıfatları","نظري","teorik","sıfat","هذا درس نظري.","Bu teorik bir derstir.");
+add("ar","B1","Eğitim Sıfatları","عملي","pratik","sıfat","نحتاج إلى تدريب عملي.","Pratik eğitime ihtiyacımız var.");
+add("ar","B1","Eğitim Sıfatları","أكاديمي","akademik","sıfat","لديه مستقبل أكاديمي جيد.","İyi bir akademik geleceği var.");
+add("ar","B1","Eğitim Sıfatları","متخصص","uzmanlaşmış / uzman","sıfat","هذا مجال متخصص.","Bu uzmanlaşmış bir alandır.");
+// ======================= B1 — EĞİTİM İFADELERİ =======================
+add("ar","B1","Eğitim İfadeleri","يدرس بجد","çok çalışmak / sıkı ders çalışmak","ifade","يدرس بجد من أجل الامتحان.","Sınav için çok çalışıyor.");
+add("ar","B1","Eğitim İfadeleri","يبذل جهدا","çaba göstermek","ifade","يبذل جهدا كبيرا في دراسته.","Çalışmalarında büyük çaba gösteriyor.");
+add("ar","B1","Eğitim İfadeleri","يحصل على درجة","not almak","ifade","حصلت على درجة عالية.","Yüksek bir not aldım.");
+add("ar","B1","Eğitim İfadeleri","ينجح في الامتحان","sınavı geçmek","ifade","أتمنى أن أنجح في الامتحان.","Umarım sınavı geçerim.");
+add("ar","B1","Eğitim İfadeleri","يفشل في الامتحان","sınavda kalmak","ifade","لم أكن أريد أن أفشل في الامتحان.","Sınavda kalmak istemiyordum.");
+add("ar","B1","Eğitim İfadeleri","يتخرج من الجامعة","üniversiteden mezun olmak","ifade","سأتخرج من الجامعة العام المقبل.","Gelecek yıl üniversiteden mezun olacağım.");
+add("ar","B1","Eğitim İfadeleri","يأخذ دورة","kurs almak","ifade","أريد أن آخذ دورة في اللغة الألمانية.","Almanca kursu almak istiyorum.");
+add("ar","B1","Eğitim İifadeleri","يحضر الدرس","derse katılmak","ifade","أحضر الدرس كل صباح.","Her sabah derse katılıyorum.");
+add("ar","B1","Eğitim İfadeleri","يكتب واجبا","ödev yapmak / yazmak","ifade","يكتب واجبه الآن.","Şimdi ödevini yapıyor.");
+add("ar","B1","Eğitim İfadeleri","يستعد للامتحان","sınava hazırlanmak","ifade","أستعد للامتحان منذ أسبوع.","Bir haftadır sınava hazırlanıyorum.");
+add("ar","B1","Eğitim İfadeleri","يحصل على شهادة","sertifika almak","ifade","حصلت على شهادة في اللغة.","Dil sertifikası aldım.");
+add("ar","B1","Eğitim İfadeleri","يتعلم من الأخطاء","hatalardan öğrenmek","ifade","يجب أن نتعلم من أخطائنا.","Hatalarımızdan öğrenmeliyiz.");
+add("ar","B1","Eğitim İfadeleri","يطلب المساعدة","yardım istemek","ifade","لا تخجل من طلب المساعدة.","Yardım istemekten utanma.");
+add("ar","B1","Eğitim İfadeleri","يفهم الدرس","dersi anlamak","ifade","أفهم الدرس الآن.","Şimdi dersi anlıyorum.");
+add("ar","B1","Eğitim İfadeleri","يحتاج إلى ممارسة","pratiğe ihtiyaç duymak","ifade","تحتاج اللغة إلى ممارسة مستمرة.","Dil sürekli pratik gerektirir.");
+/* ================================================================
+   ARAPÇA B1 — PART 22
+================================================================ */
+// ======================= B1 — İŞ VE ÇALIŞMA =======================
+add("ar","B1","İş","عمل","iş / çalışma","isim","أحب عملي كثيرا.","İşimi çok seviyorum.");
+add("ar","B1","İş","وظيفة","iş / meslek","isim","أبحث عن وظيفة جديدة.","Yeni bir iş arıyorum.");
+add("ar","B1","İş","مهنة","meslek","isim","ما مهنتك؟","Mesleğin nedir?");
+add("ar","B1","İş","شركة","şirket","isim","أعمل في شركة دولية.","Uluslararası bir şirkette çalışıyorum.");
+add("ar","B1","İş","مؤسسة","kurum / kuruluş","isim","هذه مؤسسة كبيرة.","Bu büyük bir kurum.");
+add("ar","B1","İş","منظمة","organizasyon","isim","أعمل مع منظمة دولية.","Uluslararası bir organizasyonla çalışıyorum.");
+add("ar","B1","İş","مكتب","ofis","isim","أعمل في مكتب صغير.","Küçük bir ofiste çalışıyorum.");
+add("ar","B1","İş","مصنع","fabrika","isim","يعمل في مصنع كبير.","Büyük bir fabrikada çalışıyor.");
+add("ar","B1","İş","متجر","mağaza","isim","أعمل في متجر قريب.","Yakındaki bir mağazada çalışıyorum.");
+add("ar","B1","İş","مطعم","restoran","isim","أعمل في مطعم في وسط المدينة.","Şehir merkezinde bir restoranda çalışıyorum.");
+add("ar","B1","İş","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","İş","فريق","ekip","isim","أعمل مع فريق جيد.","İyi bir ekiple çalışıyorum.");
+add("ar","B1","İş","مدير","müdür","isim","مديري يساعدني كثيرا.","Müdürüm bana çok yardım ediyor.");
+add("ar","B1","İş","موظف","çalışan","isim","هو موظف في الشركة.","O şirkette bir çalışan.");
+add("ar","B1","İş","زميل","iş arkadaşı","isim","زميلي يعمل معي.","İş arkadaşım benimle çalışıyor.");
+add("ar","B1","İş","عميل","müşteri","isim","تحدثت مع العميل.","Müşteriyle konuştum.");
+add("ar","B1","İş","زبون","müşteri","isim","الزبون ينتظر في الخارج.","Müşteri dışarıda bekliyor.");
+add("ar","B1","İş","اجتماع","toplantı","isim","لدينا اجتماع غدا.","Yarın toplantımız var.");
+add("ar","B1","İş","مقابلة","mülakat / görüşme","isim","لدي مقابلة عمل الأسبوع المقبل.","Gelecek hafta iş görüşmem var.");
+add("ar","B1","İş","راتب","maaş","isim","راتبي جيد.","Maaşım iyi.");
+// ======================= B1 — İŞ YERİ =======================
+add("ar","B1","İşyeri","دوام","mesai / çalışma saatleri","isim","يبدأ دوامي في الساعة الثامنة.","Mesaim saat sekizde başlıyor.");
+add("ar","B1","İşyeri","ساعات العمل","çalışma saatleri","isim","ساعات العمل طويلة.","Çalışma saatleri uzun.");
+add("ar","B1","İşyeri","وقت العمل","çalışma zamanı","isim","لا أستخدم هاتفي في وقت العمل.","Çalışma zamanında telefonumu kullanmam.");
+add("ar","B1","İşyeri","استراحة","mola","isim","آخذ استراحة قصيرة.","Kısa bir mola veriyorum.");
+add("ar","B1","İşyeri","إجازة","izin / tatil","isim","سآخذ إجازة الأسبوع المقبل.","Gelecek hafta izin alacağım.");
+add("ar","B1","İşyeri","عطلة","tatil","isim","أحتاج إلى عطلة قصيرة.","Kısa bir tatile ihtiyacım var.");
+add("ar","B1","İşyeri","إجازة مرضية","hastalık izni","isim","أخذ إجازة مرضية.","Hastalık izni aldı.");
+add("ar","B1","İşyeri","عقد","sözleşme","isim","وقعت عقد العمل.","İş sözleşmesini imzaladım.");
+add("ar","B1","İşyeri","راتب شهري","aylık maaş","isim","أتلقى راتبا شهريا.","Aylık maaş alıyorum.");
+add("ar","B1","İşyeri","راتب سنوي","yıllık maaş","isim","راتبه السنوي مرتفع.","Yıllık maaşı yüksek.");
+add("ar","B1","İşyeri","مكافأة","prim / bonus","isim","حصل على مكافأة في نهاية العام.","Yıl sonunda bonus aldı.");
+add("ar","B1","İşyeri","ترقية","terfi","isim","حصل على ترقية في العمل.","İşinde terfi aldı.");
+add("ar","B1","İşyeri","استقالة","istifa","isim","قدم استقالته أمس.","Dün istifasını verdi.");
+add("ar","B1","İşyeri","تقاعد","emeklilik","isim","يفكر في التقاعد.","Emekliliği düşünüyor.");
+add("ar","B1","İşyeri","بطالة","işsizlik","isim","البطالة مشكلة كبيرة.","İşsizlik büyük bir sorun.");
+// ======================= B1 — MESLEKLER =======================
+add("ar","B1","Meslekler","طبيب","doktor","isim","أخي طبيب.","Kardeşim doktor.");
+add("ar","B1","Meslekler","مهندس","mühendis","isim","هو مهندس برمجيات.","O bir yazılım mühendisi.");
+add("ar","B1","Meslekler","مبرمج","programcı","isim","أعمل كمبرمج.","Programcı olarak çalışıyorum.");
+add("ar","B1","Meslekler","مصمم","tasarımcı","isim","هي مصممة محترفة.","O profesyonel bir tasarımcı.");
+add("ar","B1","Meslekler","محاسب","muhasebeci","isim","يعمل كمحاسب في شركة.","Bir şirkette muhasebeci olarak çalışıyor.");
+add("ar","B1","Meslekler","محام","avukat","isim","هو محام معروف.","O tanınmış bir avukat.");
+add("ar","B1","Meslekler","مدرس","öğretmen","isim","أختي مدرسة.","Kız kardeşim öğretmen.");
+add("ar","B1","Meslekler","صحفي","gazeteci","isim","يعمل صحفيا.","Gazeteci olarak çalışıyor.");
+add("ar","B1","Meslekler","مصور","fotoğrafçı","isim","هو مصور محترف.","O profesyonel bir fotoğrafçı.");
+add("ar","B1","Meslekler","مترجم","çevirmen","isim","أعمل كمترجم.","Çevirmen olarak çalışıyorum.");
+add("ar","B1","Meslekler","مترجم فوري","simültane çevirmen","isim","يعمل مترجما فوريا في المؤتمرات.","Konferanslarda simultane çevirmen olarak çalışıyor.");
+add("ar","B1","Meslekler","طباخ","aşçı","isim","الطباخ يعمل في مطعم مشهور.","Aşçı ünlü bir restoranda çalışıyor.");
+add("ar","B1","Meslekler","نادل","garson","isim","طلبت الطعام من النادل.","Yemeği garsondan istedim.");
+add("ar","B1","Meslekler","سائق","şoför","isim","السائق يقود الحافلة.","Şoför otobüsü kullanıyor.");
+add("ar","B1","Meslekler","شرطي","polis","isim","الشرطي يساعد الناس.","Polis insanlara yardım ediyor.");
+add("ar","B1","Meslekler","إطفائي","itfaiyeci","isim","الإطفائي يعمل في حالات الطوارئ.","İtfaiyeci acil durumlarda çalışır.");
+add("ar","B1","Meslekler","ممرض","hemşire","isim","الممرض يعمل في المستشفى.","Hemşire hastanede çalışıyor.");
+add("ar","B1","Meslekler","صيدلي","eczacı","isim","الصيدلي يعمل في الصيدلية.","Eczacı eczanede çalışıyor.");
+add("ar","B1","Meslekler","عامل","işçi","isim","العامل يعمل في المصنع.","İşçi fabrikada çalışıyor.");
+add("ar","B1","Meslekler","مدير","yönetici","isim","المدير مسؤول عن الفريق.","Yönetici ekipten sorumlu.");
+// ======================= B1 — İŞ FİİLLERİ =======================
+add("ar","B1","İş Fiilleri","يعمل","çalışmak","fiil","أعمل من الاثنين إلى الجمعة.","Pazartesiden cumaya çalışıyorum.");
+add("ar","B1","İş Fiilleri","يبحث عن عمل","iş aramak","ifade","أبحث عن عمل جديد.","Yeni bir iş arıyorum.");
+add("ar","B1","İş Fiilleri","يتقدم لوظيفة","bir işe başvurmak","ifade","تقدمت لوظيفة في شركة كبيرة.","Büyük bir şirketteki işe başvurdum.");
+add("ar","B1","İş Fiilleri","يتقدم بطلب","başvurmak","fiil","قدمت طلبا للعمل.","İş için başvuru yaptım.");
+add("ar","B1","İş Fiilleri","يقبل","kabul etmek","fiil","قبلت عرض العمل.","İş teklifini kabul ettim.");
+add("ar","B1","İş Fiilleri","يرفض","reddetmek","fiil","رفض عرض العمل.","İş teklifini reddetti.");
+add("ar","B1","İş Fiilleri","يستقيل","istifa etmek","fiil","استقال من وظيفته.","İşinden istifa etti.");
+add("ar","B1","İş Fiilleri","يتقاعد","emekli olmak","fiil","سيتقاعد العام المقبل.","Gelecek yıl emekli olacak.");
+add("ar","B1","İş Fiilleri","يوظف","işe almak","fiil","الشركة توظف موظفين جدد.","Şirket yeni çalışanlar işe alıyor.");
+add("ar","B1","İş Fiilleri","يفصل","işten çıkarmak","fiil","فصلت الشركة بعض الموظفين.","Şirket bazı çalışanları işten çıkardı.");
+add("ar","B1","İş Fiilleri","يدير","yönetmek","fiil","يدير فريقا صغيرا.","Küçük bir ekibi yönetiyor.");
+add("ar","B1","İş Fiilleri","ينظم","düzenlemek","fiil","أنظم اجتماعا كل أسبوع.","Her hafta bir toplantı düzenliyorum.");
+add("ar","B1","İş Fiilleri","يخطط","planlamak","fiil","نخطط لمشروع جديد.","Yeni bir proje planlıyoruz.");
+add("ar","B1","İş Fiilleri","يناقش","tartışmak","fiil","ناقشنا المشكلة في الاجتماع.","Toplantıda sorunu tartıştık.");
+add("ar","B1","İş Fiilleri","يتعاون","işbirliği yapmak","fiil","نتعاون مع شركات أخرى.","Diğer şirketlerle işbirliği yapıyoruz.");
+// ======================= B1 — KARİYER =======================
+add("ar","B1","Kariyer","مسيرة مهنية","kariyer","isim","أريد بناء مسيرة مهنية ناجحة.","Başarılı bir kariyer inşa etmek istiyorum.");
+add("ar","B1","Kariyer","خبرة","deneyim","isim","لدي خبرة في هذا المجال.","Bu alanda deneyimim var.");
+add("ar","B1","Kariyer","خبرة عملية","iş deneyimi","isim","أحتاج إلى خبرة عملية.","İş deneyimine ihtiyacım var.");
+add("ar","B1","Kariyer","مهارة","beceri","isim","لدي مهارات جيدة في التواصل.","İyi iletişim becerilerim var.");
+add("ar","B1","Kariyer","مهارات","yetenekler / beceriler","isim","تحتاج إلى تطوير مهاراتك.","Becerilerini geliştirmen gerekiyor.");
+add("ar","B1","Kariyer","مؤهل","nitelik / yeterlilik","isim","لديه المؤهلات المناسبة للوظيفة.","İş için uygun niteliklere sahip.");
+add("ar","B1","Kariyer","مؤهلات","nitelikler","isim","لديه مؤهلات قوية.","Güçlü niteliklere sahip.");
+add("ar","B1","Kariyer","سيرة ذاتية","özgeçmiş / CV","isim","أرسلت سيرتي الذاتية إلى الشركة.","CV'mi şirkete gönderdim.");
+add("ar","B1","Kariyer","رسالة تغطية","ön yazı","isim","كتبت رسالة تغطية للوظيفة.","İş için ön yazı yazdım.");
+add("ar","B1","Kariyer","عرض عمل","iş teklifi","isim","تلقيت عرض عمل جيد.","İyi bir iş teklifi aldım.");
+add("ar","B1","Kariyer","فرصة عمل","iş fırsatı","isim","هذه فرصة عمل ممتازة.","Bu mükemmel bir iş fırsatı.");
+add("ar","B1","Kariyer","مستقبل مهني","mesleki gelecek","isim","أفكر في مستقبلي المهني.","Mesleki geleceğimi düşünüyorum.");
+add("ar","B1","Kariyer","هدف مهني","kariyer hedefi","isim","لدي أهداف مهنية واضحة.","Net kariyer hedeflerim var.");
+add("ar","B1","Kariyer","تطور مهني","mesleki gelişim","isim","التطور المهني مهم.","Mesleki gelişim önemlidir.");
+add("ar","B1","Kariyer","تدريب","staj / eğitim","isim","أبحث عن تدريب صيفي.","Yaz stajı arıyorum.");
+// ======================= B1 — İŞ SIFATLARI =======================
+add("ar","B1","İş Sıfatları","مشغول","meşgul","sıfat","أنا مشغول اليوم.","Bugün meşgulüm.");
+add("ar","B1","İş Sıfatları","متفرغ","müsait","sıfat","هل أنت متفرغ الآن؟","Şimdi müsait misin?");
+add("ar","B1","İş Sıfatları","ناجح","başarılı","sıfat","هو رجل أعمال ناجح.","O başarılı bir iş insanı.");
+add("ar","B1","İş Sıfatları","فاشل","başarısız","sıfat","المشروع فاشل.","Proje başarısız.");
+add("ar","B1","İş Sıfatları","مهم","önemli","sıfat","هذا اجتماع مهم.","Bu önemli bir toplantı.");
+add("ar","B1","İş Sıfatları","ضروري","gerekli","sıfat","هذا الاجتماع ضروري.","Bu toplantı gerekli.");
+add("ar","B1","İş Sıfatları","مناسب","uygun","sıfat","هذا العمل مناسب لي.","Bu iş bana uygun.");
+add("ar","B1","İş Sıfatları","صعب","zor","sıfat","العمل صعب لكنه ممتع.","İş zor ama eğlenceli.");
+add("ar","B1","İş Sıfatları","سهل","kolay","sıfat","هذا العمل سهل.","Bu iş kolay.");
+add("ar","B1","İş Sıfatları","مرن","esnek","sıfat","لدي ساعات عمل مرنة.","Esnek çalışma saatlerim var.");
+add("ar","B1","İş Sıfatları","مستقل","bağımsız","sıfat","أعمل بشكل مستقل.","Bağımsız çalışıyorum.");
+add("ar","B1","İş Sıfatları","مسؤول","sorumlu","sıfat","أنا مسؤول عن المشروع.","Projeden sorumluyum.");
+add("ar","B1","İş Sıfatları","متخصص","uzman","sıfat","هو متخصص في التكنولوجيا.","Teknoloji alanında uzman.");
+add("ar","B1","İş Sıfatları","محترف","profesyonel","sıfat","إنه لاعب محترف.","O profesyonel bir oyuncu.");
+add("ar","B1","İş Sıfatları","مؤهل","yetkin / nitelikli","sıfat","إنه موظف مؤهل.","O nitelikli bir çalışan.");
+// ======================= B1 — İŞ HAYATI İFADELERİ =======================
+add("ar","B1","İş İfadeleri","يذهب إلى العمل","işe gitmek","ifade","أذهب إلى العمل في الثامنة.","Saat sekizde işe gidiyorum.");
+add("ar","B1","İş İfadeleri","يعود من العمل","işten dönmek","ifade","أعود من العمل في السادسة.","Saat altıda işten dönüyorum.");
+add("ar","B1","İş İfadeleri","يعمل بدوام كامل","tam zamanlı çalışmak","ifade","أعمل بدوام كامل.","Tam zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","يعمل بدوام جزئي","yarı zamanlı çalışmak","ifade","أعمل بدوام جزئي أثناء الدراسة.","Okurken yarı zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","يعمل من المنزل","evden çalışmak","ifade","أعمل من المنزل يومين في الأسبوع.","Haftada iki gün evden çalışıyorum.");
+add("ar","B1","İş İfadeleri","يحضر اجتماعا","toplantıya katılmak","ifade","سأحضر اجتماعا غدا.","Yarın bir toplantıya katılacağım.");
+add("ar","B1","İş İfadeleri","يقدم طلبا","başvuru yapmak","ifade","قدمت طلبا لهذه الوظيفة.","Bu işe başvuru yaptım.");
+add("ar","B1","İş İfadeleri","يجري مقابلة","mülakat yapmak","ifade","سأجري مقابلة الأسبوع المقبل.","Gelecek hafta mülakat yapacağım.");
+add("ar","B1","İş İfadeleri","يوقع عقدا","sözleşme imzalamak","ifade","وقعت عقدا جديدا.","Yeni bir sözleşme imzaladım.");
+add("ar","B1","İş İfadeleri","يحصل على ترقية","terfi almak","ifade","حصل على ترقية في العمل.","İşinde terfi aldı.");
+add("ar","B1","İş İfadeleri","يكسب المال","para kazanmak","ifade","أعمل لأكسب المال.","Para kazanmak için çalışıyorum.");
+add("ar","B1","İş İfadeleri","يبني مستقبله","geleceğini inşa etmek","ifade","أعمل بجد لأبني مستقبلي.","Geleceğimi inşa etmek için çok çalışıyorum.");
+add("ar","B1","İş İfadeleri","يكتسب خبرة","deneyim kazanmak","ifade","أريد اكتساب خبرة في هذا المجال.","Bu alanda deneyim kazanmak istiyorum.");
+add("ar","B1","İş İfadeleri","يطور مهاراته","becerilerini geliştirmek","ifade","أطور مهاراتي كل يوم.","Becerilerimi her gün geliştiriyorum.");
+add("ar","B1","İş İfadeleri","يتحمل المسؤولية","sorumluluk almak","ifade","يجب أن تتحمل مسؤولية عملك.","İşinin sorumluluğunu almalısın.");
+/* ================================================================
+   ARAPÇA B1 — PART 23
+================================================================ */
+// ======================= B1 — ALIŞVERİŞ =======================
+add("ar","B1","Alışveriş","تسوق","alışveriş","isim","أحب التسوق في عطلة نهاية الأسبوع.","Hafta sonu alışveriş yapmayı seviyorum.");
+add("ar","B1","Alışveriş","متجر","mağaza","isim","هذا متجر كبير.","Bu büyük bir mağaza.");
+add("ar","B1","Alışveriş","سوبرماركت","süpermarket","isim","أذهب إلى السوبرماركت كل أسبوع.","Her hafta süpermarkete gidiyorum.");
+add("ar","B1","Alışveriş","مركز تجاري","alışveriş merkezi","isim","يوجد مركز تجاري قريب من هنا.","Buraya yakın bir alışveriş merkezi var.");
+add("ar","B1","Alışveriş","سوق","pazar","isim","السوق مزدحم اليوم.","Pazar bugün kalabalık.");
+add("ar","B1","Alışveriş","متجر ملابس","giyim mağazası","isim","دخلت متجر ملابس.","Bir giyim mağazasına girdim.");
+add("ar","B1","Alışveriş","متجر أحذية","ayakkabı mağazası","isim","أبحث عن متجر أحذية.","Bir ayakkabı mağazası arıyorum.");
+add("ar","B1","Alışveriş","مكتبة","kitapçı","isim","اشتريت الكتاب من المكتبة.","Kitabı kitapçıdan aldım.");
+add("ar","B1","Alışveriş","مخبز","fırın","isim","اشتريت الخبز من المخبز.","Ekmeği fırından aldım.");
+add("ar","B1","Alışveriş","جزارة","kasap","isim","ذهب أبي إلى الجزار.","Babam kasaba gitti.");
+add("ar","B1","Alışveriş","صيدلية","eczane","isim","اشتريت الدواء من الصيدلية.","İlacı eczaneden aldım.");
+add("ar","B1","Alışveriş","زبون","müşteri","isim","الزبون ينتظر دوره.","Müşteri sırasını bekliyor.");
+add("ar","B1","Alışveriş","بائع","satıcı","isim","سألت البائع عن السعر.","Satıcıya fiyatı sordum.");
+add("ar","B1","Alışveriş","موظف المبيعات","satış görevlisi","isim","ساعدني موظف المبيعات.","Satış görevlisi bana yardım etti.");
+add("ar","B1","Alışveriş","منتج","ürün","isim","هذا المنتج جيد.","Bu ürün iyi.");
+// ======================= B1 — PARA VE FİYAT =======================
+add("ar","B1","Para","مال","para","isim","ليس لدي ما يكفي من المال.","Yeterince param yok.");
+add("ar","B1","Para","نقود","nakit para","isim","هل لديك نقود؟","Nakit paran var mı?");
+add("ar","B1","Para","سعر","fiyat","isim","ما سعر هذا المنتج؟","Bu ürünün fiyatı ne?");
+add("ar","B1","Para","تكلفة","maliyet","isim","كم تبلغ تكلفة الرحلة؟","Gezinin maliyeti ne kadar?");
+add("ar","B1","Para","قيمة","değer","isim","ما قيمة هذا الشيء؟","Bu şeyin değeri ne kadar?");
+add("ar","B1","Para","خصم","indirim","isim","هل يوجد خصم؟","İndirim var mı?");
+add("ar","B1","Para","عرض","kampanya / teklif","isim","هناك عرض خاص اليوم.","Bugün özel bir kampanya var.");
+add("ar","B1","Para","تخفيضات","indirimler","isim","التخفيضات تبدأ غدا.","İndirimler yarın başlıyor.");
+add("ar","B1","Para","ضريبة","vergi","isim","السعر يشمل الضريبة.","Fiyata vergi dahil.");
+add("ar","B1","Para","فاتورة","fatura","isim","هل يمكنني الحصول على الفاتورة؟","Faturayı alabilir miyim?");
+add("ar","B1","Para","إيصال","fiş / makbuz","isim","أعطني الإيصال من فضلك.","Lütfen fişi ver.");
+add("ar","B1","Para","ميزانية","bütçe","isim","لدي ميزانية محدودة.","Sınırlı bir bütçem var.");
+add("ar","B1","Para","مصروف","harcama","isim","أحاول تقليل مصاريفي.","Harcamalarımı azaltmaya çalışıyorum.");
+add("ar","B1","Para","دخل","gelir","isim","دخلي الشهري جيد.","Aylık gelirim iyi.");
+add("ar","B1","Para","ربح","kâr","isim","حققت الشركة أرباحا كبيرة.","Şirket büyük kâr elde etti.");
+// ======================= B1 — ÖDEME =======================
+add("ar","B1","Ödeme","دفع","ödeme","isim","تم الدفع بالفعل.","Ödeme zaten yapıldı.");
+add("ar","B1","Ödeme","بطاقة ائتمان","kredi kartı","isim","أدفع ببطاقة الائتمان.","Kredi kartıyla ödüyorum.");
+add("ar","B1","Ödeme","بطاقة مصرفية","banka kartı","isim","هل يمكنني الدفع بالبطاقة المصرفية؟","Banka kartıyla ödeyebilir miyim?");
+add("ar","B1","Ödeme","بطاقة","kart","isim","نسيت بطاقتي في المنزل.","Kartımı evde unuttum.");
+add("ar","B1","Ödeme","حساب مصرفي","banka hesabı","isim","لدي حساب مصرفي في تركيا.","Türkiye'de banka hesabım var.");
+add("ar","B1","Ödeme","تحويل مصرفي","banka havalesi","isim","أرسلت المال عن طريق تحويل مصرفي.","Parayı banka havalesiyle gönderdim.");
+add("ar","B1","Ödeme","تحويل","havale / transfer","isim","أجريت تحويلا إلى حسابه.","Hesabına transfer yaptım.");
+add("ar","B1","Ödeme","آلة الصراف الآلي","ATM","isim","أين أقرب آلة صراف آلي؟","En yakın ATM nerede?");
+add("ar","B1","Ödeme","رصيد","bakiye","isim","أريد معرفة رصيدي.","Bakiyemi öğrenmek istiyorum.");
+add("ar","B1","Ödeme","سحب","para çekme","isim","أريد سحب بعض المال.","Biraz para çekmek istiyorum.");
+add("ar","B1","Ödeme","إيداع","para yatırma","isim","أريد إيداع المال في حسابي.","Hesabıma para yatırmak istiyorum.");
+add("ar","B1","Ödeme","رمز سري","şifre / PIN","isim","لا تخبر أحدا برمزك السري.","Şifreni kimseye söyleme.");
+add("ar","B1","Ödeme","دفع نقدا","nakit ödeme","ifade","هل يمكنني الدفع نقدا؟","Nakit ödeyebilir miyim?");
+add("ar","B1","Ödeme","الدفع بالتقسيط","taksitle ödeme","ifade","هل يمكنني الدفع بالتقسيط؟","Taksitle ödeyebilir miyim?");
+add("ar","B1","Ödeme","الدفع مقدما","önceden ödeme","ifade","يجب أن أدفع مقدما.","Önceden ödeme yapmalıyım.");
+// ======================= B1 — ALIŞVERİŞ FİİLLERİ =======================
+add("ar","B1","Alışveriş Fiilleri","يشتري","satın almak","fiil","أريد شراء هاتف جديد.","Yeni bir telefon satın almak istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يبيع","satmak","fiil","هذا المتجر يبيع الملابس.","Bu mağaza kıyafet satıyor.");
+add("ar","B1","Alışveriş Fiilleri","يبحث عن","aramak","fiil","أبحث عن حذاء جديد.","Yeni bir ayakkabı arıyorum.");
+add("ar","B1","Alışveriş Fiilleri","يختار","seçmek","fiil","اخترت هذا القميص.","Bu gömleği seçtim.");
+add("ar","B1","Alışveriş Fiilleri","يجرب","denemek","fiil","أريد أن أجرب هذا القميص.","Bu gömleği denemek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يقيس","ölçmek / denemek","fiil","أريد قياس هذه السراويل.","Bu pantolonu denemek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يدفع","ödemek","fiil","سأدفع بالبطاقة.","Kartla ödeyeceğim.");
+add("ar","B1","Alışveriş Fiilleri","يكلف","maliyeti olmak","fiil","كم يكلف هذا؟","Bu ne kadar tutuyor?");
+add("ar","B1","Alışveriş Fiilleri","يستبدل","değiştirmek","fiil","أريد استبدال هذا المنتج.","Bu ürünü değiştirmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يعيد","iade etmek","fiil","أريد إعادة المنتج.","Ürünü iade etmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يطلب","sipariş vermek","fiil","أريد طلب بيتزا.","Pizza sipariş etmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يحجز","rezervasyon yapmak","fiil","حجزت طاولة في المطعم.","Restoranda masa ayırttım.");
+add("ar","B1","Alışveriş Fiilleri","يستلم","teslim almak","fiil","استلمت طلبي اليوم.","Siparişimi bugün teslim aldım.");
+add("ar","B1","Alışveriş Fiilleri","يرسل","göndermek","fiil","أرسلوا المنتج إلى منزلي.","Ürünü evime gönderdiler.");
+add("ar","B1","Alışveriş Fiilleri","يوصل","teslim etmek","fiil","سيتم توصيل الطلب غدا.","Sipariş yarın teslim edilecek.");
+// ======================= B1 — ÜRÜN ÖZELLİKLERİ =======================
+add("ar","B1","Ürünler","جودة","kalite","isim","جودة هذا المنتج ممتازة.","Bu ürünün kalitesi mükemmel.");
+add("ar","B1","Ürünler","نوع","tür / çeşit","isim","ما نوع الهاتف الذي تريد؟","Ne tür bir telefon istiyorsun?");
+add("ar","B1","Ürünler","حجم","beden / boyut","isim","ما الحجم الذي تحتاجه؟","Hangi bedene ihtiyacın var?");
+add("ar","B1","Ürünler","لون","renk","isim","ما لونك المفضل؟","En sevdiğin renk nedir?");
+add("ar","B1","Ürünler","مقاس","beden / ölçü","isim","هذا المقاس صغير جدا.","Bu beden çok küçük.");
+add("ar","B1","Ürünler","مادة","malzeme","isim","ما هي مادة هذا القميص؟","Bu gömleğin malzemesi nedir?");
+add("ar","B1","Ürünler","علامة تجارية","marka","isim","هذه علامة تجارية مشهورة.","Bu ünlü bir marka.");
+add("ar","B1","Ürünler","موديل","model","isim","هذا أحدث موديل.","Bu en yeni model.");
+add("ar","B1","Ürünler","جديد","yeni","sıfat","هذا المنتج جديد.","Bu ürün yeni.");
+add("ar","B1","Ürünler","مستعمل","kullanılmış / ikinci el","sıfat","اشتريت سيارة مستعملة.","İkinci el bir araba aldım.");
+add("ar","B1","Ürünler","غالي","pahalı","sıfat","هذا الهاتف غالي جدا.","Bu telefon çok pahalı.");
+add("ar","B1","Ürünler","رخيص","ucuz","sıfat","هذا القميص رخيص.","Bu gömlek ucuz.");
+add("ar","B1","Ürünler","مناسب","uygun","sıfat","هذا السعر مناسب.","Bu fiyat uygun.");
+add("ar","B1","Ürünler","متوفر","mevcut / stokta","sıfat","هل هذا المنتج متوفر؟","Bu ürün mevcut mu?");
+add("ar","B1","Ürünler","غير متوفر","stokta yok","sıfat","هذا المقاس غير متوفر.","Bu beden stokta yok.");
+// ======================= B1 — ALIŞVERİŞ İFADELERİ =======================
+add("ar","B1","Alışveriş İfadeleri","كم السعر؟","fiyatı ne kadar?","ifade","كم السعر؟","Fiyatı ne kadar?");
+add("ar","B1","Alışveriş İfadeleri","كم يكلف؟","ne kadar tutuyor?","ifade","كم يكلف هذا الهاتف؟","Bu telefon ne kadar tutuyor?");
+add("ar","B1","Alışveriş İfadeleri","هل يوجد خصم؟","indirim var mı?","ifade","هل يوجد خصم على هذا المنتج؟","Bu üründe indirim var mı?");
+add("ar","B1","Alışveriş İfadeleri","هل يمكنني تجربته؟","deneyebilir miyim?","ifade","هل يمكنني تجربته؟","Bunu deneyebilir miyim?");
+add("ar","B1","Alışveriş İifadeleri","هل يمكنني قياسه؟","deneyebilir miyim?","ifade","هل يمكنني قياس هذا القميص؟","Bu gömleği deneyebilir miyim?");
+add("ar","B1","Alışveriş İfadeleri","هل لديك مقاس أكبر؟","daha büyük beden var mı?","ifade","هل لديك مقاس أكبر؟","Daha büyük beden var mı?");
+add("ar","B1","Alışveriş İfadeleri","هل لديك مقاس أصغر؟","daha küçük beden var mı?","ifade","هل لديك مقاس أصغر؟","Daha küçük beden var mı?");
+add("ar","B1","Alışveriş İfadeleri","أريد شراء هذا","bunu satın almak istiyorum","ifade","أريد شراء هذا المنتج.","Bu ürünü satın almak istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","أريد إعادته","bunu iade etmek istiyorum","ifade","أريد إعادته لأنه تالف.","Bozuk olduğu için bunu iade etmek istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","أريد استبداله","bunu değiştirmek istiyorum","ifade","أريد استبداله بمقاس آخر.","Bunu başka bir bedenle değiştirmek istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","هل يمكنني الدفع بالبطاقة؟","kartla ödeyebilir miyim?","ifade","هل يمكنني الدفع بالبطاقة؟","Kartla ödeyebilir miyim?");
+add("ar","B1","Alışveriş İfadeleri","أريد إيصالا","fiş istiyorum","ifade","أريد إيصالا من فضلك.","Lütfen fiş istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","أين صندوق الدفع؟","kasa nerede?","ifade","أين صندوق الدفع؟","Kasa nerede?");
+add("ar","B1","Alışveriş İfadeleri","هذا غالي جدا","bu çok pahalı","ifade","هذا غالي جدا بالنسبة لي.","Bu benim için çok pahalı.");
+add("ar","B1","Alışveriş İfadeleri","هذا مناسب لي","bu bana uygun","ifade","هذا السعر مناسب لي.","Bu fiyat bana uygun.");
+/* ================================================================
+   ARAPÇA B1 — PART 24
+================================================================ */
+// ======================= B1 — EV VE KONUT =======================
+add("ar","B1","Ev","بيت","ev","isim","أعيش في بيت صغير.","Küçük bir evde yaşıyorum.");
+add("ar","B1","Ev","منزل","ev / konut","isim","منزلي قريب من الجامعة.","Evim üniversiteye yakın.");
+add("ar","B1","Ev","شقة","apartman dairesi","isim","أعيش في شقة في وسط المدينة.","Şehir merkezinde bir apartman dairesinde yaşıyorum.");
+add("ar","B1","Ev","غرفة","oda","isim","غرفتي واسعة.","Odam geniş.");
+add("ar","B1","Ev","غرفة نوم","yatak odası","isim","غرفة النوم في الطابق الثاني.","Yatak odası ikinci katta.");
+add("ar","B1","Ev","غرفة معيشة","oturma odası","isim","نشاهد التلفاز في غرفة المعيشة.","Oturma odasında televizyon izliyoruz.");
+add("ar","B1","Ev","غرفة جلوس","salon / oturma odası","isim","غرفة الجلوس مريحة.","Salon rahat.");
+add("ar","B1","Ev","مطبخ","mutfak","isim","أمي تطبخ في المطبخ.","Annem mutfakta yemek yapıyor.");
+add("ar","B1","Ev","حمام","banyo","isim","الحمام نظيف.","Banyo temiz.");
+add("ar","B1","Ev","مرحاض","tuvalet","isim","أين المرحاض؟","Tuvalet nerede?");
+add("ar","B1","Ev","شرفة","balkon","isim","أحب الجلوس في الشرفة.","Balkonda oturmayı seviyorum.");
+add("ar","B1","Ev","حديقة","bahçe","isim","لدينا حديقة جميلة.","Güzel bir bahçemiz var.");
+add("ar","B1","Ev","مرآب","garaj","isim","السيارة في المرآب.","Araba garajda.");
+add("ar","B1","Ev","سطح","çatı / teras","isim","السطح يحتاج إلى إصلاح.","Çatının tamire ihtiyacı var.");
+add("ar","B1","Ev","طابق","kat","isim","أعيش في الطابق الثالث.","Üçüncü katta yaşıyorum.");
+// ======================= B1 — EV EŞYALARI =======================
+add("ar","B1","Ev Eşyaları","أثاث","mobilya","isim","نحتاج إلى أثاث جديد.","Yeni mobilyalara ihtiyacımız var.");
+add("ar","B1","Ev Eşyaları","طاولة","masa","isim","الكتاب على الطاولة.","Kitap masanın üzerinde.");
+add("ar","B1","Ev Eşyaları","كرسي","sandalye","isim","اجلس على الكرسي.","Sandalyeye otur.");
+add("ar","B1","Ev Eşyaları","أريكة","kanepe","isim","جلست على الأريكة.","Kanepede oturdum.");
+add("ar","B1","Ev Eşyaları","سرير","yatak","isim","أنا في السرير.","Yataktayım.");
+add("ar","B1","Ev Eşyaları","خزانة","dolap","isim","ملابسي في الخزانة.","Kıyafetlerim dolapta.");
+add("ar","B1","Ev Eşyaları","رف","raf","isim","الكتب على الرف.","Kitaplar rafta.");
+add("ar","B1","Ev Eşyaları","مكتب","çalışma masası","isim","أدرس على مكتبي.","Çalışma masamda ders çalışıyorum.");
+add("ar","B1","Ev Eşyaları","مصباح","lamba","isim","أطفئ المصباح من فضلك.","Lütfen lambayı kapat.");
+add("ar","B1","Ev Eşyaları","تلفاز","televizyon","isim","نشاهد التلفاز مساء.","Akşam televizyon izliyoruz.");
+add("ar","B1","Ev Eşyaları","ثلاجة","buzdolabı","isim","الحليب في الثلاجة.","Süt buzdolabında.");
+add("ar","B1","Ev Eşyaları","فرن","fırın","isim","الطعام في الفرن.","Yemek fırında.");
+add("ar","B1","Ev Eşyaları","غسالة","çamaşır makinesi","isim","الغسالة تعمل.","Çamaşır makinesi çalışıyor.");
+add("ar","B1","Ev Eşyaları","غسالة صحون","bulaşık makinesi","isim","غسالة الصحون ممتلئة.","Bulaşık makinesi dolu.");
+add("ar","B1","Ev Eşyaları","مكنسة كهربائية","elektrikli süpürge","isim","أستخدم المكنسة الكهربائية.","Elektrikli süpürge kullanıyorum.");
+// ======================= B1 — EVİN BÖLÜMLERİ =======================
+add("ar","B1","Ev Bölümleri","باب","kapı","isim","أغلق الباب.","Kapıyı kapatıyorum.");
+add("ar","B1","Ev Bölümleri","نافذة","pencere","isim","افتح النافذة من فضلك.","Lütfen pencereyi aç.");
+add("ar","B1","Ev Bölümleri","جدار","duvar","isim","الصور معلقة على الجدار.","Resimler duvarda asılı.");
+add("ar","B1","Ev Bölümleri","أرضية","zemin / yer","isim","الأرضية نظيفة.","Zemin temiz.");
+add("ar","B1","Ev Bölümleri","سقف","tavan","isim","السقف مرتفع.","Tavan yüksek.");
+add("ar","B1","Ev Bölümleri","درج","merdiven","isim","اصعد الدرج.","Merdivenlerden çık.");
+add("ar","B1","Ev Bölümleri","مصعد","asansör","isim","أستخدم المصعد كل يوم.","Her gün asansörü kullanıyorum.");
+add("ar","B1","Ev Bölümleri","مدخل","giriş","isim","المدخل على اليمين.","Giriş sağda.");
+add("ar","B1","Ev Bölümleri","ممر","koridor","isim","الغرفة في نهاية الممر.","Oda koridorun sonunda.");
+add("ar","B1","Ev Bölümleri","مفتاح","anahtar","isim","أين مفتاح البيت؟","Ev anahtarı nerede?");
+add("ar","B1","Ev Bölümleri","قفل","kilit","isim","الباب مغلق بالقفل.","Kapı kilitli.");
+add("ar","B1","Ev Bölümleri","مقبض","kapı kolu / tutacak","isim","مقبض الباب مكسور.","Kapı kolu kırılmış.");
+add("ar","B1","Ev Bölümleri","كهرباء","elektrik","isim","انقطعت الكهرباء.","Elektrik kesildi.");
+add("ar","B1","Ev Bölümleri","ماء","su","isim","لا يوجد ماء في المنزل.","Evde su yok.");
+add("ar","B1","Ev Bölümleri","تدفئة","ısıtma","isim","التدفئة لا تعمل.","Isıtma çalışmıyor.");
+// ======================= B1 — TEMİZLİK =======================
+add("ar","B1","Temizlik","تنظيف","temizlik","isim","أقوم بتنظيف البيت كل أسبوع.","Her hafta evi temizliyorum.");
+add("ar","B1","Temizlik","نظافة","temizlik / hijyen","isim","النظافة مهمة للصحة.","Temizlik sağlık için önemlidir.");
+add("ar","B1","Temizlik","غبار","toz","isim","هناك غبار على الطاولة.","Masanın üzerinde toz var.");
+add("ar","B1","Temizlik","قمامة","çöp","isim","أخرج القمامة كل مساء.","Her akşam çöpü çıkarıyorum.");
+add("ar","B1","Temizlik","سلة المهملات","çöp kutusu","isim","ضع القمامة في سلة المهملات.","Çöpü çöp kutusuna koy.");
+add("ar","B1","Temizlik","منظف","temizleyici","isim","أحتاج إلى منظف جديد.","Yeni bir temizlik ürününe ihtiyacım var.");
+add("ar","B1","Temizlik","صابون","sabun","isim","أين الصابون؟","Sabun nerede?");
+add("ar","B1","Temizlik","منشفة","havlu","isim","أحتاج إلى منشفة نظيفة.","Temiz bir havluya ihtiyacım var.");
+add("ar","B1","Temizlik","إسفنجة","sünger","isim","استخدم الإسفنجة لتنظيف المطبخ.","Mutfağı temizlemek için süngeri kullan.");
+add("ar","B1","Temizlik","مكنسة","süpürge","isim","أين المكنسة؟","Süpürge nerede?");
+add("ar","B1","Temizlik","دلو","kova","isim","املأ الدلو بالماء.","Kovayı suyla doldur.");
+add("ar","B1","Temizlik","ممسحة","paspas","isim","نظف الأرضية بالممسحة.","Zemini paspasla temizle.");
+add("ar","B1","Temizlik","غسيل","çamaşır / yıkama","isim","لدي الكثير من الغسيل.","Çok çamaşırım var.");
+add("ar","B1","Temizlik","غسيل الملابس","çamaşır yıkama","isim","سأقوم بغسيل الملابس اليوم.","Bugün çamaşır yıkayacağım.");
+add("ar","B1","Temizlik","غسل الصحون","bulaşık yıkama","isim","أنا أغسل الصحون.","Bulaşıkları yıkıyorum.");
+// ======================= B1 — EV FİİLLERİ =======================
+add("ar","B1","Ev Fiilleri","يسكن","ikamet etmek / yaşamak","fiil","أسكن في شقة صغيرة.","Küçük bir dairede yaşıyorum.");
+add("ar","B1","Ev Fiilleri","يعيش","yaşamak","fiil","أعيش مع عائلتي.","Ailemle yaşıyorum.");
+add("ar","B1","Ev Fiilleri","ينتقل","taşınmak","fiil","سأنتقل إلى منزل جديد.","Yeni bir eve taşınacağım.");
+add("ar","B1","Ev Fiilleri","يستأجر","kiralamak","fiil","أستأجر شقة في المدينة.","Şehirde bir daire kiralıyorum.");
+add("ar","B1","Ev Fiilleri","يستأجر","kiraya vermek","fiil","يؤجر شقته للطلاب.","Dairesini öğrencilere kiraya veriyor.");
+add("ar","B1","Ev Fiilleri","يشتري","satın almak","fiil","اشترينا منزلا جديدا.","Yeni bir ev satın aldık.");
+add("ar","B1","Ev Fiilleri","يبيع","satmak","fiil","باع منزله القديم.","Eski evini sattı.");
+add("ar","B1","Ev Fiilleri","يفتح","açmak","fiil","افتح النافذة.","Pencereyi aç.");
+add("ar","B1","Ev Fiilleri","يغلق","kapatmak","fiil","أغلق الباب.","Kapıyı kapat.");
+add("ar","B1","Ev Fiilleri","يشغل","çalıştırmak / açmak","fiil","شغل التلفاز.","Televizyonu açtı.");
+add("ar","B1","Ev Fiilleri","يطفئ","kapatmak / söndürmek","fiil","أطفئ الضوء.","Işığı kapat.");
+add("ar","B1","Ev Fiilleri","ينظف","temizlemek","fiil","أنظف غرفتي كل يوم.","Odamı her gün temizliyorum.");
+add("ar","B1","Ev Fiilleri","يغسل","yıkamak","fiil","أغسل الصحون بعد العشاء.","Akşam yemeğinden sonra bulaşıkları yıkıyorum.");
+add("ar","B1","Ev Fiilleri","يكنس","süpürmek","fiil","أكنس الأرضية.","Zemini süpürüyorum.");
+add("ar","B1","Ev Fiilleri","يرتب","düzenlemek / toplamak","fiil","أرتب غرفتي.","Odamı topluyorum.");
+// ======================= B1 — EV SIFATLARI =======================
+add("ar","B1","Ev Sıfatları","كبير","büyük","sıfat","بيتي كبير.","Evim büyük.");
+add("ar","B1","Ev Sıfatları","صغير","küçük","sıfat","غرفتي صغيرة.","Odam küçük.");
+add("ar","B1","Ev Sıfatları","واسع","geniş","sıfat","المنزل واسع.","Ev geniş.");
+add("ar","B1","Ev Sıfatları","ضيق","dar","sıfat","الممر ضيق.","Koridor dar.");
+add("ar","B1","Ev Sıfatları","نظيف","temiz","sıfat","المطبخ نظيف.","Mutfak temiz.");
+add("ar","B1","Ev Sıfatları","متسخ","kirli","sıfat","الأرضية متسخة.","Zemin kirli.");
+add("ar","B1","Ev Sıfatları","مرتب","düzenli","sıfat","غرفتي مرتبة.","Odam düzenli.");
+add("ar","B1","Ev Sıfatları","فوضوي","dağınık","sıfat","غرفته فوضوية.","Odası dağınık.");
+add("ar","B1","Ev Sıfatları","مريح","rahat","sıfat","هذا الكرسي مريح.","Bu sandalye rahat.");
+add("ar","B1","Ev Sıfatları","غير مريح","rahatsız","sıfat","السرير غير مريح.","Yatak rahat değil.");
+add("ar","B1","Ev Sıfatları","هادئ","sessiz","sıfat","هذا الحي هادئ.","Bu mahalle sessiz.");
+add("ar","B1","Ev Sıfatları","مزدحم","kalabalık","sıfat","الحي مزدحم.","Mahalle kalabalık.");
+add("ar","B1","Ev Sıfatları","مضيء","aydınlık","sıfat","الغرفة مضيئة.","Oda aydınlık.");
+add("ar","B1","Ev Sıfatları","مظلم","karanlık","sıfat","الغرفة مظلمة.","Oda karanlık.");
+add("ar","B1","Ev Sıfatları","قديم","eski","sıfat","هذا منزل قديم.","Bu eski bir ev.");
+// ======================= B1 — EV İFADELERİ =======================
+add("ar","B1","Ev İfadeleri","أعيش بمفردي","tek başıma yaşıyorum","ifade","أعيش بمفردي في شقة صغيرة.","Küçük bir dairede tek başıma yaşıyorum.");
+add("ar","B1","Ev İfadeleri","أعيش مع عائلتي","ailemle yaşıyorum","ifade","أعيش مع عائلتي في المدينة.","Şehirde ailemle yaşıyorum.");
+add("ar","B1","Ev İfadeleri","أبحث عن منزل","ev arıyorum","ifade","أبحث عن منزل جديد.","Yeni bir ev arıyorum.");
+add("ar","B1","Ev İfadeleri","أبحث عن شقة","daire arıyorum","ifade","أبحث عن شقة قريبة من الجامعة.","Üniversiteye yakın bir daire arıyorum.");
+add("ar","B1","Ev İfadeleri","أريد استئجار شقة","bir daire kiralamak istiyorum","ifade","أريد استئجار شقة صغيرة.","Küçük bir daire kiralamak istiyorum.");
+add("ar","B1","Ev İfadeleri","أريد شراء منزل","bir ev satın almak istiyorum","ifade","أريد شراء منزل في المستقبل.","Gelecekte bir ev satın almak istiyorum.");
+add("ar","B1","Ev İfadeleri","كم الإيجار؟","kira ne kadar?","ifade","كم الإيجار الشهري؟","Aylık kira ne kadar?");
+add("ar","B1","Ev İfadeleri","متى يمكنني الانتقال؟","ne zaman taşınabilirim?","ifade","متى يمكنني الانتقال إلى الشقة؟","Daireye ne zaman taşınabilirim?");
+add("ar","B1","Ev İfadeleri","البيت قريب من","ev ... yakınında","ifade","البيت قريب من محطة الحافلات.","Ev otobüs durağına yakın.");
+add("ar","B1","Ev İfadeleri","البيت بعيد عن","ev ... uzağında","ifade","البيت بعيد عن مركز المدينة.","Ev şehir merkezinden uzak.");
+add("ar","B1","Ev İfadeleri","أحتاج إلى تنظيف البيت","evi temizlemem gerekiyor","ifade","أحتاج إلى تنظيف البيت اليوم.","Bugün evi temizlemem gerekiyor.");
+add("ar","B1","Ev İfadeleri","يجب أن أرتب غرفتي","odamı toplamam gerekiyor","ifade","يجب أن أرتب غرفتي قبل النوم.","Uyumadan önce odamı toplamam gerekiyor.");
+add("ar","B1","Ev İfadeleri","انقطعت الكهرباء","elektrik kesildi","ifade","انقطعت الكهرباء فجأة.","Elektrik aniden kesildi.");
+add("ar","B1","Ev İfadeleri","لا يوجد ماء","su yok","ifade","لا يوجد ماء في المنزل.","Evde su yok.");
+add("ar","B1","Ev İfadeleri","المفتاح لا يعمل","anahtar çalışmıyor","ifade","المفتاح لا يعمل.","Anahtar çalışmıyor.");
+/* ================================================================
+   ARAPÇA B1 — PART 25
+================================================================ */
+// ======================= B1 — SAĞLIK =======================
+add("ar","B1","Sağlık","صحة","sağlık","isim","الصحة أهم من المال.","Sağlık paradan daha önemlidir.");
+add("ar","B1","Sağlık","مرض","hastalık","isim","هذا المرض يحتاج إلى علاج.","Bu hastalığın tedaviye ihtiyacı var.");
+add("ar","B1","Sağlık","علاج","tedavi","isim","بدأ العلاج الأسبوع الماضي.","Tedavi geçen hafta başladı.");
+add("ar","B1","Sağlık","دواء","ilaç","isim","يجب أن أتناول الدواء.","İlacı almam gerekiyor.");
+add("ar","B1","Sağlık","طبيب","doktor","isim","أحتاج إلى زيارة الطبيب.","Doktora gitmem gerekiyor.");
+add("ar","B1","Sağlık","مستشفى","hastane","isim","ذهب إلى المستشفى أمس.","Dün hastaneye gitti.");
+add("ar","B1","Sağlık","عيادة","klinik","isim","ذهبت إلى العيادة.","Kliniğe gittim.");
+add("ar","B1","Sağlık","صيدلية","eczane","isim","الصيدلية قريبة من المنزل.","Eczane eve yakın.");
+add("ar","B1","Sağlık","موعد","randevu","isim","لدي موعد مع الطبيب غدا.","Yarın doktorla randevum var.");
+add("ar","B1","Sağlık","فحص","muayene / kontrol","isim","أحتاج إلى فحص طبي.","Tıbbi muayeneye ihtiyacım var.");
+add("ar","B1","Sağlık","تحليل","tahlil","isim","طلب الطبيب تحليلا للدم.","Doktor kan tahlili istedi.");
+add("ar","B1","Sağlık","نتيجة","sonuç","isim","انتظرت نتيجة التحليل.","Tahlil sonucunu bekledim.");
+add("ar","B1","Sağlık","وصفة","reçete","isim","كتب الطبيب وصفة طبية.","Doktor reçete yazdı.");
+add("ar","B1","Sağlık","عملية","ameliyat / operasyon","isim","يحتاج إلى عملية بسيطة.","Basit bir ameliyata ihtiyacı var.");
+add("ar","B1","Sağlık","طوارئ","acil servis / acil durum","isim","ذهب إلى قسم الطوارئ.","Acil servise gitti.");
+// ======================= B1 — VÜCUT =======================
+add("ar","B1","Vücut","جسم","vücut","isim","يجب أن نحافظ على صحة الجسم.","Vücut sağlığımızı korumalıyız.");
+add("ar","B1","Vücut","رأس","baş","isim","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Vücut","وجه","yüz","isim","غسلت وجهي.","Yüzümü yıkadım.");
+add("ar","B1","Vücut","عين","göz","isim","عيني تؤلمني.","Gözüm ağrıyor.");
+add("ar","B1","Vücut","أذن","kulak","isim","أذني تؤلمني.","Kulağım ağrıyor.");
+add("ar","B1","Vücut","أنف","burun","isim","أنفي مسدود.","Burnum tıkalı.");
+add("ar","B1","Vücut","فم","ağız","isim","افتح فمك.","Ağzını aç.");
+add("ar","B1","Vücut","سن","diş","isim","سني يؤلمني.","Dişim ağrıyor.");
+add("ar","B1","Vücut","رقبة","boyun","isim","أشعر بألم في رقبتي.","Boynumda ağrı hissediyorum.");
+add("ar","B1","Vücut","كتف","omuz","isim","كتفي يؤلمني.","Omzum ağrıyor.");
+add("ar","B1","Vücut","ظهر","sırt","isim","ظهري يؤلمني.","Sırtım ağrıyor.");
+add("ar","B1","Vücut","بطن","karın","isim","بطني يؤلمني.","Karnım ağrıyor.");
+add("ar","B1","Vücut","ذراع","kol","isim","أصبت ذراعي.","Kolumu yaraladım.");
+add("ar","B1","Vücut","يد","el","isim","يدي تؤلمني.","Elim ağrıyor.");
+add("ar","B1","Vücut","إصبع","parmak","isim","جرحت إصبعي.","Parmağımı kestim.");
+add("ar","B1","Vücut","ساق","bacak","isim","ساقي تؤلمني.","Bacağım ağrıyor.");
+add("ar","B1","Vücut","ركبة","diz","isim","ركبتي تؤلمني.","Dizim ağrıyor.");
+add("ar","B1","Vücut","قدم","ayak","isim","قدمي تؤلمني.","Ayağım ağrıyor.");
+add("ar","B1","Vücut","جلد","cilt / deri","isim","جلدي حساس.","Cildim hassas.");
+add("ar","B1","Vücut","قلب","kalp","isim","القلب عضو مهم.","Kalp önemli bir organdır.");
+// ======================= B1 — SAĞLIK SORUNLARI =======================
+add("ar","B1","Sağlık Sorunları","ألم","ağrı","isim","لدي ألم في ظهري.","Sırtımda ağrı var.");
+add("ar","B1","Sağlık Sorunları","صداع","baş ağrısı","isim","لدي صداع شديد.","Şiddetli baş ağrım var.");
+add("ar","B1","Sağlık Sorunları","حمى","ateş","isim","لدي حمى منذ أمس.","Dünden beri ateşim var.");
+add("ar","B1","Sağlık Sorunları","سعال","öksürük","isim","لدي سعال شديد.","Şiddetli öksürüğüm var.");
+add("ar","B1","Sağlık Sorunları","زكام","soğuk algınlığı","isim","أصبت بالزكام.","Soğuk algınlığına yakalandım.");
+add("ar","B1","Sağlık Sorunları","إنفلونزا","grip","isim","أصبت بالإنفلونزا.","Grip oldum.");
+add("ar","B1","Sağlık Sorunları","التهاب الحلق","boğaz iltihabı / ağrısı","isim","لدي التهاب في الحلق.","Boğazım ağrıyor.");
+add("ar","B1","Sağlık Sorunları","ألم في المعدة","mide ağrısı","ifade","لدي ألم في المعدة.","Mideme ağrı giriyor.");
+add("ar","B1","Sağlık Sorunları","إسهال","ishal","isim","أصبت بالإسهال.","İshal oldum.");
+add("ar","B1","Sağlık Sorunları","غثيان","mide bulantısı","isim","أشعر بالغثيان.","Midemi bulanıyor.");
+add("ar","B1","Sağlık Sorunları","دوخة","baş dönmesi","isim","أشعر بالدوخة.","Başım dönüyor.");
+add("ar","B1","Sağlık Sorunları","تعب","yorgunluk","isim","أشعر بالتعب.","Yorgun hissediyorum.");
+add("ar","B1","Sağlık Sorunları","إرهاق","bitkinlik","isim","أشعر بإرهاق شديد.","Çok bitkin hissediyorum.");
+add("ar","B1","Sağlık Sorunları","حساسية","alerji","isim","لدي حساسية من الغبار.","Toza alerjim var.");
+add("ar","B1","Sağlık Sorunları","إصابة","yaralanma","isim","تعرض لإصابة أثناء الرياضة.","Spor sırasında yaralandı.");
+// ======================= B1 — SAĞLIK FİİLLERİ =======================
+add("ar","B1","Sağlık Fiilleri","يشعر","hissetmek","fiil","أشعر بالتعب اليوم.","Bugün yorgun hissediyorum.");
+add("ar","B1","Sağlık Fiilleri","يمرض","hastalanmak","fiil","مرض الأسبوع الماضي.","Geçen hafta hastalandı.");
+add("ar","B1","Sağlık Fiilleri","يتعافى","iyileşmek","fiil","بدأ يتعافى من المرض.","Hastalıktan iyileşmeye başladı.");
+add("ar","B1","Sağlık Fiilleri","يعالج","tedavi etmek","fiil","يعالج الطبيب المريض.","Doktor hastayı tedavi ediyor.");
+add("ar","B1","Sağlık Fiilleri","يفحص","muayene etmek / kontrol etmek","fiil","يفحص الطبيب المريض.","Doktor hastayı muayene ediyor.");
+add("ar","B1","Sağlık Fiilleri","يتناول","almak / tüketmek","fiil","أتناول الدواء بعد الطعام.","Yemekten sonra ilaç alıyorum.");
+add("ar","B1","Sağlık Fiilleri","يأخذ","almak","fiil","أخذت الدواء صباحا.","Sabah ilacı aldım.");
+add("ar","B1","Sağlık Fiilleri","يتوقف","durmak / bırakmak","fiil","يجب أن أتوقف عن التدخين.","Sigarayı bırakmalıyım.");
+add("ar","B1","Sağlık Fiilleri","يؤلم","ağrımak","fiil","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Sağlık Fiilleri","يجرح","yaralamak","fiil","جرحت يدي.","Elimi yaraladım.");
+add("ar","B1","Sağlık Fiilleri","يكسر","kırmak","fiil","كسر ساقه.","Bacağını kırdı.");
+add("ar","B1","Sağlık Fiilleri","ينزف","kanamak","fiil","جرحه ينزف.","Yarası kanıyor.");
+add("ar","B1","Sağlık Fiilleri","يسعل","öksürmek","fiil","يسعل كثيرا.","Çok öksürüyor.");
+add("ar","B1","Sağlık Fiilleri","يعطس","hapşırmak","fiil","أعطس كثيرا في الربيع.","İlkbaharda çok hapşırıyorum.");
+add("ar","B1","Sağlık Fiilleri","يتنفس","nefes almak","fiil","أجد صعوبة في التنفس.","Nefes almakta zorlanıyorum.");
+// ======================= B1 — SAĞLIK SIFATLARI =======================
+add("ar","B1","Sağlık Sıfatları","صحي","sağlıklı","sıfat","أحاول أن أعيش حياة صحية.","Sağlıklı bir hayat yaşamaya çalışıyorum.");
+add("ar","B1","Sağlık Sıfatları","مريض","hasta","sıfat","هو مريض اليوم.","O bugün hasta.");
+add("ar","B1","Sağlık Sıfatları","متعب","yorgun","sıfat","أنا متعب جدا.","Çok yorgunum.");
+add("ar","B1","Sağlık Sıfatları","قوي","güçlü","sıfat","جسمي قوي.","Vücudum güçlü.");
+add("ar","B1","Sağlık Sıfatları","ضعيف","zayıf / güçsüz","sıfat","أشعر بأنني ضعيف.","Kendimi güçsüz hissediyorum.");
+add("ar","B1","Sağlık Sıfatları","خطير","tehlikeli","sıfat","هذا المرض خطير.","Bu hastalık tehlikeli.");
+add("ar","B1","Sağlık Sıfatları","بسيط","basit / hafif","sıfat","لدي إصابة بسيطة.","Hafif bir yaralanmam var.");
+add("ar","B1","Sağlık Sıfatları","شديد","şiddetli","sıfat","لدي ألم شديد.","Şiddetli ağrım var.");
+add("ar","B1","Sağlık Sıfatları","مزمن","kronik","sıfat","هذا مرض مزمن.","Bu kronik bir hastalık.");
+add("ar","B1","Sağlık Sıfatları","معدي","bulaşıcı","sıfat","هذا المرض معدي.","Bu hastalık bulaşıcı.");
+add("ar","B1","Sağlık Sıfatları","حساس","hassas","sıfat","جلدي حساس.","Cildim hassas.");
+add("ar","B1","Sağlık Sıfatları","طبيعي","normal","sıfat","هذا أمر طبيعي.","Bu normal bir şey.");
+add("ar","B1","Sağlık Sıfatları","ضروري","gerekli","sıfat","الفحص الطبي ضروري.","Tıbbi muayene gerekli.");
+add("ar","B1","Sağlık Sıfatları","عاجل","acil","sıfat","هذه حالة عاجلة.","Bu acil bir durum.");
+add("ar","B1","Sağlık Sıfatları","مستقر","stabil","sıfat","حالته مستقرة الآن.","Durumu şimdi stabil.");
+// ======================= B1 — DOKTORA GİDERKEN =======================
+add("ar","B1","Doktor","أشعر بألم","ağrı hissediyorum","ifade","أشعر بألم في رأسي.","Başımda ağrı hissediyorum.");
+add("ar","B1","Doktor","رأسي يؤلمني","başım ağrıyor","ifade","رأسي يؤلمني منذ صباح اليوم.","Sabahdan beri başım ağrıyor.");
+add("ar","B1","Doktor","بطني تؤلمني","karnım ağrıyor","ifade","بطني تؤلمني منذ أمس.","Dünden beri karnım ağrıyor.");
+add("ar","B1","Doktor","لدي حمى","ateşim var","ifade","لدي حمى منذ يومين.","İki gündür ateşim var.");
+add("ar","B1","Doktor","أشعر بالغثيان","midem bulanıyor","ifade","أشعر بالغثيان منذ الصباح.","Sabahtan beri midem bulanıyor.");
+add("ar","B1","Doktor","أشعر بالدوخة","başım dönüyor","ifade","أشعر بالدوخة عندما أقف.","Ayağa kalktığımda başım dönüyor.");
+add("ar","B1","Doktor","لا أستطيع التنفس جيدا","iyi nefes alamıyorum","ifade","لا أستطيع التنفس جيدا.","İyi nefes alamıyorum.");
+add("ar","B1","Doktor","أحتاج إلى طبيب","doktora ihtiyacım var","ifade","أحتاج إلى طبيب بسرعة.","Acilen doktora ihtiyacım var.");
+add("ar","B1","Doktor","أحتاج إلى موعد","randevuya ihtiyacım var","ifade","أحتاج إلى موعد مع الطبيب.","Doktorla randevuya ihtiyacım var.");
+add("ar","B1","Doktor","متى بدأت الأعراض؟","belirtiler ne zaman başladı?","ifade","متى بدأت الأعراض؟","Belirtiler ne zaman başladı?");
+add("ar","B1","Doktor","منذ متى؟","ne zamandan beri?","ifade","منذ متى تشعر بالألم؟","Ne zamandan beri ağrı hissediyorsun?");
+add("ar","B1","Doktor","هل لديك حساسية؟","alerjin var mı?","ifade","هل لديك حساسية من أي دواء؟","Herhangi bir ilaca alerjin var mı?");
+add("ar","B1","Doktor","خذ هذا الدواء","bu ilacı al","ifade","خذ هذا الدواء بعد الطعام.","Bu ilacı yemekten sonra al.");
+add("ar","B1","Doktor","استرح كثيرا","çok dinlen","ifade","يجب أن تستريح كثيرا.","Çok dinlenmelisin.");
+add("ar","B1","Doktor","اشرب الكثير من الماء","bol su iç","ifade","اشرب الكثير من الماء.","Bol su iç.");
+/* ================================================================
+   ARAPÇA B1 — PART 26
+================================================================ */
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم للمستقبل.","Eğitim gelecek için önemlidir.");
+add("ar","B1","Eğitim","مدرسة","okul","isim","أذهب إلى المدرسة كل يوم.","Her gün okula gidiyorum.");
+add("ar","B1","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Eğitim","كلية","fakülte","isim","أدرس في كلية الهندسة.","Mühendislik fakültesinde okuyorum.");
+add("ar","B1","Eğitim","معهد","enstitü / yüksekokul","isim","أدرس في معهد للغات.","Bir dil enstitüsünde okuyorum.");
+add("ar","B1","Eğitim","دورة","kurs","isim","أشارك في دورة للغة العربية.","Arapça kursuna katılıyorum.");
+add("ar","B1","Eğitim","درس","ders","isim","لدي درس اليوم.","Bugün dersim var.");
+add("ar","B1","Eğitim","مادة","ders / konu","isim","هذه المادة صعبة.","Bu ders zor.");
+add("ar","B1","Eğitim","موضوع","konu","isim","درسنا موضوعا جديدا.","Yeni bir konu işledik.");
+add("ar","B1","Eğitim","فصل","sınıf / dönem","isim","الفصل يبدأ في سبتمبر.","Dönem Eylül'de başlıyor.");
+add("ar","B1","Eğitim","صف","sınıf","isim","أنا في الصف الثالث.","Üçüncü sınıftayım.");
+add("ar","B1","Eğitim","محاضرة","konferans / ders","isim","حضرت محاضرة في الجامعة.","Üniversitede bir derse katıldım.");
+add("ar","B1","Eğitim","ندوة","seminer","isim","شاركت في ندوة علمية.","Bilimsel bir seminere katıldım.");
+add("ar","B1","Eğitim","مؤتمر","konferans","isim","حضرنا مؤتمرا دوليا.","Uluslararası bir konferansa katıldık.");
+add("ar","B1","Eğitim","مكتبة","kütüphane","isim","أدرس في المكتبة.","Kütüphanede ders çalışıyorum.");
+// ======================= B1 — OKULDAKİ KİŞİLER =======================
+add("ar","B1","Eğitim Kişileri","طالب","öğrenci (erkek)","isim","أنا طالب في الجامعة.","Üniversitede öğrenciyim.");
+add("ar","B1","Eğitim Kişileri","طالبة","öğrenci (kadın)","isim","هي طالبة مجتهدة.","O çalışkan bir öğrenci.");
+add("ar","B1","Eğitim Kişileri","طلاب","öğrenciler","isim","الطلاب في الفصل.","Öğrenciler sınıfta.");
+add("ar","B1","Eğitim Kişileri","معلم","öğretmen (erkek)","isim","المعلم يشرح الدرس.","Öğretmen dersi açıklıyor.");
+add("ar","B1","Eğitim Kişileri","معلمة","öğretmen (kadın)","isim","المعلمة تساعد الطلاب.","Öğretmen öğrencilere yardım ediyor.");
+add("ar","B1","Eğitim Kişileri","أستاذ","profesör / öğretim görevlisi","isim","الأستاذ يشرح الموضوع.","Profesör konuyu açıklıyor.");
+add("ar","B1","Eğitim Kişileri","مدير","müdür","isim","تحدثت مع مدير المدرسة.","Okul müdürüyle konuştum.");
+add("ar","B1","Eğitim Kişileri","زميل","sınıf arkadaşı / meslektaş","isim","هذا زميلي في الجامعة.","Bu benim üniversiteden arkadaşım.");
+add("ar","B1","Eğitim Kişileri","زميلة","kadın sınıf arkadaşı / meslektaş","isim","هي زميلتي في الدراسة.","O benim okul arkadaşım.");
+add("ar","B1","Eğitim Kişileri","باحث","araştırmacı","isim","يعمل كباحث في الجامعة.","Üniversitede araştırmacı olarak çalışıyor.");
+add("ar","B1","Eğitim Kişileri","عالم","bilim insanı","isim","هو عالم مشهور.","O ünlü bir bilim insanı.");
+add("ar","B1","Eğitim Kişileri","خبير","uzman","isim","هو خبير في هذا المجال.","Bu alanda uzman.");
+add("ar","B1","Eğitim Kişileri","مترجم","çevirmen","isim","يعمل كمترجم.","Çevirmen olarak çalışıyor.");
+add("ar","B1","Eğitim Kişileri","مدرب","eğitmen / antrenör","isim","المدرب يشرح التمرين.","Eğitmen egzersizi açıklıyor.");
+add("ar","B1","Eğitim Kişileri","موظف","çalışan / görevli","isim","تحدثت مع موظف الجامعة.","Üniversite çalışanıyla konuştum.");
+// ======================= B1 — DERS ARAÇLARI =======================
+add("ar","B1","Eğitim Araçları","كتاب","kitap","isim","أقرأ كتابا جديدا.","Yeni bir kitap okuyorum.");
+add("ar","B1","Eğitim Araçları","دفتر","defter","isim","أكتب في دفتري.","Defterime yazıyorum.");
+add("ar","B1","Eğitim Araçları","قلم","kalem","isim","أين قلمي؟","Kalemim nerede?");
+add("ar","B1","Eğitim Araçları","قلم رصاص","kurşun kalem","isim","أحتاج إلى قلم رصاص.","Kurşun kaleme ihtiyacım var.");
+add("ar","B1","Eğitim Araçları","ممحاة","silgi","isim","أين الممحاة؟","Silgi nerede?");
+add("ar","B1","Eğitim Araçları","حقيبة","çanta","isim","كتبي في الحقيبة.","Kitaplarım çantada.");
+add("ar","B1","Eğitim Araçları","حاسوب","bilgisayar","isim","أستخدم الحاسوب للدراسة.","Ders çalışmak için bilgisayar kullanıyorum.");
+add("ar","B1","Eğitim Araçları","حاسوب محمول","dizüstü bilgisayar","isim","أحمل حاسوبي المحمول معي.","Dizüstü bilgisayarımı yanımda taşıyorum.");
+add("ar","B1","Eğitim Araçları","شاشة","ekran","isim","الشاشة كبيرة.","Ekran büyük.");
+add("ar","B1","Eğitim Araçları","لوحة","tahta","isim","كتب المعلم على اللوحة.","Öğretmen tahtaya yazdı.");
+add("ar","B1","Eğitim Araçları","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","Eğitim Araçları","بحث","araştırma / çalışma","isim","أكتب بحثا عن البيئة.","Çevre hakkında bir araştırma yazıyorum.");
+add("ar","B1","Eğitim Araçları","واجب","ödev","isim","لدي واجب كثير.","Çok ödevim var.");
+add("ar","B1","Eğitim Araçları","تمرين","alıştırma","isim","حللت التمرين.","Alıştırmayı çözdüm.");
+add("ar","B1","Eğitim Araçları","ملاحظة","not","isim","كتبت ملاحظة مهمة.","Önemli bir not yazdım.");
+// ======================= B1 — SINAV VE NOTLAR =======================
+add("ar","B1","Sınav","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
+add("ar","B1","Sınav","اختبار","test","isim","أجريت اختبارا اليوم.","Bugün bir test yaptım.");
+add("ar","B1","Sınav","سؤال","soru","isim","هذا السؤال صعب.","Bu soru zor.");
+add("ar","B1","Sınav","جواب","cevap","isim","لا أعرف جواب السؤال.","Sorunun cevabını bilmiyorum.");
+add("ar","B1","Sınav","درجة","not / puan","isim","حصلت على درجة عالية.","Yüksek not aldım.");
+add("ar","B1","Sınav","علامة","not / puan","isim","حصلت على علامة جيدة.","İyi bir not aldım.");
+add("ar","B1","Sınav","نتيجة","sonuç","isim","ظهرت نتائج الامتحان.","Sınav sonuçları açıklandı.");
+add("ar","B1","Sınav","نجاح","başarı","isim","النجاح يحتاج إلى عمل.","Başarı çalışma gerektirir.");
+add("ar","B1","Sınav","رسوب","başarısızlık","isim","كان رسوبه مفاجئا.","Başarısızlığı şaşırtıcıydı.");
+add("ar","B1","Sınav","شهادة","sertifika / diploma","isim","حصلت على شهادة.","Sertifika aldım.");
+add("ar","B1","Sınav","دبلوم","diploma","isim","حصل على دبلوم في إدارة الأعمال.","İşletme alanında diploma aldı.");
+add("ar","B1","Sınav","بكالوريوس","lisans","isim","أدرس للحصول على درجة البكالوريوس.","Lisans derecesi almak için okuyorum.");
+add("ar","B1","Sınav","ماجستير","yüksek lisans","isim","أريد دراسة الماجستير.","Yüksek lisans yapmak istiyorum.");
+add("ar","B1","Sınav","دكتوراه","doktora","isim","يدرس للحصول على الدكتوراه.","Doktora yapmak için çalışıyor.");
+add("ar","B1","Sınav","منحة دراسية","burs","isim","حصلت على منحة دراسية.","Burs aldım.");
+// ======================= B1 — EĞİTİM FİİLLERİ =======================
+add("ar","B1","Eğitim Fiilleri","يدرس","ders çalışmak / okumak","fiil","أدرس اللغة العربية.","Arapça çalışıyorum.");
+add("ar","B1","Eğitim Fiilleri","يتعلم","öğrenmek","fiil","أتعلم لغة جديدة.","Yeni bir dil öğreniyorum.");
+add("ar","B1","Eğitim Fiilleri","يعلم","öğretmek","fiil","يعلّم اللغة العربية.","Arapça öğretiyor.");
+add("ar","B1","Eğitim Fiilleri","يشرح","açıklamak","fiil","يشرح المعلم الدرس.","Öğretmen dersi açıklıyor.");
+add("ar","B1","Eğitim Fiilleri","يفهم","anlamak","fiil","أفهم هذا الموضوع جيدا.","Bu konuyu iyi anlıyorum.");
+add("ar","B1","Eğitim Fiilleri","يحفظ","ezberlemek","fiil","أحفظ الكلمات الجديدة.","Yeni kelimeleri ezberliyorum.");
+add("ar","B1","Eğitim Fiilleri","يقرأ","okumak","fiil","أقرأ كتابا كل شهر.","Her ay bir kitap okuyorum.");
+add("ar","B1","Eğitim Fiilleri","يكتب","yazmak","fiil","أكتب واجبي.","Ödevimi yazıyorum.");
+add("ar","B1","Eğitim Fiilleri","يحل","çözmek","fiil","أحل أسئلة الامتحان.","Sınav sorularını çözüyorum.");
+add("ar","B1","Eğitim Fiilleri","يجيب","cevaplamak","fiil","أجيب عن السؤال.","Soruyu cevaplıyorum.");
+add("ar","B1","Eğitim Fiilleri","يسأل","sormak","fiil","أريد أن أسأل سؤالا.","Bir soru sormak istiyorum.");
+add("ar","B1","Eğitim Fiilleri","يناقش","tartışmak","fiil","نناقش الموضوع في الفصل.","Konuyu sınıfta tartışıyoruz.");
+add("ar","B1","Eğitim Fiilleri","يشارك","katılmak","fiil","أشارك في الدرس.","Derse katılıyorum.");
+add("ar","B1","Eğitim Fiilleri","يتخرج","mezun olmak","fiil","سأتخرج العام المقبل.","Gelecek yıl mezun olacağım.");
+add("ar","B1","Eğitim Fiilleri","يتخصص","uzmanlaşmak / bölüm okumak","fiil","أتخصص في إدارة الأعمال.","İşletme alanında uzmanlaşıyorum.");
+// ======================= B1 — EĞİTİM SIFATLARI =======================
+add("ar","B1","Eğitim Sıfatları","سهل","kolay","sıfat","هذا الدرس سهل.","Bu ders kolay.");
+add("ar","B1","Eğitim Sıfatları","صعب","zor","sıfat","الامتحان صعب.","Sınav zor.");
+add("ar","B1","Eğitim Sıfatları","مهم","önemli","sıfat","هذا الموضوع مهم.","Bu konu önemli.");
+add("ar","B1","Eğitim Sıfatları","مفيد","faydalı","sıfat","هذا الكتاب مفيد.","Bu kitap faydalı.");
+add("ar","B1","Eğitim Sıfatları","ممل","sıkıcı","sıfat","الدرس ممل.","Ders sıkıcı.");
+add("ar","B1","Eğitim Sıfatları","ممتع","eğlenceli","sıfat","الدرس ممتع.","Ders eğlenceli.");
+add("ar","B1","Eğitim Sıfatları","ذكي","zeki","sıfat","هو طالب ذكي.","O zeki bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","مجتهد","çalışkan","sıfat","هي طالبة مجتهدة.","O çalışkan bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","كسول","tembel","sıfat","لا تكن كسولا.","Tembel olma.");
+add("ar","B1","Eğitim Sıfatları","ناجح","başarılı","sıfat","هو طالب ناجح.","O başarılı bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","مستعد","hazır","sıfat","أنا مستعد للامتحان.","Sınava hazırım.");
+add("ar","B1","Eğitim Sıfatları","غير مستعد","hazır değil","sıfat","أنا غير مستعد للامتحان.","Sınava hazır değilim.");
+add("ar","B1","Eğitim Sıfatları","متقدم","ileri seviye","sıfat","هذا مستوى متقدم.","Bu ileri seviye.");
+add("ar","B1","Eğitim Sıfatları","مبتدئ","başlangıç seviyesi","sıfat","أنا طالب مبتدئ.","Başlangıç seviyesinde bir öğrenciyim.");
+add("ar","B1","Eğitim Sıfatları","أكاديمي","akademik","sıfat","هذا بحث أكاديمي.","Bu akademik bir araştırma.");
+// ======================= B1 — EĞİTİM İFADELERİ =======================
+add("ar","B1","Eğitim İfadeleri","أدرس في الجامعة","üniversitede okuyorum","ifade","أدرس في الجامعة منذ سنتين.","İki yıldır üniversitede okuyorum.");
+add("ar","B1","Eğitim İfadeleri","أدرس في كلية","fakültede okuyorum","ifade","أدرس في كلية إدارة الأعمال.","İşletme fakültesinde okuyorum.");
+add("ar","B1","Eğitim İfadeleri","لدي امتحان","sınavım var","ifade","لدي امتحان غدا.","Yarın sınavım var.");
+add("ar","B1","Eğitim İfadeleri","أستعد للامتحان","sınava hazırlanıyorum","ifade","أستعد للامتحان منذ أسبوع.","Bir haftadır sınava hazırlanıyorum.");
+add("ar","B1","Eğitim İfadeleri","أحتاج إلى الدراسة","ders çalışmam gerekiyor","ifade","أحتاج إلى الدراسة اليوم.","Bugün ders çalışmam gerekiyor.");
+add("ar","B1","Eğitim İfadeleri","لا أفهم هذا الموضوع","bu konuyu anlamıyorum","ifade","لا أفهم هذا الموضوع جيدا.","Bu konuyu iyi anlamıyorum.");
+add("ar","B1","Eğitim İfadeleri","هل يمكنك أن تشرح؟","açıklayabilir misin?","ifade","هل يمكنك أن تشرح هذا مرة أخرى؟","Bunu tekrar açıklayabilir misin?");
+add("ar","B1","Eğitim İfadeleri","ما معنى هذه الكلمة؟","bu kelime ne anlama geliyor?","ifade","ما معنى هذه الكلمة؟","Bu kelime ne anlama geliyor?");
+add("ar","B1","Eğitim İfadeleri","كيف أجيب عن هذا السؤال؟","bu soruyu nasıl cevaplarım?","ifade","كيف أجيب عن هذا السؤال؟","Bu soruyu nasıl cevaplarım?");
+add("ar","B1","Eğitim İfadeleri","لقد نسيت","unuttum","ifade","لقد نسيت الإجابة.","Cevabı unuttum.");
+add("ar","B1","Eğitim İfadeleri","أعرف الإجابة","cevabı biliyorum","ifade","أعرف الإجابة الصحيحة.","Doğru cevabı biliyorum.");
+add("ar","B1","Eğitim İfadeleri","أحتاج إلى وقت","zamana ihtiyacım var","ifade","أحتاج إلى وقت لإنهاء المشروع.","Projeyi bitirmek için zamana ihtiyacım var.");
+add("ar","B1","Eğitim İfadeleri","لقد انتهيت من واجبي","ödevimi bitirdim","ifade","لقد انتهيت من واجبي.","Ödevimi bitirdim.");
+add("ar","B1","Eğitim İfadeleri","سأتخرج قريبا","yakında mezun olacağım","ifade","سأتخرج من الجامعة قريبا.","Yakında üniversiteden mezun olacağım.");
+add("ar","B1","Eğitim İfadeleri","أريد أن أكمل دراستي","eğitimime devam etmek istiyorum","ifade","أريد أن أكمل دراستي في الخارج.","Eğitimime yurt dışında devam etmek istiyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 27
+================================================================ */
+// ======================= B1 — İŞ HAYATI =======================
+add("ar","B1","İş","عمل","iş / çalışma","isim","أحب عملي.","İşimi seviyorum.");
+add("ar","B1","İş","وظيفة","iş / görev","isim","أبحث عن وظيفة جديدة.","Yeni bir iş arıyorum.");
+add("ar","B1","İş","مهنة","meslek","isim","ما مهنتك؟","Mesleğin nedir?");
+add("ar","B1","İş","شركة","şirket","isim","أعمل في شركة كبيرة.","Büyük bir şirkette çalışıyorum.");
+add("ar","B1","İş","مكتب","ofis","isim","مكتبي في الطابق الثاني.","Ofisim ikinci katta.");
+add("ar","B1","İş","مصنع","fabrika","isim","يعمل في مصنع.","Bir fabrikada çalışıyor.");
+add("ar","B1","İş","متجر","mağaza","isim","أعمل في متجر صغير.","Küçük bir mağazada çalışıyorum.");
+add("ar","B1","İş","مؤسسة","kurum / kuruluş","isim","هذه مؤسسة دولية.","Bu uluslararası bir kurum.");
+add("ar","B1","İş","منظمة","organizasyon / kuruluş","isim","تعمل في منظمة دولية.","Uluslararası bir kuruluşta çalışıyor.");
+add("ar","B1","İş","إدارة","yönetim / departman","isim","أعمل في إدارة المبيعات.","Satış departmanında çalışıyorum.");
+add("ar","B1","İş","قسم","bölüm / departman","isim","أين قسم الموارد البشرية؟","İnsan kaynakları departmanı nerede?");
+add("ar","B1","İş","موظف","çalışan / görevli","isim","هو موظف في الشركة.","O şirkette çalışan.");
+add("ar","B1","İş","مدير","müdür / yönetici","isim","المدير في الاجتماع.","Müdür toplantıda.");
+add("ar","B1","İş","رئيس","başkan / amir","isim","تحدثت مع رئيسي.","Patronumla konuştum.");
+add("ar","B1","İş","زميل","meslektaş","isim","زميلي يساعدني دائما.","Meslektaşım bana her zaman yardım ediyor.");
+add("ar","B1","İş","عميل","müşteri","isim","تحدثت مع العميل.","Müşteriyle konuştum.");
+// ======================= B1 — MESLEKLER =======================
+add("ar","B1","Meslekler","طبيب","doktor","isim","أخي طبيب.","Kardeşim doktor.");
+add("ar","B1","Meslekler","مهندس","mühendis","isim","هو مهندس في شركة كبيرة.","Büyük bir şirkette mühendis.");
+add("ar","B1","Meslekler","مبرمج","yazılımcı / programcı","isim","أعمل كمبرمج.","Programcı olarak çalışıyorum.");
+add("ar","B1","Meslekler","مصمم","tasarımcı","isim","هي مصممة جرافيك.","O grafik tasarımcısı.");
+add("ar","B1","Meslekler","محاسب","muhasebeci","isim","يعمل كمحاسب.","Muhasebeci olarak çalışıyor.");
+add("ar","B1","Meslekler","محامي","avukat","isim","أحتاج إلى محام.","Bir avukata ihtiyacım var.");
+add("ar","B1","Meslekler","صحفي","gazeteci","isim","هو صحفي مشهور.","O ünlü bir gazeteci.");
+add("ar","B1","Meslekler","كاتب","yazar","isim","هو كاتب معروف.","O tanınmış bir yazar.");
+add("ar","B1","Meslekler","مصور","fotoğrafçı","isim","يعمل كمصور محترف.","Profesyonel fotoğrafçı olarak çalışıyor.");
+add("ar","B1","Meslekler","مترجم","çevirmen","isim","أعمل كمترجم.","Çevirmen olarak çalışıyorum.");
+add("ar","B1","Meslekler","مدرس","öğretmen","isim","أبي مدرس.","Babam öğretmen.");
+add("ar","B1","Meslekler","ممرض","hemşire (erkek)","isim","يعمل ممرضا في المستشفى.","Hastanede hemşire olarak çalışıyor.");
+add("ar","B1","Meslekler","ممرضة","hemşire (kadın)","isim","هي ممرضة في مستشفى.","O bir hastanede hemşire.");
+add("ar","B1","Meslekler","شرطي","polis","isim","الشرطي يساعد الناس.","Polis insanlara yardım ediyor.");
+add("ar","B1","Meslekler","طباخ","aşçı","isim","يعمل طباخا في مطعم.","Bir restoranda aşçı olarak çalışıyor.");
+// ======================= B1 — İŞ BAŞVURUSU =======================
+add("ar","B1","İş Başvurusu","سيرة ذاتية","özgeçmiş / CV","isim","أرسلت سيرتي الذاتية إلى الشركة.","CV'mi şirkete gönderdim.");
+add("ar","B1","İş Başvurusu","طلب وظيفة","iş başvurusu","isim","قدمت طلب وظيفة.","İş başvurusu yaptım.");
+add("ar","B1","İş Başvurusu","مقابلة عمل","iş görüşmesi","isim","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","İş Başvurusu","خبرة","deneyim","isim","لدي خبرة في هذا المجال.","Bu alanda deneyimim var.");
+add("ar","B1","İş Başvurusu","مهارة","beceri","isim","لدي مهارات جيدة في الحاسوب.","Bilgisayar konusunda iyi becerilerim var.");
+add("ar","B1","İş Başvurusu","مؤهل","nitelik / yeterlilik","isim","لديه المؤهلات المطلوبة.","Gerekli niteliklere sahip.");
+add("ar","B1","İş Başvurusu","شهادة","sertifika / belge","isim","لدي شهادة في إدارة الأعمال.","İşletme alanında sertifikam var.");
+add("ar","B1","İş Başvurusu","خبرة عملية","iş deneyimi","isim","لدي خبرة عملية لمدة عامين.","İki yıllık iş deneyimim var.");
+add("ar","B1","İş Başvurusu","تدريب","staj / eğitim","isim","أكملت فترة تدريب في شركة.","Bir şirkette staj yaptım.");
+add("ar","B1","İş Başvurusu","متدرب","stajyer","isim","أعمل كمتدرب في الشركة.","Şirkette stajyer olarak çalışıyorum.");
+add("ar","B1","İş Başvurusu","عرض عمل","iş teklifi","isim","تلقيت عرض عمل جيد.","İyi bir iş teklifi aldım.");
+add("ar","B1","İş Başvurusu","عقد عمل","iş sözleşmesi","isim","وقعت عقد العمل.","İş sözleşmesini imzaladım.");
+add("ar","B1","İş Başvurusu","راتب","maaş","isim","راتبي جيد.","Maaşım iyi.");
+add("ar","B1","İş Başvurusu","أجر","ücret / maaş","isim","الأجر يعتمد على الخبرة.","Ücret deneyime bağlı.");
+add("ar","B1","İş Başvurusu","مكافأة","prim / bonus / ödül","isim","حصلت على مكافأة في نهاية السنة.","Yıl sonunda bonus aldım.");
+// ======================= B1 — ÇALIŞMA KOŞULLARI =======================
+add("ar","B1","Çalışma Koşulları","دوام","mesai / çalışma saatleri","isim","دوامي يبدأ في الثامنة.","Mesaim saat sekizde başlıyor.");
+add("ar","B1","Çalışma Koşulları","ساعات العمل","çalışma saatleri","isim","ساعات العمل طويلة.","Çalışma saatleri uzun.");
+add("ar","B1","Çalışma Koşulları","دوام كامل","tam zamanlı","isim","أعمل بدوام كامل.","Tam zamanlı çalışıyorum.");
+add("ar","B1","Çalışma Koşulları","دوام جزئي","yarı zamanlı","isim","أعمل بدوام جزئي.","Yarı zamanlı çalışıyorum.");
+add("ar","B1","Çalışma Koşulları","إجازة","izin / tatil","isim","أخذت إجازة لمدة أسبوع.","Bir haftalık izin aldım.");
+add("ar","B1","Çalışma Koşulları","إجازة مرضية","hastalık izni","isim","أخذت إجازة مرضية.","Hastalık izni aldım.");
+add("ar","B1","Çalışma Koşulları","عطلة نهاية الأسبوع","hafta sonu","isim","لا أعمل في عطلة نهاية الأسبوع.","Hafta sonu çalışmıyorum.");
+add("ar","B1","Çalışma Koşulları","استراحة","mola","isim","نأخذ استراحة قصيرة.","Kısa bir mola veriyoruz.");
+add("ar","B1","Çalışma Koşulları","بيئة العمل","çalışma ortamı","isim","بيئة العمل مريحة.","Çalışma ortamı rahat.");
+add("ar","B1","Çalışma Koşulları","ضغط العمل","iş stresi","isim","ضغط العمل مرتفع هذا الشهر.","Bu ay iş stresi yüksek.");
+add("ar","B1","Çalışma Koşulları","مسؤولية","sorumluluk","isim","لدي مسؤوليات كثيرة.","Çok fazla sorumluluğum var.");
+add("ar","B1","Çalışma Koşulları","مهمة","görev","isim","لدي مهمة مهمة اليوم.","Bugün önemli bir görevim var.");
+add("ar","B1","Çalışma Koşulları","مشروع","proje","isim","نعمل على مشروع كبير.","Büyük bir proje üzerinde çalışıyoruz.");
+add("ar","B1","Çalışma Koşulları","موعد نهائي","son teslim tarihi","isim","الموعد النهائي غدا.","Son teslim tarihi yarın.");
+add("ar","B1","Çalışma Koşulları","اجتماع","toplantı","isim","لدينا اجتماع الساعة العاشرة.","Saat onda toplantımız var.");
+// ======================= B1 — İŞ FİİLLERİ =======================
+add("ar","B1","İş Fiilleri","يعمل","çalışmak","fiil","أعمل في شركة دولية.","Uluslararası bir şirkette çalışıyorum.");
+add("ar","B1","İş Fiilleri","يبحث عن عمل","iş aramak","fiil","أبحث عن عمل جديد.","Yeni bir iş arıyorum.");
+add("ar","B1","İş Fiilleri","يتقدم لوظيفة","işe başvurmak","fiil","تقدمت لوظيفة في شركة كبيرة.","Büyük bir şirkette işe başvurdum.");
+add("ar","B1","İş Fiilleri","يقدم طلبا","başvuru yapmak","fiil","قدمت طلبا للعمل.","Çalışmak için başvuru yaptım.");
+add("ar","B1","İş Fiilleri","يوظف","işe almak","fiil","الشركة توظف موظفين جدد.","Şirket yeni çalışanlar işe alıyor.");
+add("ar","B1","İş Fiilleri","يستقيل","istifa etmek","fiil","استقال من وظيفته.","İşinden istifa etti.");
+add("ar","B1","İş Fiilleri","يفصل","işten çıkarmak","fiil","فصلته الشركة من العمل.","Şirket onu işten çıkardı.");
+add("ar","B1","İş Fiilleri","يكسب","kazanmak","fiil","يكسب راتبا جيدا.","İyi bir maaş kazanıyor.");
+add("ar","B1","İş Fiilleri","يدير","yönetmek","fiil","يدير فريقا كبيرا.","Büyük bir ekibi yönetiyor.");
+add("ar","B1","İş Fiilleri","يقود","yönetmek / liderlik etmek","fiil","يقود المشروع.","Projeyi yönetiyor.");
+add("ar","B1","İş Fiilleri","يخطط","planlamak","fiil","نخطط لمشروع جديد.","Yeni bir proje planlıyoruz.");
+add("ar","B1","İş Fiilleri","ينظم","organize etmek","fiil","ينظم المدير الاجتماع.","Müdür toplantıyı organize ediyor.");
+add("ar","B1","İş Fiilleri","يتعاون","iş birliği yapmak","fiil","نتعاون مع شركات أخرى.","Diğer şirketlerle iş birliği yapıyoruz.");
+add("ar","B1","İş Fiilleri","يتواصل","iletişim kurmak","fiil","أتواصل مع العملاء يوميا.","Müşterilerle her gün iletişim kuruyorum.");
+add("ar","B1","İş Fiilleri","يناقش","tartışmak / görüşmek","fiil","نناقش المشكلة في الاجتماع.","Sorunu toplantıda görüşüyoruz.");
+// ======================= B1 — KARİYER =======================
+add("ar","B1","Kariyer","مستقبل مهني","kariyer geleceği","isim","أفكر في مستقبلي المهني.","Kariyer geleceğimi düşünüyorum.");
+add("ar","B1","Kariyer","مسار مهني","kariyer yolu","isim","أريد تطوير مساري المهني.","Kariyer yolumu geliştirmek istiyorum.");
+add("ar","B1","Kariyer","ترقية","terfi","isim","حصل على ترقية في العمل.","İşinde terfi aldı.");
+add("ar","B1","Kariyer","تطوير","gelişim","isim","أهتم بالتطوير المهني.","Mesleki gelişimle ilgileniyorum.");
+add("ar","B1","Kariyer","تطوير مهني","mesleki gelişim","isim","التطوير المهني مهم.","Mesleki gelişim önemlidir.");
+add("ar","B1","Kariyer","هدف","hedef","isim","لدي أهداف مهنية واضحة.","Net kariyer hedeflerim var.");
+add("ar","B1","Kariyer","نجاح","başarı","isim","النجاح يحتاج إلى الصبر.","Başarı sabır gerektirir.");
+add("ar","B1","Kariyer","خبرة","deneyim","isim","الخبرة مهمة للحصول على وظيفة.","İş bulmak için deneyim önemlidir.");
+add("ar","B1","Kariyer","فرصة","fırsat","isim","هذه فرصة جيدة.","Bu iyi bir fırsat.");
+add("ar","B1","Kariyer","فرصة عمل","iş fırsatı","isim","وجدت فرصة عمل جيدة.","İyi bir iş fırsatı buldum.");
+add("ar","B1","Kariyer","مستقبل","gelecek","isim","أفكر في مستقبلي.","Geleceğimi düşünüyorum.");
+add("ar","B1","Kariyer","طموح","hırs / hedef","isim","لديه طموح كبير.","Büyük hedefleri var.");
+add("ar","B1","Kariyer","طموح مهني","mesleki hedef","isim","لدي طموح مهني كبير.","Büyük bir mesleki hedefim var.");
+add("ar","B1","Kariyer","مسؤول","sorumlu","sıfat","أنا مسؤول عن هذا المشروع.","Bu projeden sorumluyum.");
+add("ar","B1","Kariyer","محترف","profesyonel","sıfat","هو محترف في عمله.","İşinde profesyonel.");
+// ======================= B1 — İŞ İFADELERİ =======================
+add("ar","B1","İş İfadeleri","أبحث عن وظيفة","iş arıyorum","ifade","أبحث عن وظيفة جديدة.","Yeni bir iş arıyorum.");
+add("ar","B1","İş İfadeleri","أريد أن أعمل","çalışmak istiyorum","ifade","أريد أن أعمل في شركة دولية.","Uluslararası bir şirkette çalışmak istiyorum.");
+add("ar","B1","İş İfadeleri","قدمت طلب وظيفة","iş başvurusu yaptım","ifade","قدمت طلب وظيفة الأسبوع الماضي.","Geçen hafta iş başvurusu yaptım.");
+add("ar","B1","İş İfadeleri","لدي مقابلة عمل","iş görüşmem var","ifade","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","İş İfadeleri","لدي خبرة في هذا المجال","bu alanda deneyimim var","ifade","لدي خبرة في هذا المجال لمدة ثلاث سنوات.","Bu alanda üç yıllık deneyimim var.");
+add("ar","B1","İş İfadeleri","أعمل بدوام كامل","tam zamanlı çalışıyorum","ifade","أعمل بدوام كامل في شركة.","Bir şirkette tam zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","أعمل بدوام جزئي","yarı zamanlı çalışıyorum","ifade","أعمل بدوام جزئي أثناء الدراسة.","Okurken yarı zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","أعمل من المنزل","evden çalışıyorum","ifade","أعمل من المنزل يومين في الأسبوع.","Haftada iki gün evden çalışıyorum.");
+add("ar","B1","İş İfadeleri","لدي اجتماع","toplantım var","ifade","لدي اجتماع مهم اليوم.","Bugün önemli bir toplantım var.");
+add("ar","B1","İş İfadeleri","أنا مسؤول عن","...den sorumluyum","ifade","أنا مسؤول عن هذا المشروع.","Bu projeden sorumluyum.");
+add("ar","B1","İş İfadeleri","أحتاج إلى إجازة","izne ihtiyacım var","ifade","أحتاج إلى إجازة لمدة أسبوع.","Bir haftalık izne ihtiyacım var.");
+add("ar","B1","İş İfadeleri","متى يبدأ العمل؟","iş ne zaman başlıyor?","ifade","متى يبدأ العمل غدا؟","Yarın iş ne zaman başlıyor?");
+add("ar","B1","İş İfadeleri","متى ينتهي العمل؟","iş ne zaman bitiyor?","ifade","متى ينتهي العمل اليوم؟","Bugün iş ne zaman bitiyor?");
+add("ar","B1","İş İfadeleri","كم راتبك؟","maaşın ne kadar?","ifade","كم راتبك الشهري؟","Aylık maaşın ne kadar?");
+add("ar","B1","İş İfadeleri","أريد تطوير مسيرتي المهنية","kariyerimi geliştirmek istiyorum","ifade","أريد تطوير مسيرتي المهنية في المستقبل.","Gelecekte kariyerimi geliştirmek istiyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 28
+================================================================ */
+// ======================= B1 — PARA =======================
+add("ar","B1","Para","مال","para / mal","isim","المال ليس كل شيء في الحياة.","Para hayattaki her şey değildir.");
+add("ar","B1","Para","نقود","nakit para","isim","ليس لدي نقود كافية.","Yeterli nakit param yok.");
+add("ar","B1","Para","عملة","para birimi","isim","ما هي العملة المستخدمة هنا؟","Burada kullanılan para birimi nedir?");
+add("ar","B1","Para","سعر","fiyat","isim","ما سعر هذا المنتج؟","Bu ürünün fiyatı ne?");
+add("ar","B1","Para","قيمة","değer","isim","ما قيمة هذا الشيء؟","Bu şeyin değeri ne?");
+add("ar","B1","Para","تكلفة","maliyet","isim","كم تكلفة الرحلة؟","Gezinin maliyeti ne kadar?");
+add("ar","B1","Para","ربح","kâr","isim","حققت الشركة ربحا كبيرا.","Şirket büyük bir kâr elde etti.");
+add("ar","B1","Para","خسارة","zarar / kayıp","isim","تعرضت الشركة لخسارة كبيرة.","Şirket büyük bir zarar yaşadı.");
+add("ar","B1","Para","دخل","gelir","isim","دخلي الشهري محدود.","Aylık gelirim sınırlı.");
+add("ar","B1","Para","مصروف","harcama / masraf","isim","مصروفي الشهري مرتفع.","Aylık harcamam yüksek.");
+add("ar","B1","Para","ميزانية","bütçe","isim","لدي ميزانية محدودة.","Sınırlı bir bütçem var.");
+add("ar","B1","Para","فاتورة","fatura","isim","دفعت فاتورة الكهرباء.","Elektrik faturasını ödedim.");
+add("ar","B1","Para","ضريبة","vergi","isim","يجب دفع الضريبة.","Vergi ödenmesi gerekiyor.");
+add("ar","B1","Para","خصم","indirim","isim","حصلت على خصم كبير.","Büyük bir indirim aldım.");
+add("ar","B1","Para","عرض","kampanya / teklif","isim","هناك عرض خاص اليوم.","Bugün özel bir kampanya var.");
+add("ar","B1","Para","تخفيض","fiyat indirimi","isim","المتجر يقدم تخفيضات كبيرة.","Mağaza büyük indirimler sunuyor.");
+// ======================= B1 — BANKA =======================
+add("ar","B1","Banka","بنك","banka","isim","أذهب إلى البنك مرة واحدة في الشهر.","Ayda bir kez bankaya gidiyorum.");
+add("ar","B1","Banka","حساب مصرفي","banka hesabı","isim","لدي حساب مصرفي.","Bir banka hesabım var.");
+add("ar","B1","Banka","حساب بنكي","banka hesabı","isim","فتحت حسابا بنكيا جديدا.","Yeni bir banka hesabı açtım.");
+add("ar","B1","Banka","بطاقة مصرفية","banka kartı","isim","أدفع بالبطاقة المصرفية.","Banka kartıyla ödüyorum.");
+add("ar","B1","Banka","بطاقة ائتمان","kredi kartı","isim","أستخدم بطاقة الائتمان في السفر.","Seyahat ederken kredi kartı kullanıyorum.");
+add("ar","B1","Banka","بطاقة خصم","banka kartı / debit kart","isim","دفعت باستخدام بطاقة الخصم.","Banka kartıyla ödeme yaptım.");
+add("ar","B1","Banka","جهاز الصراف الآلي","ATM","isim","أين أقرب جهاز صراف آلي؟","En yakın ATM nerede?");
+add("ar","B1","Banka","صراف آلي","ATM","isim","سحبت المال من الصراف الآلي.","ATM'den para çektim.");
+add("ar","B1","Banka","رصيد","bakiye","isim","كم رصيدي في الحساب؟","Hesabımdaki bakiye ne kadar?");
+add("ar","B1","Banka","تحويل","havale / transfer","isim","أرسلت تحويلا بنكيا.","Banka havalesi gönderdim.");
+add("ar","B1","Banka","تحويل بنكي","banka transferi","isim","أجريت تحويلا بنكيا.","Banka transferi yaptım.");
+add("ar","B1","Banka","إيداع","para yatırma","isim","قمت بإيداع المال في حسابي.","Hesabıma para yatırdım.");
+add("ar","B1","Banka","سحب","para çekme","isim","أريد سحب بعض المال.","Biraz para çekmek istiyorum.");
+add("ar","B1","Banka","قرض","kredi / borç","isim","أخذ قرضا من البنك.","Bankadan kredi aldı.");
+add("ar","B1","Banka","فائدة","faiz","isim","نسبة الفائدة مرتفعة.","Faiz oranı yüksek.");
+// ======================= B1 — BANKA FİİLLERİ =======================
+add("ar","B1","Banka Fiilleri","يفتح حسابا","hesap açmak","fiil","أريد فتح حساب بنكي.","Banka hesabı açmak istiyorum.");
+add("ar","B1","Banka Fiilleri","يغلق حسابا","hesap kapatmak","fiil","أريد إغلاق حسابي.","Hesabımı kapatmak istiyorum.");
+add("ar","B1","Banka Fiilleri","يسحب","çekmek","fiil","سأسحب المال من البنك.","Bankadan para çekeceğim.");
+add("ar","B1","Banka Fiilleri","يودع","yatırmak","fiil","أودعت المال في حسابي.","Parayı hesabıma yatırdım.");
+add("ar","B1","Banka Fiilleri","يحوّل","transfer etmek","fiil","حولت المال إلى حساب آخر.","Parayı başka bir hesaba transfer ettim.");
+add("ar","B1","Banka Fiilleri","يدفع","ödemek","fiil","دفعت الفاتورة.","Faturayı ödedim.");
+add("ar","B1","Banka Fiilleri","يكسب","kazanmak","fiil","يكسب الكثير من المال.","Çok para kazanıyor.");
+add("ar","B1","Banka Fiilleri","يوفر","biriktirmek / tasarruf etmek","fiil","أوفر المال للسفر.","Seyahat için para biriktiriyorum.");
+add("ar","B1","Banka Fiilleri","ينفق","harcamak","fiil","أنفق الكثير من المال على الطعام.","Yemeğe çok para harcıyorum.");
+add("ar","B1","Banka Fiilleri","يستثمر","yatırım yapmak","fiil","أريد أن أستثمر أموالي.","Paramı yatırmak istiyorum.");
+add("ar","B1","Banka Fiilleri","يقترض","borç almak","fiil","اقترض المال من صديقه.","Arkadaşından borç aldı.");
+add("ar","B1","Banka Fiilleri","يسدد","ödemek / borcu kapatmak","fiil","يسدد القرض كل شهر.","Krediyi her ay ödüyor.");
+add("ar","B1","Banka Fiilleri","يسترد","geri almak / iade almak","fiil","أريد استرداد أموالي.","Paramı geri almak istiyorum.");
+add("ar","B1","Banka Fiilleri","يوقع","imzalamak","fiil","وقعت العقد.","Sözleşmeyi imzaladım.");
+add("ar","B1","Banka Fiilleri","يتحقق","kontrol etmek / doğrulamak","fiil","تحقق من رصيد حسابك.","Hesap bakiyeni kontrol et.");
+// ======================= B1 — ALIŞVERİŞ =======================
+add("ar","B1","Alışveriş","تسوق","alışveriş","isim","أحب التسوق في عطلة نهاية الأسبوع.","Hafta sonu alışveriş yapmayı seviyorum.");
+add("ar","B1","Alışveriş","متجر","mağaza","isim","هذا المتجر قريب من منزلي.","Bu mağaza evime yakın.");
+add("ar","B1","Alışveriş","سوق","pazar","isim","ذهبت إلى السوق صباحا.","Sabah pazara gittim.");
+add("ar","B1","Alışveriş","مركز تجاري","alışveriş merkezi","isim","التقيت به في مركز تجاري.","Onunla alışveriş merkezinde buluştum.");
+add("ar","B1","Alışveriş","منتج","ürün","isim","هذا المنتج عالي الجودة.","Bu ürün yüksek kaliteli.");
+add("ar","B1","Alışveriş","بضاعة","mal / ticari ürün","isim","وصلت البضاعة الجديدة.","Yeni mallar geldi.");
+add("ar","B1","Alışveriş","جودة","kalite","isim","جودة المنتج ممتازة.","Ürünün kalitesi mükemmel.");
+add("ar","B1","Alışveriş","ماركة","marka","isim","هذه ماركة مشهورة.","Bu ünlü bir marka.");
+add("ar","B1","Alışveriş","مقاس","beden / ölçü","isim","هل لديك هذا القميص بمقاس أكبر؟","Bu gömleğin daha büyük bedeni var mı?");
+add("ar","B1","Alışveriş","لون","renk","isim","هل يوجد هذا المنتج بلون آخر؟","Bu ürün başka renkte var mı?");
+add("ar","B1","Alışveriş","فاتورة","fiş / fatura","isim","هل يمكنني الحصول على الفاتورة؟","Fişi alabilir miyim?");
+add("ar","B1","Alışveriş","إيصال","makbuz / fiş","isim","احتفظ بالإيصال.","Makbuzu sakla.");
+add("ar","B1","Alışveriş","سلة","sepet","isim","وضعت المنتجات في السلة.","Ürünleri sepete koydum.");
+add("ar","B1","Alışveriş","عربة التسوق","alışveriş arabası","isim","أين عربة التسوق؟","Alışveriş arabası nerede?");
+add("ar","B1","Alışveriş","كاشير","kasiyer","isim","دفعت عند الكاشير.","Kasada ödeme yaptım.");
+// ======================= B1 — ALIŞVERİŞ FİİLLERİ =======================
+add("ar","B1","Alışveriş Fiilleri","يشتري","satın almak","fiil","اشتريت هدية لأخي.","Kardeşim için hediye aldım.");
+add("ar","B1","Alışveriş Fiilleri","يبيع","satmak","fiil","هذا المتجر يبيع الملابس.","Bu mağaza kıyafet satıyor.");
+add("ar","B1","Alışveriş Fiilleri","يختار","seçmek","fiil","اخترت قميصا أزرق.","Mavi bir gömlek seçtim.");
+add("ar","B1","Alışveriş Fiilleri","يجرب","denemek","fiil","أريد أن أجرب هذا الحذاء.","Bu ayakkabıyı denemek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يبحث","aramak","fiil","أبحث عن حذاء جديد.","Yeni bir ayakkabı arıyorum.");
+add("ar","B1","Alışveriş Fiilleri","يقارن","karşılaştırmak","fiil","أقارن الأسعار قبل الشراء.","Satın almadan önce fiyatları karşılaştırıyorum.");
+add("ar","B1","Alışveriş Fiilleri","يدفع","ödemek","fiil","دفعت بالبطاقة.","Kartla ödedim.");
+add("ar","B1","Alışveriş Fiilleri","يستبدل","değiştirmek / ürün değiştirmek","fiil","أريد استبدال هذا المنتج.","Bu ürünü değiştirmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يعيد","iade etmek","fiil","أريد إعادة المنتج.","Ürünü iade etmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يسترجع","geri almak / iade almak","fiil","استرجعت أموالي.","Paramı geri aldım.");
+add("ar","B1","Alışveriş Fiilleri","يطلب","sipariş vermek","fiil","طلبت المنتج عبر الإنترنت.","Ürünü internetten sipariş ettim.");
+add("ar","B1","Alışveriş Fiilleri","يستلم","teslim almak","fiil","استلمت الطرد اليوم.","Paketi bugün teslim aldım.");
+add("ar","B1","Alışveriş Fiilleri","يشحن","kargolamak / göndermek","fiil","المتجر يشحن المنتجات إلى الخارج.","Mağaza ürünleri yurt dışına gönderiyor.");
+add("ar","B1","Alışveriş Fiilleri","يوصل","teslim etmek","fiil","يوصل المتجر الطلبات إلى المنزل.","Mağaza siparişleri eve teslim ediyor.");
+add("ar","B1","Alışveriş Fiilleri","يفتح","açmak","fiil","متى يفتح المتجر؟","Mağaza ne zaman açılıyor?");
+// ======================= B1 — FİYAT VE ÖDEME =======================
+add("ar","B1","Fiyat","غالي","pahalı","sıfat","هذا الهاتف غالي جدا.","Bu telefon çok pahalı.");
+add("ar","B1","Fiyat","رخيص","ucuz","sıfat","هذا المنتج رخيص.","Bu ürün ucuz.");
+add("ar","B1","Fiyat","مجاني","ücretsiz","sıfat","الدخول مجاني.","Giriş ücretsiz.");
+add("ar","B1","Fiyat","مناسب","uygun","sıfat","السعر مناسب.","Fiyat uygun.");
+add("ar","B1","Fiyat","مرتفع","yüksek","sıfat","السعر مرتفع.","Fiyat yüksek.");
+add("ar","B1","Fiyat","منخفض","düşük","sıfat","السعر منخفض.","Fiyat düşük.");
+add("ar","B1","Fiyat","متوفر","mevcut / stokta","sıfat","هذا المنتج متوفر.","Bu ürün mevcut.");
+add("ar","B1","Fiyat","غير متوفر","mevcut değil / stokta yok","sıfat","هذا المقاس غير متوفر.","Bu beden mevcut değil.");
+add("ar","B1","Fiyat","جديد","yeni","sıfat","اشتريت هاتفا جديدا.","Yeni bir telefon aldım.");
+add("ar","B1","Fiyat","مستعمل","kullanılmış / ikinci el","sıfat","اشتريت سيارة مستعملة.","İkinci el araba aldım.");
+add("ar","B1","Fiyat","عالي الجودة","yüksek kaliteli","sıfat","هذا منتج عالي الجودة.","Bu yüksek kaliteli bir ürün.");
+add("ar","B1","Fiyat","منخفض الجودة","düşük kaliteli","sıfat","هذا المنتج منخفض الجودة.","Bu ürün düşük kaliteli.");
+add("ar","B1","Fiyat","أفضل","daha iyi / en iyi","sıfat","هذا الخيار أفضل.","Bu seçenek daha iyi.");
+add("ar","B1","Fiyat","أرخص","daha ucuz","sıfat","هذا المنتج أرخص.","Bu ürün daha ucuz.");
+add("ar","B1","Fiyat","أغلى","daha pahalı","sıfat","هذا الهاتف أغلى.","Bu telefon daha pahalı.");
+// ======================= B1 — PARA VE ALIŞVERİŞ İFADELERİ =======================
+add("ar","B1","Para İfadeleri","كم سعر هذا؟","bunun fiyatı ne kadar?","ifade","كم سعر هذا المنتج؟","Bu ürünün fiyatı ne kadar?");
+add("ar","B1","Para İfadeleri","كم يكلف؟","ne kadar tutuyor?","ifade","كم يكلف هذا الهاتف؟","Bu telefon ne kadar tutuyor?");
+add("ar","B1","Para İfadeleri","هل يوجد خصم؟","indirim var mı?","ifade","هل يوجد خصم على هذا المنتج؟","Bu üründe indirim var mı?");
+add("ar","B1","Para İfadeleri","هل يمكن أن تخفض السعر؟","fiyatı düşürebilir misin?","ifade","هل يمكن أن تخفض السعر قليلا؟","Fiyatı biraz düşürebilir misin?");
+add("ar","B1","Para İfadeleri","أريد أن أدفع بالبطاقة","kartla ödemek istiyorum","ifade","أريد أن أدفع بالبطاقة.","Kartla ödemek istiyorum.");
+add("ar","B1","Para İfadeleri","أريد أن أدفع نقدا","nakit ödemek istiyorum","ifade","أريد أن أدفع نقدا.","Nakit ödemek istiyorum.");
+add("ar","B1","Para İfadeleri","هل يمكنني الدفع؟","ödeyebilir miyim?","ifade","هل يمكنني الدفع الآن؟","Şimdi ödeyebilir miyim?");
+add("ar","B1","Para İfadeleri","أين جهاز الصراف الآلي؟","ATM nerede?","ifade","أين أقرب جهاز صراف آلي؟","En yakın ATM nerede?");
+add("ar","B1","Para İfadeleri","أريد سحب المال","para çekmek istiyorum","ifade","أريد سحب المال من حسابي.","Hesabımdan para çekmek istiyorum.");
+add("ar","B1","Para İfadeleri","أريد تحويل المال","para transfer etmek istiyorum","ifade","أريد تحويل المال إلى حساب آخر.","Başka bir hesaba para transfer etmek istiyorum.");
+add("ar","B1","Para İfadeleri","كم رصيدي؟","bakiyem ne kadar?","ifade","كم رصيدي في حسابي؟","Hesabımdaki bakiyem ne kadar?");
+add("ar","B1","Para İfadeleri","أريد فتح حساب بنكي","banka hesabı açmak istiyorum","ifade","أريد فتح حساب بنكي جديد.","Yeni bir banka hesabı açmak istiyorum.");
+add("ar","B1","Para İfadeleri","أريد إغلاق حسابي","hesabımı kapatmak istiyorum","ifade","أريد إغلاق حسابي القديم.","Eski hesabımı kapatmak istiyorum.");
+add("ar","B1","Para İfadeleri","أريد إرجاع هذا المنتج","bu ürünü iade etmek istiyorum","ifade","أريد إرجاع هذا المنتج لأنه تالف.","Bu ürünü kusurlu olduğu için iade etmek istiyorum.");
+add("ar","B1","Para İfadeleri","هل يمكنني استرداد أموالي؟","paramı geri alabilir miyim?","ifade","هل يمكنني استرداد أموالي؟","Paramı geri alabilir miyim?");
+/* ================================================================
+   ARAPÇA B1 — PART 29
+================================================================ */
+// ======================= B1 — EV =======================
+add("ar","B1","Ev","منزل","ev","isim","أعيش في منزل صغير.","Küçük bir evde yaşıyorum.");
+add("ar","B1","Ev","بيت","ev","isim","بيتي قريب من الجامعة.","Evim üniversiteye yakın.");
+add("ar","B1","Ev","شقة","daire","isim","أعيش في شقة في المدينة.","Şehirde bir dairede yaşıyorum.");
+add("ar","B1","Ev","غرفة","oda","isim","غرفتي كبيرة.","Odam büyük.");
+add("ar","B1","Ev","غرفة نوم","yatak odası","isim","غرفة نومي في الطابق الثاني.","Yatak odam ikinci katta.");
+add("ar","B1","Ev","غرفة معيشة","oturma odası","isim","نشاهد التلفاز في غرفة المعيشة.","Oturma odasında televizyon izliyoruz.");
+add("ar","B1","Ev","مطبخ","mutfak","isim","أطبخ في المطبخ.","Mutfakta yemek yapıyorum.");
+add("ar","B1","Ev","حمام","banyo","isim","الحمام نظيف.","Banyo temiz.");
+add("ar","B1","Ev","شرفة","balkon","isim","أحب الجلوس في الشرفة.","Balkonda oturmayı seviyorum.");
+add("ar","B1","Ev","حديقة","bahçe","isim","لدينا حديقة صغيرة.","Küçük bir bahçemiz var.");
+add("ar","B1","Ev","سطح","çatı / teras","isim","نجلس على السطح في الصيف.","Yazın çatıda oturuyoruz.");
+add("ar","B1","Ev","مدخل","giriş","isim","المدخل أمام المصعد.","Giriş asansörün önünde.");
+add("ar","B1","Ev","ممر","koridor","isim","الغرفة في نهاية الممر.","Oda koridorun sonunda.");
+add("ar","B1","Ev","درج","merdiven","isim","أصعد الدرج كل يوم.","Her gün merdivenleri çıkıyorum.");
+add("ar","B1","Ev","مصعد","asansör","isim","المصعد لا يعمل.","Asansör çalışmıyor.");
+// ======================= B1 — MOBİLYALAR =======================
+add("ar","B1","Mobilya","سرير","yatak","isim","أنام في سريري.","Yatağımda uyuyorum.");
+add("ar","B1","Mobilya","أريكة","kanepe","isim","نجلس على الأريكة.","Kanepede oturuyoruz.");
+add("ar","B1","Mobilya","كرسي","sandalye","isim","اجلس على الكرسي.","Sandalyeye otur.");
+add("ar","B1","Mobilya","طاولة","masa","isim","الكتاب على الطاولة.","Kitap masanın üzerinde.");
+add("ar","B1","Mobilya","مكتب","çalışma masası","isim","أدرس على مكتبي.","Çalışma masamda ders çalışıyorum.");
+add("ar","B1","Mobilya","خزانة","dolap","isim","ملابسي في الخزانة.","Kıyafetlerim dolapta.");
+add("ar","B1","Mobilya","رف","raf","isim","الكتب على الرف.","Kitaplar rafta.");
+add("ar","B1","Mobilya","مرآة","ayna","isim","أنظر إلى المرآة.","Aynaya bakıyorum.");
+add("ar","B1","Mobilya","ستارة","perde","isim","أغلقت الستارة.","Perdeyi kapattım.");
+add("ar","B1","Mobilya","سجادة","halı","isim","السجادة جديدة.","Halı yeni.");
+add("ar","B1","Mobilya","مصباح","lamba","isim","أشعلت المصباح.","Lambayı açtım.");
+add("ar","B1","Mobilya","ثلاجة","buzdolabı","isim","الحليب في الثلاجة.","Süt buzdolabında.");
+add("ar","B1","Mobilya","فرن","fırın","isim","الطعام في الفرن.","Yemek fırında.");
+add("ar","B1","Mobilya","غسالة","çamaşır makinesi","isim","الغسالة تعمل.","Çamaşır makinesi çalışıyor.");
+add("ar","B1","Mobilya","مكيف الهواء","klima","isim","نشغل مكيف الهواء في الصيف.","Yazın klimayı açıyoruz.");
+// ======================= B1 — EV EŞYALARI =======================
+add("ar","B1","Ev Eşyaları","تلفاز","televizyon","isim","أشاهد التلفاز في المساء.","Akşamları televizyon izliyorum.");
+add("ar","B1","Ev Eşyaları","حاسوب","bilgisayar","isim","الحاسوب على المكتب.","Bilgisayar masanın üzerinde.");
+add("ar","B1","Ev Eşyaları","هاتف","telefon","isim","هاتفي في الغرفة.","Telefonum odada.");
+add("ar","B1","Ev Eşyaları","شاحن","şarj aleti","isim","أين شاحني؟","Şarj aletim nerede?");
+add("ar","B1","Ev Eşyaları","مفتاح","anahtar","isim","نسيت مفتاح البيت.","Ev anahtarımı unuttum.");
+add("ar","B1","Ev Eşyaları","باب","kapı","isim","أغلق الباب.","Kapıyı kapat.");
+add("ar","B1","Ev Eşyaları","نافذة","pencere","isim","افتح النافذة من فضلك.","Lütfen pencereyi aç.");
+add("ar","B1","Ev Eşyaları","حائط","duvar","isim","علقت صورة على الحائط.","Duvara bir resim astım.");
+add("ar","B1","Ev Eşyaları","أرضية","zemin / döşeme","isim","الأرضية نظيفة.","Zemin temiz.");
+add("ar","B1","Ev Eşyaları","سقف","tavan","isim","السقف مرتفع.","Tavan yüksek.");
+add("ar","B1","Ev Eşyaları","منشفة","havlu","isim","أحتاج إلى منشفة نظيفة.","Temiz bir havluya ihtiyacım var.");
+add("ar","B1","Ev Eşyaları","صابون","sabun","isim","أين الصابون؟","Sabun nerede?");
+add("ar","B1","Ev Eşyaları","فرشاة أسنان","diş fırçası","isim","أستخدم فرشاة أسنان جديدة.","Yeni bir diş fırçası kullanıyorum.");
+add("ar","B1","Ev Eşyaları","بطانية","battaniye","isim","أحتاج إلى بطانية دافئة.","Sıcak bir battaniyeye ihtiyacım var.");
+add("ar","B1","Ev Eşyaları","وسادة","yastık","isim","هذه الوسادة مريحة.","Bu yastık rahat.");
+// ======================= B1 — EV İŞLERİ =======================
+add("ar","B1","Ev İşleri","تنظيف","temizlik","isim","أقوم بالتنظيف كل أسبوع.","Her hafta temizlik yapıyorum.");
+add("ar","B1","Ev İşleri","غسيل","çamaşır / yıkama","isim","لدي الكثير من الغسيل.","Çok çamaşırım var.");
+add("ar","B1","Ev İşleri","طبخ","yemek pişirme","isim","أحب الطبخ في المنزل.","Evde yemek yapmayı seviyorum.");
+add("ar","B1","Ev İşleri","ترتيب","düzenleme","isim","أحتاج إلى ترتيب غرفتي.","Odamı düzenlemem gerekiyor.");
+add("ar","B1","Ev İşleri","قمامة","çöp","isim","أخرجت القمامة.","Çöpü dışarı çıkardım.");
+add("ar","B1","Ev İşleri","غبار","toz","isim","هناك الكثير من الغبار.","Çok fazla toz var.");
+add("ar","B1","Ev İşleri","مكنسة","süpürge","isim","أين المكنسة؟","Süpürge nerede?");
+add("ar","B1","Ev İşleri","مكنسة كهربائية","elektrikli süpürge","isim","استخدمت المكنسة الكهربائية.","Elektrikli süpürgeyi kullandım.");
+add("ar","B1","Ev İşleri","منظف","temizleyici","isim","اشتريت منظفا جديدا.","Yeni bir temizlik ürünü aldım.");
+add("ar","B1","Ev İşleri","غسالة الصحون","bulaşık makinesi","isim","غسالة الصحون ممتلئة.","Bulaşık makinesi dolu.");
+add("ar","B1","Ev İşleri","صحون","tabaklar / bulaşık","isim","غسلت الصحون.","Bulaşıkları yıkadım.");
+add("ar","B1","Ev İşleri","ملابس","kıyafetler","isim","غسلت ملابسي.","Kıyafetlerimi yıkadım.");
+add("ar","B1","Ev İşleri","غسيل الملابس","çamaşır yıkama","isim","سأقوم بغسيل الملابس اليوم.","Bugün çamaşır yıkayacağım.");
+add("ar","B1","Ev İşleri","كي الملابس","ütüleme","isim","لا أحب كي الملابس.","Kıyafetleri ütülemeyi sevmiyorum.");
+add("ar","B1","Ev İşleri","إصلاح","tamir","isim","يحتاج الباب إلى إصلاح.","Kapının tamire ihtiyacı var.");
+// ======================= B1 — EV FİİLLERİ =======================
+add("ar","B1","Ev Fiilleri","يعيش","yaşamak","fiil","أعيش مع عائلتي.","Ailemle yaşıyorum.");
+add("ar","B1","Ev Fiilleri","يسكن","ikamet etmek / oturmak","fiil","أسكن في شقة صغيرة.","Küçük bir dairede oturuyorum.");
+add("ar","B1","Ev Fiilleri","ينتقل","taşınmak","fiil","سأنتقل إلى منزل جديد.","Yeni bir eve taşınacağım.");
+add("ar","B1","Ev Fiilleri","يستأجر","kiralamak","fiil","أستأجر شقة في المدينة.","Şehirde bir daire kiralıyorum.");
+add("ar","B1","Ev Fiilleri","يشتري","satın almak","fiil","اشترينا بيتا جديدا.","Yeni bir ev satın aldık.");
+add("ar","B1","Ev Fiilleri","يبني","inşa etmek","fiil","يبنون منزلا جديدا.","Yeni bir ev inşa ediyorlar.");
+add("ar","B1","Ev Fiilleri","ينظف","temizlemek","fiil","أنظف غرفتي كل يوم.","Odamı her gün temizliyorum.");
+add("ar","B1","Ev Fiilleri","يغسل","yıkamak","fiil","أغسل الصحون بعد العشاء.","Akşam yemeğinden sonra bulaşıkları yıkıyorum.");
+add("ar","B1","Ev Fiilleri","يرتب","düzenlemek","fiil","أرتب غرفتي في عطلة نهاية الأسبوع.","Hafta sonu odamı düzenliyorum.");
+add("ar","B1","Ev Fiilleri","يطبخ","yemek pişirmek","fiil","أطبخ العشاء كل مساء.","Her akşam yemek yapıyorum.");
+add("ar","B1","Ev Fiilleri","يكنس","süpürmek","fiil","أكنس الأرضية.","Yeri süpürüyorum.");
+add("ar","B1","Ev Fiilleri","يمسح","silmek","fiil","أمسح الطاولة.","Masayı siliyorum.");
+add("ar","B1","Ev Fiilleri","يصلح","tamir etmek","fiil","أصلح الباب.","Kapıyı tamir ediyorum.");
+add("ar","B1","Ev Fiilleri","يفتح","açmak","fiil","افتح النافذة.","Pencereyi aç.");
+add("ar","B1","Ev Fiilleri","يغلق","kapatmak","fiil","أغلق الباب.","Kapıyı kapat.");
+// ======================= B1 — EV SIFATLARI =======================
+add("ar","B1","Ev Sıfatları","كبير","büyük","sıfat","بيتي كبير.","Evim büyük.");
+add("ar","B1","Ev Sıfatları","صغير","küçük","sıfat","غرفتي صغيرة.","Odam küçük.");
+add("ar","B1","Ev Sıfatları","واسع","geniş","sıfat","البيت واسع.","Ev geniş.");
+add("ar","B1","Ev Sıfatları","ضيق","dar","sıfat","الممر ضيق.","Koridor dar.");
+add("ar","B1","Ev Sıfatları","مريح","rahat","sıfat","الكرسي مريح.","Sandalye rahat.");
+add("ar","B1","Ev Sıfatları","نظيف","temiz","sıfat","البيت نظيف.","Ev temiz.");
+add("ar","B1","Ev Sıfatları","متسخ","kirli","sıfat","المطبخ متسخ.","Mutfak kirli.");
+add("ar","B1","Ev Sıfatları","مرتب","düzenli","sıfat","غرفتي مرتبة.","Odam düzenli.");
+add("ar","B1","Ev Sıfatları","فوضوي","dağınık","sıfat","غرفته فوضوية.","Odası dağınık.");
+add("ar","B1","Ev Sıfatları","هادئ","sessiz / sakin","sıfat","الحي هادئ.","Mahalle sakin.");
+add("ar","B1","Ev Sıfatları","مزدحم","kalabalık","sıfat","الشارع مزدحم.","Sokak kalabalık.");
+add("ar","B1","Ev Sıfatları","قديم","eski","sıfat","هذا البيت قديم.","Bu ev eski.");
+add("ar","B1","Ev Sıfatları","حديث","modern","sıfat","هذا المنزل حديث.","Bu ev modern.");
+add("ar","B1","Ev Sıfatları","مضيء","aydınlık","sıfat","الغرفة مضيئة.","Oda aydınlık.");
+add("ar","B1","Ev Sıfatları","مظلم","karanlık","sıfat","الغرفة مظلمة.","Oda karanlık.");
+// ======================= B1 — EV İLE İLGİLİ İFADELER =======================
+add("ar","B1","Ev İfadeleri","أين أقرب متجر؟","en yakın mağaza nerede?","ifade","أين أقرب متجر من هنا؟","Buradan en yakın mağaza nerede?");
+add("ar","B1","Ev İfadeleri","أين الحمام؟","banyo nerede?","ifade","عفوا، أين الحمام؟","Affedersiniz, banyo nerede?");
+add("ar","B1","Ev İfadeleri","أين المصعد؟","asansör nerede?","ifade","أين المصعد من فضلك؟","Asansör nerede lütfen?");
+add("ar","B1","Ev İfadeleri","أنا أعيش هنا","burada yaşıyorum","ifade","أنا أعيش هنا منذ عامين.","İki yıldır burada yaşıyorum.");
+add("ar","B1","Ev İfadeleri","أستأجر شقة","bir daire kiralıyorum","ifade","أستأجر شقة بالقرب من الجامعة.","Üniversitenin yakınında bir daire kiralıyorum.");
+add("ar","B1","Ev İfadeleri","أريد استئجار شقة","bir daire kiralamak istiyorum","ifade","أريد استئجار شقة صغيرة.","Küçük bir daire kiralamak istiyorum.");
+add("ar","B1","Ev İfadeleri","أريد شراء منزل","bir ev satın almak istiyorum","ifade","أريد شراء منزل في المستقبل.","Gelecekte bir ev satın almak istiyorum.");
+add("ar","B1","Ev İfadeleri","أحتاج إلى إصلاح","tamire ihtiyacım var","ifade","أحتاج إلى إصلاح الباب.","Kapının tamir edilmesi gerekiyor.");
+add("ar","B1","Ev İfadeleri","المصعد لا يعمل","asansör çalışmıyor","ifade","عفوا، المصعد لا يعمل.","Affedersiniz, asansör çalışmıyor.");
+add("ar","B1","Ev İfadeleri","لا يوجد ماء","su yok","ifade","لا يوجد ماء في الحمام.","Banyoda su yok.");
+add("ar","B1","Ev İfadeleri","لا يوجد كهرباء","elektrik yok","ifade","لا يوجد كهرباء في البيت.","Evde elektrik yok.");
+add("ar","B1","Ev İfadeleri","الإنترنت لا يعمل","internet çalışmıyor","ifade","الإنترنت لا يعمل منذ الصباح.","İnternet sabahtan beri çalışmıyor.");
+add("ar","B1","Ev İfadeleri","أين مفتاح البيت؟","ev anahtarı nerede?","ifade","أين مفتاح البيت؟","Ev anahtarı nerede?");
+add("ar","B1","Ev İfadeleri","أغلق الباب من فضلك","lütfen kapıyı kapat","ifade","أغلق الباب من فضلك.","Lütfen kapıyı kapat.");
+add("ar","B1","Ev İfadeleri","افتح النافذة من فضلك","lütfen pencereyi aç","ifade","افتح النافذة من فضلك.","Lütfen pencereyi aç.");
+/* ================================================================
+   ARAPÇA B1 — PART 30
+================================================================ */
+// ======================= B1 — SAĞLIK =======================
+add("ar","B1","Sağlık","صحة","sağlık","isim","الصحة أهم من المال.","Sağlık paradan daha önemlidir.");
+add("ar","B1","Sağlık","مرض","hastalık","isim","هذا المرض منتشر.","Bu hastalık yaygın.");
+add("ar","B1","Sağlık","ألم","ağrı","isim","أشعر بألم في ظهري.","Sırtımda ağrı hissediyorum.");
+add("ar","B1","Sağlık","صداع","baş ağrısı","isim","لدي صداع شديد.","Şiddetli baş ağrım var.");
+add("ar","B1","Sağlık","حمى","ateş","isim","لديه حمى منذ أمس.","Dünden beri ateşi var.");
+add("ar","B1","Sağlık","زكام","nezle / soğuk algınlığı","isim","أصبت بالزكام الأسبوع الماضي.","Geçen hafta nezle oldum.");
+add("ar","B1","Sağlık","إنفلونزا","grip","isim","أصبت بالإنفلونزا.","Grip oldum.");
+add("ar","B1","Sağlık","سعال","öksürük","isim","لدي سعال شديد.","Şiddetli öksürüğüm var.");
+add("ar","B1","Sağlık","التهاب الحلق","boğaz ağrısı / boğaz iltihabı","isim","أعاني من التهاب الحلق.","Boğaz ağrısı çekiyorum.");
+add("ar","B1","Sağlık","ألم في المعدة","mide ağrısı","isim","لدي ألم في المعدة.","Midem ağrıyor.");
+add("ar","B1","Sağlık","ألم في الظهر","sırt ağrısı","isim","أشعر بألم في الظهر.","Sırtımda ağrı hissediyorum.");
+add("ar","B1","Sağlık","دوخة","baş dönmesi","isim","أشعر بالدوخة.","Başım dönüyor.");
+add("ar","B1","Sağlık","تعب","yorgunluk","isim","أشعر بتعب شديد.","Çok yorgun hissediyorum.");
+add("ar","B1","Sağlık","ضعف","zayıflık / halsizlik","isim","أشعر بضعف في جسمي.","Vücudumda halsizlik hissediyorum.");
+add("ar","B1","Sağlık","إصابة","yaralanma","isim","تعرض لإصابة أثناء الرياضة.","Spor sırasında yaralandı.");
+// ======================= B1 — VÜCUT =======================
+add("ar","B1","Vücut","جسم","vücut","isim","أشعر أن جسمي متعب.","Vücudumun yorgun olduğunu hissediyorum.");
+add("ar","B1","Vücut","رأس","baş","isim","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Vücut","وجه","yüz","isim","غسلت وجهي.","Yüzümü yıkadım.");
+add("ar","B1","Vücut","عين","göz","isim","عيني تؤلمني.","Gözüm ağrıyor.");
+add("ar","B1","Vücut","أذن","kulak","isim","أذني تؤلمني.","Kulağım ağrıyor.");
+add("ar","B1","Vücut","أنف","burun","isim","أنفي مسدود.","Burnum tıkalı.");
+add("ar","B1","Vücut","فم","ağız","isim","افتح فمك من فضلك.","Lütfen ağzını aç.");
+add("ar","B1","Vücut","أسنان","dişler","isim","أغسل أسناني مرتين في اليوم.","Günde iki kez dişlerimi fırçalarım.");
+add("ar","B1","Vücut","لسان","dil","isim","لساني يؤلمني.","Dilim ağrıyor.");
+add("ar","B1","Vücut","رقبة","boyun","isim","أشعر بألم في رقبتي.","Boynumda ağrı hissediyorum.");
+add("ar","B1","Vücut","كتف","omuz","isim","كتفي يؤلمني.","Omzum ağrıyor.");
+add("ar","B1","Vücut","ذراع","kol","isim","أصبت ذراعي.","Kolumu yaraladım.");
+add("ar","B1","Vücut","يد","el","isim","يدي تؤلمني.","Elim ağrıyor.");
+add("ar","B1","Vücut","إصبع","parmak","isim","جرحت إصبعي.","Parmağımı kestim.");
+add("ar","B1","Vücut","صدر","göğüs","isim","أشعر بألم في صدري.","Göğsümde ağrı hissediyorum.");
+// ======================= B1 — VÜCUT 2 =======================
+add("ar","B1","Vücut","بطن","karın","isim","بطني يؤلمني.","Karnım ağrıyor.");
+add("ar","B1","Vücut","ظهر","sırt","isim","ظهري يؤلمني.","Sırtım ağrıyor.");
+add("ar","B1","Vücut","ساق","bacak","isim","ساقي تؤلمني.","Bacağım ağrıyor.");
+add("ar","B1","Vücut","ركبة","diz","isim","ركبتي تؤلمني.","Dizim ağrıyor.");
+add("ar","B1","Vücut","قدم","ayak","isim","قدمي تؤلمني.","Ayağım ağrıyor.");
+add("ar","B1","Vücut","قلب","kalp","isim","القلب عضو مهم.","Kalp önemli bir organdır.");
+add("ar","B1","Vücut","رئة","akciğer","isim","الرئتان تساعدان على التنفس.","Akciğerler nefes almaya yardımcı olur.");
+add("ar","B1","Vücut","دم","kan","isim","أحتاج إلى فحص الدم.","Kan testi yaptırmam gerekiyor.");
+add("ar","B1","Vücut","عظم","kemik","isim","العظام قوية.","Kemikler güçlüdür.");
+add("ar","B1","Vücut","عضلة","kas","isim","الرياضة تقوي العضلات.","Spor kasları güçlendirir.");
+add("ar","B1","Vücut","جلد","cilt / deri","isim","جلدي حساس.","Cildim hassas.");
+add("ar","B1","Vücut","شعر","saç","isim","شعري طويل.","Saçım uzun.");
+add("ar","B1","Vücut","حلق","boğaz","isim","حلقي يؤلمني.","Boğazım ağrıyor.");
+add("ar","B1","Vücut","شفاه","dudaklar","isim","شفتي جافة.","Dudağım kuru.");
+add("ar","B1","Vücut","ظهر","sırt","isim","أشعر بألم في ظهري.","Sırtımda ağrı hissediyorum.");
+// ======================= B1 — DOKTOR VE HASTANE =======================
+add("ar","B1","Doktor","طبيب","doktor","isim","أحتاج إلى زيارة الطبيب.","Doktora gitmem gerekiyor.");
+add("ar","B1","Doktor","مريض","hasta","isim","المريض يحتاج إلى الراحة.","Hastanın dinlenmeye ihtiyacı var.");
+add("ar","B1","Doktor","مستشفى","hastane","isim","ذهبت إلى المستشفى.","Hastaneye gittim.");
+add("ar","B1","Doktor","عيادة","klinik / muayenehane","isim","العيادة قريبة من منزلي.","Klinik evime yakın.");
+add("ar","B1","Doktor","صيدلية","eczane","isim","أين أقرب صيدلية؟","En yakın eczane nerede?");
+add("ar","B1","Doktor","موعد","randevu","isim","لدي موعد مع الطبيب.","Doktorla randevum var.");
+add("ar","B1","Doktor","فحص","muayene / test","isim","أحتاج إلى فحص طبي.","Tıbbi muayeneye ihtiyacım var.");
+add("ar","B1","Doktor","تحليل","tahlil","isim","أجريت تحليل دم.","Kan tahlili yaptırdım.");
+add("ar","B1","Doktor","تشخيص","teşhis","isim","أخبرني الطبيب بالتشخيص.","Doktor bana teşhisi söyledi.");
+add("ar","B1","Doktor","علاج","tedavi","isim","بدأت العلاج.","Tedaviye başladım.");
+add("ar","B1","Doktor","دواء","ilaç","isim","أخذت الدواء.","İlacı aldım.");
+add("ar","B1","Doktor","وصفة طبية","reçete","isim","أعطاني الطبيب وصفة طبية.","Doktor bana reçete verdi.");
+add("ar","B1","Doktor","عملية","ameliyat","isim","يحتاج إلى عملية.","Ameliyata ihtiyacı var.");
+add("ar","B1","Doktor","طوارئ","acil servis / acil durum","isim","اتصل بالطوارئ بسرعة.","Hemen acil servisi ara.");
+add("ar","B1","Doktor","سيارة إسعاف","ambulans","isim","وصلت سيارة الإسعاف بسرعة.","Ambulans hızlıca geldi.");
+// ======================= B1 — SAĞLIK FİİLLERİ =======================
+add("ar","B1","Sağlık Fiilleri","يشعر","hissetmek","fiil","أشعر بالتعب.","Yorgun hissediyorum.");
+add("ar","B1","Sağlık Fiilleri","يمرض","hastalanmak","fiil","مرض الأسبوع الماضي.","Geçen hafta hastalandı.");
+add("ar","B1","Sağlık Fiilleri","يتعافى","iyileşmek","fiil","بدأ يتعافى من المرض.","Hastalıktan iyileşmeye başladı.");
+add("ar","B1","Sağlık Fiilleri","يؤلم","ağrımak","fiil","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Sağlık Fiilleri","يسعل","öksürmek","fiil","هو يسعل كثيرا.","Çok öksürüyor.");
+add("ar","B1","Sağlık Fiilleri","يعطس","hapşırmak","fiil","أعطس كثيرا اليوم.","Bugün çok hapşırıyorum.");
+add("ar","B1","Sağlık Fiilleri","يتنفس","nefes almak","fiil","أجد صعوبة في التنفس.","Nefes almakta zorlanıyorum.");
+add("ar","B1","Sağlık Fiilleri","ينام","uyumak","fiil","أحتاج إلى النوم أكثر.","Daha fazla uyumam gerekiyor.");
+add("ar","B1","Sağlık Fiilleri","يرتاح","dinlenmek","fiil","يجب أن ترتاح.","Dinlenmelisin.");
+add("ar","B1","Sağlık Fiilleri","يأخذ الدواء","ilaç almak","fiil","يأخذ الدواء ثلاث مرات في اليوم.","İlacı günde üç kez alıyor.");
+add("ar","B1","Sağlık Fiilleri","يزور الطبيب","doktora gitmek","fiil","سأزور الطبيب غدا.","Yarın doktora gideceğim.");
+add("ar","B1","Sağlık Fiilleri","يفحص","muayene etmek / kontrol etmek","fiil","يفحص الطبيب المريض.","Doktor hastayı muayene ediyor.");
+add("ar","B1","Sağlık Fiilleri","يعالج","tedavi etmek","fiil","يعالج الطبيب المريض.","Doktor hastayı tedavi ediyor.");
+add("ar","B1","Sağlık Fiilleri","يتصل بالطوارئ","acili aramak","fiil","اتصل بالطوارئ فورا.","Hemen acili ara.");
+add("ar","B1","Sağlık Fiilleri","يشفى","iyileşmek","fiil","شفى تماما بعد العلاج.","Tedaviden sonra tamamen iyileşti.");
+// ======================= B1 — SAĞLIK SIFATLARI =======================
+add("ar","B1","Sağlık Sıfatları","صحي","sağlıklı","sıfat","أحاول أن أعيش حياة صحية.","Sağlıklı bir hayat yaşamaya çalışıyorum.");
+add("ar","B1","Sağlık Sıfatları","مريض","hasta","sıfat","أنا مريض اليوم.","Bugün hastayım.");
+add("ar","B1","Sağlık Sıfatları","متعب","yorgun","sıfat","أنا متعب جدا.","Çok yorgunum.");
+add("ar","B1","Sağlık Sıfatları","ضعيف","zayıf / halsiz","sıfat","أشعر أنني ضعيف.","Kendimi halsiz hissediyorum.");
+add("ar","B1","Sağlık Sıfatları","قوي","güçlü","sıfat","أشعر أنني قوي الآن.","Şimdi kendimi güçlü hissediyorum.");
+add("ar","B1","Sağlık Sıfatları","خطير","tehlikeli / ciddi","sıfat","هذا المرض خطير.","Bu hastalık ciddi.");
+add("ar","B1","Sağlık Sıfatları","بسيط","basit / hafif","sıfat","الأعراض بسيطة.","Belirtiler hafif.");
+add("ar","B1","Sağlık Sıfatları","مزمن","kronik","sıfat","هذا مرض مزمن.","Bu kronik bir hastalık.");
+add("ar","B1","Sağlık Sıfatları","معدي","bulaşıcı","sıfat","هذا المرض معدي.","Bu hastalık bulaşıcı.");
+add("ar","B1","Sağlık Sıfatları","حساس","hassas","sıfat","جلدي حساس.","Cildim hassas.");
+add("ar","B1","Sağlık Sıfatları","طبيعي","normal","sıfat","هذا أمر طبيعي.","Bu normal bir durum.");
+add("ar","B1","Sağlık Sıfatları","ضروري","gerekli","sıfat","هذا الفحص ضروري.","Bu test gerekli.");
+add("ar","B1","Sağlık Sıfatları","مفيد","faydalı","sıfat","الرياضة مفيدة للصحة.","Spor sağlık için faydalıdır.");
+add("ar","B1","Sağlık Sıfatları","ضار","zararlı","sıfat","التدخين ضار بالصحة.","Sigara içmek sağlığa zararlıdır.");
+add("ar","B1","Sağlık Sıfatları","عاجل","acil","sıfat","هذه حالة عاجلة.","Bu acil bir durum.");
+// ======================= B1 — DOKTORA GİDERKEN KULLANILAN İFADELER =======================
+add("ar","B1","Doktor İfadeleri","أشعر بالتعب","yorgun hissediyorum","ifade","أشعر بالتعب منذ يومين.","İki gündür yorgun hissediyorum.");
+add("ar","B1","Doktor İfadeleri","أشعر بالألم","ağrı hissediyorum","ifade","أشعر بالألم في ظهري.","Sırtımda ağrı hissediyorum.");
+add("ar","B1","Doktor İfadeleri","رأسي يؤلمني","başım ağrıyor","ifade","رأسي يؤلمني منذ الصباح.","Sabahtan beri başım ağrıyor.");
+add("ar","B1","Doktor İfadeleri","معدتي تؤلمني","midem ağrıyor","ifade","معدتي تؤلمني بعد الطعام.","Yemekten sonra midem ağrıyor.");
+add("ar","B1","Doktor İfadeleri","لدي حمى","ateşim var","ifade","لدي حمى منذ الليلة الماضية.","Dün geceden beri ateşim var.");
+add("ar","B1","Doktor İfadeleri","لدي سعال","öksürüğüm var","ifade","لدي سعال منذ أسبوع.","Bir haftadır öksürüğüm var.");
+add("ar","B1","Doktor İfadeleri","أشعر بالدوخة","başım dönüyor","ifade","أشعر بالدوخة عندما أقف.","Ayağa kalktığımda başım dönüyor.");
+add("ar","B1","Doktor İfadeleri","أحتاج إلى طبيب","doktora ihtiyacım var","ifade","أحتاج إلى طبيب الآن.","Şimdi doktora ihtiyacım var.");
+add("ar","B1","Doktor İfadeleri","أريد حجز موعد","randevu almak istiyorum","ifade","أريد حجز موعد مع الطبيب.","Doktordan randevu almak istiyorum.");
+add("ar","B1","Doktor İfadeleri","متى موعدي؟","randevum ne zaman?","ifade","متى موعدي مع الطبيب؟","Doktorla randevum ne zaman?");
+add("ar","B1","Doktor İfadeleri","هل هذا خطير؟","bu ciddi mi?","ifade","هل هذا المرض خطير؟","Bu hastalık ciddi mi?");
+add("ar","B1","Doktor İfadeleri","ماذا يجب أن أفعل؟","ne yapmalıyım?","ifade","ماذا يجب أن أفعل الآن؟","Şimdi ne yapmalıyım?");
+add("ar","B1","Doktor İfadeleri","كم مرة يجب أن آخذ الدواء؟","ilacı kaç kez almalıyım?","ifade","كم مرة يجب أن آخذ هذا الدواء؟","Bu ilacı kaç kez almalıyım?");
+add("ar","B1","Doktor İfadeleri","هل أحتاج إلى وصفة؟","reçeteye ihtiyacım var mı?","ifade","هل أحتاج إلى وصفة لهذا الدواء؟","Bu ilaç için reçeteye ihtiyacım var mı?");
+add("ar","B1","Doktor İfadeleri","أين أقرب صيدلية؟","en yakın eczane nerede?","ifade","أين أقرب صيدلية من هنا؟","Buradan en yakın eczane nerede?");
+/* ================================================================
+   ARAPÇA B1 — PART 31
+================================================================ */
+// ======================= B1 — İŞ VE ÇALIŞMA =======================
+add("ar","B1","İş","عمل","iş / çalışma","isim","أحب عملي كثيرا.","İşimi çok seviyorum.");
+add("ar","B1","İş","وظيفة","iş / pozisyon","isim","أبحث عن وظيفة جديدة.","Yeni bir iş arıyorum.");
+add("ar","B1","İş","مهنة","meslek","isim","ما مهنتك؟","Mesleğin nedir?");
+add("ar","B1","İş","شركة","şirket","isim","أعمل في شركة كبيرة.","Büyük bir şirkette çalışıyorum.");
+add("ar","B1","İş","مكتب","ofis","isim","أعمل في مكتب صغير.","Küçük bir ofiste çalışıyorum.");
+add("ar","B1","İş","مصنع","fabrika","isim","يعمل في مصنع للسيارات.","Bir araba fabrikasında çalışıyor.");
+add("ar","B1","İş","مؤسسة","kurum / kuruluş","isim","هذه مؤسسة حكومية.","Bu bir devlet kurumudur.");
+add("ar","B1","İş","إدارة","yönetim / departman","isim","أعمل في إدارة المبيعات.","Satış departmanında çalışıyorum.");
+add("ar","B1","İش","موظف","çalışan / memur","isim","هو موظف في شركة دولية.","Uluslararası bir şirkette çalışan.");
+add("ar","B1","İş","مدير","müdür / yönetici","isim","المدير في الاجتماع.","Müdür toplantıda.");
+add("ar","B1","İş","زميل","iş arkadaşı","isim","زميلي يساعدني دائما.","İş arkadaşım bana her zaman yardım ediyor.");
+add("ar","B1","İş","عميل","müşteri","isim","تحدثت مع العميل.","Müşteriyle konuştum.");
+add("ar","B1","İş","زبون","müşteri","isim","الزبون ينتظر في الخارج.","Müşteri dışarıda bekliyor.");
+add("ar","B1","İş","اجتماع","toplantı","isim","لدينا اجتماع غدا.","Yarın toplantımız var.");
+add("ar","B1","İş","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+// ======================= B1 — MESLEKLER =======================
+add("ar","B1","Meslek","طبيب","doktor","isim","أخي طبيب.","Kardeşim doktor.");
+add("ar","B1","Meslek","مهندس","mühendis","isim","هو مهندس مدني.","O inşaat mühendisi.");
+add("ar","B1","Meslek","مبرمج","yazılımcı / programcı","isim","يعمل كمبرمج.","Yazılımcı olarak çalışıyor.");
+add("ar","B1","Meslek","مصمم","tasarımcı","isim","هي مصممة محترفة.","O profesyonel bir tasarımcı.");
+add("ar","B1","Meslek","مدرس","öğretmen","isim","والدي مدرس.","Babam öğretmen.");
+add("ar","B1","Meslek","أستاذ","öğretim görevlisi / profesör","isim","الأستاذ يشرح الدرس.","Öğretmen dersi açıklıyor.");
+add("ar","B1","Meslek","محامي","avukat","isim","أحتاج إلى محام.","Bir avukata ihtiyacım var.");
+add("ar","B1","Meslek","محاسب","muhasebeci","isim","يعمل كمحاسب.","Muhasebeci olarak çalışıyor.");
+add("ar","B1","Meslek","صحفي","gazeteci","isim","الصحفي يكتب مقالا.","Gazeteci bir makale yazıyor.");
+add("ar","B1","Meslek","مترجم","çevirmen","isim","هو مترجم محترف.","O profesyonel bir çevirmen.");
+add("ar","B1","Meslek","مصور","fotoğrafçı","isim","يعمل كمصور.","Fotoğrafçı olarak çalışıyor.");
+add("ar","B1","Meslek","طباخ","aşçı","isim","الطباخ يحضر الطعام.","Aşçı yemek hazırlıyor.");
+add("ar","B1","Meslek","سائق","şoför","isim","السائق يقود الحافلة.","Şoför otobüsü kullanıyor.");
+add("ar","B1","Meslek","شرطي","polis","isim","الشرطي يساعد الناس.","Polis insanlara yardım ediyor.");
+add("ar","B1","Meslek","ممرض","hemşire","isim","الممرض يعتني بالمريض.","Hemşire hastayla ilgileniyor.");
+// ======================= B1 — ÇALIŞMA HAYATI =======================
+add("ar","B1","Çalışma Hayatı","راتب","maaş","isim","راتبي جيد.","Maaşım iyi.");
+add("ar","B1","Çalışma Hayatı","أجر","ücret / yevmiye","isim","الأجر مرتفع.","Ücret yüksek.");
+add("ar","B1","Çalışma Hayatı","دوام","mesai / çalışma saatleri","isim","دوامي يبدأ في الثامنة.","Mesaim saat sekizde başlıyor.");
+add("ar","B1","Çalışma Hayatı","دوام كامل","tam zamanlı çalışma","isim","أعمل بدوام كامل.","Tam zamanlı çalışıyorum.");
+add("ar","B1","Çalışma Hayatı","دوام جزئي","yarı zamanlı çalışma","isim","أعمل بدوام جزئي.","Yarı zamanlı çalışıyorum.");
+add("ar","B1","Çalışma Hayatı","عطلة","izin / tatil","isim","أنا في عطلة هذا الأسبوع.","Bu hafta izindeyim.");
+add("ar","B1","Çalışma Hayatı","إجازة","izin / tatil","isim","أخذت إجازة لمدة أسبوع.","Bir haftalık izin aldım.");
+add("ar","B1","Çalışma Hayatı","استراحة","mola","isim","أخذنا استراحة قصيرة.","Kısa bir mola verdik.");
+add("ar","B1","Çalışma Hayatı","خبرة","deneyim","isim","لدي خبرة في هذا المجال.","Bu alanda deneyimim var.");
+add("ar","B1","Çalışma Hayatı","مهارة","beceri","isim","لدي مهارات جيدة في الحاسوب.","Bilgisayar konusunda iyi becerilerim var.");
+add("ar","B1","Çalışma Hayatı","شهادة","sertifika / diploma","isim","لدي شهادة جامعية.","Üniversite diplomam var.");
+add("ar","B1","Çalışma Hayatı","سيرة ذاتية","özgeçmiş / CV","isim","أرسلت سيرتي الذاتية إلى الشركة.","CV'mi şirkete gönderdim.");
+add("ar","B1","Çalışma Hayatı","مقابلة عمل","iş görüşmesi","isim","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","Çalışma Hayatı","عقد","sözleşme","isim","وقعت عقد العمل.","İş sözleşmesini imzaladım.");
+add("ar","B1","Çalışma Hayatı","ترقية","terfi","isim","حصل على ترقية في العمل.","İşinde terfi aldı.");
+// ======================= B1 — İŞ FİİLLERİ =======================
+add("ar","B1","İş Fiilleri","يعمل","çalışmak","fiil","أعمل في شركة دولية.","Uluslararası bir şirkette çalışıyorum.");
+add("ar","B1","İş Fiilleri","يبحث عن عمل","iş aramak","fiil","أبحث عن عمل جديد.","Yeni bir iş arıyorum.");
+add("ar","B1","İş Fiilleri","يقدم","başvurmak / sunmak","fiil","قدمت طلبا للعمل.","İş başvurusu yaptım.");
+add("ar","B1","İş Fiilleri","يتقدم لوظيفة","bir işe başvurmak","fiil","تقدمت لوظيفة جديدة.","Yeni bir işe başvurdum.");
+add("ar","B1","İş Fiilleri","يوظف","işe almak","fiil","الشركة توظف موظفين جدد.","Şirket yeni çalışanlar işe alıyor.");
+add("ar","B1","İş Fiilleri","يستقيل","istifa etmek","fiil","استقال من وظيفته.","İşinden istifa etti.");
+add("ar","B1","İş Fiilleri","يطرد","işten çıkarmak","fiil","طردته الشركة من العمل.","Şirket onu işten çıkardı.");
+add("ar","B1","İş Fiilleri","يدير","yönetmek","fiil","يدير فريقا كبيرا.","Büyük bir ekibi yönetiyor.");
+add("ar","B1","İş Fiilleri","ينظم","organize etmek","fiil","أنظم اجتماع الأسبوع المقبل.","Gelecek haftaki toplantıyı organize ediyorum.");
+add("ar","B1","İş Fiilleri","يخطط","planlamak","fiil","نخطط لمشروع جديد.","Yeni bir proje planlıyoruz.");
+add("ar","B1","İş Fiilleri","يناقش","tartışmak / görüşmek","fiil","ناقشنا المشكلة في الاجتماع.","Toplantıda sorunu tartıştık.");
+add("ar","B1","İş Fiilleri","يشرح","açıklamak","fiil","شرح المدير الخطة.","Müdür planı açıkladı.");
+add("ar","B1","İş Fiilleri","يتعاون","iş birliği yapmak","fiil","نتعاون مع شركات أخرى.","Başka şirketlerle iş birliği yapıyoruz.");
+add("ar","B1","İş Fiilleri","ينجح","başarılı olmak","fiil","نجح في عمله.","İşinde başarılı oldu.");
+add("ar","B1","İş Fiilleri","يفشل","başarısız olmak","fiil","فشل المشروع.","Proje başarısız oldu.");
+// ======================= B1 — İŞ SIFATLARI =======================
+add("ar","B1","İş Sıfatları","ناجح","başarılı","sıfat","هو رجل أعمال ناجح.","O başarılı bir iş insanı.");
+add("ar","B1","İş Sıfatları","فاشل","başarısız","sıfat","كان المشروع فاشلا.","Proje başarısızdı.");
+add("ar","B1","İş Sıfatları","مشغول","meşgul","sıfat","أنا مشغول اليوم.","Bugün meşgulüm.");
+add("ar","B1","İş Sıfatları","متفرغ","müsait / boş","sıfat","أنا متفرغ غدا.","Yarın müsaitim.");
+add("ar","B1","İş Sıfatları","مهم","önemli","sıfat","هذا اجتماع مهم.","Bu önemli bir toplantı.");
+add("ar","B1","İş Sıfatları","ضروري","gerekli","sıfat","هذا العمل ضروري.","Bu iş gerekli.");
+add("ar","B1","İş Sıfatları","صعب","zor","sıfat","هذا العمل صعب.","Bu iş zor.");
+add("ar","B1","İş Sıfatları","سهل","kolay","sıfat","العمل سهل.","İş kolay.");
+add("ar","B1","İş Sıfatları","مؤقت","geçici","sıfat","لدي عقد مؤقت.","Geçici bir sözleşmem var.");
+add("ar","B1","İş Sıfatları","دائم","kalıcı / daimi","sıfat","أبحث عن وظيفة دائمة.","Kalıcı bir iş arıyorum.");
+add("ar","B1","İş Sıfatları","رسمي","resmi","sıfat","هذا اجتماع رسمي.","Bu resmi bir toplantı.");
+add("ar","B1","İş Sıfatları","خاص","özel","sıfat","هذه شركة خاصة.","Bu özel bir şirket.");
+add("ar","B1","İş Sıfatları","حكومي","devlete ait / devlet","sıfat","يعمل في مؤسسة حكومية.","Devlet kurumunda çalışıyor.");
+add("ar","B1","İş Sıfatları","دولي","uluslararası","sıfat","إنها شركة دولية.","Bu uluslararası bir şirket.");
+add("ar","B1","İş Sıfatları","محلي","yerel","sıfat","إنها شركة محلية.","Bu yerel bir şirket.");
+// ======================= B1 — İŞ İFADELERİ =======================
+add("ar","B1","İş İfadeleri","أبحث عن وظيفة","iş arıyorum","ifade","أنا أبحث عن وظيفة جديدة.","Yeni bir iş arıyorum.");
+add("ar","B1","İş İfadeleri","أريد التقدم لهذه الوظيفة","bu işe başvurmak istiyorum","ifade","أريد التقدم لهذه الوظيفة.","Bu işe başvurmak istiyorum.");
+add("ar","B1","İş İfadeleri","لدي خبرة في هذا المجال","bu alanda deneyimim var","ifade","لدي خبرة في هذا المجال لمدة ثلاث سنوات.","Bu alanda üç yıllık deneyimim var.");
+add("ar","B1","İş İfadeleri","متى تبدأ ساعات العمل؟","çalışma saatleri ne zaman başlıyor?","ifade","متى تبدأ ساعات العمل؟","Çalışma saatleri ne zaman başlıyor?");
+add("ar","B1","İş İfadeleri","متى ينتهي الدوام؟","mesai ne zaman bitiyor?","ifade","متى ينتهي الدوام اليوم؟","Bugün mesai ne zaman bitiyor?");
+add("ar","B1","İş İfadeleri","لدي اجتماع","toplantım var","ifade","لدي اجتماع بعد ساعة.","Bir saat sonra toplantım var.");
+add("ar","B1","İş İfadeleri","أنا مشغول الآن","şu anda meşgulüm","ifade","أنا مشغول الآن، سنتحدث لاحقا.","Şu anda meşgulüm, sonra konuşuruz.");
+add("ar","B1","İş İfadeleri","أنا متفرغ غدا","yarın müsaitim","ifade","أنا متفرغ غدا إذا أردت أن نتحدث.","İstersen yarın müsaitim, konuşabiliriz.");
+add("ar","B1","İş İfadeleri","أرسلت سيرتي الذاتية","CV'mi gönderdim","ifade","أرسلت سيرتي الذاتية إلى الشركة.","CV'mi şirkete gönderdim.");
+add("ar","B1","İş İfadeleri","لدي مقابلة عمل","iş görüşmem var","ifade","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","İş İfadeleri","وقعت عقد العمل","iş sözleşmesini imzaladım","ifade","وقعت عقد العمل الأسبوع الماضي.","Geçen hafta iş sözleşmesini imzaladım.");
+add("ar","B1","İş İfadeleri","أريد الاستقالة","istifa etmek istiyorum","ifade","أريد الاستقالة من وظيفتي.","İşimden istifa etmek istiyorum.");
+add("ar","B1","İş İfadeleri","حصلت على ترقية","terfi aldım","ifade","حصلت على ترقية في العمل.","İşimde terfi aldım.");
+add("ar","B1","İş İfadeleri","أعمل بدوام كامل","tam zamanlı çalışıyorum","ifade","أعمل بدوام كامل في شركة دولية.","Uluslararası bir şirkette tam zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","أعمل بدوام جزئي","yarı zamanlı çalışıyorum","ifade","أعمل بدوام جزئي أثناء الدراسة.","Okurken yarı zamanlı çalışıyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 32
+================================================================ */
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم للمستقبل.","Eğitim gelecek için önemlidir.");
+add("ar","B1","Eğitim","مدرسة","okul","isim","أذهب إلى المدرسة كل يوم.","Her gün okula gidiyorum.");
+add("ar","B1","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Eğitim","كلية","fakülte","isim","أدرس في كلية الهندسة.","Mühendislik fakültesinde okuyorum.");
+add("ar","B1","Eğitim","معهد","enstitü / yüksekokul","isim","أدرس في معهد للغات.","Bir dil enstitüsünde okuyorum.");
+add("ar","B1","Eğitim","دورة","kurs","isim","أشارك في دورة لغة.","Bir dil kursuna katılıyorum.");
+add("ar","B1","Eğitim","درس","ders","isim","لدي درس اليوم.","Bugün dersim var.");
+add("ar","B1","Eğitim","محاضرة","konferans / ders","isim","حضرت محاضرة في الجامعة.","Üniversitede bir derse katıldım.");
+add("ar","B1","Eğitim","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
+add("ar","B1","Eğitim","اختبار","test","isim","أجبت عن جميع أسئلة الاختبار.","Testin bütün sorularını cevapladım.");
+add("ar","B1","Eğitim","واجب","ödev","isim","يجب أن أنهي واجبي.","Ödevimi bitirmem gerekiyor.");
+add("ar","B1","Eğitim","مشروع","proje","isim","أعمل على مشروع جامعي.","Bir üniversite projesi üzerinde çalışıyorum.");
+add("ar","B1","Eğitim","بحث","araştırma","isim","أكتب بحثا عن التكنولوجيا.","Teknoloji hakkında bir araştırma yazıyorum.");
+add("ar","B1","Eğitim","مقال","makale","isim","قرأت مقالا مفيدا.","Faydalı bir makale okudum.");
+add("ar","B1","Eğitim","كتاب","kitap","isim","أقرأ كتابا عن التاريخ.","Tarih hakkında bir kitap okuyorum.");
+// ======================= B1 — ÜNİVERSİTE =======================
+add("ar","B1","Üniversite","طالب","öğrenci","isim","أنا طالب في الجامعة.","Üniversite öğrencisiyim.");
+add("ar","B1","Üniversite","طالبة","kız öğrenci","isim","هي طالبة في كلية الطب.","O tıp fakültesinde öğrenci.");
+add("ar","B1","Üniversite","أستاذ","profesör / öğretim görevlisi","isim","الأستاذ يشرح الموضوع.","Profesör konuyu açıklıyor.");
+add("ar","B1","Üniversite","دكتور","doktor / doktora sahibi","isim","هو دكتور في الجامعة.","O üniversitede doktora sahibi.");
+add("ar","B1","Üniversite","زميل","sınıf arkadaşı / arkadaş","isim","درست مع زميلي.","Arkadaşımla ders çalıştım.");
+add("ar","B1","Üniversite","تخصص","uzmanlık alanı / bölüm","isim","ما تخصصك؟","Bölümün nedir?");
+add("ar","B1","Üniversite","قسم","bölüm","isim","أدرس في قسم الحاسوب.","Bilgisayar bölümünde okuyorum.");
+add("ar","B1","Üniversite","مادة","ders / ders konusu","isim","هذه المادة صعبة.","Bu ders zor.");
+add("ar","B1","Üniversite","فصل دراسي","akademik dönem / sömestr","isim","يبدأ الفصل الدراسي في سبتمبر.","Akademik dönem eylülde başlıyor.");
+add("ar","B1","Üniversite","سنة دراسية","akademik yıl","isim","بدأت سنة دراسية جديدة.","Yeni bir akademik yıl başladı.");
+add("ar","B1","Üniversite","درجة","not / derece","isim","حصلت على درجة جيدة.","İyi bir not aldım.");
+add("ar","B1","Üniversite","علامة","puan / not","isim","حصلت على علامة عالية في الامتحان.","Sınavdan yüksek not aldım.");
+add("ar","B1","Üniversite","شهادة","diploma / sertifika","isim","حصلت على شهادة جامعية.","Üniversite diploması aldım.");
+add("ar","B1","Üniversite","بكالوريوس","lisans","isim","أدرس للحصول على درجة البكالوريوس.","Lisans derecesi almak için okuyorum.");
+add("ar","B1","Üniversite","ماجستير","yüksek lisans","isim","أريد دراسة الماجستير.","Yüksek lisans yapmak istiyorum.");
+// ======================= B1 — EĞİTİM FİİLLERİ =======================
+add("ar","B1","Eğitim Fiilleri","يدرس","ders çalışmak / okumak","fiil","أدرس اللغة العربية.","Arapça çalışıyorum.");
+add("ar","B1","Eğitim Fiilleri","يتعلم","öğrenmek","fiil","أتعلم لغة جديدة.","Yeni bir dil öğreniyorum.");
+add("ar","B1","Eğitim Fiilleri","يعلم","öğretmek","fiil","المعلم يعلم الطلاب.","Öğretmen öğrencilere ders veriyor.");
+add("ar","B1","Eğitim Fiilleri","يشرح","açıklamak","fiil","يشرح الأستاذ الدرس.","Öğretmen dersi açıklıyor.");
+add("ar","B1","Eğitim Fiilleri","يقرأ","okumak","fiil","أقرأ كتابا كل أسبوع.","Her hafta bir kitap okuyorum.");
+add("ar","B1","Eğitim Fiilleri","يكتب","yazmak","fiil","أكتب واجبي الآن.","Şimdi ödevimi yazıyorum.");
+add("ar","B1","Eğitim Fiilleri","يحفظ","ezberlemek","fiil","أحاول حفظ الكلمات الجديدة.","Yeni kelimeleri ezberlemeye çalışıyorum.");
+add("ar","B1","Eğitim Fiilleri","يفهم","anlamak","fiil","أفهم الدرس جيدا.","Dersi iyi anlıyorum.");
+add("ar","B1","Eğitim Fiilleri","يجيب","cevaplamak","fiil","أجيب عن السؤال.","Soruyu cevaplıyorum.");
+add("ar","B1","Eğitim Fiilleri","يسأل","sormak","fiil","أريد أن أسأل سؤالا.","Bir soru sormak istiyorum.");
+add("ar","B1","Eğitim Fiilleri","يناقش","tartışmak","fiil","ناقشنا الموضوع في الصف.","Konuyu sınıfta tartıştık.");
+add("ar","B1","Eğitim Fiilleri","يشارك","katılmak","fiil","أشارك في الدرس.","Derse katılıyorum.");
+add("ar","B1","Eğitim Fiilleri","ينجح","başarmak / geçmek","fiil","نجحت في الامتحان.","Sınavı geçtim.");
+add("ar","B1","Eğitim Fiilleri","يرسب","kalmak / başarısız olmak","fiil","رسب في الامتحان.","Sınavda kaldı.");
+add("ar","B1","Eğitim Fiilleri","يتخرج","mezun olmak","fiil","سأتخرج العام المقبل.","Gelecek yıl mezun olacağım.");
+// ======================= B1 — EĞİTİM SIFATLARI =======================
+add("ar","B1","Eğitim Sıfatları","سهل","kolay","sıfat","هذا الدرس سهل.","Bu ders kolay.");
+add("ar","B1","Eğitim Sıfatları","صعب","zor","sıfat","الامتحان صعب.","Sınav zor.");
+add("ar","B1","Eğitim Sıfatları","مهم","önemli","sıfat","هذا الموضوع مهم.","Bu konu önemli.");
+add("ar","B1","Eğitim Sıfatları","مفيد","faydalı","sıfat","هذا الكتاب مفيد.","Bu kitap faydalı.");
+add("ar","B1","Eğitim Sıfatları","ممتع","eğlenceli","sıfat","الدرس ممتع.","Ders eğlenceli.");
+add("ar","B1","Eğitim Sıfatları","ممل","sıkıcı","sıfat","المحاضرة مملة.","Ders sıkıcı.");
+add("ar","B1","Eğitim Sıfatları","ذكي","zeki","sıfat","هو طالب ذكي.","O zeki bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","مجتهد","çalışkan","sıfat","هي طالبة مجتهدة.","O çalışkan bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","كسول","tembel","sıfat","لا تكن كسولا.","Tembel olma.");
+add("ar","B1","Eğitim Sıfatları","ناجح","başarılı","sıfat","هو طالب ناجح.","O başarılı bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","فاشل","başarısız","sıfat","لم يكن الطالب فاشلا.","Öğrenci başarısız değildi.");
+add("ar","B1","Eğitim Sıfatları","متقدم","ileri düzey","sıfat","هذا كتاب متقدم.","Bu ileri düzey bir kitap.");
+add("ar","B1","Eğitim Sıfatları","مبتدئ","başlangıç seviyesinde","sıfat","أنا طالب مبتدئ.","Başlangıç seviyesinde bir öğrenciyim.");
+add("ar","B1","Eğitim Sıfatları","متوسط","orta seviye","sıfat","مستواي متوسط.","Seviyem orta.");
+add("ar","B1","Eğitim Sıfatları","أكاديمي","akademik","sıfat","هذا بحث أكاديمي.","Bu akademik bir araştırmadır.");
+// ======================= B1 — SINAV VE ÇALIŞMA =======================
+add("ar","B1","Sınav","استعداد","hazırlık","isim","أحتاج إلى مزيد من الاستعداد.","Daha fazla hazırlığa ihtiyacım var.");
+add("ar","B1","Sınav","مراجعة","tekrar / gözden geçirme","isim","أقوم بمراجعة الدرس.","Dersi tekrar ediyorum.");
+add("ar","B1","Sınav","نتيجة","sonuç","isim","ظهرت نتيجة الامتحان.","Sınav sonucu açıklandı.");
+add("ar","B1","Sınav","نجاح","başarı","isim","أتمنى لك النجاح.","Sana başarılar dilerim.");
+add("ar","B1","Sınav","رسوب","başarısızlık / kalma","isim","كان رسوبه مفاجئا.","Kalması şaşırtıcıydı.");
+add("ar","B1","Sınav","سؤال","soru","isim","هذا السؤال صعب.","Bu soru zor.");
+add("ar","B1","Sınav","إجابة","cevap","isim","إجابتي صحيحة.","Cevabım doğru.");
+add("ar","B1","Sınav","خطأ","hata / yanlış","isim","ارتكبت خطأ في الامتحان.","Sınavda bir hata yaptım.");
+add("ar","B1","Sınav","وقت","zaman","isim","ليس لدي وقت كاف.","Yeterli zamanım yok.");
+add("ar","B1","Sınav","علامة كاملة","tam puan","isim","حصلت على علامة كاملة.","Tam puan aldım.");
+add("ar","B1","Sınav","درجة عالية","yüksek not","isim","حصلت على درجة عالية.","Yüksek not aldım.");
+add("ar","B1","Sınav","درجة منخفضة","düşük not","isim","حصلت على درجة منخفضة.","Düşük not aldım.");
+add("ar","B1","Sınav","امتحان نهائي","final sınavı","isim","غدا الامتحان النهائي.","Yarın final sınavı var.");
+add("ar","B1","Sınav","امتحان شفهي","sözlü sınav","isim","لدي امتحان شفهي غدا.","Yarın sözlü sınavım var.");
+add("ar","B1","Sınav","امتحان كتابي","yazılı sınav","isim","الامتحان الكتابي طويل.","Yazılı sınav uzun.");
+// ======================= B1 — EĞİTİM İFADELERİ =======================
+add("ar","B1","Eğitim İfadeleri","أدرس في الجامعة","üniversitede okuyorum","ifade","أدرس في الجامعة منذ عامين.","İki yıldır üniversitede okuyorum.");
+add("ar","B1","Eğitim İfadeleri","ما تخصصك؟","bölümün nedir?","ifade","ما تخصصك في الجامعة؟","Üniversitede bölümün nedir?");
+add("ar","B1","Eğitim İfadeleri","أريد دراسة الماجستير","yüksek lisans yapmak istiyorum","ifade","أريد دراسة الماجستير في الخارج.","Yurt dışında yüksek lisans yapmak istiyorum.");
+add("ar","B1","Eğitim İfadeleri","لدي امتحان غدا","yarın sınavım var","ifade","لدي امتحان غدا، لذلك يجب أن أدرس.","Yarın sınavım var, bu yüzden çalışmam gerekiyor.");
+add("ar","B1","Eğitim İfadeleri","أحتاج إلى الدراسة","ders çalışmam gerekiyor","ifade","أحتاج إلى الدراسة الليلة.","Bu gece ders çalışmam gerekiyor.");
+add("ar","B1","Eğitim İfadeleri","لا أفهم هذا السؤال","bu soruyu anlamıyorum","ifade","عفوا، لا أفهم هذا السؤال.","Affedersiniz, bu soruyu anlamıyorum.");
+add("ar","B1","Eğitim İfadeleri","هل يمكنك أن تشرح؟","açıklayabilir misin?","ifade","هل يمكنك أن تشرح هذا الموضوع؟","Bu konuyu açıklayabilir misin?");
+add("ar","B1","Eğitim İfadeleri","هل يمكنني أن أسأل سؤالا؟","bir soru sorabilir miyim?","ifade","هل يمكنني أن أسأل سؤالا؟","Bir soru sorabilir miyim?");
+add("ar","B1","Eğitim İfadeleri","متى يبدأ الدرس؟","ders ne zaman başlıyor?","ifade","متى يبدأ الدرس اليوم؟","Bugün ders ne zaman başlıyor?");
+add("ar","B1","Eğitim İfadeleri","متى ينتهي الدرس؟","ders ne zaman bitiyor?","ifade","متى ينتهي الدرس؟","Ders ne zaman bitiyor?");
+add("ar","B1","Eğitim İfadeleri","أين قاعة المحاضرات؟","derslik / konferans salonu nerede?","ifade","أين قاعة المحاضرات من فضلك؟","Derslik nerede lütfen?");
+add("ar","B1","Eğitim İfadeleri","أريد التسجيل في دورة","bir kursa kayıt olmak istiyorum","ifade","أريد التسجيل في دورة لغة عربية.","Arapça kursuna kayıt olmak istiyorum.");
+add("ar","B1","Eğitim İfadeleri","نجحت في الامتحان","sınavı geçtim","ifade","نجحت في الامتحان بدرجة عالية.","Sınavı yüksek notla geçtim.");
+add("ar","B1","Eğitim İfadeleri","سأعيد الامتحان","sınava tekrar gireceğim","ifade","سأعيد الامتحان الشهر المقبل.","Gelecek ay sınava tekrar gireceğim.");
+add("ar","B1","Eğitim İfadeleri","سأتخرج العام المقبل","gelecek yıl mezun olacağım","ifade","سأتخرج من الجامعة العام المقبل.","Gelecek yıl üniversiteden mezun olacağım.");
+/* ================================================================
+   ARAPÇA B1 — PART 33
+================================================================ */
+// ======================= B1 — SEYAHAT =======================
+add("ar","B1","Seyahat","سفر","seyahat","isim","أحب السفر إلى بلدان جديدة.","Yeni ülkelere seyahat etmeyi seviyorum.");
+add("ar","B1","Seyahat","رحلة","gezi / yolculuk","isim","كانت الرحلة ممتعة.","Gezi eğlenceliydi.");
+add("ar","B1","Seyahat","رحلة جوية","uçak yolculuğu","isim","حجزت رحلة جوية إلى فيينا.","Viyana'ya uçak bileti aldım.");
+add("ar","B1","Seyahat","رحلة عمل","iş seyahati","isim","سافرت في رحلة عمل.","İş seyahatine çıktım.");
+add("ar","B1","Seyahat","سياحة","turizm","isim","السياحة مهمة للاقتصاد.","Turizm ekonomi için önemlidir.");
+add("ar","B1","Seyahat","سائح","turist","isim","يوجد الكثير من السياح هنا.","Burada çok turist var.");
+add("ar","B1","Seyahat","مسافر","yolcu / seyahat eden kişi","isim","المسافر ينتظر الطائرة.","Yolcu uçağı bekliyor.");
+add("ar","B1","Seyahat","وجهة","varış noktası / destinasyon","isim","هذه وجهتي المفضلة.","Burası en sevdiğim destinasyon.");
+add("ar","B1","Seyahat","بلد","ülke","isim","أريد زيارة بلد جديد.","Yeni bir ülke ziyaret etmek istiyorum.");
+add("ar","B1","Seyahat","مدينة","şehir","isim","هذه مدينة جميلة.","Bu güzel bir şehir.");
+add("ar","B1","Seyahat","حدود","sınır","isim","عبرنا الحدود.","Sınırı geçtik.");
+add("ar","B1","Seyahat","جواز سفر","pasaport","isim","نسيت جواز سفري.","Pasaportumu unuttum.");
+add("ar","B1","Seyahat","تأشيرة","vize","isim","أحتاج إلى تأشيرة.","Vizeye ihtiyacım var.");
+add("ar","B1","Seyahat","حجز","rezervasyon","isim","لدي حجز في الفندق.","Otelde rezervasyonum var.");
+add("ar","B1","Seyahat","تذكرة","bilet","isim","اشتريت تذكرة ذهاب وعودة.","Gidiş-dönüş bileti aldım.");
+// ======================= B1 — HAVAALANI =======================
+add("ar","B1","Havaalanı","مطار","havaalanı","isim","وصلت إلى المطار مبكرا.","Havaalanına erken geldim.");
+add("ar","B1","Havaalanı","طائرة","uçak","isim","الطائرة ستصل بعد ساعة.","Uçak bir saat sonra varacak.");
+add("ar","B1","Havaalanı","رحلة","uçuş","isim","رحلتي تأخرت.","Uçuşum gecikti.");
+add("ar","B1","Havaalanı","بوابة","kapı / gate","isim","أين بوابة الرحلة؟","Uçuşun kapısı nerede?");
+add("ar","B1","Havaalanı","صالة","salon / terminal alanı","isim","انتظر في الصالة.","Salonda bekle.");
+add("ar","B1","Havaalanı","مغادرة","kalkış","isim","موعد المغادرة الساعة العاشرة.","Kalkış saati saat onda.");
+add("ar","B1","Havaalanı","وصول","varış","isim","موعد الوصول الساعة الثانية.","Varış saati saat iki.");
+add("ar","B1","Havaalanı","تسجيل الوصول","check-in","isim","بدأ تسجيل الوصول.","Check-in başladı.");
+add("ar","B1","Havaalanı","أمتعة","bagaj","isim","أين أستلم أمتعتي؟","Bagajımı nereden alabilirim?");
+add("ar","B1","Havaalanı","حقيبة","çanta / bavul","isim","حقيبتي ثقيلة.","Çantam ağır.");
+add("ar","B1","Havaalanı","حقيبة سفر","seyahat çantası / bavul","isim","وضعت ملابسي في حقيبة السفر.","Kıyafetlerimi bavula koydum.");
+add("ar","B1","Havaalanı","حقيبة يد","el çantası / kabin bagajı","isim","هذه حقيبة يدي.","Bu benim el çantam.");
+add("ar","B1","Havaalanı","جمارك","gümrük","isim","مررت عبر الجمارك.","Gümrükten geçtim.");
+add("ar","B1","Havaalanı","تفتيش أمني","güvenlik kontrolü","isim","يجب أن تمر عبر التفتيش الأمني.","Güvenlik kontrolünden geçmelisin.");
+add("ar","B1","Havaalanı","تأخير","gecikme","isim","هناك تأخير في الرحلة.","Uçuşta gecikme var.");
+// ======================= B1 — ULAŞIM =======================
+add("ar","B1","Ulaşım","مواصلات","ulaşım / toplu taşıma","isim","المواصلات العامة جيدة هنا.","Burada toplu taşıma iyi.");
+add("ar","B1","Ulaşım","حافلة","otobüs","isim","أذهب إلى العمل بالحافلة.","İşe otobüsle gidiyorum.");
+add("ar","B1","Ulaşım","قطار","tren","isim","سافرت بالقطار.","Trenle seyahat ettim.");
+add("ar","B1","Ulaşım","مترو","metro","isim","أستخدم المترو كل يوم.","Her gün metro kullanıyorum.");
+add("ar","B1","Ulaşım","ترام","tramvay","isim","أخذت الترام إلى المركز.","Merkeze tramvayla gittim.");
+add("ar","B1","Ulaşım","سيارة أجرة","taksi","isim","أخذت سيارة أجرة إلى الفندق.","Otele taksiyle gittim.");
+add("ar","B1","Ulaşım","سيارة","araba","isim","أستأجر سيارة في العطلة.","Tatil sırasında araba kiralıyorum.");
+add("ar","B1","Ulaşım","دراجة","bisiklet","isim","أذهب إلى الجامعة بالدراجة.","Üniversiteye bisikletle gidiyorum.");
+add("ar","B1","Ulaşım","محطة","istasyon / durak","isim","أنتظر في المحطة.","Durakta bekliyorum.");
+add("ar","B1","Ulaşım","محطة القطار","tren istasyonu","isim","أين محطة القطار؟","Tren istasyonu nerede?");
+add("ar","B1","Ulaşım","محطة الحافلات","otobüs terminali","isim","وصلنا إلى محطة الحافلات.","Otobüs terminaline vardık.");
+add("ar","B1","Ulaşım","موقف","durak / park yeri","isim","الحافلة في الموقف.","Otobüs durakta.");
+add("ar","B1","Ulaşım","طريق","yol","isim","هذا الطريق طويل.","Bu yol uzun.");
+add("ar","B1","Ulaşım","شارع","sokak / cadde","isim","الفندق في هذا الشارع.","Otel bu caddede.");
+add("ar","B1","Ulaşım","اتجاه","yön","isim","هل هذا هو الاتجاه الصحيح؟","Bu doğru yön mü?");
+// ======================= B1 — OTEL =======================
+add("ar","B1","Otel","فندق","otel","isim","حجزت غرفة في الفندق.","Otelde bir oda ayırttım.");
+add("ar","B1","Otel","غرفة مفردة","tek kişilik oda","isim","أريد غرفة مفردة.","Tek kişilik oda istiyorum.");
+add("ar","B1","Otel","غرفة مزدوجة","çift kişilik oda","isim","حجزت غرفة مزدوجة.","Çift kişilik oda ayırttım.");
+add("ar","B1","Otel","استقبال","resepsiyon","isim","ذهبت إلى الاستقبال.","Resepsiyona gittim.");
+add("ar","B1","Otel","موظف الاستقبال","resepsiyon görevlisi","isim","تحدثت مع موظف الاستقبال.","Resepsiyon görevlisiyle konuştum.");
+add("ar","B1","Otel","مفتاح","anahtar","isim","أين مفتاح غرفتي؟","Odamın anahtarı nerede?");
+add("ar","B1","Otel","بطاقة الغرفة","oda kartı","isim","نسيت بطاقة الغرفة.","Oda kartımı unuttum.");
+add("ar","B1","Otel","طابق","kat","isim","غرفتي في الطابق الثالث.","Odam üçüncü katta.");
+add("ar","B1","Otel","سرير","yatak","isim","الغرفة فيها سريران.","Odada iki yatak var.");
+add("ar","B1","Otel","إقامة","konaklama","isim","كانت إقامتي مريحة.","Konaklamam rahattı.");
+add("ar","B1","Otel","ليلة","gece","isim","سأبقى لثلاث ليال.","Üç gece kalacağım.");
+add("ar","B1","Otel","خدمة الغرف","oda servisi","isim","طلبت خدمة الغرف.","Oda servisi istedim.");
+add("ar","B1","Otel","وجبة الإفطار","kahvaltı","isim","الإفطار مشمول في السعر.","Kahvaltı fiyata dahil.");
+add("ar","B1","Otel","تسجيل المغادرة","check-out","isim","متى وقت تسجيل المغادرة؟","Check-out saati ne zaman?");
+// ======================= B1 — SEYAHAT FİİLLERİ =======================
+add("ar","B1","Seyahat Fiilleri","يسافر","seyahat etmek","fiil","أسافر كثيرا للعمل.","İş için çok seyahat ediyorum.");
+add("ar","B1","Seyahat Fiilleri","يصل","varmak","fiil","وصلت إلى الفندق.","Otele vardım.");
+add("ar","B1","Seyahat Fiilleri","يغادر","ayrılmak / hareket etmek","fiil","سنغادر غدا صباحا.","Yarın sabah ayrılacağız.");
+add("ar","B1","Seyahat Fiilleri","يحجز","rezervasyon yapmak","fiil","حجزت تذكرة الطائرة.","Uçak bileti ayırttım.");
+add("ar","B1","Seyahat Fiilleri","يستأجر","kiralamak","fiil","استأجرت سيارة.","Araba kiraladım.");
+add("ar","B1","Seyahat Fiilleri","يركب","binmek","fiil","ركبت القطار.","Trene bindim.");
+add("ar","B1","Seyahat Fiilleri","ينزل","inmek","fiil","نزلت من الحافلة.","Otobüsten indim.");
+add("ar","B1","Seyahat Fiilleri","يعبر","geçmek","fiil","عبرنا الحدود.","Sınırı geçtik.");
+add("ar","B1","Seyahat Fiilleri","يستكشف","keşfetmek","fiil","أحب استكشاف المدن الجديدة.","Yeni şehirleri keşfetmeyi seviyorum.");
+add("ar","B1","Seyahat Fiilleri","يزور","ziyaret etmek","fiil","زرت العديد من البلدان.","Birçok ülke ziyaret ettim.");
+add("ar","B1","Seyahat Fiilleri","يقيم","konaklamak","fiil","أقيم في فندق قريب من المركز.","Merkeze yakın bir otelde kalıyorum.");
+add("ar","B1","Seyahat Fiilleri","ينتظر","beklemek","fiil","أنتظر الطائرة.","Uçağı bekliyorum.");
+add("ar","B1","Seyahat Fiilleri","يتأخر","gecikmek","fiil","تأخرت الطائرة ساعتين.","Uçak iki saat gecikti.");
+add("ar","B1","Seyahat Fiilleri","يلغي","iptal etmek","fiil","ألغيت الرحلة.","Uçuşu iptal ettim.");
+add("ar","B1","Seyahat Fiilleri","يفوّت","kaçırmak","fiil","فاتني القطار.","Treni kaçırdım.");
+// ======================= B1 — SEYAHAT SIFATLARI =======================
+add("ar","B1","Seyahat Sıfatları","سياحي","turistik","sıfat","هذه منطقة سياحية.","Burası turistik bir bölge.");
+add("ar","B1","Seyahat Sıfatları","مزدحم","kalabalık","sıfat","المطار مزدحم اليوم.","Havaalanı bugün kalabalık.");
+add("ar","B1","Seyahat Sıfatları","هادئ","sakin","sıfat","الفندق هادئ.","Otel sakin.");
+add("ar","B1","Seyahat Sıfatları","مريح","rahat","sıfat","الرحلة كانت مريحة.","Yolculuk rahattı.");
+add("ar","B1","Seyahat Sıfatları","متعب","yorucu","sıfat","كانت الرحلة متعبة.","Yolculuk yorucuydu.");
+add("ar","B1","Seyahat Sıfatları","طويل","uzun","sıfat","كانت الرحلة طويلة.","Yolculuk uzundu.");
+add("ar","B1","Seyahat Sıfatları","قصير","kısa","sıfat","كانت الرحلة قصيرة.","Yolculuk kısaydı.");
+add("ar","B1","Seyahat Sıfatları","بعيد","uzak","sıfat","المطار بعيد عن المدينة.","Havaalanı şehirden uzak.");
+add("ar","B1","Seyahat Sıfatları","قريب","yakın","sıfat","الفندق قريب من المحطة.","Otel istasyona yakın.");
+add("ar","B1","Seyahat Sıfatları","دولي","uluslararası","sıfat","هذا مطار دولي.","Bu uluslararası bir havaalanı.");
+add("ar","B1","Seyahat Sıfatları","محلي","yerel","sıfat","هذه رحلة محلية.","Bu iç hat uçuşu.");
+add("ar","B1","Seyahat Sıfatları","متأخر","gecikmiş","sıfat","القطار متأخر.","Tren gecikti.");
+add("ar","B1","Seyahat Sıfatları","مبكر","erken","sıfat","وصلت مبكرا.","Erken geldim.");
+add("ar","B1","Seyahat Sıfatları","متاح","mevcut / müsait","sıfat","هل يوجد فندق متاح؟","Müsait bir otel var mı?");
+add("ar","B1","Seyahat Sıfatları","محجوز","rezerve edilmiş","sıfat","كل الغرف محجوزة.","Bütün odalar rezerve edilmiş.");
+// ======================= B1 — SEYAHAT İFADELERİ =======================
+add("ar","B1","Seyahat İfadeleri","أريد حجز تذكرة","bilet ayırtmak istiyorum","ifade","أريد حجز تذكرة إلى فيينا.","Viyana'ya bilet ayırtmak istiyorum.");
+add("ar","B1","Seyahat İfadeleri","أين المطار؟","havaalanı nerede?","ifade","عفوا، أين المطار؟","Affedersiniz, havaalanı nerede?");
+add("ar","B1","Seyahat İfadeleri","أين بوابة الرحلة؟","uçuş kapısı nerede?","ifade","أين بوابة الرحلة إلى إسطنبول؟","İstanbul uçuşunun kapısı nerede?");
+add("ar","B1","Seyahat İfadeleri","متى تغادر الطائرة؟","uçak ne zaman kalkıyor?","ifade","متى تغادر الطائرة؟","Uçak ne zaman kalkıyor?");
+add("ar","B1","Seyahat İfadeleri","متى تصل الطائرة؟","uçak ne zaman varıyor?","ifade","متى تصل الطائرة إلى فيينا؟","Uçak Viyana'ya ne zaman varıyor?");
+add("ar","B1","Seyahat İfadeleri","رحلتي تأخرت","uçuşum gecikti","ifade","عفوا، رحلتي تأخرت.","Affedersiniz, uçuşum gecikti.");
+add("ar","B1","Seyahat İfadeleri","أين أستلم أمتعتي؟","bagajımı nereden alırım?","ifade","أين أستلم أمتعتي بعد الوصول؟","Varıştan sonra bagajımı nereden alırım?");
+add("ar","B1","Seyahat İfadeleri","لدي حجز في الفندق","otelde rezervasyonum var","ifade","لدي حجز في الفندق باسم محمد.","Muhammed adına otelde rezervasyonum var.");
+add("ar","B1","Seyahat İfadeleri","أريد تسجيل الدخول","check-in yapmak istiyorum","ifade","أريد تسجيل الدخول إلى غرفتي.","Odam için check-in yapmak istiyorum.");
+add("ar","B1","Seyahat İfadeleri","متى تسجيل المغادرة؟","check-out ne zaman?","ifade","متى وقت تسجيل المغادرة؟","Check-out saati ne zaman?");
+add("ar","B1","Seyahat İfadeleri","أريد غرفة لليلة واحدة","bir gecelik oda istiyorum","ifade","أريد غرفة لليلة واحدة.","Bir gecelik oda istiyorum.");
+add("ar","B1","Seyahat İfadeleri","أين محطة القطار؟","tren istasyonu nerede?","ifade","أين محطة القطار الأقرب؟","En yakın tren istasyonu nerede?");
+add("ar","B1","Seyahat İfadeleri","كيف أصل إلى وسط المدينة؟","şehir merkezine nasıl giderim?","ifade","كيف أصل إلى وسط المدينة من هنا؟","Buradan şehir merkezine nasıl giderim?");
+add("ar","B1","Seyahat İfadeleri","أريد استئجار سيارة","araba kiralamak istiyorum","ifade","أريد استئجار سيارة لمدة ثلاثة أيام.","Üç günlüğüne araba kiralamak istiyorum.");
+add("ar","B1","Seyahat İfadeleri","كم يستغرق الطريق؟","yol ne kadar sürer?","ifade","كم يستغرق الطريق إلى المطار؟","Havaalanına yol ne kadar sürer?");
+/* ================================================================
+   ARAPÇA B1 — PART 34
+================================================================ */
+// ======================= B1 — ALIŞVERİŞ =======================
+add("ar","B1","Alışveriş","تسوق","alışveriş","isim","أحب التسوق في عطلة نهاية الأسبوع.","Hafta sonu alışveriş yapmayı seviyorum.");
+add("ar","B1","Alışveriş","متجر","mağaza","isim","هذا المتجر قريب من منزلي.","Bu mağaza evime yakın.");
+add("ar","B1","Alışveriş","سوق","pazar / çarşı","isim","ذهبت إلى السوق صباحا.","Sabah pazara gittim.");
+add("ar","B1","Alışveriş","مركز تجاري","alışveriş merkezi","isim","يوجد مركز تجاري كبير هنا.","Burada büyük bir alışveriş merkezi var.");
+add("ar","B1","Alışveriş","محل","dükkan / mağaza","isim","هذا المحل يبيع الملابس.","Bu dükkân kıyafet satıyor.");
+add("ar","B1","Alışveriş","بائع","satıcı","isim","سألت البائع عن السعر.","Satıcıya fiyatı sordum.");
+add("ar","B1","Alışveriş","مشتري","alıcı","isim","المشتري يريد شراء المنتج.","Alıcı ürünü satın almak istiyor.");
+add("ar","B1","Alışveriş","منتج","ürün","isim","هذا المنتج جديد.","Bu ürün yeni.");
+add("ar","B1","Alışveriş","سلعة","mal / ürün","isim","هذه السلعة غالية.","Bu ürün pahalı.");
+add("ar","B1","Alışveriş","بضاعة","mal / ticari ürün","isim","وصلت البضاعة الجديدة.","Yeni ürünler geldi.");
+add("ar","B1","Alışveriş","سعر","fiyat","isim","ما سعر هذا؟","Bunun fiyatı ne?");
+add("ar","B1","Alışveriş","خصم","indirim","isim","هناك خصم كبير اليوم.","Bugün büyük bir indirim var.");
+add("ar","B1","Alışveriş","عرض","kampanya / teklif","isim","هذا المنتج عليه عرض خاص.","Bu üründe özel kampanya var.");
+add("ar","B1","Alışveriş","فاتورة","fatura","isim","أريد الفاتورة من فضلك.","Faturayı istiyorum lütfen.");
+add("ar","B1","Alışveriş","إيصال","fiş","isim","احتفظ بالإيصال.","Fişi sakla.");
+// ======================= B1 — KIYAFETLER =======================
+add("ar","B1","Kıyafet","ملابس","kıyafet","isim","أحتاج إلى شراء ملابس جديدة.","Yeni kıyafetler almam gerekiyor.");
+add("ar","B1","Kıyafet","قميص","gömlek","isim","أحب هذا القميص.","Bu gömleği seviyorum.");
+add("ar","B1","Kıyafet","تيشيرت","tişört","isim","اشتريت تيشيرتا جديدا.","Yeni bir tişört aldım.");
+add("ar","B1","Kıyafet","بنطال","pantolon","isim","هذا البنطال طويل.","Bu pantolon uzun.");
+add("ar","B1","Kıyafet","جينز","kot","isim","أرتدي بنطال جينز.","Kot pantolon giyiyorum.");
+add("ar","B1","Kıyafet","فستان","elbise","isim","الفستان جميل.","Elbise güzel.");
+add("ar","B1","Kıyafet","تنورة","etek","isim","هذه التنورة قصيرة.","Bu etek kısa.");
+add("ar","B1","Kıyafet","سترة","ceket / hırka","isim","أحتاج إلى سترة دافئة.","Sıcak bir cekete ihtiyacım var.");
+add("ar","B1","Kıyafet","معطف","palto / kaban","isim","ارتديت معطفي لأن الجو بارد.","Hava soğuk olduğu için paltomu giydim.");
+add("ar","B1","Kıyafet","حذاء","ayakkabı","isim","أريد شراء حذاء رياضي.","Spor ayakkabı almak istiyorum.");
+add("ar","B1","Kıyafet","جورب","çorap","isim","أحتاج إلى زوج من الجوارب.","Bir çift çoraba ihtiyacım var.");
+add("ar","B1","Kıyafet","قبعة","şapka","isim","اشتريت قبعة جديدة.","Yeni bir şapka aldım.");
+add("ar","B1","Kıyafet","حزام","kemer","isim","هذا الحزام مصنوع من الجلد.","Bu kemer deriden yapılmış.");
+add("ar","B1","Kıyafet","حقيبة","çanta","isim","هذه حقيبة جميلة.","Bu güzel bir çanta.");
+add("ar","B1","Kıyafet","مقاس","beden / ölçü","isim","ما مقاسك؟","Bedenin kaç?");
+// ======================= B1 — RENKLER VE ÖZELLİKLER =======================
+add("ar","B1","Renkler","أحمر","kırmızı","sıfat","أحب اللون الأحمر.","Kırmızı rengi seviyorum.");
+add("ar","B1","Renkler","أزرق","mavi","sıfat","هذا القميص أزرق.","Bu gömlek mavi.");
+add("ar","B1","Renkler","أخضر","yeşil","sıfat","اشتريت فستانا أخضر.","Yeşil bir elbise aldım.");
+add("ar","B1","Renkler","أصفر","sarı","sıfat","الحذاء أصفر.","Ayakkabı sarı.");
+add("ar","B1","Renkler","أسود","siyah","sıfat","أريد قميصا أسود.","Siyah bir gömlek istiyorum.");
+add("ar","B1","Renkler","أبيض","beyaz","sıfat","القميص أبيض.","Gömlek beyaz.");
+add("ar","B1","Renkler","رمادي","gri","sıfat","أرتدي معطفا رماديا.","Gri bir palto giyiyorum.");
+add("ar","B1","Renkler","بني","kahverengi","sıfat","أريد حذاء بنيا.","Kahverengi ayakkabı istiyorum.");
+add("ar","B1","Renkler","وردي","pembe","sıfat","هذا الفستان وردي.","Bu elbise pembe.");
+add("ar","B1","Renkler","برتقالي","turuncu","sıfat","اشتريت قميصا برتقاليا.","Turuncu bir gömlek aldım.");
+add("ar","B1","Kıyafet Özellikleri","جميل","güzel","sıfat","هذا القميص جميل.","Bu gömlek güzel.");
+add("ar","B1","Kıyafet Özellikleri","قبيح","çirkin","sıfat","هذا اللون قبيح.","Bu renk çirkin.");
+add("ar","B1","Kıyafet Özellikleri","جديد","yeni","sıfat","هذا الحذاء جديد.","Bu ayakkabı yeni.");
+add("ar","B1","Kıyafet Özellikleri","قديم","eski","sıfat","هذا المعطف قديم.","Bu palto eski.");
+add("ar","B1","Kıyafet Özellikleri","مريح","rahat","sıfat","هذا الحذاء مريح.","Bu ayakkabı rahat.");
+// ======================= B1 — ÖDEME =======================
+add("ar","B1","Ödeme","مال","para","isim","ليس لدي مال كاف.","Yeterli param yok.");
+add("ar","B1","Ödeme","نقد","nakit","isim","هل يمكنني الدفع نقدا؟","Nakit ödeyebilir miyim?");
+add("ar","B1","Ödeme","بطاقة","kart","isim","أدفع بالبطاقة.","Kartla ödüyorum.");
+add("ar","B1","Ödeme","بطاقة ائتمان","kredi kartı","isim","هل تقبلون بطاقة الائتمان؟","Kredi kartı kabul ediyor musunuz?");
+add("ar","B1","Ödeme","بطاقة خصم","banka kartı","isim","سأدفع ببطاقة الخصم.","Banka kartıyla ödeyeceğim.");
+add("ar","B1","Ödeme","حساب","hesap","isim","أريد دفع الحساب.","Hesabı ödemek istiyorum.");
+add("ar","B1","Ödeme","مبلغ","miktar / tutar","isim","هذا مبلغ كبير.","Bu büyük bir miktar.");
+add("ar","B1","Ödeme","تكلفة","maliyet","isim","كم تكلفة هذا المنتج؟","Bu ürünün maliyeti ne kadar?");
+add("ar","B1","Ödeme","قيمة","değer / miktar","isim","ما قيمة هذا؟","Bunun değeri ne kadar?");
+add("ar","B1","Ödeme","غالي","pahalı","sıfat","هذا المنتج غالي جدا.","Bu ürün çok pahalı.");
+add("ar","B1","Ödeme","رخيص","ucuz","sıfat","هذا المنتج رخيص.","Bu ürün ucuz.");
+add("ar","B1","Ödeme","مجاني","ücretsiz","sıfat","الدخول مجاني.","Giriş ücretsiz.");
+add("ar","B1","Ödeme","متوفر","mevcut","sıfat","هذا المنتج متوفر.","Bu ürün mevcut.");
+add("ar","B1","Ödeme","غير متوفر","mevcut değil","sıfat","هذا المقاس غير متوفر.","Bu beden mevcut değil.");
+add("ar","B1","Ödeme","مناسب","uygun","sıfat","السعر مناسب.","Fiyat uygun.");
+// ======================= B1 — ALIŞVERİŞ FİİLLERİ =======================
+add("ar","B1","Alışveriş Fiilleri","يشتري","satın almak","fiil","أريد شراء هاتف جديد.","Yeni bir telefon satın almak istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يبيع","satmak","fiil","هذا المتجر يبيع الملابس.","Bu mağaza kıyafet satıyor.");
+add("ar","B1","Alışveriş Fiilleri","يدفع","ödemek","fiil","سأدفع الآن.","Şimdi ödeyeceğim.");
+add("ar","B1","Alışveriş Fiilleri","يختار","seçmek","fiil","اخترت قميصا أزرق.","Mavi bir gömlek seçtim.");
+add("ar","B1","Alışveriş Fiilleri","يجرب","denemek","fiil","أريد أن أجرب هذا القميص.","Bu gömleği denemek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يقيس","ölçmek / denemek","fiil","قست مقاس الحذاء.","Ayakkabının numarasını ölçtüm.");
+add("ar","B1","Alışveriş Fiilleri","يقارن","karşılaştırmak","fiil","أقارن بين الأسعار.","Fiyatları karşılaştırıyorum.");
+add("ar","B1","Alışveriş Fiilleri","يستبدل","değiştirmek","fiil","أريد استبدال هذا المنتج.","Bu ürünü değiştirmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يعيد","iade etmek","fiil","أريد إعادة المنتج.","Ürünü iade etmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يطلب","sipariş vermek","fiil","أريد طلب هذا المنتج.","Bu ürünü sipariş etmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يستلم","teslim almak","fiil","استلمت طلبي اليوم.","Siparişimi bugün teslim aldım.");
+add("ar","B1","Alışveriş Fiilleri","يشحن","kargolamak / göndermek","fiil","سيتم شحن المنتج غدا.","Ürün yarın gönderilecek.");
+add("ar","B1","Alışveriş Fiilleri","يبحث عن","aramak","fiil","أبحث عن مقاس أكبر.","Daha büyük bir beden arıyorum.");
+add("ar","B1","Alışveriş Fiilleri","يحتاج إلى","ihtiyaç duymak","fiil","أحتاج إلى حذاء جديد.","Yeni bir ayakkabıya ihtiyacım var.");
+add("ar","B1","Alışveriş Fiilleri","يريد","istemek","fiil","أريد شراء هذا المنتج.","Bu ürünü satın almak istiyorum.");
+// ======================= B1 — ALIŞVERİŞ İFADELERİ =======================
+add("ar","B1","Alışveriş İfadeleri","كم سعر هذا؟","bunun fiyatı ne kadar?","ifade","عفوا، كم سعر هذا؟","Affedersiniz, bunun fiyatı ne kadar?");
+add("ar","B1","Alışveriş İfadeleri","هل لديكم مقاس أكبر؟","daha büyük bedeniniz var mı?","ifade","هل لديكم مقاس أكبر من هذا؟","Bunun daha büyük bedeni var mı?");
+add("ar","B1","Alışveriş İfadeleri","هل لديكم مقاس أصغر؟","daha küçük bedeniniz var mı?","ifade","هل لديكم مقاس أصغر؟","Daha küçük bedeniniz var mı?");
+add("ar","B1","Alışveriş İfadeleri","هل يمكنني تجربة هذا؟","bunu deneyebilir miyim?","ifade","هل يمكنني تجربة هذا القميص؟","Bu gömleği deneyebilir miyim?");
+add("ar","B1","Alışveriş İfadeleri","هل يوجد خصم؟","indirim var mı?","ifade","هل يوجد خصم على هذا المنتج؟","Bu üründe indirim var mı?");
+add("ar","B1","Alışveriş İfadeleri","هذا غالي جدا","bu çok pahalı","ifade","عذرا، هذا غالي جدا بالنسبة لي.","Üzgünüm, bu benim için çok pahalı.");
+add("ar","B1","Alışveriş İfadeleri","هل يمكن أن تخفض السعر؟","fiyatı düşürebilir misiniz?","ifade","هل يمكن أن تخفض السعر قليلا؟","Fiyatı biraz düşürebilir misiniz?");
+add("ar","B1","Alışveriş İfadeleri","أريد شراء هذا","bunu satın almak istiyorum","ifade","أريد شراء هذا القميص.","Bu gömleği satın almak istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","أريد الدفع بالبطاقة","kartla ödemek istiyorum","ifade","أريد الدفع ببطاقة الائتمان.","Kredi kartıyla ödemek istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","هل يمكنني الدفع نقدا؟","nakit ödeyebilir miyim?","ifade","هل يمكنني الدفع نقدا؟","Nakit ödeyebilir miyim?");
+add("ar","B1","Alışveriş İfadeleri","أريد الفاتورة","faturayı istiyorum","ifade","أريد الفاتورة من فضلك.","Faturayı istiyorum lütfen.");
+add("ar","B1","Alışveriş İfadeleri","أريد الإيصال","fişi istiyorum","ifade","أريد الإيصال من فضلك.","Fişi istiyorum lütfen.");
+add("ar","B1","Alışveriş İfadeleri","أريد استبدال المنتج","ürünü değiştirmek istiyorum","ifade","أريد استبدال المنتج لأنه صغير.","Ürünü küçük olduğu için değiştirmek istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","أريد إرجاع المنتج","ürünü iade etmek istiyorum","ifade","أريد إرجاع المنتج لأنه لا يناسبني.","Ürünü bana uymadığı için iade etmek istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","متى يصل طلبي؟","siparişim ne zaman gelir?","ifade","متى يصل طلبي إلى المنزل؟","Siparişim eve ne zaman gelir?");
+/* ================================================================
+   ARAPÇA B1 — PART 35
+================================================================ */
+// ======================= B1 — SAĞLIK =======================
+add("ar","B1","Sağlık","صحة","sağlık","isim","الصحة أهم من المال.","Sağlık paradan daha önemlidir.");
+add("ar","B1","Sağlık","مرض","hastalık","isim","هذا المرض منتشر في الشتاء.","Bu hastalık kışın yaygındır.");
+add("ar","B1","Sağlık","مريض","hasta","isim","أنا مريض اليوم.","Bugün hastayım.");
+add("ar","B1","Sağlık","مريض","hasta kişi","isim","المريض يحتاج إلى الراحة.","Hastanın dinlenmeye ihtiyacı var.");
+add("ar","B1","Sağlık","طبيب","doktor","isim","ذهبت إلى الطبيب.","Doktora gittim.");
+add("ar","B1","Sağlık","ممرضة","hemşire","isim","الممرضة تساعد الطبيب.","Hemşire doktora yardım ediyor.");
+add("ar","B1","Sağlık","مستشفى","hastane","isim","المستشفى قريب من منزلي.","Hastane evime yakın.");
+add("ar","B1","Sağlık","عيادة","klinik / muayenehane","isim","ذهبت إلى العيادة.","Kliniğe gittim.");
+add("ar","B1","Sağlık","صيدلية","eczane","isim","أين أقرب صيدلية؟","En yakın eczane nerede?");
+add("ar","B1","Sağlık","دواء","ilaç","isim","يجب أن آخذ هذا الدواء.","Bu ilacı almam gerekiyor.");
+add("ar","B1","Sağlık","وصفة طبية","reçete","isim","أعطاني الطبيب وصفة طبية.","Doktor bana reçete verdi.");
+add("ar","B1","Sağlık","علاج","tedavi","isim","بدأت العلاج أمس.","Tedaviye dün başladım.");
+add("ar","B1","Sağlık","عملية","ameliyat","isim","سيحتاج إلى عملية.","Ameliyata ihtiyacı olacak.");
+add("ar","B1","Sağlık","فحص","muayene / kontrol","isim","أحتاج إلى فحص طبي.","Tıbbi muayeneye ihtiyacım var.");
+add("ar","B1","Sağlık","موعد","randevu","isim","لدي موعد مع الطبيب.","Doktorla randevum var.");
+// ======================= B1 — VÜCUT =======================
+add("ar","B1","Vücut","رأس","baş","isim","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Vücut","عين","göz","isim","عيني تؤلمني.","Gözüm ağrıyor.");
+add("ar","B1","Vücut","أذن","kulak","isim","أذني تؤلمني.","Kulağım ağrıyor.");
+add("ar","B1","Vücut","أنف","burun","isim","أنفي مسدود.","Burnum tıkalı.");
+add("ar","B1","Vücut","فم","ağız","isim","افتح فمك من فضلك.","Lütfen ağzını aç.");
+add("ar","B1","Vücut","حلق","boğaz","isim","حلقي يؤلمني.","Boğazım ağrıyor.");
+add("ar","B1","Vücut","رقبة","boyun","isim","أشعر بألم في رقبتي.","Boynumda ağrı hissediyorum.");
+add("ar","B1","Vücut","ظهر","sırt","isim","ظهري يؤلمني.","Sırtım ağrıyor.");
+add("ar","B1","Vücut","بطن","karın","isim","بطني يؤلمني.","Karnım ağrıyor.");
+add("ar","B1","Vücut","صدر","göğüs","isim","أشعر بألم في صدري.","Göğsümde ağrı hissediyorum.");
+add("ar","B1","Vücut","ذراع","kol","isim","ذراعي تؤلمني.","Kolum ağrıyor.");
+add("ar","B1","Vücut","يد","el","isim","يدي مصابة.","Elim yaralı.");
+add("ar","B1","Vücut","ساق","bacak","isim","ساقي تؤلمني.","Bacağım ağrıyor.");
+add("ar","B1","Vücut","قدم","ayak","isim","قدمي متورمة.","Ayağım şişmiş.");
+add("ar","B1","Vücut","قلب","kalp","isim","قلبي ينبض بسرعة.","Kalbim hızlı atıyor.");
+// ======================= B1 — BELİRTİLER =======================
+add("ar","B1","Belirti","ألم","ağrı","isim","لدي ألم في ظهري.","Sırtımda ağrı var.");
+add("ar","B1","Belirti","صداع","baş ağrısı","isim","لدي صداع شديد.","Şiddetli baş ağrım var.");
+add("ar","B1","Belirti","حمى","ateş","isim","لدي حمى منذ أمس.","Dünden beri ateşim var.");
+add("ar","B1","Belirti","سعال","öksürük","isim","لدي سعال شديد.","Şiddetli öksürüğüm var.");
+add("ar","B1","Belirti","زكام","soğuk algınlığı","isim","أصبت بالزكام.","Soğuk algınlığına yakalandım.");
+add("ar","B1","Belirti","إنفلونزا","grip","isim","أعتقد أن لدي إنفلونزا.","Sanırım grip oldum.");
+add("ar","B1","Belirti","التهاب الحلق","boğaz ağrısı","isim","لدي التهاب في الحلق.","Boğaz ağrım var.");
+add("ar","B1","Belirti","ألم في المعدة","mide ağrısı","isim","لدي ألم في المعدة.","Midede ağrım var.");
+add("ar","B1","Belirti","غثيان","mide bulantısı","isim","أشعر بالغثيان.","Midem bulanıyor.");
+add("ar","B1","Belirti","دوخة","baş dönmesi","isim","أشعر بالدوخة.","Başım dönüyor.");
+add("ar","B1","Belirti","تعب","yorgunluk","isim","أشعر بالتعب الشديد.","Çok yorgun hissediyorum.");
+add("ar","B1","Belirti","ضعف","halsizlik / güçsüzlük","isim","أشعر بالضعف.","Kendimi güçsüz hissediyorum.");
+add("ar","B1","Belirti","تورم","şişlik","isim","هناك تورم في قدمي.","Ayağımda şişlik var.");
+add("ar","B1","Belirti","جرح","yara","isim","لدي جرح في يدي.","Elimde bir yara var.");
+add("ar","B1","Belirti","حساسية","alerji","isim","لدي حساسية من بعض الأدوية.","Bazı ilaçlara alerjim var.");
+// ======================= B1 — SAĞLIK FİİLLERİ =======================
+add("ar","B1","Sağlık Fiilleri","يمرض","hastalanmak","fiil","لا أريد أن أمرض.","Hastalanmak istemiyorum.");
+add("ar","B1","Sağlık Fiilleri","يتعافى","iyileşmek","fiil","بدأ يتعافى من المرض.","Hastalıktan iyileşmeye başladı.");
+add("ar","B1","Sağlık Fiilleri","يشعر","hissetmek","fiil","أشعر بتحسن الآن.","Şimdi daha iyi hissediyorum.");
+add("ar","B1","Sağlık Fiilleri","يؤلم","ağrımak","fiil","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Sağlık Fiilleri","يسعل","öksürmek","fiil","هو يسعل كثيرا.","Çok öksürüyor.");
+add("ar","B1","Sağlık Fiilleri","يعطس","hapşırmak","fiil","أعطس كثيرا في الربيع.","İlkbaharda çok hapşırıyorum.");
+add("ar","B1","Sağlık Fiilleri","يتنفس","nefes almak","fiil","لا أستطيع التنفس جيدا.","İyi nefes alamıyorum.");
+add("ar","B1","Sağlık Fiilleri","يستريح","dinlenmek","fiil","يجب أن تستريح.","Dinlenmelisin.");
+add("ar","B1","Sağlık Fiilleri","ينام","uyumak","fiil","أحتاج إلى النوم.","Uyumaya ihtiyacım var.");
+add("ar","B1","Sağlık Fiilleri","يتناول","almak / tüketmek","fiil","أتناول الدواء بعد الطعام.","İlacı yemekten sonra alıyorum.");
+add("ar","B1","Sağlık Fiilleri","يفحص","muayene etmek / kontrol etmek","fiil","الطبيب يفحص المريض.","Doktor hastayı muayene ediyor.");
+add("ar","B1","Sağlık Fiilleri","يعالج","tedavi etmek","fiil","الطبيب يعالج المريض.","Doktor hastayı tedavi ediyor.");
+add("ar","B1","Sağlık Fiilleri","يصف","reçete etmek","fiil","وصف الطبيب دواء جديدا.","Doktor yeni bir ilaç reçete etti.");
+add("ar","B1","Sağlık Fiilleri","يشفى","iyileşmek / şifa bulmak","fiil","أتمنى أن تشفى بسرعة.","Umarım çabuk iyileşirsin.");
+add("ar","B1","Sağlık Fiilleri","يصاب","yakalanmak / yaralanmak","fiil","أصيب بالإنفلونزا.","Gribe yakalandı.");
+// ======================= B1 — SAĞLIK SIFATLARI =======================
+add("ar","B1","Sağlık Sıfatları","صحي","sağlıklı","sıfat","أحاول أن أعيش حياة صحية.","Sağlıklı bir hayat yaşamaya çalışıyorum.");
+add("ar","B1","Sağlık Sıfatları","مريض","hasta","sıfat","هو مريض منذ أسبوع.","Bir haftadır hasta.");
+add("ar","B1","Sağlık Sıfatları","سليم","sağlam / sağlıklı","sıfat","هو الآن سليم تماما.","Şimdi tamamen sağlıklı.");
+add("ar","B1","Sağlık Sıfatları","متعب","yorgun","sıfat","أنا متعب جدا.","Çok yorgunum.");
+add("ar","B1","Sağlık Sıfatları","قوي","güçlü","sıfat","أصبح أقوى بعد العلاج.","Tedaviden sonra daha güçlü oldu.");
+add("ar","B1","Sağlık Sıfatları","ضعيف","zayıf / güçsüz","sıfat","أشعر أنني ضعيف.","Kendimi güçsüz hissediyorum.");
+add("ar","B1","Sağlık Sıfatları","خطير","tehlikeli / ciddi","sıfat","هذا المرض خطير.","Bu hastalık ciddi.");
+add("ar","B1","Sağlık Sıfatları","خفيف","hafif","sıfat","لدي صداع خفيف.","Hafif bir baş ağrım var.");
+add("ar","B1","Sağlık Sıfatları","شديد","şiddetli","sıfat","الألم شديد.","Ağrı şiddetli.");
+add("ar","B1","Sağlık Sıfatları","مزمن","kronik","sıfat","هذا مرض مزمن.","Bu kronik bir hastalık.");
+add("ar","B1","Sağlık Sıfatları","معدي","bulaşıcı","sıfat","هذا المرض معدي.","Bu hastalık bulaşıcı.");
+add("ar","B1","Sağlık Sıfatları","طبيعي","normal","sıfat","هذا أمر طبيعي.","Bu normal bir durum.");
+add("ar","B1","Sağlık Sıfatları","ضروري","gerekli","sıfat","هذا الفحص ضروري.","Bu muayene gerekli.");
+add("ar","B1","Sağlık Sıfatları","مفيد","faydalı","sıfat","هذا الدواء مفيد.","Bu ilaç faydalı.");
+add("ar","B1","Sağlık Sıfatları","ضار","zararlı","sıfat","التدخين ضار بالصحة.","Sigara içmek sağlığa zararlıdır.");
+// ======================= B1 — DOKTOR VE HASTANE İFADELERİ =======================
+add("ar","B1","Sağlık İfadeleri","أريد حجز موعد مع الطبيب","doktorla randevu almak istiyorum","ifade","أريد حجز موعد مع الطبيب غدا.","Yarın doktorla randevu almak istiyorum.");
+add("ar","B1","Sağlık İfadeleri","أشعر بالتعب","kendimi yorgun hissediyorum","ifade","أشعر بالتعب منذ يومين.","İki gündür kendimi yorgun hissediyorum.");
+add("ar","B1","Sağlık İfadeleri","رأسي يؤلمني","başım ağrıyor","ifade","رأسي يؤلمني منذ الصباح.","Sabahtan beri başım ağrıyor.");
+add("ar","B1","Sağlık İfadeleri","حلقي يؤلمني","boğazım ağrıyor","ifade","حلقي يؤلمني عندما أبتلع.","Yutkunurken boğazım ağrıyor.");
+add("ar","B1","Sağlık İfadeleri","لدي حمى","ateşim var","ifade","لدي حمى منذ الليلة الماضية.","Dün geceden beri ateşim var.");
+add("ar","B1","Sağlık İfadeleri","لدي سعال","öksürüğüm var","ifade","لدي سعال منذ ثلاثة أيام.","Üç gündür öksürüğüm var.");
+add("ar","B1","Sağlık İfadeleri","أشعر بالدوخة","başım dönüyor","ifade","أشعر بالدوخة عندما أقف.","Ayağa kalktığımda başım dönüyor.");
+add("ar","B1","Sağlık İfadeleri","أحتاج إلى طبيب","doktora ihtiyacım var","ifade","أعتقد أنني أحتاج إلى طبيب.","Sanırım doktora ihtiyacım var.");
+add("ar","B1","Sağlık İfadeleri","أين أقرب صيدلية؟","en yakın eczane nerede?","ifade","عفوا، أين أقرب صيدلية؟","Affedersiniz, en yakın eczane nerede?");
+add("ar","B1","Sağlık İfadeleri","أحتاج إلى دواء","ilaca ihtiyacım var","ifade","أحتاج إلى دواء للصداع.","Baş ağrısı için ilaca ihtiyacım var.");
+add("ar","B1","Sağlık İfadeleri","هل أحتاج إلى وصفة؟","reçeteye ihtiyacım var mı?","ifade","هل أحتاج إلى وصفة لهذا الدواء؟","Bu ilaç için reçeteye ihtiyacım var mı?");
+add("ar","B1","Sağlık İfadeleri","كم مرة آخذ الدواء؟","ilacı kaç kez almalıyım?","ifade","كم مرة آخذ هذا الدواء في اليوم؟","Bu ilacı günde kaç kez almalıyım?");
+add("ar","B1","Sağlık İfadeleri","متى يجب أن أعود؟","ne zaman geri gelmeliyim?","ifade","متى يجب أن أعود إلى الطبيب؟","Doktora ne zaman geri gelmeliyim?");
+add("ar","B1","Sağlık İfadeleri","أشعر بتحسن","kendimi daha iyi hissediyorum","ifade","أشعر بتحسن الآن.","Şimdi kendimi daha iyi hissediyorum.");
+add("ar","B1","Sağlık İfadeleri","أحتاج إلى الراحة","dinlenmeye ihtiyacım var","ifade","أحتاج إلى الراحة لبضعة أيام.","Birkaç gün dinlenmeye ihtiyacım var.");
+/* ================================================================
+   ARAPÇA B1 — PART 36
+   KONU: EĞİTİM, OKUL VE ÜNİVERSİTE
+================================================================ */
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم لمستقبل الإنسان.","Eğitim insanın geleceği için önemlidir.");
+add("ar","B1","Eğitim","مدرسة","okul","isim","أخي يذهب إلى المدرسة كل يوم.","Kardeşim her gün okula gidiyor.");
+add("ar","B1","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Eğitim","كلية","fakülte","isim","أدرس في كلية الهندسة.","Mühendislik fakültesinde okuyorum.");
+add("ar","B1","Eğitim","قسم","bölüm","isim","أدرس في قسم إدارة الأعمال.","İşletme bölümünde okuyorum.");
+add("ar","B1","Eğitim","تخصص","uzmanlık alanı / bölüm","isim","ما تخصصك في الجامعة؟","Üniversitedeki bölümün ne?");
+add("ar","B1","Eğitim","طالب","öğrenci","isim","أنا طالب في الجامعة.","Üniversite öğrencisiyim.");
+add("ar","B1","Eğitim","أستاذ","profesör / öğretim görevlisi","isim","تحدثت مع الأستاذ بعد المحاضرة.","Dersten sonra profesörle konuştum.");
+add("ar","B1","Eğitim","معلم","öğretmen","isim","المعلم يشرح الدرس.","Öğretmen dersi açıklıyor.");
+add("ar","B1","Eğitim","مدير","müdür","isim","تحدث المدير مع الطلاب.","Müdür öğrencilerle konuştu.");
+add("ar","B1","Eğitim","درس","ders","isim","عندي درس في الصباح.","Sabah bir dersim var.");
+add("ar","B1","Eğitim","محاضرة","konferans / üniversite dersi","isim","حضرت المحاضرة أمس.","Dün derse katıldım.");
+add("ar","B1","Eğitim","مادة","ders / konu","isim","هذه المادة صعبة.","Bu ders zor.");
+add("ar","B1","Eğitim","واجب","ödev","isim","أنهيت واجبي.","Ödevimi bitirdim.");
+add("ar","B1","Eğitim","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
+// ======================= B1 — AKADEMİK KELİMELER =======================
+add("ar","B1","Akademik","اختبار","test","isim","نجحت في الاختبار.","Testi geçtim.");
+add("ar","B1","Akademik","علامة","not / puan","isim","حصلت على علامة جيدة.","İyi bir not aldım.");
+add("ar","B1","Akademik","نتيجة","sonuç","isim","ظهرت نتيجة الامتحان.","Sınav sonucu açıklandı.");
+add("ar","B1","Akademik","شهادة","sertifika / diploma","isim","حصلت على شهادة من الجامعة.","Üniversiteden sertifika aldım.");
+add("ar","B1","Akademik","دبلوم","diploma","isim","حصل على دبلوم في إدارة الأعمال.","İşletme alanında diploma aldı.");
+add("ar","B1","Akademik","درجة","derece / akademik derece","isim","أريد الحصول على درجة جامعية.","Üniversite derecesi almak istiyorum.");
+add("ar","B1","Akademik","منحة","burs","isim","حصلت على منحة دراسية.","Burs kazandım.");
+add("ar","B1","Akademik","منحة دراسية","eğitim bursu","isim","قدمت طلبا للحصول على منحة دراسية.","Eğitim bursu için başvuru yaptım.");
+add("ar","B1","Akademik","بحث","araştırma","isim","أعمل على بحث جديد.","Yeni bir araştırma üzerinde çalışıyorum.");
+add("ar","B1","Akademik","مشروع","proje","isim","أعمل مع زملائي على مشروع.","Arkadaşlarımla bir proje üzerinde çalışıyorum.");
+add("ar","B1","Akademik","تقرير","rapor","isim","يجب أن أكتب تقريرا.","Bir rapor yazmam gerekiyor.");
+add("ar","B1","Akademik","موضوع","konu","isim","اخترت موضوعا للبحث.","Araştırma için bir konu seçtim.");
+add("ar","B1","Akademik","معلومة","bilgi","isim","وجدت معلومات مفيدة.","Faydalı bilgiler buldum.");
+add("ar","B1","Akademik","معرفة","bilgi / bilgi birikimi","isim","لديه معرفة واسعة في هذا المجال.","Bu alanda geniş bilgiye sahip.");
+add("ar","B1","Akademik","خبرة","deneyim","isim","لدي خبرة في مجال التكنولوجيا.","Teknoloji alanında deneyimim var.");
+// ======================= B1 — OKUL EYLEMLERİ =======================
+add("ar","B1","Eğitim Fiilleri","يدرس","ders çalışmak / okumak","fiil","أدرس اللغة العربية كل يوم.","Her gün Arapça çalışıyorum.");
+add("ar","B1","Eğitim Fiilleri","يتعلم","öğrenmek","fiil","أتعلم لغة جديدة.","Yeni bir dil öğreniyorum.");
+add("ar","B1","Eğitim Fiilleri","يتخرج","mezun olmak","fiil","سأتخرج العام المقبل.","Gelecek yıl mezun olacağım.");
+add("ar","B1","Eğitim Fiilleri","ينجح","başarılı olmak / geçmek","fiil","نجحت في الامتحان.","Sınavı geçtim.");
+add("ar","B1","Eğitim Fiilleri","يرسب","kalmak / başarısız olmak","fiil","لم ينجح في الامتحان.","Sınavı geçemedi.");
+add("ar","B1","Eğitim Fiilleri","يحضر","katılmak / hazır bulunmak","fiil","أحضر المحاضرات بانتظام.","Derslere düzenli olarak katılıyorum.");
+add("ar","B1","Eğitim Fiilleri","يغيب","devamsızlık yapmak / bulunmamak","fiil","غاب عن الدرس أمس.","Dün derse gelmedi.");
+add("ar","B1","Eğitim Fiilleri","يقرأ","okumak","fiil","أقرأ كتابا عن التاريخ.","Tarih hakkında bir kitap okuyorum.");
+add("ar","B1","Eğitim Fiilleri","يكتب","yazmak","fiil","أكتب تقريرا للجامعة.","Üniversite için rapor yazıyorum.");
+add("ar","B1","Eğitim Fiilleri","يشرح","açıklamak","fiil","يشرح الأستاذ الموضوع بوضوح.","Profesör konuyu açıkça açıklıyor.");
+add("ar","B1","Eğitim Fiilleri","يفهم","anlamak","fiil","أفهم هذا الدرس جيدا.","Bu dersi iyi anlıyorum.");
+add("ar","B1","Eğitim Fiilleri","يحفظ","ezberlemek","fiil","أحاول أن أحفظ الكلمات الجديدة.","Yeni kelimeleri ezberlemeye çalışıyorum.");
+add("ar","B1","Eğitim Fiilleri","يتدرب","pratik yapmak / antrenman yapmak","fiil","أتدرب على التحدث كل يوم.","Her gün konuşma pratiği yapıyorum.");
+add("ar","B1","Eğitim Fiilleri","يبحث","araştırmak / aramak","fiil","أبحث عن معلومات على الإنترنت.","İnternette bilgi araştırıyorum.");
+add("ar","B1","Eğitim Fiilleri","يقدم","sunmak / teslim etmek","fiil","سأقدم المشروع غدا.","Projeyi yarın teslim edeceğim.");
+// ======================= B1 — EĞİTİM SIFATLARI =======================
+add("ar","B1","Eğitim Sıfatları","سهل","kolay","sıfat","هذا السؤال سهل.","Bu soru kolay.");
+add("ar","B1","Eğitim Sıfatları","صعب","zor","sıfat","الامتحان صعب.","Sınav zor.");
+add("ar","B1","Eğitim Sıfatları","مهم","önemli","sıfat","هذا الموضوع مهم.","Bu konu önemli.");
+add("ar","B1","Eğitim Sıfatları","مفيد","faydalı","sıfat","هذا الكتاب مفيد.","Bu kitap faydalı.");
+add("ar","B1","Eğitim Sıfatları","ممل","sıkıcı","sıfat","الدرس ممل.","Ders sıkıcı.");
+add("ar","B1","Eğitim Sıfatları","ممتع","eğlenceli","sıfat","الدرس ممتع.","Ders eğlenceli.");
+add("ar","B1","Eğitim Sıfatları","ذكي","zeki","sıfat","هو طالب ذكي.","O zeki bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","مجتهد","çalışkan","sıfat","هي طالبة مجتهدة.","O çalışkan bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","كسول","tembel","sıfat","لا أريد أن أكون كسولا.","Tembel olmak istemiyorum.");
+add("ar","B1","Eğitim Sıfatları","ناجح","başarılı","sıfat","هو طالب ناجح.","O başarılı bir öğrenci.");
+add("ar","B1","Eğitim Sıfatları","فاشل","başarısız","sıfat","لم يكن المشروع فاشلا.","Proje başarısız değildi.");
+add("ar","B1","Eğitim Sıfatları","متقدم","ileri","sıfat","هذا كتاب متقدم.","Bu ileri seviye bir kitap.");
+add("ar","B1","Eğitim Sıfatları","مبتدئ","başlangıç seviyesinde","sıfat","أنا طالب مبتدئ.","Başlangıç seviyesinde bir öğrenciyim.");
+add("ar","B1","Eğitim Sıfatları","أكاديمي","akademik","sıfat","لديه مستقبل أكاديمي جيد.","İyi bir akademik geleceği var.");
+add("ar","B1","Eğitim Sıfatları","عملي","pratik / uygulamalı","sıfat","نحتاج إلى تدريب عملي.","Uygulamalı eğitime ihtiyacımız var.");
+// ======================= B1 — ÜNİVERSİTE HAYATI =======================
+add("ar","B1","Üniversite","حرم جامعي","üniversite kampüsü","isim","الحرم الجامعي كبير.","Üniversite kampüsü büyük.");
+add("ar","B1","Üniversite","مكتبة","kütüphane","isim","أدرس في المكتبة.","Kütüphanede çalışıyorum.");
+add("ar","B1","Üniversite","مختبر","laboratuvar","isim","لدينا مختبر حديث.","Modern bir laboratuvarımız var.");
+add("ar","B1","Üniversite","قاعة","salon / derslik","isim","المحاضرة في القاعة الكبيرة.","Ders büyük salonda.");
+add("ar","B1","Üniversite","سكن جامعي","üniversite yurdu","isim","أعيش في السكن الجامعي.","Üniversite yurdunda yaşıyorum.");
+add("ar","B1","Üniversite","زميل","sınıf / okul arkadaşı","isim","تحدثت مع زميلي.","Arkadaşımla konuştum.");
+add("ar","B1","Üniversite","زميل دراسة","ders arkadaşı","isim","أدرس مع زميل دراسة.","Bir ders arkadaşımla çalışıyorum.");
+add("ar","B1","Üniversite","مجموعة","grup","isim","أعمل مع مجموعة من الطلاب.","Bir grup öğrenciyle çalışıyorum.");
+add("ar","B1","Üniversite","فصل دراسي","dönem / akademik dönem","isim","يبدأ الفصل الدراسي في سبتمبر.","Akademik dönem eylülde başlıyor.");
+add("ar","B1","Üniversite","جدول","program / çizelge","isim","هذا هو جدولي الدراسي.","Bu benim ders programım.");
+add("ar","B1","Üniversite","تسجيل","kayıt","isim","بدأ التسجيل في الجامعة.","Üniversite kayıtları başladı.");
+add("ar","B1","Üniversite","قبول","kabul","isim","حصلت على قبول من الجامعة.","Üniversiteden kabul aldım.");
+add("ar","B1","Üniversite","طلب","başvuru / talep","isim","أرسلت طلب القبول.","Kabul başvurusunu gönderdim.");
+add("ar","B1","Üniversite","مستقبل","gelecek","isim","أفكر في مستقبلي.","Geleceğimi düşünüyorum.");
+add("ar","B1","Üniversite","مهنة","meslek / kariyer","isim","أريد أن أختار مهنة مناسبة.","Uygun bir meslek seçmek istiyorum.");
+// ======================= B1 — EĞİTİM İFADELERİ =======================
+add("ar","B1","Eğitim İfadeleri","أدرس في الجامعة","üniversitede okuyorum","ifade","أدرس في الجامعة في فيينا.","Viyana'da üniversitede okuyorum.");
+add("ar","B1","Eğitim İfadeleri","ما تخصصك؟","bölümün ne?","ifade","ما تخصصك في الجامعة؟","Üniversitede bölümün ne?");
+add("ar","B1","Eğitim İfadeleri","متى تتخرج؟","ne zaman mezun oluyorsun?","ifade","متى تتخرج من الجامعة؟","Üniversiteden ne zaman mezun oluyorsun?");
+add("ar","B1","Eğitim İfadeleri","لدي امتحان غدا","yarın sınavım var","ifade","لدي امتحان غدا ولا أستطيع الخروج.","Yarın sınavım var ve dışarı çıkamam.");
+add("ar","B1","Eğitim İfadeleri","أحتاج إلى الدراسة","ders çalışmam gerekiyor","ifade","أحتاج إلى الدراسة قبل الامتحان.","Sınavdan önce ders çalışmam gerekiyor.");
+add("ar","B1","Eğitim İfadeleri","لم أفهم السؤال","soruyu anlamadım","ifade","عذرا، لم أفهم السؤال.","Üzgünüm, soruyu anlamadım.");
+add("ar","B1","Eğitim İfadeleri","هل يمكنك أن تشرح؟","açıklayabilir misin?","ifade","هل يمكنك أن تشرح هذا الموضوع؟","Bu konuyu açıklayabilir misin?");
+add("ar","B1","Eğitim İfadeleri","متى يبدأ الدرس؟","ders ne zaman başlıyor?","ifade","متى يبدأ الدرس اليوم؟","Bugün ders ne zaman başlıyor?");
+add("ar","B1","Eğitim İfadeleri","متى ينتهي الدرس؟","ders ne zaman bitiyor?","ifade","متى ينتهي الدرس؟","Ders ne zaman bitiyor?");
+add("ar","B1","Eğitim İfadeleri","أين قاعة المحاضرة؟","ders salonu nerede?","ifade","عفوا، أين قاعة المحاضرة؟","Affedersiniz, ders salonu nerede?");
+add("ar","B1","Eğitim İfadeleri","أريد التقديم إلى الجامعة","üniversiteye başvurmak istiyorum","ifade","أريد التقديم إلى جامعة في النمسا.","Avusturya'da bir üniversiteye başvurmak istiyorum.");
+add("ar","B1","Eğitim İfadeleri","حصلت على قبول","kabul aldım","ifade","حصلت على قبول من الجامعة.","Üniversiteden kabul aldım.");
+add("ar","B1","Eğitim İfadeleri","أريد الحصول على منحة","burs almak istiyorum","ifade","أريد الحصول على منحة دراسية.","Eğitim bursu almak istiyorum.");
+add("ar","B1","Eğitim İfadeleri","أعمل على مشروع","bir proje üzerinde çalışıyorum","ifade","أعمل على مشروع مع زملائي.","Arkadaşlarımla bir proje üzerinde çalışıyorum.");
+add("ar","B1","Eğitim İfadeleri","أريد تحسين لغتي","dilimi geliştirmek istiyorum","ifade","أريد تحسين لغتي العربية.","Arapçamı geliştirmek istiyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 37
+   KONU: EV, KONUT, TAŞINMA VE GÜNLÜK YAŞAM
+================================================================ */
+// ======================= B1 — EV VE KONUT =======================
+add("ar","B1","Ev","منزل","ev","isim","منزلي قريب من الجامعة.","Evim üniversiteye yakın.");
+add("ar","B1","Ev","بيت","ev","isim","أعيش في بيت صغير.","Küçük bir evde yaşıyorum.");
+add("ar","B1","Ev","شقة","daire","isim","أبحث عن شقة جديدة.","Yeni bir daire arıyorum.");
+add("ar","B1","Ev","غرفة","oda","isim","غرفتي في الطابق الثاني.","Odam ikinci katta.");
+add("ar","B1","Ev","غرفة نوم","yatak odası","isim","غرفة النوم واسعة.","Yatak odası geniş.");
+add("ar","B1","Ev","غرفة معيشة","oturma odası","isim","نشاهد التلفاز في غرفة المعيشة.","Oturma odasında televizyon izliyoruz.");
+add("ar","B1","Ev","مطبخ","mutfak","isim","المطبخ صغير ولكنه عملي.","Mutfak küçük ama kullanışlı.");
+add("ar","B1","Ev","حمام","banyo","isim","الحمام بجانب غرفة النوم.","Banyo yatak odasının yanında.");
+add("ar","B1","Ev","شرفة","balkon","isim","لدينا شرفة جميلة.","Güzel bir balkonumuz var.");
+add("ar","B1","Ev","حديقة","bahçe","isim","يوجد حديقة خلف المنزل.","Evin arkasında bir bahçe var.");
+add("ar","B1","Ev","مرآب","garaj","isim","السيارة في المرآب.","Araba garajda.");
+add("ar","B1","Ev","مصعد","asansör","isim","المصعد لا يعمل.","Asansör çalışmıyor.");
+add("ar","B1","Ev","درج","merdiven","isim","استخدمت الدرج بدلا من المصعد.","Asansör yerine merdiveni kullandım.");
+add("ar","B1","Ev","سقف","çatı / tavan","isim","السقف يحتاج إلى إصلاح.","Çatının tamire ihtiyacı var.");
+add("ar","B1","Ev","جدار","duvar","isim","لون الجدار أبيض.","Duvarın rengi beyaz.");
+// ======================= B1 — EV EŞYALARI =======================
+add("ar","B1","Ev Eşyaları","أثاث","mobilya","isim","اشتريت أثاثا جديدا.","Yeni mobilyalar aldım.");
+add("ar","B1","Ev Eşyaları","طاولة","masa","isim","الكتاب على الطاولة.","Kitap masanın üzerinde.");
+add("ar","B1","Ev Eşyaları","كرسي","sandalye","isim","اجلس على الكرسي.","Sandalyeye otur.");
+add("ar","B1","Ev Eşyaları","أريكة","kanepe","isim","الأريكة مريحة جدا.","Kanepe çok rahat.");
+add("ar","B1","Ev Eşyaları","خزانة","dolap","isim","ملابسي في الخزانة.","Kıyafetlerim dolapta.");
+add("ar","B1","Ev Eşyaları","رف","raf","isim","وضعت الكتب على الرف.","Kitapları rafa koydum.");
+add("ar","B1","Ev Eşyaları","سرير","yatak","isim","اشتريت سريرا جديدا.","Yeni bir yatak aldım.");
+add("ar","B1","Ev Eşyaları","مصباح","lamba","isim","أطفئ المصباح من فضلك.","Lütfen lambayı kapat.");
+add("ar","B1","Ev Eşyaları","ستارة","perde","isim","الستائر زرقاء.","Perdeler mavi.");
+add("ar","B1","Ev Eşyaları","سجادة","halı","isim","السجادة جديدة.","Halı yeni.");
+add("ar","B1","Ev Eşyaları","مرآة","ayna","isim","أنظر إلى نفسي في المرآة.","Aynada kendime bakıyorum.");
+add("ar","B1","Ev Eşyaları","ثلاجة","buzdolabı","isim","الحليب في الثلاجة.","Süt buzdolabında.");
+add("ar","B1","Ev Eşyaları","غسالة","çamaşır makinesi","isim","الغسالة لا تعمل.","Çamaşır makinesi çalışmıyor.");
+add("ar","B1","Ev Eşyaları","فرن","fırın","isim","وضعت الطعام في الفرن.","Yemeği fırına koydum.");
+add("ar","B1","Ev Eşyaları","مكنسة كهربائية","elektrikli süpürge","isim","أستخدم المكنسة الكهربائية لتنظيف البيت.","Evi temizlemek için elektrikli süpürge kullanıyorum.");
+// ======================= B1 — KİRALAMA =======================
+add("ar","B1","Kiralama","إيجار","kira","isim","الإيجار مرتفع في هذه المنطقة.","Bu bölgede kira yüksek.");
+add("ar","B1","Kiralama","مالك","ev sahibi","isim","تحدثت مع مالك الشقة.","Daire sahibiyle konuştum.");
+add("ar","B1","Kiralama","مستأجر","kiracı","isim","المستأجر يدفع الإيجار كل شهر.","Kiracı her ay kirayı ödüyor.");
+add("ar","B1","Kiralama","عقد إيجار","kira sözleşmesi","isim","وقعت عقد الإيجار.","Kira sözleşmesini imzaladım.");
+add("ar","B1","Kiralama","تأمين","depozito / sigorta","isim","دفعت التأمين عند استئجار الشقة.","Daireyi kiralarken depozito ödedim.");
+add("ar","B1","Kiralama","فاتورة كهرباء","elektrik faturası","isim","وصلت فاتورة الكهرباء.","Elektrik faturası geldi.");
+add("ar","B1","Kiralama","فاتورة ماء","su faturası","isim","يجب أن أدفع فاتورة الماء.","Su faturasını ödemem gerekiyor.");
+add("ar","B1","Kiralama","فاتورة غاز","doğalgaz faturası","isim","فاتورة الغاز مرتفعة هذا الشهر.","Doğalgaz faturası bu ay yüksek.");
+add("ar","B1","Kiralama","تكاليف إضافية","ek masraflar","isim","هناك تكاليف إضافية.","Ek masraflar var.");
+add("ar","B1","Kiralama","صيانة","bakım","isim","الشقة تحتاج إلى صيانة.","Dairenin bakıma ihtiyacı var.");
+add("ar","B1","Kiralama","إصلاح","onarım / tamir","isim","نحتاج إلى إصلاح الباب.","Kapıyı tamir etmemiz gerekiyor.");
+add("ar","B1","Kiralama","مشكلة","sorun","isim","هناك مشكلة في التدفئة.","Isıtmayla ilgili bir sorun var.");
+add("ar","B1","Kiralama","تدفئة","ısıtma","isim","التدفئة لا تعمل.","Isıtma çalışmıyor.");
+add("ar","B1","Kiralama","تبريد","soğutma","isim","نظام التبريد لا يعمل.","Soğutma sistemi çalışmıyor.");
+add("ar","B1","Kiralama","عنوان","adres","isim","ما عنوانك الجديد؟","Yeni adresin ne?");
+// ======================= B1 — TAŞINMA =======================
+add("ar","B1","Taşınma","انتقال","taşınma","isim","انتقالي إلى مدينة جديدة قريب.","Yeni bir şehre taşınmam yakın.");
+add("ar","B1","Taşınma","نقل","taşıma / nakliye","isim","أحتاج إلى شركة نقل.","Bir nakliye şirketine ihtiyacım var.");
+add("ar","B1","Taşınma","صندوق","kutu","isim","وضعت الكتب في صندوق.","Kitapları bir kutuya koydum.");
+add("ar","B1","Taşınma","أمتعة","eşyalar / bagaj","isim","لدي الكثير من الأمتعة.","Çok fazla eşyam var.");
+add("ar","B1","Taşınma","شاحنة","kamyon / kamyonet","isim","استأجرت شاحنة للنقل.","Taşıma için kamyon kiraladım.");
+add("ar","B1","Taşınma","شركة نقل","nakliye şirketi","isim","اتصلت بشركة نقل.","Bir nakliye şirketini aradım.");
+add("ar","B1","Taşınma","جار","komşu","isim","جاري يساعدني كثيرا.","Komşum bana çok yardım ediyor.");
+add("ar","B1","Taşınma","حي","mahalle","isim","أعيش في حي هادئ.","Sakin bir mahallede yaşıyorum.");
+add("ar","B1","Taşınma","منطقة","bölge","isim","هذه منطقة جميلة.","Burası güzel bir bölge.");
+add("ar","B1","Taşınma","ضاحية","banliyö","isim","أعيش في ضاحية هادئة.","Sakin bir banliyöde yaşıyorum.");
+add("ar","B1","Taşınma","وسط المدينة","şehir merkezi","isim","أسكن بالقرب من وسط المدينة.","Şehir merkezinin yakınında oturuyorum.");
+add("ar","B1","Taşınma","ضواحي","şehir dışı / banliyöler","isim","الضواحي أكثر هدوءا.","Banliyöler daha sakin.");
+add("ar","B1","Taşınma","مبنى","bina","isim","هذا مبنى قديم.","Bu eski bir bina.");
+add("ar","B1","Taşınma","طابق أرضي","zemin kat","isim","شقتي في الطابق الأرضي.","Dairem zemin katta.");
+add("ar","B1","Taşınma","طابق علوي","üst kat","isim","أعيش في طابق علوي.","Üst katta yaşıyorum.");
+// ======================= B1 — EV FİİLLERİ =======================
+add("ar","B1","Ev Fiilleri","يسكن","ikamet etmek / oturmak","fiil","أسكن في شقة صغيرة.","Küçük bir dairede oturuyorum.");
+add("ar","B1","Ev Fiilleri","يعيش","yaşamak","fiil","أعيش مع عائلتي.","Ailemle yaşıyorum.");
+add("ar","B1","Ev Fiilleri","يستأجر","kiralamak","fiil","أستأجر شقة في المدينة.","Şehirde bir daire kiralıyorum.");
+add("ar","B1","Ev Fiilleri","يشتري","satın almak","fiil","أريد شراء منزل.","Bir ev satın almak istiyorum.");
+add("ar","B1","Ev Fiilleri","ينتقل","taşınmak","fiil","سأنتقل إلى شقة جديدة.","Yeni bir daireye taşınacağım.");
+add("ar","B1","Ev Fiilleri","ينظف","temizlemek","fiil","أنظف البيت كل أسبوع.","Evi her hafta temizliyorum.");
+add("ar","B1","Ev Fiilleri","يغسل","yıkamak","fiil","أغسل الملابس.","Çamaşırları yıkıyorum.");
+add("ar","B1","Ev Fiilleri","يطبخ","yemek pişirmek","fiil","أطبخ العشاء كل مساء.","Her akşam akşam yemeği pişiriyorum.");
+add("ar","B1","Ev Fiilleri","يصلح","tamir etmek","fiil","أصلح الباب.","Kapıyı tamir ediyorum.");
+add("ar","B1","Ev Fiilleri","يفتح","açmak","fiil","افتح النافذة من فضلك.","Lütfen pencereyi aç.");
+add("ar","B1","Ev Fiilleri","يغلق","kapatmak","fiil","أغلق الباب قبل النوم.","Uyumadan önce kapıyı kapat.");
+add("ar","B1","Ev Fiilleri","يدخل","girmek","fiil","دخلت إلى الغرفة.","Odaya girdim.");
+add("ar","B1","Ev Fiilleri","يخرج","çıkmak","fiil","خرجت من المنزل مبكرا.","Evden erken çıktım.");
+add("ar","B1","Ev Fiilleri","يعيش بمفرده","tek başına yaşamak","fiil","يعيش بمفرده في شقة صغيرة.","Küçük bir dairede tek başına yaşıyor.");
+add("ar","B1","Ev Fiilleri","يشارك السكن","ev paylaşmak","fiil","أشارك السكن مع صديقي.","Arkadaşımla aynı evi paylaşıyorum.");
+// ======================= B1 — EV SIFATLARI =======================
+add("ar","B1","Ev Sıfatları","واسع","geniş","sıfat","البيت واسع.","Ev geniş.");
+add("ar","B1","Ev Sıfatları","ضيق","dar","sıfat","الممر ضيق.","Koridor dar.");
+add("ar","B1","Ev Sıfatları","مشرق","aydınlık","sıfat","الغرفة مشرقة.","Oda aydınlık.");
+add("ar","B1","Ev Sıfatları","مظلم","karanlık","sıfat","الغرفة مظلمة.","Oda karanlık.");
+add("ar","B1","Ev Sıfatları","نظيف","temiz","sıfat","البيت نظيف.","Ev temiz.");
+add("ar","B1","Ev Sıfatları","متسخ","kirli","sıfat","المطبخ متسخ.","Mutfak kirli.");
+add("ar","B1","Ev Sıfatları","قديم","eski","sıfat","المبنى قديم.","Bina eski.");
+add("ar","B1","Ev Sıfatları","حديث","modern","sıfat","الشقة حديثة.","Daire modern.");
+add("ar","B1","Ev Sıfatları","مفروش","eşyalı","sıfat","الشقة مفروشة بالكامل.","Daire tamamen eşyalı.");
+add("ar","B1","Ev Sıfatları","فارغ","boş","sıfat","البيت فارغ الآن.","Ev şu anda boş.");
+add("ar","B1","Ev Sıfatları","هادئ","sessiz / sakin","sıfat","الحي هادئ جدا.","Mahalle çok sakin.");
+add("ar","B1","Ev Sıfatları","صاخب","gürültülü","sıfat","الشارع صاخب في الليل.","Cadde geceleri gürültülü.");
+add("ar","B1","Ev Sıfatları","آمن","güvenli","sıfat","هذه منطقة آمنة.","Burası güvenli bir bölge.");
+add("ar","B1","Ev Sıfatları","خطير","tehlikeli","sıfat","هذه المنطقة خطيرة في الليل.","Bu bölge geceleri tehlikeli.");
+add("ar","B1","Ev Sıfatları","مريح","rahat","sıfat","المنزل مريح.","Ev rahat.");
+// ======================= B1 — EV İFADELERİ =======================
+add("ar","B1","Ev İfadeleri","أبحث عن شقة","daire arıyorum","ifade","أبحث عن شقة قريبة من الجامعة.","Üniversiteye yakın bir daire arıyorum.");
+add("ar","B1","Ev İfadeleri","كم الإيجار؟","kira ne kadar?","ifade","عفوا، كم الإيجار الشهري؟","Affedersiniz, aylık kira ne kadar?");
+add("ar","B1","Ev İfadeleri","هل الشقة مفروشة؟","daire eşyalı mı?","ifade","هل الشقة مفروشة بالكامل؟","Daire tamamen eşyalı mı?");
+add("ar","B1","Ev İfadeleri","هل يمكنني رؤية الشقة؟","daireyi görebilir miyim?","ifade","هل يمكنني رؤية الشقة قبل أن أستأجرها؟","Kiralamadan önce daireyi görebilir miyim?");
+add("ar","B1","Ev İfadeleri","متى يمكنني الانتقال؟","ne zaman taşınabilirim?","ifade","متى يمكنني الانتقال إلى الشقة؟","Daireye ne zaman taşınabilirim?");
+add("ar","B1","Ev İfadeleri","أريد استئجار شقة","bir daire kiralamak istiyorum","ifade","أريد استئجار شقة لمدة عام.","Bir yıllığına daire kiralamak istiyorum.");
+add("ar","B1","Ev İfadeleri","أريد شراء منزل","bir ev satın almak istiyorum","ifade","أريد شراء منزل في مدينة هادئة.","Sakin bir şehirde ev satın almak istiyorum.");
+add("ar","B1","Ev İfadeleri","أين أقرب محطة؟","en yakın durak nerede?","ifade","أين أقرب محطة للحافلات؟","En yakın otobüs durağı nerede?");
+add("ar","B1","Ev İfadeleri","الحي هادئ","mahalle sakin","ifade","أحب هذا الحي لأنه هادئ.","Bu mahalleyi sakin olduğu için seviyorum.");
+add("ar","B1","Ev İfadeleri","المبنى قديم","bina eski","ifade","المبنى قديم لكنه جميل.","Bina eski ama güzel.");
+add("ar","B1","Ev İfadeleri","هناك مشكلة في الشقة","dairede bir sorun var","ifade","هناك مشكلة في التدفئة في الشقة.","Dairede ısıtmayla ilgili bir sorun var.");
+add("ar","B1","Ev İfadeleri","لا يعمل المصعد","asansör çalışmıyor","ifade","لا يعمل المصعد منذ يومين.","Asansör iki gündür çalışmıyor.");
+add("ar","B1","Ev İfadeleri","أحتاج إلى إصلاح","tamire ihtiyacım var","ifade","أحتاج إلى إصلاح الباب.","Kapının tamire ihtiyacı var.");
+add("ar","B1","Ev İfadeleri","أدفع الإيجار كل شهر","her ay kira ödüyorum","ifade","أدفع الإيجار في بداية كل شهر.","Her ayın başında kira ödüyorum.");
+add("ar","B1","Ev İfadeleri","سأنتقل قريبا","yakında taşınacağım","ifade","سأنتقل إلى مدينة أخرى قريبا.","Yakında başka bir şehre taşınacağım.");
+/* ================================================================
+   ARAPÇA B1 — PART 38
+   KONU: İŞ HAYATI, MESLEKLER VE OFİS
+================================================================ */
+// ======================= B1 — İŞ HAYATI =======================
+add("ar","B1","İş","عمل","iş / çalışma","isim","أحب عملي كثيرا.","İşimi çok seviyorum.");
+add("ar","B1","İş","وظيفة","iş / pozisyon","isim","وجدت وظيفة جديدة.","Yeni bir iş buldum.");
+add("ar","B1","İş","مهنة","meslek","isim","ما مهنتك؟","Mesleğin ne?");
+add("ar","B1","İş","شركة","şirket","isim","أعمل في شركة دولية.","Uluslararası bir şirkette çalışıyorum.");
+add("ar","B1","İş","مؤسسة","kurum","isim","هذه مؤسسة كبيرة.","Bu büyük bir kurum.");
+add("ar","B1","İş","منظمة","organizasyon","isim","تعمل المنظمة في عدة دول.","Organizasyon birkaç ülkede faaliyet gösteriyor.");
+add("ar","B1","İş","مكتب","ofis","isim","مكتبي في الطابق الثالث.","Ofisim üçüncü katta.");
+add("ar","B1","İş","موظف","çalışan / memur","isim","هو موظف في شركة كبيرة.","Büyük bir şirkette çalışan.");
+add("ar","B1","İş","مدير","yönetici / müdür","isim","المدير مسؤول عن الفريق.","Yönetici ekipten sorumlu.");
+add("ar","B1","İş","رئيس","başkan / baş","isim","تحدثت مع رئيس القسم.","Bölüm başkanıyla konuştum.");
+add("ar","B1","İş","زميل","iş arkadaşı","isim","زميلي يساعدني في العمل.","İş arkadaşım bana işte yardım ediyor.");
+add("ar","B1","İş","عميل","müşteri","isim","تحدث الموظف مع العميل.","Çalışan müşteriyle konuştu.");
+add("ar","B1","İş","زبون","müşteri","isim","دخل الزبون إلى المتجر.","Müşteri mağazaya girdi.");
+add("ar","B1","İş","اجتماع","toplantı","isim","لدي اجتماع بعد ساعة.","Bir saat sonra toplantım var.");
+add("ar","B1","İş","مقابلة","mülakat / görüşme","isim","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+// ======================= B1 — MESLEKLER =======================
+add("ar","B1","Meslekler","مهندس","mühendis","isim","أخي مهندس.","Kardeşim mühendis.");
+add("ar","B1","Meslekler","طبيب","doktor","isim","أختي طبيبة.","Kız kardeşim doktor.");
+add("ar","B1","Meslekler","محام","avukat","isim","هو يعمل كمحام.","Avukat olarak çalışıyor.");
+add("ar","B1","Meslekler","محاسب","muhasebeci","isim","يعمل محاسبا في شركة.","Bir şirkette muhasebeci olarak çalışıyor.");
+add("ar","B1","Meslekler","مبرمج","yazılımcı / programcı","isim","أريد أن أصبح مبرمجا.","Yazılımcı olmak istiyorum.");
+add("ar","B1","Meslekler","مصمم","tasarımcı","isim","هو مصمم محترف.","O profesyonel bir tasarımcı.");
+add("ar","B1","Meslekler","صحفي","gazeteci","isim","يعمل صحفيا في صحيفة.","Bir gazetede gazeteci olarak çalışıyor.");
+add("ar","B1","Meslekler","مصور","fotoğrafçı","isim","المصور التقط صورة جميلة.","Fotoğrafçı güzel bir fotoğraf çekti.");
+add("ar","B1","Meslekler","مترجم","çevirmen","isim","يعمل مترجما للغة الألمانية.","Almanca çevirmeni olarak çalışıyor.");
+add("ar","B1","Meslekler","طباخ","aşçı","isim","الطباخ يعد الطعام.","Aşçı yemek hazırlıyor.");
+add("ar","B1","Meslekler","سائق","şoför","isim","السائق يقود الحافلة.","Şoför otobüsü kullanıyor.");
+add("ar","B1","Meslekler","بائع","satıcı","isim","يعمل بائعا في متجر.","Bir mağazada satıcı olarak çalışıyor.");
+add("ar","B1","Meslekler","موظف استقبال","resepsiyonist","isim","موظف الاستقبال يساعد الزوار.","Resepsiyonist ziyaretçilere yardım ediyor.");
+add("ar","B1","Meslekler","حارس","güvenlik görevlisi","isim","الحارس يقف أمام المبنى.","Güvenlik görevlisi binanın önünde duruyor.");
+add("ar","B1","Meslekler","عامل","işçi","isim","العامل يعمل في المصنع.","İşçi fabrikada çalışıyor.");
+// ======================= B1 — ÇALIŞMA KOŞULLARI =======================
+add("ar","B1","Çalışma","راتب","maaş","isim","راتبي جيد.","Maaşım iyi.");
+add("ar","B1","Çalışma","أجر","ücret / kazanç","isim","الأجر يعتمد على الخبرة.","Ücret deneyime bağlıdır.");
+add("ar","B1","Çalışma","دوام","mesai / çalışma saatleri","isim","دوامي يبدأ في الثامنة.","Mesaim saat sekizde başlıyor.");
+add("ar","B1","Çalışma","دوام كامل","tam zamanlı çalışma","isim","أعمل بدوام كامل.","Tam zamanlı çalışıyorum.");
+add("ar","B1","Çalışma","دوام جزئي","yarı zamanlı çalışma","isim","أبحث عن عمل بدوام جزئي.","Yarı zamanlı iş arıyorum.");
+add("ar","B1","Çalışma","إجازة","izin / tatil","isim","سآخذ إجازة الأسبوع المقبل.","Gelecek hafta izin alacağım.");
+add("ar","B1","Çalışma","عطلة","tatil","isim","أحتاج إلى عطلة قصيرة.","Kısa bir tatile ihtiyacım var.");
+add("ar","B1","Çalışma","خبرة","deneyim","isim","لدي خبرة في هذا المجال.","Bu alanda deneyimim var.");
+add("ar","B1","Çalışma","مهارة","beceri","isim","لدي مهارات جيدة في التواصل.","İletişim konusunda iyi becerilerim var.");
+add("ar","B1","Çalışma","مسؤولية","sorumluluk","isim","هذه مسؤولية كبيرة.","Bu büyük bir sorumluluk.");
+add("ar","B1","Çalışma","مهمة","görev","isim","أنهيت المهمة في الوقت المحدد.","Görevi zamanında bitirdim.");
+add("ar","B1","Çalışma","موعد نهائي","son teslim tarihi","isim","الموعد النهائي غدا.","Son teslim tarihi yarın.");
+add("ar","B1","Çalışma","ترقية","terfi","isim","حصل على ترقية في العمل.","İşinde terfi aldı.");
+add("ar","B1","Çalışma","استقالة","istifa","isim","قدم استقالته من الشركة.","Şirketten istifa etti.");
+add("ar","B1","Çalışma","بطالة","işsizlik","isim","البطالة مشكلة كبيرة.","İşsizlik büyük bir sorun.");
+// ======================= B1 — İŞ FİİLLERİ =======================
+add("ar","B1","İş Fiilleri","يعمل","çalışmak","fiil","أعمل من المنزل اليوم.","Bugün evden çalışıyorum.");
+add("ar","B1","İş Fiilleri","يوظف","işe almak","fiil","الشركة توظف موظفين جدد.","Şirket yeni çalışanlar işe alıyor.");
+add("ar","B1","İş Fiilleri","يتقدم","başvurmak","fiil","تقدمت إلى وظيفة جديدة.","Yeni bir işe başvurdum.");
+add("ar","B1","İş Fiilleri","يقبل","kabul etmek","fiil","قبلت الشركة طلبي.","Şirket başvurumu kabul etti.");
+add("ar","B1","İş Fiilleri","يرفض","reddetmek","fiil","رفضوا طلبي.","Başvurumu reddettiler.");
+add("ar","B1","İş Fiilleri","يكسب","kazanmak","fiil","يكسب مالا جيدا من عمله.","İşinden iyi para kazanıyor.");
+add("ar","B1","İş Fiilleri","يستقيل","istifa etmek","fiil","استقال من وظيفته.","İşinden istifa etti.");
+add("ar","B1","İş Fiilleri","يتقاعد","emekli olmak","fiil","تقاعد والدي العام الماضي.","Babam geçen yıl emekli oldu.");
+add("ar","B1","İş Fiilleri","يدير","yönetmek","fiil","يدير شركة صغيرة.","Küçük bir şirket yönetiyor.");
+add("ar","B1","İş Fiilleri","ينظم","organize etmek","fiil","أنظم اجتماعات الفريق.","Ekip toplantılarını organize ediyorum.");
+add("ar","B1","İş Fiilleri","يشارك","katılmak / paylaşmak","fiil","أشارك في اجتماع مهم.","Önemli bir toplantıya katılıyorum.");
+add("ar","B1","İş Fiilleri","يتعاون","iş birliği yapmak","fiil","نتعاون مع شركات أخرى.","Başka şirketlerle iş birliği yapıyoruz.");
+add("ar","B1","İş Fiilleri","يتفاوض","müzakere etmek","fiil","يتفاوض المدير مع العميل.","Yönetici müşteriyle müzakere ediyor.");
+add("ar","B1","İş Fiilleri","يقرر","karar vermek","fiil","قررنا بدء المشروع.","Projeyi başlatmaya karar verdik.");
+add("ar","B1","İş Fiilleri","يخطط","planlamak","fiil","نخطط لمشروع جديد.","Yeni bir proje planlıyoruz.");
+// ======================= B1 — OFİS =======================
+add("ar","B1","Ofis","حاسوب","bilgisayar","isim","أعمل على الحاسوب طوال اليوم.","Bütün gün bilgisayarda çalışıyorum.");
+add("ar","B1","Ofis","شاشة","ekran","isim","الشاشة كبيرة.","Ekran büyük.");
+add("ar","B1","Ofis","لوحة مفاتيح","klavye","isim","أحتاج إلى لوحة مفاتيح جديدة.","Yeni bir klavyeye ihtiyacım var.");
+add("ar","B1","Ofis","طابعة","yazıcı","isim","الطابعة لا تعمل.","Yazıcı çalışmıyor.");
+add("ar","B1","Ofis","ملف","dosya","isim","أرسلت الملف بالبريد الإلكتروني.","Dosyayı e-postayla gönderdim.");
+add("ar","B1","Ofis","وثيقة","belge","isim","وقعت الوثيقة.","Belgeyi imzaladım.");
+add("ar","B1","Ofis","بريد إلكتروني","e-posta","isim","أرسلت لك بريدا إلكترونيا.","Sana bir e-posta gönderdim.");
+add("ar","B1","Ofis","رسالة","mesaj / mektup","isim","أرسلت رسالة إلى المدير.","Yöneticiye bir mesaj gönderdim.");
+add("ar","B1","Ofis","هاتف","telefon","isim","هاتفي على المكتب.","Telefonum masanın üzerinde.");
+add("ar","B1","Ofis","مكالمة","telefon görüşmesi","isim","لدي مكالمة مهمة.","Önemli bir telefon görüşmem var.");
+add("ar","B1","Ofis","موعد","randevu / zaman","isim","لدي موعد مع العميل.","Müşteriyle randevum var.");
+add("ar","B1","Ofis","جدول أعمال","gündem","isim","هذا هو جدول أعمال الاجتماع.","Bu toplantının gündemi.");
+add("ar","B1","Ofis","عرض تقديمي","sunum","isim","أعددت عرضا تقديميا.","Bir sunum hazırladım.");
+add("ar","B1","Ofis","فريق","ekip","isim","أعمل مع فريق صغير.","Küçük bir ekiple çalışıyorum.");
+add("ar","B1","Ofis","قسم","departman / bölüm","isim","أعمل في قسم التسويق.","Pazarlama departmanında çalışıyorum.");
+// ======================= B1 — İŞ SIFATLARI =======================
+add("ar","B1","İş Sıfatları","مشغول","meşgul","sıfat","أنا مشغول اليوم.","Bugün meşgulüm.");
+add("ar","B1","İş Sıfatları","متفرغ","müsait","sıfat","أنا متفرغ بعد الظهر.","Öğleden sonra müsaitim.");
+add("ar","B1","İş Sıfatları","مهم","önemli","sıfat","هذا اجتماع مهم.","Bu önemli bir toplantı.");
+add("ar","B1","İş Sıfatları","عاجل","acil","sıfat","هذا الأمر عاجل.","Bu konu acil.");
+add("ar","B1","İş Sıfatları","رسمي","resmi","sıfat","هذا اجتماع رسمي.","Bu resmi bir toplantı.");
+add("ar","B1","İş Sıfatları","خاص","özel","sıfat","هذا مشروع خاص.","Bu özel bir proje.");
+add("ar","B1","İş Sıfatları","مشترك","ortak","sıfat","هذا مشروع مشترك.","Bu ortak bir proje.");
+add("ar","B1","İş Sıfatları","ناجح","başarılı","sıfat","كان المشروع ناجحا.","Proje başarılıydı.");
+add("ar","B1","İş Sıfatları","متاح","mevcut / erişilebilir","sıfat","الموعد متاح غدا.","Yarın zaman uygun.");
+add("ar","B1","İş Sıfatları","مرن","esnek","sıfat","لدي وقت عمل مرن.","Esnek çalışma saatlerim var.");
+add("ar","B1","İş Sıfatları","مستقل","bağımsız","sıfat","أحب العمل بشكل مستقل.","Bağımsız çalışmayı seviyorum.");
+add("ar","B1","İş Sıfatları","احترافي","profesyonel","sıfat","لديه أسلوب احترافي.","Profesyonel bir tarzı var.");
+add("ar","B1","İş Sıfatları","منتج","üretken","sıfat","كان يوما منتجا.","Üretken bir gündü.");
+add("ar","B1","İş Sıfatları","فعال","etkili","sıfat","هذه طريقة فعالة.","Bu etkili bir yöntem.");
+add("ar","B1","İş Sıfatları","صعب","zor","sıfat","العمل صعب أحيانا.","İş bazen zor.");
+// ======================= B1 — İŞ İFADELERİ =======================
+add("ar","B1","İş İfadeleri","أبحث عن وظيفة","iş arıyorum","ifade","أبحث عن وظيفة في مجال التكنولوجيا.","Teknoloji alanında iş arıyorum.");
+add("ar","B1","İş İfadeleri","أريد التقدم إلى هذه الوظيفة","bu işe başvurmak istiyorum","ifade","أريد التقدم إلى هذه الوظيفة.","Bu işe başvurmak istiyorum.");
+add("ar","B1","İş İfadeleri","لدي خبرة في هذا المجال","bu alanda deneyimim var","ifade","لدي خبرة في هذا المجال منذ ثلاث سنوات.","Bu alanda üç yıldır deneyimim var.");
+add("ar","B1","İş İfadeleri","متى تبدأ المقابلة؟","mülakat ne zaman başlıyor?","ifade","متى تبدأ مقابلة العمل؟","İş görüşmesi ne zaman başlıyor?");
+add("ar","B1","İş İfadeleri","لدي مقابلة عمل","iş görüşmem var","ifade","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","İş İfadeleri","متى ينتهي الدوام؟","mesai ne zaman bitiyor?","ifade","متى ينتهي الدوام اليوم؟","Bugün mesai ne zaman bitiyor?");
+add("ar","B1","İş İfadeleri","أعمل بدوام كامل","tam zamanlı çalışıyorum","ifade","أعمل بدوام كامل في شركة دولية.","Uluslararası bir şirkette tam zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","أعمل بدوام جزئي","yarı zamanlı çalışıyorum","ifade","أعمل بدوام جزئي أثناء الدراسة.","Okurken yarı zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","سآخذ إجازة","izin alacağım","ifade","سآخذ إجازة الأسبوع المقبل.","Gelecek hafta izin alacağım.");
+add("ar","B1","İş İfadeleri","لدي اجتماع","toplantım var","ifade","لدي اجتماع في الساعة العاشرة.","Saat onda toplantım var.");
+add("ar","B1","İş İfadeleri","سأرسل لك الملف","sana dosyayı göndereceğim","ifade","سأرسل لك الملف عبر البريد الإلكتروني.","Dosyayı sana e-postayla göndereceğim.");
+add("ar","B1","İş İfadeleri","هل يمكنك مساعدتي؟","bana yardım edebilir misin?","ifade","هل يمكنك مساعدتي في هذا المشروع؟","Bu projede bana yardım edebilir misin?");
+add("ar","B1","İş İfadeleri","سأعود إليك لاحقا","sana daha sonra döneceğim","ifade","سأعود إليك لاحقا بعد الاجتماع.","Toplantıdan sonra sana döneceğim.");
+add("ar","B1","İş İfadeleri","سأتصل بك لاحقا","seni daha sonra arayacağım","ifade","سأتصل بك لاحقا عندما أصل إلى المكتب.","Ofise vardığımda seni daha sonra arayacağım.");
+add("ar","B1","İş İfadeleri","سأرسل لك التفاصيل","detayları sana göndereceğim","ifade","سأرسل لك التفاصيل عبر البريد الإلكتروني.","Detayları sana e-postayla göndereceğim.");
+/* ================================================================
+   ARAPÇA B1 — PART 39
+   KONU: ALIŞVERİŞ, MAĞAZA, FİYATLAR VE TÜKETİM
+================================================================ */
+// ======================= B1 — ALIŞVERİŞ =======================
+add("ar","B1","Alışveriş","تسوق","alışveriş","isim","أحب التسوق في عطلة نهاية الأسبوع.","Hafta sonu alışveriş yapmayı seviyorum.");
+add("ar","B1","Alışveriş","متجر","mağaza","isim","يوجد متجر قريب من منزلي.","Evimin yakınında bir mağaza var.");
+add("ar","B1","Alışveriş","سوق","pazar / çarşı","isim","ذهبت إلى السوق صباحا.","Sabah pazara gittim.");
+add("ar","B1","Alışveriş","مركز تجاري","alışveriş merkezi","isim","سنذهب إلى مركز تجاري كبير.","Büyük bir alışveriş merkezine gideceğiz.");
+add("ar","B1","Alışveriş","محل","dükkan","isim","هذا المحل يبيع الملابس.","Bu dükkân kıyafet satıyor.");
+add("ar","B1","Alışveriş","بقالة","bakkal / market","isim","اشتريت الطعام من البقالة.","Yiyecekleri marketten aldım.");
+add("ar","B1","Alışveriş","سوبرماركت","süpermarket","isim","أذهب إلى السوبرماركت كل أسبوع.","Her hafta süpermarkete gidiyorum.");
+add("ar","B1","Alışveriş","متجر ملابس","giyim mağazası","isim","دخلت متجر ملابس جديدا.","Yeni bir giyim mağazasına girdim.");
+add("ar","B1","Alışveriş","متجر إلكترونيات","elektronik mağazası","isim","أريد زيارة متجر إلكترونيات.","Bir elektronik mağazasını ziyaret etmek istiyorum.");
+add("ar","B1","Alışveriş","موقع إلكتروني","web sitesi","isim","اشتريت المنتج من موقع إلكتروني.","Ürünü bir web sitesinden aldım.");
+add("ar","B1","Alışveriş","متجر إلكتروني","online mağaza","isim","أفضل الشراء من متجر إلكتروني.","Online mağazadan alışveriş yapmayı tercih ediyorum.");
+add("ar","B1","Alışveriş","منتج","ürün","isim","هذا المنتج عالي الجودة.","Bu ürün yüksek kaliteli.");
+add("ar","B1","Alışveriş","بضاعة","mal / ticari ürün","isim","وصلت البضاعة الجديدة.","Yeni mallar geldi.");
+add("ar","B1","Alışveriş","سلعة","emtia / ürün","isim","ارتفع سعر هذه السلعة.","Bu ürünün fiyatı arttı.");
+add("ar","B1","Alışveriş","ماركة","marka","isim","هذه ماركة مشهورة.","Bu ünlü bir marka.");
+// ======================= B1 — FİYAT VE PARA =======================
+add("ar","B1","Fiyat","سعر","fiyat","isim","ما سعر هذا المنتج؟","Bu ürünün fiyatı ne?");
+add("ar","B1","Fiyat","قيمة","değer","isim","ما قيمة هذا الشيء؟","Bu şeyin değeri ne?");
+add("ar","B1","Fiyat","تكلفة","maliyet","isim","كم تكلفة الرحلة؟","Gezinin maliyeti ne kadar?");
+add("ar","B1","Fiyat","خصم","indirim","isim","هل يوجد خصم على هذا المنتج؟","Bu üründe indirim var mı?");
+add("ar","B1","Fiyat","عرض","kampanya / teklif","isim","هناك عرض خاص هذا الأسبوع.","Bu hafta özel bir kampanya var.");
+add("ar","B1","Fiyat","تخفيض","fiyat indirimi","isim","المتجر يقدم تخفيضات كبيرة.","Mağaza büyük indirimler sunuyor.");
+add("ar","B1","Fiyat","ضريبة","vergi","isim","هل السعر يشمل الضريبة؟","Fiyata vergi dahil mi?");
+add("ar","B1","Fiyat","فاتورة","fatura","isim","أحتاج إلى الفاتورة.","Faturaya ihtiyacım var.");
+add("ar","B1","Fiyat","إيصال","fiş / makbuz","isim","هل يمكنني الحصول على الإيصال؟","Fişi alabilir miyim?");
+add("ar","B1","Fiyat","نقد","nakit","isim","هل يمكنني الدفع نقدا؟","Nakit ödeyebilir miyim?");
+add("ar","B1","Fiyat","بطاقة ائتمان","kredi kartı","isim","دفعت باستخدام بطاقة الائتمان.","Kredi kartıyla ödedim.");
+add("ar","B1","Fiyat","بطاقة خصم","banka kartı","isim","أدفع عادة باستخدام بطاقة الخصم.","Genellikle banka kartıyla ödüyorum.");
+add("ar","B1","Fiyat","حساب بنكي","banka hesabı","isim","لدي حساب بنكي في النمسا.","Avusturya'da banka hesabım var.");
+add("ar","B1","Fiyat","تحويل","havale / transfer","isim","أرسلت المال عن طريق تحويل بنكي.","Parayı banka havalesiyle gönderdim.");
+add("ar","B1","Fiyat","مبلغ","miktar / meblağ","isim","دفعت مبلغا كبيرا.","Büyük bir miktar ödedim.");
+// ======================= B1 — ALIŞVERİŞ FİİLLERİ =======================
+add("ar","B1","Alışveriş Fiilleri","يشتري","satın almak","fiil","اشتريت حاسوبا جديدا.","Yeni bir bilgisayar satın aldım.");
+add("ar","B1","Alışveriş Fiilleri","يبيع","satmak","fiil","هذا المتجر يبيع الأجهزة الإلكترونية.","Bu mağaza elektronik cihazlar satıyor.");
+add("ar","B1","Alışveriş Fiilleri","يدفع","ödemek","fiil","دفعت ثمن الطعام.","Yemeğin parasını ödedim.");
+add("ar","B1","Alışveriş Fiilleri","يطلب","sipariş vermek","fiil","طلبت الطعام عبر الإنترنت.","Yemeği internetten sipariş ettim.");
+add("ar","B1","Alışveriş Fiilleri","يستلم","teslim almak","fiil","استلمت الطرد صباحا.","Paketi sabah teslim aldım.");
+add("ar","B1","Alışveriş Fiilleri","يرجع","iade etmek / geri dönmek","fiil","أريد أن أرجع المنتج.","Ürünü iade etmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يستبدل","değiştirmek","fiil","أريد استبدال هذا القميص.","Bu gömleği değiştirmek istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يختار","seçmek","fiil","اخترت اللون الأسود.","Siyah rengi seçtim.");
+add("ar","B1","Alışveriş Fiilleri","يقارن","karşılaştırmak","fiil","أقارن الأسعار قبل الشراء.","Satın almadan önce fiyatları karşılaştırıyorum.");
+add("ar","B1","Alışveriş Fiilleri","يجرب","denemek","fiil","هل يمكنني تجربة هذا الحذاء؟","Bu ayakkabıyı deneyebilir miyim?");
+add("ar","B1","Alışveriş Fiilleri","يفحص","kontrol etmek / incelemek","fiil","أفحص المنتج قبل شرائه.","Ürünü satın almadan önce kontrol ediyorum.");
+add("ar","B1","Alışveriş Fiilleri","يستفسر","bilgi sormak / soruşturmak","fiil","أريد أن أستفسر عن السعر.","Fiyat hakkında bilgi almak istiyorum.");
+add("ar","B1","Alışveriş Fiilleri","يطلب","talep etmek","fiil","طلبت استرداد المال.","Para iadesi talep ettim.");
+add("ar","B1","Alışveriş Fiilleri","يسترد","geri ödemek / iade etmek","fiil","استرددت أموالي.","Paramı geri aldım.");
+add("ar","B1","Alışveriş Fiilleri","يشحن","kargolamak / göndermek","fiil","المتجر يشحن المنتجات إلى أوروبا.","Mağaza ürünleri Avrupa'ya gönderiyor.");
+// ======================= B1 — ALIŞVERİŞ SIFATLARI =======================
+add("ar","B1","Alışveriş Sıfatları","رخيص","ucuz","sıfat","هذا المنتج رخيص.","Bu ürün ucuz.");
+add("ar","B1","Alışveriş Sıfatları","غالي","pahalı","sıfat","هذا الهاتف غالي جدا.","Bu telefon çok pahalı.");
+add("ar","B1","Alışveriş Sıfatları","مجاني","ücretsiz","sıfat","الدخول مجاني.","Giriş ücretsiz.");
+add("ar","B1","Alışveriş Sıfatları","متوفر","mevcut / stokta","sıfat","هذا المنتج متوفر الآن.","Bu ürün şu anda mevcut.");
+add("ar","B1","Alışveriş Sıfatları","غير متوفر","mevcut değil / stokta yok","sıfat","هذا المقاس غير متوفر.","Bu beden mevcut değil.");
+add("ar","B1","Alışveriş Sıfatları","جديد","yeni","sıfat","اشتريت هاتفا جديدا.","Yeni bir telefon aldım.");
+add("ar","B1","Alışveriş Sıfatları","مستعمل","kullanılmış / ikinci el","sıfat","اشتريت سيارة مستعملة.","İkinci el bir araba aldım.");
+add("ar","B1","Alışveriş Sıfatları","أصلي","orijinal","sıfat","هل هذا المنتج أصلي؟","Bu ürün orijinal mi?");
+add("ar","B1","Alışveriş Sıfatları","مقلد","sahte / taklit","sıfat","هذا المنتج مقلد.","Bu ürün sahte.");
+add("ar","B1","Alışveriş Sıfatları","عالي الجودة","yüksek kaliteli","sıfat","أبحث عن منتج عالي الجودة.","Yüksek kaliteli bir ürün arıyorum.");
+add("ar","B1","Alışveriş Sıfatları","منخفض الجودة","düşük kaliteli","sıfat","هذا المنتج منخفض الجودة.","Bu ürün düşük kaliteli.");
+add("ar","B1","Alışveriş Sıfatları","مناسب","uygun","sıfat","هذا السعر مناسب لي.","Bu fiyat benim için uygun.");
+add("ar","B1","Alışveriş Sıfatları","غير مناسب","uygun değil","sıfat","هذا السعر غير مناسب.","Bu fiyat uygun değil.");
+add("ar","B1","Alışveriş Sıfatları","متين","dayanıklı","sıfat","هذا الحذاء متين.","Bu ayakkabı dayanıklı.");
+add("ar","B1","Alışveriş Sıfatları","خفيف","hafif","sıfat","هذا الحاسوب خفيف.","Bu bilgisayar hafif.");
+// ======================= B1 — TÜKETİM =======================
+add("ar","B1","Tüketim","استهلاك","tüketim","isim","يجب تقليل استهلاك الطاقة.","Enerji tüketimini azaltmalıyız.");
+add("ar","B1","Tüketim","مستهلك","tüketici","isim","يجب حماية حقوق المستهلك.","Tüketici hakları korunmalıdır.");
+add("ar","B1","Tüketim","حق","hak","isim","لديك الحق في استرداد المال.","Para iadesi alma hakkın var.");
+add("ar","B1","Tüketim","ضمان","garanti","isim","هل يوجد ضمان لهذا الجهاز؟","Bu cihazın garantisi var mı?");
+add("ar","B1","Tüketim","خدمة العملاء","müşteri hizmetleri","isim","اتصلت بخدمة العملاء.","Müşteri hizmetlerini aradım.");
+add("ar","B1","Tüketim","شكوى","şikayet","isim","قدمت شكوى إلى الشركة.","Şirkete şikayette bulundum.");
+add("ar","B1","Tüketim","مشكلة","sorun","isim","لدي مشكلة مع المنتج.","Ürünle ilgili bir sorunum var.");
+add("ar","B1","Tüketim","استرداد","geri ödeme","isim","طلبت استرداد المبلغ.","Para iadesi talep ettim.");
+add("ar","B1","Tüketim","استبدال","değiştirme / değişim","isim","أريد طلب استبدال المنتج.","Ürünün değiştirilmesini istiyorum.");
+add("ar","B1","Tüketim","طلبية","sipariş","isim","وصلت طلبيتي اليوم.","Siparişim bugün geldi.");
+add("ar","B1","Tüketim","طرد","paket / kargo","isim","استلمت الطرد من البريد.","Paketi postaneden teslim aldım.");
+add("ar","B1","Tüketim","توصيل","teslimat","isim","التوصيل مجاني.","Teslimat ücretsiz.");
+add("ar","B1","Tüketim","عنوان التوصيل","teslimat adresi","isim","أدخل عنوان التوصيل.","Teslimat adresini gir.");
+add("ar","B1","Tüketim","موعد التسليم","teslimat zamanı","isim","ما موعد التسليم المتوقع؟","Tahmini teslimat zamanı ne?");
+add("ar","B1","Tüketim","متجر محلي","yerel mağaza","isim","أفضل دعم المتاجر المحلية.","Yerel mağazaları desteklemeyi tercih ediyorum.");
+// ======================= B1 — ALIŞVERİŞ İFADELERİ =======================
+add("ar","B1","Alışveriş İfadeleri","كم سعر هذا؟","bunun fiyatı ne kadar?","ifade","عفوا، كم سعر هذا؟","Affedersiniz, bunun fiyatı ne kadar?");
+add("ar","B1","Alışveriş İfadeleri","هل يوجد خصم؟","indirim var mı?","ifade","هل يوجد خصم للطلاب؟","Öğrenciler için indirim var mı?");
+add("ar","B1","Alışveriş İfadeleri","هل السعر نهائي؟","fiyat kesin mi?","ifade","هل السعر نهائي أم يمكن التفاوض؟","Fiyat kesin mi yoksa pazarlık yapılabilir mi?");
+add("ar","B1","Alışveriş İfadeleri","أريد شراء هذا","bunu satın almak istiyorum","ifade","أريد شراء هذا المنتج.","Bu ürünü satın almak istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","هل يمكنني تجربته؟","deneyebilir miyim?","ifade","هل يمكنني تجربة هذا المعطف؟","Bu ceketi deneyebilir miyim?");
+add("ar","B1","Alışveriş İfadeleri","هل لديكم مقاس آخر؟","başka bedeniniz var mı?","ifade","هل لديكم مقاس أكبر؟","Daha büyük bedeniniz var mı?");
+add("ar","B1","Alışveriş İfadeleri","هل لديكم لون آخر؟","başka renginiz var mı?","ifade","هل لديكم لون آخر من هذا المنتج؟","Bu ürünün başka rengi var mı?");
+add("ar","B1","Alışveriş İfadeleri","أريد إرجاع المنتج","ürünü iade etmek istiyorum","ifade","أريد إرجاع المنتج لأنه تالف.","Ürünü kusurlu olduğu için iade etmek istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","أريد استبدال المنتج","ürünü değiştirmek istiyorum","ifade","أريد استبدال المنتج بمقاس أكبر.","Ürünü daha büyük bir bedenle değiştirmek istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","أين يمكنني الدفع؟","nerede ödeme yapabilirim?","ifade","أين يمكنني الدفع؟","Nerede ödeme yapabilirim?");
+add("ar","B1","Alışveriş İfadeleri","هل يمكنني الدفع بالبطاقة؟","kartla ödeyebilir miyim?","ifade","هل يمكنني الدفع ببطاقة الائتمان؟","Kredi kartıyla ödeyebilir miyim?");
+add("ar","B1","Alışveriş İfadeleri","أريد فاتورة","fatura istiyorum","ifade","أريد فاتورة من فضلك.","Lütfen bir fatura istiyorum.");
+add("ar","B1","Alışveriş İfadeleri","متى يصل الطلب؟","sipariş ne zaman geliyor?","ifade","متى يصل الطلب إلى عنواني؟","Sipariş adresime ne zaman geliyor?");
+add("ar","B1","Alışveriş İfadeleri","لم يصل طلبي","siparişim gelmedi","ifade","لم يصل طلبي حتى الآن.","Siparişim hâlâ gelmedi.");
+add("ar","B1","Alışveriş İfadeleri","أريد استرداد أموالي","paramı geri almak istiyorum","ifade","أريد استرداد أموالي لأن المنتج تالف.","Ürün kusurlu olduğu için paramı geri almak istiyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 40
+   KONU: SAĞLIK, VÜCUT, HASTALIKLAR VE DOKTOR
+================================================================ */
+// ======================= B1 — SAĞLIK =======================
+add("ar","B1","Sağlık","صحة","sağlık","isim","الصحة أهم من المال.","Sağlık paradan daha önemlidir.");
+add("ar","B1","Sağlık","مرض","hastalık","isim","هذا المرض يحتاج إلى علاج.","Bu hastalığın tedaviye ihtiyacı var.");
+add("ar","B1","Sağlık","علاج","tedavi","isim","بدأ العلاج الأسبوع الماضي.","Tedavi geçen hafta başladı.");
+add("ar","B1","Sağlık","دواء","ilaç","isim","يجب أن أتناول الدواء.","İlacı almam gerekiyor.");
+add("ar","B1","Sağlık","طبيب","doktor","isim","ذهبت إلى الطبيب أمس.","Dün doktora gittim.");
+add("ar","B1","Sağlık","مستشفى","hastane","isim","المستشفى قريب من هنا.","Hastane buraya yakın.");
+add("ar","B1","Sağlık","عيادة","klinik","isim","لدي موعد في العيادة.","Klinikte randevum var.");
+add("ar","B1","Sağlık","صيدلية","eczane","isim","اشتريت الدواء من الصيدلية.","İlacı eczaneden aldım.");
+add("ar","B1","Sağlık","مريض","hasta","isim","المريض يحتاج إلى الراحة.","Hastanın dinlenmeye ihtiyacı var.");
+add("ar","B1","Sağlık","ممرضة","hemşire","isim","تعمل الممرضة في المستشفى.","Hemşire hastanede çalışıyor.");
+add("ar","B1","Sağlık","طبيب أسنان","diş doktoru","isim","لدي موعد مع طبيب الأسنان.","Diş doktoruyla randevum var.");
+add("ar","B1","Sağlık","فحص","muayene / kontrol","isim","أحتاج إلى فحص طبي.","Tıbbi muayeneye ihtiyacım var.");
+add("ar","B1","Sağlık","تحليل","tahlil","isim","طلب الطبيب تحليلا للدم.","Doktor kan tahlili istedi.");
+add("ar","B1","Sağlık","نتيجة","sonuç","isim","ظهرت نتيجة التحليل.","Tahlil sonucu çıktı.");
+add("ar","B1","Sağlık","وصفة","reçete","isim","كتب الطبيب وصفة جديدة.","Doktor yeni bir reçete yazdı.");
+// ======================= B1 — VÜCUT =======================
+add("ar","B1","Vücut","جسم","vücut","isim","يحتاج الجسم إلى النوم.","Vücudun uykuya ihtiyacı vardır.");
+add("ar","B1","Vücut","رأس","baş","isim","رأسي يؤلمني.","Başım ağrıyor.");
+add("ar","B1","Vücut","وجه","yüz","isim","غسلت وجهي.","Yüzümü yıkadım.");
+add("ar","B1","Vücut","عين","göz","isim","عيني تؤلمني.","Gözüm ağrıyor.");
+add("ar","B1","Vücut","أذن","kulak","isim","أذني تؤلمني.","Kulağım ağrıyor.");
+add("ar","B1","Vücut","أنف","burun","isim","أنفي مسدود.","Burnum tıkalı.");
+add("ar","B1","Vücut","فم","ağız","isim","افتح فمك من فضلك.","Lütfen ağzını aç.");
+add("ar","B1","Vücut","أسنان","dişler","isim","أغسل أسناني مرتين يوميا.","Dişlerimi günde iki kez fırçalarım.");
+add("ar","B1","Vücut","رقبة","boyun","isim","أشعر بألم في رقبتي.","Boynumda ağrı hissediyorum.");
+add("ar","B1","Vücut","كتف","omuz","isim","كتفي يؤلمني.","Omzum ağrıyor.");
+add("ar","B1","Vücut","ذراع","kol","isim","أصبت ذراعي أثناء الرياضة.","Spor yaparken kolumu incittim.");
+add("ar","B1","Vücut","يد","el","isim","يدي باردة.","Elim soğuk.");
+add("ar","B1","Vücut","إصبع","parmak","isim","جرحت إصبعي.","Parmağımı yaraladım.");
+add("ar","B1","Vücut","ظهر","sırt","isim","أشعر بألم في ظهري.","Sırtımda ağrı hissediyorum.");
+add("ar","B1","Vücut","بطن","karın","isim","بطني يؤلمني.","Karnım ağrıyor.");
+// ======================= B1 — HASTALIK VE BELİRTİLER =======================
+add("ar","B1","Belirtiler","حمى","ateş","isim","لدي حمى منذ أمس.","Dünden beri ateşim var.");
+add("ar","B1","Belirtiler","سعال","öksürük","isim","لدي سعال شديد.","Şiddetli öksürüğüm var.");
+add("ar","B1","Belirtiler","زكام","soğuk algınlığı","isim","أصبت بالزكام الأسبوع الماضي.","Geçen hafta soğuk algınlığına yakalandım.");
+add("ar","B1","Belirtiler","إنفلونزا","grip","isim","أصبت بالإنفلونزا.","Grip oldum.");
+add("ar","B1","Belirtiler","صداع","baş ağrısı","isim","لدي صداع قوي.","Şiddetli baş ağrım var.");
+add("ar","B1","Belirtiler","ألم","ağrı","isim","أشعر بألم في ظهري.","Sırtımda ağrı hissediyorum.");
+add("ar","B1","Belirtiler","دوخة","baş dönmesi","isim","أشعر بالدوخة.","Başım dönüyor.");
+add("ar","B1","Belirtiler","غثيان","mide bulantısı","isim","أشعر بالغثيان.","Midemi bulanıyor.");
+add("ar","B1","Belirtiler","تعب","yorgunluk","isim","أشعر بتعب شديد.","Çok yorgun hissediyorum.");
+add("ar","B1","Belirtiler","إرهاق","bitkinlik","isim","أشعر بالإرهاق بعد العمل.","İşten sonra bitkin hissediyorum.");
+add("ar","B1","Belirtiler","دوار","sersemlik / vertigo","isim","أشعر بدوار عندما أقف بسرعة.","Hızlı ayağa kalktığımda başım dönüyor.");
+add("ar","B1","Belirtiler","حساسية","alerji","isim","لدي حساسية من بعض الأطعمة.","Bazı yiyeceklere alerjim var.");
+add("ar","B1","Belirtiler","التهاب","iltihap / enfeksiyon","isim","لدي التهاب في الحلق.","Boğazımda enfeksiyon var.");
+add("ar","B1","Belirtiler","تورم","şişlik","isim","هناك تورم في يدي.","Elimde şişlik var.");
+add("ar","B1","Belirtiler","جرح","yara","isim","لدي جرح صغير في يدي.","Elimde küçük bir yara var.");
+// ======================= B1 — SAĞLIK FİİLLERİ =======================
+add("ar","B1","Sağlık Fiilleri","يمرض","hastalanmak","fiil","لا أريد أن أمرض.","Hastalanmak istemiyorum.");
+add("ar","B1","Sağlık Fiilleri","يشعر","hissetmek","fiil","أشعر بتحسن الآن.","Şimdi daha iyi hissediyorum.");
+add("ar","B1","Sağlık Fiilleri","يتألم","ağrımak / acımak","fiil","ظهري يؤلمني كثيرا.","Sırtım çok ağrıyor.");
+add("ar","B1","Sağlık Fiilleri","يتعافى","iyileşmek","fiil","بدأ يتعافى بعد العملية.","Ameliyattan sonra iyileşmeye başladı.");
+add("ar","B1","Sağlık Fiilleri","يتحسن","iyileşmek / düzelmek","fiil","حالتي تتحسن.","Durumum düzeliyor.");
+add("ar","B1","Sağlık Fiilleri","يتدهور","kötüleşmek","fiil","حالته الصحية تتدهور.","Sağlık durumu kötüleşiyor.");
+add("ar","B1","Sağlık Fiilleri","يتنفس","nefes almak","fiil","أجد صعوبة في التنفس.","Nefes almakta zorlanıyorum.");
+add("ar","B1","Sağlık Fiilleri","يسعل","öksürmek","fiil","يسعل طوال الليل.","Bütün gece öksürüyor.");
+add("ar","B1","Sağlık Fiilleri","يعطس","hapşırmak","fiil","أعطس كثيرا في الربيع.","İlkbaharda çok hapşırıyorum.");
+add("ar","B1","Sağlık Fiilleri","ينام","uyumak","fiil","أنام ثماني ساعات كل ليلة.","Her gece sekiz saat uyuyorum.");
+add("ar","B1","Sağlık Fiilleri","يرتاح","dinlenmek","fiil","يجب أن ترتاح قليلا.","Biraz dinlenmelisin.");
+add("ar","B1","Sağlık Fiilleri","يتناول","almak / tüketmek","fiil","أتناول الدواء بعد الطعام.","İlacı yemekten sonra alıyorum.");
+add("ar","B1","Sağlık Fiilleri","يفحص","muayene etmek / kontrol etmek","fiil","يفحص الطبيب المريض.","Doktor hastayı muayene ediyor.");
+add("ar","B1","Sağlık Fiilleri","يعالج","tedavi etmek","fiil","يعالج الطبيب المرضى.","Doktor hastaları tedavi ediyor.");
+add("ar","B1","Sağlık Fiilleri","يصف","reçete etmek","fiil","وصف الطبيب دواء جديدا.","Doktor yeni bir ilaç reçete etti.");
+// ======================= B1 — SAĞLIK SIFATLARI =======================
+add("ar","B1","Sağlık Sıfatları","صحي","sağlıklı","sıfat","أحاول أن أعيش حياة صحية.","Sağlıklı bir hayat yaşamaya çalışıyorum.");
+add("ar","B1","Sağlık Sıfatları","مريض","hasta","sıfat","أنا مريض اليوم.","Bugün hastayım.");
+add("ar","B1","Sağlık Sıfatları","سليم","sağlam / sağlıklı","sıfat","أنا بخير وسليم.","İyiyim ve sağlıklıyım.");
+add("ar","B1","Sağlık Sıfatları","متعب","yorgun","sıfat","أنا متعب جدا.","Çok yorgunum.");
+add("ar","B1","Sağlık Sıfatları","قوي","güçlü","sıfat","أريد أن أصبح أقوى.","Daha güçlü olmak istiyorum.");
+add("ar","B1","Sağlık Sıfatları","ضعيف","zayıf / güçsüz","sıfat","أشعر بالضعف اليوم.","Bugün kendimi güçsüz hissediyorum.");
+add("ar","B1","Sağlık Sıfatları","خطير","tehlikeli","sıfat","هذا المرض خطير.","Bu hastalık tehlikeli.");
+add("ar","B1","Sağlık Sıfatları","مزمن","kronik","sıfat","هذا مرض مزمن.","Bu kronik bir hastalık.");
+add("ar","B1","Sağlık Sıfatları","مؤلم","ağrılı","sıfat","الفحص غير مؤلم.","Muayene ağrılı değil.");
+add("ar","B1","Sağlık Sıfatları","طارئ","acil","sıfat","هذه حالة طارئة.","Bu acil bir durum.");
+add("ar","B1","Sağlık Sıfatları","طبي","tıbbi","sıfat","أحتاج إلى مساعدة طبية.","Tıbbi yardıma ihtiyacım var.");
+add("ar","B1","Sağlık Sıfatları","عقلي","zihinsel","sıfat","الصحة العقلية مهمة.","Zihinsel sağlık önemlidir.");
+add("ar","B1","Sağlık Sıfatları","نفسي","psikolojik","sıfat","الصحة النفسية مهمة للجميع.","Psikolojik sağlık herkes için önemlidir.");
+add("ar","B1","Sağlık Sıfatları","جسدي","fiziksel","sıfat","أمارس نشاطا جسديا يوميا.","Her gün fiziksel aktivite yapıyorum.");
+add("ar","B1","Sağlık Sıfatları","طبيعي","normal","sıfat","هذا أمر طبيعي.","Bu normal bir şey.");
+// ======================= B1 — SAĞLIK İFADELERİ =======================
+add("ar","B1","Sağlık İfadeleri","أشعر بالتعب","yorgun hissediyorum","ifade","أشعر بالتعب منذ الصباح.","Sabahtan beri yorgun hissediyorum.");
+add("ar","B1","Sağlık İfadeleri","رأسي يؤلمني","başım ağrıyor","ifade","رأسي يؤلمني منذ ساعتين.","İki saattir başım ağrıyor.");
+add("ar","B1","Sağlık İfadeleri","بطني يؤلمني","karnım ağrıyor","ifade","بطني يؤلمني بعد تناول الطعام.","Yemek yedikten sonra karnım ağrıyor.");
+add("ar","B1","Sağlık İfadeleri","أشعر بالدوخة","başım dönüyor","ifade","أشعر بالدوخة عندما أقف.","Ayağa kalktığımda başım dönüyor.");
+add("ar","B1","Sağlık İfadeleri","لدي حمى","ateşim var","ifade","لدي حمى منذ الليلة الماضية.","Dün geceden beri ateşim var.");
+add("ar","B1","Sağlık İfadeleri","لدي سعال","öksürüğüm var","ifade","لدي سعال منذ ثلاثة أيام.","Üç gündür öksürüğüm var.");
+add("ar","B1","Sağlık İfadeleri","أحتاج إلى طبيب","doktora ihtiyacım var","ifade","أحتاج إلى طبيب في أسرع وقت.","En kısa sürede doktora ihtiyacım var.");
+add("ar","B1","Sağlık İfadeleri","أريد حجز موعد","randevu almak istiyorum","ifade","أريد حجز موعد مع الطبيب.","Doktordan randevu almak istiyorum.");
+add("ar","B1","Sağlık İfadeleri","أين أقرب صيدلية؟","en yakın eczane nerede?","ifade","عفوا، أين أقرب صيدلية؟","Affedersiniz, en yakın eczane nerede?");
+add("ar","B1","Sağlık İfadeleri","هل هذا الدواء يحتاج إلى وصفة؟","bu ilaç reçete gerektiriyor mu?","ifade","هل هذا الدواء يحتاج إلى وصفة من الطبيب؟","Bu ilaç doktor reçetesi gerektiriyor mu?");
+add("ar","B1","Sağlık İfadeleri","متى أتناول الدواء؟","ilacı ne zaman almalıyım?","ifade","متى أتناول هذا الدواء؟","Bu ilacı ne zaman almalıyım?");
+add("ar","B1","Sağlık İfadeleri","كم مرة في اليوم؟","günde kaç kez?","ifade","كم مرة في اليوم يجب أن أتناول الدواء؟","İlacı günde kaç kez almalıyım?");
+add("ar","B1","Sağlık İfadeleri","أشعر بتحسن","daha iyi hissediyorum","ifade","أشعر بتحسن بعد تناول الدواء.","İlacı aldıktan sonra daha iyi hissediyorum.");
+add("ar","B1","Sağlık İfadeleri","لم أشعر بتحسن","daha iyi hissetmedim","ifade","لم أشعر بتحسن بعد العلاج.","Tedaviden sonra daha iyi hissetmedim.");
+add("ar","B1","Sağlık İfadeleri","أحتاج إلى الراحة","dinlenmeye ihtiyacım var","ifade","أحتاج إلى الراحة لبضعة أيام.","Birkaç gün dinlenmeye ihtiyacım var.");
+/* ================================================================
+   ARAPÇA B1 — PART 41
+   KONU: EĞİTİM, ÜNİVERSİTE, OKUL VE ÖĞRENME
+================================================================ */
+// ======================= B1 — EĞİTİM =======================
+add("ar","B1","Eğitim","تعليم","eğitim","isim","التعليم مهم لمستقبل الإنسان.","Eğitim insanın geleceği için önemlidir.");
+add("ar","B1","Eğitim","دراسة","öğrenim / ders çalışma","isim","أحتاج إلى وقت للدراسة.","Ders çalışmak için zamana ihtiyacım var.");
+add("ar","B1","Eğitim","مدرسة","okul","isim","ذهبت إلى المدرسة صباحا.","Sabah okula gittim.");
+add("ar","B1","Eğitim","جامعة","üniversite","isim","أدرس في الجامعة.","Üniversitede okuyorum.");
+add("ar","B1","Eğitim","كلية","fakülte","isim","أدرس في كلية الهندسة.","Mühendislik fakültesinde okuyorum.");
+add("ar","B1","Eğitim","معهد","enstitü / meslek okulu","isim","أدرس في معهد للغات.","Bir dil enstitüsünde okuyorum.");
+add("ar","B1","Eğitim","دورة","kurs","isim","سجلت في دورة للغة الألمانية.","Almanca kursuna kaydoldum.");
+add("ar","B1","Eğitim","درس","ders","isim","لدي درس في الساعة التاسعة.","Saat dokuzda dersim var.");
+add("ar","B1","Eğitim","محاضرة","ders / konferans","isim","حضرت محاضرة مهمة.","Önemli bir derse katıldım.");
+add("ar","B1","Eğitim","ندوة","seminer","isim","شاركت في ندوة علمية.","Bilimsel bir seminere katıldım.");
+add("ar","B1","Eğitim","مؤتمر","konferans","isim","حضرنا مؤتمرا دوليا.","Uluslararası bir konferansa katıldık.");
+add("ar","B1","Eğitim","امتحان","sınav","isim","لدي امتحان غدا.","Yarın sınavım var.");
+add("ar","B1","Eğitim","اختبار","test","isim","أنهيت الاختبار بسرعة.","Testi hızlıca bitirdim.");
+add("ar","B1","Eğitim","واجب","ödev","isim","أنهيت واجبي.","Ödevimi bitirdim.");
+add("ar","B1","Eğitim","مشروع","proje","isim","نعمل على مشروع جماعي.","Grup projesi üzerinde çalışıyoruz.");
+// ======================= B1 — ÜNİVERSİTE =======================
+add("ar","B1","Üniversite","تخصص","bölüm / uzmanlık alanı","isim","ما تخصصك في الجامعة؟","Üniversitedeki bölümün ne?");
+add("ar","B1","Üniversite","قسم أكاديمي","akademik bölüm","isim","أدرس في قسم الحاسوب.","Bilgisayar bölümünde okuyorum.");
+add("ar","B1","Üniversite","مادة","ders / konu","isim","هذه المادة صعبة قليلا.","Bu ders biraz zor.");
+add("ar","B1","Üniversite","منهج","müfredat","isim","المنهج يشمل عدة مواد.","Müfredat birkaç ders içeriyor.");
+add("ar","B1","Üniversite","فصل دراسي","akademik dönem","isim","يبدأ الفصل الدراسي في سبتمبر.","Akademik dönem eylülde başlıyor.");
+add("ar","B1","Üniversite","سنة دراسية","akademik yıl","isim","تنتهي السنة الدراسية في يونيو.","Akademik yıl haziranda bitiyor.");
+add("ar","B1","Üniversite","طالب","öğrenci","isim","أنا طالب في الجامعة.","Üniversitede öğrenciyim.");
+add("ar","B1","Üniversite","أستاذ","profesör / öğretim görevlisi","isim","الأستاذ يشرح الموضوع.","Profesör konuyu açıklıyor.");
+add("ar","B1","Üniversite","مدرس","öğretmen","isim","المدرس يشرح الدرس.","Öğretmen dersi açıklıyor.");
+add("ar","B1","Üniversite","باحث","araştırmacı","isim","يعمل الباحث في الجامعة.","Araştırmacı üniversitede çalışıyor.");
+add("ar","B1","Üniversite","مختبر","laboratuvar","isim","نعمل في المختبر.","Laboratuvarda çalışıyoruz.");
+add("ar","B1","Üniversite","مكتبة","kütüphane","isim","أدرس في المكتبة.","Kütüphanede ders çalışıyorum.");
+add("ar","B1","Üniversite","قاعة","salon / sınıf","isim","المحاضرة في القاعة الكبيرة.","Ders büyük salonda.");
+add("ar","B1","Üniversite","حرم جامعي","kampüs","isim","الحرم الجامعي واسع.","Kampüs geniş.");
+add("ar","B1","Üniversite","شهادة","sertifika / diploma","isim","حصلت على شهادة جامعية.","Üniversite diploması aldım.");
+// ======================= B1 — AKADEMİK KELİMELER =======================
+add("ar","B1","Akademik","بحث","araştırma","isim","أجري بحثا عن هذا الموضوع.","Bu konu hakkında araştırma yapıyorum.");
+add("ar","B1","Akademik","مقال","makale","isim","قرأت مقالا علميا.","Bilimsel bir makale okudum.");
+add("ar","B1","Akademik","مصدر","kaynak","isim","هذا مصدر موثوق.","Bu güvenilir bir kaynak.");
+add("ar","B1","Akademik","مرجع","referans / kaynak","isim","استخدمت عدة مراجع.","Birkaç kaynak kullandım.");
+add("ar","B1","Akademik","معلومة","bilgi","isim","وجدت معلومة مهمة.","Önemli bir bilgi buldum.");
+add("ar","B1","Akademik","موضوع","konu","isim","هذا موضوع مثير للاهتمام.","Bu ilginç bir konu.");
+add("ar","B1","Akademik","فكرة","fikir","isim","لدي فكرة جديدة.","Yeni bir fikrim var.");
+add("ar","B1","Akademik","نظرية","teori","isim","تعلمنا نظرية جديدة.","Yeni bir teori öğrendik.");
+add("ar","B1","Akademik","تجربة","deney / deneyim","isim","أجرى الطلاب تجربة علمية.","Öğrenciler bilimsel bir deney yaptılar.");
+add("ar","B1","Akademik","نتيجة","sonuç","isim","كانت النتائج إيجابية.","Sonuçlar olumluydu.");
+add("ar","B1","Akademik","تحليل","analiz","isim","نحتاج إلى تحليل البيانات.","Verileri analiz etmemiz gerekiyor.");
+add("ar","B1","Akademik","بيانات","veri","isim","جمعنا بيانات كثيرة.","Çok fazla veri topladık.");
+add("ar","B1","Akademik","إحصائية","istatistik","isim","هذه الإحصائية مهمة.","Bu istatistik önemli.");
+add("ar","B1","Akademik","معلومة أساسية","temel bilgi","isim","تحتاج إلى معلومات أساسية أولا.","Önce temel bilgilere ihtiyacın var.");
+add("ar","B1","Akademik","معرفة","bilgi / bilgi birikimi","isim","المعرفة تساعد الإنسان على التطور.","Bilgi insanın gelişmesine yardımcı olur.");
+// ======================= B1 — ÖĞRENME FİİLLERİ =======================
+add("ar","B1","Öğrenme Fiilleri","يتعلم","öğrenmek","fiil","أتعلم اللغة الألمانية.","Almanca öğreniyorum.");
+add("ar","B1","Öğrenme Fiilleri","يدرس","ders çalışmak / okumak","fiil","أدرس كل يوم.","Her gün ders çalışıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يفهم","anlamak","fiil","أفهم هذا الموضوع الآن.","Bu konuyu şimdi anlıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يشرح","açıklamak","fiil","يشرح الأستاذ الدرس.","Profesör dersi açıklıyor.");
+add("ar","B1","Öğrenme Fiilleri","يجيب","cevaplamak","fiil","أجاب الطالب عن السؤال.","Öğrenci soruyu cevapladı.");
+add("ar","B1","Öğrenme Fiilleri","يسأل","sormak","fiil","سألت الأستاذ سؤالا.","Profesöre bir soru sordum.");
+add("ar","B1","Öğrenme Fiilleri","يقرأ","okumak","fiil","أقرأ كتابا عن التاريخ.","Tarih hakkında bir kitap okuyorum.");
+add("ar","B1","Öğrenme Fiilleri","يكتب","yazmak","fiil","أكتب تقريرا عن المشروع.","Proje hakkında bir rapor yazıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يحفظ","ezberlemek","fiil","أحاول حفظ الكلمات الجديدة.","Yeni kelimeleri ezberlemeye çalışıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يراجع","tekrar etmek / gözden geçirmek","fiil","أراجع الدرس قبل الامتحان.","Sınavdan önce dersi tekrar ediyorum.");
+add("ar","B1","Öğrenme Fiilleri","يتدرب","pratik yapmak","fiil","أتدرب على التحدث يوميا.","Her gün konuşma pratiği yapıyorum.");
+add("ar","B1","Öğrenme Fiilleri","يتذكر","hatırlamak","fiil","لا أستطيع تذكر الكلمة.","Kelimeyi hatırlayamıyorum.");
+add("ar","B1","Öğrenme Fiilleri","ينسى","unutmak","fiil","نسيت موعد الامتحان.","Sınav tarihini unuttum.");
+add("ar","B1","Öğrenme Fiilleri","ينجح","başarmak / geçmek","fiil","نجحت في الامتحان.","Sınavı geçtim.");
+add("ar","B1","Öğrenme Fiilleri","يرسب","kalmak / başarısız olmak","fiil","لم ينجح في الامتحان.","Sınavı geçemedi.");
+// ======================= B1 — EĞİTİM SIFATLARI =======================
+add("ar","B1","Eğitim Sıfatları","سهل","kolay","sıfat","هذا السؤال سهل.","Bu soru kolay.");
+add("ar","B1","Eğitim Sıfatları","صعب","zor","sıfat","هذا الامتحان صعب.","Bu sınav zor.");
+add("ar","B1","Eğitim Sıfatları","مفيد","faydalı","sıfat","هذا الكتاب مفيد.","Bu kitap faydalı.");
+add("ar","B1","Eğitim Sıfatları","مهم","önemli","sıfat","هذا الموضوع مهم.","Bu konu önemli.");
+add("ar","B1","Eğitim Sıfatları","مثير للاهتمام","ilginç","sıfat","المحاضرة مثيرة للاهتمام.","Ders ilginç.");
+add("ar","B1","Eğitim Sıfatları","ممل","sıkıcı","sıfat","الدرس ممل قليلا.","Ders biraz sıkıcı.");
+add("ar","B1","Eğitim Sıfatları","متقدم","ileri","sıfat","هذا مستوى متقدم.","Bu ileri bir seviye.");
+add("ar","B1","Eğitim Sıfatları","أساسي","temel","sıfat","أحتاج إلى مستوى أساسي أولا.","Önce temel bir seviyeye ihtiyacım var.");
+add("ar","B1","Eğitim Sıfatları","أكاديمي","akademik","sıfat","هذا نص أكاديمي.","Bu akademik bir metin.");
+add("ar","B1","Eğitim Sıfatları","عملي","pratik","sıfat","أحتاج إلى تدريب عملي.","Pratik eğitime ihtiyacım var.");
+add("ar","B1","Eğitim Sıfatları","نظري","teorik","sıfat","هذا جزء نظري من الدرس.","Bu dersin teorik bir bölümü.");
+add("ar","B1","Eğitim Sıfatları","متخصص","uzmanlaşmış","sıfat","هذا موضوع متخصص.","Bu uzmanlaşmış bir konu.");
+add("ar","B1","Eğitim Sıfatları","مستقل","bağımsız","sıfat","التعلم المستقل مهم.","Bağımsız öğrenme önemlidir.");
+add("ar","B1","Eğitim Sıfatları","متاح","erişilebilir / mevcut","sıfat","المعلومات متاحة للجميع.","Bilgi herkes için erişilebilir.");
+add("ar","B1","Eğitim Sıfatları","ضروري","gerekli / zorunlu","sıfat","هذا الكتاب ضروري للامتحان.","Bu kitap sınav için gerekli.");
+// ======================= B1 — EĞİTİM İFADELERİ =======================
+add("ar","B1","Eğitim İfadeleri","أدرس في الجامعة","üniversitede okuyorum","ifade","أدرس في الجامعة منذ عامين.","İki yıldır üniversitede okuyorum.");
+add("ar","B1","Eğitim İfadeleri","ما تخصصك؟","bölümün ne?","ifade","ما تخصصك في الجامعة؟","Üniversitedeki bölümün ne?");
+add("ar","B1","Eğitim İfadeleri","لدي امتحان غدا","yarın sınavım var","ifade","لدي امتحان غدا ويجب أن أدرس.","Yarın sınavım var ve ders çalışmalıyım.");
+add("ar","B1","Eğitim İfadeleri","أحتاج إلى الدراسة","ders çalışmam gerekiyor","ifade","أحتاج إلى الدراسة قبل الامتحان.","Sınavdan önce ders çalışmam gerekiyor.");
+add("ar","B1","Eğitim İfadeleri","لا أفهم هذا الموضوع","bu konuyu anlamıyorum","ifade","عذرا، لا أفهم هذا الموضوع.","Üzgünüm, bu konuyu anlamıyorum.");
+add("ar","B1","Eğitim İfadeleri","هل يمكنك أن تشرح؟","açıklayabilir misin?","ifade","هل يمكنك أن تشرح هذه القاعدة؟","Bu kuralı açıklayabilir misin?");
+add("ar","B1","Eğitim İfadeleri","أريد أن أسأل سؤالا","bir soru sormak istiyorum","ifade","أريد أن أسأل سؤالا عن الدرس.","Ders hakkında bir soru sormak istiyorum.");
+add("ar","B1","Eğitim İfadeleri","متى يبدأ الفصل الدراسي؟","akademik dönem ne zaman başlıyor?","ifade","متى يبدأ الفصل الدراسي الجديد؟","Yeni akademik dönem ne zaman başlıyor?");
+add("ar","B1","Eğitim İfadeleri","أين توجد المكتبة؟","kütüphane nerede?","ifade","عفوا، أين توجد المكتبة؟","Affedersiniz, kütüphane nerede?");
+add("ar","B1","Eğitim İfadeleri","أريد التسجيل في دورة","bir kursa kaydolmak istiyorum","ifade","أريد التسجيل في دورة لغة.","Bir dil kursuna kaydolmak istiyorum.");
+add("ar","B1","Eğitim İfadeleri","أريد تحسين لغتي","dilimi geliştirmek istiyorum","ifade","أريد تحسين لغتي الألمانية.","Almancamı geliştirmek istiyorum.");
+add("ar","B1","Eğitim İfadeleri","أحتاج إلى مزيد من التدريب","daha fazla pratiğe ihtiyacım var","ifade","أحتاج إلى مزيد من التدريب على المحادثة.","Konuşma konusunda daha fazla pratiğe ihtiyacım var.");
+add("ar","B1","Eğitim İfadeleri","نجحت في الامتحان","sınavı geçtim","ifade","أنا سعيد لأنني نجحت في الامتحان.","Sınavı geçtiğim için mutluyum.");
+add("ar","B1","Eğitim İfadeleri","لم أنجح في الامتحان","sınavı geçemedim","ifade","لم أنجح في الامتحان هذه المرة.","Bu sefer sınavı geçemedim.");
+add("ar","B1","Eğitim İfadeleri","سأدرس في الخارج","yurt dışında okuyacağım","ifade","أريد أن أدرس في الخارج العام المقبل.","Gelecek yıl yurt dışında okumak istiyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 42
+   KONU: İŞ HAYATI, MESLEKLER, ÇALIŞMA ORTAMI VE KARİYER
+================================================================ */
+// ======================= B1 — İŞ HAYATI =======================
+add("ar","B1","İş","عمل","iş / çalışma","isim","أبحث عن عمل جديد.","Yeni bir iş arıyorum.");
+add("ar","B1","İş","وظيفة","iş / pozisyon","isim","وجدت وظيفة مناسبة.","Uygun bir iş buldum.");
+add("ar","B1","İş","مهنة","meslek","isim","ما مهنتك؟","Mesleğin ne?");
+add("ar","B1","İş","مسار مهني","kariyer yolu","isim","أفكر في مساري المهني.","Kariyer yolumu düşünüyorum.");
+add("ar","B1","İş","خبرة","deneyim","isim","لدي خبرة في هذا المجال.","Bu alanda deneyimim var.");
+add("ar","B1","İş","مهارة","beceri","isim","لدي مهارات جيدة في الحاسوب.","Bilgisayar konusunda iyi becerilerim var.");
+add("ar","B1","İş","مؤهل","yeterlilik / nitelik","isim","لديه المؤهلات المطلوبة.","Gerekli niteliklere sahip.");
+add("ar","B1","İş","شهادة مهنية","mesleki sertifika","isim","حصلت على شهادة مهنية.","Mesleki sertifika aldım.");
+add("ar","B1","İş","سيرة ذاتية","özgeçmiş / CV","isim","أرسلت سيرتي الذاتية إلى الشركة.","CV'mi şirkete gönderdim.");
+add("ar","B1","İş","مقابلة عمل","iş görüşmesi","isim","لدي مقابلة عمل غدا.","Yarın iş görüşmem var.");
+add("ar","B1","İş","طلب توظيف","iş başvurusu","isim","قدمت طلب توظيف.","İş başvurusu yaptım.");
+add("ar","B1","İş","إعلان وظيفة","iş ilanı","isim","رأيت إعلان وظيفة على الإنترنت.","İnternette bir iş ilanı gördüm.");
+add("ar","B1","İş","عقد عمل","iş sözleşmesi","isim","وقعت عقد العمل.","İş sözleşmesini imzaladım.");
+add("ar","B1","İş","راتب","maaş","isim","أتقاضى راتبا جيدا.","İyi bir maaş alıyorum.");
+add("ar","B1","İş","أجر","ücret / kazanç","isim","الأجر يعتمد على الخبرة.","Ücret deneyime bağlıdır.");
+// ======================= B1 — ÇALIŞMA ORTAMI =======================
+add("ar","B1","Çalışma","شركة","şirket","isim","أعمل في شركة دولية.","Uluslararası bir şirkette çalışıyorum.");
+add("ar","B1","Çalışma","مؤسسة","kurum / kuruluş","isim","تعمل في مؤسسة كبيرة.","Büyük bir kurumda çalışıyor.");
+add("ar","B1","Çalışma","مكتب","ofis","isim","أعمل في مكتب صغير.","Küçük bir ofiste çalışıyorum.");
+add("ar","B1","Çalışma","مصنع","fabrika","isim","يعمل والدي في مصنع.","Babam bir fabrikada çalışıyor.");
+add("ar","B1","Çalışma","متجر","mağaza","isim","تعمل في متجر للملابس.","Bir giyim mağazasında çalışıyor.");
+add("ar","B1","Çalışma","قسم","departman","isim","أعمل في قسم المبيعات.","Satış departmanında çalışıyorum.");
+add("ar","B1","Çalışma","إدارة","yönetim","isim","تعمل في إدارة الشركة.","Şirket yönetiminde çalışıyor.");
+add("ar","B1","Çalışma","مدير","müdür","isim","تحدثت مع المدير.","Müdürle konuştum.");
+add("ar","B1","Çalışma","موظف","çalışan / memur","isim","هو موظف في البنك.","O, bankada çalışan bir memur.");
+add("ar","B1","Çalışma","زميل","iş arkadaşı","isim","زميلي يساعدني دائما.","İş arkadaşım bana her zaman yardım ediyor.");
+add("ar","B1","Çalışma","فريق","ekip","isim","نعمل ضمن فريق.","Bir ekip içinde çalışıyoruz.");
+add("ar","B1","Çalışma","اجتماع","toplantı","isim","لدينا اجتماع صباحا.","Sabah toplantımız var.");
+add("ar","B1","Çalışma","مشروع","proje","isim","نعمل على مشروع جديد.","Yeni bir proje üzerinde çalışıyoruz.");
+add("ar","B1","Çalışma","مهمة","görev","isim","لدي مهمة مهمة اليوم.","Bugün önemli bir görevim var.");
+add("ar","B1","Çalışma","مسؤولية","sorumluluk","isim","هذه مسؤوليتي.","Bu benim sorumluluğum.");
+// ======================= B1 — ÇALIŞMA ZAMANI =======================
+add("ar","B1","Çalışma Zamanı","دوام","mesai / çalışma saatleri","isim","يبدأ الدوام في الثامنة.","Mesai saat sekizde başlıyor.");
+add("ar","B1","Çalışma Zamanı","ساعات العمل","çalışma saatleri","isim","ما هي ساعات العمل؟","Çalışma saatleri nedir?");
+add("ar","B1","Çalışma Zamanı","دوام كامل","tam zamanlı çalışma","isim","أبحث عن وظيفة بدوام كامل.","Tam zamanlı iş arıyorum.");
+add("ar","B1","Çalışma Zamanı","دوام جزئي","yarı zamanlı çalışma","isim","أعمل بدوام جزئي.","Yarı zamanlı çalışıyorum.");
+add("ar","B1","Çalışma Zamanı","عمل إضافي","fazla mesai","isim","عملت ساعات إضافية هذا الأسبوع.","Bu hafta fazla mesai yaptım.");
+add("ar","B1","Çalışma Zamanı","استراحة","mola","isim","أحتاج إلى استراحة قصيرة.","Kısa bir molaya ihtiyacım var.");
+add("ar","B1","Çalışma Zamanı","إجازة","izin / tatil","isim","سآخذ إجازة الأسبوع المقبل.","Gelecek hafta izin alacağım.");
+add("ar","B1","Çalışma Zamanı","عطلة نهاية الأسبوع","hafta sonu","isim","لا أعمل في عطلة نهاية الأسبوع.","Hafta sonu çalışmıyorum.");
+add("ar","B1","Çalışma Zamanı","يوم عمل","iş günü","isim","غدا يوم عمل طويل.","Yarın uzun bir iş günü.");
+add("ar","B1","Çalışma Zamanı","جدول العمل","çalışma programı","isim","تغير جدول العمل.","Çalışma programı değişti.");
+add("ar","B1","Çalışma Zamanı","موعد نهائي","son teslim tarihi","isim","الموعد النهائي غدا.","Son teslim tarihi yarın.");
+add("ar","B1","Çalışma Zamanı","تأخير","gecikme","isim","حدث تأخير في المشروع.","Projede bir gecikme oldu.");
+add("ar","B1","Çalışma Zamanı","موعد","randevu / zaman","isim","لدي موعد مع المدير.","Müdürle randevum var.");
+add("ar","B1","Çalışma Zamanı","بداية","başlangıç","isim","كانت بداية العمل صعبة.","İşin başlangıcı zordu.");
+add("ar","B1","Çalışma Zamanı","نهاية","son / bitiş","isim","اقتربت نهاية يوم العمل.","İş gününün sonu yaklaştı.");
+// ======================= B1 — MESLEKLER =======================
+add("ar","B1","Meslekler","مهندس","mühendis","isim","أخي مهندس.","Erkek kardeşim mühendis.");
+add("ar","B1","Meslekler","طبيب","doktor","isim","أختي طبيبة.","Kız kardeşim doktor.");
+add("ar","B1","Meslekler","محام","avukat","isim","يعمل محاميا في شركة كبيرة.","Büyük bir şirkette avukat olarak çalışıyor.");
+add("ar","B1","Meslekler","محاسب","muhasebeci","isim","يعمل محاسبا.","Muhasebeci olarak çalışıyor.");
+add("ar","B1","Meslekler","مصمم","tasarımcı","isim","هو مصمم محترف.","O profesyonel bir tasarımcı.");
+add("ar","B1","Meslekler","مطور","geliştirici","isim","يعمل مطور برمجيات.","Yazılım geliştiricisi olarak çalışıyor.");
+add("ar","B1","Meslekler","مبرمج","programcı","isim","أريد أن أصبح مبرمجا.","Programcı olmak istiyorum.");
+add("ar","B1","Meslekler","محلل","analist","isim","يعمل محلل بيانات.","Veri analisti olarak çalışıyor.");
+add("ar","B1","Meslekler","مدير مشروع","proje yöneticisi","isim","هو مدير مشروع ناجح.","O başarılı bir proje yöneticisi.");
+add("ar","B1","Meslekler","مستشار","danışman","isim","يعمل مستشارا في شركة دولية.","Uluslararası bir şirkette danışman olarak çalışıyor.");
+add("ar","B1","Meslekler","مسوق","pazarlamacı","isim","يعمل مسوقا رقميا.","Dijital pazarlamacı olarak çalışıyor.");
+add("ar","B1","Meslekler","صحفي","gazeteci","isim","يعمل صحفيا في صحيفة.","Bir gazetede gazeteci olarak çalışıyor.");
+add("ar","B1","Meslekler","مترجم","çevirmen","isim","هو مترجم محترف.","O profesyonel bir çevirmen.");
+add("ar","B1","Meslekler","مدرس","öğretmen","isim","أريد أن أصبح مدرسا.","Öğretmen olmak istiyorum.");
+add("ar","B1","Meslekler","رجل أعمال","iş insanı","isim","هو رجل أعمال ناجح.","O başarılı bir iş insanı.");
+// ======================= B1 — İŞ FİİLLERİ =======================
+add("ar","B1","İş Fiilleri","يعمل","çalışmak","fiil","أعمل في شركة دولية.","Uluslararası bir şirkette çalışıyorum.");
+add("ar","B1","İş Fiilleri","يتقدم","başvurmak","fiil","تقدمت إلى وظيفة جديدة.","Yeni bir işe başvurdum.");
+add("ar","B1","İş Fiilleri","يوقع","imzalamak","fiil","وقعت عقد العمل.","İş sözleşmesini imzaladım.");
+add("ar","B1","İş Fiilleri","يوظف","işe almak","fiil","الشركة توظف موظفين جدد.","Şirket yeni çalışanlar işe alıyor.");
+add("ar","B1","İş Fiilleri","يستقيل","istifa etmek","fiil","استقال من وظيفته.","İşinden istifa etti.");
+add("ar","B1","İş Fiilleri","يفصل","işten çıkarmak","fiil","فصلت الشركة بعض الموظفين.","Şirket bazı çalışanları işten çıkardı.");
+add("ar","B1","İş Fiilleri","يكسب","kazanmak","fiil","يكسب راتبا جيدا.","İyi bir maaş kazanıyor.");
+add("ar","B1","İş Fiilleri","ينفق","harcamak","fiil","أنفق وقتا كثيرا في العمل.","İşte çok zaman harcıyor.");
+add("ar","B1","İş Fiilleri","ينظم","organize etmek","fiil","أنظم وقتي بشكل جيد.","Zamanımı iyi organize ediyorum.");
+add("ar","B1","İş Fiilleri","يدير","yönetmek","fiil","يدير فريقا كبيرا.","Büyük bir ekibi yönetiyor.");
+add("ar","B1","İş Fiilleri","يتعاون","iş birliği yapmak","fiil","نتعاون مع شركات أخرى.","Diğer şirketlerle iş birliği yapıyoruz.");
+add("ar","B1","İş Fiilleri","يتفاوض","müzakere etmek","fiil","نتفاوض على عقد جديد.","Yeni bir sözleşme üzerinde müzakere ediyoruz.");
+add("ar","B1","İş Fiilleri","يخطط","planlamak","fiil","نخطط لمشروع جديد.","Yeni bir proje planlıyoruz.");
+add("ar","B1","İş Fiilleri","ينجز","tamamlamak / gerçekleştirmek","fiil","أنجزت المهمة في الوقت المحدد.","Görevi zamanında tamamladım.");
+add("ar","B1","İş Fiilleri","يطور","geliştirmek","fiil","أطور مهاراتي المهنية.","Mesleki becerilerimi geliştiriyorum.");
+// ======================= B1 — KARİYER SIFATLARI =======================
+add("ar","B1","Kariyer","مهني","mesleki","sıfat","أريد تطوير مهاراتي المهنية.","Mesleki becerilerimi geliştirmek istiyorum.");
+add("ar","B1","Kariyer","ناجح","başarılı","sıfat","هو رجل أعمال ناجح.","O başarılı bir iş insanı.");
+add("ar","B1","Kariyer","مستقل","bağımsız","sıfat","أعمل بشكل مستقل.","Bağımsız çalışıyorum.");
+add("ar","B1","Kariyer","مسؤول","sorumlu","sıfat","هو موظف مسؤول.","O sorumlu bir çalışan.");
+add("ar","B1","Kariyer","موثوق","güvenilir","sıfat","إنه شخص موثوق.","O güvenilir bir insan.");
+add("ar","B1","Kariyer","مرن","esnek","sıfat","ساعات العمل مرنة.","Çalışma saatleri esnek.");
+add("ar","B1","Kariyer","مبدع","yaratıcı","sıfat","نحتاج إلى شخص مبدع.","Yaratıcı birine ihtiyacımız var.");
+add("ar","B1","Kariyer","منظم","düzenli / organize","sıfat","هو شخص منظم جدا.","O çok düzenli bir insan.");
+add("ar","B1","Kariyer","متعاون","iş birliğine açık","sıfat","هو زميل متعاون.","O iş birliğine açık bir iş arkadaşı.");
+add("ar","B1","Kariyer","طموح","hırslı / azimli","sıfat","هو شاب طموح.","O azimli bir genç.");
+add("ar","B1","Kariyer","متخصص","uzmanlaşmış","sıfat","إنه متخصص في التكنولوجيا.","Teknoloji konusunda uzmanlaşmış.");
+add("ar","B1","Kariyer","ذو خبرة","deneyimli","sıfat","نحتاج إلى موظف ذي خبرة.","Deneyimli bir çalışana ihtiyacımız var.");
+add("ar","B1","Kariyer","مؤهل","nitelikli","sıfat","هو موظف مؤهل.","O nitelikli bir çalışan.");
+add("ar","B1","Kariyer","متفرغ","tam zamanlı / müsait","sıfat","أنا متفرغ للعمل حاليا.","Şu anda çalışmaya müsaitim.");
+add("ar","B1","Kariyer","مشغول","meşgul","sıfat","أنا مشغول في العمل اليوم.","Bugün işte meşgulüm.");
+// ======================= B1 — İŞ İFADELERİ =======================
+add("ar","B1","İş İfadeleri","أبحث عن وظيفة","iş arıyorum","ifade","أبحث عن وظيفة في مجال التكنولوجيا.","Teknoloji alanında iş arıyorum.");
+add("ar","B1","İş İfadeleri","أريد التقدم لهذه الوظيفة","bu işe başvurmak istiyorum","ifade","أريد التقدم لهذه الوظيفة.","Bu işe başvurmak istiyorum.");
+add("ar","B1","İş İfadeleri","لدي خبرة في هذا المجال","bu alanda deneyimim var","ifade","لدي خبرة في هذا المجال منذ خمس سنوات.","Bu alanda beş yıldır deneyimim var.");
+add("ar","B1","İş İfadeleri","متى تبدأ المقابلة؟","görüşme ne zaman başlıyor?","ifade","متى تبدأ مقابلة العمل؟","İş görüşmesi ne zaman başlıyor?");
+add("ar","B1","İş İfadeleri","أرسلت سيرتي الذاتية","CV'mi gönderdim","ifade","أرسلت سيرتي الذاتية أمس.","CV'mi dün gönderdim.");
+add("ar","B1","İş İfadeleri","تم قبولي في الوظيفة","işe kabul edildim","ifade","سعدت لأنني تم قبولي في الوظيفة.","İşe kabul edildiğim için mutlu oldum.");
+add("ar","B1","İş İfadeleri","ما هو راتب هذه الوظيفة؟","bu işin maaşı ne kadar?","ifade","ما هو راتب هذه الوظيفة؟","Bu işin maaşı ne kadar?");
+add("ar","B1","İş İfadeleri","أعمل بدوام كامل","tam zamanlı çalışıyorum","ifade","أعمل بدوام كامل في شركة دولية.","Uluslararası bir şirkette tam zamanlı çalışıyorum.");
+add("ar","B1","İş İfadeleri","أعمل من المنزل","evden çalışıyorum","ifade","أعمل من المنزل ثلاثة أيام في الأسبوع.","Haftada üç gün evden çalışıyorum.");
+add("ar","B1","İş İfadeleri","لدي اجتماع","toplantım var","ifade","لدي اجتماع مهم بعد ساعة.","Bir saat sonra önemli bir toplantım var.");
+add("ar","B1","İş İfadeleri","يجب أن أنهي المهمة","görevi bitirmem gerekiyor","ifade","يجب أن أنهي المهمة قبل الموعد النهائي.","Görevi son teslim tarihinden önce bitirmem gerekiyor.");
+add("ar","B1","İş İfadeleri","أنا مشغول اليوم","bugün meşgulüm","ifade","عذرا، أنا مشغول اليوم.","Üzgünüm, bugün meşgulüm.");
+add("ar","B1","İş İfadeleri","أريد تطوير مسيرتي المهنية","kariyerimi geliştirmek istiyorum","ifade","أريد تطوير مسيرتي المهنية في مجال التكنولوجيا.","Teknoloji alanında kariyerimi geliştirmek istiyorum.");
+add("ar","B1","İş İfadeleri","أبحث عن فرصة أفضل","daha iyi bir fırsat arıyorum","ifade","أبحث عن فرصة أفضل في الخارج.","Yurt dışında daha iyi bir fırsat arıyorum.");
+add("ar","B1","İş İfadeleri","أريد اكتساب خبرة","deneyim kazanmak istiyorum","ifade","أريد اكتساب خبرة في هذا المجال.","Bu alanda deneyim kazanmak istiyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 43
+   KONU: EV, KONUT, KİRA, TAŞINMA VE EV HAYATI
+================================================================ */
+// ======================= B1 — EV VE KONUT =======================
+add("ar","B1","Ev","منزل","ev","isim","أعيش في منزل صغير.","Küçük bir evde yaşıyorum.");
+add("ar","B1","Ev","بيت","ev","isim","بيتي قريب من الجامعة.","Evim üniversiteye yakın.");
+add("ar","B1","Ev","شقة","daire","isim","أسكن في شقة واسعة.","Geniş bir dairede oturuyorum.");
+add("ar","B1","Ev","غرفة","oda","isim","غرفتي في الطابق الثاني.","Odam ikinci katta.");
+add("ar","B1","Ev","غرفة نوم","yatak odası","isim","غرفة النوم هادئة.","Yatak odası sessiz.");
+add("ar","B1","Ev","غرفة معيشة","oturma odası","isim","نجلس في غرفة المعيشة مساء.","Akşamları oturma odasında oturuyoruz.");
+add("ar","B1","Ev","مطبخ","mutfak","isim","المطبخ صغير ولكنه عملي.","Mutfak küçük ama kullanışlı.");
+add("ar","B1","Ev","حمام","banyo","isim","الحمام بجانب غرفة النوم.","Banyo yatak odasının yanında.");
+add("ar","B1","Ev","شرفة","balkon","isim","أحب الجلوس في الشرفة.","Balkonda oturmayı seviyorum.");
+add("ar","B1","Ev","حديقة","bahçe","isim","لدينا حديقة صغيرة.","Küçük bir bahçemiz var.");
+add("ar","B1","Ev","مرآب","garaj","isim","السيارة في المرآب.","Araba garajda.");
+add("ar","B1","Ev","سطح","çatı / teras","isim","يمكننا الجلوس على السطح.","Çatıda oturabiliriz.");
+add("ar","B1","Ev","قبو","bodrum","isim","لدينا غرفة في القبو.","Bodrumda bir odamız var.");
+add("ar","B1","Ev","طابق","kat","isim","أسكن في الطابق الثالث.","Üçüncü katta oturuyorum.");
+add("ar","B1","Ev","مدخل","giriş","isim","المدخل على اليمين.","Giriş sağda.");
+// ======================= B1 — EV EŞYALARI =======================
+add("ar","B1","Ev Eşyaları","أثاث","mobilya","isim","نحتاج إلى أثاث جديد.","Yeni mobilyalara ihtiyacımız var.");
+add("ar","B1","Ev Eşyaları","سرير","yatak","isim","اشتريت سريرا جديدا.","Yeni bir yatak aldım.");
+add("ar","B1","Ev Eşyaları","خزانة","dolap","isim","ملابسي في الخزانة.","Kıyafetlerim dolapta.");
+add("ar","B1","Ev Eşyaları","طاولة","masa","isim","الكتاب على الطاولة.","Kitap masanın üzerinde.");
+add("ar","B1","Ev Eşyaları","كرسي","sandalye","isim","اجلس على الكرسي.","Sandalyeye otur.");
+add("ar","B1","Ev Eşyaları","أريكة","kanepe","isim","اشتريت أريكة مريحة.","Rahat bir kanepe aldım.");
+add("ar","B1","Ev Eşyaları","ستارة","perde","isim","أغلقت الستائر.","Perdeleri kapattım.");
+add("ar","B1","Ev Eşyaları","سجادة","halı","isim","السجادة جديدة.","Halı yeni.");
+add("ar","B1","Ev Eşyaları","مصباح","lamba","isim","أطفئ المصباح قبل النوم.","Uyumadan önce lambayı kapat.");
+add("ar","B1","Ev Eşyaları","ثلاجة","buzdolabı","isim","الحليب في الثلاجة.","Süt buzdolabında.");
+add("ar","B1","Ev Eşyaları","فرن","fırın","isim","الطعام في الفرن.","Yemek fırında.");
+add("ar","B1","Ev Eşyaları","غسالة","çamaşır makinesi","isim","الغسالة تعمل الآن.","Çamaşır makinesi şu anda çalışıyor.");
+add("ar","B1","Ev Eşyaları","مكنسة كهربائية","elektrikli süpürge","isim","أستخدم المكنسة الكهربائية كل أسبوع.","Her hafta elektrikli süpürge kullanıyorum.");
+add("ar","B1","Ev Eşyaları","مكيف الهواء","klima","isim","نشغل مكيف الهواء في الصيف.","Yazın klimayı çalıştırıyoruz.");
+add("ar","B1","Ev Eşyaları","سخان","ısıtıcı / şofben","isim","السخان لا يعمل.","Şofben çalışmıyor.");
+// ======================= B1 — KİRA VE KONUT =======================
+add("ar","B1","Konut","إيجار","kira","isim","الإيجار مرتفع في هذه المنطقة.","Bu bölgede kira yüksek.");
+add("ar","B1","Konut","مالك","ev sahibi","isim","تحدثت مع مالك المنزل.","Ev sahibiyle konuştum.");
+add("ar","B1","Konut","مستأجر","kiracı","isim","المستأجر يدفع الإيجار كل شهر.","Kiracı her ay kirayı ödüyor.");
+add("ar","B1","Konut","عقد إيجار","kira sözleşmesi","isim","وقعت عقد الإيجار.","Kira sözleşmesini imzaladım.");
+add("ar","B1","Konut","تأمين","depozito / sigorta","isim","دفعت مبلغ التأمين.","Depozitoyu ödedim.");
+add("ar","B1","Konut","فاتورة","fatura","isim","دفعت فاتورة الكهرباء.","Elektrik faturasını ödedim.");
+add("ar","B1","Konut","كهرباء","elektrik","isim","انقطعت الكهرباء أمس.","Dün elektrik kesildi.");
+add("ar","B1","Konut","ماء","su","isim","فاتورة الماء مرتفعة.","Su faturası yüksek.");
+add("ar","B1","Konut","غاز","gaz","isim","نستخدم الغاز للتدفئة.","Isınmak için gaz kullanıyoruz.");
+add("ar","B1","Konut","تدفئة","ısıtma","isim","التدفئة لا تعمل.","Kalorifer çalışmıyor.");
+add("ar","B1","Konut","صيانة","bakım / onarım","isim","تحتاج الشقة إلى صيانة.","Dairenin bakıma ihtiyacı var.");
+add("ar","B1","Konut","إصلاح","tamir","isim","أحتاج إلى إصلاح الباب.","Kapıyı tamir etmem gerekiyor.");
+add("ar","B1","Konut","مشكلة","sorun","isim","هناك مشكلة في الحمام.","Banyoda bir sorun var.");
+add("ar","B1","Konut","جيران","komşular","isim","جيراننا لطفاء.","Komşularımız nazik.");
+add("ar","B1","Konut","حي","mahalle / semt","isim","أعيش في حي هادئ.","Sessiz bir mahallede yaşıyorum.");
+// ======================= B1 — TAŞINMA =======================
+add("ar","B1","Taşınma","ينتقل","taşınmak","fiil","سأنتقل إلى مدينة أخرى.","Başka bir şehre taşınacağım.");
+add("ar","B1","Taşınma","يستأجر","kiralamak","fiil","أريد أن أستأجر شقة.","Bir daire kiralamak istiyorum.");
+add("ar","B1","Taşınma","يشتري","satın almak","fiil","يريد شراء منزل جديد.","Yeni bir ev satın almak istiyor.");
+add("ar","B1","Taşınma","يبيع","satmak","fiil","قرر بيع منزله.","Evini satmaya karar verdi.");
+add("ar","B1","Taşınma","يسكن","oturmak / ikamet etmek","fiil","أسكن بالقرب من المركز.","Merkezin yakınında oturuyorum.");
+add("ar","B1","Taşınma","يعيش","yaşamak","fiil","أعيش وحدي حاليا.","Şu anda yalnız yaşıyorum.");
+add("ar","B1","Taşınma","يشارك","paylaşmak","fiil","أشارك الشقة مع صديقي.","Daireyi arkadaşımla paylaşıyorum.");
+add("ar","B1","Taşınma","ينظف","temizlemek","fiil","أنظف المنزل كل يوم.","Evi her gün temizliyorum.");
+add("ar","B1","Taşınma","يرتب","düzenlemek","fiil","أرتب غرفتي في الصباح.","Odamı sabah düzenliyorum.");
+add("ar","B1","Taşınma","يغسل","yıkamak","fiil","أغسل الملابس يوم السبت.","Cumartesi günü çamaşırları yıkıyorum.");
+add("ar","B1","Taşınma","يطبخ","yemek pişirmek","fiil","أطبخ العشاء في المنزل.","Akşam yemeğini evde pişiriyorum.");
+add("ar","B1","Taşınma","يصلح","tamir etmek","fiil","أصلح الباب بنفسي.","Kapıyı kendim tamir ediyorum.");
+add("ar","B1","Taşınma","يفتح","açmak","fiil","افتح النافذة من فضلك.","Lütfen pencereyi aç.");
+add("ar","B1","Taşınma","يغلق","kapatmak","fiil","أغلق الباب قبل النوم.","Uyumadan önce kapıyı kapat.");
+add("ar","B1","Taşınma","يطفئ","söndürmek / kapatmak","fiil","أطفئ الضوء قبل الخروج.","Çıkmadan önce ışığı kapat.");
+// ======================= B1 — EV SIFATLARI =======================
+add("ar","B1","Ev Sıfatları","واسع","geniş","sıfat","المنزل واسع جدا.","Ev çok geniş.");
+add("ar","B1","Ev Sıfatları","ضيق","dar","sıfat","المطبخ ضيق.","Mutfak dar.");
+add("ar","B1","Ev Sıfatları","مريح","rahat","sıfat","السرير مريح.","Yatak rahat.");
+add("ar","B1","Ev Sıfatları","هادئ","sessiz","sıfat","الحي هادئ جدا.","Mahalle çok sessiz.");
+add("ar","B1","Ev Sıfatları","مزدحم","kalabalık","sıfat","المنطقة مزدحمة.","Bölge kalabalık.");
+add("ar","B1","Ev Sıfatları","نظيف","temiz","sıfat","المنزل نظيف.","Ev temiz.");
+add("ar","B1","Ev Sıfatları","متسخ","kirli","sıfat","المطبخ متسخ.","Mutfak kirli.");
+add("ar","B1","Ev Sıfatları","قديم","eski","sıfat","هذا المبنى قديم.","Bu bina eski.");
+add("ar","B1","Ev Sıfatları","حديث","modern","sıfat","هذا منزل حديث.","Bu modern bir ev.");
+add("ar","B1","Ev Sıfatları","رخيص","ucuz","sıfat","هذا المنزل رخيص نسبيا.","Bu ev nispeten ucuz.");
+add("ar","B1","Ev Sıfatları","غالي","pahalı","sıfat","الإيجار غال جدا.","Kira çok pahalı.");
+add("ar","B1","Ev Sıfatları","قريب","yakın","sıfat","الجامعة قريبة من المنزل.","Üniversite eve yakın.");
+add("ar","B1","Ev Sıfatları","بعيد","uzak","sıfat","المطار بعيد عن هنا.","Havaalanı buradan uzak.");
+add("ar","B1","Ev Sıfatları","مضيء","aydınlık","sıfat","غرفة المعيشة مضيئة.","Oturma odası aydınlık.");
+add("ar","B1","Ev Sıfatları","مظلم","karanlık","sıfat","القبو مظلم.","Bodrum karanlık.");
+// ======================= B1 — EV İFADELERİ =======================
+add("ar","B1","Ev İfadeleri","أبحث عن شقة","daire arıyorum","ifade","أبحث عن شقة قريبة من الجامعة.","Üniversiteye yakın bir daire arıyorum.");
+add("ar","B1","Ev İfadeleri","أريد استئجار شقة","bir daire kiralamak istiyorum","ifade","أريد استئجار شقة صغيرة.","Küçük bir daire kiralamak istiyorum.");
+add("ar","B1","Ev İfadeleri","كم يبلغ الإيجار؟","kira ne kadar?","ifade","كم يبلغ الإيجار في الشهر؟","Aylık kira ne kadar?");
+add("ar","B1","Ev İfadeleri","هل تشمل الفواتير؟","faturalar dahil mi?","ifade","هل تشمل الفواتير سعر الإيجار؟","Faturalar kira fiyatına dahil mi?");
+add("ar","B1","Ev İfadeleri","أريد رؤية الشقة","daireyi görmek istiyorum","ifade","أريد رؤية الشقة قبل أن أقرر.","Karar vermeden önce daireyi görmek istiyorum.");
+add("ar","B1","Ev İfadeleri","متى يمكنني الانتقال؟","ne zaman taşınabilirim?","ifade","متى يمكنني الانتقال إلى الشقة؟","Daireye ne zaman taşınabilirim?");
+add("ar","B1","Ev İfadeleri","أين يقع المنزل؟","ev nerede bulunuyor?","ifade","أين يقع المنزل بالضبط؟","Ev tam olarak nerede bulunuyor?");
+add("ar","B1","Ev İfadeleri","أعيش وحدي","yalnız yaşıyorum","ifade","أعيش وحدي في شقة صغيرة.","Küçük bir dairede yalnız yaşıyorum.");
+add("ar","B1","Ev İfadeleri","أعيش مع عائلتي","ailemle yaşıyorum","ifade","أعيش مع عائلتي حاليا.","Şu anda ailemle yaşıyorum.");
+add("ar","B1","Ev İfadeleri","أعيش مع زميلي","arkadaşımla / ev arkadaşımla yaşıyorum","ifade","أعيش مع زميلي في شقة مشتركة.","Ev arkadaşımla ortak bir dairede yaşıyorum.");
+add("ar","B1","Ev İfadeleri","هناك مشكلة في المنزل","evde bir sorun var","ifade","هناك مشكلة في التدفئة في المنزل.","Evde ısıtmayla ilgili bir sorun var.");
+add("ar","B1","Ev İfadeleri","أحتاج إلى إصلاح","tamire ihtiyacım var","ifade","أحتاج إلى إصلاح النافذة.","Pencerenin tamir edilmesine ihtiyacım var.");
+add("ar","B1","Ev İfadeleri","سأتصل بالمالك","ev sahibini arayacağım","ifade","سأتصل بالمالك غدا.","Yarın ev sahibini arayacağım.");
+add("ar","B1","Ev İfadeleri","سأنتقل الشهر المقبل","gelecek ay taşınacağım","ifade","سأنتقل إلى منزل جديد الشهر المقبل.","Gelecek ay yeni bir eve taşınacağım.");
+add("ar","B1","Ev İfadeleri","أحب منزلي الجديد","yeni evimi seviyorum","ifade","أحب منزلي الجديد كثيرا.","Yeni evimi çok seviyorum.");
+/* ================================================================
+   ARAPÇA B1 — PART 44
+   KONU: SEYAHAT, ULAŞIM VE HAVAALANI
+================================================================ */
+// ======================= B1 — SEYAHAT =======================
+add("ar","B1","Seyahat","سفر","seyahat","isim","أحب السفر إلى بلدان جديدة.","Yeni ülkelere seyahat etmeyi seviyorum.");
+add("ar","B1","Seyahat","رحلة","gezi / seyahat","isim","كانت الرحلة طويلة.","Yolculuk uzundu.");
+add("ar","B1","Seyahat","سياحة","turizm","isim","السياحة مهمة للاقتصاد.","Turizm ekonomi için önemlidir.");
+add("ar","B1","Seyahat","سائح","turist","isim","يوجد الكثير من السياح هنا.","Burada çok turist var.");
+add("ar","B1","Seyahat","وجهة","destinasyon","isim","هذه وجهة سياحية مشهورة.","Bu ünlü bir turistik destinasyon.");
+add("ar","B1","Seyahat","بلد","ülke","isim","أريد زيارة بلد جديد.","Yeni bir ülkeyi ziyaret etmek istiyorum.");
+add("ar","B1","Seyahat","مدينة","şehir","isim","هذه مدينة جميلة.","Bu güzel bir şehir.");
+add("ar","B1","Seyahat","منطقة","bölge","isim","أريد زيارة هذه المنطقة.","Bu bölgeyi ziyaret etmek istiyorum.");
+add("ar","B1","Seyahat","معلم سياحي","turistik yer / simge","isim","زرنا معلما سياحيا مشهورا.","Ünlü bir turistik yeri ziyaret ettik.");
+add("ar","B1","Seyahat","رحلة جوية","uçuş","isim","لدي رحلة جوية غدا.","Yarın uçuşum var.");
+add("ar","B1","Seyahat","تذكرة","bilet","isim","اشتريت تذكرة الطائرة.","Uçak biletini aldım.");
+add("ar","B1","Seyahat","جواز سفر","pasaport","isim","لا تنس جواز سفرك.","Pasaportunu unutma.");
+add("ar","B1","Seyahat","تأشيرة","vize","isim","أحتاج إلى تأشيرة للسفر.","Seyahat etmek için vizeye ihtiyacım var.");
+add("ar","B1","Seyahat","حجز","rezervasyon","isim","أجريت حجزا في الفندق.","Otelde rezervasyon yaptım.");
+add("ar","B1","Seyahat","أمتعة","bagaj","isim","أين يمكنني استلام أمتعتي؟","Bagajımı nereden alabilirim?");
+// ======================= B1 — ULAŞIM =======================
+add("ar","B1","Ulaşım","وسيلة نقل","ulaşım aracı","isim","ما هي أفضل وسيلة نقل؟","En iyi ulaşım aracı nedir?");
+add("ar","B1","Ulaşım","سيارة","araba","isim","سافرت بالسيارة.","Arabayla seyahat ettim.");
+add("ar","B1","Ulaşım","حافلة","otobüs","isim","أذهب إلى العمل بالحافلة.","İşe otobüsle gidiyorum.");
+add("ar","B1","Ulaşım","قطار","tren","isim","سافرت بالقطار إلى العاصمة.","Başkentte trenle seyahat ettim.");
+add("ar","B1","Ulaşım","طائرة","uçak","isim","وصلت بالطائرة.","Uçakla geldim.");
+add("ar","B1","Ulaşım","سفينة","gemi","isim","سافرنا بالسفينة.","Gemiyle seyahat ettik.");
+add("ar","B1","Ulaşım","عبارة","feribot","isim","أخذنا العبارة إلى الجزيرة.","Adaya feribotla gittik.");
+add("ar","B1","Ulaşım","سيارة أجرة","taksi","isim","أخذت سيارة أجرة إلى الفندق.","Otele taksiyle gittim.");
+add("ar","B1","Ulaşım","مترو","metro","isim","أستخدم المترو كل يوم.","Her gün metro kullanıyorum.");
+add("ar","B1","Ulaşım","ترام","tramvay","isim","ركبت الترام في وسط المدينة.","Şehir merkezinde tramvaya bindim.");
+add("ar","B1","Ulaşım","دراجة","bisiklet","isim","أذهب إلى الجامعة بالدراجة.","Üniversiteye bisikletle gidiyorum.");
+add("ar","B1","Ulaşım","محطة","istasyon","isim","أنتظر في المحطة.","İstasyonda bekliyorum.");
+add("ar","B1","Ulaşım","محطة قطار","tren istasyonu","isim","محطة القطار قريبة.","Tren istasyonu yakın.");
+add("ar","B1","Ulaşım","موقف حافلات","otobüs durağı","isim","أنتظر في موقف الحافلات.","Otobüs durağında bekliyorum.");
+add("ar","B1","Ulaşım","مطار","havaalanı","isim","وصلنا إلى المطار مبكرا.","Havaalanına erken vardık.");
+// ======================= B1 — HAVAALANI =======================
+add("ar","B1","Havaalanı","مغادرة","kalkış","isim","موعد المغادرة الساعة العاشرة.","Kalkış saati saat onda.");
+add("ar","B1","Havaalanı","وصول","varış","isim","موعد الوصول الساعة الثالثة.","Varış saati saat üçte.");
+add("ar","B1","Havaalanı","بوابة","kapı","isim","أين بوابة الرحلة؟","Uçuş kapısı nerede?");
+add("ar","B1","Havaalanı","صالة","salon / terminal","isim","نحن في صالة المطار.","Havaalanı terminalindeyiz.");
+add("ar","B1","Havaalanı","تفتيش أمني","güvenlik kontrolü","isim","يجب أن نمر عبر التفتيش الأمني.","Güvenlik kontrolünden geçmeliyiz.");
+add("ar","B1","Havaalanı","جوازات السفر","pasaport kontrolü","isim","انتظرنا عند مراقبة جوازات السفر.","Pasaport kontrolünde bekledik.");
+add("ar","B1","Havaalanı","بطاقة صعود","biniş kartı","isim","أين بطاقة الصعود؟","Biniş kartı nerede?");
+add("ar","B1","Havaalanı","رحلة مباشرة","direkt uçuş","isim","أفضل رحلة مباشرة.","Direkt uçuşu tercih ederim.");
+add("ar","B1","Havaalanı","رحلة ترانزيت","aktarmalı uçuş","isim","لدي رحلة ترانزيت في ألمانيا.","Almanya'da aktarmalı uçuşum var.");
+add("ar","B1","Havaalanı","تأخير الرحلة","uçuş gecikmesi","isim","هناك تأخير في الرحلة.","Uçuşta gecikme var.");
+add("ar","B1","Havaalanı","إلغاء الرحلة","uçuş iptali","isim","تم إلغاء الرحلة.","Uçuş iptal edildi.");
+add("ar","B1","Havaalanı","شركة طيران","havayolu şirketi","isim","حجزت مع شركة طيران معروفة.","Tanınmış bir havayolu şirketinden rezervasyon yaptım.");
+add("ar","B1","Havaalanı","مقعد","koltuk","isim","مقعدي بجانب النافذة.","Koltuk numaram pencerenin yanında.");
+add("ar","B1","Havaalanı","نافذة","pencere","isim","أريد مقعدا بجانب النافذة.","Pencere kenarında bir koltuk istiyorum.");
+add("ar","B1","Havaalanı","ممر","koridor","isim","هل يمكنني الحصول على مقعد بجانب الممر؟","Koridor kenarında bir koltuk alabilir miyim?");
+// ======================= B1 — SEYAHAT FİİLLERİ =======================
+add("ar","B1","Seyahat Fiilleri","يسافر","seyahat etmek","fiil","أسافر كثيرا بسبب عملي.","İşim nedeniyle çok seyahat ediyorum.");
+add("ar","B1","Seyahat Fiilleri","يزور","ziyaret etmek","fiil","أريد زيارة إيطاليا.","İtalya'yı ziyaret etmek istiyorum.");
+add("ar","B1","Seyahat Fiilleri","يصل","varmak","fiil","وصلنا إلى الفندق متأخرا.","Otele geç vardık.");
+add("ar","B1","Seyahat Fiilleri","يغادر","ayrılmak / hareket etmek","fiil","سنغادر غدا صباحا.","Yarın sabah ayrılacağız.");
+add("ar","B1","Seyahat Fiilleri","يحجز","rezervasyon yapmak","fiil","حجزت غرفة في الفندق.","Otelde bir oda rezerve ettim.");
+add("ar","B1","Seyahat Fiilleri","يركب","binmek","fiil","ركبت القطار في الصباح.","Sabah trene bindim.");
+add("ar","B1","Seyahat Fiilleri","ينزل","inmek","fiil","نزلت من الحافلة عند المحطة.","Durakta otobüsten indim.");
+add("ar","B1","Seyahat Fiilleri","يستأجر","kiralamak","fiil","استأجرنا سيارة في المطار.","Havaalanında araba kiraladık.");
+add("ar","B1","Seyahat Fiilleri","يقود","sürmek","fiil","أقود السيارة لمسافات طويلة.","Uzun mesafelerde araba kullanıyorum.");
+add("ar","B1","Seyahat Fiilleri","يتوقف","durmak","fiil","توقفت الحافلة أمام الفندق.","Otobüs otelin önünde durdu.");
+add("ar","B1","Seyahat Fiilleri","ينتظر","beklemek","fiil","ننتظر الطائرة.","Uçağı bekliyoruz.");
+add("ar","B1","Seyahat Fiilleri","يقلع","havalanmak","fiil","ستقلع الطائرة بعد قليل.","Uçak birazdan havalanacak.");
+add("ar","B1","Seyahat Fiilleri","يهبط","inmek / iniş yapmak","fiil","ستهبط الطائرة قريبا.","Uçak yakında inecek.");
+add("ar","B1","Seyahat Fiilleri","يستكشف","keşfetmek","fiil","أحب استكشاف المدن الجديدة.","Yeni şehirleri keşfetmeyi seviyorum.");
+add("ar","B1","Seyahat Fiilleri","يتجول","dolaşmak","fiil","تجولنا في المدينة طوال اليوم.","Bütün gün şehirde dolaştık.");
+// ======================= B1 — SEYAHAT SIFATLARI =======================
+add("ar","B1","Seyahat Sıfatları","سياحي","turistik","sıfat","هذه منطقة سياحية.","Burası turistik bir bölge.");
+add("ar","B1","Seyahat Sıfatları","دولي","uluslararası","sıfat","هذا مطار دولي.","Bu uluslararası bir havaalanı.");
+add("ar","B1","Seyahat Sıfatları","محلي","yerel","sıfat","هذه رحلة محلية.","Bu yerel bir uçuş.");
+add("ar","B1","Seyahat Sıfatları","مباشر","direkt","sıfat","أريد حجز رحلة مباشرة.","Direkt uçuş rezervasyonu yapmak istiyorum.");
+add("ar","B1","Seyahat Sıfatları","مزدحم","kalabalık","sıfat","المطار مزدحم اليوم.","Havaalanı bugün kalabalık.");
+add("ar","B1","Seyahat Sıfatları","فارغ","boş","sıfat","القطار فارغ تقريبا.","Tren neredeyse boş.");
+add("ar","B1","Seyahat Sıfatları","مريح","rahat","sıfat","القطار مريح جدا.","Tren çok rahat.");
+add("ar","B1","Seyahat Sıfatları","سريع","hızlı","sıfat","القطار سريع.","Tren hızlı.");
+add("ar","B1","Seyahat Sıfatları","بطيء","yavaş","sıfat","الحافلة بطيئة اليوم.","Otobüs bugün yavaş.");
+add("ar","B1","Seyahat Sıfatları","طويل","uzun","sıfat","كانت الرحلة طويلة.","Yolculuk uzundu.");
+add("ar","B1","Seyahat Sıfatları","قصير","kısa","sıfat","كانت الرحلة قصيرة.","Yolculuk kısaydı.");
+add("ar","B1","Seyahat Sıfatları","مزدحم جدا","çok kalabalık","sıfat","المحطة مزدحمة جدا.","İstasyon çok kalabalık.");
+add("ar","B1","Seyahat Sıfatları","آمن","güvenli","sıfat","هذا الطريق آمن.","Bu yol güvenli.");
+add("ar","B1","Seyahat Sıfatları","خطير","tehlikeli","sıfat","هذا الطريق خطير في الليل.","Bu yol gece tehlikeli.");
+add("ar","B1","Seyahat Sıfatları","بعيد","uzak","sıfat","المطار بعيد عن المدينة.","Havaalanı şehirden uzak.");
+// ======================= B1 — SEYAHAT İFADELERİ =======================
+add("ar","B1","Seyahat İfadeleri","أريد حجز تذكرة","bilet rezervasyonu yapmak istiyorum","ifade","أريد حجز تذكرة إلى فيينا.","Viyana'ya bilet rezervasyonu yapmak istiyorum.");
+add("ar","B1","Seyahat İfadeleri","متى موعد الرحلة؟","uçuş ne zaman?","ifade","متى موعد الرحلة إلى إسطنبول؟","İstanbul'a uçuş ne zaman?");
+add("ar","B1","Seyahat İfadeleri","أين بوابة الرحلة؟","uçuş kapısı nerede?","ifade","عفوا، أين بوابة الرحلة؟","Affedersiniz, uçuş kapısı nerede?");
+add("ar","B1","Seyahat İfadeleri","أين يمكنني استلام أمتعتي؟","bagajımı nereden alabilirim?","ifade","أين يمكنني استلام أمتعتي؟","Bagajımı nereden alabilirim?");
+add("ar","B1","Seyahat İfadeleri","رحلتي تأخرت","uçuşum gecikti","ifade","رحلتي تأخرت ساعتين.","Uçuşum iki saat gecikti.");
+add("ar","B1","Seyahat İfadeleri","تم إلغاء رحلتي","uçuşum iptal edildi","ifade","تم إلغاء رحلتي بسبب الطقس.","Uçuşum hava koşulları nedeniyle iptal edildi.");
+add("ar","B1","Seyahat İfadeleri","أين محطة القطار؟","tren istasyonu nerede?","ifade","أين محطة القطار الأقرب؟","En yakın tren istasyonu nerede?");
+add("ar","B1","Seyahat İfadeleri","كيف أصل إلى وسط المدينة؟","şehir merkezine nasıl giderim?","ifade","كيف أصل إلى وسط المدينة من هنا؟","Buradan şehir merkezine nasıl giderim?");
+add("ar","B1","Seyahat İfadeleri","أريد استئجار سيارة","araba kiralamak istiyorum","ifade","أريد استئجار سيارة لمدة ثلاثة أيام.","Üç günlüğüne araba kiralamak istiyorum.");
+add("ar","B1","Seyahat İfadeleri","أين يمكنني شراء تذكرة؟","nereden bilet alabilirim?","ifade","أين يمكنني شراء تذكرة القطار؟","Tren biletini nereden alabilirim?");
+add("ar","B1","Seyahat İfadeleri","كم تستغرق الرحلة؟","yolculuk ne kadar sürüyor?","ifade","كم تستغرق الرحلة إلى المدينة؟","Şehre yolculuk ne kadar sürüyor?");
+add("ar","B1","Seyahat İfadeleri","متى يصل القطار؟","tren ne zaman varıyor?","ifade","متى يصل القطار إلى المحطة؟","Tren istasyona ne zaman varıyor?");
+add("ar","B1","Seyahat İfadeleri","أريد مقعدا بجانب النافذة","pencere kenarında koltuk istiyorum","ifade","أريد مقعدا بجانب النافذة من فضلك.","Lütfen pencere kenarında bir koltuk istiyorum.");
+add("ar","B1","Seyahat İfadeleri","لدي رحلة ترانزيت","aktarmalı uçuşum var","ifade","لدي رحلة ترانزيت في فرانكفورت.","Frankfurt'ta aktarmalı uçuşum var.");
+add("ar","B1","Seyahat İfadeleri","نسيت جواز سفري","pasaportumu unuttum","ifade","لقد نسيت جواز سفري في الفندق.","Pasaportumu otelde unuttum.");
