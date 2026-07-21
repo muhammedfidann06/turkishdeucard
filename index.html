@@ -9,8 +9,8 @@
 <style>
   :root{
     --bg:#04050a;
-    --panel:rgba(13,17,34,0.36);
-    --panel-2:rgba(19,26,51,0.4);
+    --panel:rgba(13,17,34,0.2);
+    --panel-2:rgba(19,26,51,0.24);
     --cyan:#4fe8ff;
     --cyan-soft:#8ff2ff;
     --violet:#9b7bff;
@@ -146,10 +146,10 @@
   .tab:active{opacity:.6;transform:scale(.97);}
   .tab.active{
     position:relative;
-    background:linear-gradient(135deg, rgba(79,232,255,0.35), rgba(155,123,255,0.35), rgba(255,95,184,0.3));
+    background:linear-gradient(135deg, rgba(79,232,255,0.2), rgba(155,123,255,0.2), rgba(255,95,184,0.16));
     -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
-    color:#eafcff;border:1px solid rgba(255,255,255,0.4);font-weight:700;
-    box-shadow:0 0 24px rgba(79,232,255,0.5), 0 0 46px rgba(155,123,255,0.3), inset 0 0 14px rgba(255,255,255,0.18);
+    color:#eafcff;border:1px solid rgba(255,255,255,0.35);font-weight:700;
+    box-shadow:0 0 24px rgba(79,232,255,0.45), 0 0 46px rgba(155,123,255,0.28), inset 0 0 12px rgba(255,255,255,0.14);
     text-shadow:0 0 10px rgba(255,255,255,0.6);
     animation:tabGlow 3s ease-in-out infinite;
   }
@@ -161,8 +161,8 @@
 
   .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;}
   .chip{padding:5px 12px;border-radius:999px;font-size:11.5px;background:var(--panel);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--muted);border:1px solid rgba(79,232,255,0.14);cursor:pointer;}
-  .chip.active{background:rgba(79,232,255,0.16);color:var(--cyan-soft);border-color:rgba(79,232,255,0.6);box-shadow:0 0 12px rgba(79,232,255,0.25);}
-  .cat-trigger{background:rgba(155,123,255,0.14);color:var(--violet);border-color:rgba(155,123,255,0.45);font-weight:700;}
+  .chip.active{background:rgba(79,232,255,0.1);color:var(--cyan-soft);border-color:rgba(79,232,255,0.55);box-shadow:0 0 10px rgba(79,232,255,0.2);}
+  .cat-trigger{background:rgba(155,123,255,0.08);color:var(--violet);border-color:rgba(155,123,255,0.4);font-weight:700;}
   .cat-overlay{
     position:fixed;inset:0;z-index:500;
     background:rgba(4,6,12,0.72);
@@ -197,15 +197,15 @@
   .face{position:absolute;inset:0;border-radius:var(--radius);backface-visibility:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;text-align:center;overflow:hidden;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);}
   .face-front{
     background:
-      linear-gradient(135deg, rgba(79,232,255,0.16), rgba(155,123,255,0.12), rgba(255,210,59,0.08)),
+      linear-gradient(135deg, rgba(79,232,255,0.09), rgba(155,123,255,0.07), rgba(255,210,59,0.05)),
       linear-gradient(160deg,var(--panel-2),var(--panel));
-    box-shadow:0 8px 28px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(79,232,255,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+    box-shadow:0 8px 28px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(79,232,255,0.28), inset 0 1px 0 rgba(255,255,255,0.06);
   }
   .face-back{
     background:
-      linear-gradient(135deg, rgba(255,95,184,0.16), rgba(155,123,255,0.12), rgba(79,232,255,0.08)),
-      linear-gradient(160deg,rgba(28,16,48,0.7),var(--panel));
-    box-shadow:0 8px 28px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,95,184,0.34), inset 0 1px 0 rgba(255,255,255,0.08);
+      linear-gradient(135deg, rgba(255,95,184,0.09), rgba(155,123,255,0.07), rgba(79,232,255,0.05)),
+      linear-gradient(160deg,rgba(28,16,48,0.32),var(--panel));
+    box-shadow:0 8px 28px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,95,184,0.32), inset 0 1px 0 rgba(255,255,255,0.06);
     transform:rotateY(180deg);
   }
   .tag{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-soft);text-shadow:0 0 8px rgba(79,232,255,0.4);margin-bottom:10px;}
@@ -236,10 +236,10 @@
   button.ctrl:active{opacity:.55;transform:scale(.97);}
   button.ctrl.primary{
     position:relative;overflow:hidden;
-    background:linear-gradient(135deg, rgba(79,232,255,0.9), rgba(155,123,255,0.9), rgba(255,95,184,0.85));
-    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
-    border:1px solid rgba(255,255,255,0.45);color:#fff;font-weight:800;
-    box-shadow:0 4px 20px rgba(79,232,255,0.4), 0 0 34px rgba(155,123,255,0.35), inset 0 0 16px rgba(255,255,255,0.25);
+    background:linear-gradient(135deg, rgba(79,232,255,0.32), rgba(155,123,255,0.32), rgba(255,95,184,0.28));
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.4);color:#fff;font-weight:800;
+    box-shadow:0 4px 20px rgba(79,232,255,0.35), 0 0 30px rgba(155,123,255,0.3), inset 0 0 12px rgba(255,255,255,0.15);
     text-shadow:0 0 10px rgba(255,255,255,0.5);
     background-size:200% 200%;
     animation:primaryShine 3.5s ease-in-out infinite;
@@ -253,9 +253,9 @@
 
   .quiz-card{
     background:
-      linear-gradient(135deg, rgba(79,232,255,0.16), rgba(155,123,255,0.12), rgba(255,95,184,0.08)),
+      linear-gradient(135deg, rgba(79,232,255,0.09), rgba(155,123,255,0.07), rgba(255,95,184,0.05)),
       linear-gradient(160deg,var(--panel-2),var(--panel));
-    box-shadow:0 8px 30px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(79,232,255,0.28), inset 0 1px 0 rgba(255,255,255,0.08);
+    box-shadow:0 8px 30px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(79,232,255,0.26), inset 0 1px 0 rgba(255,255,255,0.06);
     border-radius:var(--radius);padding:28px 22px;text-align:center;margin-bottom:18px;overflow:hidden;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
   }
   .quiz-word{font-size:29px;font-weight:700;margin-bottom:6px;font-family:Georgia,'Iowan Old Style',serif;}
@@ -349,6 +349,23 @@
   @keyframes cloudDrift{
     0%{transform:translateX(0);}
     100%{transform:translateX(calc(100vw + 400px));}
+  }
+
+  /* ===== KELEBEK (yakında, sürekli süzülen) ===== */
+  .butterfly{position:absolute;width:22px;height:16px;top:48%;left:15%;animation:flutterPath 16s ease-in-out infinite;}
+  .butterfly svg{width:100%;height:100%;display:block;overflow:visible;}
+  .butterfly .bwing-l{transform-origin:11px 8px;animation:bflapL .13s ease-in-out infinite alternate;}
+  .butterfly .bwing-r{transform-origin:11px 8px;animation:bflapR .13s ease-in-out infinite alternate;}
+  @keyframes bflapL{0%{transform:rotate(0deg) scaleX(1);}100%{transform:rotate(24deg) scaleX(0.55);}}
+  @keyframes bflapR{0%{transform:rotate(0deg) scaleX(1);}100%{transform:rotate(-24deg) scaleX(0.55);}}
+  @keyframes flutterPath{
+    0%{transform:translate(0,0);}
+    18%{transform:translate(60px,-45px);}
+    36%{transform:translate(130px,15px);}
+    54%{transform:translate(80px,70px);}
+    72%{transform:translate(-30px,40px);}
+    88%{transform:translate(-50px,-20px);}
+    100%{transform:translate(0,0);}
   }
 
   /* ===== KUŞLAR (gerçekçi gövde + kanat, sürü hâlinde uçuş) ===== */
@@ -458,7 +475,7 @@
   @media (prefers-reduced-motion: reduce){
     .app, #splash, .card, .bar-fill{transition:none !important;}
     .splash-name, .splash-sub{animation:none !important;}
-    .shooting-star, .moon, .star, .cloud, .bird{animation:none !important;display:none !important;}
+    .shooting-star, .moon, .star, .cloud, .bird, .butterfly{animation:none !important;display:none !important;}
   }
 </style>
 </head>
@@ -470,6 +487,13 @@
   <div class="cloud" style="top:10%;width:120px;height:40px;animation-duration:75s;animation-delay:-10s;"></div>
   <div class="cloud" style="top:20%;width:85px;height:28px;animation-duration:95s;animation-delay:-45s;"></div>
   <div class="cloud" style="top:4%;width:65px;height:22px;animation-duration:62s;animation-delay:-25s;"></div>
+  <div class="butterfly" aria-hidden="true">
+    <svg viewBox="0 0 22 16">
+      <line x1="11" y1="3" x2="11" y2="13" stroke="rgba(255,255,255,0.9)" stroke-width="1"/>
+      <ellipse class="bwing-l" cx="5" cy="7" rx="5.5" ry="4" fill="rgba(255,255,255,0.88)"/>
+      <ellipse class="bwing-r" cx="17" cy="7" rx="5.5" ry="4" fill="rgba(255,255,255,0.88)"/>
+    </svg>
+  </div>
 </div>
 
 <div id="nameOverlay">
