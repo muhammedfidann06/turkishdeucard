@@ -46,11 +46,12 @@ function initLeaderboard(){
     function getStoredName(){ try{ return localStorage.getItem(NAME_KEY) || ''; }catch(e){ return ''; } }
     function setStoredName(n){ try{ localStorage.setItem(NAME_KEY, n); }catch(e){} }
     function sanitizeKey(name){
-      // Aynı kişi ismini farklı büyük/küçük harf veya fazladan boşlukla yazsa bile
-      // HER ZAMAN aynı veritabanı anahtarına düşsün diye normalize ediyoruz.
-      // Aksi halde "Ali" ve "ali " iki farklı kişi gibi kaydolur ve süre bölünür.
       return name.trim().toLowerCase().replace(/\s+/g, '_').slice(0,20).replace(/[.#$/\[\]]/g, '_');
     }
+    // progress.js da AYNI anahtar üretimini kullanmak zorunda (aksi halde
+    // ilerleme verisi farklı bir kullanıcı anahtarına yazılır). Fonksiyonu
+    // dışa açıyoruz ki tek bir doğruluk kaynağı olsun.
+    window.LB_sanitizeKey = sanitizeKey;
 
     const nameOverlay = document.getElementById('nameOverlay');
     const nameInput = document.getElementById('nameInput');
@@ -77,23 +78,18 @@ function initLeaderboard(){
     /* ---------------- SÜRE TAKİBİ (aktiflik bazlı, hile önleyici) ---------------- */
     let currentName = '';
     let heartbeatTimer = null;
-    let creditedSeconds = 0;     // veritabanına şu ana kadar yazılan aktif süre
-    let activeAccumulated = 0;   // bu oturumda BİRİKEN gerçek aktif süre (hareketsizlik hariç)
+    let creditedSeconds = 0;
+    let activeAccumulated = 0;
     let lastActivity = Date.now();
     let lastTick = Date.now();
-    const FLUSH_MS = 5000;       // her 5 saniyede bir eşitle
-    const IDLE_MS = 60000;       // 60 saniye hareketsizlik = duraklat
+    const FLUSH_MS = 5000;
+    const IDLE_MS = 60000;
 
-    // Herhangi bir dokunma, tıklama, kaydırma veya tuş basımı "aktiflik" sayılır.
     const ACTIVITY_EVENTS = ['click','touchstart','touchmove','mousemove','keydown','scroll','pointerdown'];
     ACTIVITY_EVENTS.forEach(evt => {
       window.addEventListener(evt, () => { lastActivity = Date.now(); }, { passive:true });
     });
 
-    // Her saniye çalışır: son 10 saniye içinde bir hareket olduysa geçen süreyi
-    // aktif süreye ekler; hareketsizlik 10 saniyeyi geçtiyse sayaç OLDUĞU YERDE
-    // durur (hem ekrandaki sayaç hem liderlik tablosu için). Kullanıcı tekrar
-    // dokunduğu an sayaç kaldığı yerden devam eder.
     function tickActive(){
       const now = Date.now();
       const idleFor = now - lastActivity;
@@ -108,10 +104,6 @@ function initLeaderboard(){
       return (Date.now() - lastActivity) >= IDLE_MS;
     }
 
-    // Anahtar normalizasyonundan ÖNCE kullanılan eski format (büyük/küçük harf
-    // ve boşluklara duyarlı). Bazı kullanıcıların geçmiş süresi bu eski
-    // anahtar altında kalmış olabilir; aşağıdaki fonksiyon bunu tek seferlik
-    // olarak yeni (normalize edilmiş) anahtara taşır.
     function legacyKey(name){
       return name.trim().slice(0,20).replace(/[.#$/\[\]]/g, '_');
     }
@@ -127,13 +119,12 @@ function initLeaderboard(){
         const oldVal = oldSnap.val();
         const oldSeconds = oldVal && typeof oldVal.totalSeconds === 'number' ? oldVal.totalSeconds : 0;
         if(oldSeconds <= 0){
-          return; // eski (bozuk) kayıt zaten yok, temizlenecek bir şey yok
+          return;
         }
         newRef.once('value').then((newSnap) => {
           const newVal = newSnap.val();
           const newHasData = newVal && typeof newVal.totalSeconds === 'number' && newVal.totalSeconds > 0;
           if(!newHasData){
-            // Henüz göç edilmemiş: eski süreyi yeni (tek/kalıcı) anahtara aktar.
             newRef.transaction((current) => {
               const prev = current && typeof current === 'object' ? current : { name: name, totalSeconds: 0 };
               return { name: name, totalSeconds: (prev.totalSeconds || 0) + oldSeconds, lastSeen: Date.now() };
@@ -141,8 +132,6 @@ function initLeaderboard(){
               oldRef.remove().catch(()=>{});
             });
           } else {
-            // Daha önce göç edilmiş ama eski kayıt silinmemiş kalmış (aynı isim
-            // iki ayrı satır olarak görünüyordu) — şimdi temizle.
             oldRef.remove().catch(()=>{});
           }
         }).catch(()=>{});
@@ -153,13 +142,16 @@ function initLeaderboard(){
       currentName = name;
       migrateLegacyIfNeeded(name);
       listenOwnProfile(name);
+      // progress.js (kişisel öğrenme modu) ismin hazır olduğu anı bekliyor;
+      // burada haber veriyoruz ki kendi Firebase dinleyicilerini kursun.
+      if(window.LB_onNameReady){
+        try{ window.LB_onNameReady(name); }catch(e){}
+      }
       if(!db) return;
       if(heartbeatTimer) clearInterval(heartbeatTimer);
       heartbeatTimer = setInterval(flushElapsed, FLUSH_MS);
     }
 
-    // Kullanıcının bu isimle bugüne kadar TOPLAM (tüm cihazlar/oturumlar dahil)
-    // ne kadar vakit geçirdiğini gösteren kalıcı profil satırı.
     function listenOwnProfile(name){
       const el = document.getElementById('profileTimer');
       if(!el) return;
@@ -176,10 +168,6 @@ function initLeaderboard(){
       });
     }
 
-    // Zamanlayıcılar gecikse/atlasa bile (arka plana atma, ekran kilidi vb.),
-    // her çağrıda birikmiş AKTİF süre ile veritabanına yazılan miktar
-    // karşılaştırılıp aradaki fark tek seferde işlenir. Hareketsiz geçen
-    // süre bu birikimin dışında kaldığı için asla ödüllendirilmez.
     function flushElapsed(useBeacon){
       tickActive();
       if(!currentName) return;
@@ -194,9 +182,6 @@ function initLeaderboard(){
       if(!name) return;
       const key = sanitizeKey(name);
       if(!key) return;
-      // Sayfa kapanırken (pagehide/beforeunload) normal Firebase yazma işlemi
-      // bazen tamamlanmadan sayfa sonlanabilir. Bu durumda "keepalive" özellikli
-      // ham bir istekle son anda yazmayı garantiye almaya çalışıyoruz.
       if(useBeacon && FIREBASE_CONFIG.databaseURL && FIREBASE_CONFIG.databaseURL.indexOf('BURAYA_YAPISTIR') === -1){
         try{
           const url = FIREBASE_CONFIG.databaseURL.replace(/\/$/, '') + '/leaderboard/' + key + '/lastFlushAttempt.json';
@@ -212,12 +197,6 @@ function initLeaderboard(){
     }
 
     document.addEventListener('visibilitychange', () => {
-      // Sekme tekrar görünür olduğunda ya da gizlendiğinde, aradaki gerçek
-      // süreyi hemen veritabanına işle (arka planda geçen süre de dahil).
-      // NOT: Telefon uzun süre kilitli kalıp tarayıcı sekmeyi tamamen
-      // sonlandırırsa (işletim sisteminin bellek/pil tasarrufu davranışı),
-      // o sırada hiçbir JavaScript çalışamayacağı için o boşluk kaydedilemez —
-      // bu, web sitelerinin aşamayacağı bir platform kısıtlamasıdır.
       if(document.visibilityState === 'hidden'){
         flushElapsed(true);
       } else {
@@ -289,8 +268,6 @@ function initLeaderboard(){
       startTracking(existing);
     }
 
-    // Ana script (splash tıklamasını zaten yönetiyor) bu fonksiyonu çağırarak
-    // ismi henüz kayıtlı değilse modalı güvenilir şekilde açar.
     window.LB_checkName = function(){
       if(!getStoredName()){
         showNameModal();
@@ -299,6 +276,19 @@ function initLeaderboard(){
     window.LB_startTracking = startTracking;
     window.LB_getActiveSeconds = () => activeAccumulated;
     window.LB_isIdle = isIdleNow;
+    // progress.js için ek dışa açımlar: aynı Firebase app/db örneğini ve
+    // güncel kullanıcı adını tekrar kullanabilsin (yeni bir Firebase app
+    // başlatmaya çalışıp "already exists" hatası almasın diye).
+    window.LB_getDb = () => db;
+    window.LB_getUserName = () => currentName || getStoredName();
+    window.LB_getTotalSeconds = (name, cb) => {
+      if(!db){ cb(0); return; }
+      const key = sanitizeKey(name);
+      db.ref('leaderboard/' + key).once('value').then(snap=>{
+        const val = snap.val();
+        cb(val && typeof val.totalSeconds === 'number' ? val.totalSeconds : 0);
+      }).catch(()=>cb(0));
+    };
   }catch(err){
     console.error('Liderlik tablosu başlatılırken hata oluştu:', err);
   }
