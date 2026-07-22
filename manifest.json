@@ -2,7 +2,7 @@
   "name": "Kelime Kartları",
   "short_name": "Kelime Kartları",
   "start_url": "./",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#050710",
   "theme_color": "#050710",
   "icons": [
