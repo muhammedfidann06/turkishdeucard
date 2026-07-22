@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M HAMZA | Dil Kartları</title>
+
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#04050a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kelime Kartları">
+
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
 <style>
@@ -1427,5 +1435,21 @@ function spawnShootingStar(){
 })();
 </script>
 <script src="progress.js"></script>
+
+<script>
+/* ======================= PWA SERVICE WORKER ======================= */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js")
+      .then(registration => {
+        console.log("Kelime Kartları PWA aktif:", registration.scope);
+      })
+      .catch(error => {
+        console.error("PWA Service Worker hatası:", error);
+      });
+  });
+}
+</script>
+
 </body>
 </html>
