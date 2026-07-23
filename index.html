@@ -83,22 +83,23 @@
   .splash-content{position:relative;z-index:2;text-align:center;padding:0 24px;display:flex;flex-direction:column;align-items:center;}
   .splash-name{
     font-family:Georgia,'Iowan Old Style','Palatino Linotype',serif;
-    font-size:54px;font-weight:700;letter-spacing:.09em;margin:0;
-    color:rgba(238,244,255,0.3);
-    -webkit-text-stroke:1px rgba(143,242,255,0.6);
-    text-shadow:0 0 10px rgba(79,232,255,0.6),0 0 28px rgba(79,232,255,0.48),0 0 66px rgba(79,232,255,0.36),0 0 110px rgba(155,123,255,0.28);
+    font-size:40px;font-weight:700;letter-spacing:.06em;margin:0;
+    max-width:340px;line-height:1.25;
+    color:rgba(255,255,255,0.55);
+    -webkit-text-stroke:1px rgba(255,255,255,0.9);
+    text-shadow:0 0 10px rgba(255,255,255,0.75),0 0 28px rgba(220,240,255,0.6),0 0 66px rgba(155,123,255,0.4),0 0 110px rgba(79,232,255,0.3);
     animation:neonBreathe 3.4s ease-in-out infinite;
   }
   @keyframes neonBreathe{
-    0%,100%{text-shadow:0 0 8px rgba(79,232,255,0.55),0 0 24px rgba(79,232,255,0.42),0 0 56px rgba(79,232,255,0.32),0 0 96px rgba(155,123,255,0.22);}
-    50%{text-shadow:0 0 14px rgba(79,232,255,0.85),0 0 38px rgba(79,232,255,0.65),0 0 82px rgba(79,232,255,0.5),0 0 140px rgba(155,123,255,0.36);}
+    0%,100%{text-shadow:0 0 8px rgba(255,255,255,0.7),0 0 24px rgba(220,240,255,0.55),0 0 56px rgba(155,123,255,0.36),0 0 96px rgba(79,232,255,0.26);}
+    50%{text-shadow:0 0 16px rgba(255,255,255,1),0 0 40px rgba(220,240,255,0.85),0 0 84px rgba(155,123,255,0.55),0 0 140px rgba(79,232,255,0.4);}
   }
   .splash-sub{
-    margin-top:24px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--cyan-soft);text-shadow:0 0 10px rgba(79,232,255,0.55);
-    animation:pulse 2.2s ease-in-out infinite;
+    margin-top:24px;font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--cyan-soft);text-shadow:0 0 12px rgba(79,232,255,0.9),0 0 24px rgba(79,232,255,0.6);
+    animation:pulse 1.5s ease-in-out infinite;
   }
-  @keyframes pulse{0%,100%{opacity:.5;}50%{opacity:1;}}
+  @keyframes pulse{0%,100%{opacity:.4;}50%{opacity:1;}}
   .ig-link{
     display:inline-flex;align-items:center;gap:7px;margin-top:30px;
     padding:8px 16px;border-radius:999px;
@@ -133,10 +134,20 @@
     background:var(--panel);border:1px solid rgba(79,232,255,0.25);
     display:flex;align-items:center;justify-content:center;cursor:pointer;
     box-shadow:0 0 14px rgba(79,232,255,0.12);transition:box-shadow .2s ease, border-color .2s ease;
+    font-size:19px;color:var(--cyan-soft);
   }
   .sound-btn.on{border-color:rgba(79,232,255,0.7);box-shadow:0 0 18px rgba(79,232,255,0.35);}
   .sound-btn svg{width:20px;height:20px;stroke:var(--cyan-soft);}
   .sound-btn.off svg{stroke:var(--muted);}
+  .top-btn-row{display:flex;gap:8px;}
+  .sound-off-label{
+    display:none;text-align:right;margin-top:-6px;margin-bottom:10px;
+    font-size:11px;font-weight:800;letter-spacing:.05em;
+    color:#3dffa0;text-shadow:0 0 8px rgba(61,255,160,0.9),0 0 18px rgba(61,255,160,0.6);
+    animation:soundOffBlink 1s ease-in-out infinite;
+  }
+  .sound-off-label.show{display:block;}
+  @keyframes soundOffBlink{0%,100%{opacity:.35;}50%{opacity:1;}}
 
   .lang-box{display:flex;gap:8px;margin-bottom:14px;}
   .lang-opt{
@@ -452,13 +463,29 @@
   .splash-lb{
     margin-top:28px;width:100%;max-width:300px;
     background:rgba(13,17,34,0.55);
-    border:1px solid rgba(255,210,59,0.3);border-radius:16px;
-    padding:12px 14px 8px;
+    border:1px solid rgba(255,210,59,0.45);border-radius:16px;
+    padding:14px 14px 8px;
     max-height:none;overflow:visible;touch-action:none;
+    box-shadow:0 0 18px rgba(255,210,59,0.25), inset 0 0 14px rgba(255,210,59,0.08);
+    animation:lbGoldPulse 2.6s ease-in-out infinite;
   }
+  @keyframes lbGoldPulse{
+    0%,100%{box-shadow:0 0 14px rgba(255,210,59,0.22), inset 0 0 10px rgba(255,210,59,0.06);border-color:rgba(255,210,59,0.35);}
+    50%{box-shadow:0 0 30px rgba(255,210,59,0.55), 0 0 50px rgba(255,210,59,0.25), inset 0 0 18px rgba(255,210,59,0.14);border-color:rgba(255,210,59,0.75);}
+  }
+  .splash-lb::before, .splash-lb::after{
+    content:"⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘";
+    display:block;text-align:center;letter-spacing:1px;
+    color:var(--gold);font-size:11px;line-height:1;
+    text-shadow:0 0 8px rgba(255,210,59,0.8), 0 0 16px rgba(255,210,59,0.5);
+    opacity:.8;
+  }
+  .splash-lb::before{margin-bottom:8px;}
+  .splash-lb::after{margin-top:8px;}
   .splash-lb-title{
     font-size:11.5px;font-weight:700;color:var(--gold);letter-spacing:.04em;
     margin-bottom:8px;text-align:center;
+    text-shadow:0 0 10px rgba(255,210,59,0.6);
   }
   .splash-lb-list{display:flex;flex-direction:column;gap:6px;padding-bottom:6px;}
   .lb-row{
@@ -499,6 +526,72 @@
     .splash-name, .splash-sub{animation:none !important;}
     .shooting-star, .moon, .star, .cloud, .bird, .butterfly{animation:none !important;display:none !important;}
   }
+  /* ===== BİLGİ / NASIL KULLANILIR PANELLERİ ===== */
+  .info-overlay{
+    position:fixed;inset:0;z-index:500;
+    background:rgba(2,3,8,0.82);backdrop-filter:blur(6px);
+    display:flex;align-items:flex-start;justify-content:center;
+    padding:28px 16px;
+    opacity:0;visibility:hidden;pointer-events:none;
+    transition:opacity .25s ease;
+  }
+  .info-overlay.open{opacity:1;visibility:visible;pointer-events:auto;}
+  .info-card{
+    position:relative;width:100%;max-width:480px;
+    background:linear-gradient(160deg, rgba(19,26,51,0.92), rgba(10,12,24,0.96));
+    border:1px solid rgba(79,232,255,0.35);border-radius:22px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.55), 0 0 40px rgba(79,232,255,0.15);
+    max-height:88vh;display:flex;flex-direction:column;
+  }
+  .info-close{
+    position:absolute;top:12px;right:12px;z-index:2;
+    width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,95,184,0.4);
+    background:rgba(10,12,24,0.8);color:var(--pink);font-size:16px;cursor:pointer;
+    box-shadow:0 0 12px rgba(255,95,184,0.25);
+  }
+  .info-scroll{overflow-y:auto;padding:32px 24px 24px;}
+  .info-title{
+    font-family:Georgia,'Iowan Old Style',serif;font-size:22px;font-weight:700;text-align:center;
+    color:#eef4ff;margin-bottom:12px;
+    text-shadow:0 0 10px rgba(79,232,255,0.6),0 0 24px rgba(155,123,255,0.4);
+  }
+  .info-lead{color:var(--text);font-size:13.5px;line-height:1.65;margin-bottom:18px;text-align:center;}
+  .info-h3{
+    font-size:15px;font-weight:800;margin:22px 0 10px;color:#4fe8ff;
+    text-shadow:0 0 10px rgba(79,232,255,0.6);
+  }
+  .info-h4{font-size:13.5px;font-weight:700;margin:16px 0 6px;color:#ffd23b;text-shadow:0 0 8px rgba(255,210,59,0.4);}
+  .info-scroll p{font-size:13px;line-height:1.6;color:var(--text);margin-bottom:8px;}
+  .info-closing{
+    margin-top:22px;padding-top:16px;border-top:1px solid rgba(79,232,255,0.15);
+    font-size:12px;color:var(--muted);line-height:1.7;font-style:italic;text-align:center;
+  }
+  .info-footer{margin-top:24px;display:flex;flex-direction:column;align-items:center;gap:12px;}
+  .info-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 26px;border-radius:999px;width:100%;justify-content:center;
+    background:linear-gradient(120deg,#4fe8ff,#9b7bff,#ff5fb8,#4fe8ff);
+    background-size:300% 300%;animation:pmNeonShift 5s ease-in-out infinite;
+    color:#04050a;font-weight:800;font-size:14px;text-decoration:none;
+    box-shadow:0 6px 24px rgba(79,232,255,0.35), 0 0 34px rgba(255,95,184,0.28);
+  }
+  @keyframes pmNeonShift{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+  .info-support{
+    display:inline-flex;align-items:center;gap:7px;color:var(--pink);font-size:12.5px;
+    text-decoration:none;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,95,184,0.3);
+  }
+  .info-support svg{width:15px;height:15px;flex-shrink:0;}
+  .info-howto-trigger{
+    margin-top:6px;font-size:13px;font-weight:700;color:#3dffa0;cursor:pointer;
+    text-shadow:0 0 8px rgba(61,255,160,0.5);
+  }
+  .info-howto-trigger span{color:var(--muted);font-weight:400;font-size:11px;}
+  .info-glow-title{
+    text-align:center;font-size:16px;font-weight:800;margin:24px 0 12px;
+    background:linear-gradient(120deg,#4fe8ff,#9b7bff,#ff5fb8,#4fe8ff);
+    background-size:300% 300%;-webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:pmNeonShift 4s ease-in-out infinite;
+  }
 </style>
 </head>
 <body>
@@ -530,13 +623,13 @@
 <div id="splash">
   <canvas id="snowCanvas"></canvas>
   <div class="splash-content">
-    <h1 class="splash-name">M HAMZA</h1>
+    <h1 class="splash-name">M HAMZA | DİL KARTLARI</h1>
     <div class="splash-sub">GİRİŞ İÇİN EKRANA TIKLAYIN</div>
     <a class="ig-link" id="igLink" href="https://www.instagram.com/muhammedf.fdn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
       muhammedf.fdn
     </a>
-    <div class="goethe-note">☉ BU SAYFADA KULLANILAN KELİMELER GOETHE İLE BİREBİR UYUMLUDUR.</div>
+    <div class="goethe-note">ⓘ BU SAYFADA KULLANILAN KELİMELER GOETHE/CEFR İLE BİREBİR UYUMLUDUR</div>
 
     <div class="splash-lb" id="splashLb">
       <div class="splash-lb-title">🏆 En Çok Vakit Geçirenler</div>
@@ -551,14 +644,19 @@
       <div class="eyebrow">Kelime Kartları</div>
       <h1>Dil Kartları</h1>
     </div>
-    <div class="sound-btn on" id="soundBtn" title="Sesi aç/kapat">
-      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" id="soundIcon">
-        <path d="M4 9v6h4l5 4V5L8 9H4z"/>
-        <path d="M16.5 8.5a5 5 0 0 1 0 7"/>
-        <path d="M19 6a9 9 0 0 1 0 12"/>
-      </svg>
+    <div class="top-btn-row">
+      <div class="sound-btn on" id="soundBtn" title="Sesi aç/kapat">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" id="soundIcon">
+          <path d="M4 9v6h4l5 4V5L8 9H4z"/>
+          <path d="M16.5 8.5a5 5 0 0 1 0 7"/>
+          <path d="M19 6a9 9 0 0 1 0 12"/>
+        </svg>
+      </div>
+      <div class="sound-btn" id="fullscreenBtn" title="Tam ekran">⛶</div>
+      <div class="sound-btn" id="infoBtn" title="Bilgi">ⓘ</div>
     </div>
   </div>
+  <div class="sound-off-label" id="soundOffLabel">Açmak İçin Tıkla</div>
   <div class="lang-pair" id="langPair"></div>
   <div class="sub">Seviye, dil ve kategori seç — kartına dokun, dinle, öğren</div>
 
@@ -662,6 +760,112 @@
   </div>
 
   <div id="personalView" style="display:none;"></div>
+
+  <div class="info-overlay" id="infoPanel">
+    <div class="info-card">
+      <button class="info-close" id="infoCloseBtn">✕</button>
+      <div class="info-scroll">
+        <div class="info-title">M HAMZA | Dil Kartları</div>
+        <p class="info-lead">M HAMZA | Dil Kartları web uygulaması, yabancı dil kelime bilginizi modern, etkileşimli ve estetik bir arayüzle geliştirmeniz için özel olarak tasarlandı.</p>
+
+        <h3 class="info-h3">🌟 Öne Çıkan Özellikler</h3>
+
+        <h4 class="info-h4">1. 🇩🇪 🇬🇧 🇸🇦 Çoklu Dil ve Seviye Desteği</h4>
+        <p>Almanca, İngilizce ve Arapça: Farklı diller arasında tek tıkla geçiş yapabilirsiniz.</p>
+        <p>CEFR Standartlarında Seviyeler: A1, A2, B1 ve B2 seviyelerine uygun olarak kategorize edilmiş kelime havuzu.</p>
+        <p>Goethe Enstitüsü Uyumu: Almanca bölümünde sunulan kelimeler, Goethe sınav müfredatı ve standartları ile birebir uyumludur.</p>
+
+        <h4 class="info-h4">2. 🗂️ Kategori Bazlı Odaklanmış Çalışma</h4>
+        <p>Sadece genel kelimelerle sınırlı kalmayın! Günlük yaşam, seyahat, eğitim, iş dünyası ve daha birçok farklı kategorideki kelime gruplarını filtreleyerek ihtiyacınıza yönelik pratik yapabilirsiniz.</p>
+
+        <h4 class="info-h4">3. 🔊 Akıllı Seslendirme ve Telaffuz Desteği (TTS)</h4>
+        <p>Çift Hızlı Dinleme: Kelimeleri hem normal hızda (🐰) hem de yavaşlatılmış hızda (🐢) dinleyerek doğru telaffuzları öğrenebilirsiniz.</p>
+        <p>Cihaz ve Cloud Desteği: Hem cihazınızın yerel ses motorunu hem de gelişmiş seslendirme altyapısını kullanarak akıcı bir ses deneyimi sunar.</p>
+
+        <h4 class="info-h4">4. 🎴 İnteraktif Kart ve Örnek Cümle Analizi</h4>
+        <p>Kök Eşleştirmeli Renklendirme: Kelimelerin cümle içerisindeki kullanımı, kök ve ek analizine göre özel renk vurgularıyla sunulur. Bu sayede kelimenin bağlam içindeki anlamını çok daha hızlı kavrarsınız.</p>
+        <p>Çevirmeli Kart Yapısı: Kartın üzerine dokunarak Türkçe karşılığını ve örnek cümle çevirisini anında görüntüleyebilirsiniz.</p>
+
+        <h4 class="info-h4">5. 🧠 Quiz Modu ve Hata Analizi</h4>
+        <p>Öğrendiğiniz kelimeleri test etmek için dinamik test (quiz) moduna geçebilirsiniz.</p>
+        <p>Test sonunda yaptığınız hataları detaylıca listeleyebilir, eksik olduğunuz noktaları tespit ederek tekrar çalışabilirsiniz.</p>
+
+        <h4 class="info-h4">6. 🏆 Liderlik Tablosu ve Oturum Takibi</h4>
+        <p>Sitede geçirdiğiniz aktif çalışma süresini takip edebilir, adınızı liderlik tablosuna yazdırarak diğer dil öğrenenlerle tatlı bir rekabete girebilirsiniz.</p>
+
+        <h4 class="info-h4">7. 📲 PWA (Progressive Web App) ve Çevrimdışı Kullanım</h4>
+        <p>Uygulamayı mobil cihazınıza veya bilgisayarınıza bir uygulama gibi yükleyebilir, dilediğiniz her yerde pratik yapmaya devam edebilirsiniz.</p>
+
+        <h3 class="info-h3">🎨 Görsel ve Kullanıcı Dostu Tasarım</h3>
+        <p>Gece Modu ve Estetik Atmosfer: Derin uzay teması, animasyonlu yıldızlar ve görsel efektlerle gözü yormayan, uzun süreli çalışmalara uygun bir ortam.</p>
+        <p>Kaldığın Yerden Devam Et: Kart konum hafızası sayesinde sayfa yenilense bile hangi kartta kaldığınızı unutmaz.</p>
+
+        <p class="info-closing">Günümüzde böyle uygulamalar genelde yüksek ücretler talep ederler, biz sizin için ücretsiz ve diğer tüm uygulamalardan daha ulaşılabilir bir web sitesi sunuyoruz. Tek kazancımız ise bu hizmetten faydalanmanız ve bizim bunu görerek mutlu olmamızdır.</p>
+
+        <div class="info-footer">
+          <a class="info-cta" href="https://muhammedfidann06.github.io/turkishdeucard/" target="_blank" rel="noopener">Öğrenmek İçin Tıklayın ↖</a>
+          <a class="info-support" href="https://www.instagram.com/muhammedf.fdn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+            Destek Ve Önerileriniz İçin: @muhammedf.fdn
+          </a>
+          <div class="info-howto-trigger" id="howToOpenBtn">❔ Nasıl Kullanılır? <span>(Tıkla)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-overlay" id="howToPanel">
+    <div class="info-card">
+      <button class="info-close" id="howToCloseBtn">✕</button>
+      <div class="info-scroll">
+        <h3 class="info-h3">🚀 Nasıl Kullanılır?</h3>
+        <p>Siteye giriş yaptığınız andan itibaren sade ve sezgisel bir arayüz sizi karşılar. Pratik yapmaya başlamak için şu adımları izleyebilirsiniz:</p>
+
+        <h4 class="info-h4">1. Giriş ve Profil Oluşturma</h4>
+        <p>Ana ekranda "Giriş İçin Ekrana Tıklayın" yazısına dokunun.</p>
+        <p>Çıkan pencereye adınızı girerek başlayın. Bu sayede sitede geçirdiğiniz süre kaydedilir ve liderlik tablosundaki yerinizi alabilirsiniz.</p>
+
+        <h4 class="info-h4">2. Dil ve Seviye Seçimi</h4>
+        <p>Üst menüden çalışmak istediğiniz dili (Almanca 🇩🇪, İngilizce 🇬🇧 veya Arapça 🇸🇦) seçin.</p>
+        <p>Hemen altındaki seviye kutusundan öğrenme düzeyinize göre A1, A2, B1, B2 veya tüm seviyeleri bir arada görmek için TÜMÜ seçeneğine tıklayın.</p>
+
+        <h4 class="info-h4">3. Kategori İnceleme</h4>
+        <p>"📂 Kategori Seç" butonuna basarak belirli bir alana (örneğin Günlük Yaşam, Gıda, Meslekler vb.) odaklanabilir ya da tüm kategorileri karışık çalışabilirsiniz.</p>
+
+        <h4 class="info-h4">4. Kartlar Modunda Çalışma</h4>
+        <p>Kelimeyi ve Cümleyi İnceleyin: Kartın ön yüzünde kelimenin okunuşu, türü ve örnek cümle içerisindeki kullanımı vurgulu olarak yer alır.</p>
+        <p>Dinleyin: Kelimenin doğru telaffuzunu duymak için normal hız için tavşan (🐰), yavaş ve tane tane dinlemek için kaplumbağa (🐢) simgesine dokunun.</p>
+        <p>Anlamını Görün: Kartın üzerine tıklayarak (veya dokunarak) kartı çevirebilir, Türkçe karşılığını ve Türkçe örnek cümleyi görüntüleyebilirsiniz.</p>
+        <p>Gezinin: Sonraki, Önceki veya kart sırasını rastgele değiştirmek için Karıştır butonlarını kullanın.</p>
+
+        <h4 class="info-h4">5. Quiz (Test) Modu ile Kendinizi Sınayın</h4>
+        <p>Üstteki Quiz sekmesine geçerek öğrendiğiniz kelimeleri çoktan seçmeli testlerle pekiştirin.</p>
+        <p>Test bittiğinde toplam doğru sayınızı görebilir, "Hatalarını Gör" butonuna tıklayarak yanlış yaptığınız soruların doğrularını inceleyebilirsiniz.</p>
+
+        <h4 class="info-h4">6. Çalışma Sürenizi Takip Edin</h4>
+        <p>Sayfanın alt kısmındaki canlı kronometre sayesinde o oturumda ne kadar süre aktif pratik yaptığınızı anlık olarak takip edin.</p>
+
+        <div class="info-glow-title">🎯 Kişisel Çalışma Alanı</div>
+        <p>Standart kelime havuzunun ve genel testlerin ötesinde, uygulamanın üst menüsünde yer alan "🎯 Kişisel" sekmesi, tamamen size ait ve esnek bir öğrenme deneyimi sunmak için tasarlanmıştır.</p>
+        <p>Odaklanmış, Sade Arayüz: Kişisel sekmesine geçiş yaptığınızda; ekrandaki genel seviye (A1, A2 vb.) ve kategori filtreleri otomatik olarak gizlenir. Bu sayede dikkatiniz dağılmadan doğrudan kendi çalışma alanınıza odaklanabilirsiniz.</p>
+        <p>Kişiselleştirilmiş Yönetim (Özel Modül): Bu sekmeye tıkladığınızda uygulamanın özel altyapısı devreye girer. Bu alan, kendi öğrenme rotanızı çizebileceğiniz, özel kelime listelerinizi veya kişisel istatistiklerinizi yönetebileceğiniz size özel bir pano (dashboard) olarak işlev görür.</p>
+        <p>⚪️ Çalışmaya Başla kısmına tıklayın ve özel olarak oluşturulan sistem sayesinde kalıcı bir şekilde bilgi birikiminizi artırın.</p>
+        <p>⚪️ Genel Tekrar ile öğrendiklerinizi pekiştirin ve emin olun.</p>
+        <p>⚪️ Günlük Tekrar ile geçen gün çalıştıklarınızı tekrar edin.</p>
+        <p>⚪️ Üst kısımda dil seçenekleri ve seviye seçenekleri ile seviyenize göre çalışın.</p>
+        <p>⚪️ Toplam ilerlemeniz gösterilir, bu sayede ilerlemenizi kendi gözlerinizle takip edin.</p>
+        <p>⚪️ Hata yaptığınız kelimeleri görün, tekrar edin. Kaç defa karşınıza çıktığını ve kaç defa hata yaptığınızı kendi gözlerinizle görün.</p>
+
+        <div class="info-footer">
+          <a class="info-cta" href="https://muhammedfidann06.github.io/turkishdeucard/" target="_blank" rel="noopener">Öğrenmek İçin Tıklayın ↖</a>
+          <a class="info-support" href="https://www.instagram.com/muhammedf.fdn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+            Destek Ve Önerileriniz İçin: @muhammedf.fdn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="session-timer" id="sessionTimer">⏱ Bu oturumda: 0sn</div>
   <div class="session-timer" id="profileTimer">👤 Profil yükleniyor...</div>
@@ -998,7 +1202,36 @@ document.getElementById('soundBtn').onclick = () => {
   const btn = document.getElementById('soundBtn');
   btn.classList.toggle('on', soundOn);
   btn.classList.toggle('off', !soundOn);
+  const offLabel = document.getElementById('soundOffLabel');
+  if(offLabel) offLabel.classList.toggle('show', !soundOn);
   if(!soundOn && 'speechSynthesis' in window) window.speechSynthesis.cancel();
+};
+
+document.getElementById('fullscreenBtn').onclick = () => {
+  try{
+    if(!document.fullscreenElement){
+      (document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen || function(){}).call(document.documentElement);
+    } else {
+      (document.exitFullscreen || document.webkitExitFullscreen || function(){}).call(document);
+    }
+  }catch(e){}
+};
+
+document.getElementById('infoBtn').onclick = () => {
+  const el = document.getElementById('infoPanel');
+  if(el) el.classList.add('open');
+};
+document.getElementById('infoCloseBtn').onclick = () => {
+  const el = document.getElementById('infoPanel');
+  if(el) el.classList.remove('open');
+};
+document.getElementById('howToOpenBtn').onclick = () => {
+  const el = document.getElementById('howToPanel');
+  if(el) el.classList.add('open');
+};
+document.getElementById('howToCloseBtn').onclick = () => {
+  const el = document.getElementById('howToPanel');
+  if(el) el.classList.remove('open');
 };
 
 /* ======================= COLOR SPLIT (kök eşleştirmeli) ======================= */
@@ -1544,19 +1777,19 @@ function spawnShootingStar(){
     return Array.from({length:n}, () => ({
       x: Math.random()*w,
       y: Math.random()*h,
-      r: Math.random()*8 + 3,
+      r: Math.random()*9 + 4,
       speedY: Math.random()*1.6 + 0.7,
       speedX: Math.random()*1.0 - 0.5,
       rot: Math.random()*Math.PI*2,
       rotSpeed: (Math.random()*0.05 - 0.025),
       drift: Math.random()*Math.PI*2,
       driftSpeed: Math.random()*0.03 + 0.015,
-      opacity: Math.random()*0.55 + 0.4,
+      opacity: Math.random()*0.5 + 0.55,
       hue: Math.random() < 0.5 ? "190,235,255" : "210,220,255"
     }));
   }
   
-  flakes = makeFlakes(40);
+  flakes = makeFlakes(62);
 
   function drawCrystal(f){
     ctx.save();
