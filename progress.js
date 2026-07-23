@@ -92,21 +92,52 @@
     }catch(e){}
   }
 
+  // Firebase'den gelen kelime kayıtlarını, hafızadaki (henüz Firebase'e
+  // ulaşmamış olabilecek) daha taze ilerlemenin ÜZERİNE KÖRÜ KÖRÜNE
+  // YAZMAK yerine, her kelime için hangi kayıt daha güncelse (lastSeen'e
+  // göre) onu koruyarak birleştirir. Bu, "bilinen kelimeler sıfırlandı"
+  // hatasının kök nedenini (loadUserData'nın tekrar tetiklenip henüz
+  // senkronize olmamış Firebase verisiyle hafızayı ezmesi) engeller.
+  function mergeWordProgress(localWords, remoteWords){
+    const merged = Object.assign({}, remoteWords || {});
+    Object.keys(localWords || {}).forEach(key=>{
+      const l = localWords[key];
+      const r = merged[key];
+      if(!r){ merged[key] = l; return; }
+      const lTime = l.lastSeen || 0;
+      const rTime = r.lastSeen || 0;
+      // Eşitlik durumunda (ör. iki tarafta da lastSeen yoksa) yerelde
+      // "known" varsa onu koru — veri kaybını asla tercih etme.
+      if(lTime > rTime || (lTime === rTime && l.known && !r.known)){
+        merged[key] = l;
+      }
+    });
+    return merged;
+  }
+
   function loadUserData(name, cb){
     currentName = name;
     currentKey = getKey(name);
     dataLoaded = false;
     const local = safeLocalGet('pm_data_'+currentKey);
-    wordProgress = (local && local.words) ? local.words : {};
-    meta = (local && local.meta) ? local.meta : null;
+    const localWords = (local && local.words) ? local.words : {};
+    const localMeta = (local && local.meta) ? local.meta : null;
+    wordProgress = localWords;
+    meta = localMeta;
 
     const ref = dbRef('progress/'+currentKey);
     if(ref){
       ref.once('value').then(snap=>{
         const val = snap.val();
         if(val){
-          if(val.words) wordProgress = val.words;
-          if(val.meta) meta = val.meta;
+          if(val.words) wordProgress = mergeWordProgress(localWords, val.words);
+          // meta için de veri kaybını önle: hangi taraf daha ilerideyse
+          // (xp daha yüksekse) onu esas al; xp yoksa/eşitse yereli koru.
+          if(val.meta){
+            const localXp = (localMeta && localMeta.xp) || 0;
+            const remoteXp = val.meta.xp || 0;
+            meta = (remoteXp >= localXp) ? val.meta : localMeta;
+          }
         }
         finalizeLoad(cb);
       }).catch(()=> finalizeLoad(cb));
@@ -850,6 +881,7 @@
         let rec = wordProgress[key];
         if(rec){
           rec.seen = (rec.seen||0)+1;
+          rec.lastSeen = Date.now();
           if(ok){ rec.correct=(rec.correct||0)+1; reviewMode.stats.correct++; }
           else {
             rec.wrong=(rec.wrong||0)+1;
@@ -952,6 +984,7 @@
   }
 
   window.LB_onNameReady = function(name){
+    if(dataLoaded && currentName === name){ return; } // zaten yüklü, gereksiz yeniden yüklemeyi (ve olası veri ezmeyi) engelle
     if(root && root.style.display !== 'none'){ loadUserData(name, renderHome); }
   };
 
