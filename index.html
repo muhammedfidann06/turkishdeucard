@@ -698,81 +698,265 @@ let answered = false;
 let mistakes = []; // QUIZ HATALARINI TUTACAĞIMIZ DİZİ
 
 /* ======================= TTS (best available system voice) ======================= */
+/* =========================================================
+   SES SİSTEMİ
+   Öncelik:
+   1. Cihazın / tarayıcının kendi speechSynthesis TTS sistemi
+   2. TTS çalışmazsa Google Translate TTS yedek sistem
+   ========================================================= */
+/* =========================================================
+   1. TTS SESLERİNİ YÜKLE
+   ========================================================= */
 let voicesCache = [];
-function loadVoices(){ voicesCache = window.speechSynthesis ? window.speechSynthesis.getVoices() : []; }
+function loadVoices(){
+  if('speechSynthesis' in window){
+    voicesCache = window.speechSynthesis.getVoices() || [];
+  }else{
+    voicesCache = [];
+  }
+}
 if('speechSynthesis' in window){
   loadVoices();
-  window.speechSynthesis.onvoiceschanged = loadVoices;
+  window.speechSynthesis.onvoiceschanged = () => {
+    loadVoices();
+  };
 }
-
+/* =========================================================
+   2. UYGUN TTS SESİNİ BUL
+   ========================================================= */
 function pickVoice(langCode){
   loadVoices();
-  const prefix = langCode.split('-')[0].toLowerCase();
-  const candidates = voicesCache.filter(v => v.lang && v.lang.toLowerCase().startsWith(prefix));
-  if(candidates.length === 0) return null;
-  const exact = candidates.filter(v => v.lang.toLowerCase() === langCode.toLowerCase());
+  const prefix = String(langCode || '')
+    .split('-')[0]
+    .toLowerCase();
+  if(!prefix) return null;
+  const candidates = voicesCache.filter(v =>
+    v.lang &&
+    v.lang.toLowerCase().startsWith(prefix)
+  );
+  if(candidates.length === 0){
+    return null;
+  }
+  // Önce tam dil eşleşmesi
+  const exact = candidates.filter(v =>
+    v.lang.toLowerCase() === String(langCode).toLowerCase()
+  );
   const pool = exact.length ? exact : candidates;
+  // Daha doğal sesleri önceliklendir
   const priorityKeywords = [
-    "Siri","Enhanced","Premium","Pro",
-    "Natural","Neural","Wavenet","Google","Online",
-    "Samantha","Alex","Ava","Serena","Daniel","Anna","Markus","Petra"
+    "Siri",
+    "Enhanced",
+    "Premium",
+    "Pro",
+    "Natural",
+    "Neural",
+    "Wavenet",
+    "Google",
+    "Online",
+    "Samantha",
+    "Alex",
+    "Ava",
+    "Serena",
+    "Daniel",
+    "Anna",
+    "Markus",
+    "Petra"
   ];
   for(const kw of priorityKeywords){
-    const found = pool.find(v => v.name && v.name.indexOf(kw) !== -1);
-    if(found) return found;
+    const found = pool.find(v =>
+      v.name &&
+      v.name.toLowerCase().includes(kw.toLowerCase())
+    );
+    if(found){
+      return found;
+    }
   }
+  // Hiçbiri bulunamazsa ilk uygun sesi kullan
   return pool[0];
 }
-
-/* Google Translate'in gayriresmi ses uç noktası kullanılıyor — resmi/desteklenen
-   bir API değildir, bu yüzden bazen yavaşlayabilir ya da engellenebilir. Bu
-   yüzden HER ZAMAN tarayıcının kendi sesine (speechSynthesis) yedek olarak
-   düşüyoruz; site bu ses hiç çalışmasa bile bozulmaz. */
+/* =========================================================
+   3. GOOGLE TRANSLATE TTS
+   YEDEK SES SİSTEMİ
+   ========================================================= */
 function googleTTSUrl(text, langCode, slow){
   const speed = slow ? 0.24 : 1;
-  return `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=${langCode}&client=tw-ob&ttsspeed=${speed}`;
+  return `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=${encodeURIComponent(langCode)}&client=tw-ob&ttsspeed=${speed}`;
 }
+/* =========================================================
+   4. GOOGLE TTS SESLENDİRME
+   ========================================================= */
 function speakGoogle(text, langCode, slow, onEnd){
   try{
-    const audio = new Audio(googleTTSUrl(text, langCode, slow));
+    const audio = new Audio(
+      googleTTSUrl(text, langCode, slow)
+    );
     let done = false;
-    const finish = (ok) => { if(done) return; done = true; if(onEnd) onEnd(ok); };
-    audio.onended = () => finish(true);
-    audio.onerror = () => finish(false);
-    const timeout = setTimeout(() => finish(false), 4000);
-    audio.addEventListener('playing', () => clearTimeout(timeout), { once:true });
-    audio.play().catch(() => finish(false));
-  }catch(e){ if(onEnd) onEnd(false); }
+    const finish = (ok) => {
+      if(done) return;
+      done = true;
+      if(onEnd){
+        onEnd(ok);
+      }
+    };
+    audio.onended = () => {
+      finish(true);
+    };
+    audio.onerror = () => {
+      finish(false);
+    };
+    // Google TTS çok uzun süre cevap vermezse başarısız kabul et
+    const timeout = setTimeout(() => {
+      finish(false);
+    }, 5000);
+    audio.addEventListener(
+      'playing',
+      () => {
+        clearTimeout(timeout);
+      },
+      { once:true }
+    );
+    const playPromise = audio.play();
+    if(playPromise){
+      playPromise.catch(() => {
+        clearTimeout(timeout);
+        finish(false);
+      });
+    }
+  }catch(e){
+    if(onEnd){
+      onEnd(false);
+    }
+  }
 }
-window.PM_speakGoogle = speakGoogle;
-
-function speakNative(text, lang, rate){
-  if(!('speechSynthesis' in window)) return;
+/* =========================================================
+   5. SADECE CİHAZ / TARAYICI TTS
+   ========================================================= */
+function speakNative(text, lang, rate, onResult){
+  if(!('speechSynthesis' in window)){
+    if(onResult){
+      onResult(false);
+    }
+    return;
+  }
   try{
+    // Önce devam eden sesleri durdur
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
+    // Uygun dili seç
     const voice = pickVoice(lang);
-    if(voice){ u.voice = voice; u.lang = voice.lang; } else { u.lang = lang; }
+    if(voice){
+      u.voice = voice;
+      u.lang = voice.lang;
+    }else{
+      u.lang = lang;
+    }
     u.rate = rate || 0.92;
     u.pitch = 1.0;
     u.volume = 1.0;
+    let started = false;
+    let finished = false;
+    // Native TTS başarısız olursa Google TTS'ye geç
+    const fail = () => {
+      if(finished) return;
+      finished = true;
+      if(onResult){
+        onResult(false);
+      }
+    };
+    // TTS gerçekten başladı
+    u.onstart = () => {
+      started = true;
+    };
+    // TTS başarıyla tamamlandı
+    u.onend = () => {
+      if(finished) return;
+      finished = true;
+      if(onResult){
+        onResult(true);
+      }
+    };
+    // TTS hata verdi
+    u.onerror = () => {
+      fail();
+    };
+    // TTS 2.5 saniye içinde başlamadıysa başarısız kabul et
+    setTimeout(() => {
+      if(!started && !finished){
+        try{
+          window.speechSynthesis.cancel();
+        }catch(e){}
+        fail();
+      }
+    }, 2500);
+    // TTS'yi başlat
     window.speechSynthesis.speak(u);
-  }catch(e){}
+  }catch(e){
+    if(onResult){
+      onResult(false);
+    }
+  }
 }
-
+/* =========================================================
+   6. ANA SESLENDİRME
+   ÖNCE NATIVE TTS
+   BAŞARISIZSA GOOGLE TTS
+   ========================================================= */
 function speak(text, lang){
   if(!soundOn) return;
-  if(lang.startsWith('tr')) return; // TÜRKÇE OKUMAYI ENGELLER
-  const code = lang.split('-')[0];
-  speakGoogle(text, code, false, (ok) => { if(!ok) speakNative(text, lang, 0.92); });
+  // Türkçe kelimeleri seslendirme
+  if(String(lang).toLowerCase().startsWith('tr')) return;
+  // Önce cihazın kendi TTS sistemini dene
+  speakNative(
+    text,
+    lang,
+    0.92,
+    (ok) => {
+      // Native TTS başarısız olduysa
+      // Google Translate TTS'yi kullan
+      if(!ok){
+        const code = String(lang).split('-')[0];
+        speakGoogle(
+          text,
+          code,
+          false,
+          () => {}
+        );
+      }
+    }
+  );
 }
+/* =========================================================
+   7. YAVAŞ SESLENDİRME
+   ÖNCE NATIVE TTS
+   BAŞARISIZSA GOOGLE TTS
+   ========================================================= */
 function speakSlow(text, lang){
   if(!soundOn) return;
-  if(lang.startsWith('tr')) return;
-  const code = lang.split('-')[0];
-  speakGoogle(text, code, true, (ok) => { if(!ok) speakNative(text, lang, 0.55); });
+  // Türkçe kelimeleri seslendirme
+  if(String(lang).toLowerCase().startsWith('tr')) return;
+  // Önce cihazın kendi TTS sistemini dene
+  speakNative(
+    text,
+    lang,
+    0.55,
+    (ok) => {
+      // Native TTS başarısız olduysa
+      // Google Translate TTS'yi kullan
+      if(!ok){
+        const code = String(lang).split('-')[0];
+        speakGoogle(
+          text,
+          code,
+          true,
+          () => {}
+        );
+      }
+    }
+  );
 }
-
+/* =========================================================
+   8. MEDYANIN / TARAYICININ TTS MOTORUNU ISIT
+   ========================================================= */
 function warmUpSpeech(){
   if(!('speechSynthesis' in window)) return;
   try{
@@ -782,7 +966,10 @@ function warmUpSpeech(){
     window.speechSynthesis.speak(u);
   }catch(e){}
 }
-
+/* =========================================================
+   9. GOOGLE TTS FONKSİYONUNU DIŞARIDAN ERİŞİLEBİLİR YAP
+   ========================================================= */
+window.PM_speakGoogle = speakGoogle;
 /* ======================= OTURUM SÜRESİ GÖSTERGESİ ======================= */
 function startSessionTimer(){
   const el = document.getElementById('sessionTimer');
