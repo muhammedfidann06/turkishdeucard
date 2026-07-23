@@ -922,186 +922,29 @@
 <script src="leaderboard.js"></script>
 <script>
 /* ================================================================
-   FIREBASE AUTHENTICATION — kullanıcı adı + şifre girişi
-   ================================================================
-   NOT: Bu blok, leaderboard.js'in dışarıya açtığı arayüzü
-   (window.LB_getDb, LB_getUserName, LB_sanitizeKey, LB_checkName)
-   YENİDEN TANIMLAR. Böylece progress.js HİÇ DEĞİŞMEDEN, artık
-   isim yerine sabit bir Firebase Authentication UID'si üzerinden
-   çalışır — "aynı isim farklı yazılınca veri kayboluyor" sınıfı
-   hataların kökten önüne geçer.
-
-   ÖNEMLİ SINIRLAMA: leaderboard.js bu oturumda elimde değil. Eğer
-   leaderboard.js kendi içinde AYRICA "nameSubmit" butonuna bir
-   dinleyici ekliyorsa (addEventListener ile), bu iki dinleyici
-   birlikte çalışabilir ve çakışma yaratabilir. Bunu fark edersen
-   (ör. giriş iki kez tetikleniyor gibi görünüyorsa) leaderboard.js'i
-   paylaş, anında düzeltirim.
-
-   Şifreler kendi veritabanımızda DÜZ METİN olarak SAKLANMIYOR;
-   tamamen Firebase Authentication (Email/Password sağlayıcısı)
-   tarafından yönetiliyor. Kullanıcı adını geçerli bir e-posta
-   biçimine çevirmek için sahte bir alan adı ekliyoruz (Firebase
-   Authentication e-posta/şifre sağlayıcısı için biçimsel olarak
-   geçerli bir e-posta ister; bu e-postaya gerçekten mail
-   gönderilmiyor, sadece hesap anahtarı olarak kullanılıyor).
+   ŞİFRE GÖSTER/GİZLE — Maymun emoji animasyonu (sadece görsel, saf UI)
+   Kimlik doğrulama mantığının tamamı artık leaderboard.js içinde.
 ================================================================ */
-(function(){
-  const FAKE_EMAIL_DOMAIN = '@dilkartlari-user.app';
-
-  function sanitizeUsername(name){
-    return String(name||'').trim().toLowerCase()
-      .replace(/\s+/g,'_')
-      .replace(/[^a-z0-9_.]/g,'')
-      .slice(0,30);
-  }
-  function legacyKeyFor(name){
-    // progress.js'teki eski (isim tabanlı) anahtar mantığıyla BİREBİR aynı,
-    // göç (migration) sırasında eski veriyi bulabilmek için.
-    return String(name||'').trim().toLowerCase().replace(/\s+/g,'_').slice(0,20).replace(/[.#$\/\[\]]/g,'_');
-  }
-
-  let currentUid = null;
-  let currentDisplayName = '';
-
-  function getAuth(){ return (window.firebase && firebase.apps && firebase.apps.length) ? firebase.auth() : null; }
-  function getDb(){ return (window.firebase && firebase.apps && firebase.apps.length) ? firebase.database() : null; }
-
-  async function migrateLegacyIfExists(oldKey, uid, displayName){
-    const db = getDb();
-    if(!db) return;
-    try{
-      const progSnap = await db.ref('progress/'+oldKey).once('value');
-      if(progSnap.exists()){
-        const uidProgSnap = await db.ref('progress/'+uid).once('value');
-        if(!uidProgSnap.exists()){
-          await db.ref('progress/'+uid).set(progSnap.val());
-        }
-      }
-    }catch(e){}
-    try{
-      const lbSnap = await db.ref('leaderboard/'+oldKey).once('value');
-      if(lbSnap.exists()){
-        const uidLbSnap = await db.ref('leaderboard/'+uid).once('value');
-        if(!uidLbSnap.exists()){
-          const val = lbSnap.val();
-          if(val && typeof val === 'object') val.name = displayName;
-          await db.ref('leaderboard/'+uid).set(val);
-        }
-      }
-    }catch(e){}
-  }
-
-  function showLoginError(msg){
-    const el = document.getElementById('loginError');
-    if(el) el.textContent = msg || '';
-  }
-  function setSubmitLoading(loading){
-    const btn = document.getElementById('nameSubmit');
-    if(!btn) return;
-    btn.disabled = loading;
-    btn.textContent = loading ? 'Kontrol ediliyor…' : 'Başla';
-  }
-
-  async function handleLoginSubmit(){
-    const nameEl = document.getElementById('nameInput');
-    const pwEl = document.getElementById('passwordInput');
-    const rawName = nameEl ? nameEl.value : '';
-    const password = pwEl ? pwEl.value : '';
-    const uname = sanitizeUsername(rawName);
-    const displayName = String(rawName||'').trim();
-
-    if(!displayName){ showLoginError('Lütfen bir kullanıcı adı yaz.'); return; }
-    if(!uname){ showLoginError('Kullanıcı adında en az bir harf/rakam olmalı.'); return; }
-    if(!password || password.length < 6){ showLoginError('Şifre en az 6 karakter olmalı.'); return; }
-
-    const auth = getAuth();
-    if(!auth){ showLoginError('Bağlantı kurulamadı, lütfen tekrar dene.'); return; }
-
-    showLoginError('');
-    setSubmitLoading(true);
-    const email = uname + FAKE_EMAIL_DOMAIN;
-
-    try{
-      const cred = await auth.createUserWithEmailAndPassword(email, password);
-      currentUid = cred.user.uid;
-      currentDisplayName = displayName;
-      await migrateLegacyIfExists(legacyKeyFor(displayName), currentUid, displayName);
-      finishLogin();
-    }catch(err){
-      if(err && err.code === 'auth/email-already-in-use'){
-        try{
-          const cred2 = await auth.signInWithEmailAndPassword(email, password);
-          currentUid = cred2.user.uid;
-          currentDisplayName = displayName;
-          finishLogin();
-        }catch(err2){
-          setSubmitLoading(false);
-          showLoginError('Bu kullanıcı adı zaten alınmış ve şifre yanlış. Lütfen doğru şifreyi gir.');
-        }
-      } else if(err && err.code === 'auth/weak-password'){
-        setSubmitLoading(false);
-        showLoginError('Şifre çok zayıf, en az 6 karakter olmalı.');
-      } else if(err && err.code === 'auth/invalid-email'){
-        setSubmitLoading(false);
-        showLoginError('Kullanıcı adında geçersiz karakterler var, sadece harf/rakam kullan.');
+document.addEventListener('DOMContentLoaded', function(){
+  const pwInput = document.getElementById('passwordInput');
+  const pwEye = document.getElementById('pwEye');
+  const emojiVisible = document.getElementById('pwEmojiVisible');
+  const emojiHidden = document.getElementById('pwEmojiHidden');
+  let pwHidden = false;
+  if(pwEye && pwInput && emojiVisible && emojiHidden){
+    pwEye.onclick = () => {
+      pwHidden = !pwHidden;
+      pwInput.type = pwHidden ? 'password' : 'text';
+      if(pwHidden){
+        emojiVisible.classList.remove('in'); emojiVisible.classList.add('out');
+        emojiHidden.classList.remove('out'); emojiHidden.classList.add('in');
       } else {
-        setSubmitLoading(false);
-        showLoginError('Bir hata oluştu, lütfen tekrar dene.');
+        emojiHidden.classList.remove('in'); emojiHidden.classList.add('out');
+        emojiVisible.classList.remove('out'); emojiVisible.classList.add('in');
       }
-    }
+    };
   }
-
-  function finishLogin(){
-    setSubmitLoading(false);
-    const overlay = document.getElementById('nameOverlay');
-    if(overlay) overlay.classList.remove('open');
-    if(window.LB_onNameReady) window.LB_onNameReady(currentDisplayName);
-  }
-
-  document.addEventListener('DOMContentLoaded', function(){
-    const submitBtn = document.getElementById('nameSubmit');
-    if(submitBtn) submitBtn.onclick = handleLoginSubmit;
-    const pwInput = document.getElementById('passwordInput');
-    if(pwInput){
-      pwInput.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') handleLoginSubmit(); });
-    }
-    const nameInput = document.getElementById('nameInput');
-    if(nameInput){
-      nameInput.addEventListener('keydown', (e)=>{ if(e.key === 'Enter'){ const pw=document.getElementById('passwordInput'); if(pw) pw.focus(); } });
-    }
-
-    // Maymun emoji ile şifre göster/gizle (profesyonel crossfade animasyonu)
-    const pwEye = document.getElementById('pwEye');
-    const emojiVisible = document.getElementById('pwEmojiVisible');
-    const emojiHidden = document.getElementById('pwEmojiHidden');
-    let pwHidden = false;
-    if(pwEye){
-      pwEye.onclick = () => {
-        pwHidden = !pwHidden;
-        if(pwInput) pwInput.type = pwHidden ? 'password' : 'text';
-        if(pwHidden){
-          emojiVisible.classList.remove('in'); emojiVisible.classList.add('out');
-          emojiHidden.classList.remove('out'); emojiHidden.classList.add('in');
-        } else {
-          emojiHidden.classList.remove('in'); emojiHidden.classList.add('out');
-          emojiVisible.classList.remove('out'); emojiVisible.classList.add('in');
-        }
-      };
-    }
-  });
-
-  // leaderboard.js'in dışarıya açtığı arayüzü, UID tabanlı çalışacak şekilde
-  // yeniden tanımlıyoruz. progress.js bu fonksiyonları ÇAĞIRDIĞI için
-  // kendisi hiç değişmeden yeni sisteme geçmiş oluyor.
-  window.LB_getDb = getDb;
-  window.LB_getUserName = () => currentDisplayName;
-  window.LB_sanitizeKey = (name) => currentUid || sanitizeUsername(name);
-  window.LB_checkName = () => {
-    const overlay = document.getElementById('nameOverlay');
-    if(overlay) overlay.classList.add('open');
-  };
-})();
+});
 </script>
 <script>
 /* Kelime verisi artık vocab-core.js / vocab-de.js / vocab-en.js / vocab-ar.js
