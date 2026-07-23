@@ -1,18 +1,33 @@
+
 /* ================================================================
-   LEADERBOARD.JS — Kalıcı, tüm cihazlarda tutarlı liderlik tablosu
-   (Splash / giriş ekranının altında sabit, tıklama gerektirmez)
+   LEADERBOARD.JS — Firebase Authentication ile kullanıcı adı + şifre
+   girişi, kalıcı ve tüm cihazlarda tutarlı liderlik tablosu
    ================================================================
 
-   TEK YAPMAN GEREKEN ADIM (daha önce yapmadıysan):
-   Bu tablo tüm ziyaretçiler arasında GERÇEKTEN paylaşılan/kalıcı olsun
-   diye ücretsiz bir Firebase (Google) veritabanı kullanıyor.
+   YENİ MİMARİ (v2):
+   - Artık kimlik "isim" değil, Firebase Authentication tarafından
+     verilen sabit bir UID (hesap kimliği). Bu, "aynı isim farklı
+     yazılınca / boşlukla girilince ilerleme sıfırlanıyor" sınıfı
+     hataların kökten önüne geçer.
+   - Kullanıcı adı, biçimsel olarak geçerli bir e-postaya çevrilip
+     (gerçek mail ATILMIYOR, sadece hesap anahtarı) Firebase'in
+     Email/Password sağlayıcısına veriliyor. Şifreler bizim
+     veritabanımızda ASLA saklanmıyor.
+   - Yeni kullanıcı adı + şifre -> hesap oluşturulur (createUser).
+   - Var olan kullanıcı adı + DOĞRU şifre -> o hesaba giriş yapılır.
+   - Var olan kullanıcı adı + YANLIŞ şifre -> reddedilir.
+   - Tarayıcı aynı kalırsa (aynı cihaz/tarayıcı), Firebase Authentication
+     oturumu kendisi hatırlar; sayfa yeniden açıldığında şifre tekrar
+     sorulmaz (onAuthStateChanged).
+   - Eski (isim tabanlı) ilerleme/liderlik verisi varsa, ilk şifre
+     belirlemede otomatik olarak yeni UID anahtarına taşınır.
 
+   TEK YAPMAN GEREKEN ADIM:
    1) https://console.firebase.google.com > projenin var (Mhamzac).
-   2) Realtime Database zaten oluşturuldu ve Rules'a
-      { "rules": { "leaderboard": { ".read": true, ".write": true } } }
-      yapıştırıldı.
-   3) Project settings > Your apps > Web (</>) ile alınan 7 değeri
-      aşağıdaki FIREBASE_CONFIG içine yapıştır.
+   2) Authentication > Sign-in method > "Email/Password" sağlayıcısını
+      ETKİNLEŞTİR (Enable).
+   3) Realtime Database > Rules kısmına, ayrıca paylaştığım
+      firebase-security-rules.json içeriğini yapıştır ve Publish et.
 ================================================================ */
 
 const FIREBASE_CONFIG = {
@@ -25,15 +40,19 @@ const FIREBASE_CONFIG = {
   appId: "1:1002199445271:web:2c6620ff1db498c4679152"
 };
 
+const FAKE_EMAIL_DOMAIN = '@dilkartlari-user.app';
+
 function initLeaderboard(){
   try{
     const isConfigured = FIREBASE_CONFIG.apiKey && FIREBASE_CONFIG.apiKey.indexOf('BURAYA_YAPISTIR') === -1;
     let db = null;
+    let authSvc = null;
 
     if(isConfigured && typeof firebase !== 'undefined'){
       try{
         firebase.initializeApp(FIREBASE_CONFIG);
         db = firebase.database();
+        authSvc = firebase.auth();
       }catch(e){ console.warn('Firebase başlatılamadı:', e); }
     } else if(!isConfigured){
       console.warn('Liderlik tablosu: FIREBASE_CONFIG henüz doldurulmadı.');
@@ -41,42 +60,132 @@ function initLeaderboard(){
       console.warn('Liderlik tablosu: Firebase SDK yüklenemedi (script src hatası olabilir).');
     }
 
-    /* ---------------- İSİM YÖNETİMİ ---------------- */
-    const NAME_KEY = 'lb_user_name';
-    function getStoredName(){ try{ return localStorage.getItem(NAME_KEY) || ''; }catch(e){ return ''; } }
-    function setStoredName(n){ try{ localStorage.setItem(NAME_KEY, n); }catch(e){} }
-    function sanitizeKey(name){
-      return name.trim().toLowerCase().replace(/\s+/g, '_').slice(0,20).replace(/[.#$/\[\]]/g, '_');
+    /* ---------------- KULLANICI ADI / ANAHTAR YARDIMCILARI ---------------- */
+    function sanitizeUsername(name){
+      return String(name||'').trim().toLowerCase()
+        .replace(/\s+/g,'_')
+        .replace(/[^a-z0-9_.]/g,'')
+        .slice(0,30);
     }
-    // progress.js da AYNI anahtar üretimini kullanmak zorunda (aksi halde
-    // ilerleme verisi farklı bir kullanıcı anahtarına yazılır). Fonksiyonu
-    // dışa açıyoruz ki tek bir doğruluk kaynağı olsun.
-    window.LB_sanitizeKey = sanitizeKey;
+    // Eski (isim tabanlı) anahtar üretimi — sadece göç (migration) amaçlı.
+    function legacyKey(name){
+      return String(name||'').trim().toLowerCase().replace(/\s+/g,'_').slice(0,20).replace(/[.#$/\[\]]/g, '_');
+    }
 
+    let currentUid = null;
+    let currentName = '';
+
+    // progress.js hâlâ window.LB_sanitizeKey(name) çağırıyor; artık isimden
+    // bağımsız olarak DAİMA güncel UID'yi döndürüyoruz (tek doğruluk kaynağı).
+    window.LB_sanitizeKey = function(name){
+      return currentUid || sanitizeUsername(name);
+    };
+
+    /* ---------------- GİRİŞ FORMU (isim + şifre) ---------------- */
     const nameOverlay = document.getElementById('nameOverlay');
     const nameInput = document.getElementById('nameInput');
+    const passwordInput = document.getElementById('passwordInput');
     const nameSubmit = document.getElementById('nameSubmit');
+    const loginErrorEl = document.getElementById('loginError');
 
     function showNameModal(){ if(nameOverlay) nameOverlay.classList.add('open'); }
     function hideNameModal(){ if(nameOverlay) nameOverlay.classList.remove('open'); }
+    function showLoginError(msg){ if(loginErrorEl) loginErrorEl.textContent = msg || ''; }
+    function setSubmitLoading(loading){
+      if(!nameSubmit) return;
+      nameSubmit.disabled = loading;
+      nameSubmit.textContent = loading ? 'Kontrol ediliyor…' : 'Başla';
+    }
 
-    if(nameSubmit && nameInput){
-      nameSubmit.onclick = () => {
-        const name = nameInput.value.trim();
-        if(!name){ nameInput.focus(); return; }
-        setStoredName(name);
-        hideNameModal();
-        startTracking(name);
-      };
+    async function migrateLegacyIfExists(oldKey, uid, displayName){
+      if(!db || !oldKey) return;
+      try{
+        const progSnap = await db.ref('progress/'+oldKey).once('value');
+        if(progSnap.exists()){
+          const uidProgSnap = await db.ref('progress/'+uid).once('value');
+          if(!uidProgSnap.exists()){
+            await db.ref('progress/'+uid).set(progSnap.val());
+          }
+        }
+      }catch(e){}
+      try{
+        const lbSnap = await db.ref('leaderboard/'+oldKey).once('value');
+        if(lbSnap.exists()){
+          const uidLbSnap = await db.ref('leaderboard/'+uid).once('value');
+          if(!uidLbSnap.exists()){
+            const val = lbSnap.val();
+            if(val && typeof val === 'object') val.name = displayName;
+            await db.ref('leaderboard/'+uid).set(val);
+          }
+        }
+      }catch(e){}
+    }
+
+    async function handleLoginSubmit(){
+      const rawName = nameInput ? nameInput.value : '';
+      const password = passwordInput ? passwordInput.value : '';
+      const uname = sanitizeUsername(rawName);
+      const displayName = String(rawName||'').trim();
+
+      if(!displayName){ showLoginError('Lütfen bir kullanıcı adı yaz.'); return; }
+      if(!uname){ showLoginError('Kullanıcı adında en az bir harf/rakam olmalı.'); return; }
+      if(!password || password.length < 6){ showLoginError('Şifre en az 6 karakter olmalı.'); return; }
+      if(!authSvc){ showLoginError('Bağlantı kurulamadı, lütfen tekrar dene.'); return; }
+
+      showLoginError('');
+      setSubmitLoading(true);
+      const email = uname + FAKE_EMAIL_DOMAIN;
+
+      try{
+        const cred = await authSvc.createUserWithEmailAndPassword(email, password);
+        try{ await cred.user.updateProfile({ displayName: displayName }); }catch(e){}
+        await migrateLegacyIfExists(legacyKey(displayName), cred.user.uid, displayName);
+        onAuthSuccess(cred.user.uid, displayName);
+      }catch(err){
+        if(err && err.code === 'auth/email-already-in-use'){
+          try{
+            const cred2 = await authSvc.signInWithEmailAndPassword(email, password);
+            const dn = cred2.user.displayName || displayName;
+            onAuthSuccess(cred2.user.uid, dn);
+          }catch(err2){
+            setSubmitLoading(false);
+            showLoginError('Bu kullanıcı adı zaten alınmış ve şifre yanlış. Lütfen doğru şifreyi gir.');
+          }
+        } else if(err && err.code === 'auth/weak-password'){
+          setSubmitLoading(false);
+          showLoginError('Şifre çok zayıf, en az 6 karakter olmalı.');
+        } else if(err && err.code === 'auth/invalid-email'){
+          setSubmitLoading(false);
+          showLoginError('Kullanıcı adında geçersiz karakterler var, sadece harf/rakam kullan.');
+        } else {
+          setSubmitLoading(false);
+          showLoginError('Bir hata oluştu, lütfen tekrar dene.');
+        }
+      }
+    }
+
+    if(nameSubmit){
+      nameSubmit.onclick = handleLoginSubmit;
+    }
+    if(passwordInput){
+      passwordInput.addEventListener('keydown', (e) => { if(e.key === 'Enter') handleLoginSubmit(); });
+    }
+    if(nameInput){
       nameInput.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter') nameSubmit.click();
+        if(e.key === 'Enter'){ if(passwordInput) passwordInput.focus(); }
       });
-    } else {
-      console.warn('Liderlik tablosu: isim formu elementleri bulunamadı.');
+    }
+    if(!nameSubmit || !nameInput){
+      console.warn('Liderlik tablosu: giriş formu elementleri bulunamadı.');
+    }
+
+    function onAuthSuccess(uid, displayName){
+      setSubmitLoading(false);
+      hideNameModal();
+      startTrackingWithUid(uid, displayName);
     }
 
     /* ---------------- SÜRE TAKİBİ (aktiflik bazlı, hile önleyici) ---------------- */
-    let currentName = '';
     let heartbeatTimer = null;
     let creditedSeconds = 0;
     let activeAccumulated = 0;
@@ -104,45 +213,11 @@ function initLeaderboard(){
       return (Date.now() - lastActivity) >= IDLE_MS;
     }
 
-    function legacyKey(name){
-      return name.trim().slice(0,20).replace(/[.#$/\[\]]/g, '_');
-    }
-
-    function migrateLegacyIfNeeded(name){
-      if(!db) return;
-      const newKey = sanitizeKey(name);
-      const oldKey = legacyKey(name);
-      if(!newKey || !oldKey || newKey === oldKey) return;
-      const newRef = db.ref('leaderboard/' + newKey);
-      const oldRef = db.ref('leaderboard/' + oldKey);
-      oldRef.once('value').then((oldSnap) => {
-        const oldVal = oldSnap.val();
-        const oldSeconds = oldVal && typeof oldVal.totalSeconds === 'number' ? oldVal.totalSeconds : 0;
-        if(oldSeconds <= 0){
-          return;
-        }
-        newRef.once('value').then((newSnap) => {
-          const newVal = newSnap.val();
-          const newHasData = newVal && typeof newVal.totalSeconds === 'number' && newVal.totalSeconds > 0;
-          if(!newHasData){
-            newRef.transaction((current) => {
-              const prev = current && typeof current === 'object' ? current : { name: name, totalSeconds: 0 };
-              return { name: name, totalSeconds: (prev.totalSeconds || 0) + oldSeconds, lastSeen: Date.now() };
-            }).then(() => {
-              oldRef.remove().catch(()=>{});
-            });
-          } else {
-            oldRef.remove().catch(()=>{});
-          }
-        }).catch(()=>{});
-      }).catch(()=>{});
-    }
-
-    function startTracking(name){
+    function startTrackingWithUid(uid, name){
+      currentUid = uid;
       currentName = name;
-      migrateLegacyIfNeeded(name);
-      listenOwnProfile(name);
-      // progress.js (kişisel öğrenme modu) ismin hazır olduğu anı bekliyor;
+      listenOwnProfile(uid, name);
+      // progress.js (kişisel öğrenme modu) UID'nin hazır olduğu anı bekliyor;
       // burada haber veriyoruz ki kendi Firebase dinleyicilerini kursun.
       if(window.LB_onNameReady){
         try{ window.LB_onNameReady(name); }catch(e){}
@@ -152,16 +227,14 @@ function initLeaderboard(){
       heartbeatTimer = setInterval(flushElapsed, FLUSH_MS);
     }
 
-    function listenOwnProfile(name){
+    function listenOwnProfile(uid, name){
       const el = document.getElementById('profileTimer');
       if(!el) return;
       if(!db){
         el.textContent = `👤 ${name} — profil henüz bağlanmadı`;
         return;
       }
-      const key = sanitizeKey(name);
-      if(!key) return;
-      db.ref('leaderboard/' + key).on('value', (snap) => {
+      db.ref('leaderboard/' + uid).on('value', (snap) => {
         const val = snap.val();
         const total = val && typeof val.totalSeconds === 'number' ? val.totalSeconds : 0;
         el.textContent = `👤 ${name} — Toplam süren: ${fmtTime(total)}`;
@@ -170,26 +243,24 @@ function initLeaderboard(){
 
     function flushElapsed(useBeacon){
       tickActive();
-      if(!currentName) return;
+      if(!currentUid) return;
       const delta = activeAccumulated - creditedSeconds;
       if(delta >= 0.5){
-        addSeconds(currentName, delta, useBeacon);
+        addSeconds(currentUid, currentName, delta, useBeacon);
         creditedSeconds = activeAccumulated;
       }
     }
 
-    function addSeconds(name, seconds, useBeacon){
-      if(!name) return;
-      const key = sanitizeKey(name);
-      if(!key) return;
+    function addSeconds(uid, name, seconds, useBeacon){
+      if(!uid) return;
       if(useBeacon && FIREBASE_CONFIG.databaseURL && FIREBASE_CONFIG.databaseURL.indexOf('BURAYA_YAPISTIR') === -1){
         try{
-          const url = FIREBASE_CONFIG.databaseURL.replace(/\/$/, '') + '/leaderboard/' + key + '/lastFlushAttempt.json';
+          const url = FIREBASE_CONFIG.databaseURL.replace(/\/$/, '') + '/leaderboard/' + uid + '/lastFlushAttempt.json';
           fetch(url, { method:'PUT', body: JSON.stringify(Date.now()), keepalive:true }).catch(()=>{});
         }catch(e){}
       }
       if(!db) return;
-      const ref = db.ref('leaderboard/' + key);
+      const ref = db.ref('leaderboard/' + uid);
       ref.transaction((current) => {
         const prev = current && typeof current === 'object' ? current : { name: name, totalSeconds: 0 };
         return { name: name, totalSeconds: (prev.totalSeconds || 0) + seconds, lastSeen: Date.now() };
@@ -235,11 +306,12 @@ function initLeaderboard(){
       list.innerHTML = '';
       entries.forEach((e, i) => {
         const row = document.createElement('div');
-        row.className = 'lb-row' + (e.name === currentName ? ' me' : '');
+        const isMe = e.uid === currentUid;
+        row.className = 'lb-row' + (isMe ? ' me' : '');
         const rankDisplay = MEDALS[i] || (i+1);
         row.innerHTML = `
           <div class="lb-rank">${rankDisplay}</div>
-          <div class="lb-name">${escapeHtml(e.name)}${e.name===currentName ? ' (sen)' : ''}</div>
+          <div class="lb-name">${escapeHtml(e.name)}${isMe ? ' (sen)' : ''}</div>
           <div class="lb-time">${fmtTime(e.totalSeconds)}</div>`;
         list.appendChild(row);
       });
@@ -249,8 +321,9 @@ function initLeaderboard(){
       if(!db){ renderLeaderboard([]); return; }
       db.ref('leaderboard').on('value', (snap) => {
         const val = snap.val() || {};
-        const entries = Object.values(val)
-          .filter(v => v && v.name)
+        const entries = Object.entries(val)
+          .filter(([k, v]) => v && v.name)
+          .map(([k, v]) => ({ uid: k, name: v.name, totalSeconds: v.totalSeconds }))
           .sort((a,b) => (b.totalSeconds||0) - (a.totalSeconds||0))
           .slice(0, 10);
         renderLeaderboard(entries);
@@ -263,28 +336,25 @@ function initLeaderboard(){
     /* ---------------- BAŞLAT ---------------- */
     listenLeaderboard();
 
-    const existing = getStoredName();
-    if(existing){
-      startTracking(existing);
+    if(authSvc){
+      authSvc.onAuthStateChanged((user) => {
+        if(user){
+          const dn = user.displayName || 'Kullanıcı';
+          startTrackingWithUid(user.uid, dn);
+        }
+      });
     }
 
     window.LB_checkName = function(){
-      if(!getStoredName()){
-        showNameModal();
-      }
+      if(!currentUid){ showNameModal(); }
     };
-    window.LB_startTracking = startTracking;
     window.LB_getActiveSeconds = () => activeAccumulated;
     window.LB_isIdle = isIdleNow;
-    // progress.js için ek dışa açımlar: aynı Firebase app/db örneğini ve
-    // güncel kullanıcı adını tekrar kullanabilsin (yeni bir Firebase app
-    // başlatmaya çalışıp "already exists" hatası almasın diye).
     window.LB_getDb = () => db;
-    window.LB_getUserName = () => currentName || getStoredName();
+    window.LB_getUserName = () => currentName;
     window.LB_getTotalSeconds = (name, cb) => {
-      if(!db){ cb(0); return; }
-      const key = sanitizeKey(name);
-      db.ref('leaderboard/' + key).once('value').then(snap=>{
+      if(!db || !currentUid){ cb(0); return; }
+      db.ref('leaderboard/' + currentUid).once('value').then(snap=>{
         const val = snap.val();
         cb(val && typeof val.totalSeconds === 'number' ? val.totalSeconds : 0);
       }).catch(()=>cb(0));
