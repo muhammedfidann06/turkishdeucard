@@ -142,14 +142,22 @@ function initLeaderboard(){
         await migrateLegacyIfExists(legacyKey(displayName), cred.user.uid, displayName);
         onAuthSuccess(cred.user.uid, displayName);
       }catch(err){
+        console.error('Giriş hatası:', err && err.code, err && err.message);
         if(err && err.code === 'auth/email-already-in-use'){
           try{
             const cred2 = await authSvc.signInWithEmailAndPassword(email, password);
             const dn = cred2.user.displayName || displayName;
             onAuthSuccess(cred2.user.uid, dn);
           }catch(err2){
+            console.error('Giriş hatası (signIn):', err2 && err2.code, err2 && err2.message);
             setSubmitLoading(false);
-            showLoginError('Bu kullanıcı adı zaten alınmış ve şifre yanlış. Lütfen doğru şifreyi gir.');
+            if(err2 && (err2.code === 'auth/wrong-password' || err2.code === 'auth/invalid-credential')){
+              showLoginError('Bu kullanıcı adı zaten alınmış ve şifre yanlış. Lütfen doğru şifreyi gir.');
+            } else if(err2 && err2.code === 'auth/too-many-requests'){
+              showLoginError('Çok fazla yanlış deneme yapıldı. Biraz sonra tekrar dene.');
+            } else {
+              showLoginError('Giriş başarısız (' + (err2 && err2.code || 'bilinmeyen hata') + ').');
+            }
           }
         } else if(err && err.code === 'auth/weak-password'){
           setSubmitLoading(false);
@@ -157,9 +165,15 @@ function initLeaderboard(){
         } else if(err && err.code === 'auth/invalid-email'){
           setSubmitLoading(false);
           showLoginError('Kullanıcı adında geçersiz karakterler var, sadece harf/rakam kullan.');
+        } else if(err && (err.code === 'auth/operation-not-allowed' || err.code === 'auth/configuration-not-found')){
+          setSubmitLoading(false);
+          showLoginError('Giriş sistemi henüz etkin değil: Firebase Console > Authentication > Sign-in method kısmından "Email/Password" sağlayıcısını etkinleştirmen gerekiyor.');
+        } else if(err && err.code === 'auth/network-request-failed'){
+          setSubmitLoading(false);
+          showLoginError('İnternet bağlantısı sorunu, lütfen tekrar dene.');
         } else {
           setSubmitLoading(false);
-          showLoginError('Bir hata oluştu, lütfen tekrar dene.');
+          showLoginError('Hata: ' + (err && err.code || (err && err.message) || 'bilinmeyen hata'));
         }
       }
     }
