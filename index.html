@@ -34,6 +34,7 @@
     --gold:#ffd23b;
     --green:#3dffa0;
     --red:#ff3b5c;
+    --lime:#c9ff3e;
     --text:#eef4ff;
     --muted:#8291b3;
     --good:#3dffa0;
@@ -165,9 +166,9 @@
     100%{opacity:.4;text-shadow:0 0 5px rgba(61,255,160,0.5),0 0 9px rgba(61,255,160,0.3);}
   }
 
-  .lang-box{display:flex;gap:8px;margin-bottom:14px;}
+  .lang-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;}
   .lang-opt{
-    flex:1;text-align:center;padding:12px 4px;border-radius:16px;cursor:pointer;
+    flex:1 1 27%;min-width:78px;text-align:center;padding:12px 4px;border-radius:16px;cursor:pointer;
     background:var(--panel);border:1px solid rgba(255,255,255,0.06);transition:all .2s ease;
   }
   .lang-opt .flag{font-size:20px;line-height:1;margin-bottom:4px;}
@@ -178,6 +179,12 @@
   .lang-opt.active[data-lang="en"] .lname{color:var(--cyan-soft);}
   .lang-opt.active[data-lang="ar"]{background:linear-gradient(135deg, rgba(41,224,122,0.24), rgba(255,210,59,0.12));border-color:rgba(41,224,122,0.6);box-shadow:0 0 16px rgba(41,224,122,0.25);}
   .lang-opt.active[data-lang="ar"] .lname{color:var(--green);}
+  .lang-opt.active[data-lang="fr"]{background:linear-gradient(135deg, rgba(255,95,184,0.24), rgba(155,123,255,0.12));border-color:rgba(255,95,184,0.6);box-shadow:0 0 16px rgba(255,95,184,0.25);}
+  .lang-opt.active[data-lang="fr"] .lname{color:var(--pink);}
+  .lang-opt.active[data-lang="es"]{background:linear-gradient(135deg, rgba(255,59,92,0.24), rgba(255,210,59,0.14));border-color:rgba(255,59,92,0.6);box-shadow:0 0 16px rgba(255,59,92,0.25);}
+  .lang-opt.active[data-lang="es"] .lname{color:var(--red);}
+  .lang-opt.active[data-lang="ru"]{background:linear-gradient(135deg, rgba(155,123,255,0.24), rgba(79,232,255,0.12));border-color:rgba(155,123,255,0.6);box-shadow:0 0 16px rgba(155,123,255,0.25);}
+  .lang-opt.active[data-lang="ru"] .lname{color:var(--violet);}
 
   .level-box{display:flex;gap:6px;background:rgba(255,255,255,0.03);border:1px solid rgba(79,232,255,0.18);border-radius:14px;padding:5px;margin-bottom:14px;}
   .level-opt{flex:1;text-align:center;padding:8px 0;border-radius:10px;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--muted);cursor:pointer;transition:all .2s ease;}
@@ -707,6 +714,9 @@
     <div class="lang-opt active" data-lang="de"><div class="flag">🇩🇪</div><div class="lname">Almanca</div></div>
     <div class="lang-opt" data-lang="en"><div class="flag">🇬🇧</div><div class="lname">İngilizce</div></div>
     <div class="lang-opt" data-lang="ar"><div class="flag">🇸🇦</div><div class="lname">Arapça</div></div>
+    <div class="lang-opt" data-lang="fr"><div class="flag">🇫🇷</div><div class="lname">Fransızca</div></div>
+    <div class="lang-opt" data-lang="es"><div class="flag">🇪🇸</div><div class="lname">İspanyolca</div></div>
+    <div class="lang-opt" data-lang="ru"><div class="flag">🇷🇺</div><div class="lname">Rusça</div></div>
   </div>
 
   <div class="level-box" id="levelBox"></div>
@@ -813,7 +823,7 @@
 
         <h3 class="info-h3">🌟 Öne Çıkan Özellikler</h3>
 
-        <h4 class="info-h4">1. 🇩🇪 🇬🇧 🇸🇦 Çoklu Dil ve Seviye Desteği</h4>
+        <h4 class="info-h4">1. 🇩🇪 🇬🇧 🇸🇦 🇫🇷 🇪🇸 🇷🇺 Çoklu Dil ve Seviye Desteği</h4>
         <p>Almanca, İngilizce ve Arapça: Farklı diller arasında tek tıkla geçiş yapabilirsiniz.</p>
         <p>CEFR Standartlarında Seviyeler: A1, A2, B1 ve B2 seviyelerine uygun olarak kategorize edilmiş kelime havuzu.</p>
         <p>Goethe Enstitüsü Uyumu: Almanca bölümünde sunulan kelimeler, Goethe sınav müfredatı ve standartları ile birebir uyumludur.</p>
@@ -869,7 +879,7 @@
         <p>Çıkan pencereye adınızı girerek başlayın. Bu sayede sitede geçirdiğiniz süre kaydedilir ve liderlik tablosundaki yerinizi alabilirsiniz.</p>
 
         <h4 class="info-h4">2. Dil ve Seviye Seçimi</h4>
-        <p>Üst menüden çalışmak istediğiniz dili (Almanca 🇩🇪, İngilizce 🇬🇧 veya Arapça 🇸🇦) seçin.</p>
+        <p>Üst menüden çalışmak istediğiniz dili (Almanca 🇩🇪, İngilizce 🇬🇧, Arapça 🇸🇦, Fransızca 🇫🇷, İspanyolca 🇪🇸 veya Rusça 🇷🇺) seçin.</p>
         <p>Hemen altındaki seviye kutusundan öğrenme düzeyinize göre A1, A2, B1, B2 veya tüm seviyeleri bir arada görmek için TÜMÜ seçeneğine tıklayın.</p>
 
         <h4 class="info-h4">3. Kategori İnceleme</h4>
@@ -919,6 +929,9 @@
 <script src="vocab-de.js"></script>
 <script src="vocab-en.js"></script>
 <script src="vocab-ar.js"></script>
+<script src="vocab-fr.js"></script>
+<script src="vocab-es.js"></script>
+<script src="vocab-ru.js"></script>
 <script src="leaderboard.js"></script>
 <script>
 /* ================================================================
@@ -947,13 +960,17 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 <script>
-/* Kelime verisi artık vocab-core.js / vocab-de.js / vocab-en.js / vocab-ar.js
-   dosyalarından yükleniyor (bkz. yukarıdaki <script src> etiketleri). */
+/* Kelime verisi artık vocab-core.js / vocab-de.js / vocab-en.js / vocab-ar.js /
+   vocab-fr.js / vocab-es.js / vocab-ru.js dosyalarından yükleniyor
+   (bkz. yukarıdaki <script src> etiketleri). fr/es/ru şu an boş iskelettir. */
 /* ======================= CONFIG ======================= */
 const LANGS = {
-  de:{ label:"Almanca", native:"Deutsch", levels:["A1","A2"], voice:"de-DE", dir:"ltr" },
+  de:{ label:"Almanca", native:"Deutsch", levels:["A1","A2","B1","B2"], voice:"de-DE", dir:"ltr" },
   en:{ label:"İngilizce", native:"English", levels:["A1","A2","B1","B2"], voice:"en-US", dir:"ltr" },
-  ar:{ label:"Arapça", native:"العربية", levels:["A1","A2","B1","B2"], voice:"ar-SA", dir:"rtl" }
+  ar:{ label:"Arapça", native:"العربية", levels:["A1","A2","B1","B2"], voice:"ar-SA", dir:"rtl" },
+  fr:{ label:"Fransızca", native:"Français", levels:["A1","A2","B1","B2"], voice:"fr-FR", dir:"ltr" },
+  es:{ label:"İspanyolca", native:"Español", levels:["A1","A2","B1","B2"], voice:"es-ES", dir:"ltr" },
+  ru:{ label:"Rusça", native:"Русский", levels:["A1","A2","B1","B2"], voice:"ru-RU", dir:"ltr" }
 };
 
 let activeLang = "de";
@@ -1373,7 +1390,7 @@ function colorSplit(sentence, word, c1, c2){
 /* ======================= RENDER: LANG / LEVEL / CHIPS ======================= */
 function renderLangPair(){
   const L = LANGS[activeLang];
-  const colorMap = { de:"var(--gold)", en:"var(--cyan-soft)", ar:"var(--green)" };
+  const colorMap = { de:"var(--gold)", en:"var(--cyan-soft)", ar:"var(--green)", fr:"var(--pink)", es:"var(--red)", ru:"var(--violet)" };
   document.getElementById('langPair').innerHTML =
     `<span class="a" style="color:${colorMap[activeLang]}">${L.native}</span> <span style="color:var(--muted)">⇄</span> <span class="a tr-flag-text">Türkçe</span>`;
 }
