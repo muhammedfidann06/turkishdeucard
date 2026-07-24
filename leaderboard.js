@@ -139,7 +139,6 @@ function initLeaderboard(){
       try{
         const cred = await authSvc.createUserWithEmailAndPassword(email, password);
         try{ await cred.user.updateProfile({ displayName: displayName }); }catch(e){}
-        await migrateLegacyIfExists(legacyKey(displayName), cred.user.uid, displayName);
         onAuthSuccess(cred.user.uid, displayName);
       }catch(err){
         console.error('Giriş hatası:', err && err.code, err && err.message);
@@ -227,10 +226,16 @@ function initLeaderboard(){
       return (Date.now() - lastActivity) >= IDLE_MS;
     }
 
-    function startTrackingWithUid(uid, name){
+    async function startTrackingWithUid(uid, name){
       currentUid = uid;
       currentName = name;
       listenOwnProfile(uid, name);
+      // Göçü SADECE ilk kayıtta değil, HER girişte tekrar dene — bu sayede
+      // güvenlik kuralları yeni yayınlandığında veya ilk göç bir sebeple
+      // başarısız olduğunda, hesap kendi kendini bir sonraki girişte düzeltir.
+      // migrateLegacyIfExists zaten "hedefte veri varsa dokunma" mantığında
+      // olduğu için tekrar tekrar çağrılması güvenlidir.
+      try{ await migrateLegacyIfExists(legacyKey(name), uid, name); }catch(e){}
       // progress.js (kişisel öğrenme modu) UID'nin hazır olduğu anı bekliyor;
       // burada haber veriyoruz ki kendi Firebase dinleyicilerini kursun.
       if(window.LB_onNameReady){
