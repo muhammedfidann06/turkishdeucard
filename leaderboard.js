@@ -106,6 +106,9 @@ function initLeaderboard(){
           if(!uidProgSnap.exists()){
             await db.ref('progress/'+uid).set(progSnap.val());
           }
+          // Eski kaydı sil — aksi halde aynı veri iki farklı anahtar altında
+          // (eski isim + yeni uid) tekrar tekrar var olmaya devam eder.
+          await db.ref('progress/'+oldKey).remove().catch(()=>{});
         }
       }catch(e){}
       try{
@@ -117,6 +120,8 @@ function initLeaderboard(){
             if(val && typeof val === 'object') val.name = displayName;
             await db.ref('leaderboard/'+uid).set(val);
           }
+          // Eski liderlik kaydını sil — çift görünmesin (ör. iki adet "M Hamza").
+          await db.ref('leaderboard/'+oldKey).remove().catch(()=>{});
         }
       }catch(e){}
     }
