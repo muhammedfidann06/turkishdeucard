@@ -270,6 +270,7 @@
   }
   .level-badge{position:absolute;top:14px;right:16px;font-size:10px;font-weight:800;letter-spacing:.05em;padding:3px 9px;border-radius:999px;background:rgba(79,232,255,0.18);color:var(--cyan-soft);border:1px solid rgba(79,232,255,0.45);}
   .speak-controls{position:absolute;top:12px;left:14px;display:flex;gap:6px;z-index:5;}
+  .speak-caption{position:absolute;top:40px;left:14px;z-index:5;font-size:9px;line-height:1.25;max-width:130px;color:var(--muted,#8291b3);opacity:.75;}
   .speak-icon-btn{
     width:30px;height:30px;border-radius:999px;font-size:14px;line-height:1;
     background:rgba(79,232,255,0.14);border:1px solid rgba(79,232,255,0.3);
@@ -757,6 +758,7 @@
             <button type="button" class="speak-icon-btn" id="rabbitBtn" title="Hızlı dinle">🐰</button>
             <button type="button" class="speak-icon-btn" id="turtleBtn" title="Yavaş dinle">🐢</button>
           </div>
+          <div class="speak-caption">(Dinlemek için İkisinden Birine Tıklayın)</div>
           <div class="tag" id="tagFront">Deutsch</div>
           <div class="word" id="frontWord">Hallo</div>
           <div class="pos" id="frontPos">ünlem</div>
@@ -793,6 +795,11 @@
     </div>
 
     <div class="options" id="options"></div>
+
+    <div class="controls">
+      <button class="ctrl" id="quizPrevBtn">Önceki</button>
+      <button class="ctrl primary" id="quizFinishBtn">Quizi Bitir</button>
+    </div>
   </div>
 
   <div id="doneView" class="done" style="display:none;">
@@ -986,6 +993,7 @@ let qIdx = 0;
 let score = 0;
 let answered = false;
 let mistakes = []; // QUIZ HATALARINI TUTACAĞIMIZ DİZİ
+let quizAnswers = []; // her soru indexine karşılık { opts, chosen, correct } - geri dönüp bakabilmek için
 
 /* ======================= TTS (best available system voice) ======================= */
 /* =========================================================
@@ -1583,6 +1591,7 @@ function restoreCardPosition(){
 function buildQuizDeck(){
   quizDeck = [...deck];
   mistakes = [];
+  quizAnswers = [];
   for(let i=quizDeck.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [quizDeck[i],quizDeck[j]]=[quizDeck[j],quizDeck[i]]; }
   qIdx = 0; score = 0; answered = false;
   const quizTabActive = document.getElementById('tabQuiz').classList.contains('active');
@@ -1596,6 +1605,7 @@ function renderQuiz(){
   const quizTabActive = document.getElementById('tabQuiz').classList.contains('active');
   if(quizDeck.length===0) return;
   if(qIdx >= quizDeck.length){
+    const answeredCount = quizAnswers.filter(a=>a).length;
     if(quizTabActive){
       document.getElementById('quizView').style.display = 'none';
       document.getElementById('doneView').style.display = 'block';
@@ -1606,7 +1616,7 @@ function renderQuiz(){
         mistakeBtn.style.display = 'none';
       }
     }
-    document.getElementById('finalScore').textContent = `${score} / ${quizDeck.length} doğru cevap`;
+    document.getElementById('finalScore').textContent = `${score} / ${answeredCount} doğru cevap`;
     return;
   }
   if(quizTabActive){
@@ -1614,7 +1624,6 @@ function renderQuiz(){
     document.getElementById('doneView').style.display = 'none';
     document.getElementById('mistakesView').style.display = 'none';
   }
-  answered = false;
   const v = quizDeck[qIdx];
   const qWordEl = document.getElementById('quizWord');
   qWordEl.textContent = v.w;
@@ -1624,6 +1633,31 @@ function renderQuiz(){
   document.getElementById('quizBar').style.width = `${((qIdx+1)/quizDeck.length)*100}%`;
   document.getElementById('scorePill').textContent = `${score} doğru`;
 
+  const prevBtnEl = document.getElementById('quizPrevBtn');
+  if(prevBtnEl) prevBtnEl.disabled = (qIdx===0);
+  const finishBtnEl = document.getElementById('quizFinishBtn');
+  if(finishBtnEl) finishBtnEl.disabled = (quizAnswers.filter(a=>a).length===0);
+
+  const optionsEl = document.getElementById('options');
+  optionsEl.innerHTML = '';
+
+  const existing = quizAnswers[qIdx];
+  if(existing){
+    // Daha önce cevaplanmış soru: sadece görüntüle, seçim değiştirilemez.
+    answered = true;
+    existing.opts.forEach(o=>{
+      const b = document.createElement('button');
+      b.className = 'opt';
+      b.textContent = o;
+      b.disabled = true;
+      if(o === existing.correct) b.classList.add('correct');
+      else if(o === existing.chosen) b.classList.add('wrong');
+      optionsEl.appendChild(b);
+    });
+    return;
+  }
+
+  answered = false;
   let opts = [v.tr];
   let pool = poolForLevel().filter(x => x.tr !== v.tr);
   if(pool.length < 3){
@@ -1633,18 +1667,16 @@ function renderQuiz(){
   opts = opts.concat(pool.slice(0,3).map(x=>x.tr));
   for(let i=opts.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [opts[i],opts[j]]=[opts[j],opts[i]]; }
 
-  const optionsEl = document.getElementById('options');
-  optionsEl.innerHTML = '';
   opts.forEach(o=>{
     const b = document.createElement('button');
     b.className = 'opt';
     b.textContent = o;
-    b.onclick = () => selectAnswer(o, v.tr, b);
+    b.onclick = () => selectAnswer(o, v.tr, b, opts);
     optionsEl.appendChild(b);
   });
 }
 
-function selectAnswer(chosen, correct, btnEl){
+function selectAnswer(chosen, correct, btnEl, opts){
   if(answered) return;
   answered = true;
   const v = quizDeck[qIdx];
@@ -1653,7 +1685,9 @@ function selectAnswer(chosen, correct, btnEl){
     if(b.textContent===correct) b.classList.add('correct');
     else if(b===btnEl) b.classList.add('wrong');
   });
-  
+
+  quizAnswers[qIdx] = { opts: opts.slice(), chosen: chosen, correct: correct };
+
   if(chosen===correct) {
     score++;
   } else {
@@ -1663,6 +1697,14 @@ function selectAnswer(chosen, correct, btnEl){
   document.getElementById('scorePill').textContent = `${score} doğru`;
   setTimeout(()=>{ qIdx++; renderQuiz(); }, 700);
 }
+
+document.getElementById('quizPrevBtn').onclick = () => {
+  if(qIdx > 0){ qIdx--; renderQuiz(); }
+};
+document.getElementById('quizFinishBtn').onclick = () => {
+  qIdx = quizDeck.length;
+  renderQuiz();
+};
 
 document.getElementById('restartBtn').onclick = buildQuizDeck;
 
