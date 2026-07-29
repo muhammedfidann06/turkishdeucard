@@ -404,7 +404,14 @@
       .pm-root .pm-word{font-size:27px;font-weight:700;font-family:Georgia,'Iowan Old Style',serif;color:#eef4ff;margin-bottom:6px;}
       .pm-root .pm-word-sub{font-size:12px;color:#8291b3;margin-bottom:8px;}
       .pm-root .pm-speak-row{display:flex;justify-content:center;gap:10px;margin:10px 0 4px;}
-      .pm-root .pm-speak-caption{text-align:center;font-size:10px;color:#8291b3;opacity:.8;margin-bottom:8px;}
+      .pm-root .pm-speak-caption{
+        text-align:center;margin-bottom:8px;
+        font-size:10.5px;font-weight:600;letter-spacing:.03em;
+        background:linear-gradient(90deg,#4fe8ff,#ff5fb8,#9b7bff);
+        -webkit-background-clip:text;background-clip:text;color:transparent;
+        filter:drop-shadow(0 0 4px rgba(155,123,255,0.35));
+        opacity:.85;
+      }
       .pm-root .pm-speak-btn{
         display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;font-size:19px;
         background:rgba(79,232,255,0.14);border:1px solid var(--pm-border);cursor:pointer;
@@ -661,7 +668,7 @@
       html += '<div class="pm-mode-tag">'+(flipped ? 'Türkçesi' : 'Yeni Kelime')+'</div>';
       html += '<div class="pm-word" dir="'+LANGS[v.lang].dir+'">'+(flipped ? escapeHtml(v.tr) : escapeHtml(v.w))+'</div>';
       html += '<div class="pm-word-sub">'+escapeHtml(v.pos||'')+'</div>';
-      html += '<div class="pm-speak-row"><div class="pm-speak-btn" id="pmRabbit" title="Hızlı dinle">🐰</div><div class="pm-speak-btn" id="pmTurtle" title="Yavaş dinle">🐢</div></div><div class="pm-speak-caption">(Dinlemek için İkisinden Birine Tıklayın)</div>';
+      html += '<div class="pm-speak-row"><div class="pm-speak-btn" id="pmRabbit" title="Hızlı dinle">🐰</div><div class="pm-speak-btn" id="pmTurtle" title="Yavaş dinle">🐢</div></div><div class="pm-speak-caption">Dinlemek İçin Tıkla</div>';
       html += '<div class="pm-word-sub" style="margin-top:10px;">Çevirmek için karta dokun</div>';
       html += '</div>';
       html += '<button class="pm-btn primary" id="pmNextCard">Sonraki Kelime</button>';
@@ -709,7 +716,7 @@
     const opts = shuffle([v.tr].concat(distractors.map(d=>d.tr)));
     const barHtml = '<div class="pm-session-bar"><span>Soru '+(quizIdx+1)+' / '+batch.length+'</span><span>Adim 2/3 - Anlam Testi</span></div><div class="pm-bar" style="margin-bottom:14px;"><div class="pm-bar-fill" style="width:'+Math.round((quizIdx/batch.length)*100)+'%"></div></div>';
     root.innerHTML = '<div class="pm-root">'+barHtml+
-      '<div class="pm-study-card" style="cursor:default;"><div class="pm-mode-tag">Bu kelimenin anlami nedir?</div><div class="pm-word" dir="'+LANGS[v.lang].dir+'">'+escapeHtml(v.w)+'</div><div class="pm-word-sub">'+escapeHtml(v.pos||'')+'</div><div class="pm-speak-row"><div class="pm-speak-btn" id="pmRabbit">🐰</div><div class="pm-speak-btn" id="pmTurtle">🐢</div></div></div><div class="pm-speak-caption">(Dinlemek için İkisinden Birine Tıklayın)</div>'+
+      '<div class="pm-study-card" style="cursor:default;"><div class="pm-mode-tag">Bu kelimenin anlami nedir?</div><div class="pm-word" dir="'+LANGS[v.lang].dir+'">'+escapeHtml(v.w)+'</div><div class="pm-word-sub">'+escapeHtml(v.pos||'')+'</div><div class="pm-speak-row"><div class="pm-speak-btn" id="pmRabbit">🐰</div><div class="pm-speak-btn" id="pmTurtle">🐢</div></div></div><div class="pm-speak-caption">Dinlemek İçin Tıkla</div>'+
       '<div class="pm-options" id="pmOptions"></div></div>';
     document.getElementById('pmRabbit').onclick = () => pmSpeak(v.w, LANGS[v.lang].voice, false);
     document.getElementById('pmTurtle').onclick = () => pmSpeak(v.w, LANGS[v.lang].voice, true);
@@ -745,7 +752,7 @@
     const opts = shuffle([v.tr].concat(distractors.map(d=>d.tr)));
     const barHtml = '<div class="pm-session-bar"><span>Soru '+(listenIdx+1)+' / '+batch.length+'</span><span>Adim 3/3 - Dinleme</span></div><div class="pm-bar" style="margin-bottom:14px;"><div class="pm-bar-fill" style="width:'+Math.round((listenIdx/batch.length)*100)+'%"></div></div>';
     root.innerHTML = '<div class="pm-root">'+barHtml+
-      '<div class="pm-study-card" style="cursor:default;"><div class="pm-mode-tag">🎧 Duydugun kelimenin anlami ne?</div><div class="pm-word" style="font-size:34px;">🎙️</div><div class="pm-speak-row"><div class="pm-speak-btn" id="pmRabbit" title="Hizli tekrar dinle">🐰</div><div class="pm-speak-btn" id="pmTurtle" title="Yavas tekrar dinle">🐢</div></div></div><div class="pm-speak-caption">(Dinlemek için İkisinden Birine Tıklayın)</div>'+
+      '<div class="pm-study-card" style="cursor:default;"><div class="pm-mode-tag">🎧 Duydugun kelimenin anlami ne?</div><div class="pm-word" style="font-size:34px;">🎙️</div><div class="pm-speak-row"><div class="pm-speak-btn" id="pmRabbit" title="Hizli tekrar dinle">🐰</div><div class="pm-speak-btn" id="pmTurtle" title="Yavas tekrar dinle">🐢</div></div></div><div class="pm-speak-caption">Dinlemek İçin Tıkla</div>'+
       '<div class="pm-options" id="pmOptions"></div></div>';
     const playFast = () => pmSpeak(v.w, LANGS[v.lang].voice, false);
     const playSlow = () => pmSpeak(v.w, LANGS[v.lang].voice, true);
@@ -866,7 +873,7 @@
     const opts = shuffle([v.tr].concat(distractors.map(d=>d.tr)));
     const barHtml = '<div class="pm-session-bar"><span>Genel Tekrar ('+reviewMode.group+')</span><span>'+(reviewMode.idx+1)+' / '+reviewMode.order.length+'</span></div><div class="pm-bar" style="margin-bottom:14px;"><div class="pm-bar-fill" style="width:'+Math.round((reviewMode.idx/reviewMode.order.length)*100)+'%"></div></div>';
     root.innerHTML = '<div class="pm-root">'+barHtml+
-      '<div class="pm-study-card" style="cursor:default;"><div class="pm-mode-tag">Bu kelimenin anlami nedir?</div><div class="pm-word" dir="'+LANGS[v.lang].dir+'">'+escapeHtml(v.w)+'</div><div class="pm-word-sub">'+escapeHtml(v.pos||'')+'</div><div class="pm-speak-row"><div class="pm-speak-btn" id="pmRabbit">🐰</div><div class="pm-speak-btn" id="pmTurtle">🐢</div></div></div><div class="pm-speak-caption">(Dinlemek için İkisinden Birine Tıklayın)</div>'+
+      '<div class="pm-study-card" style="cursor:default;"><div class="pm-mode-tag">Bu kelimenin anlami nedir?</div><div class="pm-word" dir="'+LANGS[v.lang].dir+'">'+escapeHtml(v.w)+'</div><div class="pm-word-sub">'+escapeHtml(v.pos||'')+'</div><div class="pm-speak-row"><div class="pm-speak-btn" id="pmRabbit">🐰</div><div class="pm-speak-btn" id="pmTurtle">🐢</div></div></div><div class="pm-speak-caption">Dinlemek İçin Tıkla</div>'+
       '<div class="pm-options" id="pmOptions"></div></div>';
     document.getElementById('pmRabbit').onclick = () => pmSpeak(v.w, LANGS[v.lang].voice, false);
     document.getElementById('pmTurtle').onclick = () => pmSpeak(v.w, LANGS[v.lang].voice, true);
