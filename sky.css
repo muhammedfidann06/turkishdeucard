@@ -820,3 +820,152 @@ html.has-bg #grade{
 }
 html.has-bg #grain{opacity:.018;}
 html.has-bg body{background:#05070f;}
+
+/* ============================================================================
+   BÖLÜM 4 — DAHA ŞEFFAF CAM + NEON KENARLAR
+
+   İki ayar tek yerden yapılabilsin diye değişkenlere bağlandı.
+   İstediğin kadar oynayabilirsin:
+
+     --glass      : cam tonunun koyuluğu (0 = tamamen şeffaf, 1 = kapalı)
+     --neon       : kenar parlaklığı (0 = kapalı, 1 = güçlü)
+
+   Not: şeffaflık artarken backdrop-filter (bulanıklık) bilerek korundu.
+   Yazıyı okunur kılan şey rengin koyuluğu değil, arkadaki görüntünün
+   bulanıklaşmasıdır; ton inceltilip bulanıklık kalınca kart hem daha
+   şeffaf hem de okunur olur.
+   ========================================================================== */
+:root{
+  --glass:.30;              /* eskiden ~.55 idi */
+  --glass-2:.22;
+  --neon:.55;
+  --neon-rgb:130,205,255;
+}
+
+/* ------------------------------------------------------ cam yüzeyler ince */
+.lang-opt, .tab, .level-opt, .chip, .cat-trigger{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.055) 0%, rgba(255,255,255,.012) 44%, rgba(255,255,255,0) 100%),
+    linear-gradient(160deg, rgba(18,26,58,var(--glass)), rgba(8,12,32,var(--glass-2)));
+  -webkit-backdrop-filter:blur(20px) saturate(150%);
+  backdrop-filter:blur(20px) saturate(150%);
+  border-color:rgba(var(--neon-rgb), calc(var(--neon) * .34));
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.07),
+    inset 0 1px 0 rgba(255,255,255,.14),
+    0 0 0 1px rgba(var(--neon-rgb), calc(var(--neon) * .16)),
+    0 0 14px -3px rgba(var(--neon-rgb), calc(var(--neon) * .40)),
+    0 12px 30px -16px rgba(0,0,0,.7);
+}
+
+/* ---------------------------------------------------------- NEON KÖŞELER
+   Dört köşeye yerleştirilen küçük ışık odakları. Kenar boyunca sönümlenir,
+   böylece çerçeve değil "köşelerden sızan ışık" hissi verir. */
+.lang-opt::after, .quiz-card::before, .opt::before{
+  content:'';
+  position:absolute; inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  z-index:2;
+  background:
+    radial-gradient(circle at 0% 0%,     rgba(var(--neon-rgb), calc(var(--neon) * .55)), transparent 22%),
+    radial-gradient(circle at 100% 0%,   rgba(190,160,255, calc(var(--neon) * .50)), transparent 22%),
+    radial-gradient(circle at 100% 100%, rgba(var(--neon-rgb), calc(var(--neon) * .45)), transparent 22%),
+    radial-gradient(circle at 0% 100%,   rgba(190,160,255, calc(var(--neon) * .40)), transparent 22%);
+  opacity:.75;
+  transition:opacity var(--dur-2) var(--ease-out);
+}
+.lang-opt:hover::after{opacity:1;}
+.lang-opt.active::after{
+  opacity:1;
+  animation:cornerBreath 6s var(--ease-out) infinite;
+}
+@keyframes cornerBreath{
+  0%,100%{opacity:.78;}
+  50%    {opacity:1;}
+}
+
+/* seçili kart: renkli aura korunur, üstüne neon kenar eklenir */
+.lang-opt.active[data-lang]{
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.10),
+    inset 0 1px 0 rgba(255,255,255,.22),
+    0 0 0 1px rgba(255,255,255,.10),
+    0 0 16px -2px var(--aura),
+    0 18px 40px -18px var(--aura),
+    0 8px 22px -12px var(--aura);
+}
+
+/* --------------------------------------------------------- kelime kartı */
+.face{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.014) 40%, rgba(255,255,255,0) 100%),
+    linear-gradient(155deg, rgba(22,32,70,.34), rgba(8,12,30,.26));
+  -webkit-backdrop-filter:blur(26px) saturate(165%);
+  backdrop-filter:blur(26px) saturate(165%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.08),
+    inset 0 1px 0 rgba(255,255,255,.18),
+    0 0 0 1px rgba(var(--neon-rgb), calc(var(--neon) * .22)),
+    0 0 22px -4px rgba(var(--neon-rgb), calc(var(--neon) * .45)),
+    0 30px 60px -32px rgba(0,0,0,.85);
+}
+/* üst ışık çizgisi + dört köşe parıltısı tek katmanda */
+.face::after{
+  content:'';
+  position:absolute; inset:0;
+  /* Bölüm 1'deki eski kural burada height:1px bırakıyordu; sıfırlanmazsa
+     köşe parıltıları 1 piksellik bir şeride sıkışırdı. */
+  width:auto; height:auto;
+  border-radius:inherit;
+  pointer-events:none;
+  z-index:2;
+  background:
+    linear-gradient(90deg, transparent, rgba(210,235,255,.5), transparent) no-repeat 50% 0 / 72% 1px,
+    radial-gradient(circle at 0% 0%,     rgba(var(--neon-rgb), calc(var(--neon) * .5)), transparent 20%),
+    radial-gradient(circle at 100% 0%,   rgba(190,160,255, calc(var(--neon) * .45)), transparent 20%),
+    radial-gradient(circle at 100% 100%, rgba(var(--neon-rgb), calc(var(--neon) * .40)), transparent 20%),
+    radial-gradient(circle at 0% 100%,   rgba(190,160,255, calc(var(--neon) * .36)), transparent 20%);
+}
+
+/* ------------------------------------------------------- quiz ve şıklar */
+.quiz-card{
+  position:relative;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.012) 42%, rgba(255,255,255,0)),
+    linear-gradient(155deg, rgba(22,32,70,.32), rgba(8,12,30,.24));
+  -webkit-backdrop-filter:blur(22px) saturate(160%);
+  backdrop-filter:blur(22px) saturate(160%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.07),
+    inset 0 1px 0 rgba(255,255,255,.16),
+    0 0 0 1px rgba(var(--neon-rgb), calc(var(--neon) * .20)),
+    0 0 20px -4px rgba(var(--neon-rgb), calc(var(--neon) * .42)),
+    0 26px 54px -30px rgba(0,0,0,.85);
+}
+.opt{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.01)),
+    linear-gradient(160deg, rgba(18,26,58,.28), rgba(8,12,32,.20));
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  backdrop-filter:blur(18px) saturate(150%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.06),
+    inset 0 1px 0 rgba(255,255,255,.12),
+    0 0 12px -4px rgba(var(--neon-rgb), calc(var(--neon) * .35)),
+    0 10px 26px -18px rgba(0,0,0,.75);
+}
+/* doğru/yanlış geri bildiriminde köşe neonu araya girmesin */
+.opt.correct::before, .opt.wrong::before{opacity:0;}
+
+/* Şeffaflık arttığı için yazıyı bir tık daha ayır */
+.word, .quiz-word{text-shadow:0 2px 24px rgba(0,0,0,.55), 0 0 26px rgba(140,190,255,.30);}
+.opt, .lang-opt .lname{text-shadow:0 1px 6px rgba(0,0,0,.45);}
+
+/* Sahne görseli varken arka plan daha renkli olduğundan camı bir miktar
+   toparla — yazı her koşulda okunur kalsın. */
+html.has-bg{--glass:.36; --glass-2:.28;}
+
+@media (prefers-reduced-motion:reduce){
+  .lang-opt.active::after{animation:none !important;}
+}
