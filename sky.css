@@ -836,9 +836,9 @@ html.has-bg body{background:#05070f;}
    şeffaf hem de okunur olur.
    ========================================================================== */
 :root{
-  --glass:.30;              /* eskiden ~.55 idi */
-  --glass-2:.22;
-  --neon:.55;
+  --glass:.10;              /* eskiden ~.55 idi */
+  --glass-2:.15;
+  --neon:.99;
   --neon-rgb:130,205,255;
 }
 
