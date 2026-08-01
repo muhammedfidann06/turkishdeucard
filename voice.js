@@ -35,7 +35,13 @@
      nokta eklenir; motor tek başına duran kelimeyi aceleyle kesmek yerine
      tamamlanmış bir ifade gibi bitirir.
      ==================================================================== */
-  var SLOW_RATE = 0.70;
+  /* Kullanıcı isteği üzerine bir kademe daha yavaşlatıldı (0.70 → 0.58).
+     0.5'in altına inmedim çünkü orada çoğu motor sesi gerçekten uzatmak
+     yerine örnekleri tekrarlamaya başlıyor ve titrek/anlaşılmaz çıkıyor —
+     bu tam da bir önceki şikâyetin sebebiydi. 0.58 hâlâ belirgin şekilde
+     yavaş ama net kalan en düşük nokta. Cihazında hâlâ hızlı geliyorsa
+     bu satırı 0.5'e kadar indirebilirsin; altına inmeyi önermem. */
+  var SLOW_RATE = 0.58;
   var NORMAL_RATE = 0.92;      /* orijinal değer — değiştirilmedi */
 
   var keepAlive = null;

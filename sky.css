@@ -1290,3 +1290,49 @@ html.has-bg{--glass:.36; --glass-2:.28;}
   .face{animation:none; box-shadow:var(--shadow-l), var(--glow);}
   .tab::after, .level-opt::after, .chip::after, .cat-trigger::after, .ctrl::after{display:none;}
 }
+
+/* ============================================================================
+   BÖLÜM 7 — GERÇEK ŞEFFAF CAM (buğulu değil)
+
+   Önceki bölümlerde kart RENGİ neredeyse sıfıra indirilmişti ama
+   backdrop-filter'daki blur(11-16px) + saturate(%118-165) hâlâ arkadaki
+   sahneyi "buğuluyordu" — sis camı gibi. Kullanıcının istediği şey temiz
+   bir cam levha: arkasındakini net görebildiğin, sadece ince bir kenarı
+   ve hafif bir yüzey hissi olan bir yüzey.
+
+   Çözüm: bulanıklığı neredeyse kaldırdık (2-4px — sadece canvas
+   pikselinin/grain'in sertliğini kırar), doygunluk artışını sıfırladık.
+   "Cam" kimliği artık renk veya bulanıklıktan değil, ince kenardan
+   (border), kenar ışığından (--glow) ve gölgeden geliyor.
+
+   Metin okunabilirliği: kartın arkası artık neredeyse çıplak olduğu için
+   text-shadow biraz güçlendirildi — kontrastı koruyan tek katman bu.
+   ========================================================================== */
+
+/* Küçük, tekil kartlar: TAMAMEN temiz cam. */
+.lang-opt, .tab, .level-opt, .chip, .cat-trigger, .opt, .quiz-card,
+.ctrl, .face,
+#personalView .pm-root .pm-card,
+#personalView .pm-root .pm-study-card,
+#personalView .pm-root .pm-stat-box,
+#personalView .pm-root button.pm-btn,
+#personalView .pm-root .pm-pill{
+  -webkit-backdrop-filter:blur(3px) saturate(104%);
+  backdrop-filter:blur(3px) saturate(104%);
+}
+
+/* Tam ekranı kaplayan sayfalar (kategori paneli, giriş kartı): bu ikisi
+   yoğun metin barındırdığı için bulanıklık biraz daha yüksek tutuldu —
+   yine de eskisinin (14-26px) çok altında, "buğulu" değil "hafif cam". */
+.cat-panel, .name-card{
+  -webkit-backdrop-filter:blur(6px) saturate(108%);
+  backdrop-filter:blur(6px) saturate(108%);
+}
+
+/* Okunabilirlik güvencesi: kart arkası artık neredeyse çıplak olduğu
+   için metnin arkasına biraz daha güçlü, doğal bir gölge eklendi. Bu bir
+   "opaklık" değil — arka planı kapatmaz, sadece harflerin kenarını
+   karartır. */
+.word, .quiz-word{text-shadow:0 2px 18px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.9), 0 0 24px rgba(140,190,255,.22);}
+.opt, .lang-opt .lname, .chip, .tab, .level-opt, .ctrl{text-shadow:0 1px 5px rgba(0,0,0,.65), 0 1px 1px rgba(0,0,0,.8);}
+#personalView .pm-root{text-shadow:0 1px 4px rgba(0,0,0,.55);}
