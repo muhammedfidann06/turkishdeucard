@@ -1,0 +1,325 @@
+/* ============================================================================
+   theme.css — "Ay Işığı Kıyısı"
+
+   sky.css'ten SONRA yüklenir. Mevcut arayüzü (tipografi, cam paneller, altın
+   seçim, cyan vurgular) korur; sahneyi ve birkaç etkileşimi değiştirir.
+
+   Katman sırası:
+     #scene-bg (0)  manzara fotoğrafı
+     #grade    (1)  köşe karartma
+     #sky-fx   (2)  yıldızlar · kayan yıldız · ateş böcekleri   ← ARKA PLAN
+     .flutter  (2)  kelebekler                                   ← ARKA PLAN
+     #grain    (2)  film taneciği
+     #fg-desk  (2)  kahve · açık defter · kitap yığını
+     .app      (3)  arayüz — her şeyin üstünde
+   ========================================================================== */
+
+:root{
+  --panel:rgba(13,17,34,0.34);
+  --panel-2:rgba(19,26,51,0.38);
+}
+
+/* ----------------------------------------------------------------- sahne */
+html{background:#040a1e;}
+
+body{
+  background:#040a1e !important;
+  padding-bottom:170px !important;
+}
+
+#scene-bg{
+  position:fixed; inset:0; z-index:0;
+  pointer-events:none;
+  background:#040a1e url("scene-bg.jpg") center top / cover no-repeat;
+  transform:scale(1.06);
+  will-change:transform;
+}
+#scene-bg::after{
+  content:''; position:absolute; inset:0;
+  background:
+    linear-gradient(90deg, rgba(4,10,30,.45) 0%, rgba(4,10,30,0) 13%,
+                           rgba(4,10,30,0) 87%, rgba(4,10,30,.45) 100%),
+    linear-gradient(180deg, rgba(4,10,30,.14) 0%, rgba(4,10,30,0) 18%);
+}
+
+#sky{display:none !important;}
+#scene-frame{display:none !important;}
+
+#grade{
+  background:radial-gradient(126% 80% at 50% 40%,
+    rgba(0,0,0,0) 52%, rgba(2,4,14,.20) 82%, rgba(2,4,14,.44) 100%) !important;
+}
+#grain{opacity:.030 !important;}
+
+/* Yıldızlar, kayan yıldızlar ve ateş böcekleri — hepsi arka planda. */
+#sky-fx{
+  position:fixed; inset:0; z-index:2;
+  pointer-events:none;
+}
+
+/* ------------------------------------------------------------ okunurluk */
+.app h1,
+.app .eyebrow,
+.app .lang-pair,
+.app .sub,
+.app .tf-progress{
+  text-shadow:0 2px 14px rgba(3,8,26,.9), 0 0 3px rgba(3,8,26,.55);
+}
+.app .lang-opt .lname,
+.app .level-opt,
+.app .tab,
+.app .chip{
+  text-shadow:0 1px 9px rgba(3,8,26,.8);
+}
+
+/* ============================================================ DİL KARTLARI
+   Referanstaki gibi her dilin kendi rengi var. Ton, sky.css'teki --aura
+   değişkeninden türetildi; böylece kartın ışığı ile yüzeyi aynı renkte. */
+.app .lang-opt{position:relative; overflow:hidden;}
+
+.app .lang-opt[data-lang="de"]{background-image:linear-gradient(158deg, rgba(255,190,72,.26) 0%, rgba(255,150,40,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="en"]{background-image:linear-gradient(158deg, rgba(80,170,255,.26) 0%, rgba(50,110,230,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="ar"]{background-image:linear-gradient(158deg, rgba(62,220,146,.24) 0%, rgba(30,170,120,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="fr"]{background-image:linear-gradient(158deg, rgba(255,112,186,.24) 0%, rgba(190,80,220,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="es"]{background-image:linear-gradient(158deg, rgba(255,116,104,.24) 0%, rgba(230,120,50,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="ru"]{background-image:linear-gradient(158deg, rgba(158,128,255,.26) 0%, rgba(110,90,230,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+
+/* dilin arkasındaki soluk yapı silueti */
+.app .lang-opt .landmark{
+  position:absolute; right:-8px; bottom:-4px;
+  font-size:56px; line-height:1;
+  opacity:.18;
+  filter:grayscale(1) brightness(1.75) drop-shadow(0 0 12px rgba(150,200,255,.35));
+  pointer-events:none;
+  z-index:0;
+}
+.app .lang-opt .flag,
+.app .lang-opt .lname{position:relative; z-index:3;}
+
+/* -------------------------------------------------- seçili kart: neon RGB
+   Dönen bir tayf halkası. Maskeleme ile yalnızca 2px'lik kenar görünür,
+   kartın içi açıkta kalır. */
+@property --neon-a{syntax:'<angle>'; initial-value:0deg; inherits:false;}
+
+.app .lang-opt .neon{display:none;}
+.app .lang-opt.active .neon{
+  display:block;
+  position:absolute; inset:0; z-index:2;
+  border-radius:inherit;
+  padding:2px;
+  pointer-events:none;
+  background:conic-gradient(from var(--neon-a),
+    #ff2f7a, #ff9d3c, #ffe14a, #4dff9e, #4fd8ff, #9b7bff, #ff2f7a);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  animation:neonSpin 2.8s linear infinite;
+  filter:drop-shadow(0 0 6px rgba(140,190,255,.65));
+}
+@keyframes neonSpin{to{--neon-a:360deg;}}
+
+/* halkanın dışa vuran yumuşak ışığı */
+.app .lang-opt.active .neon-glow{
+  display:block;
+  position:absolute; inset:-1px; z-index:1;
+  border-radius:inherit;
+  pointer-events:none;
+  background:conic-gradient(from var(--neon-a),
+    #ff2f7a, #ff9d3c, #ffe14a, #4dff9e, #4fd8ff, #9b7bff, #ff2f7a);
+  filter:blur(9px);
+  opacity:.42;
+  animation:neonSpin 2.8s linear infinite;
+}
+.app .lang-opt .neon-glow{display:none;}
+
+/* ------------------------------------------------------------- ilerleme */
+.tf-progress{
+  display:flex; align-items:center; gap:11px;
+  font-size:12px; color:var(--muted);
+  margin-bottom:20px;
+}
+.tf-progress #cardCount{flex:0 0 auto; white-space:nowrap;}
+.tf-progress #cardCount::before{
+  content:'⭐'; margin-right:5px; font-size:13px;
+  filter:drop-shadow(0 0 8px rgba(255,200,60,.55));
+}
+.tf-progress #cardCount b{color:var(--gold); font-weight:800; font-size:13px;}
+.tf-progress .bar{flex:1 1 auto; margin-bottom:0 !important;}
+.tf-progress #cardCat{flex:0 0 auto; white-space:nowrap;}
+.tf-progress #cardCat::before{
+  content:''; display:inline-block; vertical-align:-1px;
+  width:13px; height:10px; margin-right:6px;
+  background:
+    linear-gradient(currentColor,currentColor) 0 0/13px 1.5px no-repeat,
+    linear-gradient(currentColor,currentColor) 2px 4px/9px 1.5px no-repeat,
+    linear-gradient(currentColor,currentColor) 4px 8px/5px 1.5px no-repeat;
+  opacity:.85;
+}
+
+/* ================================================================== KART
+   Bulanıklık değil, opaklık: kartın arkası artık görünmüyor. Manzara
+   dokusu çok hafif kalıyor, yazı kontrastı yükseliyor. */
+.face{
+  background-image:
+    linear-gradient(180deg, rgba(15,17,52,.94), rgba(12,20,60,.93)),
+    url("scene-bg.jpg") !important;
+  background-size:auto, 190% auto !important;
+  background-position:0 0, 50% 24% !important;
+  background-repeat:no-repeat, no-repeat !important;
+  background-color:#0d1236 !important;
+  -webkit-backdrop-filter:none !important;
+          backdrop-filter:none !important;
+  border-color:rgba(176,146,255,.5) !important;
+  box-shadow:0 0 0 1px rgba(140,110,255,.16),
+             0 22px 58px rgba(4,8,28,.6),
+             0 0 44px rgba(120,90,230,.20) !important;
+}
+.face-back{background-position:0 0, 50% 62% !important;}
+.face .word{text-shadow:0 3px 26px rgba(6,10,34,.9), 0 0 34px rgba(140,180,255,.22);}
+.face .tag,
+.face .pos,
+.face .example{text-shadow:0 2px 12px rgba(4,8,28,.85);}
+
+/* ================================================================== QUIZ
+   Tamamen opak: arkadaki manzara quiz ekranında hiç görünmüyor. */
+#quizView{
+  position:relative;
+  background:#080e26 !important;
+  border:1px solid rgba(120,165,255,.22);
+  border-radius:22px;
+  padding:16px 14px 18px;
+  box-shadow:0 24px 60px rgba(2,5,18,.65);
+}
+#quizView .quiz-card,
+#quizView .opt,
+#quizView .ctrl,
+#quizView .score-pill{
+  -webkit-backdrop-filter:none !important;
+          backdrop-filter:none !important;
+}
+#quizView .quiz-card{background:#111a3f !important;}
+#quizView .opt{background:#0e1636 !important;}
+#quizView .opt:hover:not([disabled]){background:#152352 !important;}
+#quizView .opt.correct{background:#0f3b2c !important; border-color:var(--good) !important; color:var(--good) !important;}
+#quizView .opt.wrong{background:#411827 !important; border-color:var(--bad) !important; color:var(--bad) !important;}
+#quizView .ctrl{background:#111a3f !important;}
+#quizView .ctrl.primary{background:linear-gradient(135deg,#2f47c4,#6a3fc4) !important;}
+#quizView .bar{background:#1a2350 !important;}
+#quizView .score-pill{background:#12314a !important;}
+
+/* ==================================================== BUTON ANİMASYONLARI
+   Basınca: yaylı bir çöküş + dokunulan noktadan yayılan ışık halkası. */
+.app .lang-opt,
+.app .tab,
+.app .level-opt,
+.app .chip,
+.app .sound-btn,
+.app .speak-icon-btn,
+.app .opt,
+.app .ctrl{
+  position:relative;
+  overflow:hidden;
+  transition:transform .16s cubic-bezier(.22,1.4,.36,1),
+             box-shadow .22s ease, background .22s ease, border-color .22s ease;
+}
+
+.tf-press{animation:tfPress .34s cubic-bezier(.22,1.4,.36,1);}
+@keyframes tfPress{
+  0%  {transform:scale(1);}
+  32% {transform:scale(.935);}
+  68% {transform:scale(1.028);}
+  100%{transform:scale(1);}
+}
+
+.tf-ripple{
+  position:absolute; z-index:4;
+  width:14px; height:14px; margin:-7px 0 0 -7px;
+  border-radius:50%;
+  pointer-events:none;
+  background:radial-gradient(circle,
+    rgba(255,255,255,.55) 0%, rgba(160,210,255,.30) 45%, rgba(160,210,255,0) 72%);
+  animation:tfRipple .62s cubic-bezier(.16,1,.3,1) forwards;
+}
+@keyframes tfRipple{
+  0%  {transform:scale(.2); opacity:.85;}
+  100%{transform:scale(16);  opacity:0;}
+}
+
+/* dokunma anında kenar parlaması */
+.app .sound-btn:active,
+.app .speak-icon-btn:active{box-shadow:0 0 0 3px rgba(79,216,255,.22), 0 0 22px rgba(79,216,255,.45);}
+.app .ctrl:active,
+.app .opt:active:not([disabled]){filter:brightness(1.18);}
+
+/* ----------------------------------------------- ön plan: masa ve eşyalar */
+#fg-desk{
+  position:fixed; left:0; right:0; bottom:0;
+  z-index:2; pointer-events:none; line-height:0;
+}
+#fg-desk svg{display:block; width:120%; margin-left:-10%; height:auto;}
+#fg-desk::before{
+  content:''; position:absolute; left:0; right:0; bottom:0; height:200px;
+  background:
+    radial-gradient(56% 100% at 14% 100%, rgba(255,170,80,.18), transparent 72%),
+    radial-gradient(50% 100% at 88% 96%,  rgba(255,158,66,.22), transparent 72%),
+    linear-gradient(180deg, rgba(6,10,28,0), rgba(6,10,28,.5));
+}
+
+.steam path{animation:steamRise 4.2s ease-in-out infinite; transform-origin:center bottom;}
+.steam path:nth-child(2){animation-delay:.9s;}
+.steam path:nth-child(3){animation-delay:1.8s;}
+@keyframes steamRise{
+  0%  {opacity:0;   transform:translateY(6px) scaleY(.86);}
+  35% {opacity:.5;}
+  100%{opacity:0;   transform:translateY(-16px) scaleY(1.14);}
+}
+
+/* ====================================================== KELEBEKLER (arkada)
+   z-index 2 → arayüzün (3) altında kalırlar; kartların üstünden geçmezler. */
+.flutter{
+  position:fixed; z-index:2; pointer-events:none;
+  will-change:transform;
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.45));
+}
+.flutter .wing{transform-origin:50% 62%; animation:flap .1s ease-in-out infinite alternate;}
+.flutter .wing.r{animation-delay:.01s;}
+@keyframes flap{from{transform:scaleX(1);} to{transform:scaleX(.3);}}
+
+.flutter.f1{animation:drift1 7.5s ease-in-out infinite;}
+.flutter.f2{animation:drift2 9s   ease-in-out infinite;}
+.flutter.f3{animation:drift3 8s   ease-in-out infinite;}
+.flutter.f4{animation:drift1 10s  ease-in-out infinite reverse;}
+.flutter.f5{animation:drift2 8.5s ease-in-out infinite reverse;}
+.flutter.f6{animation:drift3 9.5s ease-in-out infinite;}
+
+@keyframes drift1{
+  0%,100%{transform:translate(0,0) rotate(-8deg);}
+  25%{transform:translate(46px,-32px) rotate(12deg);}
+  50%{transform:translate(84px,14px)  rotate(-6deg);}
+  75%{transform:translate(32px,40px)  rotate(14deg);}
+}
+@keyframes drift2{
+  0%,100%{transform:translate(0,0) rotate(7deg);}
+  30%{transform:translate(-54px,26px)  rotate(-13deg);}
+  60%{transform:translate(-22px,-42px) rotate(9deg);}
+}
+@keyframes drift3{
+  0%,100%{transform:translate(0,0) rotate(-5deg);}
+  35%{transform:translate(38px,36px)  rotate(13deg);}
+  70%{transform:translate(-30px,18px) rotate(-11deg);}
+}
+
+/* --------------------------------------------------------------- ekranlar */
+@media (max-width:380px){
+  .flutter.f3,.flutter.f6{display:none;}
+}
+@media (min-width:820px){
+  #scene-bg{background-position:center 18%;}
+}
+@media (prefers-reduced-motion:reduce){
+  .flutter,.flutter .wing,.steam path,
+  .app .lang-opt.active .neon,
+  .app .lang-opt.active .neon-glow{animation:none !important;}
+  .tf-ripple{display:none !important;}
+}

@@ -2,19 +2,12 @@
    voice.js — Seslendirme güvenilirliği
 
    ── ÖNEMLİ NOT ──────────────────────────────────────────────────────────
-   Bu dosyanın önceki sürümü SESİ SEÇEN algoritmayı da değiştiriyordu.
-   O yanlıştı: hazırladığım tercih listesinde İngilizce için erkek sesler
-   (Evan, Daniel) üst sıradaydı; cihazda "Ava" bulunmayınca sistem kalın,
-   yaşlı bir erkek sesine düşüyordu. Eski sistem ise "Samantha"yı seçiyordu.
-
-   Bu yüzden SES SEÇİMİ TAMAMEN ESKİ HÂLİNE DÖNDÜ:
-   index.html içindeki orijinal pickVoice() devrede, bu dosya ona dokunmuyor.
-
-   Burada yalnızca "nasıl konuşulduğu" iyileştirilir:
+   SES SEÇİMİ orijinal hâlindedir: index.html içindeki pickVoice() devrede,
+   bu dosya ona dokunmaz. Burada yalnızca "nasıl konuşulduğu" iyileştirilir:
      · Chrome'un cancel() + speak() yarış durumu (cümlenin sessizce düşmesi)
      · ~15 sn sonra sentezleyicinin kendiliğinden duraklaması
      · Hızlı kart geçişinde kelimenin ortasında kesilme
-     · Yavaş mod (🐢) — aşağıda açıklandı
+     · Yavaş mod (🐢)
    ========================================================================== */
 (function () {
   'use strict';
@@ -23,25 +16,21 @@
   var synth = window.speechSynthesis;
 
   /* ======================================================================
-     YAVAŞ MOD (kaplumbağa)
+     YAVAŞ MOD (kaplumbağa) — iki kat yavaşlatıldı
 
-     Eski kod yavaş okuma için rate = 0.55 gönderiyordu. Sorun şu: konuşma
-     motorlarının çoğu 0.6'nın altında sesi gerçekten uzatmaz, örnekleri
-     tekrarlar. Sonuç titrek ve boğuk bir okumadır — özellikle iOS'un
-     sıkıştırılmış seslerinde.
+     Önceki değer 0.70 idi; istek üzerine yarıya indirildi: 0.35. Bu, tane
+     tane bir okuma verir. Bu kadar düşük hızlarda bazı motorlar sesi
+     titretebildiği için iki küçük önlem alınıyor:
 
-     0.70, hemen her motorun hâlâ doğal ürettiği en yavaş bölgedir:
-     belirgin şekilde yavaş ama net. Ayrıca yavaş modda kelimenin sonuna
-     nokta eklenir; motor tek başına duran kelimeyi aceleyle kesmek yerine
-     tamamlanmış bir ifade gibi bitirir.
+       · Kelimenin sonuna nokta eklenir → motor kelimeyi aceleyle kesmek
+         yerine tamamlanmış bir ifade gibi bitirir.
+       · Native TTS 2.5 sn içinde başlamazsa Google TTS yedeğine düşülür
+         (o da ttsspeed=0.24 ile zaten yavaş okur).
+
+     Cihazında boğuk gelirse tek yapman gereken bu sayıyı yükseltmek:
+     0.35 → 0.45 belirgin şekilde daha temiz, hâlâ eskisinden yavaştır.
      ==================================================================== */
-  /* Kullanıcı isteği üzerine bir kademe daha yavaşlatıldı (0.70 → 0.58).
-     0.5'in altına inmedim çünkü orada çoğu motor sesi gerçekten uzatmak
-     yerine örnekleri tekrarlamaya başlıyor ve titrek/anlaşılmaz çıkıyor —
-     bu tam da bir önceki şikâyetin sebebiydi. 0.58 hâlâ belirgin şekilde
-     yavaş ama net kalan en düşük nokta. Cihazında hâlâ hızlı geliyorsa
-     bu satırı 0.5'e kadar indirebilirsin; altına inmeyi önermem. */
-  var SLOW_RATE = 0.58;
+  var SLOW_RATE = 0.35;
   var NORMAL_RATE = 0.92;      /* orijinal değer — değiştirilmedi */
 
   var keepAlive = null;
