@@ -244,7 +244,7 @@
     SP.glowGold = glowSprite(72, 255, 214, 130, 0.95);
     SP.glowViolet = glowSprite(64, 178, 150, 255, 0.9);
     SP.moon = moonSprite(Math.round(clamp(Math.min(W, H) * 0.30, 120, 260)));
-    SP.moonHalo = glowSprite(1024, 196, 220, 255, 0.34);
+    SP.moonHalo = glowSprite(1024, 190, 214, 255, 0.20);
 
     /* Su üzerindeki ışık bantları ve kıyı yansımaları.
        Bunlar her karede createLinearGradient ile üretilseydi, kare başına
@@ -382,7 +382,7 @@
     /* sis bantları */
     fog.length = 0;
     for (var fg = 0; fg < 3; fg++) {
-      fog.push({ x: Math.random(), y: rnd(-0.05, 0.06), v: rnd(0.006, 0.014) * (Math.random() < 0.5 ? -1 : 1), a: rnd(0.05, 0.11), w: rnd(0.5, 0.95) });
+      fog.push({ x: Math.random(), y: rnd(-0.012, 0.03), v: rnd(0.006, 0.014) * (Math.random() < 0.5 ? -1 : 1), a: rnd(0.022, 0.05), w: rnd(0.45, 0.8) });
     }
 
     flocks.length = 0;
@@ -430,6 +430,7 @@
 
     buildSprites();
     field = buildStarfield(W, H);
+    buildScenery();
   }
 
   function scheduleResize() {
@@ -506,10 +507,12 @@
 
   function drawMoon(px, py) {
     var mx = moon.x + px * 9, my = moon.y + py * 7;
-    var halo = moon.r * 11;
+    /* Hale, ayın yarıçapının ~5 katı. Daha büyüğü tüm gökyüzünü yıkıyor,
+       manzaranın derinliğini ve yıldızları yok ediyordu. */
+    var halo = moon.r * 5.2;
     ctx.save();
     ctx.globalCompositeOperation = 'lighter';
-    ctx.globalAlpha = 0.50 + 0.05 * Math.sin(t * 0.35);
+    ctx.globalAlpha = 0.34 + 0.04 * Math.sin(t * 0.35);
     ctx.drawImage(SP.moonHalo, mx - halo / 2, my - halo / 2, halo, halo);
     ctx.restore();
 
@@ -547,86 +550,275 @@
     ctx.restore();
   }
 
-  function drawHorizon(px, py, moonPos) {
+  /* ======================================================================
+     MANZARA — uzak dağlar, karşı kıyı ve göl kasabası
+
+     Bu katman sahnenin hikâyesini anlatan kısım. Hepsi bir kez offscreen
+     canvas'a çizilir, sonra her karede sadece kopyalanır; böylece yüzlerce
+     bina ve pencere hiçbir kare maliyeti çıkarmaz.
+
+     Derinlik hissi "atmosferik perspektif" ile kurulur: uzaktaki dağ daha
+     açık ve maviye çalar, yakındaki tepe neredeyse siyahtır.
+     ==================================================================== */
+  var SC = null;
+
+  /* Dalgalı bir sırt çizgisi üretir. Üç farklı frekanstaki sinüsün
+     toplamı, tekrar ettiği belli olmayan doğal bir siluet verir. */
+  function ridgeY(u, hgt, base, freq, rough, seed) {
+    var y = hgt * (base
+      - Math.sin(u * freq + seed) * 0.26
+      - Math.sin(u * freq * 2.37 + seed * 1.7) * 0.13 * rough
+      - Math.sin(u * freq * 5.11 + seed * 0.6) * 0.05 * rough);
+    return clamp(y, hgt * 0.06, hgt);
+  }
+
+  function mountainSprite(hgt, top, bot, rim, freq, rough, seed, base) {
+    var c = makeCanvas(W + 80, hgt), x = c.getContext('2d');
+    var cw = c.width;
+    var g = x.createLinearGradient(0, 0, 0, hgt);
+    g.addColorStop(0, top);
+    g.addColorStop(1, bot);
+
+    var step = Math.max(3, cw / 120);
+    x.beginPath();
+    x.moveTo(0, hgt);
+    for (var i = 0; i <= cw; i += step) x.lineTo(i, ridgeY(i / cw, hgt, base, freq, rough, seed));
+    x.lineTo(cw, hgt);
+    x.closePath();
+    x.fillStyle = g;
+    x.fill();
+
+    /* Ay ışığının sırt çizgisine vurduğu ince kenar */
+    if (rim) {
+      x.beginPath();
+      for (var j = 0; j <= cw; j += step) {
+        var y = ridgeY(j / cw, hgt, base, freq, rough, seed);
+        if (j === 0) x.moveTo(j, y); else x.lineTo(j, y);
+      }
+      x.strokeStyle = rim;
+      x.lineWidth = 1.1;
+      x.stroke();
+    }
+    return c;
+  }
+
+  /* Göl kenarındaki kasaba: sağdaki yamaca kurulmuş, suya doğru inen
+     teraslı evler. Pencereler sıcak; sudaki yansımaları sahnenin en
+     "yaşayan" parçası. */
+  function villageSprite() {
+    var vh = Math.round(H * 0.2);
+    var c = makeCanvas(W + 80, vh), x = c.getContext('2d');
+    var cw = c.width;
+    var wins = [];
+
+    /* kasabanın oturduğu burun */
+    var slope = function (u) {
+      /* sağa doğru yükselen, suya doğru inen yamaç */
+      return vh * (1.02 - Math.pow(clamp((u - 0.42) / 0.58, 0, 1), 0.75) * 0.82);
+    };
+    x.beginPath();
+    x.moveTo(cw, vh);
+    for (var i = cw; i >= cw * 0.40; i -= 4) x.lineTo(i, slope(i / cw));
+    x.lineTo(cw * 0.40, vh);
+    x.closePath();
+    x.fillStyle = 'rgba(9,11,26,0.96)';
+    x.fill();
+
+    /* binalar — yamaç boyunca kademeli */
+    var count = MOBILE ? 46 : 68;
+    for (var b = 0; b < count; b++) {
+      var u = rnd(0.44, 1.0);
+      var gy = slope(u);
+      var bw = rnd(vh * 0.07, vh * 0.16);
+      var bh = rnd(vh * 0.10, vh * 0.26);
+      var bx = u * cw - bw / 2;
+      var by = gy - bh + rnd(-vh * 0.03, vh * 0.06);
+      if (by + bh > vh) bh = vh - by;
+      if (bh < 4) continue;
+
+      x.fillStyle = 'rgba(14,15,30,0.97)';
+      x.fillRect(bx, by, bw, bh);
+      /* çatı */
+      x.beginPath();
+      x.moveTo(bx - 1.5, by);
+      x.lineTo(bx + bw / 2, by - bh * 0.22);
+      x.lineTo(bx + bw + 1.5, by);
+      x.closePath();
+      x.fillStyle = 'rgba(10,11,24,0.97)';
+      x.fill();
+
+      /* pencereler */
+      var cols = Math.max(1, Math.floor(bw / 5));
+      var rows = Math.max(1, Math.floor(bh / 6));
+      for (var r = 0; r < rows; r++) {
+        for (var q = 0; q < cols; q++) {
+          if (Math.random() < 0.42) continue;
+          var wx = bx + 2 + q * (bw - 3) / cols;
+          var wy = by + 3 + r * (bh - 4) / rows;
+          var ww = Math.max(1.1, bw / cols * 0.42);
+          var wh2 = Math.max(1.4, bh / rows * 0.42);
+          x.fillStyle = Math.random() < 0.8 ? 'rgba(255,196,116,0.95)' : 'rgba(255,232,190,0.95)';
+          x.fillRect(wx, wy, ww, wh2);
+          if (wins.length < 40 && Math.random() < 0.3) {
+            wins.push({ x: (wx + ww / 2) / cw, y: wy + wh2 / 2, s: rnd(0.5, 1.2),
+                        ph: Math.random() * 6.28, sp: rnd(0.5, 1.8) });
+          }
+        }
+      }
+    }
+
+    /* kasabanın üstüne çöken sıcak ışık kubbesi */
+    x.globalCompositeOperation = 'lighter';
+    var warm = x.createRadialGradient(cw * 0.78, vh * 0.62, 0, cw * 0.78, vh * 0.62, cw * 0.34);
+    warm.addColorStop(0, 'rgba(255,178,96,0.16)');
+    warm.addColorStop(1, 'rgba(255,150,70,0)');
+    x.fillStyle = warm;
+    x.fillRect(0, 0, cw, vh);
+
+    return { c: c, wins: wins, h: vh };
+  }
+
+  /* Bir sprite'ın dikey aynası + aşağı doğru sönümlenen saydamlık.
+     Sudaki yansıma bundan üretilir. */
+  function mirrorFade(src, fade) {
+    var c = makeCanvas(src.width, src.height), x = c.getContext('2d');
+    x.save();
+    x.translate(0, src.height);
+    x.scale(1, -1);
+    x.drawImage(src, 0, 0);
+    x.restore();
+    x.globalCompositeOperation = 'destination-out';
+    var g = x.createLinearGradient(0, 0, 0, src.height);
+    g.addColorStop(0, 'rgba(0,0,0,' + (1 - (fade || 0.55)) + ')');
+    g.addColorStop(1, 'rgba(0,0,0,1)');
+    x.fillStyle = g;
+    x.fillRect(0, 0, src.width, src.height);
+    return c;
+  }
+
+  function buildScenery() {
+    var v = villageSprite();
+    var far = mountainSprite(Math.round(H * 0.16),
+      'rgba(86,104,168,0.55)', 'rgba(52,66,124,0.72)',
+      'rgba(178,206,255,0.30)', 4.2, 0.8, 1.7, 0.60);
+    var mid = mountainSprite(Math.round(H * 0.13),
+      'rgba(34,44,92,0.9)', 'rgba(16,22,54,0.95)',
+      'rgba(150,184,246,0.22)', 6.1, 1.0, 4.3, 0.55);
+
+    SC = {
+      far: far, mid: mid,
+      village: v.c, wins: v.wins, vh: v.h,
+      farR: mirrorFade(far, 0.72),
+      midR: mirrorFade(mid, 0.66),
+      villageR: mirrorFade(v.c, 0.52)
+    };
+  }
+
+  function drawScenery(px, py) {
+    if (!SC) return;
     var y = waterY + py * 4;
 
-    /* ufuk parıltısı */
+    /* Uzaktan yakına: her katman biraz daha fazla parallax alır. */
+    ctx.drawImage(SC.far, -40 + px * 5, y - SC.far.height + 1);
+    ctx.drawImage(SC.mid, -40 + px * 9, y - SC.mid.height + 1);
+    ctx.drawImage(SC.village, -40 + px * 13, y - SC.vh + 1);
+
+    /* yanıp sönen birkaç pencere — kasabanın yaşadığını gösterir */
     ctx.save();
     ctx.globalCompositeOperation = 'lighter';
-    var g = ctx.createLinearGradient(0, y - H * 0.16, 0, y + 2);
-    g.addColorStop(0, 'rgba(70,110,190,0)');
-    g.addColorStop(0.62, 'rgba(84,124,200,0.09)');
-    g.addColorStop(1, 'rgba(190,175,225,0.16)');
-    ctx.fillStyle = g;
-    ctx.fillRect(0, y - H * 0.16, W, H * 0.16);
-    ctx.restore();
-
-    /* karşı kıyı siluetleri */
-    ctx.save();
-    ctx.fillStyle = 'rgba(6,9,22,0.72)';
-    ctx.beginPath();
-    ctx.moveTo(0, y);
-    var step = W / 26;
-    for (var x = 0; x <= W + step; x += step) {
-      var u = x / W;
-      var hh = (Math.sin(u * 9.1) * 0.5 + Math.sin(u * 21.7 + 1.3) * 0.28 + Math.sin(u * 4.2) * 0.5) * H * 0.012 + H * 0.016;
-      ctx.lineTo(x, y - hh);
-    }
-    ctx.lineTo(W, y + 2); ctx.lineTo(0, y + 2);
-    ctx.closePath(); ctx.fill();
-    ctx.restore();
-
-    /* kıyı ışıkları */
-    ctx.save();
-    ctx.globalCompositeOperation = 'lighter';
-    for (var i = 0; i < shore.length; i++) {
-      var s = shore[i];
-      var a = 0.35 + 0.65 * (0.5 + 0.5 * Math.sin(t * s.sp + s.ph));
-      var sx = s.x * W + px * 6;
-      var sy = y + s.y * H;
-      var d = s.s * 7;
-      ctx.globalAlpha = a * 0.85;
-      ctx.drawImage(s.gold ? SP.glowGold : SP.glowCyan, sx - d / 2, sy - d / 2, d, d);
+    var cw = SC.village.width;
+    for (var i = 0; i < SC.wins.length; i++) {
+      var wn = SC.wins[i];
+      var a = 0.28 + 0.72 * (0.5 + 0.5 * Math.sin(t * wn.sp + wn.ph));
+      var d = 5 + wn.s * 9;
+      ctx.globalAlpha = a * 0.6;
+      ctx.drawImage(SP.glowGold,
+        -40 + px * 13 + wn.x * cw - d / 2,
+        y - SC.vh + wn.y - d / 2, d, d);
     }
     ctx.restore();
   }
 
+  /* ======================================================================
+     GÖL
+     Su, üstündeki her şeyin aynasıdır: dağlar, kasaba ve ay. Yansımalar
+     yatay dilimler hâlinde, her dilim kendi ritminde kaydırılarak çizilir —
+     bu, tek bir aynalı kopyayı canlı bir su yüzeyine dönüştürür.
+     ==================================================================== */
   function drawWater(px, py, moonPos) {
     var y = waterY + py * 4;
     var hgt = H - y + 4;
+    if (hgt <= 2) return;
 
     ctx.save();
+
+    /* su gövdesi */
     var g = ctx.createLinearGradient(0, y, 0, H);
-    g.addColorStop(0, 'rgba(16,26,58,0.55)');
-    g.addColorStop(0.35, 'rgba(9,14,36,0.72)');
-    g.addColorStop(1, 'rgba(4,6,16,0.88)');
+    g.addColorStop(0, 'rgba(13,20,48,0.62)');
+    g.addColorStop(0.35, 'rgba(8,13,34,0.78)');
+    g.addColorStop(1, 'rgba(3,5,14,0.92)');
     ctx.fillStyle = g;
     ctx.fillRect(0, y, W, hgt);
 
-    /* ayın suya düşen yansıması — aşağı indikçe genişleyen ışık bantları */
+    /* --- manzaranın yansıması --- */
+    if (SC) {
+      var slices = MOBILE ? 11 : 16;
+      var sets = [
+        { img: SC.farR, dx: px * 5, a: 0.30 },
+        { img: SC.midR, dx: px * 9, a: 0.34 },
+        { img: SC.villageR, dx: px * 13, a: 0.46 }
+      ];
+      for (var s = 0; s < sets.length; s++) {
+        var set = sets[s];
+        var img = set.img;
+        var sh = img.height / slices;
+        for (var i = 0; i < slices; i++) {
+          var dy = y + i * sh;
+          if (dy > H) break;
+          var wob = Math.sin(t * 1.05 + i * 0.62 + s) * (1.5 + i * 1.15);
+          ctx.globalAlpha = set.a * (1 - i / slices * 0.35);
+          ctx.drawImage(img, 0, i * sh, img.width, sh,
+            -40 + set.dx + wob, dy, img.width, sh + 0.6);
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    /* --- ayın suya düşen ışık yolu --- */
     ctx.globalCompositeOperation = 'lighter';
     var col = clamp(moonPos.x + (px * -6), 0, W);
     var bands = MOBILE ? 16 : 24;
     var bandH = Math.max(1.4, hgt / bands * 0.6);
-    for (var i = 0; i < bands; i++) {
-      var f = i / bands;
+    for (var k = 0; k < bands; k++) {
+      var f = k / bands;
       var by = y + f * hgt;
-      var spread = moon.r * (0.55 + f * 3.4);
-      var wob = Math.sin(t * 1.15 + i * 0.85) * (6 + f * 26);
-      var a = (1 - f) * 0.15 * (0.55 + 0.45 * Math.sin(t * 1.9 + i * 1.6));
-      if (a <= 0.003) continue;
-      ctx.globalAlpha = a;
-      ctx.drawImage(SP.streak, col - spread + wob, by, spread * 2, bandH);
+      var spread = moon.r * (0.5 + f * 3.2);
+      var wob2 = Math.sin(t * 1.15 + k * 0.85) * (5 + f * 24);
+      var a2 = (1 - f) * 0.16 * (0.55 + 0.45 * Math.sin(t * 1.9 + k * 1.6));
+      if (a2 <= 0.003) continue;
+      ctx.globalAlpha = a2;
+      ctx.drawImage(SP.streak, col - spread + wob2, by, spread * 2, bandH);
     }
 
-    /* kıyı ışıklarının suya uzayan yansımaları */
-    for (var s = 0; s < shore.length; s += 2) {
-      var sh = shore[s];
-      var sx = sh.x * W + px * 6;
-      ctx.globalAlpha = 0.10 + 0.10 * Math.sin(t * sh.sp * 1.4 + sh.ph);
-      ctx.drawImage(sh.gold ? SP.reflGold : SP.reflCyan,
-        sx - 1.6 + Math.sin(t * 2 + s) * 2, y, 3.2, hgt * sh.refl);
+    /* --- kasaba ışıklarının suda uzayan izleri --- */
+    if (SC) {
+      var cw2 = SC.village.width;
+      for (var w2 = 0; w2 < SC.wins.length; w2 += 2) {
+        var wn2 = SC.wins[w2];
+        var sx = -40 + px * 13 + wn2.x * cw2;
+        ctx.globalAlpha = 0.12 + 0.12 * Math.sin(t * wn2.sp * 1.3 + wn2.ph);
+        ctx.drawImage(SP.reflGold,
+          sx - 1.8 + Math.sin(t * 1.8 + w2) * 2.4, y, 3.6, hgt * 0.34);
+      }
     }
+
+    /* --- su yüzeyindeki ince parıltı çizgileri --- */
+    ctx.globalAlpha = 0.05;
+    for (var L = 0; L < 5; L++) {
+      var ly = y + hgt * (0.18 + L * 0.17) + Math.sin(t * 0.7 + L) * 2;
+      ctx.drawImage(SP.streak, W * 0.1 + Math.sin(t * 0.5 + L * 2) * W * 0.1, ly, W * 0.8, 1.2);
+    }
+
     ctx.restore();
   }
 
@@ -937,8 +1129,8 @@
     nextFlock -= dt;
     if (nextFlock <= 0 && flocks.length < 2) { spawnFlock(); nextFlock = rnd(22, 46); }
     drawFlocks(px, py, dt);
-    /* 9-10 · ufuk, kıyı, göl */
-    drawHorizon(px, py, moonPos);
+    /* 9-10 · manzara ve göl */
+    drawScenery(px, py);
     drawWater(px, py, moonPos);
     /* 11 · orta bulutlar + sis */
     drawClouds(1, px, py, dt);
@@ -973,7 +1165,7 @@
       drawTwinkles(px, py);
       drawMoon(px, py);
       drawClouds(0, px, py, 0);
-      drawHorizon(px, py, { x: moon.x, y: moon.y });
+      drawScenery(px, py);
       drawWater(px, py, { x: moon.x, y: moon.y });
       window.spawnShootingStar = function () {};
       return;

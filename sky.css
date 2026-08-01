@@ -687,3 +687,126 @@ html.motion-ready .reveal-in{opacity:0; will-change:transform,opacity;}
 @media (prefers-reduced-motion:reduce){
   .bar-fill::after, .opt.correct::after{animation:none !important;}
 }
+
+/* ============================================================================
+   BÖLÜM 3 — SAHNE ÇERÇEVESİ (ön plan) ve ATMOSFER DÜZELTMESİ
+   ========================================================================== */
+
+/* Gökyüzü fazla açık ve sisliydi: ay halesi, sis ve tonlama katmanı üst üste
+   binince gece maviliği griye dönüyordu. Palet derinleştirildi. */
+body{
+  background:
+    radial-gradient(130% 80% at 80% 4%,  rgba(58,80,168,.30) 0%, rgba(14,20,56,0) 52%),
+    radial-gradient(110% 60% at 18% 92%, rgba(74,44,128,.20) 0%, rgba(8,10,32,0) 58%),
+    linear-gradient(180deg, #02030a 0%, #050a1e 22%, #091235 46%, #0c1740 66%, #050818 100%);
+}
+#grade{
+  background:
+    radial-gradient(125% 80% at 50% 40%, rgba(0,0,0,0) 46%, rgba(2,3,10,.36) 80%, rgba(2,3,10,.66) 100%);
+}
+#grain{opacity:.03;}
+
+/* ------------------------------------------------------------- çerçeve */
+#scene-frame{
+  position:fixed; inset:0;
+  z-index:2;
+  pointer-events:none;
+  overflow:hidden;
+}
+#scene-frame .fr{
+  position:absolute;
+  will-change:transform;
+  transform:translate3d(0,0,0);
+}
+
+/* Sol üstten sarkan çiçekli dal */
+#scene-frame .fr-branch{
+  top:-2%; left:-5%;
+  width:44vmin; height:44vmin;
+  filter:drop-shadow(0 6px 18px rgba(0,0,0,.6));
+  transform-origin:12% 6%;
+  animation:sway 13s ease-in-out infinite;
+}
+
+/* Alt köşelerdeki çiçek demetleri — kameraya en yakın katman olduğu için
+   hafifçe bulanık. Bu "alan derinliği", sahneyi fotoğraf gibi gösterir. */
+#scene-frame .fr-bl, #scene-frame .fr-br{
+  bottom:-3%;
+  width:40vmin; height:40vmin;
+  filter:blur(.6px) drop-shadow(0 8px 22px rgba(0,0,0,.65));
+  transform-origin:50% 100%;
+}
+#scene-frame .fr-bl{left:-7%;  animation:sway 11s ease-in-out infinite;}
+#scene-frame .fr-br{right:-7%; animation:sway 15s ease-in-out infinite reverse;}
+
+/* Sağdaki fener */
+#scene-frame .fr-lamp{
+  right:1.5%; top:34%;
+  width:15vmin; height:16vmin;
+  filter:drop-shadow(0 0 26px rgba(255,178,90,.45));
+  animation:lampSway 9s ease-in-out infinite;
+  transform-origin:50% 0;
+}
+.lamp-halo{animation:lampPulse 4.5s ease-in-out infinite; transform-origin:60px 74px;}
+.lamp-flame{animation:flameFlicker 2.6s ease-in-out infinite;}
+@keyframes lampPulse{
+  0%,100%{opacity:.85; transform:scale(1);}
+  50%    {opacity:1;   transform:scale(1.07);}
+}
+@keyframes flameFlicker{
+  0%,100%{opacity:.85;} 30%{opacity:1;} 55%{opacity:.78;} 78%{opacity:.96;}
+}
+@keyframes lampSway{
+  0%,100%{transform:rotate(-1.2deg);} 50%{transform:rotate(1.2deg);}
+}
+
+/* Alt ortadaki masa: kitaplar, kahve, kalem */
+#scene-frame .fr-desk{
+  bottom:-1%; left:50%;
+  width:min(72vmin, 460px); height:auto;
+  margin-left:calc(min(72vmin, 460px) / -2);
+  filter:drop-shadow(0 -6px 26px rgba(0,0,0,.7));
+  opacity:.96;
+}
+.steam{animation:steamRise 5.5s ease-in-out infinite;}
+@keyframes steamRise{
+  0%,100%{opacity:.18; transform:translateY(0) scaleY(1);}
+  50%    {opacity:.5;  transform:translateY(-5px) scaleY(1.12);}
+}
+
+@keyframes sway{
+  0%,100%{transform:rotate(-.8deg);}
+  50%    {transform:rotate(.8deg);}
+}
+
+/* Dar ekranda çerçeve arayüzü boğmasın */
+@media (max-width:430px){
+  #scene-frame .fr-branch{width:38vmin; height:38vmin; opacity:.9;}
+  #scene-frame .fr-bl, #scene-frame .fr-br{width:34vmin; height:34vmin; opacity:.88;}
+  #scene-frame .fr-lamp{width:13vmin; height:14vmin; top:30%;}
+}
+/* Çok kısa ekranlarda masa, kartla çakışmasın */
+@media (max-height:680px){
+  #scene-frame .fr-desk{opacity:.75;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  #scene-frame .fr{animation:none !important;}
+  .lamp-halo, .lamp-flame, .steam{animation:none !important;}
+}
+
+/* Fenerin ve masanın çevreye yaydığı sıcak ışık */
+#scene-frame .fr-glow{position:absolute; pointer-events:none;}
+#scene-frame .fr-glow-lamp{
+  right:-6%; top:26%;
+  width:52vmin; height:52vmin;
+  background:radial-gradient(closest-side, rgba(255,178,92,.20), rgba(255,150,70,.07) 45%, transparent 72%);
+  animation:lampPulse 4.5s ease-in-out infinite;
+}
+#scene-frame .fr-glow-desk{
+  left:50%; bottom:-12%;
+  width:min(96vmin, 620px); height:36vmin;
+  margin-left:calc(min(96vmin, 620px) / -2);
+  background:radial-gradient(closest-side, rgba(255,172,96,.15), rgba(255,140,70,.05) 50%, transparent 76%);
+}
+@media (prefers-reduced-motion:reduce){ #scene-frame .fr-glow{animation:none !important;} }
