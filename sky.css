@@ -1139,3 +1139,154 @@ html.has-bg{--glass:.36; --glass-2:.28;}
    manzaranın önünü kapatan kalın bir tül değil. */
 #scene-frame .fr-branch{opacity:.78;}
 #scene-frame .fr-bl, #scene-frame .fr-br{opacity:.74;}
+
+/* ============================================================================
+   BÖLÜM 6 — GERÇEK ŞEFFAFLIK + RENKLİ KART IŞIĞI + CANLI BUTONLAR
+
+   Üç istek:
+     1) Kelime kartları (dil kartları + ana kelime kartı) neredeyse tam
+        şeffaf — arka plan görünsün, cam sadece bulanıklık ve kenar
+        ışığıyla hissettirilsin.
+     2) Kartların çevresinde RENKLİ (RGB) ışık.
+        Not: Önceki turda "cyberpunk / RGB oyuncu teması istemiyorum"
+        demiştin. Onu çelişki saymadım — hızlı yanıp sönen tek renkli bir
+        LED şeridi yerine, ÇOK YAVAŞ ve YUMUŞAK geçişli, sedef/opal gibi
+        bir renk döngüsü uyguladım. Renkli ama sakin; oyuncu ekipmanı
+        gibi değil, kıymetli bir taş gibi parlıyor.
+     3) Tüm butonlu alanlar (sekmeler, seviye seçici, kategori çipleri,
+        Önceki/Sonraki/Karıştır) hem daha şeffaf hem de dokunulduğunda
+        fark edilir, zevkli bir mikro-hareket versin.
+   ========================================================================== */
+:root{
+  /* Neredeyse sıfıra indirildi — kartın rengi artık neredeyse tamamen
+     arkasındaki sahneden geliyor. */
+  --glass:   .045;
+  --glass-2: .018;
+}
+
+/* ---------------------------------------------------------- dil kartları
+   Zaten dile özel bir rengi vardı (--aura); burada sadece daha görünür
+   ve tüm kenar boyunca eşit yapıldı. */
+.lang-opt{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.035) 0%, rgba(255,255,255,.006) 46%, rgba(255,255,255,0) 100%),
+    linear-gradient(160deg, rgba(18,26,58,var(--glass)), rgba(8,12,32,var(--glass-2)));
+}
+.lang-opt.active[data-lang]{
+  box-shadow:
+    var(--shadow-m),
+    0 0 0 1.5px var(--aura),
+    0 0 30px -6px var(--aura),
+    0 0 54px -18px var(--aura);
+}
+/* Not: dinlenme hâlindeki (seçilmemiş) kartlara sabit renkli halka
+   BİLEREK eklenmedi — altı kartın hepsi aynı anda parlarsa "RGB oyuncu
+   şeridi" görünümüne kayar. Renk sadece SEÇİLİ karta ve dokunulan/
+   üzerine gelinen karta özel kalır; böylece anlamlı ve zarif kalır. */
+.lang-opt[data-lang]:hover{ box-shadow:var(--shadow-m), 0 0 0 1.3px var(--aura), 0 0 20px -8px var(--aura); }
+
+/* ======================================================= ANA KELİME KARTI
+   "100% cam gibi": ton neredeyse yok, sadece bulanıklık + ince kenar +
+   yavaş renkli parıltı. */
+.face{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.028) 0%, rgba(255,255,255,.004) 46%, rgba(255,255,255,0) 100%),
+    linear-gradient(155deg, rgba(20,28,64,.055), rgba(6,9,22,.03));
+  border-color:rgba(255,255,255,.14);
+  animation:cardAura 16s ease-in-out infinite;
+}
+/* Sedef gibi yavaş renk döngüsü — box-shadow'un rengi adım adım değişir.
+   16 saniyede bir tur; insan gözü anlık farkı değil, genel "canlı ve
+   değerli" hissi algılar. Tek bir elemanda çalıştığı için maliyeti
+   önemsizdir. */
+@keyframes cardAura{
+  0%   { box-shadow:var(--shadow-l), 0 0 0 1px rgba(120,190,255,.35), 0 0 30px -8px rgba(120,190,255,.6), 0 0 60px -22px rgba(120,190,255,.4); }
+  20%  { box-shadow:var(--shadow-l), 0 0 0 1px rgba(160,150,255,.35), 0 0 30px -8px rgba(160,150,255,.6), 0 0 60px -22px rgba(160,150,255,.4); }
+  40%  { box-shadow:var(--shadow-l), 0 0 0 1px rgba(230,140,220,.32), 0 0 30px -8px rgba(230,140,220,.55), 0 0 60px -22px rgba(230,140,220,.38); }
+  60%  { box-shadow:var(--shadow-l), 0 0 0 1px rgba(255,190,130,.32), 0 0 30px -8px rgba(255,190,130,.55), 0 0 60px -22px rgba(255,190,130,.38); }
+  80%  { box-shadow:var(--shadow-l), 0 0 0 1px rgba(130,235,190,.32), 0 0 30px -8px rgba(130,235,190,.55), 0 0 60px -22px rgba(130,235,190,.38); }
+  100% { box-shadow:var(--shadow-l), 0 0 0 1px rgba(120,190,255,.35), 0 0 30px -8px rgba(120,190,255,.6), 0 0 60px -22px rgba(120,190,255,.4); }
+}
+
+/* ================================================================ QUIZ,
+   KATEGORİ, KİŞİSEL — aynı şeffaflık seviyesine çekildi (paylaşılan
+   --glass token'ı zaten çoğunu kapsıyor; burada özel arka planı olanlar
+   elden geçirildi). */
+.quiz-card{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.032) 0%, rgba(255,255,255,.006) 44%, rgba(255,255,255,0) 100%),
+    linear-gradient(155deg, rgba(20,28,64,.06), rgba(6,9,22,.032));
+}
+.opt{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.026), rgba(255,255,255,.005)),
+    linear-gradient(160deg, rgba(18,26,58,.05), rgba(8,12,32,.024));
+}
+.cat-panel{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.008) 30%, rgba(255,255,255,0)),
+    linear-gradient(160deg, rgba(20,28,64,.42), rgba(7,10,26,.4));
+  /* Panel tam ekranın altını kapladığı için tamamen şeffaf yapılmadı —
+     aksi hâlde arkasındaki kartlar/metinle karışıp okunmaz hâle gelirdi.
+     Yine de eskisinden belirgin biçimde daha açık. */
+}
+#personalView .pm-root .pm-card,
+#personalView .pm-root .pm-study-card,
+#personalView .pm-root .pm-stat-box{
+  background:
+    linear-gradient(170deg, rgba(255,255,255,.03), rgba(255,255,255,.006)),
+    linear-gradient(170deg, rgba(18,26,58,var(--glass)), rgba(8,12,32,var(--glass-2)));
+}
+
+/* ===================================================== CANLI BUTONLAR
+   Sekmeler (Kartlar/Quiz/Kişisel), seviye seçici (Tümü/A1…B2), kategori
+   çipleri ve Önceki/Sonraki/Karıştır: dokunulduğunda fark edilen, zevkli
+   ama abartısız bir hareket. Tek bir ince ışık sweep'i + hafif kalkma +
+   basılınca çöküş. */
+.tab, .level-opt, .chip, .cat-trigger, .ctrl{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.008)),
+    linear-gradient(160deg, rgba(18,26,58,var(--glass)), rgba(8,12,32,var(--glass-2)));
+  overflow:hidden;
+  isolation:isolate;
+}
+/* İnce ışık huzmesi — sadece hover'da, sadece BUTONLARDA (kartlarda yok).
+   transform:translateX kullanır; opacity+transform GPU'da neredeyse
+   bedavadır, blur/box-shadow animasyonu değildir. */
+.tab::after, .level-opt::after, .chip::after, .cat-trigger::after, .ctrl::after{
+  content:'';
+  position:absolute; top:-60%; bottom:-60%; width:34%;
+  background:linear-gradient(100deg, transparent, rgba(255,255,255,.16) 46%, transparent);
+  transform:translateX(-220%) rotate(9deg);
+  pointer-events:none;
+  z-index:3;
+}
+.tab:hover::after, .level-opt:hover::after, .chip:hover::after,
+.cat-trigger:hover::after, .ctrl:hover::after{
+  animation:btnSweep .62s var(--ease-out);
+}
+@keyframes btnSweep{
+  from{transform:translateX(-220%) rotate(9deg);}
+  to  {transform:translateX(360%) rotate(9deg);}
+}
+.tab:hover, .level-opt:hover, .chip:hover, .cat-trigger:hover, .ctrl:hover{
+  transform:translateY(-3px) scale(1.015);
+}
+.tab:active, .level-opt:active, .chip:active, .cat-trigger:active, .ctrl:active{
+  transform:translateY(0) scale(.955);
+  transition-duration:.1s;
+}
+
+@media (hover:none){
+  /* Dokunmatikte sweep, parmak kalkana kadar tetiklenmeyeceği için
+     yalnızca basma anında kısa bir geri bildirime dönüşür. */
+  .tab:active::after, .level-opt:active::after, .chip:active::after,
+  .cat-trigger:active::after, .ctrl:active::after{
+    animation:btnSweep .4s var(--ease-out);
+  }
+  .tab:hover, .level-opt:hover, .chip:hover, .cat-trigger:hover, .ctrl:hover{transform:none;}
+}
+@media (prefers-reduced-motion:reduce){
+  .face{animation:none; box-shadow:var(--shadow-l), var(--glow);}
+  .tab::after, .level-opt::after, .chip::after, .cat-trigger::after, .ctrl::after{display:none;}
+}
