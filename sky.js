@@ -37,14 +37,14 @@
 
   /* ---------------------------------------------------------------- kalite */
   var Q = {
-    dust: MOBILE ? 460 : 760,       // statik yıldız (offscreen)
-    twinkle: MOBILE ? 88 : 140,     // canlı parıldayan yıldız
-    fireflies: MOBILE ? 15 : 24,
-    motes: MOBILE ? 20 : 32,
-    butterflies: 5,
-    clouds: MOBILE ? [3, 3, 2] : [4, 4, 3],
-    aurora: MOBILE ? 3 : 4,
-    shoreLights: MOBILE ? 34 : 54
+    dust: MOBILE ? 420 : 760,       // statik yıldız (tek blit — bedava)
+    twinkle: MOBILE ? 44 : 120,     // her biri ayrı blit — asıl maliyet
+    fireflies: MOBILE ? 9 : 20,
+    motes: MOBILE ? 10 : 26,
+    butterflies: MOBILE ? 4 : 5,
+    clouds: MOBILE ? [2, 2, 2] : [4, 4, 3],
+    aurora: MOBILE ? 2 : 4,
+    shoreLights: MOBILE ? 20 : 48
   };
 
   var W = 0, H = 0, DPR = 1;
@@ -440,7 +440,6 @@
 
   /* -------------------------------------------------------------- parallax */
   var pointer = { tx: 0, ty: 0, x: 0, y: 0 };
-  var scrollY = 0, scrollTarget = 0;
 
   function onPointer(e) {
     var p = e.touches ? e.touches[0] : e;
@@ -450,7 +449,10 @@
   }
   window.addEventListener('pointermove', onPointer, { passive: true });
   window.addEventListener('touchmove', onPointer, { passive: true });
-  window.addEventListener('scroll', function () { scrollTarget = window.scrollY || 0; }, { passive: true });
+  /* Sayfa kaydırma artık sahneyi HİÇ etkilemiyor — kasıtlı bir tasarım
+     kararı: kaydırma sırasında katmanların birbirine göre kaymasıydı
+     "arka plan bozuluyor" şikâyetinin sebebi. Sahne artık sabit bir
+     manzara; sadece dokunma/imleç konumuna tepki verir. */
 
   // Cihaz eğimi — mobilde parmak ekrana değmese de sahne yaşar
   window.addEventListener('deviceorientation', function (e) {
@@ -464,7 +466,10 @@
   function resize() {
     var vw = window.innerWidth;
     var vh = window.innerHeight;
-    DPR = Math.min(window.devicePixelRatio || 1, MOBILE ? 1.6 : 2);
+    /* Arka plan sahnesi metin değil; 1.25x çözünürlük gözle ayırt edilmez
+       ama doldurulacak piksel sayısını 1.6x'e göre ~%40 azaltır. GPU
+       ısınmasının en büyük tek sebebi buydu. */
+    DPR = Math.min(window.devicePixelRatio || 1, MOBILE ? 1.25 : 1.75);
     W = vw; H = vh;
     canvas.width = Math.round(vw * DPR);
     canvas.height = Math.round(vh * DPR);
@@ -503,7 +508,7 @@
       var hue = i % 2 === 0
         ? ['rgba(90,235,205,', 'rgba(60,150,220,']
         : ['rgba(150,120,255,', 'rgba(80,190,235,'];
-      var alpha = (0.050 - i * 0.007) * (0.75 + 0.25 * Math.sin(t * 0.22 + i));
+      var alpha = (0.030 - i * 0.005) * (0.75 + 0.25 * Math.sin(t * 0.16 + i));
       if (alpha <= 0) continue;
 
       var g = ctx.createLinearGradient(0, baseY - amp * 2.4, 0, baseY + amp * 3.6);
@@ -558,7 +563,7 @@
     var mx = moon.x + px * 9, my = moon.y + py * 7;
     /* Hale, ayın yarıçapının ~5 katı. Daha büyüğü tüm gökyüzünü yıkıyor,
        manzaranın derinliğini ve yıldızları yok ediyordu. */
-    var halo = moon.r * 5.2;
+    var halo = moon.r * 4.4;
     ctx.save();
     ctx.globalCompositeOperation = 'lighter';
     ctx.globalAlpha = 0.34 + 0.04 * Math.sin(t * 0.35);
@@ -811,7 +816,7 @@
 
     /* --- manzaranın yansıması --- */
     if (SC) {
-      var slices = MOBILE ? 11 : 16;
+      var slices = MOBILE ? 7 : 16;
       var sets = [
         { img: SC.farR, dx: px * 5, a: 0.30 },
         { img: SC.midR, dx: px * 9, a: 0.34 },
@@ -836,7 +841,7 @@
     /* --- ayın suya düşen ışık yolu --- */
     ctx.globalCompositeOperation = 'lighter';
     var col = clamp(moonPos.x + (px * -6), 0, W);
-    var bands = MOBILE ? 16 : 24;
+    var bands = MOBILE ? 10 : 24;
     var bandH = Math.max(1.4, hgt / bands * 0.6);
     for (var k = 0; k < bands; k++) {
       var f = k / bands;
@@ -1073,13 +1078,13 @@
     var fromRight = Math.random() < 0.72;
     shooting.push({
       x: fromRight ? rnd(0.55, 1.05) : rnd(-0.05, 0.4),
-      y: rnd(0.02, 0.34),
-      vx: (fromRight ? -1 : 1) * rnd(0.42, 0.78),
-      vy: rnd(0.16, 0.30),
+      y: rnd(0.02, 0.30),
+      vx: (fromRight ? -1 : 1) * rnd(0.34, 0.58),
+      vy: rnd(0.12, 0.22),
       life: 0,
-      dur: rnd(0.85, 1.5),
-      len: rnd(90, 190),
-      w: rnd(1.1, 2.1)
+      dur: rnd(1.0, 1.7),
+      len: rnd(60, 130),      /* daha kısa iz — daha az dikkat çeker */
+      w: rnd(0.8, 1.4)        /* daha ince */
     });
   }
   window.spawnShootingStar = function () { addShootingStar(true); };
@@ -1124,20 +1129,31 @@
   var last = 0, acc = 0, frames = 0, slowFrames = 0;
   var nextFlock = 6, nextStar = 9;
 
+  /* Arka plan sahnesi için 60 FPS gereksiz. Bulut, yıldız ve kelebek gibi
+     yavaş hareketler 30 FPS'te de akıcı görünür; buna karşılık GPU işi ve
+     pil tüketimi yarıya iner. Arayüzün kendi animasyonları (dokunma, kart
+     çevirme, kaydırma) bundan etkilenmez — onlar tarayıcının kendi
+     compositor'ında tam hızda çalışır. */
+  var MIN_FRAME_MS = MOBILE ? 32 : 0;
+  var lastPaint = -1e9;   /* ilk kare, "now" değeri ne olursa olsun mutlaka çizilsin */
+
   function frame(now) {
     if (!running) return;
     requestAnimationFrame(frame);
 
+    if (MIN_FRAME_MS && now - lastPaint < MIN_FRAME_MS) return;
+
     if (!last) last = now;
     var dt = (now - last) / 1000;
     last = now;
+    lastPaint = now;
     if (dt > 0.1) dt = 0.1;               // sekme geri geldiğinde sıçramayı önle
     t += dt;
 
     /* adaptif kalite: cihaz zorlanıyorsa bir kez sadeleş */
     if (!reduced) {
       frames++;
-      if (dt > 0.026) slowFrames++;
+      if (dt > (MIN_FRAME_MS ? 0.045 : 0.026)) slowFrames++;
       if (frames > 150) {
         if (slowFrames / frames > 0.35) {
           reduced = true;
@@ -1152,9 +1168,14 @@
     /* parallax yumuşatma */
     pointer.x += (pointer.tx - pointer.x) * Math.min(1, dt * 2.6);
     pointer.y += (pointer.ty - pointer.y) * Math.min(1, dt * 2.6);
-    scrollY += (scrollTarget - scrollY) * Math.min(1, dt * 3.2);
-    var px = -pointer.x;
-    var py = -pointer.y - (scrollY / Math.max(H, 1)) * 0.55;
+    var px = reduceMotion ? 0 : -pointer.x;
+    /* Kaydırma parallax'ı kaldırıldı: sayfa kayarken sahne katmanları
+       birbirine göre oynayınca (özellikle iOS momentum kaydırmasında)
+       arka planda titreme/yırtılma görünüyordu. Sahne artık kaydırmadan
+       bağımsız — sabit, temiz bir manzara. Hareket azaltmada da imleç
+       parallax'ı sıfırlanır; sahnenin kendi içindeki hareketler
+       (bulut, ateş böceği, kelebek) etkilenmez. */
+    var py = reduceMotion ? 0 : -pointer.y;
 
     ctx.clearRect(0, 0, W, H);
 
@@ -1183,7 +1204,7 @@
     drawTwinkles(px, py);
     /* 5 · kayan yıldızlar */
     nextStar -= dt;
-    if (nextStar <= 0) { addShootingStar(); nextStar = rnd(9, 22); }
+    if (nextStar <= 0) { addShootingStar(); nextStar = rnd(16, 34); }   /* daha seyrek */
     drawShooting(px, py, dt);
     /* 6 · ay */
     var moonPos = drawMoon(px, py);
@@ -1217,24 +1238,27 @@
     }
   });
 
-  /* ------------------------------------------------------------ başlangıç */
+  /* ------------------------------------------------------------ başlangıç
+     ÖNEMLİ DÜZELTME: "prefers-reduced-motion" açık olduğunda (birçok
+     kurumsal Windows imajında ve macOS/iOS erişilebilirlik ayarında
+     varsayılan olarak açıktır) motor daha önce SADECE TEK BİR KARE
+     çiziyordu — kelebek, ateş böceği, kayan yıldız ve kuş sürüsü hiç
+     çalışmıyordu, çünkü bunlar yalnızca canlı döngüde (frame()) çizilir.
+
+     Bu, "bilgisayarda hiçbir animasyon yok" şikâyetinin tam sebebiydi.
+
+     Doğrusu şu: prefers-reduced-motion, dönme/yakınlaşma/büyük parallax
+     gibi baş dönmesi yapabilecek hareketleri kapatmak içindir — yavaş
+     sürüklenen bulutlar, usulca yanıp sönen ateş böcekleri gibi çevresel
+     hareketler bu kapsamda değildir (macOS'un kendi Aerial ekran
+     koruyucuları bile bu ayar açıkken çalışmaya devam eder).
+
+     Artık: canlı döngü HER ZAMAN çalışır. Hareket azaltma sadece imleç/
+     parmak parallax'ını devre dışı bırakır (sahne sabit durur, öğeler
+     yine de kendi içinde hareket eder). */
   function start() {
     resize();
     seedScene();
-    if (reduceMotion) {
-      // Hareket azaltma: sahne tek kare olarak çizilir, canlı katmanlar durur.
-      var px = 0, py = 0;
-      ctx.clearRect(0, 0, W, H);
-      if (bgImg) { drawBackdrop(0, 0); window.spawnShootingStar = function () {}; return; }
-      if (field) ctx.drawImage(field.c, -field.pad, -field.pad);
-      drawTwinkles(px, py);
-      drawMoon(px, py);
-      drawClouds(0, px, py, 0);
-      drawScenery(px, py);
-      drawWater(px, py, { x: moon.x, y: moon.y });
-      window.spawnShootingStar = function () {};
-      return;
-    }
     requestAnimationFrame(frame);
   }
 

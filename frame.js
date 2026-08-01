@@ -35,8 +35,10 @@
     var g = '<g transform="translate(' + cx.toFixed(1) + ',' + cy.toFixed(1) + ') rotate(' + (tilt || 0).toFixed(1) + ')">';
     for (var i = 0; i < n; i++) {
       var a = (360 / n) * i + R(-9, 9);
-      var rx = r * R(0.30, 0.40);
-      var ry = r * R(0.86, 1.06);
+      /* Sakura taç yaprağı: eskisinden daha kısa ve daha geniş — yıldız
+         gibi sivri değil, kiraz çiçeğine özgü yuvarlak/çentikli form. */
+      var rx = r * R(0.44, 0.54);
+      var ry = r * R(0.62, 0.76);
       g += '<ellipse cx="0" cy="' + (-ry * 0.62).toFixed(1) + '" rx="' + rx.toFixed(1) +
            '" ry="' + ry.toFixed(1) + '" fill="' + (i % 2 ? c1 : c2) +
            '" transform="rotate(' + a.toFixed(1) + ')"/>';
@@ -73,8 +75,8 @@
                   [102, 44, 13], [130, 38, 11], [82, 86, 12], [96, 120, 14], [110, 148, 11],
                   [30, 48, 10], [68, 14, 12]];
     for (var b = 0; b < blooms.length; b++) {
-      s += bloom(blooms[b][0], blooms[b][1], blooms[b][2], 6,
-        'rgba(196,120,255,.95)', 'rgba(150,84,226,.95)', R(0, 360));
+      s += bloom(blooms[b][0], blooms[b][1], blooms[b][2], 5,
+        'rgba(255,214,226,.94)', 'rgba(255,178,201,.94)', R(0, 360));
     }
     return s + '</g>';
   }
@@ -98,12 +100,12 @@
       s += leaf(R(0, 180), R(160, 186), R(18, 30), R(-30, 30), 'rgba(7,10,24,.95)');
     }
     /* çiçekler */
-    var pal = [['rgba(255,138,196,.95)', 'rgba(226,86,158,.95)'],
-               ['rgba(196,120,255,.95)', 'rgba(146,80,224,.95)'],
-               ['rgba(255,170,214,.95)', 'rgba(232,110,178,.95)']];
+    var pal = [['rgba(255,222,232,.94)', 'rgba(255,188,208,.94)'],
+               ['rgba(255,201,218,.94)', 'rgba(240,150,178,.94)'],
+               ['rgba(255,235,240,.94)', 'rgba(255,202,218,.94)']];
     for (var k = 0; k < stems.length; k++) {
       var p = pal[k % pal.length];
-      s += bloom(stems[k][2], stems[k][3], R(11, 17), 7, p[0], p[1], R(0, 360));
+      s += bloom(stems[k][2], stems[k][3], R(11, 17), 5, p[0], p[1], R(0, 360));
     }
     return s + '</g>';
   }

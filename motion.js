@@ -149,55 +149,25 @@
   }
 
   /* ======================================================================
-     2 · İMLEÇ IŞIĞI
-     Cam yüzeylerde parmağın/imlecin izlediği parlaklık. Tek bir dinleyici,
-     rAF ile sınırlandırılmış, sadece üzerinde durulan öğeye yazılır.
+     2 · İMLEÇ IŞIĞI VE MANYETİK BUTONLAR — KALDIRILDI
+
+     Bu iki özellik iki sebeple çıkarıldı:
+
+     1) Tasarım kararı: Hover artık sadece hafif translateY + gölge +
+        ince kenar aydınlatması yapıyor (sky.css Bölüm 5). Kalıcı olarak
+        imleci izleyen bir ışık veya butonun imlece doğru kayması,
+        "sakin ve premium" yerine "dikkat çeken efekt" hissi veriyordu.
+
+     2) Gerçek bir performans hatası: magnetize() her .ctrl butonuna
+        THROTTLE'SIZ bir pointermove dinleyicisi bağlıyor ve her olayda
+        doğrudan inline transform yazıyordu. Fare hareketi genelde
+        requestAnimationFrame'den çok daha sık tetiklenir; bu da saniyede
+        yüzlerce gereksiz stil güncellemesi ve — komşu öğelerdeki
+        backdrop-filter ile birleşince — masaüstünde hissedilir bir
+        "kasma" anlamına geliyordu. Kaldırılması hem tasarım hem
+        performans için doğruydu.
      ==================================================================== */
-  var spotTarget = null, spotX = 0, spotY = 0, spotQueued = false;
-  var GLASS = '.lang-opt, .tab, .level-opt, .cat-trigger, .chip';
 
-  function applySpot() {
-    spotQueued = false;
-    if (!spotTarget) return;
-    var r = spotTarget.getBoundingClientRect();
-    spotTarget.style.setProperty('--mx', ((spotX - r.left) / r.width * 100).toFixed(1) + '%');
-    spotTarget.style.setProperty('--my', ((spotY - r.top) / r.height * 100).toFixed(1) + '%');
-  }
-
-  if (fine) {
-    document.addEventListener('pointermove', function (e) {
-      var el = e.target.closest ? e.target.closest(GLASS) : null;
-      spotTarget = el; spotX = e.clientX; spotY = e.clientY;
-      if (el && !spotQueued) { spotQueued = true; requestAnimationFrame(applySpot); }
-    }, { passive: true });
-  }
-
-  /* ======================================================================
-     3 · MANYETİK BUTONLAR
-     İmleç yaklaştıkça buton birkaç piksel ona doğru kayar. Küçük bir
-     hareket ama arayüzü "canlı" hissettiren detay.
-     ==================================================================== */
-  function magnetize() {
-    if (!fine || reduceMotion) return;
-    var btns = document.querySelectorAll('.ctrl');
-    for (var i = 0; i < btns.length; i++) {
-      (function (b) {
-        if (b.__mag) return; b.__mag = true;
-        b.addEventListener('pointermove', function (e) {
-          var r = b.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) / r.width;
-          var dy = (e.clientY - (r.top + r.height / 2)) / r.height;
-          b.style.transform = 'translate3d(' + (dx * 6).toFixed(2) + 'px,' + (dy * 5 - 2).toFixed(2) + 'px,0)';
-        }, { passive: true });
-        b.addEventListener('pointerleave', function () { b.style.transform = ''; }, { passive: true });
-      })(btns[i]);
-    }
-  }
-
-  /* ======================================================================
-     4 · DOKUNSAL GERİ BİLDİRİM
-     Mobilde seçim yaparken çok kısa titreşim — native uygulama hissi.
-     ==================================================================== */
   function haptic(ms) {
     if (navigator.vibrate && !reduceMotion) { try { navigator.vibrate(ms || 8); } catch (e) {} }
   }
@@ -439,7 +409,6 @@
   function init() {
     document.documentElement.classList.add('motion-ready');
     injectLandmarks();
-    magnetize();
     wrapSetDisplay();
     bindLanguageMoment();
     bindQuizFeedback();
@@ -448,9 +417,6 @@
     initLenis();
     watchSplash();
 
-    /* sonradan DOM'a eklenen butonlar için (quiz seçenekleri vb.) */
-    var mo = new MutationObserver(function () { magnetize(); });
-    mo.observe(document.body, { childList: true, subtree: true });
   }
 
   if (document.readyState === 'loading') {
