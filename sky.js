@@ -273,6 +273,55 @@
     SP.reflCyan = reflSprite('150,225,255');
   }
 
+  /* ======================================================================
+     SAHNE GÖRSELİ (isteğe bağlı)
+
+     Kodla çizilen manzara, boyanmış bir illüstrasyonun yerini tutamaz.
+     Bu yüzden: klasörde bir sahne görseli varsa motor onu kullanır ve
+     üstüne SADECE canlı katmanları çizer (kelebek, ateş böceği, kayan
+     yıldız, kuş, toz). Görsel yoksa kodla üretilen manzaraya döner.
+
+     Aranan dosya adları (sırayla):
+        scene.jpg · scene.png · bg.jpg · bg.png · background.jpg/png
+
+     Görsel bulunduğunda <html> öğesine "has-bg" sınıfı eklenir; CSS de
+     kodla çizilen ön plan çerçevesini (çiçekler, fener, masa) gizler —
+     çünkü görselin kendisinde zaten vardır.
+     ==================================================================== */
+  var bgImg = null;
+
+  function loadBackdrop() {
+    if (typeof Image === 'undefined') return;
+    var names = ['scene.jpg', 'scene.png', 'scene.webp',
+                 'bg.jpg', 'bg.png', 'bg.webp',
+                 'background.jpg', 'background.png'];
+    var i = 0;
+    (function next() {
+      if (i >= names.length) return;
+      var im = new Image();
+      im.onload = function () {
+        if (!im.naturalWidth) { i++; next(); return; }
+        bgImg = im;
+        document.documentElement.classList.add('has-bg');
+      };
+      im.onerror = function () { i++; next(); };
+      im.src = names[i];
+    })();
+  }
+  loadBackdrop();
+
+  /* Görseli ekrana "cover" mantığıyla oturtur ve parallax için hafifçe
+     büyütür; böylece kaydırırken kenar açılmaz. */
+  function drawBackdrop(px, py) {
+    var over = 1.06;
+    var iw = bgImg.naturalWidth, ih = bgImg.naturalHeight;
+    var scale = Math.max(W / iw, H / ih) * over;
+    var dw = iw * scale, dh = ih * scale;
+    var dx = (W - dw) / 2 + px * 10;
+    var dy = (H - dh) / 2 + py * 8;
+    ctx.drawImage(bgImg, dx, dy, dw, dh);
+  }
+
   /* ------------------------------------------------------------- varlıklar */
   var field = null;
   var twinkles = [], clouds = [[], [], []], fireflies = [], motes = [],
@@ -1109,6 +1158,21 @@
 
     ctx.clearRect(0, 0, W, H);
 
+    /* Sahne görseli varsa: onu çiz, üstüne yalnızca canlı katmanları ekle. */
+    if (bgImg) {
+      drawBackdrop(px, py);
+      nextStar -= dt;
+      if (nextStar <= 0) { addShootingStar(); nextStar = rnd(9, 22); }
+      drawShooting(px, py, dt);
+      nextFlock -= dt;
+      if (nextFlock <= 0 && flocks.length < 2) { spawnFlock(); nextFlock = rnd(22, 46); }
+      drawFlocks(px, py, dt);
+      drawMotes(px, py, dt);
+      drawFireflies(px, py, dt);
+      for (var bi = 0; bi < butterflies.length; bi++) drawButterfly(butterflies[bi], px, py, dt);
+      return;
+    }
+
     /* 1-2 · derin yıldız alanı + samanyolu */
     if (field) {
       ctx.drawImage(field.c, -field.pad + px * 4, -field.pad + py * 3);
@@ -1161,6 +1225,7 @@
       // Hareket azaltma: sahne tek kare olarak çizilir, canlı katmanlar durur.
       var px = 0, py = 0;
       ctx.clearRect(0, 0, W, H);
+      if (bgImg) { drawBackdrop(0, 0); window.spawnShootingStar = function () {}; return; }
       if (field) ctx.drawImage(field.c, -field.pad, -field.pad);
       drawTwinkles(px, py);
       drawMoon(px, py);

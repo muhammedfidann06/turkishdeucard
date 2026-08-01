@@ -1764,9 +1764,9 @@ applyFilter();
     return Array.from({length:n}, () => ({
       x: Math.random()*w,
       y: Math.random()*h,
-      r: Math.random()*2.4 + 1.0,
-      speedY: Math.random()*0.55 + 0.16,
-      speedX: Math.random()*0.5 - 0.25,
+      r: Math.random()*9 + 4,
+      speedY: Math.random()*1.6 + 0.7,
+      speedX: Math.random()*1.0 - 0.5,
       rot: Math.random()*Math.PI*2,
       rotSpeed: (Math.random()*0.05 - 0.025),
       drift: Math.random()*Math.PI*2,
@@ -1776,43 +1776,55 @@ applyFilter();
     }));
   }
   
-  flakes = makeFlakes(78);
-
-  /* Işıldayan polen — göl kıyısının yaz gecesi atmosferine uyar.
-     Her tanecik bir kez sprite'a çizilir, sonra sadece kopyalanır. */
-  const moteSprite = (function(){
-    const s = document.createElement('canvas');
-    s.width = s.height = 64;
-    const c = s.getContext('2d');
-    const g = c.createRadialGradient(32,32,0,32,32,32);
-    g.addColorStop(0,   'rgba(255,255,255,0.95)');
-    g.addColorStop(0.16,'rgba(206,240,255,0.55)');
-    g.addColorStop(0.42,'rgba(150,205,255,0.14)');
-    g.addColorStop(1,   'rgba(120,170,255,0)');
-    c.fillStyle = g;
-    c.fillRect(0,0,64,64);
-    return s;
-  })();
+  flakes = makeFlakes(62);
 
   function drawCrystal(f){
-    const pulse = 0.55 + 0.45*Math.sin(f.drift*2.1);
-    const d = f.r * 9 * (0.75 + pulse*0.45);
-    ctx.globalAlpha = f.opacity * (0.35 + pulse*0.65);
-    ctx.drawImage(moteSprite, f.x - d/2, f.y - d/2, d, d);
+    ctx.save();
+    ctx.translate(f.x, f.y);
+    ctx.rotate(f.rot);
+    ctx.globalAlpha = f.opacity;
+    ctx.strokeStyle = `rgba(${f.hue},1)`;
+    ctx.fillStyle = `rgba(${f.hue},1)`;
+    ctx.lineWidth = Math.max(0.6, f.r*0.09);
+    
+    for(let i=0;i<6;i++){
+      ctx.save();
+      ctx.rotate((Math.PI/3)*i);
+      ctx.beginPath();
+      ctx.moveTo(0,0);
+      ctx.lineTo(0, f.r);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(0, f.r*0.45);
+      ctx.lineTo(f.r*0.22, f.r*0.62);
+      ctx.moveTo(0, f.r*0.45);
+      ctx.lineTo(-f.r*0.22, f.r*0.62);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(0, f.r*0.75);
+      ctx.lineTo(f.r*0.16, f.r*0.88);
+      ctx.moveTo(0, f.r*0.75);
+      ctx.lineTo(-f.r*0.16, f.r*0.88);
+      ctx.stroke();
+      ctx.restore();
+    }
+    ctx.beginPath();
+    ctx.arc(0,0,f.r*0.14,0,Math.PI*2);
+    ctx.fill();
+    ctx.restore();
   }
 
   function tick(){
     if(!running) return;
     ctx.clearRect(0,0,w,h);
-    ctx.globalCompositeOperation = 'lighter';
     windPhase += 0.012;
     const gust = Math.sin(windPhase) * 0.6;
     flakes.forEach(f=>{
       f.drift += f.driftSpeed;
       f.rot += f.rotSpeed;
-      f.y -= f.speedY;
+      f.y += f.speedY;
       f.x += f.speedX + gust + Math.sin(f.drift)*0.6;
-      if(f.y < -14){ f.y = h + 14; f.x = Math.random()*w; }
+      if(f.y > h + 12){ f.y = -12; f.x = Math.random()*w; }
       if(f.x > w + 12) f.x = -12;
       if(f.x < -12) f.x = w + 12;
       drawCrystal(f);

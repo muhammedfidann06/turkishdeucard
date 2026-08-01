@@ -341,13 +341,9 @@ html.motion-ready .app{transform:none; transition:opacity .5s var(--ease-out);}
    uygulanmaz ve arayüz normal görünür — efekt asla içeriği rehin almaz.      */
 html.motion-ready .reveal-in{opacity:0; will-change:transform,opacity;}
 
-/* ------------------------------------------------------------------ splash */
-#splash{
-  background:
-    radial-gradient(120% 80% at 50% 30%, rgba(12,20,52,.55), rgba(3,5,14,.86) 70%);
-  -webkit-backdrop-filter:blur(3px);
-  backdrop-filter:blur(3px);
-}
+/* ------------------------------------------------------------------ splash
+   Splash ekranı kullanıcının isteği üzerine ORİJİNAL hâlinde bırakıldı:
+   kendi koyu zemini ve kar teması. Sadece başlık ışığı korunur. */
 .splash-name{
   letter-spacing:.16em;
   text-shadow:0 0 40px rgba(130,190,255,.45), 0 2px 2px rgba(0,0,0,.5);
@@ -810,3 +806,17 @@ body{
   background:radial-gradient(closest-side, rgba(255,172,96,.15), rgba(255,140,70,.05) 50%, transparent 76%);
 }
 @media (prefers-reduced-motion:reduce){ #scene-frame .fr-glow{animation:none !important;} }
+
+/* ============================================================================
+   SAHNE GÖRSELİ MODU
+   Klasörde scene.jpg / bg.png gibi bir sahne görseli bulunduğunda <html>
+   öğesine "has-bg" sınıfı eklenir. O durumda kodla çizilen ön plan
+   (çiçekler, fener, masa) gizlenir — görselin kendisinde zaten vardır —
+   ve tonlama katmanı hafifletilir ki illüstrasyonun renkleri bozulmasın.
+   ========================================================================== */
+html.has-bg #scene-frame{display:none;}
+html.has-bg #grade{
+  background:radial-gradient(130% 85% at 50% 42%, rgba(0,0,0,0) 55%, rgba(2,3,10,.28) 88%, rgba(2,3,10,.5) 100%);
+}
+html.has-bg #grain{opacity:.018;}
+html.has-bg body{background:#05070f;}
