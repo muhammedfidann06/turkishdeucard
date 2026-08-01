@@ -387,117 +387,6 @@
   .credit{text-align:center;font-size:11px;color:var(--muted);margin-top:26px;letter-spacing:.06em;opacity:.75;background:rgba(10,14,24,0.35);padding:8px 12px;border-radius:10px;}
   .credit b{color:var(--cyan-soft);font-weight:700;text-shadow:0 0 8px rgba(79,232,255,0.5);}
 
-  /* ===== KAYAN YILDIZ ===== */
-  #fxLayer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
-  .shooting-star{
-    position:absolute;height:2px;border-radius:3px;
-    background:linear-gradient(90deg, rgba(255,255,255,0.95), rgba(180,215,255,0.5), transparent);
-    box-shadow:0 0 10px 2px rgba(79,232,255,0.85), 0 0 22px 6px rgba(155,123,255,0.45);
-    transform-origin:left center;opacity:0;
-    animation:shoot var(--dur,1s) ease-out forwards;
-  }
-  .shooting-star::after{
-    content:'';position:absolute;left:0;top:50%;width:5px;height:5px;border-radius:50%;
-    background:#fff;box-shadow:0 0 12px 5px rgba(255,255,255,0.95), 0 0 24px 10px rgba(155,123,255,0.5);
-    transform:translate(-50%,-50%);
-  }
-  @keyframes shoot{
-    0%{transform:translate(0,0) rotate(var(--ang,-22deg)) scaleX(0.15);opacity:0;}
-    12%{opacity:1;transform:translate(0,0) rotate(var(--ang,-22deg)) scaleX(1);}
-    100%{transform:translate(var(--dx,-320px),var(--dy,150px)) rotate(var(--ang,-22deg)) scaleX(1);opacity:0;}
-  }
-
-  /* ===== AY VE YILDIZLAR ===== */
-  .moon{
-    position:absolute;top:6%;right:8%;width:72px;height:72px;border-radius:50%;
-    background:radial-gradient(circle at 35% 35%, #fdfdf7, #d7dceb 55%, #a9b0c4 100%);
-    box-shadow:0 0 30px 10px rgba(230,238,255,0.4), 0 0 70px 26px rgba(140,170,255,0.18);
-    animation:moonFloat 10s ease-in-out infinite;
-  }
-  .moon::after{
-    content:'';position:absolute;top:18%;left:58%;width:14px;height:14px;border-radius:50%;
-    background:rgba(160,170,190,0.35);box-shadow:10px 16px 0 -3px rgba(160,170,190,0.25);
-  }
-  @keyframes moonFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
-  .star{
-    position:absolute;border-radius:50%;
-    background:radial-gradient(circle, #fff 0%, rgba(255,255,255,0.55) 45%, transparent 75%);
-    animation:twinkle ease-in-out infinite;
-  }
-  .star.sparkle::before,.star.sparkle::after{
-    content:'';position:absolute;top:50%;left:50%;
-    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.95), transparent);
-    transform:translate(-50%,-50%);
-  }
-  .star.sparkle::before{width:var(--ray,10px);height:1px;}
-  .star.sparkle::after{width:1px;height:var(--ray,10px);}
-  @keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7);}50%{opacity:1;transform:scale(1.15);}}
-
-  /* ===== BULUTLAR (gerçekçi, ayın önünden geçebilir) ===== */
-  .cloud{
-    position:absolute;left:-200px;border-radius:50%;
-    background:rgba(222,231,244,0.5);
-    filter:blur(3px);
-    animation-name:cloudDrift;animation-timing-function:linear;animation-iteration-count:infinite;
-    transition:opacity .4s ease;
-  }
-  .cloud::before,.cloud::after{
-    content:'';position:absolute;background:inherit;border-radius:50%;
-  }
-  .cloud::before{width:55%;height:150%;top:-52%;left:16%;}
-  .cloud::after{width:42%;height:120%;top:-32%;left:56%;}
-  @keyframes cloudDrift{
-    0%{transform:translateX(0);}
-    100%{transform:translateX(calc(100vw + 400px));}
-  }
-
-  /* ===== KELEBEK (yakında, sürekli süzülen) ===== */
-  .butterfly{position:absolute;width:22px;height:16px;top:48%;left:15%;animation:flutterPath 16s ease-in-out infinite;}
-  .butterfly svg{width:100%;height:100%;display:block;overflow:visible;}
-  .butterfly .bwing-l{transform-origin:11px 8px;animation:bflapL .13s ease-in-out infinite alternate;}
-  .butterfly .bwing-r{transform-origin:11px 8px;animation:bflapR .13s ease-in-out infinite alternate;}
-  @keyframes bflapL{0%{transform:rotate(0deg) scaleX(1);}100%{transform:rotate(24deg) scaleX(0.55);}}
-  @keyframes bflapR{0%{transform:rotate(0deg) scaleX(1);}100%{transform:rotate(-24deg) scaleX(0.55);}}
-  @keyframes flutterPath{
-    0%{transform:translate(0,0);}
-    18%{transform:translate(60px,-45px);}
-    36%{transform:translate(130px,15px);}
-    54%{transform:translate(80px,70px);}
-    72%{transform:translate(-30px,40px);}
-    88%{transform:translate(-50px,-20px);}
-    100%{transform:translate(0,0);}
-  }
-
-  /* ===== KUŞLAR (gerçekçi gövde + kanat, sürü hâlinde uçuş) ===== */
-  .bird{position:absolute;width:26px;height:14px;opacity:0;pointer-events:none;}
-  .bird svg{width:100%;height:100%;display:block;overflow:visible;}
-  .bird .wing-l{transform-origin:13px 8px;animation:flapL .28s ease-in-out infinite alternate;}
-  .bird .wing-r{transform-origin:13px 8px;animation:flapR .28s ease-in-out infinite alternate;}
-  @keyframes flapL{0%{transform:rotate(2deg);}100%{transform:rotate(24deg);}}
-  @keyframes flapR{0%{transform:rotate(-2deg);}100%{transform:rotate(-24deg);}}
-  @keyframes birdFlyA{
-    0%{opacity:0;transform:translate(-30px,0);}
-    8%{opacity:.85;}
-    22%{transform:translate(22vw,-22px);}
-    40%{transform:translate(40vw,8px);}
-    58%{transform:translate(58vw,-16px);}
-    76%{transform:translate(76vw,6px);}
-    92%{opacity:.85;}
-    100%{opacity:0;transform:translate(calc(100vw + 30px),-24px);}
-  }
-  @keyframes birdFlyB{
-    0%{opacity:0;transform:translate(-30px,0);}
-    8%{opacity:.85;}
-    22%{transform:translate(22vw,10px);}
-    40%{transform:translate(40vw,-18px);}
-    58%{transform:translate(58vw,4px);}
-    76%{transform:translate(76vw,-14px);}
-    92%{opacity:.85;}
-    100%{opacity:0;transform:translate(calc(100vw + 30px),18px);}
-  }
-  .bird.flying-a{animation-name:birdFlyA;animation-timing-function:linear;animation-fill-mode:forwards;}
-  .bird.flying-b{animation-name:birdFlyB;animation-timing-function:linear;animation-fill-mode:forwards;}
-
   /* ===== İSİM MODALI ===== */
   #nameOverlay{
     position:fixed;inset:0;z-index:1000;
@@ -633,7 +522,9 @@
       transition-duration:0.001ms !important;
       scroll-behavior:auto !important;
     }
-    .shooting-star, .moon, .star, .cloud, .bird, .butterfly{display:none !important;}
+    /* Sahne motoru kendi içinde hareketi zaten durdurur (tek kare çizer);
+       burada sadece grain katmanı kapatılır. */
+    #grain{display:none !important;}
   }
   /* ===== BİLGİ / NASIL KULLANILIR PANELLERİ ===== */
   .info-overlay{
@@ -702,23 +593,14 @@
     animation:pmNeonShift 4s ease-in-out infinite;
   }
 </style>
+<link rel="stylesheet" href="sky.css">
 </head>
 <body>
 
-<div id="fxLayer">
-  <div class="moon"></div>
-  <div id="starsField"></div>
-  <div class="cloud" style="top:10%;width:120px;height:40px;animation-duration:75s;animation-delay:-10s;"></div>
-  <div class="cloud" style="top:20%;width:85px;height:28px;animation-duration:95s;animation-delay:-45s;"></div>
-  <div class="cloud" style="top:4%;width:65px;height:22px;animation-duration:62s;animation-delay:-25s;"></div>
-  <div class="butterfly" aria-hidden="true">
-    <svg viewBox="0 0 22 16">
-      <line x1="11" y1="3" x2="11" y2="13" stroke="rgba(255,255,255,0.9)" stroke-width="1"/>
-      <ellipse class="bwing-l" cx="5" cy="7" rx="5.5" ry="4" fill="rgba(255,255,255,0.88)"/>
-      <ellipse class="bwing-r" cx="17" cy="7" rx="5.5" ry="4" fill="rgba(255,255,255,0.88)"/>
-    </svg>
-  </div>
-</div>
+<!-- ===== SAHNE: gece göl atmosferi (sky.js tarafından çizilir) ===== -->
+<canvas id="sky" aria-hidden="true"></canvas>
+<div id="grade" aria-hidden="true"></div>
+<div id="grain" aria-hidden="true"></div>
 
 <div id="nameOverlay">
   <div class="name-card">
@@ -1868,118 +1750,6 @@ rebuildLevelBox();
 rebuildChips();
 applyFilter();
 
-/* ======================= AY, YILDIZLAR & KAYAN YILDIZ ======================= */
-(function(){
-  const field = document.getElementById('starsField');
-  if(!field) return;
-  const n = 130;
-  for(let i=0;i<n;i++){
-    const s = document.createElement('div');
-    s.className = 'star';
-    const roll = Math.random();
-    let size;
-    if(roll < 0.68) size = Math.random()*0.9 + 0.5;
-    else if(roll < 0.9) size = Math.random()*1.5 + 1.6;
-    else size = Math.random()*2.2 + 3.2;
-    s.style.width = size.toFixed(1) + 'px';
-    s.style.height = size.toFixed(1) + 'px';
-    s.style.top = (Math.random()*92) + '%';
-    s.style.left = (Math.random()*100) + '%';
-    s.style.animationDuration = (Math.random()*3.5 + 1.8).toFixed(1) + 's';
-    s.style.animationDelay = (Math.random()*5).toFixed(1) + 's';
-    if(size > 2.2 && Math.random() < 0.5){
-      s.classList.add('sparkle');
-      s.style.setProperty('--ray', (size*6).toFixed(1) + 'px');
-    }
-    field.appendChild(s);
-  }
-})();
-
-/* ======================= KUŞLAR (1-3 kişilik oyunbaz sürü, arada bir geçer) ======================= */
-(function(){
-  const layer = document.getElementById('fxLayer');
-  if(!layer) return;
-
-  const BIRD_SVG = '<svg viewBox="0 0 26 14">' +
-    '<ellipse cx="13" cy="8" rx="3.4" ry="2.1" fill="rgba(222,231,244,0.85)"/>' +
-    '<path class="wing-l" d="M13 8 Q6 1 1 6.5" stroke="rgba(222,231,244,0.85)" stroke-width="1.9" fill="none" stroke-linecap="round"/>' +
-    '<path class="wing-r" d="M13 8 Q20 1 25 6.5" stroke="rgba(222,231,244,0.85)" stroke-width="1.9" fill="none" stroke-linecap="round"/>' +
-    '</svg>';
-
-  function spawnOneBird(baseTop, variant, delayMs, duration){
-    setTimeout(() => {
-      const bird = document.createElement('div');
-      bird.className = 'bird ' + (variant === 0 ? 'flying-a' : 'flying-b');
-      bird.style.top = baseTop + '%';
-      bird.style.animationDuration = duration + 's';
-      bird.innerHTML = BIRD_SVG;
-      layer.appendChild(bird);
-      setTimeout(() => bird.remove(), duration*1000 + 300);
-    }, delayMs);
-  }
-
-  function spawnFlock(){
-    const count = Math.floor(Math.random()*3) + 1;
-    const baseTop = Math.random()*22 + 8;
-    const duration = (Math.random()*3 + 8).toFixed(1);
-    for(let i=0;i<count;i++){
-      const top = baseTop + (Math.random()*8 - 4) + i*3;
-      const variant = i % 2;
-      const delay = i * (Math.random()*400 + 150);
-      const dur = (parseFloat(duration) + (Math.random()*1.2 - 0.6)).toFixed(1);
-      spawnOneBird(top, variant, delay, dur);
-    }
-  }
-
-  function scheduleFlock(){
-    const delay = Math.random()*18000 + 25000;
-    setTimeout(() => { spawnFlock(); scheduleFlock(); }, delay);
-  }
-  scheduleFlock();
-})();
-
-/* ======================= BULUT AYIN ÖNÜNDEN GEÇERSE IŞIĞINI KISAR ======================= */
-(function(){
-  const moon = document.querySelector('.moon');
-  if(!moon) return;
-  function tick(){
-    const clouds = document.querySelectorAll('.cloud');
-    const moonRect = moon.getBoundingClientRect();
-    const moonArea = Math.max(1, moonRect.width * moonRect.height);
-    let covered = 0;
-    clouds.forEach(cloud => {
-      const r = cloud.getBoundingClientRect();
-      const overlapX = Math.max(0, Math.min(r.right, moonRect.right) - Math.max(r.left, moonRect.left));
-      const overlapY = Math.max(0, Math.min(r.bottom, moonRect.bottom) - Math.max(r.top, moonRect.top));
-      if(overlapX > 0 && overlapY > 0){
-        covered = Math.max(covered, (overlapX * overlapY) / moonArea);
-      }
-    });
-    moon.style.opacity = (1 - Math.min(covered * 1.3, 0.7)).toFixed(2);
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-})();
-
-function spawnShootingStar(){
-  const layer = document.getElementById('fxLayer');
-  const star = document.createElement('div');
-  star.className = 'shooting-star';
-  const len = Math.random()*40 + 60;
-  star.style.width = len.toFixed(0) + 'px';
-  star.style.top = (Math.random()*40 + 5) + '%';
-  star.style.left = (Math.random()*40 + 45) + '%';
-  const dur = (Math.random()*0.4 + 0.6);
-  const dist = Math.random()*150 + 180;
-  const ang = -(Math.random()*16 + 16);
-  star.style.setProperty('--dur', dur.toFixed(2) + 's');
-  star.style.setProperty('--dx', (-dist).toFixed(0) + 'px');
-  star.style.setProperty('--dy', (dist*0.48).toFixed(0) + 'px');
-  star.style.setProperty('--ang', ang.toFixed(0) + 'deg');
-  layer.appendChild(star);
-  setTimeout(() => star.remove(), dur*1000 + 300);
-}
-
 /* ======================= SNOW / CRYSTAL EFFECT ======================= */
 (function(){
   const canvas = document.getElementById('snowCanvas');
@@ -1994,9 +1764,9 @@ function spawnShootingStar(){
     return Array.from({length:n}, () => ({
       x: Math.random()*w,
       y: Math.random()*h,
-      r: Math.random()*9 + 4,
-      speedY: Math.random()*1.6 + 0.7,
-      speedX: Math.random()*1.0 - 0.5,
+      r: Math.random()*2.4 + 1.0,
+      speedY: Math.random()*0.55 + 0.16,
+      speedX: Math.random()*0.5 - 0.25,
       rot: Math.random()*Math.PI*2,
       rotSpeed: (Math.random()*0.05 - 0.025),
       drift: Math.random()*Math.PI*2,
@@ -2006,55 +1776,43 @@ function spawnShootingStar(){
     }));
   }
   
-  flakes = makeFlakes(62);
+  flakes = makeFlakes(78);
+
+  /* Işıldayan polen — göl kıyısının yaz gecesi atmosferine uyar.
+     Her tanecik bir kez sprite'a çizilir, sonra sadece kopyalanır. */
+  const moteSprite = (function(){
+    const s = document.createElement('canvas');
+    s.width = s.height = 64;
+    const c = s.getContext('2d');
+    const g = c.createRadialGradient(32,32,0,32,32,32);
+    g.addColorStop(0,   'rgba(255,255,255,0.95)');
+    g.addColorStop(0.16,'rgba(206,240,255,0.55)');
+    g.addColorStop(0.42,'rgba(150,205,255,0.14)');
+    g.addColorStop(1,   'rgba(120,170,255,0)');
+    c.fillStyle = g;
+    c.fillRect(0,0,64,64);
+    return s;
+  })();
 
   function drawCrystal(f){
-    ctx.save();
-    ctx.translate(f.x, f.y);
-    ctx.rotate(f.rot);
-    ctx.globalAlpha = f.opacity;
-    ctx.strokeStyle = `rgba(${f.hue},1)`;
-    ctx.fillStyle = `rgba(${f.hue},1)`;
-    ctx.lineWidth = Math.max(0.6, f.r*0.09);
-    
-    for(let i=0;i<6;i++){
-      ctx.save();
-      ctx.rotate((Math.PI/3)*i);
-      ctx.beginPath();
-      ctx.moveTo(0,0);
-      ctx.lineTo(0, f.r);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.moveTo(0, f.r*0.45);
-      ctx.lineTo(f.r*0.22, f.r*0.62);
-      ctx.moveTo(0, f.r*0.45);
-      ctx.lineTo(-f.r*0.22, f.r*0.62);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.moveTo(0, f.r*0.75);
-      ctx.lineTo(f.r*0.16, f.r*0.88);
-      ctx.moveTo(0, f.r*0.75);
-      ctx.lineTo(-f.r*0.16, f.r*0.88);
-      ctx.stroke();
-      ctx.restore();
-    }
-    ctx.beginPath();
-    ctx.arc(0,0,f.r*0.14,0,Math.PI*2);
-    ctx.fill();
-    ctx.restore();
+    const pulse = 0.55 + 0.45*Math.sin(f.drift*2.1);
+    const d = f.r * 9 * (0.75 + pulse*0.45);
+    ctx.globalAlpha = f.opacity * (0.35 + pulse*0.65);
+    ctx.drawImage(moteSprite, f.x - d/2, f.y - d/2, d, d);
   }
 
   function tick(){
     if(!running) return;
     ctx.clearRect(0,0,w,h);
+    ctx.globalCompositeOperation = 'lighter';
     windPhase += 0.012;
     const gust = Math.sin(windPhase) * 0.6;
     flakes.forEach(f=>{
       f.drift += f.driftSpeed;
       f.rot += f.rotSpeed;
-      f.y += f.speedY;
+      f.y -= f.speedY;
       f.x += f.speedX + gust + Math.sin(f.drift)*0.6;
-      if(f.y > h + 12){ f.y = -12; f.x = Math.random()*w; }
+      if(f.y < -14){ f.y = h + 14; f.x = Math.random()*w; }
       if(f.x > w + 12) f.x = -12;
       if(f.x < -12) f.x = w + 12;
       drawCrystal(f);
@@ -2095,5 +1853,14 @@ if ("serviceWorker" in navigator) {
 }
 </script>
 
+
+<!-- ===== HAREKET KATMANI =====
+     GSAP ve Lenis isteğe bağlıdır: yüklenmezlerse arayüz aynen çalışır,
+     sadece giriş koreografisi CSS ile yapılır. -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script defer src="voice.js"></script>
+<script defer src="sky.js"></script>
+<script defer src="motion.js"></script>
 </body>
 </html>
