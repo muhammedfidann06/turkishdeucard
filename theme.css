@@ -4,19 +4,14 @@
    sky.css'ten SONRA yüklenir. Mevcut arayüzü (tipografi, cam paneller, altın
    seçim, cyan vurgular) korur; sahneyi ve birkaç etkileşimi değiştirir.
 
-   Katman sırası (alttan üste):
+   Katman sırası:
      #scene-bg (0)  manzara fotoğrafı
-     .flutter  (0)  kelebekler            ← EN ARKA PLAN, hiçbir şeyin üstünde değil
      #grade    (1)  köşe karartma
-     .app      (1)  arayüz
-     #sky-fx   (2)  kayan yıldız · ateş böcekleri
+     #sky-fx   (2)  yıldızlar · kayan yıldız · ateş böcekleri   ← ARKA PLAN
+     .flutter  (2)  kelebekler                                   ← ARKA PLAN
      #grain    (2)  film taneciği
      #fg-desk  (2)  kahve · açık defter · kitap yığını
-
-   Bu sürümde:
-     · Yanıp sönen yıldızlar kaldırıldı (yalnızca arada bir kayan yıldız var).
-     · Seçili dil kartındaki dönen neon RGB halka kaldırıldı.
-     · Dil kartlarının rengi karta ait; çerçevenin dışına taşmıyor.
+     .app      (3)  arayüz — her şeyin üstünde
    ========================================================================== */
 
 :root{
@@ -56,7 +51,7 @@ body{
 }
 #grain{opacity:.030 !important;}
 
-/* Kayan yıldız ve ateş böcekleri. Sabit yıldızlar theme.js'te kaldırıldı. */
+/* Yıldızlar, kayan yıldızlar ve ateş böcekleri — hepsi arka planda. */
 #sky-fx{
   position:fixed; inset:0; z-index:2;
   pointer-events:none;
@@ -78,99 +73,65 @@ body{
 }
 
 /* ============================================================ DİL KARTLARI
-   Her dilin kendi rengi var (görseldeki gibi). Renk tek bir --c değişkeninde
-   tutulur; hem yüzey dolgusu hem çerçeve hem seçili hâl ondan türetilir.
+   Referanstaki gibi her dilin kendi rengi var. Ton, sky.css'teki --aura
+   değişkeninden türetildi; böylece kartın ışığı ile yüzeyi aynı renkte. */
+.app .lang-opt{position:relative; overflow:hidden;}
 
-   ÖNEMLİ: Işık ve renk kartın DIŞINA taşmaz —
-     · overflow:hidden + background-clip:padding-box → dolgu çerçeveyi aşmaz
-     · dışa vuran box-shadow yerine yalnızca inset (içeri) gölge kullanılır
-   ========================================================================= */
-.app .lang-opt{
-  position:relative;
-  overflow:hidden;
-  border-radius:16px;
-  background-clip:padding-box !important;
-  isolation:isolate;
+.app .lang-opt[data-lang="de"]{background-image:linear-gradient(158deg, rgba(255,190,72,.26) 0%, rgba(255,150,40,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="en"]{background-image:linear-gradient(158deg, rgba(80,170,255,.26) 0%, rgba(50,110,230,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="ar"]{background-image:linear-gradient(158deg, rgba(62,220,146,.24) 0%, rgba(30,170,120,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="fr"]{background-image:linear-gradient(158deg, rgba(255,112,186,.24) 0%, rgba(190,80,220,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="es"]{background-image:linear-gradient(158deg, rgba(255,116,104,.24) 0%, rgba(230,120,50,.10) 46%, rgba(8,12,30,0) 78%) !important;}
+.app .lang-opt[data-lang="ru"]{background-image:linear-gradient(158deg, rgba(158,128,255,.26) 0%, rgba(110,90,230,.10) 46%, rgba(8,12,30,0) 78%) !important;}
 
-  --c:120,170,255;                       /* tanımsız diller için yedek ton */
-
-  background-color:rgba(10,14,34,.46) !important;
-  background-image:linear-gradient(158deg,
-    rgba(var(--c),.34) 0%,
-    rgba(var(--c),.13) 46%,
-    rgba(8,12,30,0)    82%) !important;
-  border:1px solid rgba(var(--c),.30) !important;
-  box-shadow:none !important;            /* dışarı sızan hâle yok */
-}
-
-/* dil tonları — görseldeki renklerle aynı */
-.app .lang-opt[data-lang="de"]{--c:255,190,72;}    /* altın   */
-.app .lang-opt[data-lang="en"]{--c:80,170,255;}    /* mavi    */
-.app .lang-opt[data-lang="ar"]{--c:62,220,146;}    /* yeşil   */
-.app .lang-opt[data-lang="fr"]{--c:186,132,255;}   /* mor     */
-.app .lang-opt[data-lang="es"]{--c:255,132,84;}    /* turuncu */
-.app .lang-opt[data-lang="ru"]{--c:158,128,255;}   /* leylak  */
-
-.app .lang-opt .lname{
-  color:#dce8ff !important;
-  position:relative; z-index:3;
-}
-.app .lang-opt .flag{position:relative; z-index:3;}
-
-/* dokunma/üzerine gelme — yine yalnızca kartın içinde */
-.app .lang-opt:hover{
-  box-shadow:inset 0 0 22px rgba(var(--c),.16) !important;
-  border-color:rgba(var(--c),.46) !important;
-}
-
-/* ------------------------------------------------------------ seçili kart
-   Kendi renginin parlak hâli + net bir çerçeve. Neon RGB halka yok. */
-.app .lang-opt.active{
-  background-color:rgba(12,16,38,.40) !important;
-  background-image:linear-gradient(158deg,
-    rgba(var(--c),.58) 0%,
-    rgba(var(--c),.24) 48%,
-    rgba(8,12,30,.02)  86%) !important;
-  border-color:rgba(var(--c),.90) !important;
-  box-shadow:inset 0 0 0 1px rgba(var(--c),.45),
-             inset 0 0 20px rgba(var(--c),.26) !important;
-}
-.app .lang-opt.active .lname{
-  color:rgb(var(--c)) !important;
-  font-weight:800;
-  text-shadow:0 1px 10px rgba(3,8,26,.85);
-}
-
-/* ------------------------------------------------- kültür / yapı silueti
-   Eskiden 42px'ti ve kartın ortasındaki bayrağın üstüne biniyordu. Artık
-   küçültülüp sağ ÜST köşeye, kimsenin bulunmadığı boşluğa alındı:
-     · bayrak    → üst orta      · isim → alt orta
-     · silüet    → sağ üst köşe  (ikisiyle de çakışmaz)
-   Kart içeriğine de sağdan biraz nefes payı verildi. */
-.app .lang-opt{padding-right:12px !important;}
-
+/* dilin arkasındaki soluk yapı silueti */
 .app .lang-opt .landmark{
-  position:absolute; right:4px; top:4px;
-  width:24px; height:24px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:20px; line-height:1;
-  opacity:.30;
-  filter:grayscale(1) brightness(1.7);
+  position:absolute; right:-8px; bottom:-4px;
+  font-size:56px; line-height:1;
+  opacity:.18;
+  filter:grayscale(1) brightness(1.75) drop-shadow(0 0 12px rgba(150,200,255,.35));
   pointer-events:none;
   z-index:0;
 }
-.app .lang-opt.active .landmark{opacity:.42;}
+.app .lang-opt .flag,
+.app .lang-opt .lname{position:relative; z-index:3;}
 
-/* dar telefonlarda daha da küçült ki bayrağa yaklaşmasın */
-@media (max-width:360px){
-  .app .lang-opt .landmark{width:18px; height:18px; font-size:15px; right:3px; top:3px;}
+/* -------------------------------------------------- seçili kart: neon RGB
+   Dönen bir tayf halkası. Maskeleme ile yalnızca 2px'lik kenar görünür,
+   kartın içi açıkta kalır. */
+@property --neon-a{syntax:'<angle>'; initial-value:0deg; inherits:false;}
+
+.app .lang-opt .neon{display:none;}
+.app .lang-opt.active .neon{
+  display:block;
+  position:absolute; inset:0; z-index:2;
+  border-radius:inherit;
+  padding:2px;
+  pointer-events:none;
+  background:conic-gradient(from var(--neon-a),
+    #ff2f7a, #ff9d3c, #ffe14a, #4dff9e, #4fd8ff, #9b7bff, #ff2f7a);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  animation:neonSpin 2.8s linear infinite;
+  filter:drop-shadow(0 0 6px rgba(140,190,255,.65));
 }
+@keyframes neonSpin{to{--neon-a:360deg;}}
 
-/* ---- neon RGB halka tamamen devre dışı (eski sürümden kalan düğümler için) */
-.app .lang-opt .neon,
-.app .lang-opt .neon-glow,
-.app .lang-opt.active .neon,
-.app .lang-opt.active .neon-glow{display:none !important;}
+/* halkanın dışa vuran yumuşak ışığı */
+.app .lang-opt.active .neon-glow{
+  display:block;
+  position:absolute; inset:-1px; z-index:1;
+  border-radius:inherit;
+  pointer-events:none;
+  background:conic-gradient(from var(--neon-a),
+    #ff2f7a, #ff9d3c, #ffe14a, #4dff9e, #4fd8ff, #9b7bff, #ff2f7a);
+  filter:blur(9px);
+  opacity:.42;
+  animation:neonSpin 2.8s linear infinite;
+}
+.app .lang-opt .neon-glow{display:none;}
 
 /* ------------------------------------------------------------- ilerleme */
 .tf-progress{
@@ -314,25 +275,23 @@ body{
   100%{opacity:0;   transform:translateY(-16px) scaleY(1.14);}
 }
 
-/* ================================================= KELEBEKLER (EN ARKADA)
-   z-index:0 → manzaranın hemen üstünde, diğer HER ŞEYİN altında. Arayüzün,
-   kartların, masanın ve gök efektlerinin önüne asla geçmezler.
-   Uçuş süreleri ~%40 kısaltıldı: daha canlı, daha hızlı süzülüyorlar. */
+/* ====================================================== KELEBEKLER (arkada)
+   z-index 2 → arayüzün (3) altında kalırlar; kartların üstünden geçmezler. */
 .flutter{
-  position:fixed; z-index:0; pointer-events:none;
+  position:fixed; z-index:2; pointer-events:none;
   will-change:transform;
   filter:drop-shadow(0 4px 10px rgba(0,0,0,.45));
 }
-.flutter .wing{transform-origin:50% 62%; animation:flap .08s ease-in-out infinite alternate;}
+.flutter .wing{transform-origin:50% 62%; animation:flap .1s ease-in-out infinite alternate;}
 .flutter .wing.r{animation-delay:.01s;}
 @keyframes flap{from{transform:scaleX(1);} to{transform:scaleX(.3);}}
 
-.flutter.f1{animation:drift1 4.6s ease-in-out infinite;}
-.flutter.f2{animation:drift2 5.4s ease-in-out infinite;}
-.flutter.f3{animation:drift3 4.8s ease-in-out infinite;}
-.flutter.f4{animation:drift1 6.0s ease-in-out infinite reverse;}
-.flutter.f5{animation:drift2 5.1s ease-in-out infinite reverse;}
-.flutter.f6{animation:drift3 5.7s ease-in-out infinite;}
+.flutter.f1{animation:drift1 7.5s ease-in-out infinite;}
+.flutter.f2{animation:drift2 9s   ease-in-out infinite;}
+.flutter.f3{animation:drift3 8s   ease-in-out infinite;}
+.flutter.f4{animation:drift1 10s  ease-in-out infinite reverse;}
+.flutter.f5{animation:drift2 8.5s ease-in-out infinite reverse;}
+.flutter.f6{animation:drift3 9.5s ease-in-out infinite;}
 
 @keyframes drift1{
   0%,100%{transform:translate(0,0) rotate(-8deg);}
@@ -359,6 +318,8 @@ body{
   #scene-bg{background-position:center 18%;}
 }
 @media (prefers-reduced-motion:reduce){
-  .flutter,.flutter .wing,.steam path{animation:none !important;}
+  .flutter,.flutter .wing,.steam path,
+  .app .lang-opt.active .neon,
+  .app .lang-opt.active .neon-glow{animation:none !important;}
   .tf-ripple{display:none !important;}
 }

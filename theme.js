@@ -3,13 +3,12 @@
 
    Arayüz mantığına dokunmaz. Eklediği şeyler:
      1. #scene-bg   manzara katmanı (+ hafif parallax)
-     2. #sky-fx     ARKA PLAN: arada bir kayan yıldız · ateş böcekleri
-                    (tek canvas, tek rAF döngüsü)
-                    ── Parıldayan/yanıp sönen yıldızlar KALDIRILDI ──
+     2. #sky-fx     ARKA PLAN: parıldayan yıldızlar · kayan yıldızlar ·
+                    ateş böcekleri  (tek canvas, tek rAF döngüsü)
      3. #fg-desk    kahve · açık defter · kitap yığını
-     4. .flutter    kelebekler (EN ARKA PLAN, hiçbir şeyin üstüne gelmez)
+     4. .flutter    kelebekler (arka planda, hızlı kanat çırpan)
      5. ilerleme satırı tek hizaya alınır
-     6. dil kartlarına ülke silueti  (neon RGB halka KALDIRILDI)
+     6. seçili dil kartına dönen neon RGB halka
      7. butonlara basınca dalga (ripple) + yaylı çöküş
    ========================================================================== */
 (function () {
@@ -61,11 +60,12 @@
     }, { passive: true });
   }
 
-  /* ========================================= 2. kayan yıldız & ateş böcekleri
-     Tek canvas, tek döngü. Katman arayüzün ARKASINDA.
+  /* ============================================ 2. yıldızlar & ateş böcekleri
+     Hepsi tek canvas'ta, tek döngüde. Katman arayüzün ARKASINDA (z-index 2).
 
-     · Sabit/parıldayan yıldızlar KALDIRILDI — gökyüzü artık sakin.
-     · Kayan yıldız 6–15 sn arayla, üst yarıda, kısa bir iz bırakarak geçer.
+     · Yıldızlar gökyüzü bandında (üst %46). Her birinin kendi rengi, boyu,
+       yanıp sönme periyodu ve fazı var — hepsi aynı anda parlamıyor.
+     · Kayan yıldız 5–13 sn arayla, üst yarıda, kısa bir iz bırakarak geçer.
      · Ateş böcekleri alt yarıda, çiçeklerin arasında salınır; sıcak sarı
        ışıkları yavaşça sönüp yanar.
   ========================================================================= */
@@ -77,7 +77,32 @@
     cv.setAttribute('aria-hidden', 'true');
     var ctx = cv.getContext('2d');
     var W = 0, H = 0, dpr = 1;
-    var flies = [], shots = [], nextShot = 0, t0 = performance.now();
+    var stars = [], flies = [], shots = [], nextShot = 0, t0 = performance.now();
+
+    var STAR_TINTS = [
+      [255, 255, 255], [206, 232, 255], [255, 236, 198],
+      [178, 226, 255], [232, 210, 255], [255, 214, 176]
+    ];
+
+    function seedStars() {
+      stars.length = 0;
+      var n = Math.round(Math.min(140, (W * H) / 3400));
+      for (var i = 0; i < n; i++) {
+        var big = Math.random() < 0.14;
+        stars.push({
+          x: Math.random() * W,
+          y: Math.random() * H * 0.50,
+          r: big ? 1.5 + Math.random() * 1.5 : 0.5 + Math.random() * 0.9,
+          c: STAR_TINTS[(Math.random() * STAR_TINTS.length) | 0],
+          /* farklı periyot + faz = düzensiz, canlı bir parıltı */
+          sp: 0.5 + Math.random() * 2.6,
+          ph: Math.random() * Math.PI * 2,
+          base: 0.18 + Math.random() * 0.34,
+          amp: 0.30 + Math.random() * 0.62,
+          spike: big
+        });
+      }
+    }
 
     function seedFlies() {
       flies.length = 0;
@@ -106,7 +131,7 @@
       cv.style.width = W + 'px';
       cv.style.height = H + 'px';
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      seedFlies();
+      seedStars(); seedFlies();
     }
 
     function spawnShot() {
@@ -128,10 +153,39 @@
       var t = (now - t0) / 1000;
       ctx.clearRect(0, 0, W, H);
 
-      /* ---- kayan yıldızlar (tek hareketli gök öğesi) ---- */
+      /* ---- yıldızlar ---- */
+      for (var i = 0; i < stars.length; i++) {
+        var s = stars[i];
+        var a = s.base + s.amp * (0.5 + 0.5 * Math.sin(t * s.sp + s.ph));
+        if (a <= 0.02) continue;
+        var c = s.c;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, 6.2832);
+        ctx.fillStyle = 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a.toFixed(3) + ')';
+        ctx.fill();
+
+        if (s.spike && a > 0.55) {
+          /* parlak yıldızlarda ince bir hale + haç ışığı */
+          var g = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 7);
+          g.addColorStop(0, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + (a * 0.34).toFixed(3) + ')');
+          g.addColorStop(1, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',0)');
+          ctx.fillStyle = g;
+          ctx.beginPath(); ctx.arc(s.x, s.y, s.r * 7, 0, 6.2832); ctx.fill();
+
+          ctx.strokeStyle = 'rgba(255,255,255,' + ((a - 0.55) * 0.5).toFixed(3) + ')';
+          ctx.lineWidth = 0.8;
+          var L = s.r * 5.5;
+          ctx.beginPath();
+          ctx.moveTo(s.x - L, s.y); ctx.lineTo(s.x + L, s.y);
+          ctx.moveTo(s.x, s.y - L); ctx.lineTo(s.x, s.y + L);
+          ctx.stroke();
+        }
+      }
+
+      /* ---- kayan yıldızlar ---- */
       if (now > nextShot) {
         spawnShot();
-        nextShot = now + 6000 + Math.random() * 9000;
+        nextShot = now + 5000 + Math.random() * 8000;
       }
       for (var k = shots.length - 1; k >= 0; k--) {
         var sh = shots[k];
@@ -196,7 +250,7 @@
          THEME_debug()  → sahnedeki nesne sayılarını verir              */
     window.THEME_shoot = function () { spawnShot(); };
     window.THEME_debug = function () {
-      return { atesbocegi: flies.length, kayan: shots.length };
+      return { yildiz: stars.length, atesbocegi: flies.length, kayan: shots.length };
     };
 
     return {
@@ -349,12 +403,6 @@
 
   function buildFlies() {
     if (document.querySelector('.flutter')) return;
-
-    /* DOM'da manzaranın hemen ardına konur; CSS'te de z-index:0 verilir.
-       Böylece kelebekler her katmanın (arayüz dahil) ARKASINDA kalır. */
-    var bg = document.getElementById('scene-bg');
-    var anchor = bg ? bg.nextSibling : document.body.firstChild;
-
     for (var i = 0; i < FLIES.length; i++) {
       var f = FLIES[i];
       var d = document.createElement('div');
@@ -365,8 +413,7 @@
       d.style.width = f.w + 'px';
       d.style.height = (f.w * 0.82) + 'px';
       d.innerHTML = butterflySVG(f.a, f.b, f.d);
-      if (anchor) document.body.insertBefore(d, anchor);
-      else document.body.appendChild(d);
+      document.body.appendChild(d);
     }
   }
 
@@ -410,9 +457,7 @@
     new MutationObserver(paint).observe(el, { childList: true, characterData: true, subtree: true });
   }
 
-  /* =============================================== 6. ülke silueti
-     Not: Seçili karta eklenen dönen "neon RGB halka" kaldırıldı. Aşağıdaki
-     temizlik, daha önce eklenmiş halkaları da DOM'dan siler. */
+  /* ==================================== 6. ülke silueti + neon RGB halka */
   var LANDMARK = {
     de: '🏛️', en: '🕰️', ar: '🕌', fr: '🗼', es: '⛪', ru: '🏰',
     it: '🏟️', pt: '⛲', nl: '🌷', ja: '⛩️', zh: '🏯', ko: '🏯'
@@ -423,8 +468,8 @@
     for (var i = 0; i < opts.length; i++) {
       var o = opts[i];
 
-      /* eski kıvılcımlar ve neon halkalar kaldırıldı */
-      var old = o.querySelectorAll('.spark, .neon, .neon-glow');
+      /* eski kıvılcımlar kaldırıldı */
+      var old = o.querySelectorAll('.spark');
       for (var s = 0; s < old.length; s++) old[s].parentNode.removeChild(old[s]);
 
       if (!o.querySelector('.landmark')) {
@@ -436,6 +481,16 @@
           m.textContent = icon;
           o.insertBefore(m, o.firstChild);
         }
+      }
+      if (!o.querySelector('.neon')) {
+        var glow = document.createElement('span');
+        glow.className = 'neon-glow';
+        glow.setAttribute('aria-hidden', 'true');
+        var ring = document.createElement('span');
+        ring.className = 'neon';
+        ring.setAttribute('aria-hidden', 'true');
+        o.appendChild(glow);
+        o.appendChild(ring);
       }
     }
   }
