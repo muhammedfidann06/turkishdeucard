@@ -1152,7 +1152,7 @@ add("de","A1","Deyimler","ins Wasser fallen","suya düşmek (plan)","Ausdruck","
 add("de","A1","Deyimler","die Nase voll haben","bıkmak","Ausdruck","Ich habe die Nase voll davon.","Bundan bıktım.");
 add("de","A1","Deyimler","Schwein haben","şanslı olmak","Ausdruck","Du hast wirklich Schwein gehabt.","Gerçekten şanslıydın.");
 add("de","A1","Deyimler","ins Gras beißen","ölmek (argo)","Ausdruck","Der alte Baum musste ins Gras beißen.","Yaşlı ağaç sonunda kesildi (mecazi).");
-add("de","A2","İş ve Kariyer","das Büro","ofis (tekrar)","Nomen","Ich arbeite im Büro von neun bis fünf.","Ofiste dokuzdan beşe çalışıyorum.");
+add("de","A2","İş ve Kariyer","das Büro","ofis","Nomen","Ich arbeite im Büro von neun bis fünf.","Ofiste dokuzdan beşe çalışıyorum.");
 add("de","A2","İş ve Kariyer","der Vorstand","yönetim kurulu","Nomen","Der Vorstand trifft wichtige Entscheidungen.","Yönetim kurulu önemli kararlar alıyor.");
 add("de","A2","İş ve Kariyer","die Investition","yatırım","Nomen","Das ist eine gute Investition.","Bu iyi bir yatırım.");
 add("de","A2","İş ve Kariyer","der Umsatz","ciro","Nomen","Der Umsatz ist gestiegen.","Ciro arttı.");
@@ -1188,18 +1188,18 @@ add("de","A2","Çevre","der Klimawandel","iklim değişikliği","Nomen","Der Kli
 add("de","A2","Çevre","die Erderwärmung","küresel ısınma","Nomen","Die Erderwärmung ist ein großes Problem.","Küresel ısınma büyük bir sorun.");
 add("de","A2","Çevre","die Nachhaltigkeit","sürdürülebilirlik","Nomen","Nachhaltigkeit ist wichtig für die Zukunft.","Sürdürülebilirlik gelecek için önemli.");
 add("de","A2","Çevre","erneuerbar","yenilenebilir","Adjektiv","Erneuerbare Energie wird günstiger.","Yenilenebilir enerji ucuzluyor.");
-add("de","A2","Medya","die Nachrichten","haberler (tekrar)","Nomen","Ich sehe abends die Nachrichten.","Akşam haberleri izlerim.");
+add("de","A2","Medya","die Nachrichten","haberler","Nomen","Ich sehe abends die Nachrichten.","Akşam haberleri izlerim.");
 add("de","A2","Medya","der Podcast","podcast","Nomen","Ich höre gern Podcasts.","Podcast dinlemeyi severim.");
 add("de","A2","Medya","die Reportage","röportaj / haber","Nomen","Die Reportage war sehr informativ.","Röportaj çok bilgilendiriciydi.");
-add("de","A1","Yiyecek","das Frühstück","kahvaltı (tekrar)","Nomen","Das Frühstück ist meine Lieblingsmahlzeit.","Kahvaltı en sevdiğim öğün.");
+add("de","A1","Yiyecek","das Frühstück","kahvaltı","Nomen","Das Frühstück ist meine Lieblingsmahlzeit.","Kahvaltı en sevdiğim öğün.");
 add("de","A1","Yiyecek","die Pizza","pizza","Nomen","Wir bestellen heute Pizza.","Bugün pizza sipariş ediyoruz.");
 add("de","A1","Yiyecek","der Salat","salata","Nomen","Der Salat ist frisch.","Salata taze.");
-add("de","A1","Yiyecek","das Sandwich","sandviç (tekrar)","Nomen","Ich mache mir ein Sandwich.","Kendime bir sandviç yapıyorum.");
+add("de","A1","Yiyecek","das Sandwich","sandviç","Nomen","Ich mache mir ein Sandwich.","Kendime bir sandviç yapıyorum.");
 add("de","A1","Yiyecek","die Pommes","patates kızartması","Nomen","Die Kinder lieben Pommes.","Çocuklar patates kızartmasını sever.");
 add("de","A1","Yiyecek","der Hamburger","hamburger","Nomen","Er isst gern Hamburger.","Hamburger yemeyi sever.");
 add("de","A1","Yiyecek","die Nudelsuppe","şehriye çorbası","Nomen","Die Nudelsuppe ist heiß.","Şehriye çorbası sıcak.");
 add("de","A1","Yiyecek","der Döner","döner","Nomen","Ein Döner, bitte.","Bir döner, lütfen.");
-add("de","A1","Ev İşleri","abwaschen","bulaşık yıkamak (tekrar)","Verb","Ich wasche das Geschirr ab.","Bulaşıkları yıkıyorum.");
+add("de","A1","Ev İşleri","abwaschen","bulaşık yıkamak","Verb","Ich wasche das Geschirr ab.","Bulaşıkları yıkıyorum.");
 add("de","A1","Ev İşleri","abtrocknen","kurulamak","Verb","Ich trockne die Teller ab.","Tabakları kuruluyorum.");
 add("de","A1","Ev İşleri","staubwischen","toz almak","Verb","Ich wische jeden Freitag Staub.","Her cuma toz alırım.");
 add("de","A1","Ev İşleri","den Rasen mähen","çim biçmek","Ausdruck","Er mäht den Rasen im Garten.","Bahçede çimi biçiyor.");
@@ -4651,7 +4651,7 @@ add("de","B1","Sıfatlar","einheitlich","tek tip / homojen","Adjektiv","Ein einh
 add("de","B1","Sıfatlar","allmählich (Adjektiv)","kademeli","Adjektiv","Eine allmähliche Verbesserung.","Kademeli bir iyileşme.");
 add("de","B1","Sıfatlar","plötzlich (Adjektiv)","ani","Adjektiv","Eine plötzliche Veränderung.","Ani bir değişiklik.");
 add("de","B1","Sıfatlar","legitim","meşru / geçerli","Adjektiv","Das ist eine legitime Forderung.","Bu meşru bir talep.");
-add("de","A1","Vücut","der Geschmack","tat / lezzet","Nomen","Der Geschmack ist lecker.","Tat lezzetli.");
+
 add("de","A1","Vücut","der Geruch","koku","Nomen","Ein schöner Geruch.","Güzel bir koku.");
 add("de","A1","Vücut","die Berührung","dokunuş","Nomen","Ihre Berührung ist sanft.","Dokunuşu nazik.");
 add("de","A1","Vücut","das Sehvermögen","görme (duyu) / manzara","Nomen","Sein Sehvermögen ist schwach.","Görmesi zayıf.");
@@ -5400,7 +5400,7 @@ add("de","A2","Sağlık","die Impfung","aşı (tıbbi)","Nomen","Die Impfung ist
 add("de","A2","Eğitim","der Kugelschreiber","tükenmez kalem","Nomen","Der Kugelschreiber schreibt gut.","Tükenmez kalem iyi yazıyor.");
 add("de","A2","Teknoloji","das Ladekabel","şarj kablosu","Nomen","Das Ladekabel ist kaputt.","Şarj kablosu bozuk.");
 add("de","A2","Yiyecek","das Obst","meyve","Nomen","Obst ist gesund.","Meyve sağlıklıdır.");
-add("de","A2","Seyahat","die Karte (Landkarte)","harita (2)","Nomen","Schau auf die Karte.","Haritaya bak.");
+add("de","A2","Seyahat","die Karte (Landkarte)","harita","Nomen","Schau auf die Karte.","Haritaya bak.");
 add("de","A2","Çevre","die Sonne scheint","güneş parlıyor","Ausdruck","Die Sonne scheint heute.","Bugün güneş parlıyor.");
 add("de","A2","Çevre","es regnet","yağmur yağıyor","Ausdruck","Es regnet stark.","Şiddetli yağmur yağıyor.");
 add("de","A2","Duygular","Angst haben","korkmak","Ausdruck","Ich habe Angst vor Spinnen.","Örümceklerden korkuyorum.");
@@ -5490,7 +5490,7 @@ add("de","A2","Ev","der Kamin","şömine","Nomen","Der Kamin wärmt das Zimmer."
 add("de","A2","Ev","der Schalter (Licht)","elektrik düğmesi","Nomen","Der Schalter ist an der Wand.","Düğme duvarda.");
 add("de","A2","Eğitim","das Diktat","dikte","Nomen","Wir schreiben ein Diktat.","Bir dikte yazıyoruz.");
 add("de","A2","Zaman","das Datum","tarih","Nomen","Welches Datum ist heute?","Bugün tarih ne?");
-add("de","A2","Ulaşım","der Führerausweis","ehliyet (2)","Nomen","Zeig deinen Führerausweis.","Ehliyetini göster.");
+add("de","A2","Ulaşım","der Führerausweis","ehliyet","Nomen","Zeig deinen Führerausweis.","Ehliyetini göster.");
 add("de","A2","Ulaşım","das Nummernschild","plaka","Nomen","Das Nummernschild ist neu.","Plaka yeni.");
 add("de","A2","Ulaşım","die Reifen","lastikler","Nomen","Die Reifen sind alt.","Lastikler eski.");
 add("de","A2","Ulaşım","die Bremse","fren","Nomen","Die Bremse funktioniert gut.","Fren iyi çalışıyor.");
@@ -5888,7 +5888,7 @@ add("de","A2","Deyimler","Wir schaffen das zusammen","bunu birlikte başaracağ�
 add("de","A2","Deyimler","Ich bin für dich da","senin yanındayım","Ausdruck","Vergiss nicht, ich bin immer für dich da.","Unutma, her zaman senin yanındayım.");
 add("de","A2","Deyimler","Du kannst auf mich zählen","bana güvenebilirsin","Ausdruck","Du kannst jederzeit auf mich zählen.","Her zaman bana güvenebilirsin.");
 add("de","A2","Deyimler","Ich zähle auf dich","sana güveniyorum","Ausdruck","Okay, ich zähle jetzt auf dich.","Tamam, şimdi sana güveniyorum.");
-add("de","A2","Deyimler","Ich vertraue dir","sana güveniyorum (2)","Ausdruck","Natürlich vertraue ich dir.","Elbette sana güveniyorum.");
+add("de","A2","Deyimler","Ich vertraue dir","sana güveniyorum","Ausdruck","Natürlich vertraue ich dir.","Elbette sana güveniyorum.");
 add("de","A2","Deyimler","Vertrau mir","bana güven","Ausdruck","Vertrau mir einfach, es wird gut.","Bana güven, iyi olacak.");
 add("de","A2","Deyimler","Ich glaube fest daran","buna kesinlikle inanıyorum","Ausdruck","Ich glaube fest daran, dass es klappt.","Bunun işe yarayacağına kesinlikle inanıyorum.");
 add("de","A2","Deyimler","Ich habe ein gutes Gefühl dabei","bu konuda iyi bir his var içimde","Ausdruck","Ehrlich, ich habe ein gutes Gefühl dabei.","Dürüst olmak gerekirse, bu konuda iyi bir his var içimde.");
@@ -5903,7 +5903,7 @@ add("de","A2","Deyimler","Ich muss darüber nachdenken","bunu düşünmem gereki
 add("de","A2","Deyimler","Gib mir einen Moment zum Nachdenken","düşünmem için bana bir dakika ver","Ausdruck","Gib mir bitte einen Moment zum Nachdenken.","Lütfen düşünmem için bana bir dakika ver.");
 add("de","A2","Deyimler","Ich muss noch mal überlegen","tekrar düşünmem gerekiyor","Ausdruck","Warte, ich muss noch mal überlegen.","Bekle, tekrar düşünmem gerekiyor.");
 add("de","A2","Deyimler","Ich habe es mir anders überlegt","fikrimi değiştirdim","Ausdruck","Ehrlich, ich habe es mir anders überlegt.","Dürüst olmak gerekirse, fikrimi değiştirdim.");
-add("de","A2","Deyimler","Ich habe meine Meinung geändert","fikrimi değiştirdim (2)","Ausdruck","Nach dem Gespräch habe ich meine Meinung geändert.","Konuşmadan sonra fikrimi değiştirdim.");
+add("de","A2","Deyimler","Ich habe meine Meinung geändert","fikrimi değiştirdim","Ausdruck","Nach dem Gespräch habe ich meine Meinung geändert.","Konuşmadan sonra fikrimi değiştirdim.");
 add("de","A2","Deyimler","Ich bleibe bei meiner Meinung","fikrimde kalıyorum","Ausdruck","Nein, ich bleibe bei meiner Meinung.","Hayır, fikrimde kalıyorum.");
 add("de","A2","Deyimler","Am Ende des Tages","günün sonunda","Ausdruck","Am Ende des Tages ist Familie das Wichtigste.","Günün sonunda aile en önemlisidir.");
 add("de","A2","Deyimler","Zu guter Letzt","son olarak","Ausdruck","Zu guter Letzt möchte ich mich bedanken.","Son olarak teşekkür etmek istiyorum.");
@@ -6028,8 +6028,8 @@ add("de","A2","Deyimler","Machen wir das so","bunu böyle yapalım","Ausdruck","
 add("de","A2","Deyimler","Abgemacht","anlaştık (kısa)","Ausdruck","Gut, abgemacht dann!","İyi, o zaman anlaştık!");
 add("de","A2","Deyimler","Gesagt, getan","laf üzerine iş (hemen yapmak)","Ausdruck","Gesagt, getan, wir gehen jetzt.","Söylenen yapılır, şimdi gidiyoruz.");
 add("de","A2","Deyimler","Ich bin sofort dabei","hemen katılırım","Ausdruck","Klar, ich bin sofort dabei!","Tabii, hemen katılırım!");
-add("de","A2","Deyimler","Zähl auf mich","bana güvenebilirsin (2)","Ausdruck","Klar, du kannst auf mich zählen.","Tabii, bana güvenebilirsin.");
-add("de","A2","Deyimler","Verlass dich auf mich","bana güven (2)","Ausdruck","Verlass dich einfach auf mich.","Sadece bana güven.");
+add("de","A2","Deyimler","Zähl auf mich","bana güvenebilirsin","Ausdruck","Klar, du kannst auf mich zählen.","Tabii, bana güvenebilirsin.");
+add("de","A2","Deyimler","Verlass dich auf mich","bana güven","Ausdruck","Verlass dich einfach auf mich.","Sadece bana güven.");
 add("de","A2","Deyimler","Ich werde nicht enttäuschen","hayal kırıklığına uğratmayacağım","Ausdruck","Keine Sorge, ich werde dich nicht enttäuschen.","Merak etme, seni hayal kırıklığına uğratmayacağım.");
 add("de","A2","Deyimler","Ich bleibe meinem Wort treu","sözümde dururum","Ausdruck","Keine Sorge, ich bleibe meinem Wort treu.","Merak etme, sözümde dururum.");
 add("de","A2","Deyimler","Mein Wort darauf","sözüm üzerine","Ausdruck","Ich mache das, mein Wort darauf.","Bunu yapacağım, sözüm üzerine.");
@@ -6065,7 +6065,7 @@ add("de","A2","Deyimler","Sei stolz auf dich","kendinle gurur duy","Ausdruck","S
 add("de","A2","Deyimler","Du hast das verdient","bunu hak ettin","Ausdruck","Du hast diesen Erfolg wirklich verdient.","Bu başarıyı gerçekten hak ettin.");
 add("de","A2","Deyimler","Ich bin sehr stolz auf dich","seninle çok gurur duyuyorum","Ausdruck","Ehrlich, ich bin so unglaublich stolz auf dich.","Dürüst olmak gerekirse, seninle inanılmaz gurur duyuyorum.");
 add("de","A2","Deyimler","Weiter geht's","hadi devam","Ausdruck","Okay, weiter geht's!","Tamam, hadi devam!");
-add("de","A2","Deyimler","Auf geht's","hadi başlayalım (2)","Ausdruck","Auf geht's, wir schaffen das.","Hadi başlayalım, bunu başaracağız.");
+add("de","A2","Deyimler","Auf geht's","hadi başlayalım","Ausdruck","Auf geht's, wir schaffen das.","Hadi başlayalım, bunu başaracağız.");
 add("de","A2","Deyimler","Los geht's","hadi başlıyoruz","Ausdruck","Alle bereit? Los geht's!","Herkes hazır mı? Hadi başlıyoruz!");
 add("de","A2","Deyimler","Auf die Plätze, fertig, los","hazır, ol, başla","Ausdruck","Auf die Plätze, fertig, los!","Hazır, ol, başla!");
 add("de","A2","Deyimler","Jetzt geht's richtig los","şimdi gerçekten başlıyor","Ausdruck","Achtung, jetzt geht's richtig los!","Dikkat, şimdi gerçekten başlıyor!");
@@ -6397,8 +6397,8 @@ add("de","A2","Deyimler","Sowas Verrücktes","ne çılgınca bir şey","Ausdruck
 add("de","A2","Deyimler","Das gibt's doch nicht","olamaz böyle bir şey","Ausdruck","Das gibt's doch gar nicht!","Böyle bir şey olamaz!");
 add("de","A2","Deyimler","Ich trau meinen Augen nicht","gözlerime inanamıyorum","Ausdruck","Ehrlich, ich trau meinen Augen einfach nicht.","Dürüst olmak gerekirse, gözlerime basitçe inanamıyorum.");
 add("de","A2","Deyimler","Meine Güte","aman Tanrım","Ausdruck","Meine Güte, ist das groß!","Aman Tanrım, bu ne kadar büyük!");
-add("de","A2","Deyimler","Ach du meine Güte","aman Tanrım (2)","Ausdruck","Ach du meine Güte, was ist passiert?","Aman Tanrım, ne oldu?");
-add("de","A2","Deyimler","Um Gottes willen","Allah aşkına (2)","Ausdruck","Um Gottes willen, pass doch auf!","Allah aşkına, dikkat et!");
+add("de","A2","Deyimler","Ach du meine Güte","aman Tanrım","Ausdruck","Ach du meine Güte, was ist passiert?","Aman Tanrım, ne oldu?");
+add("de","A2","Deyimler","Um Gottes willen","Allah aşkına","Ausdruck","Um Gottes willen, pass doch auf!","Allah aşkına, dikkat et!");
 add("de","A2","Deyimler","Junge, Junge","vay be (şaşkınlık)","Ausdruck","Junge, Junge, das war knapp!","Vay be, bu ucu ucuna oldu!");
 add("de","A2","Deyimler","Na sowas","bak sen şuna","Ausdruck","Na sowas, das hätte ich nicht gedacht.","Bak sen şuna, bunu düşünmezdim.");
 add("de","A2","Deyimler","Ach herrje","aman aman","Ausdruck","Ach herrje, jetzt ist es kaputt.","Aman aman, şimdi bozuldu.");
@@ -6466,3 +6466,37 @@ add("de","A2","Deyimler","Warten wir es ab","bekleyip görelim","Ausdruck","Wart
 add("de","A2","Deyimler","Nur die Zeit wird es zeigen","sadece zaman gösterecek","Ausdruck","Ehrlich, nur die Zeit wird es zeigen.","Dürüst olmak gerekirse, sadece zaman gösterecek.");
 add("de","A2","Deyimler","Wer weiß","kim bilir","Ausdruck","Wer weiß, vielleicht klappt es ja.","Kim bilir, belki işe yarar.");
 add("de","A2","Deyimler","Man kann nie wissen","hiç belli olmaz","Ausdruck","Man kann nie wissen, was passiert.","Ne olacağı hiç belli olmaz.");
+
+// ============================================
+// ALFABE - Deutsches Alphabet
+// ============================================
+add("de","A1","Alfabe","A a","A harfi (a sesi)","Buchstabe","Der Apfel ist rot.","Elma kırmızıdır.");
+add("de","A1","Alfabe","B b","Be harfi (b sesi)","Buchstabe","Der Ball ist rund.","Top yuvarlaktır.");
+add("de","A1","Alfabe","C c","Tse harfi (ts/k sesi)","Buchstabe","Der Computer ist neu.","Bilgisayar yenidir.");
+add("de","A1","Alfabe","D d","De harfi (d sesi)","Buchstabe","Das Dach ist hoch.","Çatı yüksektir.");
+add("de","A1","Alfabe","E e","E harfi (e sesi)","Buchstabe","Der Elefant ist groß.","Fil büyüktür.");
+add("de","A1","Alfabe","F f","Ef harfi (f sesi)","Buchstabe","Der Fisch schwimmt.","Balık yüzüyor.");
+add("de","A1","Alfabe","G g","Ge harfi (g sesi)","Buchstabe","Der Garten ist grün.","Bahçe yeşildir.");
+add("de","A1","Alfabe","H h","Ha harfi (h sesi)","Buchstabe","Das Haus ist groß.","Ev büyüktür.");
+add("de","A1","Alfabe","I i","İ harfi (i sesi)","Buchstabe","Die Insel ist klein.","Ada küçüktür.");
+add("de","A1","Alfabe","J j","Yot harfi (y sesi)","Buchstabe","Die Jacke ist warm.","Ceket sıcaktır.");
+add("de","A1","Alfabe","K k","Ka harfi (k sesi)","Buchstabe","Die Katze schläft.","Kedi uyuyor.");
+add("de","A1","Alfabe","L l","El harfi (l sesi)","Buchstabe","Die Lampe leuchtet.","Lamba parlıyor.");
+add("de","A1","Alfabe","M m","Em harfi (m sesi)","Buchstabe","Die Maus ist klein.","Fare küçüktür.");
+add("de","A1","Alfabe","N n","En harfi (n sesi)","Buchstabe","Die Nase ist klein.","Burun küçüktür.");
+add("de","A1","Alfabe","O o","O harfi (o sesi)","Buchstabe","Der Ofen ist heiß.","Fırın sıcaktır.");
+add("de","A1","Alfabe","P p","Pe harfi (p sesi)","Buchstabe","Der Park ist grün.","Park yeşildir.");
+add("de","A1","Alfabe","Q q","Ku harfi (kv sesi)","Buchstabe","Die Qualität ist wichtig.","Kalite önemlidir.");
+add("de","A1","Alfabe","R r","Er harfi (r sesi)","Buchstabe","Der Regen fällt.","Yağmur yağıyor.");
+add("de","A1","Alfabe","S s","Es harfi (s/z sesi)","Buchstabe","Die Sonne scheint.","Güneş parlıyor.");
+add("de","A1","Alfabe","T t","Te harfi (t sesi)","Buchstabe","Der Tisch ist neu.","Masa yenidir.");
+add("de","A1","Alfabe","U u","U harfi (u sesi)","Buchstabe","Die Uhr tickt.","Saat tık tık ediyor.");
+add("de","A1","Alfabe","V v","Fau harfi (f/v sesi)","Buchstabe","Der Vogel fliegt.","Kuş uçuyor.");
+add("de","A1","Alfabe","W w","Ve harfi (v sesi)","Buchstabe","Das Wasser ist kalt.","Su soğuktur.");
+add("de","A1","Alfabe","X x","Iks harfi (ks sesi)","Buchstabe","Das Xylophon klingt schön.","Ksilofon güzel çalıyor.");
+add("de","A1","Alfabe","Y y","Üpsilon harfi (ü/y sesi)","Buchstabe","Yoga entspannt.","Yoga rahatlatıyor.");
+add("de","A1","Alfabe","Z z","Tset harfi (ts sesi)","Buchstabe","Der Zug fährt schnell.","Tren hızlı gidiyor.");
+add("de","A1","Alfabe","Ä ä","Umlaut A harfi (e sesi)","Buchstabe","Die Äpfel sind süß.","Elmalar tatlıdır.");
+add("de","A1","Alfabe","Ö ö","Umlaut O harfi (ö sesi)","Buchstabe","Das Öl ist wichtig.","Yağ önemlidir.");
+add("de","A1","Alfabe","Ü ü","Umlaut U harfi (ü sesi)","Buchstabe","Er geht über die Brücke.","Köprüden geçiyor.");
+add("de","A1","Alfabe","ß","Eszett harfi (ss sesi)","Buchstabe","Die Straße ist lang.","Cadde uzundur.");
