@@ -234,6 +234,10 @@ function initLeaderboard(){
     async function startTrackingWithUid(uid, name){
       currentUid = uid;
       currentName = name;
+      // currentUid az önce belli oldu; yeni bir veritabanı yazması beklemeden
+      // önbellekteki son liderlik verisiyle "kaçıncı sıradayım" kutusunu hemen
+      // güncelle (aksi halde bir sonraki veri değişikliğine kadar boş görünür).
+      if(lastLbVal) processLbSnapshot(lastLbVal);
       listenOwnProfile(uid, name);
       // Göçü SADECE ilk kayıtta değil, HER girişte tekrar dene — bu sayede
       // güvenlik kuralları yeni yayınlandığında veya ilk göç bir sebeple
@@ -316,15 +320,38 @@ function initLeaderboard(){
     }
 
     const MEDALS = ['🥇','🥈','🥉'];
-    function renderLeaderboard(entries){
-      const list = document.getElementById('splashLbList');
+
+    // XP -> Seviye dönüşümü, progress.js ile BİREBİR aynı formül olmalı
+    // (Math.floor(xp/200)+1). Farklı bir formül kullanılırsa kişisel modda
+    // gösterilen seviye ile liderlik tablosundaki seviye tutmaz.
+    function levelFromXp(xp){
+      return Math.floor((xp||0) / 200) + 1;
+    }
+
+    // progress.js her meta.xp değiştiğinde (persistMeta) bunu çağırır; böylece
+    // liderlik tablosu tek bir 'leaderboard' düğümünden hem süreyi hem de
+    // XP/seviyeyi okuyabilir, ekstra bir veri okumasına gerek kalmaz.
+    window.LB_updateXp = function(xp){
+      if(!currentUid || !db) return;
+      const ref = db.ref('leaderboard/' + currentUid);
+      ref.transaction((current) => {
+        const prev = current && typeof current === 'object' ? current : { name: currentName, totalSeconds: 0 };
+        return Object.assign({}, prev, {
+          name: currentName || prev.name,
+          xp: xp || 0,
+          lastSeen: Date.now()
+        });
+      });
+    };
+    function renderBoard(elId, entries, formatValue){
+      const list = document.getElementById(elId);
       if(!list) return;
       if(!db){
         list.innerHTML = '<div class="lb-empty">Tablo henüz bağlanmadı.</div>';
         return;
       }
       if(!entries.length){
-        list.innerHTML = '<div class="lb-empty">Henüz kimse yok. İlk sen ol! 🎉</div>';
+        list.innerHTML = '<div class="lb-empty">Henüz kimse yok.<br>İlk sen ol! 🎉</div>';
         return;
       }
       list.innerHTML = '';
@@ -336,24 +363,86 @@ function initLeaderboard(){
         row.innerHTML = `
           <div class="lb-rank">${rankDisplay}</div>
           <div class="lb-name">${escapeHtml(e.name)}${isMe ? ' (sen)' : ''}</div>
-          <div class="lb-time">${fmtTime(e.totalSeconds)}</div>`;
+          <div class="lb-time">${formatValue(e)}</div>`;
         list.appendChild(row);
       });
     }
 
+    function renderTimeBoard(entries){
+      renderBoard('splashLbTimeList', entries, e => fmtTime(e.totalSeconds));
+    }
+    function renderLevelBoard(entries){
+      renderBoard('splashLbLevelList', entries, e => 'Sv ' + levelFromXp(e.xp));
+    }
+
+    function renderMyRanks(timeRank, timeTotal, levelRank, levelTotal){
+      const box = document.getElementById('myRankBox');
+      if(!box) return;
+      if(!db){
+        box.innerHTML = '<div class="my-rank-empty">🏅 Tablo henüz bağlanmadı.</div>';
+        return;
+      }
+      if(!currentUid){
+        box.innerHTML = '<div class="my-rank-empty">🏅 Sıralamanı görmek için giriş yap</div>';
+        return;
+      }
+      const timeTxt = timeRank
+        ? `<span class="my-rank-value">${timeRank}.</span><span class="my-rank-total"> / ${timeTotal}</span>`
+        : '<span class="my-rank-pending">henüz veri yok</span>';
+      const levelTxt = levelRank
+        ? `<span class="my-rank-value">${levelRank}.</span><span class="my-rank-total"> / ${levelTotal}</span>`
+        : '<span class="my-rank-pending">henüz veri yok</span>';
+      box.innerHTML = `
+        <div class="my-rank-row">
+          <span class="my-rank-icon">⏱️</span>
+          <span class="my-rank-label">Süre sıralaması</span>
+          ${timeTxt}
+        </div>
+        <div class="my-rank-row">
+          <span class="my-rank-icon">⭐</span>
+          <span class="my-rank-label">Seviye sıralaması</span>
+          ${levelTxt}
+        </div>`;
+    }
+
+    let lastLbVal = null;
+
+    function processLbSnapshot(val){
+      lastLbVal = val;
+      const all = Object.entries(val || {})
+        .filter(([k, v]) => v && v.name)
+        .map(([k, v]) => ({ uid: k, name: v.name, totalSeconds: v.totalSeconds || 0, xp: v.xp || 0 }));
+
+      const byTime = all.slice().sort((a,b) => (b.totalSeconds||0) - (a.totalSeconds||0));
+      const byLevel = all.slice().sort((a,b) => (b.xp||0) - (a.xp||0));
+
+      renderTimeBoard(byTime.slice(0, 5));
+      renderLevelBoard(byLevel.slice(0, 5));
+
+      let timeRank = null, levelRank = null;
+      if(currentUid){
+        const ti = byTime.findIndex(e => e.uid === currentUid);
+        const li = byLevel.findIndex(e => e.uid === currentUid);
+        timeRank = ti >= 0 ? ti + 1 : null;
+        levelRank = li >= 0 ? li + 1 : null;
+      }
+      renderMyRanks(timeRank, byTime.length, levelRank, byLevel.length);
+    }
+
     function listenLeaderboard(){
-      if(!db){ renderLeaderboard([]); return; }
+      if(!db){
+        renderTimeBoard([]);
+        renderLevelBoard([]);
+        renderMyRanks(null, 0, null, 0);
+        return;
+      }
       db.ref('leaderboard').on('value', (snap) => {
-        const val = snap.val() || {};
-        const entries = Object.entries(val)
-          .filter(([k, v]) => v && v.name)
-          .map(([k, v]) => ({ uid: k, name: v.name, totalSeconds: v.totalSeconds }))
-          .sort((a,b) => (b.totalSeconds||0) - (a.totalSeconds||0))
-          .slice(0, 10);
-        renderLeaderboard(entries);
+        processLbSnapshot(snap.val() || {});
       }, (err) => {
         console.warn('Liderlik verisi okunamadı:', err);
-        renderLeaderboard([]);
+        renderTimeBoard([]);
+        renderLevelBoard([]);
+        renderMyRanks(null, 0, null, 0);
       });
     }
 

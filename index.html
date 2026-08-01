@@ -367,6 +367,23 @@
     padding:7px 12px;border-radius:999px;
     text-shadow:0 0 8px rgba(79,232,255,0.4);
   }
+
+  /* ===== KAÇINCI SIRADAYIM (toplam sürenin altında, kompakt) ===== */
+  .my-rank-box{
+    margin-top:12px;width:100%;
+    background:linear-gradient(135deg, rgba(155,123,255,0.08), rgba(79,232,255,0.06));
+    border:1px solid rgba(155,123,255,0.3);
+    border-radius:14px;padding:10px 14px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .my-rank-row{display:flex;align-items:center;gap:8px;font-size:11.5px;}
+  .my-rank-icon{font-size:14px;flex-shrink:0;line-height:1;}
+  .my-rank-label{color:var(--muted);flex:1;text-align:left;font-weight:700;letter-spacing:.02em;}
+  .my-rank-value{color:var(--cyan-soft);font-weight:900;text-shadow:0 0 8px rgba(79,232,255,0.45);white-space:nowrap;}
+  .my-rank-row:last-child .my-rank-value{color:var(--violet);text-shadow:0 0 8px rgba(155,123,255,0.5);}
+  .my-rank-total{color:var(--muted);font-weight:600;font-size:10.5px;}
+  .my-rank-pending{color:var(--muted);font-size:10.5px;font-weight:600;}
+  .my-rank-empty{text-align:center;color:var(--muted);font-size:11px;letter-spacing:.02em;}
   .credit{text-align:center;font-size:11px;color:var(--muted);margin-top:26px;letter-spacing:.06em;opacity:.75;background:rgba(10,14,24,0.35);padding:8px 12px;border-radius:10px;}
   .credit b{color:var(--cyan-soft);font-weight:700;text-shadow:0 0 8px rgba(79,232,255,0.5);}
 
@@ -537,7 +554,7 @@
 
   /* ===== LİDERLİK TABLOSU (giriş ekranının altında sabit) ===== */
   .splash-lb{
-    margin-top:28px;width:100%;max-width:300px;
+    margin-top:28px;width:100%;max-width:360px;
     background:rgba(13,17,34,0.72);
     border:1px solid rgba(255,210,59,0.45);
     border-radius:16px;
@@ -552,10 +569,24 @@
   }
   .splash-lb-title{
     font-size:11.5px;font-weight:700;color:var(--gold);letter-spacing:.04em;
-    margin-bottom:8px;text-align:center;
+    margin-bottom:10px;text-align:center;
     text-shadow:0 0 10px rgba(255,210,59,0.6);
   }
+  /* İki sütun: sol = süre, sağ = seviye. Dar ekranlarda medya sorgusuyla alt alta düşer. */
+  .splash-lb-cols{display:flex;align-items:stretch;gap:9px;}
+  .splash-lb-col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;}
+  .splash-lb-col-divider{width:1px;flex-shrink:0;align-self:stretch;background:linear-gradient(180deg,transparent,rgba(255,210,59,0.4),transparent);}
+  .splash-lb-subtitle{
+    font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+    margin-bottom:7px;text-align:center;opacity:.95;white-space:nowrap;
+  }
+  .splash-lb-subtitle.time{color:var(--cyan-soft);text-shadow:0 0 8px rgba(79,232,255,0.5);}
+  .splash-lb-subtitle.level{color:var(--violet);text-shadow:0 0 8px rgba(155,123,255,0.55);}
   .splash-lb-list{display:flex;flex-direction:column;gap:6px;padding-bottom:6px;}
+  .splash-lb-col .lb-row{padding:6px 6px;gap:5px;border-radius:9px;}
+  .splash-lb-col .lb-rank{width:15px;font-size:10.5px;}
+  .splash-lb-col .lb-name{font-size:10.5px;}
+  .splash-lb-col .lb-time{font-size:9.5px;}
   .lb-row{
     display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:10px;
     background:rgba(255,255,255,0.03);border:1px solid transparent;
@@ -563,8 +594,14 @@
   .lb-row.me{background:rgba(255,210,59,0.14);border-color:rgba(255,210,59,0.4);}
   .lb-rank{width:20px;text-align:center;font-weight:800;font-size:12px;color:var(--muted);}
   .lb-name{flex:1;font-size:12px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;}
-  .lb-time{font-size:11px;color:var(--cyan-soft);font-weight:700;}
-  .lb-empty{text-align:center;color:var(--muted);font-size:11.5px;padding:10px 0;}
+  .lb-time{font-size:11px;color:var(--cyan-soft);font-weight:700;white-space:nowrap;}
+  .lb-empty{text-align:center;color:var(--muted);font-size:10.5px;padding:10px 4px;line-height:1.4;}
+
+  /* Dar ekranlarda sütunlar sıkışıp bozulmasın diye alt alta diz */
+  @media (max-width:370px){
+    .splash-lb-cols{flex-direction:column;gap:12px;}
+    .splash-lb-col-divider{width:100%;height:1px;}
+  }
 
   /* İlk 3 için neon altın / gümüş / bronz */
   .lb-row:nth-child(1){
@@ -713,8 +750,18 @@
     <div class="goethe-note">ⓘ BU SAYFADA KULLANILAN KELİMELER GOETHE/CEFR İLE BİREBİR UYUMLUDUR</div>
 
     <div class="splash-lb" id="splashLb">
-      <div class="splash-lb-title">🏆 En Çok Vakit Geçirenler</div>
-      <div id="splashLbList" class="splash-lb-list"></div>
+      <div class="splash-lb-title">🏆 Sıralamalar</div>
+      <div class="splash-lb-cols">
+        <div class="splash-lb-col">
+          <div class="splash-lb-subtitle time">⏱️ Vakit</div>
+          <div id="splashLbTimeList" class="splash-lb-list"></div>
+        </div>
+        <div class="splash-lb-col-divider"></div>
+        <div class="splash-lb-col">
+          <div class="splash-lb-subtitle level">⭐ Seviye</div>
+          <div id="splashLbLevelList" class="splash-lb-list"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -962,6 +1009,9 @@
 
   <div class="session-timer" id="sessionTimer">⏱ Bu oturumda: 0sn</div>
   <div class="session-timer" id="profileTimer">👤 Profil yükleniyor...</div>
+  <div class="my-rank-box" id="myRankBox">
+    <div class="my-rank-empty">🏅 Sıralamanı görmek için giriş yap</div>
+  </div>
   <div class="credit">İsim hakları <b>M HAMZA</b>'ya aittir</div>
 </div>
 

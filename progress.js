@@ -152,6 +152,9 @@
     ensureDailyRollover();
     persistLocalMirror();
     dataLoaded = true;
+    // Bu oturumda hiç XP kazanılmasa bile (ör. kullanıcı sadece göz atıyor),
+    // seviye liderlik tablosunun güncel kalması için mevcut XP'yi bildir.
+    if(window.LB_updateXp) window.LB_updateXp(meta.xp||0);
     if(cb) cb();
   }
   function persistLocalMirror(){
@@ -161,6 +164,11 @@
     persistLocalMirror();
     const ref = dbRef('progress/'+currentKey+'/meta');
     if(ref) ref.set(meta).catch(()=>{});
+    // Seviye liderlik tablosu 'leaderboard/{uid}/xp' alanını okur; her meta
+    // kaydında (görev tamamlama, XP kazanma, oturum bitişi vb.) burayı da
+    // güncel tutuyoruz ki ayrı bir okuma yapmadan tek dinleyiciyle hem süre
+    // hem seviye sıralaması hesaplanabilsin.
+    if(window.LB_updateXp) window.LB_updateXp(meta.xp||0);
   }
   function ensureDailyRollover(){
     const t = todayStr();
@@ -1015,7 +1023,11 @@
 
   window.LB_onNameReady = function(name){
     if(dataLoaded && currentName === name){ return; } // zaten yüklü, gereksiz yeniden yüklemeyi (ve olası veri ezmeyi) engelle
-    if(root && root.style.display !== 'none'){ loadUserData(name, renderHome); }
+    // Kişisel panel şu an görünür değilse bile veriyi sessizce yükle: bu sayede
+    // meta.xp (dolayısıyla seviye liderlik tablosu) kullanıcı "Kişisel Mod"u
+    // hiç açmasa bile girişte güncellenir. Panel görünürse ayrıca render eder.
+    const isVisible = root && root.style.display !== 'none';
+    loadUserData(name, isVisible ? renderHome : null);
   };
 
   window.PM_open = openPersonalMode;
