@@ -94,17 +94,20 @@ body{
 .app .lang-opt[data-lang="es"]{background-image:linear-gradient(158deg, rgba(255,116,104,.24) 0%, rgba(230,120,50,.10) 46%, rgba(8,12,30,0) 78%) !important;}
 .app .lang-opt[data-lang="ru"]{background-image:linear-gradient(158deg, rgba(158,128,255,.26) 0%, rgba(110,90,230,.10) 46%, rgba(8,12,30,0) 78%) !important;}
 
-/* dilin arkasındaki soluk yapı silueti — buton içinde kalır, taşmaz */
+/* dilin arkasındaki soluk yapı silueti — orijinal boyut, köşelerden kırpılır */
 .app .lang-opt .landmark{
-  position:absolute; right:4px; bottom:3px;
-  font-size:26px; line-height:1;
-  opacity:.16;
-  filter:grayscale(1) brightness(1.7) drop-shadow(0 0 6px rgba(150,200,255,.30));
+  position:absolute; right:-8px; bottom:-4px;
+  font-size:56px; line-height:1;
+  opacity:.18;
+  filter:grayscale(1) brightness(1.75) drop-shadow(0 0 12px rgba(150,200,255,.35));
   pointer-events:none;
   z-index:0;
 }
-/* buton içeriği hep ortalı ve sınırlar içinde */
+/* butonun sınırları dışına hiçbir şey taşmasın: köşelerden temiz kesim */
 .app .lang-opt{
+  overflow:hidden;
+  contain:paint;
+  border-radius:16px;
   display:flex; flex-direction:column;
   align-items:center; justify-content:center;
   min-height:60px;
