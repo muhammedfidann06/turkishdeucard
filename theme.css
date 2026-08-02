@@ -94,17 +94,81 @@ body{
 .app .lang-opt[data-lang="es"]{background-image:linear-gradient(158deg, rgba(255,116,104,.24) 0%, rgba(230,120,50,.10) 46%, rgba(8,12,30,0) 78%) !important;}
 .app .lang-opt[data-lang="ru"]{background-image:linear-gradient(158deg, rgba(158,128,255,.26) 0%, rgba(110,90,230,.10) 46%, rgba(8,12,30,0) 78%) !important;}
 
-/* dilin arkasındaki soluk yapı silueti */
+/* dilin arkasındaki soluk yapı silueti — buton içinde kalır, taşmaz */
 .app .lang-opt .landmark{
-  position:absolute; right:-8px; bottom:-4px;
-  font-size:56px; line-height:1;
-  opacity:.18;
-  filter:grayscale(1) brightness(1.75) drop-shadow(0 0 12px rgba(150,200,255,.35));
+  position:absolute; right:4px; bottom:3px;
+  font-size:26px; line-height:1;
+  opacity:.16;
+  filter:grayscale(1) brightness(1.7) drop-shadow(0 0 6px rgba(150,200,255,.30));
   pointer-events:none;
   z-index:0;
 }
+/* buton içeriği hep ortalı ve sınırlar içinde */
+.app .lang-opt{
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  min-height:60px;
+}
+.app .lang-opt .flag{
+  font-size:20px; line-height:1; margin-bottom:4px;
+  max-width:100%;
+}
+.app .lang-opt .lname{
+  max-width:100%;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
 .app .lang-opt .flag,
 .app .lang-opt .lname{position:relative; z-index:3;}
+
+/* ------------------------------------------- seçili dilin renkli ışığı
+   Her dilin kendi tonu --lg değişkeninde; seçilince buton o renkle
+   çevresine yumuşak bir ışık yayar ve hafifçe nefes alır. */
+.app .lang-opt[data-lang="de"]{--lg:255,190,72;}
+.app .lang-opt[data-lang="en"]{--lg:80,170,255;}
+.app .lang-opt[data-lang="ar"]{--lg:62,220,146;}
+.app .lang-opt[data-lang="fr"]{--lg:255,112,186;}
+.app .lang-opt[data-lang="es"]{--lg:255,116,104;}
+.app .lang-opt[data-lang="ru"]{--lg:158,128,255;}
+.app .lang-opt{--lg:150,190,255;}   /* yedek ton */
+
+.app .lang-opt.active{
+  border-color:rgba(var(--lg),.62) !important;
+  box-shadow:
+    0 0 0 1px rgba(var(--lg),.42),
+    0 0 16px rgba(var(--lg),.42),
+    0 0 38px rgba(var(--lg),.24),
+    inset 0 0 16px rgba(var(--lg),.16);
+  animation:langBreath 2.8s ease-in-out infinite;
+}
+@keyframes langBreath{
+  0%,100%{
+    box-shadow:
+      0 0 0 1px rgba(var(--lg),.38),
+      0 0 14px rgba(var(--lg),.34),
+      0 0 30px rgba(var(--lg),.18),
+      inset 0 0 14px rgba(var(--lg),.13);
+  }
+  50%{
+    box-shadow:
+      0 0 0 1px rgba(var(--lg),.60),
+      0 0 22px rgba(var(--lg),.55),
+      0 0 52px rgba(var(--lg),.32),
+      inset 0 0 20px rgba(var(--lg),.22);
+  }
+}
+.app .lang-opt.active .landmark{
+  opacity:.30;
+  filter:none;
+  text-shadow:0 0 10px rgba(var(--lg),.55);
+}
+/* seçili değilken üstüne gelince / basınca da kendi renginde kıvılcım */
+.app .lang-opt:hover{
+  border-color:rgba(var(--lg),.40);
+  box-shadow:0 6px 16px rgba(0,0,0,.28), 0 0 14px rgba(var(--lg),.22);
+}
+.app .lang-opt:active{
+  box-shadow:0 0 0 2px rgba(var(--lg),.45), 0 0 26px rgba(var(--lg),.50);
+}
 
 /* Eski neon halka artefaktları (varsa) görünmesin. */
 .app .lang-opt .neon,
@@ -224,6 +288,11 @@ body{
     rgba(255,255,255,.55) 0%, rgba(160,210,255,.30) 45%, rgba(160,210,255,0) 72%);
   animation:tfRipple .62s cubic-bezier(.16,1,.3,1) forwards;
 }
+/* dil butonlarında dalga o dilin renginde olsun */
+.app .lang-opt .tf-ripple{
+  background:radial-gradient(circle,
+    rgba(255,255,255,.60) 0%, rgba(var(--lg),.45) 45%, rgba(var(--lg),0) 72%);
+}
 @keyframes tfRipple{
   0%  {transform:scale(.2); opacity:.85;}
   100%{transform:scale(16);  opacity:0;}
@@ -301,6 +370,7 @@ body{
   #scene-bg{background-position:center 18%;}
 }
 @media (prefers-reduced-motion:reduce){
-  .flutter,.flutter .wing,.steam path{animation:none !important;}
+  .flutter,.flutter .wing,.steam path,
+  .app .lang-opt.active{animation:none !important;}
   .tf-ripple{display:none !important;}
 }
