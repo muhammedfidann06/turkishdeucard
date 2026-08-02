@@ -48,11 +48,17 @@ body{
 #sky{display:none !important;}
 #scene-frame{display:none !important;}
 
+/* Bu iki katman sky.css'te de tanımlıydı; sky.js kaldırıldığı için burada
+   kendi ayakları üstünde duracak şekilde yeniden yazıldı. */
 #grade{
+  position:fixed; inset:0; z-index:1; pointer-events:none;
   background:radial-gradient(126% 80% at 50% 40%,
     rgba(0,0,0,0) 52%, rgba(2,4,14,.20) 82%, rgba(2,4,14,.44) 100%) !important;
 }
-#grain{opacity:.030 !important;}
+#grain{
+  position:fixed; inset:0; z-index:2; pointer-events:none;
+  opacity:.030 !important;
+}
 
 /* Ateş böcekleri — en arka planda, manzaranın hemen üstünde. */
 #sky-fx{

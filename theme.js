@@ -3,8 +3,8 @@
 
    Arayüz mantığına dokunmaz. Eklediği şeyler:
      1. #scene-bg   manzara katmanı (+ hafif parallax)
-     2. #sky-fx     EN ARKA PLAN: yalnızca birkaç ateş böceği
-                    (yıldızlar ve kayan yıldızlar kaldırıldı — performans)
+     2. #sky-fx     EN ARKA PLAN: birkaç ateş böceği + seyrek kayan yıldız
+                    (parıldayan yıldız alanı kaldırıldı — performans)
      3. #fg-desk    kahve · açık defter · kitap yığını
      4. .flutter    kelebekler (en arka planda, hızlı kanat çırpan)
      5. ilerleme satırı tek hizaya alınır
@@ -58,13 +58,17 @@
     /* Kaydırma sırasında arka plan sabit kalır: sayfa akıcı, cihaz yorulmaz. */
   }
 
-  /* ============================================== 2. ateş böcekleri (hafif)
-     Yıldızlar ve kayan yıldızlar TAMAMEN kaldırıldı: kaydırma sırasında
-     titreme yapıyor ve pili gereksiz tüketiyordu.
+  /* ================================ 2. ateş böcekleri + kayan yıldızlar
+     Parıldayan yıldız alanı (140 adet) TAMAMEN kaldırıldı: kaydırma
+     sırasında titreme yapıyor ve pili gereksiz tüketiyordu.
 
-     Geriye yalnızca birkaç ateş böceği kaldı; alt yarıda, çiçeklerin
-     arasında salınır, sıcak sarı ışıkları yavaşça sönüp yanar. Katman en
-     arkada (z-index 0) — arayüzün ve panellerin altında.
+     Geriye iki hafif şey kaldı:
+       · birkaç ateş böceği — alt yarıda salınır, sıcak sarı ışıkları
+         yavaşça sönüp yanar.
+       · 10–20 sn'de bir tek bir kayan yıldız — üst yarıda, kısa iz bırakır.
+         Ekranda aynı anda en fazla 1 tane olur; maliyeti yok denecek kadar az.
+
+     Katman en arkada (z-index 0) — arayüzün ve panellerin altında.
   ========================================================================= */
   var fx = null;
 
@@ -74,7 +78,8 @@
     cv.setAttribute('aria-hidden', 'true');
     var ctx = cv.getContext('2d');
     var W = 0, H = 0, dpr = 1;
-    var flies = [], t0 = performance.now();
+    var flies = [], shots = [], t0 = performance.now();
+    var nextShot = performance.now() + 4000;
 
     function seedFlies() {
       flies.length = 0;
@@ -96,6 +101,21 @@
       }
     }
 
+    function spawnShot() {
+      /* üst yarıda, aşağı-yana doğru; ince ve hızlı */
+      var fromLeft = Math.random() < 0.62;
+      var ang = (fromLeft ? 0.30 : 0.62) + Math.random() * 0.22;   /* radyan */
+      shots.push({
+        x: fromLeft ? -40 + Math.random() * W * 0.5 : W * 0.45 + Math.random() * W * 0.5,
+        y: -20 + Math.random() * H * 0.24,
+        vx: Math.cos(ang) * (620 + Math.random() * 420),
+        vy: Math.sin(ang) * (620 + Math.random() * 420),
+        life: 0,
+        max: 0.62 + Math.random() * 0.4,
+        len: 90 + Math.random() * 130
+      });
+    }
+
     function resize() {
       /* 1.5 üstü piksel oranı bu efekt için gereksiz — boşuna yük */
       dpr = Math.min(1.5, window.devicePixelRatio || 1);
@@ -112,6 +132,38 @@
       var t = (now - t0) / 1000;
       ctx.clearRect(0, 0, W, H);
 
+      /* ---- kayan yıldız: 10–20 sn'de bir, aynı anda tek ---- */
+      if (now > nextShot) {
+        if (!shots.length) spawnShot();
+        nextShot = now + 10000 + Math.random() * 10000;
+      }
+      for (var k = shots.length - 1; k >= 0; k--) {
+        var sh = shots[k];
+        sh.life += 1 / 60;
+        sh.x += sh.vx / 60; sh.y += sh.vy / 60;
+        if (sh.life > sh.max || sh.x > W + 200 || sh.y > H * 0.7) { shots.splice(k, 1); continue; }
+
+        var fade = 1 - sh.life / sh.max;
+        var m = Math.hypot(sh.vx, sh.vy) || 1;
+        var qx = sh.x - (sh.vx / m) * sh.len;
+        var qy = sh.y - (sh.vy / m) * sh.len;
+        var lg = ctx.createLinearGradient(sh.x, sh.y, qx, qy);
+        lg.addColorStop(0, 'rgba(255,255,255,' + (0.92 * fade).toFixed(3) + ')');
+        lg.addColorStop(0.35, 'rgba(190,225,255,' + (0.42 * fade).toFixed(3) + ')');
+        lg.addColorStop(1, 'rgba(160,200,255,0)');
+        ctx.strokeStyle = lg;
+        ctx.lineWidth = 2.1;
+        ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(sh.x, sh.y); ctx.lineTo(qx, qy); ctx.stroke();
+
+        var hg = ctx.createRadialGradient(sh.x, sh.y, 0, sh.x, sh.y, 9);
+        hg.addColorStop(0, 'rgba(255,255,255,' + (0.85 * fade).toFixed(3) + ')');
+        hg.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.fillStyle = hg;
+        ctx.beginPath(); ctx.arc(sh.x, sh.y, 9, 0, 6.2832); ctx.fill();
+      }
+
+      /* ---- ateş böcekleri ---- */
       for (var j = 0; j < flies.length; j++) {
         var f = flies[j];
         var fxp = f.x + f.dx * t + Math.sin(t * f.fx * 6.28 + f.px) * f.ax;
@@ -143,9 +195,12 @@
     function start() { if (!raf) raf = requestAnimationFrame(frame); }
     function stop() { if (raf) { cancelAnimationFrame(raf); raf = 0; } }
 
-    /* Konsoldan denemek için: THEME_debug() → sahnedeki nesne sayısı */
+    /* Konsoldan denemek için:
+         THEME_shoot()  → hemen bir kayan yıldız gönderir
+         THEME_debug()  → sahnedeki nesne sayılarını verir              */
+    window.THEME_shoot = function () { spawnShot(); };
     window.THEME_debug = function () {
-      return { atesbocegi: flies.length, yildiz: 0 };
+      return { atesbocegi: flies.length, kayan: shots.length, yildiz: 0 };
     };
 
     return {
