@@ -2,23 +2,75 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M HAMZA | Dil Kartları</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+<title>Lumira | Dil Kartları</title>
+<meta name="description" content="6 dilde binlerce kelime kartı, quiz, seslendirme ve kişisel ilerleme takibi. Çevrimdışı çalışır.">
+<meta name="application-name" content="Lumira Dil Kartları">
+<meta name="author" content="Lumira">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
 
-<link rel="manifest" href="manifest.json">
-
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-
-<meta name="theme-color" content="#050710">
-
+<!-- ===================== PWA · MANIFEST ===================== -->
 <link rel="manifest" href="./manifest.json">
+
+<!-- ===================== İKONLAR ===================== -->
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+
+<!-- ===================== DURUM / GEZİNME ÇUBUĞU ===================== -->
 <meta name="theme-color" content="#04050a">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#04050a">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#04050a">
+<meta name="background-color" content="#04050a">
+<meta name="msapplication-TileColor" content="#04050a">
+<meta name="msapplication-TileImage" content="./icon-144.png">
+<meta name="msapplication-navbutton-color" content="#04050a">
+
+<!-- ===================== ANDROID / CHROME ===================== -->
 <meta name="mobile-web-app-capable" content="yes">
+
+<!-- ===================== iOS PWA ===================== -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Kelime Kartları">
+<meta name="apple-mobile-web-app-title" content="Dil Kartları">
+<link rel="apple-touch-startup-image" href="splash-1290x2796.jpg" media="(device-width:430px) and (device-height:932px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-1179x2556.jpg" media="(device-width:393px) and (device-height:852px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-1284x2778.jpg" media="(device-width:428px) and (device-height:926px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-1170x2532.jpg" media="(device-width:390px) and (device-height:844px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-1125x2436.jpg" media="(device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-1242x2688.jpg" media="(device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-828x1792.jpg" media="(device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-750x1334.jpg" media="(device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-1620x2160.jpg" media="(device-width:810px) and (device-height:1080px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-1668x2388.jpg" media="(device-width:834px) and (device-height:1194px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-2048x2732.jpg" media="(device-width:1024px) and (device-height:1366px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)">
+<link rel="apple-touch-startup-image" href="splash-1536x2048.jpg" media="(device-width:768px) and (device-height:1024px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)">
 
+<!-- ===================== PAYLAŞIM ÖNİZLEMESİ ===================== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lumira">
+<meta property="og:title" content="Lumira | Dil Kartları">
+<meta property="og:description" content="6 dilde kelime kartları, quiz ve seslendirme — çevrimdışı da çalışır.">
+<meta property="og:image" content="./icon-512.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ===================== HIZ ===================== -->
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.gstatic.com">
+<link rel="preload" as="image" href="./scene-bg.jpg">
+<link rel="preload" as="image" href="./icon-192.png">
+
+<!-- Firebase SDK'sı erkenden indirilsin: sıralama tablosu ilk ziyarette
+     gecikmesin. preload, tarayıcıya üçünü paralel indirtir. -->
+<link rel="preload" as="script" href="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" crossorigin>
+<link rel="preload" as="script" href="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js" crossorigin>
+<link rel="preload" as="script" href="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" crossorigin>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
@@ -593,8 +645,8 @@
     animation:pmNeonShift 4s ease-in-out infinite;
   }
 </style>
-<link rel="stylesheet" href="sky.css">
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="theme.css?v=1.4.4">
+<link rel="stylesheet" href="pwa.css?v=1.4.4">
 </head>
 <body>
 
@@ -623,7 +675,13 @@
 <div id="splash">
   <canvas id="snowCanvas"></canvas>
   <div class="splash-content">
-    <h1 class="splash-name">DİL KARTLARI</h1>
+    <div class="splash-brand">
+      <div class="brand-mark-wrap">
+        <img class="brand-mark" src="splash-logo.png" alt="Lumira" width="300" height="300" fetchpriority="high">
+      </div>
+      <h1 class="brand-name">LUMIRA<i class="brand-spark" aria-hidden="true">✦</i></h1>
+      <div class="brand-rule"><i></i><span>DİL KARTLARI</span><i></i></div>
+    </div>
     <div class="splash-sub">GİRİŞ İÇİN EKRANA TIKLAYIN</div>
     <a class="ig-link" id="igLink" href="https://www.instagram.com/muhammedf.fdn" target="_blank" rel="noopener" onclick="event.stopPropagation()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
@@ -651,7 +709,7 @@
 <div class="app" id="mainApp">
   <div class="top-row">
     <div>
-      <div class="eyebrow">Kelime Kartları</div>
+      <div class="eyebrow">LUMIRA</div>
       <h1>Dil Kartları</h1>
     </div>
     <div class="top-btn-row">
@@ -898,13 +956,112 @@
 </div>
 
 <script src="vocab-core.js"></script>
+<!-- Açılışta SADECE Almanca yükleniyor. Diğer beş dil, kullanıcı o dile
+     geçtiği anda pwa.js tarafından indiriliyor. Önceden altı dosyanın altısı
+     birden (5,2 MB) her açılışta ayrıştırılıyordu; telefonlarda donmanın en
+     büyük sebebi buydu. -->
 <script src="vocab-de.js"></script>
-<script src="vocab-en.js"></script>
-<script src="vocab-ar.js"></script>
-<script src="vocab-fr.js"></script>
-<script src="vocab-es.js"></script>
-<script src="vocab-ru.js"></script>
-<script src="leaderboard.js"></script>
+<script>
+/* ===================== SÖZLÜKLERİN İHTİYAÇ ANINDA YÜKLENMESİ =============
+   Bu kod BİLEREK index.html'in içinde: sözlük etiketlerini kaldıran dosya ile
+   onları geri getiren kod aynı yerde dursun ki ikisi asla birbirinden ayrı
+   sürümde kalmasın. (Ayrı dosyada dururken, tarayıcıda eski sürüm önbellekte
+   kalınca diller boş görünüyordu.) */
+window.VOCAB_LOADED = { de: true };
+(function(){
+  var loading = {};
+  var NAMES = { de:'Almanca', en:'İngilizce', ar:'Arapça', fr:'Fransızca', es:'İspanyolca', ru:'Rusça' };
+
+  function ensure(lang){
+    if(window.VOCAB_LOADED[lang]) return Promise.resolve(true);
+    if(loading[lang]) return loading[lang];
+    loading[lang] = new Promise(function(res, rej){
+      var sc = document.createElement('script');
+      sc.src = 'vocab-' + lang + '.js';
+      sc.async = false;
+      sc.onload = function(){ window.VOCAB_LOADED[lang] = true; delete loading[lang]; res(true); };
+      sc.onerror = function(){ delete loading[lang]; rej(new Error(lang)); };
+      document.head.appendChild(sc);
+    });
+    return loading[lang];
+  }
+  window.ensureVocab = ensure;
+
+  /* --- Arka planda sessiz tamamlama -----------------------------------
+     Açılışta hız için yalnızca Almanca yükleniyor. Ama "Kişisel" sekmesindeki
+     istatistikler, hata listesi ve öğrenilen kelimeler tüm kelime verisini
+     tarayarak çalışıyor; eksik dil varken bu ekranlar BOŞ görünüyor (veri
+     duruyor, sadece eşleşecek kelime bulunamıyor). Bu yüzden açılıştan
+     birkaç saniye sonra, kullanıcı hiçbir şey fark etmeden kalan diller de
+     arka planda yükleniyor. Açılış hızı korunuyor, hiçbir ekran eksik
+     kalmıyor. */
+  var REST = ['en','ar','fr','es','ru'];
+  function preloadRest(){
+    var i = 0;
+    (function next(){
+      if(i >= REST.length) return;
+      var lang = REST[i++];
+      if(window.VOCAB_LOADED[lang]) return next();
+      ensure(lang).then(function(){
+        /* Ekranda açık olan liste varsa tazelensin */
+        try{ if(typeof applyFilter === 'function' && window.VOCAB_LOADED[lang]) {} }catch(e){}
+        setTimeout(next, 400);          /* aralık bırak: arayüz takılmasın */
+      }).catch(function(){ setTimeout(next, 1500); });
+    })();
+  }
+
+  function startPreload(){
+    if(navigator.onLine === false) return;
+    if(window.requestIdleCallback) requestIdleCallback(preloadRest, { timeout: 6000 });
+    else setTimeout(preloadRest, 2500);
+  }
+  if(document.readyState === 'complete') setTimeout(startPreload, 2500);
+  else window.addEventListener('load', function(){ setTimeout(startPreload, 2500); });
+
+  /* Kişisel sekmesine geçilirse beklemeden tamamla */
+  document.addEventListener('click', function(e){
+    var t = e.target && e.target.closest ? e.target.closest('#tabPersonal') : null;
+    if(t) preloadRest();
+  }, true);
+
+  function note(msg){
+    if(window.PWA && window.PWA.toast) return window.PWA.toast(msg);
+    return function(){};
+  }
+
+  /* Yakalama aşaması: uygulamanın kendi dil işleyicisinden ÖNCE çalışır */
+  document.addEventListener('click', function(e){
+    var el = e.target && e.target.closest ? e.target.closest('.lang-opt') : null;
+    if(!el) return;
+    var lang = el.getAttribute('data-lang');
+    if(!lang || window.VOCAB_LOADED[lang]) return;      /* hazırsa karışma */
+
+    e.preventDefault();
+    e.stopPropagation();
+    if(e.stopImmediatePropagation) e.stopImmediatePropagation();
+
+    if(el.dataset.loading === '1') return;
+    el.dataset.loading = '1';
+    el.style.opacity = '.55';
+    var close = note('⏳ ' + (NAMES[lang] || lang) + ' sözlüğü yükleniyor…');
+
+    ensure(lang).then(function(){
+      el.dataset.loading = '';
+      el.style.opacity = '';
+      if(typeof close === 'function') close();
+      el.click();                                        /* artık normal akış */
+    }).catch(function(){
+      el.dataset.loading = '';
+      el.style.opacity = '';
+      if(typeof close === 'function') close();
+      note(navigator.onLine === false
+        ? '📴 Bu dil için önce internet gerekli'
+        : '⚠️ Sözlük yüklenemedi, tekrar dene');
+    });
+  }, true);
+})();
+</script>
+<script src="leaderboard.js?v=1.4.4"></script>
 <script>
 /* ================================================================
    ŞİFRE GÖSTER/GİZLE — Maymun emoji animasyonu (sadece görsel, saf UI)
@@ -932,8 +1089,9 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 <script>
-/* Kelime verisi artık vocab-core.js / vocab-de.js / vocab-en.js / vocab-ar.js /
-   vocab-fr.js / vocab-es.js / vocab-ru.js dosyalarından yükleniyor
+/* Kelime verisi vocab-core.js + vocab-<dil>.js dosyalarından geliyor.
+   Açılışta yalnızca vocab-de.js yükleniyor; diğer diller o dile geçildiğinde
+   pwa.js tarafından indiriliyor
    (bkz. yukarıdaki <script src> etiketleri). fr/es/ru şu an boş iskelettir. */
 /* ======================= CONFIG ======================= */
 const LANGS = {
@@ -1752,87 +1910,153 @@ applyFilter();
 
 /* ======================= SNOW / CRYSTAL EFFECT ======================= */
 (function(){
+  /* Hafif mod açıksa kar efekti hiç çalıştırılmaz. Bu betik pwa.js'ten önce
+     çalıştığı için tercih doğrudan depodan okunuyor. */
+  /* Hafif mod SADECE kullanıcı açtıysa true olur. Depoda değer yoksa ya da
+     'false' ise kar normal şekilde yağar. */
+  /* Hafif mod: kullanıcı seçtiyse onun tercihi; seçmediyse cihaz zayıfsa
+     (4 çekirdek veya altı / 3 GB RAM veya altı) kendiliğinden açılır.
+     Bu betik pwa.js'ten önce çalıştığı için aynı kural burada da uygulanıyor;
+     yoksa kar bir an için yağıp sonra kaybolurdu. */
+  let liteOn = false;
+  try{
+    var raw = localStorage.getItem('pwa_lite');
+    if(raw === 'true')       liteOn = true;
+    else if(raw === 'false') liteOn = false;
+    else {
+      var c = navigator.hardwareConcurrency, m = navigator.deviceMemory;
+      liteOn = (typeof c === 'number' && c <= 4) || (typeof m === 'number' && m <= 3);
+    }
+    if(liteOn) document.documentElement.classList.add('lite');
+  }catch(e){ liteOn = false; }
+
   const canvas = document.getElementById('snowCanvas');
+  if(liteOn){ canvas.style.display = 'none'; }
   const ctx = canvas.getContext('2d');
-  let w, h, flakes, running = true, windPhase = 0;
+  let w, h, flakes, running = !liteOn, windPhase = 0;
 
   function resize(){ w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
   window.addEventListener('resize', resize);
   resize();
 
-  function makeFlakes(n){
-    return Array.from({length:n}, () => ({
-      x: Math.random()*w,
-      y: Math.random()*h,
-      r: Math.random()*9 + 4,
-      speedY: Math.random()*1.6 + 0.7,
-      speedX: Math.random()*1.0 - 0.5,
-      rot: Math.random()*Math.PI*2,
-      rotSpeed: (Math.random()*0.05 - 0.025),
-      drift: Math.random()*Math.PI*2,
-      driftSpeed: Math.random()*0.03 + 0.015,
-      opacity: Math.random()*0.5 + 0.55,
-      hue: Math.random() < 0.5 ? "190,235,255" : "210,220,255"
-    }));
-  }
-  
-  flakes = makeFlakes(62);
-
-  function drawCrystal(f){
-    ctx.save();
-    ctx.translate(f.x, f.y);
-    ctx.rotate(f.rot);
-    ctx.globalAlpha = f.opacity;
-    ctx.strokeStyle = `rgba(${f.hue},1)`;
-    ctx.fillStyle = `rgba(${f.hue},1)`;
-    ctx.lineWidth = Math.max(0.6, f.r*0.09);
-    
-    for(let i=0;i<6;i++){
-      ctx.save();
-      ctx.rotate((Math.PI/3)*i);
-      ctx.beginPath();
-      ctx.moveTo(0,0);
-      ctx.lineTo(0, f.r);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.moveTo(0, f.r*0.45);
-      ctx.lineTo(f.r*0.22, f.r*0.62);
-      ctx.moveTo(0, f.r*0.45);
-      ctx.lineTo(-f.r*0.22, f.r*0.62);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.moveTo(0, f.r*0.75);
-      ctx.lineTo(f.r*0.16, f.r*0.88);
-      ctx.moveTo(0, f.r*0.75);
-      ctx.lineTo(-f.r*0.16, f.r*0.88);
-      ctx.stroke();
-      ctx.restore();
+  /* --- Kar taneleri: her kare yeniden ÇİZİLMİYOR, bir kez resme dönüştürülüp
+     sonra sadece kopyalanıyor.
+     Eskiden her tane için 6 kol × 3 çizgi = kare başına ~1100 stroke() çağrısı
+     yapılıyordu; açılış ekranındaki donmanın sebebi buydu. Şimdi tane başına
+     tek bir drawImage var. Görüntü birebir aynı. */
+  function makeSprite(r, hue){
+    const pad = 3;
+    const size = Math.ceil(r * 2 + pad * 2);
+    const c = document.createElement('canvas');
+    c.width = c.height = size;
+    const x = c.getContext('2d');
+    x.translate(size / 2, size / 2);
+    x.strokeStyle = `rgba(${hue},1)`;
+    x.fillStyle = `rgba(${hue},1)`;
+    x.lineWidth = Math.max(0.6, r * 0.09);
+    x.lineCap = 'round';
+    for(let i = 0; i < 6; i++){
+      x.save();
+      x.rotate((Math.PI / 3) * i);
+      x.beginPath();
+      x.moveTo(0, 0);
+      x.lineTo(0, r);
+      x.stroke();
+      x.beginPath();
+      x.moveTo(0, r * 0.45);
+      x.lineTo(r * 0.22, r * 0.62);
+      x.moveTo(0, r * 0.45);
+      x.lineTo(-r * 0.22, r * 0.62);
+      x.stroke();
+      x.beginPath();
+      x.moveTo(0, r * 0.75);
+      x.lineTo(r * 0.16, r * 0.88);
+      x.moveTo(0, r * 0.75);
+      x.lineTo(-r * 0.16, r * 0.88);
+      x.stroke();
+      x.restore();
     }
-    ctx.beginPath();
-    ctx.arc(0,0,f.r*0.14,0,Math.PI*2);
-    ctx.fill();
-    ctx.restore();
+    x.beginPath();
+    x.arc(0, 0, r * 0.14, 0, Math.PI * 2);
+    x.fill();
+    return c;
   }
 
-  function tick(){
+  /* Aynı yarıçapı defalarca çizmemek için küçük bir önbellek */
+  const spriteCache = {};
+  function spriteFor(r, hue){
+    const key = Math.round(r) + '|' + hue;
+    if(!spriteCache[key]) spriteCache[key] = makeSprite(Math.round(r), hue);
+    return spriteCache[key];
+  }
+
+  function flakeCount(){
+    if(document.documentElement.classList.contains('lite')) return 0;
+    const small = Math.min(window.innerWidth, window.innerHeight) < 430;
+    return small ? 34 : 56;
+  }
+
+  function makeFlakes(n){
+    return Array.from({length:n}, () => {
+      const r = Math.random()*9 + 4;
+      const hue = Math.random() < 0.5 ? "190,235,255" : "210,220,255";
+      return {
+        x: Math.random()*w,
+        y: Math.random()*h,
+        r, hue,
+        sprite: spriteFor(r, hue),
+        speedY: Math.random()*1.6 + 0.7,
+        speedX: Math.random()*1.0 - 0.5,
+        rot: Math.random()*Math.PI*2,
+        rotSpeed: (Math.random()*0.05 - 0.025),
+        drift: Math.random()*Math.PI*2,
+        driftSpeed: Math.random()*0.03 + 0.015,
+        opacity: Math.random()*0.5 + 0.55
+      };
+    });
+  }
+
+  flakes = liteOn ? [] : makeFlakes(flakeCount());
+
+  /* Ayarlardan hafif mod açılırsa kar anında dursun */
+  window.__snowStop = function(){ running = false; try{ ctx.clearRect(0,0,w,h); canvas.style.display='none'; }catch(e){} };
+
+  /* Kare hızı sınırı: kar için 30 fps fazlasıyla yeterli, geri kalan güç
+     arayüze kalsın. */
+  let lastFrame = 0;
+  const FRAME_MS = 1000 / 30;
+
+  function tick(now){
     if(!running) return;
+    requestAnimationFrame(tick);
+    if(now - lastFrame < FRAME_MS) return;
+    lastFrame = now;
+
     ctx.clearRect(0,0,w,h);
-    windPhase += 0.012;
+    windPhase += 0.012 * 2;              /* 30 fps'te aynı hız hissi */
     const gust = Math.sin(windPhase) * 0.6;
-    flakes.forEach(f=>{
-      f.drift += f.driftSpeed;
-      f.rot += f.rotSpeed;
-      f.y += f.speedY;
-      f.x += f.speedX + gust + Math.sin(f.drift)*0.6;
+
+    for(let i = 0; i < flakes.length; i++){
+      const f = flakes[i];
+      f.drift += f.driftSpeed * 2;
+      f.rot += f.rotSpeed * 2;
+      f.y += f.speedY * 2;
+      f.x += (f.speedX + gust + Math.sin(f.drift)*0.6) * 2;
       if(f.y > h + 12){ f.y = -12; f.x = Math.random()*w; }
       if(f.x > w + 12) f.x = -12;
       if(f.x < -12) f.x = w + 12;
-      drawCrystal(f);
-    });
+
+      const s = f.sprite;
+      ctx.globalAlpha = f.opacity;
+      ctx.save();
+      ctx.translate(f.x, f.y);
+      ctx.rotate(f.rot);
+      ctx.drawImage(s, -s.width/2, -s.height/2);
+      ctx.restore();
+    }
     ctx.globalAlpha = 1;
-    requestAnimationFrame(tick);
   }
-  tick();
+  if(!liteOn) requestAnimationFrame(tick);
 
   const splash = document.getElementById('splash');
   const mainApp = document.getElementById('mainApp');
@@ -1848,31 +2072,23 @@ applyFilter();
   }, { once:true });
 })();
 </script>
-<script src="progress.js"></script>
+<script src="progress.js?v=1.4.4"></script>
 
-<script>
-/* ======================= PWA SERVICE WORKER ======================= */
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js")
-      .then(registration => {
-        console.log("Kelime Kartları PWA aktif:", registration.scope);
-      })
-      .catch(error => {
-        console.error("PWA Service Worker hatası:", error);
-      });
-  });
-}
-</script>
+<!-- Service Worker kaydı, güncelleme kontrolü, bildirimler ve geri tuşu
+     yönetimi artık pwa.js içinde (sayfanın en altında yükleniyor). -->
 
 
 <!-- ===== HAREKET KATMANI =====
      GSAP ve Lenis isteğe bağlıdır: yüklenmezlerse arayüz aynen çalışır,
      sadece giriş koreografisi CSS ile yapılır. -->
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
-<script defer src="voice.js"></script>
-<script defer src="motion.js"></script>
-<script defer src="theme.js"></script>
+<!-- GSAP ve Lenis kaldırıldı: projede hiçbir yerde kullanılmıyordu ama her
+     açılışta indirilip ayrıştırılıyordu (~130 KB). -->
+<script defer src="voice.js?v=1.4.4"></script>
+<script defer src="theme.js?v=1.4.4"></script>
+
+<!-- ===================== LUMIRA · PWA KATMANI =====================
+     Service Worker, çevrimdışı paket, bildirimler, geri tuşu, kısayollar,
+     deep link, favoriler, yedekleme ve güncelleme yönetimi. -->
+<script defer src="pwa.js?v=1.4.4"></script>
 </body>
 </html>

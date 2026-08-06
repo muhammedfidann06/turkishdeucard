@@ -53,6 +53,13 @@ function initLeaderboard(){
         firebase.initializeApp(FIREBASE_CONFIG);
         db = firebase.database();
         authSvc = firebase.auth();
+        /* Oturum cihazda kalıcı olsun: uygulama kapanıp açılınca tekrar
+           giriş istenmesin. (Varsayılan zaten LOCAL'dir; bazı tarayıcılarda
+           SESSION'a düştüğü için açıkça belirtiliyor.) */
+        try{
+          authSvc.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+            .catch(function(e){ console.warn('Oturum kalıcılığı ayarlanamadı:', e); });
+        }catch(e){}
       }catch(e){ console.warn('Firebase başlatılamadı:', e); }
     } else if(!isConfigured){
       console.warn('Liderlik tablosu: FIREBASE_CONFIG henüz doldurulmadı.');
@@ -407,8 +414,26 @@ function initLeaderboard(){
 
     let lastLbVal = null;
 
+    /* Son tablo cihazda saklanıyor: yeni açılışta Firebase cevap verene kadar
+       ekran boş kalmasın, önceki sıralama anında görünsün. */
+    const LB_CACHE_KEY = 'lumira_lb_cache_v1';
+    function cacheLb(val){
+      try{ localStorage.setItem(LB_CACHE_KEY, JSON.stringify({ t: Date.now(), v: val })); }catch(e){}
+    }
+    function readLbCache(){
+      try{
+        const raw = localStorage.getItem(LB_CACHE_KEY);
+        if(!raw) return null;
+        const o = JSON.parse(raw);
+        if(!o || !o.v) return null;
+        if(Date.now() - (o.t||0) > 7*86400000) return null;   /* bir haftadan eskiyse gösterme */
+        return o.v;
+      }catch(e){ return null; }
+    }
+
     function processLbSnapshot(val){
       lastLbVal = val;
+      cacheLb(val);
       const all = Object.entries(val || {})
         .filter(([k, v]) => v && v.name)
         .map(([k, v]) => ({ uid: k, name: v.name, totalSeconds: v.totalSeconds || 0, xp: v.xp || 0 }));
@@ -429,7 +454,21 @@ function initLeaderboard(){
       renderMyRanks(timeRank, byTime.length, levelRank, byLevel.length);
     }
 
+    /* Veri gelene kadar boş kutu yerine yüklenme iskeleti göster */
+    function showLbSkeleton(){
+      ['splashLbTimeList','splashLbLevelList'].forEach(id => {
+        const list = document.getElementById(id);
+        if(!list || list.children.length) return;
+        list.innerHTML = '<div class="lb-row lb-skel"></div>'.repeat(4);
+      });
+    }
+
     function listenLeaderboard(){
+      /* Önce cihazdaki son kopya — anında görünür */
+      const cached = readLbCache();
+      if(cached) { try{ processLbSnapshot(cached); }catch(e){} }
+      else showLbSkeleton();
+
       if(!db){
         renderTimeBoard([]);
         renderLevelBoard([]);
@@ -449,17 +488,41 @@ function initLeaderboard(){
     /* ---------------- BAŞLAT ---------------- */
     listenLeaderboard();
 
+    /* Firebase, kayıtlı oturumu diskten geri yüklerken kısa bir süre geçer.
+       Eskiden LB_checkName bu süre dolmadan çalışıp giriş penceresini açıyordu;
+       kullanıcı zaten girişliyken tekrar giriş istenmesinin sebebi buydu.
+       Artık önce oturum durumunun netleşmesi bekleniyor. */
+    let authResolved = false;
+    let loginCheckPending = false;
+
+    function resolveAuth(user){
+      authResolved = true;
+      if(user){
+        const dn = user.displayName || 'Kullanıcı';
+        startTrackingWithUid(user.uid, dn);
+        hideNameModal();
+      } else if(loginCheckPending){
+        loginCheckPending = false;
+        showNameModal();
+      }
+    }
+
     if(authSvc){
-      authSvc.onAuthStateChanged((user) => {
-        if(user){
-          const dn = user.displayName || 'Kullanıcı';
-          startTrackingWithUid(user.uid, dn);
+      authSvc.onAuthStateChanged(resolveAuth);
+      /* Ağ hiç cevap vermezse (çevrimdışı ilk açılış) sonsuza kadar bekleme */
+      setTimeout(function(){
+        if(!authResolved && !currentUid && loginCheckPending){
+          loginCheckPending = false;
+          showNameModal();
         }
-      });
+      }, 6000);
     }
 
     window.LB_checkName = function(){
-      if(!currentUid){ showNameModal(); }
+      if(currentUid) return;              /* zaten girişli */
+      if(!authSvc){ showNameModal(); return; }   /* Firebase yok: eski davranış */
+      if(authResolved){ showNameModal(); return; }
+      loginCheckPending = true;           /* oturum netleşince karar verilir */
     };
     window.LB_getActiveSeconds = () => activeAccumulated;
     window.LB_isIdle = isIdleNow;

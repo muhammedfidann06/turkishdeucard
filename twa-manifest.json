@@ -1,0 +1,67 @@
+{
+  "packageId": "com.lumira.dilkartlari",
+  "host": "muhammedfidann06.github.io",
+  "name": "Lumira | Dil Kartları",
+  "launcherName": "Dil Kartları",
+  "display": "standalone",
+  "themeColor": "#04050A",
+  "themeColorDark": "#04050A",
+  "navigationColor": "#04050A",
+  "navigationColorDark": "#04050A",
+  "navigationDividerColor": "#04050A",
+  "navigationDividerColorDark": "#04050A",
+  "backgroundColor": "#04050A",
+  "enableNotifications": true,
+  "startUrl": "/lumira/?src=twa",
+  "iconUrl": "https://muhammedfidann06.github.io/lumira/icon-512.png",
+  "maskableIconUrl": "https://muhammedfidann06.github.io/lumira/icon-maskable-512.png",
+  "monochromeIconUrl": "https://muhammedfidann06.github.io/lumira/icon-monochrome.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "lumira"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "Kartlara devam et",
+      "shortName": "Kartlar",
+      "url": "/lumira/?src=shortcut&tab=cards",
+      "chosenIconUrl": "https://muhammedfidann06.github.io/lumira/sc-cards.png"
+    },
+    {
+      "name": "Hızlı quiz",
+      "shortName": "Quiz",
+      "url": "/lumira/?src=shortcut&tab=quiz",
+      "chosenIconUrl": "https://muhammedfidann06.github.io/lumira/sc-quiz.png"
+    },
+    {
+      "name": "Günün kelimesi",
+      "shortName": "Günün kelimesi",
+      "url": "/lumira/?src=shortcut&action=daily",
+      "chosenIconUrl": "https://muhammedfidann06.github.io/lumira/sc-word.png"
+    },
+    {
+      "name": "İlerlemem",
+      "shortName": "İlerlemem",
+      "url": "/lumira/?src=shortcut&tab=personal",
+      "chosenIconUrl": "https://muhammedfidann06.github.io/lumira/sc-stats.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://muhammedfidann06.github.io/lumira/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": { "enabled": false },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://muhammedfidann06.github.io/lumira/",
+  "minSdkVersion": 23,
+  "orientation": "portrait",
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "protocolHandlers": [],
+  "fileHandlers": []
+}
