@@ -1101,11 +1101,8 @@ function fbUser() {
    "Kullanıcı kimliğim" satırından kopyalanıp buraya yazılabilir.
    NOT: Bu yalnızca ARAYÜZ gizlemesidir, güvenlik değildir — gerçek koruma
    Firebase kurallarında yapılmalıdır (aşağıdaki açıklamaya bak). */
-var ADMIN_UIDS = ['49AyoEDRltPQ8NSzPU9y2fDtWDI2'];
-/* İsimle eşleştirme kapatıldı: isim taklit edilebilir, kimlik edilemez.
-   Başka bir yöneticiye yetki vermek istersen UID'sini yukarıdaki listeye ekle
-   ve Firebase kurallarına da aynı kimliği yaz. */
-var ADMIN_NAMES = [];
+var ADMIN_UIDS = [];
+var ADMIN_NAMES = ['m hamza', 'mhamza'];
 
 function isAdmin() {
   var u = fbUser();
@@ -1247,27 +1244,12 @@ function openAdminXp() {
       }
       shown.forEach(function (u) {
         var r = row('👤', escapeHtml(u.name || '(isimsiz)'),
-          (u.xp || 0) + ' XP · Sv ' + (Math.floor((u.xp || 0) / 200) + 1) +
-          (u.realXp ? '' : ' · dokun, gerçek XP okunsun'));
+          (u.xp || 0) + ' XP · Sv ' + (Math.floor((u.xp || 0) / 200) + 1));
         if (selected && selected.uid === u.uid) {
           r.style.borderColor = 'rgba(79,232,255,.6)';
           r.style.background = 'rgba(79,232,255,.10)';
         }
-        r.onclick = function () {
-          selected = u;
-          draw();
-          /* Gerçek XP, kişinin progress kaydında tutulur; leaderboard'daki
-             kopya yalnızca "Kişisel Mod" kullanıldığında güncellenir ve çoğu
-             kullanıcıda 0 kalır. Seçilen kişinin asıl değerini okuyoruz. */
-          db.ref('progress/' + u.uid + '/meta/xp').once('value').then(function (sn) {
-            var real = sn.val();
-            if (typeof real === 'number') {
-              u.xp = real;
-              u.realXp = true;
-              if (selected && selected.uid === u.uid) draw();
-            }
-          }).catch(function () {});
-        };
+        r.onclick = function () { selected = u; draw(); };
         list.appendChild(r);
       });
     }
@@ -1292,29 +1274,10 @@ function openAdminXp() {
       if (amount > 100000) { toast('Tek seferde en fazla 100.000 XP', { kind: 'bad' }); return; }
 
       var target = selected;
-
-      /* Gönderimden hemen önce gerçek değeri bir kez daha oku: aradan zaman
-         geçtiyse kişi XP kazanmış olabilir, üzerine yazıp geri almayalım. */
-      send.disabled = true; send.textContent = 'Okunuyor…';
-      db.ref('progress/' + target.uid + '/meta/xp').once('value').then(function (sn) {
-        var cur = sn.val();
-        if (typeof cur !== 'number') cur = target.xp || 0;
-        target.xp = cur;
-        target.realXp = true;
-        send.disabled = false; send.textContent = 'XP gönder';
-        draw();
-        askAndSend(target, cur, amount);
-      }).catch(function () {
-        send.disabled = false; send.textContent = 'XP gönder';
-        askAndSend(target, target.xp || 0, amount);
-      });
-    };
-
-    function askAndSend(target, cur, amount) {
-      var newXp = cur + amount;
+      var newXp = (target.xp || 0) + amount;
 
       confirmSheet('XP gönderilsin mi?',
-        escapeHtml(target.name || '(isimsiz)') + ' → ' + cur + ' XP yerine <b>' + newXp + ' XP</b> olacak.',
+        escapeHtml(target.name || '(isimsiz)') + ' → ' + (target.xp || 0) + ' XP yerine <b>' + newXp + ' XP</b> olacak.',
         function () {
           send.disabled = true; send.textContent = 'Gönderiliyor…';
           /* SADECE xp alanı yazılıyor: kişinin serisi, günlük sayacı ve
@@ -1333,7 +1296,7 @@ function openAdminXp() {
             toast('Gönderilemedi: ' + ((e && e.code) || 'izin yok'), { kind: 'bad', duration: 8000 });
           });
         });
-    }
+    };
     b.appendChild(send);
 
     b.insertAdjacentHTML('beforeend',
@@ -1831,7 +1794,7 @@ window.PWA = {
     });
     return { onLine: navigator.onLine, badgeVisible: !!(document.getElementById('pwa-offline') || {}).classList && document.getElementById('pwa-offline').classList.contains('in') };
   },
-  version: 'pwa.js 1.4.4',
+  version: 'pwa.js 1.4.2',
   isStandalone: function () { return isStandalone; }
 };
 
