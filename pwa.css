@@ -779,3 +779,370 @@ html.lite .app .chip{text-shadow:none !important;}
   border:1px solid rgba(140,190,255,.2);
   box-shadow:none;
 }
+
+/* ============================================================================
+   DESTEK OL · ROZETLER · PDF · KİLİT
+   ========================================================================== */
+.credit-sub{
+  display:block; margin-top:5px;
+  font-size:10px; color:#5d6b8c; line-height:1.6;
+}
+.support-wrap{
+  display:flex; justify-content:center;
+  margin:14px 0 calc(6px + env(safe-area-inset-bottom));
+  position:relative; z-index:3;
+}
+.support-btn{
+  font:inherit; font-size:13px; font-weight:800; letter-spacing:.02em;
+  cursor:pointer; padding:11px 22px; border-radius:999px;
+  color:#ffd7ea; background:rgba(30,12,28,.55);
+  border:1px solid rgba(255,95,184,.55);
+  box-shadow:0 0 16px rgba(255,95,184,.22), inset 0 0 14px rgba(255,95,184,.10);
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  transition:transform .18s cubic-bezier(.22,1.4,.36,1), box-shadow .22s ease;
+}
+.support-btn:active{transform:scale(.96);}
+.support-btn:hover{box-shadow:0 0 24px rgba(255,95,184,.42), inset 0 0 18px rgba(255,95,184,.18);}
+html.lite .support-btn{-webkit-backdrop-filter:none; backdrop-filter:none;}
+
+/* --- bağış kutuları --- */
+.sup-grid{
+  display:grid; grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:9px; margin:2px 2px 4px;
+}
+.sup-item{
+  font:inherit; cursor:pointer;
+  display:flex; flex-direction:column; align-items:center; gap:3px;
+  padding:14px 6px 11px; border-radius:14px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(140,190,255,.18);
+  transition:transform .16s cubic-bezier(.22,1.4,.36,1), border-color .2s ease, background .2s ease;
+}
+.sup-item:active{transform:scale(.96);}
+.sup-item:hover{border-color:rgba(255,95,184,.45); background:rgba(255,95,184,.08);}
+.sup-item.owned{
+  border-color:rgba(61,255,160,.5);
+  background:rgba(61,255,160,.09);
+}
+.sup-amount{font-size:16px; font-weight:800; color:#eef4ff;}
+.sup-eur{font-size:9.5px; font-weight:600; color:#8fa0c2; margin-top:-2px;}
+.sup-badge{font-size:20px; line-height:1.1;}
+.sup-xp{font-size:10.5px; font-weight:700; color:#4fe8ff;}
+.sup-desc{
+  margin:16px 2px 0; font-size:12px; line-height:1.75; color:#8fa0c2;
+  text-align:center;
+}
+@media (max-width:340px){ .sup-grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
+
+/* --- kilit uyarısı --- */
+.lock-msg{
+  margin:4px 2px 6px; font-size:13.5px; line-height:1.8; color:#c9d7f5;
+  background:rgba(255,210,59,.07);
+  border:1px solid rgba(255,210,59,.28);
+  border-radius:14px; padding:16px 16px;
+}
+.lock-msg b{color:#ffd23b;}
+
+/* --- PDF seçim satırları --- */
+.pdf-row{margin:0 2px 14px;}
+.pdf-lbl{display:block; font-size:11.5px; color:#8291b3; margin-bottom:8px;}
+.pdf-chips{display:flex; flex-wrap:wrap; gap:7px;}
+.pdf-chip{
+  font:inherit; font-size:12.5px; font-weight:700; cursor:pointer;
+  padding:9px 13px; border-radius:11px; color:#c9d7f5;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(140,190,255,.18);
+  transition:transform .14s ease, border-color .2s ease, background .2s ease, color .2s ease;
+}
+.pdf-chip:active{transform:scale(.95);}
+.pdf-chip.on{
+  color:#04050a; border-color:transparent;
+  background:linear-gradient(120deg,#4fe8ff,#9b7bff);
+}
+
+/* ============================================================================
+   SIRALAMA TABLOSU — isimler kısalmasın
+   Kutu, ekranın izin verdiği kadar genişler (üst sınır 480px). İsimler artık
+   üç noktayla kesilmiyor; sığmazsa iki satıra iniyor. Sütunlar destekleyen
+   ekranlarda yan yana kalıyor, yalnızca gerçekten dar cihazlarda alt alta.
+   ========================================================================== */
+.splash-lb{
+  max-width:min(480px, calc(100vw - 26px)) !important;
+  padding:15px 13px 10px !important;
+}
+
+/* İsim: normalde tek satırda tam görünür. Süre metni kısaltıldığı için
+   ("4s +") isme çok daha fazla yer kalıyor; yalnızca gerçekten uzun
+   isimlerde ikinci satıra iniyor ve kelime ortadan bölünmüyor. */
+.lb-name{
+  white-space:normal !important;
+  text-overflow:clip !important;
+  overflow:hidden;
+  line-height:1.22;
+  word-break:normal;          /* kelimeyi ortadan bölme */
+  overflow-wrap:break-word;   /* yalnızca sığmıyorsa böl */
+  hyphens:none;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+.splash-lb-col .lb-name{font-size:11.5px !important;}
+.splash-lb-col .lb-time{font-size:10.5px !important;}
+
+/* Satırlar iki satırlık isimde de düzgün hizalansın */
+.lb-row{
+  align-items:center;
+  gap:7px !important;
+  padding:8px 9px !important;
+  min-height:38px;
+}
+/* Süre alanı sabit ve dar: isim sütunu geniş kalsın */
+.lb-time{
+  flex:0 0 auto;
+  min-width:46px;
+  text-align:right;
+  white-space:nowrap;
+}
+
+/* Sütun aralığı biraz açıldı, ayraç görünür kalsın */
+.splash-lb-cols{gap:11px !important;}
+
+/* Yan yana düzen daha geniş bir aralıkta korunuyor:
+   eskiden 370px altında alt alta iniyordu, artık 330px altında. */
+@media (min-width:331px){
+  .splash-lb-cols{flex-direction:row !important;}
+  .splash-lb-col-divider{display:block !important;}
+}
+@media (max-width:330px){
+  .splash-lb-cols{flex-direction:column !important;}
+  .splash-lb-col-divider{display:none !important;}
+  .lb-name{-webkit-line-clamp:1;}
+}
+
+/* Geniş ekranlarda (tablet, bilgisayar) yazılar biraz büyüsün */
+@media (min-width:520px){
+  .splash-lb-col .lb-name{font-size:12.5px !important;}
+  .splash-lb-col .lb-time{font-size:11.5px !important;}
+}
+
+/* ---------------------------------------- açılış ekranı: dikey yerleşim
+   Instagram bağlantısı sıralama tablosunun altına taşındı. Boşalan yerden
+   yararlanarak tablo yukarı çekildi ve nefes payları yeniden dengelendi. */
+#splash .goethe-note{
+  margin-top:16px !important;
+  margin-bottom:0 !important;
+}
+#splash .splash-lb{
+  margin-top:18px !important;   /* eskiden 28px */
+}
+#splash .ig-link{
+  margin-top:18px !important;
+  margin-bottom:4px !important;
+}
+#splash .splash-sub{
+  margin-bottom:2px !important;
+}
+
+/* ============================================================================
+   HOŞ GELDİN KARTI · YÖNETİCİ PANELİ · PANEL KAPATMA
+   ========================================================================== */
+
+/* --------------------------------------------------- hoş geldin kartı */
+#lumira-welcome{
+  position:fixed; inset:0; z-index:9700;
+  display:flex; align-items:center; justify-content:center;
+  padding:24px;
+  background:rgba(3,5,14,.55);
+  -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
+  opacity:0; transition:opacity .38s ease;
+}
+#lumira-welcome.in{opacity:1;}
+html.lite #lumira-welcome{-webkit-backdrop-filter:none; backdrop-filter:none;}
+
+.wc-card{
+  position:relative; width:min(400px, 100%);
+  padding:26px 26px 24px; border-radius:22px;
+  background:linear-gradient(160deg, rgba(18,14,34,.97), rgba(9,8,20,.98));
+  border:1px solid rgba(155,123,255,.30);
+  box-shadow:0 24px 60px rgba(0,0,0,.6), 0 0 44px rgba(155,123,255,.16);
+  transform:translateY(16px) scale(.97);
+  transition:transform .48s cubic-bezier(.22,1,.36,1);
+  overflow:hidden;
+}
+#lumira-welcome.in .wc-card{transform:none;}
+.wc-card::after{               /* köşedeki yumuşak mor ışık */
+  content:''; position:absolute; right:-40px; top:-40px;
+  width:180px; height:180px; border-radius:50%;
+  background:radial-gradient(circle, rgba(155,123,255,.30), transparent 70%);
+  pointer-events:none;
+}
+.wc-mark{
+  display:block; font-size:17px; opacity:.75; margin-bottom:14px;
+  filter:drop-shadow(0 0 10px rgba(155,123,255,.7));
+}
+.wc-hi{font-size:19px; color:#e8eeff; font-weight:600; line-height:1.2;}
+.wc-name{
+  font-size:29px; font-weight:800; line-height:1.15; margin-top:2px;
+  background:linear-gradient(100deg,#a78bff,#c9a4ff);
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent; -webkit-text-fill-color:transparent;
+}
+.wc-lines{margin-top:16px; display:flex; flex-direction:column; gap:7px;}
+.wc-line{font-size:13px; color:#9fb0d2; line-height:1.5;}
+.wc-line b{color:#dbe6ff; font-weight:700;}
+.wc-fly{
+  position:absolute; right:24px; bottom:20px;
+  font-size:34px; opacity:.5;
+  filter:drop-shadow(0 0 16px rgba(155,123,255,.75));
+  animation:wcFly 3.4s ease-in-out infinite;
+}
+@keyframes wcFly{
+  0%,100%{transform:translate(0,0) rotate(-6deg);}
+  50%{transform:translate(-8px,-10px) rotate(8deg);}
+}
+@media (prefers-reduced-motion:reduce){ .wc-fly{animation:none;} }
+html.lite .wc-fly{animation:none;}
+
+/* ------------------------------------------ panellerdeki kapatma butonu */
+.pwa-sheet-x{
+  position:absolute; top:12px; right:14px; z-index:3;
+  width:30px; height:30px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font:inherit; font-size:13px; line-height:1; cursor:pointer;
+  color:rgba(200,215,245,.55);
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(140,190,255,.16);
+  transition:color .2s ease, background .2s ease, transform .16s ease;
+}
+.pwa-sheet-x:hover{color:#eef4ff; background:rgba(255,255,255,.1);}
+.pwa-sheet-x:active{transform:scale(.9);}
+.pwa-sheet{position:fixed;}   /* buton konumu için */
+.pwa-sheet h3{padding-right:38px;}
+
+/* ------------------------------------------------- yönetici istatistik */
+.adm-cards{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin:2px 2px 6px;}
+.adm-card{
+  background:rgba(255,255,255,.04); border:1px solid rgba(140,190,255,.16);
+  border-radius:13px; padding:12px 8px; text-align:center;
+}
+.adm-card .t{display:block; font-size:10px; color:#8291b3; letter-spacing:.02em;}
+.adm-card b{display:block; font-size:20px; color:#eef4ff; margin:3px 0 1px;}
+.adm-card .s{display:block; font-size:9.5px; color:#5d6b8c;}
+
+.adm-h{
+  font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:#8fa6d0; margin:20px 2px 9px; font-weight:700;
+}
+.adm-bars{
+  display:flex; align-items:flex-end; gap:6px; height:96px;
+  padding:0 2px;
+}
+.adm-bar{flex:1 1 0; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;}
+.adm-bar i{
+  display:block; width:100%; border-radius:6px 6px 3px 3px;
+  background:linear-gradient(180deg,#4fe8ff,#9b7bff);
+  min-height:4px;
+}
+.adm-bar b{font-size:10.5px; color:#cfe0ff; margin-top:5px;}
+.adm-bar span{font-size:9px; color:#5d6b8c;}
+
+.adm-funnel{display:flex; flex-direction:column; gap:8px; margin:0 2px;}
+.adm-fn{display:flex; align-items:center; gap:9px; font-size:12px; color:#a8b6d2;}
+.adm-fn > span:first-child{flex:0 0 108px;}
+.adm-fn .bar{flex:1 1 auto; height:9px; border-radius:99px; background:rgba(255,255,255,.07); overflow:hidden;}
+.adm-fn .bar i{display:block; height:100%; background:linear-gradient(90deg,#4fe8ff,#9b7bff);}
+.adm-fn b{flex:0 0 auto; color:#eef4ff; font-size:12px; min-width:36px; text-align:right;}
+
+.adm-list{display:flex; flex-direction:column; gap:7px; margin:0 2px;}
+.adm-item{display:flex; align-items:center; gap:9px; font-size:12px;}
+.adm-item .n{flex:0 0 118px; color:#a8b6d2; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.adm-item .track{flex:1 1 auto; height:8px; border-radius:99px; background:rgba(255,255,255,.07); overflow:hidden;}
+.adm-item .track i{display:block; height:100%; background:linear-gradient(90deg,#9b7bff,#ff5fb8);}
+.adm-item b{flex:0 0 auto; color:#eef4ff; min-width:44px; text-align:right;}
+
+/* hafif modda açılış yazısı sabit renkte dursun (yanıp sönmesin) */
+html.lite .splash-sub{
+  animation:none !important;
+  opacity:.92 !important;
+  text-shadow:0 0 10px rgba(79,232,255,.45) !important;
+}
+
+/* ============================================================================
+   PERFORMANS — ikinci tur (iOS / Android)
+   Görüntüyü değiştirmeyen, yalnızca tarayıcının işini azaltan düzenlemeler.
+   ========================================================================== */
+
+/* Ekranı kaplayan sabit fotoğraf sürekli bir "değişecek" katmanı olarak
+   işaretliyordu; bu, telefonlarda kalıcı olarak yüksek bellek ayırıyor.
+   Görsel sabit olduğu için buna gerek yok. */
+#scene-bg{will-change:auto !important;}
+
+/* Uzun listelerde ekran dışında kalan satırlar hiç çizilmesin.
+   Kişisel moddaki tekrar listesi, quiz hataları ve kategori ızgarası
+   yüzlerce öğeye ulaşabiliyor; bu tek satır orada belirgin fark yaratır. */
+.fav-item,
+.cat-grid .chip,
+#mistakesView .mistake-item{
+  content-visibility:auto;
+  contain-intrinsic-size:auto 46px;
+}
+
+/* Dokunma vurgusu ve seçim işaretçisi: her dokunuşta ek boyama yapıyordu */
+*{-webkit-tap-highlight-color:transparent;}
+
+/* Küçük yüzen öğelerdeki arka plan bulanıklığı kaldırıldı — üzerlerinde
+   zaten koyu bir zemin var, gözle fark edilmiyor ama her karede
+   hesaplanıyordu. */
+#pwa-fab,
+.pwa-toast,
+#pwa-offline{
+  -webkit-backdrop-filter:none !important;
+          backdrop-filter:none !important;
+}
+#pwa-fab{background:linear-gradient(160deg, rgba(22,30,60,.94), rgba(10,14,30,.94));}
+.pwa-toast{background:linear-gradient(160deg, rgba(20,27,54,.97), rgba(11,15,32,.97));}
+#pwa-offline{background:rgba(60,12,26,.96);}
+
+/* Kart yüzeyindeki bulanıklık bir kademe daha düşürüldü (9px → 7px).
+   iOS'ta bulanıklık maliyeti yarıçapla birlikte hızla artıyor. */
+.face,
+#quizView .quiz-card,
+.quiz-card{
+  -webkit-backdrop-filter:blur(7px) !important;
+          backdrop-filter:blur(7px) !important;
+}
+
+/* Kart çevirme: katman hazırlığı önceden yapılsın.
+   NOT: Görünmeyen yüzü "visibility:hidden" ile gizleme denemesi geri alındı —
+   sınıf anında değiştiği için dönüşün ortasında yüzlerden biri birden
+   kayboluyor, animasyon sıçramış gibi görünüyordu. */
+.card{will-change:transform;}
+
+/* ============================================================================
+   iOS'ta KAYDIRMA SIRASINDA ANİMASYON SIÇRAMASI
+   Sabit (position:fixed) katmanlar iOS'ta sayfa kaydırılırken yeniden
+   konumlandırılıyor; üzerlerinde animasyon varsa bu "gidip gelme" olarak
+   görünüyor. Katmanları kendi çizim bağlamına almak (contain + translateZ)
+   bunu belirgin biçimde azaltır.
+   ========================================================================== */
+#sky-fx,
+#scene-bg,
+#grain,
+#grade,
+#fg-desk{
+  transform:translateZ(0);
+  backface-visibility:hidden;
+  contain:layout paint;
+  pointer-events:none;
+}
+
+/* Kaydırma iOS'ta kendi ivmesiyle aksın */
+html{-webkit-overflow-scrolling:touch;}
+
+
+/* Kaydırma sürerken sabit katmanlar iOS'ta geriden gelip sonra yerine
+   oturuyor. Bu sırada tuvale yeni kare basmak sıçrama gibi görünüyordu; artık
+   çizim kısa süreliğine duruyor (theme.js ve kar betiği içinde).
+   NOT: Burada bir de saydamlaştırma denenmişti — kaydırınca efektlerin
+   solması gözle fark ediliyor ve daha rahatsız ediciydi, kaldırıldı.
+   Görüntüde hiçbir değişiklik yok; yalnızca hareket bir an duruyor. */

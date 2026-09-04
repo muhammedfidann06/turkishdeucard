@@ -112,22 +112,40 @@ function initLeaderboard(){
           const uidProgSnap = await db.ref('progress/'+uid).once('value');
           if(!uidProgSnap.exists()){
             await db.ref('progress/'+uid).set(progSnap.val());
+          } else {
+            /* Hedefte kayıt varsa eskisini silmeden önce XP'yi koru:
+               hangisi yüksekse o kalsın. */
+            const oldMeta = (progSnap.val() || {}).meta || {};
+            const newMeta = (uidProgSnap.val() || {}).meta || {};
+            const bestXp = Math.max(oldMeta.xp || 0, newMeta.xp || 0);
+            if(bestXp > (newMeta.xp || 0)){
+              await db.ref('progress/'+uid+'/meta/xp').set(bestXp).catch(()=>{});
+            }
           }
-          // Eski kaydı sil — aksi halde aynı veri iki farklı anahtar altında
-          // (eski isim + yeni uid) tekrar tekrar var olmaya devam eder.
           await db.ref('progress/'+oldKey).remove().catch(()=>{});
         }
       }catch(e){}
       try{
         const lbSnap = await db.ref('leaderboard/'+oldKey).once('value');
         if(lbSnap.exists()){
+          const oldVal = lbSnap.val() || {};
           const uidLbSnap = await db.ref('leaderboard/'+uid).once('value');
-          if(!uidLbSnap.exists()){
-            const val = lbSnap.val();
-            if(val && typeof val === 'object') val.name = displayName;
-            await db.ref('leaderboard/'+uid).set(val);
-          }
-          // Eski liderlik kaydını sil — çift görünmesin (ör. iki adet "M Hamza").
+          const newVal = uidLbSnap.val() || {};
+
+          /* BİRLEŞTİR, ÜZERİNE YAZMA.
+             Eskiden: hedefte kayıt varsa eski kayıt hiç okunmadan siliniyordu
+             ve içindeki XP/süre kayboluyordu. Kişi sıralamada bir görünüp
+             sonra kayboluyordu. Artık iki kayıttan da YÜKSEK olan değerler
+             alınıp birleştiriliyor. */
+          const merged = {
+            name: displayName || newVal.name || oldVal.name || 'Kullanıcı',
+            xp: Math.max(oldVal.xp || 0, newVal.xp || 0),
+            totalSeconds: Math.max(oldVal.totalSeconds || 0, newVal.totalSeconds || 0),
+            lastSeen: Date.now()
+          };
+          await db.ref('leaderboard/'+uid).update(merged);
+
+          /* Eski kaydı ancak birleştirme başarıyla yazıldıktan SONRA sil. */
           await db.ref('leaderboard/'+oldKey).remove().catch(()=>{});
         }
       }catch(e){}
@@ -217,7 +235,7 @@ function initLeaderboard(){
     let lastActivity = Date.now();
     let lastTick = Date.now();
     const FLUSH_MS = 5000;
-    const IDLE_MS = 60000;
+    const IDLE_MS = 600000; /* 10 dakika (önceden 1dk) */
 
     const ACTIVITY_EVENTS = ['click','touchstart','touchmove','mousemove','keydown','scroll','pointerdown'];
     ACTIVITY_EVENTS.forEach(evt => {
@@ -288,17 +306,28 @@ function initLeaderboard(){
 
     function addSeconds(uid, name, seconds, useBeacon){
       if(!uid) return;
-      if(useBeacon && FIREBASE_CONFIG.databaseURL && FIREBASE_CONFIG.databaseURL.indexOf('BURAYA_YAPISTIR') === -1){
-        try{
-          const url = FIREBASE_CONFIG.databaseURL.replace(/\/$/, '') + '/leaderboard/' + uid + '/lastFlushAttempt.json';
-          fetch(url, { method:'PUT', body: JSON.stringify(Date.now()), keepalive:true }).catch(()=>{});
-        }catch(e){}
-      }
+      /* KALDIRILDI: buradaki kimliksiz (auth'suz) REST PUT güvenlik kuralları
+         'auth != null' istediği için zaten sessizce reddediliyordu (ölü kod) ve
+         kimliksiz yazma yüzeyi bırakıyordu. 'useBeacon' imza uyumu için duruyor
+         ama kullanılmıyor; süre aşağıdaki KİMLİKLİ transaction ile yazılır.
+         Sekme kapanırken son yazmayı garanti etmek istersen doğru yol,
+         önceden alınmış ID token'ı ekleyip '...lastFlushAttempt.json?auth=<token>'
+         çağırmaktır (token bayatlarsa güvenilmez olabilir). */
+      void useBeacon;
       if(!db) return;
       const ref = db.ref('leaderboard/' + uid);
       ref.transaction((current) => {
         const prev = current && typeof current === 'object' ? current : { name: name, totalSeconds: 0 };
-        return { name: name, totalSeconds: (prev.totalSeconds || 0) + seconds, lastSeen: Date.now() };
+        /* ÖNEMLİ: Buradan SIFIRDAN yeni bir nesne döndürülüyordu ve içinde "xp"
+           alanı yoktu. Süre her kaydedildiğinde (giriş anında, sekme
+           değişiminde, düzenli aralıklarla) kişinin XP'si siliniyordu; seviye
+           sıralamasında bir görünüp kaybolmasının ve "XP silinmiş gibi"
+           düşmesinin sebebi buydu. Artık mevcut alanlar korunuyor. */
+        return Object.assign({}, prev, {
+          name: name || prev.name || 'Kullanıcı',
+          totalSeconds: (prev.totalSeconds || 0) + seconds,
+          lastSeen: Date.now()
+        });
       });
     }
 
@@ -313,11 +342,30 @@ function initLeaderboard(){
     window.addEventListener('pagehide', () => flushElapsed(true));
 
     /* ---------------- LİDERLİK TABLOSU GÖRÜNÜMÜ (splash içinde sabit) ---------------- */
+    /* Ayrıntılı süre — profil satırında kullanılır (ör. "4s 39dk"). */
     function fmtTime(totalSeconds){
       const s = Math.max(0, Math.floor(totalSeconds || 0));
-      const h = Math.floor(s / 3600);
+      const d = Math.floor(s / 86400);
+      const h = Math.floor((s % 86400) / 3600);
       const m = Math.floor((s % 3600) / 60);
+      if(d > 0) return `${d}g ${h}s`;
       if(h > 0) return `${h}s ${m}dk`;
+      if(m > 0) return `${m}dk`;
+      return `${s}sn`;
+    }
+
+    /* Sıralama tablosu için kısa süre.
+       İsimlere yer kalsın diye tek birim gösterilir:
+         1 günü geçtiyse  → "2g +"
+         1 saati geçtiyse → "4s +"
+         altındaysa       → "42dk" / "35sn" */
+    function fmtTimeShort(totalSeconds){
+      const s = Math.max(0, Math.floor(totalSeconds || 0));
+      const d = Math.floor(s / 86400);
+      if(d > 0) return `${d}g +`;
+      const h = Math.floor(s / 3600);
+      if(h > 0) return `${h}s +`;
+      const m = Math.floor(s / 60);
       if(m > 0) return `${m}dk`;
       return `${s}sn`;
     }
@@ -343,9 +391,15 @@ function initLeaderboard(){
       const ref = db.ref('leaderboard/' + currentUid);
       ref.transaction((current) => {
         const prev = current && typeof current === 'object' ? current : { name: currentName, totalSeconds: 0 };
+        /* XP asla GERİ ALINMAZ.
+           Aynı hesapla birden fazla cihaz/sekme açıkken her biri kendi
+           belleğindeki değeri yazıyor; biri düşük kalmışsa sıralama sürekli
+           bir yükselip bir iniyordu. Artık yalnızca daha yüksek değer geçer. */
+        const prevXp = (prev && typeof prev.xp === 'number') ? prev.xp : 0;
+        const nextXp = Math.max(prevXp, xp || 0);
         return Object.assign({}, prev, {
-          name: currentName || prev.name,
-          xp: xp || 0,
+          name: currentName || prev.name || 'Kullanıcı',   /* ad asla boş kalmasın */
+          xp: nextXp,
           lastSeen: Date.now()
         });
       });
@@ -369,14 +423,14 @@ function initLeaderboard(){
         const rankDisplay = MEDALS[i] || (i+1);
         row.innerHTML = `
           <div class="lb-rank">${rankDisplay}</div>
-          <div class="lb-name">${escapeHtml(e.name)}${isMe ? ' (sen)' : ''}</div>
+          <div class="lb-name">${escapeHtml(e.name)}</div>
           <div class="lb-time">${formatValue(e)}</div>`;
         list.appendChild(row);
       });
     }
 
     function renderTimeBoard(entries){
-      renderBoard('splashLbTimeList', entries, e => fmtTime(e.totalSeconds));
+      renderBoard('splashLbTimeList', entries, e => fmtTimeShort(e.totalSeconds));
     }
     function renderLevelBoard(entries){
       renderBoard('splashLbLevelList', entries, e => 'Sv ' + levelFromXp(e.xp));
@@ -432,11 +486,21 @@ function initLeaderboard(){
     }
 
     function processLbSnapshot(val){
+      try { window.__lumLbReady = true; } catch(e){}   /* splash: sıralama hazır sinyali */
       lastLbVal = val;
       cacheLb(val);
+      /* Eskiden yalnızca "name" alanı dolu olan kayıtlar listeye giriyordu.
+         Bir kaydın adı herhangi bir sebeple boş kalırsa (ör. yalnızca xp
+         yazılmışsa) kişi sıralamada HİÇ görünmüyordu. Artık adı olmayan ama
+         verisi olan kayıtlar da listeye giriyor. */
       const all = Object.entries(val || {})
-        .filter(([k, v]) => v && v.name)
-        .map(([k, v]) => ({ uid: k, name: v.name, totalSeconds: v.totalSeconds || 0, xp: v.xp || 0 }));
+        .filter(([k, v]) => v && (v.name || v.xp || v.totalSeconds))
+        .map(([k, v]) => ({
+          uid: k,
+          name: v.name || 'Kullanıcı',
+          totalSeconds: v.totalSeconds || 0,
+          xp: v.xp || 0
+        }));
 
       const byTime = all.slice().sort((a,b) => (b.totalSeconds||0) - (a.totalSeconds||0));
       const byLevel = all.slice().sort((a,b) => (b.xp||0) - (a.xp||0));

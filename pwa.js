@@ -97,12 +97,20 @@ function toast(msg, opts) {
 /* ------------------------------------------------------- ALT SAYFA ------ */
 var openSheets = [];
 function sheet(title, subtitle, buildBody) {
+  /* Aynı panel zaten açıksa ikinci dokunuş onu KAPATIR — üst üste kopya
+     açılmasını engeller (ayar düğmesindeki davranışın aynısı). */
+  for (var i = openSheets.length - 1; i >= 0; i--) {
+    if (openSheets[i].title === title) { openSheets[i].close(); return null; }
+  }
+
   var back = document.createElement('div');
   back.className = 'pwa-sheet-backdrop';
   var box = document.createElement('div');
   box.className = 'pwa-sheet';
   box.setAttribute('role', 'dialog');
-  box.innerHTML = '<div class="grab"></div><h3>' + title + '</h3>' +
+  box.innerHTML = '<div class="grab"></div>' +
+                  '<button type="button" class="pwa-sheet-x" aria-label="Kapat">✕</button>' +
+                  '<h3>' + title + '</h3>' +
                   (subtitle ? '<p class="sheet-sub">' + subtitle + '</p>' : '');
   var body = document.createElement('div');
   box.appendChild(body);
@@ -138,6 +146,9 @@ function sheet(title, subtitle, buildBody) {
     }
   };
   openSheets.push(api);
+  var xBtn = qs('.pwa-sheet-x', box);
+  if (xBtn) xBtn.onclick = function (e) { e.stopPropagation(); api.close(); };
+  api.title = title;
   pushGuard();
   /* İçerik, api hazır olduktan SONRA kuruluyor: aksi hâlde geri çağrıya
      gönderilen api tanımsız oluyordu (var hoisting). */
@@ -172,20 +183,43 @@ function registerSW() {
         });
       });
 
-      /* Otomatik güncelleme kontrolü: açılışta, saatte bir ve öne gelince */
-      setTimeout(function () { try { reg.update(); } catch (e) {} }, 8000);
-      setInterval(function () { try { reg.update(); } catch (e) {} }, 60 * 60 * 1000);
+      /* Otomatik güncelleme kontrolü: açılışta, saatte bir ve öne gelince.
+         NOT: reg.update() bir söz (promise) döndürür; try/catch onun
+         REDDİNİ yakalamaz. Yakalanmadığında "sw.js load failed" hatası
+         raporlara düşüyordu — özellikle iOS'ta Chrome gibi Service Worker
+         desteği sınırlı tarayıcılarda ve anlık ağ kesintilerinde. */
+      var quietUpdate = function () {
+        try {
+          var pr = reg.update();
+          if (pr && pr.catch) pr.catch(function () {});   /* sessizce geç */
+        } catch (e) {}
+      };
+      setTimeout(quietUpdate, 8000);
+      setInterval(quietUpdate, 60 * 60 * 1000);
       document.addEventListener('visibilitychange', function () {
-        if (!document.hidden) { try { reg.update(); } catch (e) {} }
+        if (!document.hidden) quietUpdate();
       });
 
       registerPeriodicSync(reg);
     })
-    .catch(function (err) { console.warn('[PWA] SW kaydı başarısız:', err); });
+    .catch(function (err) {
+      /* Bazı tarayıcılar (ör. iOS'ta Chrome) Service Worker'ı desteklemez.
+         Uygulama bu durumda da tam çalışır; yalnızca çevrimdışı kullanım ve
+         bildirimler devre dışı kalır. Hata raporuna yazmıyoruz. */
+      console.warn('[PWA] Service Worker kullanılamıyor:', err && err.message);
+    });
 
+  /* Service Worker el değiştirdiğinde sayfa yenilenir — ama OTURUMDA EN
+     FAZLA BİR KEZ. Bu kilit olmadan, worker her devraldığında sayfa
+     yenileniyor, yenilenen sayfa worker'ı yeniden kuruyor ve döngü
+     sürüyordu; site birkaç saniyede bir kendini baştan yüklüyordu. */
   var refreshing = false;
   navigator.serviceWorker.addEventListener('controllerchange', function () {
     if (refreshing) return;
+    try {
+      if (sessionStorage.getItem('lumira_sw_reloaded')) return;
+      sessionStorage.setItem('lumira_sw_reloaded', '1');
+    } catch (e) {}
     refreshing = true;
     location.reload();
   });
@@ -215,6 +249,21 @@ var isStandalone = (window.matchMedia && matchMedia('(display-mode: standalone)'
                    (window.matchMedia && matchMedia('(display-mode: fullscreen)').matches) ||
                    navigator.standalone === true ||
                    /android-app:\/\//.test(document.referrer);
+
+/* Play Store (TWA) üzerinden mi açıldı? Üç bağımsız sinyal kontrol edilir,
+   biri bile true ise TWA sayılır — hiçbiri tek başına %100 güvenilir değil:
+   1) 'android-app://' referrer — bazı Android/Chrome sürümlerinde (özellikle
+      uygulama simgesinden soğuk başlatmada) hiç set edilmiyor, bilinen sorun.
+   2) '?src=twa' — twa-manifest.json'daki startUrl'e bağlı, PWABuilder formunda
+      doğru girilmemişse eksik kalabilir.
+   3) getDigitalGoodsService — EN GÜVENİLİR sinyal: bu API sadece gerçek,
+      Play Billing'e bağlı bir TWA içinde var olur, sıradan tarayıcı
+      sekmelerinde asla bulunmaz. */
+var isTwa = /android-app:\/\//.test(document.referrer) ||
+            /(^|[?&])src=twa(&|$)/.test(location.search) ||
+            (typeof window.getDigitalGoodsService === 'function') ||
+            store('pwa_src_twa') === true;
+if (/(^|[?&])src=twa(&|$)/.test(location.search)) { try { store('pwa_src_twa', true); } catch (e) {} }
 
 function setupShell() {
   document.documentElement.classList.toggle('pwa-standalone', isStandalone);
@@ -422,6 +471,7 @@ function handleSharedText(txt) {
     b.appendChild(box);
     var save = row('⭐', 'Favorilere ekle', 'Kendi kelime listene kaydet');
     save.onclick = function () {
+      if (window.LUMIRA_LOCK && !window.LUMIRA_LOCK.anyBadge('Favorilere ekleme')) return;
       addFavorite({ w: word, tr: txt.slice(0, 120), lang: activeLangCode(), pos: 'not' });
       toast('⭐ Favorilere eklendi', { kind: 'good' });
     };
@@ -446,7 +496,7 @@ function setupInstall() {
     deferredPrompt = e;
     var seen = store('pwa_install_dismissed');
     var opens = (store('pwa_opens') || 0);
-    if (!isStandalone && !seen && opens >= 2) setTimeout(showInstallBanner, 2500);
+    if (!isStandalone && !isTwa && !seen && opens >= 2) setTimeout(showInstallBanner, 2500);
   });
 
   addEventListener('appinstalled', function () {
@@ -459,7 +509,7 @@ function setupInstall() {
   /* iOS: beforeinstallprompt yok → yönergeli rehber */
   var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) ||
               (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  if (isIOS && !isStandalone && !store('pwa_ios_hint') && (store('pwa_opens') || 0) >= 2) {
+  if (isIOS && !isStandalone && !isTwa && !store('pwa_ios_hint') && (store('pwa_opens') || 0) >= 2) {
     setTimeout(function () { store('pwa_ios_hint', true); iosInstallGuide(); }, 4000);
   }
 }
@@ -688,7 +738,10 @@ function setupFavButton() {
     var c = currentCard();
     if (!c) return;
     if (isFav(c)) { removeFavorite(c); toast('Favorilerden çıkarıldı'); }
-    else { addFavorite(c); vibrate(24); toast('⭐ ' + c.w + ' favorilere eklendi', { kind: 'good' }); }
+    else {
+      if (window.LUMIRA_LOCK && !window.LUMIRA_LOCK.anyBadge('Favorilere ekleme')) return;
+      addFavorite(c); vibrate(24); toast('⭐ ' + c.w + ' favorilere eklendi', { kind: 'good' });
+    }
     syncFavButton();
   };
 
@@ -757,10 +810,12 @@ function shareOrSave(filename, content, mime, title) {
   saveFile(filename, blob);
 }
 function shareApp() {
+  var PLAY_URL = CONFIG.playUrl || ('https://play.google.com/store/apps/details?id=' + CONFIG.packageId);
+  var shareUrl = isTwa ? PLAY_URL : (location.origin + location.pathname);
   var data = {
     title: CONFIG.brand + ' · ' + CONFIG.appName,
     text: '6 dilde kelime kartları, quiz ve seslendirme — çevrimdışı da çalışıyor 🌙',
-    url: location.origin + location.pathname
+    url: shareUrl
   };
   if (navigator.share) {
     navigator.share(data).catch(function () {});
@@ -814,8 +869,31 @@ function importData() {
 
 /* ================================ 10 · HATA RAPORU ====================== */
 var ERR_KEY = 'lumira_errors_v1';
+/* Kullanıcı için anlamı olmayan, uygulamayı etkilemeyen bilinen mesajlar.
+   Bunlar rapora yazılmaz; yoksa liste gerçek hataları gizleyen gürültüyle
+   dolar. */
+var IGNORED_ERRORS = [
+  'sw.js load failed',
+  'ServiceWorker script',
+  'The operation is insecure',
+  'disconnect',
+  'ResizeObserver loop',
+  /* Firebase SDK'nın dahili IndexedDB kalıcılık katmanından gelen, zararsız
+     ve geçici bir yarış-durumu hatası. İşlevselliği etkilemez (Firebase
+     otomatik olarak yeniden dener); hata raporlarını kirletmesin. */
+  'Attempt to get records from database without an in-progress transaction'
+];
+function isNoise(msg) {
+  msg = String(msg || '');
+  for (var i = 0; i < IGNORED_ERRORS.length; i++) {
+    if (msg.indexOf(IGNORED_ERRORS[i]) > -1) return true;
+  }
+  return false;
+}
+
 function logError(err, extra) {
   try {
+    if (isNoise(err && (err.message || err.reason || err))) return;
     var list = store(ERR_KEY) || [];
     list.unshift({
       t: new Date().toISOString(),
@@ -1068,20 +1146,98 @@ function applyLite(on) {
   }
 }
 
-/* Cihaz zayıfsa hafif mod kendiliğinden açılır; kullanıcı ayarlardan
-   kapatırsa bu tercih kalıcı olur ve otomatik açma bir daha devreye girmez. */
-function weakDevice() {
-  var cores = navigator.hardwareConcurrency;
-  var mem = navigator.deviceMemory;
-  if (typeof cores === 'number' && cores <= 4) return true;
-  if (typeof mem === 'number' && mem <= 3) return true;
-  return false;
+/* Hafif mod YALNIZCA kullanıcı ayarlardan açtığında devreye girer.
+   Cihaz özelliklerine bakıp otomatik açma kaldırıldı. */
+function initLite() {
+  applyLite(liteSetting() === true);
 }
 
-function initLite() {
-  var pref = liteSetting();
-  if (pref === true || pref === false) { applyLite(pref); return; }  /* kullanıcı seçti */
-  applyLite(weakDevice());
+/* ======================= HOŞ GELDİN KARTI ============================== */
+/* Giriş yapmış kullanıcıya, açılış ekranı kapandıktan sonra kısa bir
+   karşılama gösterir. Butonu yoktur: 2,6 saniye sonra kendiliğinden kaybolur
+   ya da dokunulunca kapanır. Her açılışta DEĞİL — günün ilk girişinde veya
+   son gösterimden en az 8 saat geçmişse. */
+var WELCOME_KEY = 'lumira_welcome_v1';
+
+function shouldShowWelcome() {
+  try {
+    var last = store(WELCOME_KEY) || 0;
+    if (!last) return true;
+    var now = Date.now();
+    if (now - last >= 8 * 3600 * 1000) return true;      /* 8 saat geçtiyse */
+    return new Date(last).toDateString() !== new Date(now).toDateString();
+  } catch (e) { return false; }
+}
+
+function welcomeStats() {
+  var out = { streak: 0, xp: 0, level: 1, goal: 0, done: 0 };
+  try {
+    if (typeof window.PR_getXp === 'function') out.xp = window.PR_getXp();
+    if (typeof window.PR_getLevel === 'function') out.level = window.PR_getLevel();
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (!k || k.indexOf('meta') === -1) continue;
+      var v = JSON.parse(localStorage.getItem(k) || 'null');
+      if (!v || typeof v !== 'object') continue;
+      if (typeof v.streak === 'number') out.streak = Math.max(out.streak, v.streak);
+      if (typeof v.dailyGoal === 'number') out.goal = Math.max(out.goal, v.dailyGoal);
+      if (typeof v.todayCount === 'number') out.done = Math.max(out.done, v.todayCount);
+    }
+  } catch (e) {}
+  return out;
+}
+
+function showWelcomeCard(name) {
+  if (!name || $('lumira-welcome')) return;
+  var st = welcomeStats();
+
+  var lines = [];
+  if (st.streak > 0) lines.push('🔥 <b>' + st.streak + ' günlük</b> serin devam ediyor');
+  lines.push('⭐ Seviye <b>' + st.level + '</b> · ' + st.xp + ' XP');
+  if (st.goal > 0) lines.push('📚 Bugünkü hedefin: <b>' + st.goal + '</b> kelime');
+
+  var el = document.createElement('div');
+  el.id = 'lumira-welcome';
+  el.innerHTML =
+    '<div class="wc-card">' +
+      '<span class="wc-mark">🦋</span>' +
+      '<div class="wc-hi">Hoş geldin,</div>' +
+      '<div class="wc-name">' + escapeHtml(name) + '</div>' +
+      '<div class="wc-lines">' + lines.map(function (l) {
+        return '<div class="wc-line">' + l + '</div>';
+      }).join('') + '</div>' +
+      '<span class="wc-fly">🦋</span>' +
+    '</div>';
+  document.body.appendChild(el);
+  requestAnimationFrame(function () { el.classList.add('in'); });
+
+  var closed = false;
+  var close = function () {
+    if (closed) return;
+    closed = true;
+    el.classList.remove('in');
+    setTimeout(function () { el.remove(); }, 420);
+  };
+  el.addEventListener('click', close);
+  setTimeout(close, 2600);
+  store(WELCOME_KEY, Date.now());
+}
+
+function setupWelcome() {
+  if (!shouldShowWelcome()) return;
+  var tries = 0;
+  var timer = setInterval(function () {
+    tries++;
+    if (tries > 40) { clearInterval(timer); return; }        /* ~20 sn sonra vazgeç */
+    var sp = $('splash');
+    if (sp && !sp.classList.contains('hidden')) return;       /* açılış ekranı hâlâ açık */
+    var u = fbUser();
+    if (!u) return;
+    clearInterval(timer);
+    setTimeout(function () {
+      showWelcomeCard(u.displayName || (u.email || '').split('@')[0]);
+    }, 500);
+  }, 500);
 }
 
 /* ==================== PROFİL VE YÖNETİCİ BÖLÜMÜ ========================= */
@@ -1097,20 +1253,42 @@ function fbUser() {
   return a ? a.currentUser : null;
 }
 
-/* Yönetici tanımı. UID en güvenilir yoldur; Profilim ekranındaki
-   "Kullanıcı kimliğim" satırından kopyalanıp buraya yazılabilir.
-   NOT: Bu yalnızca ARAYÜZ gizlemesidir, güvenlik değildir — gerçek koruma
-   Firebase kurallarında yapılmalıdır (aşağıdaki açıklamaya bak). */
-var ADMIN_UIDS = [];
-var ADMIN_NAMES = ['m hamza', 'mhamza'];
+/* Yönetici tanımı — UID artık istemcide SABİT DEĞİL.
+   Yetki /admins/<uid> düğümünden okunur; gerçek koruma Firebase
+   kurallarındadır. Bu yalnızca ARAYÜZ içindir (Admin Panel satırını
+   göstermek/gizlemek). Yeni yönetici eklemek için: Firebase Console'da
+   /admins/<yeni-uid> = true düğümünü ekle — kod değişmez. */
+var _isAdmin = false;
+
+/* Yönetici arayüzünü ANINDA ve güvenilir göstermek için sabit UID (1.7.4 gibi).
+   Gerçek veritabanı güvenliği yine Firebase kurallarındaki /admins düğümüyle
+   sağlanır; bu liste yalnızca arayüzün (admin panelinin) görünmesi içindir. */
+var ADMIN_UIDS = ['49AyoEDRltPQ8NSzPU9y2fDtWDI2'];
+
+function refreshAdminFlag(cb) {
+  var u = fbUser();
+  var d = (typeof fbDb === 'function') ? fbDb() : null;
+  /* sabit listedeyse hemen yönetici say, DB'yi bekleme */
+  if (u && ADMIN_UIDS.indexOf(u.uid) !== -1) { _isAdmin = true; if (cb) cb(true); return; }
+  if (!u || !d) { _isAdmin = false; if (cb) cb(false); return; }
+  d.ref('admins/' + u.uid).once('value').then(function (s) {
+    _isAdmin = (s.val() === true);
+    if (cb) cb(_isAdmin);
+  }).catch(function () { _isAdmin = false; if (cb) cb(false); });
+}
 
 function isAdmin() {
+  if (_isAdmin === true) return true;
   var u = fbUser();
-  if (!u) return false;
-  if (ADMIN_UIDS.indexOf(u.uid) > -1) return true;
-  var dn = (u.displayName || '').trim().toLowerCase();
-  return ADMIN_NAMES.indexOf(dn) > -1;
+  return !!(u && ADMIN_UIDS.indexOf(u.uid) !== -1);
 }
+
+/* Firebase hazır olunca oturum değişimlerini dinle, yönetici bayrağını tazele. */
+(function attachAdminWatch() {
+  var a = (typeof fbAuth === 'function') ? fbAuth() : null;
+  if (!a) { setTimeout(attachAdminWatch, 800); return; }
+  a.onAuthStateChanged(function () { refreshAdminFlag(); });
+})();
 
 function inputRow(label, type, value, placeholder) {
   var d = document.createElement('label');
@@ -1203,6 +1381,53 @@ function openProfile() {
     };
     b.appendChild(passBtn);
 
+    /* --- Hesabı sil (KALICI) --------------------------------------- */
+    b.insertAdjacentHTML('beforeend',
+      '<p class="pwa-note" style="margin:24px 2px 6px;color:#ff8a8a">Hesabımı sil</p>' +
+      '<p class="pwa-note" style="margin:0 2px 8px;opacity:.75">Hesabın, ilerlemen ve sıralaman kalıcı olarak silinir. Geri alınamaz.</p>');
+    var delF = inputRow('Onaylamak için şifreni yaz', 'password', '', '••••••');
+    b.appendChild(delF);
+    var delBtn = bigButton('Hesabımı kalıcı olarak sil');
+    delBtn.style.background = 'rgba(255,80,80,.14)';
+    delBtn.style.borderColor = 'rgba(255,80,80,.5)';
+    delBtn.style.color = '#ff8a8a';
+    delBtn.onclick = function () {
+      var pw = qs('input', delF).value;
+      if (!pw) { toast('Önce şifreni yaz', { kind: 'bad' }); return; }
+      if (!window.confirm('Hesabın, ilerlemen ve sıralaman KALICI olarak silinecek. Bu işlem geri alınamaz.\n\nDevam edilsin mi?')) return;
+
+      var uid = u.uid;
+      var d = (typeof fbDb === 'function') ? fbDb() : null;
+      delBtn.disabled = true; delBtn.textContent = 'Siliniyor…';
+
+      var cred;
+      try { cred = firebase.auth.EmailAuthProvider.credential(u.email, pw); }
+      catch (e) { delBtn.disabled = false; delBtn.textContent = 'Hesabımı kalıcı olarak sil'; toast('Yapılamadı', { kind: 'bad' }); return; }
+
+      u.reauthenticateWithCredential(cred).then(function () {
+        /* Kimlik hâlâ geçerliyken önce sunucudaki verileri sil */
+        var jobs = [];
+        if (d) {
+          jobs.push(d.ref('progress/' + uid).remove().catch(function () {}));
+          jobs.push(d.ref('leaderboard/' + uid).remove().catch(function () {}));
+        }
+        return Promise.all(jobs);
+      }).then(function () {
+        return u.delete();               /* sonra hesabı sil */
+      }).then(function () {
+        try { localStorage.clear(); } catch (e) {}
+        toast('✅ Hesabın ve tüm verilerin silindi', { kind: 'good' });
+        setTimeout(function () { location.reload(); }, 1200);
+      }).catch(function (e) {
+        delBtn.disabled = false; delBtn.textContent = 'Hesabımı kalıcı olarak sil';
+        var code = e && e.code;
+        toast(code === 'auth/wrong-password' || code === 'auth/invalid-credential'
+          ? 'Şifre yanlış'
+          : 'Silinemedi: ' + (code || 'hata'), { kind: 'bad', duration: 6000 });
+      });
+    };
+    b.appendChild(delBtn);
+
     b.insertAdjacentHTML('beforeend',
       '<p class="pwa-note">Görünen adını değiştirmen giriş bilgilerini etkilemez; ' +
       'uygulamaya girerken yine <b>' + escapeHtml(loginName) + '</b> adını kullanacaksın.</p>');
@@ -1244,12 +1469,27 @@ function openAdminXp() {
       }
       shown.forEach(function (u) {
         var r = row('👤', escapeHtml(u.name || '(isimsiz)'),
-          (u.xp || 0) + ' XP · Sv ' + (Math.floor((u.xp || 0) / 200) + 1));
+          (u.xp || 0) + ' XP · Sv ' + (Math.floor((u.xp || 0) / 200) + 1) +
+          (u.realXp ? '' : ' · dokun, gerçek XP okunsun'));
         if (selected && selected.uid === u.uid) {
           r.style.borderColor = 'rgba(79,232,255,.6)';
           r.style.background = 'rgba(79,232,255,.10)';
         }
-        r.onclick = function () { selected = u; draw(); };
+        r.onclick = function () {
+          selected = u;
+          draw();
+          /* Gerçek XP, kişinin progress kaydında tutulur; leaderboard'daki
+             kopya yalnızca "Kişisel Mod" kullanıldığında güncellenir ve çoğu
+             kullanıcıda 0 kalır. Seçilen kişinin asıl değerini okuyoruz. */
+          db.ref('progress/' + u.uid + '/meta/xp').once('value').then(function (sn) {
+            var real = sn.val();
+            if (typeof real === 'number') {
+              u.xp = real;
+              u.realXp = true;
+              if (selected && selected.uid === u.uid) draw();
+            }
+          }).catch(function () {});
+        };
         list.appendChild(r);
       });
     }
@@ -1274,29 +1514,65 @@ function openAdminXp() {
       if (amount > 100000) { toast('Tek seferde en fazla 100.000 XP', { kind: 'bad' }); return; }
 
       var target = selected;
-      var newXp = (target.xp || 0) + amount;
+
+      /* Gönderimden hemen önce gerçek değeri bir kez daha oku: aradan zaman
+         geçtiyse kişi XP kazanmış olabilir, üzerine yazıp geri almayalım. */
+      send.disabled = true; send.textContent = 'Okunuyor…';
+      db.ref('progress/' + target.uid + '/meta/xp').once('value').then(function (sn) {
+        var cur = sn.val();
+        if (typeof cur !== 'number') cur = target.xp || 0;
+        target.xp = cur;
+        target.realXp = true;
+        send.disabled = false; send.textContent = 'XP gönder';
+        draw();
+        askAndSend(target, cur, amount);
+      }).catch(function () {
+        send.disabled = false; send.textContent = 'XP gönder';
+        askAndSend(target, target.xp || 0, amount);
+      });
+    };
+
+    function askAndSend(target, cur, amount) {
+      var newXp = cur + amount;
 
       confirmSheet('XP gönderilsin mi?',
-        escapeHtml(target.name || '(isimsiz)') + ' → ' + (target.xp || 0) + ' XP yerine <b>' + newXp + ' XP</b> olacak.',
+        escapeHtml(target.name || '(isimsiz)') + ' → ' + cur + ' XP yerine <b>' + newXp + ' XP</b> olacak.',
         function () {
           send.disabled = true; send.textContent = 'Gönderiliyor…';
           /* SADECE xp alanı yazılıyor: kişinin serisi, günlük sayacı ve
              öğrendiği kelimeler asla değiştirilmiyor. */
+          /* Sıralamaya yazarken ADI da koruyoruz. Yalnızca "xp" alanı
+             yazıldığında, kaydın adı boş kalırsa kişi sıralamada hiç
+             görünmüyordu. */
+          var lbUpdate = { xp: newXp };
+          if (target.name) lbUpdate.name = target.name;
           Promise.all([
             db.ref('progress/' + target.uid + '/meta/xp').set(newXp),
-            db.ref('leaderboard/' + target.uid + '/xp').set(newXp)
+            db.ref('leaderboard/' + target.uid).update(lbUpdate)
           ]).then(function () {
             target.xp = newXp;
             send.disabled = false; send.textContent = 'XP gönder';
             qs('input', amountF).value = '';
             draw();
-            toast('✅ ' + amount + ' XP gönderildi', { kind: 'good' });
+
+            /* Kendine gönderdiysen: bu cihaz eski XP'yi hâlâ bellekte tutuyor
+               ve düzenli aralıklarla sunucuya geri yazıyor. Sıralamanın bir
+               görünüp bir kaybolmasının sebebi bu çekişme. Sayfa yenilenince
+               cihaz sunucudaki yüksek değeri benimsiyor ve çekişme bitiyor. */
+            var me = fbUser();
+            if (me && me.uid === target.uid) {
+              toast('✅ Gönderildi — yenileniyor…', { kind: 'good' });
+              setTimeout(function () { location.reload(); }, 1200);
+            } else {
+              toast('✅ ' + amount + ' XP gönderildi. Kişi uygulamayı bir daha açtığında değer ona geçecek.',
+                    { kind: 'good', duration: 7000 });
+            }
           }).catch(function (e) {
             send.disabled = false; send.textContent = 'XP gönder';
             toast('Gönderilemedi: ' + ((e && e.code) || 'izin yok'), { kind: 'bad', duration: 8000 });
           });
         });
-    };
+    }
     b.appendChild(send);
 
     b.insertAdjacentHTML('beforeend',
@@ -1498,12 +1774,15 @@ function openSettings() {
     b.appendChild(testRow);
 
     /* --- Çevrimdışı --------------------------------------------------- */
-    var packRow = row('📦', 'Çevrimdışı paketi indir', '6 dilin tüm sözlükleri (~5 MB)');
+    var packRow = row('📦', 'Çevrimdışı paketi indir', '6 dilin tüm sözlükleri · destek rozeti gerekir');
     var bar = document.createElement('div');
     bar.className = 'pwa-progress';
     bar.innerHTML = '<i></i>';
     cacheBar = qs('i', bar);
-    packRow.onclick = function () { downloadOfflinePack(); };
+    packRow.onclick = function () {
+      if (window.LUMIRA_LOCK && !window.LUMIRA_LOCK.anyBadge('Çevrimdışı paket')) return;
+      downloadOfflinePack();
+    };
     b.appendChild(packRow); b.appendChild(bar);
     if (store('pwa_offline_pack')) cacheBar.style.width = '100%';
 
@@ -1547,7 +1826,7 @@ function openSettings() {
     b.appendChild(shr);
 
     /* --- Kurulum / güncelleme ----------------------------------------- */
-    if (!isStandalone) {
+    if (!isStandalone && !isTwa) {
       var ins = row('📲', 'Ana ekrana ekle', 'Tam ekran, hızlı ve çevrimdışı');
       ins.onclick = doInstall;
       b.appendChild(ins);
@@ -1610,22 +1889,52 @@ function openSettings() {
     };
     b.appendChild(rate);
 
-    /* --- Yönetici (yalnızca M Hamza) --------------------------------- */
-    if (isAdmin()) {
-      b.insertAdjacentHTML('beforeend',
-        '<p class="pwa-note" style="margin:20px 2px 8px">Yönetici</p>');
-      var adm = row('🛡️', 'XP gönder', 'Bir kullanıcıya XP ekle');
-      adm.style.borderColor = 'rgba(255,210,59,.35)';
-      adm.onclick = openAdminXp;
-      b.appendChild(adm);
-    }
+    /* --- Yönetici (yalnızca yönetici hesabında görünür) --------------- */
+    (function (adminBox) {
+      function injectAdmin() {
+        if (adminBox.querySelector('.pwa-admin-row')) return; /* zaten eklendi */
+        adminBox.insertAdjacentHTML('beforeend',
+          '<p class="pwa-note" style="margin:20px 2px 8px">Yönetici</p>');
+        var adm = row('🛡️', 'Admin Panel', 'İstatistik · XP · yasaklama');
+        adm.className += ' pwa-admin-row';
+        adm.style.borderColor = 'rgba(255,210,59,.4)';
+        adm.onclick = function () {
+          if (typeof window.openAdminPanel === 'function') window.openAdminPanel();
+          else toast('Yönetici paneli yüklenemedi', { kind: 'bad' });
+        };
+        adminBox.appendChild(adm);
+      }
+      /* Bayrak zaten çözülmüşse hemen; değilse /admins okunduktan sonra. */
+      if (isAdmin()) injectAdmin();
+      else refreshAdminFlag(function (ok) { if (ok) injectAdmin(); });
+    })(b);
 
     /* --- Profil (en altta) ------------------------------------------- */
     b.insertAdjacentHTML('beforeend',
       '<p class="pwa-note" style="margin:20px 2px 8px">Hesap</p>');
-    var prof = row('👤', 'Profilim', 'Adını ve şifreni değiştir');
-    prof.onclick = openProfile;
+    var prof = row('👤', 'Profilim', 'Adını ve şifreni değiştir · 3. seviye gerekir');
+    prof.onclick = function () {
+      if (window.LUMIRA_LOCK && !window.LUMIRA_LOCK.level(3, 'Profilim')) return;
+      openProfile();
+    };
     b.appendChild(prof);
+
+    var pdfRow = row('📄', 'Kelimeleri PDF olarak indir', 'Kitap düzeninde kelime listesi · rozet gerekir');
+    pdfRow.onclick = function () {
+      if (typeof window.openPdfExport === 'function') window.openPdfExport();
+    };
+    b.appendChild(pdfRow);
+
+    var priv = row('🔒', 'Gizlilik Politikası', 'Hangi veriler saklanıyor?');
+    priv.onclick = function () { window.open('privacy/', '_blank', 'noopener'); };
+    b.appendChild(priv);
+
+    var supRow = row('❤️', 'Lumira\'yı Destekle', 'Rozet kazan, gelişime katkıda bulun');
+    supRow.style.borderColor = 'rgba(255,95,184,.32)';
+    supRow.onclick = function () {
+      if (typeof window.openSupport === 'function') window.openSupport();
+    };
+    b.appendChild(supRow);
 
     b.insertAdjacentHTML('beforeend',
       '<p class="pwa-note">' + CONFIG.brand + ' · ' + CONFIG.appName +
@@ -1729,6 +2038,7 @@ function boot() {
     setupInstall();
     setupFab();
     setupTransitions();
+    setupWelcome();
     initLite();
     scheduleReminder();
 
@@ -1794,7 +2104,7 @@ window.PWA = {
     });
     return { onLine: navigator.onLine, badgeVisible: !!(document.getElementById('pwa-offline') || {}).classList && document.getElementById('pwa-offline').classList.contains('in') };
   },
-  version: 'pwa.js 1.4.2',
+  version: '1.7.22',
   isStandalone: function () { return isStandalone; }
 };
 

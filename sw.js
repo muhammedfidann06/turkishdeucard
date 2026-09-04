@@ -16,7 +16,7 @@
    ========================================================================== */
 'use strict';
 
-const CACHE_VERSION = 'v1.4.2';
+const CACHE_VERSION = 'v1.7.29';
 const SHELL_CACHE   = `lumira-shell-${CACHE_VERSION}`;
 const VOCAB_CACHE   = 'lumira-vocab-v1';      /* sözlükler sürümden bağımsız */
 const ASSET_CACHE   = 'lumira-assets-v1';
@@ -30,9 +30,15 @@ const SHELL = [
   './',
   './index.html',
   './offline.html',
+  './privacy/',
+  './privacy/index.html',
   './manifest.json',
   './pwa.css',
   './pwa.js',
+  './support-badges.js',
+  './analytics.js',
+  './splash.js',
+  './admin.js',
   './theme.css',
   './theme.js',
   './voice.js',
@@ -69,11 +75,14 @@ self.addEventListener('install', (event) => {
       cache.add(new Request(url, { cache: 'reload' }))
     ));
   })());
-  /* Artık BEKLEMEDEN devreye giriyor. Eskiden yeni sürüm, kullanıcı
-     "Güncelle"ye basana ya da tüm sekmeler kapanana kadar bekliyordu; bu
-     sürede eski Service Worker eski dosyaları servis etmeye devam ediyor,
-     düzeltmeler telefona ulaşmıyordu. */
-  self.skipWaiting();
+  /* DİKKAT: Buraya bir zamanlar koşulsuz self.skipWaiting() konmuştu.
+     Sayfa tarafındaki "controllerchange → location.reload()" ile birleşince
+     SONSUZ YENİDEN YÜKLEME DÖNGÜSÜ oluşuyordu: yeni worker hemen devralıyor,
+     sayfa yenileniyor, yenilenince worker yeniden denetleniyor, tekrar
+     devralıyor… Ekranda her şey sürekli baştan başlıyordu.
+     Artık devralma yalnızca kullanıcı "Güncelle"ye bastığında (SKIP_WAITING
+     mesajıyla) gerçekleşiyor. Dosya tazeliği zaten iki ayrı yolla güvence
+     altında: kod dosyaları ağ öncelikli ve adreslerinde ?v= sürüm etiketi var. */
 });
 
 /* ========================================================= ACTIVATE ====== */
